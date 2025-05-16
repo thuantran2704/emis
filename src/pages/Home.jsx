@@ -5,21 +5,8 @@ import implant from '../pics/implant.jpg';
 import crown from '../pics/crown.jpg';
 import invisalign from '../pics/invisalign.jpg';
 
-export default function Home() {
+export default function Home({ language }) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [language, setLanguage] = useState('vietnamese');
-
-  const toggleLanguage = () => {
-    setLanguage(prev => {
-      switch(prev) {
-        case 'vietnamese': return 'english';
-        case 'english': return 'simplified';
-        case 'simplified': return 'traditional';
-        case 'traditional': return 'vietnamese';
-        default: return 'vietnamese';
-      }
-    });
-  };
 
   // English content
   const englishContent = {
@@ -52,7 +39,18 @@ export default function Home() {
       }
     ],
     locationTitle: "Our Location",
-    address: "62B Phạm Ngọc Thạch, Ward 6, District 3, Ho Chi Minh City"
+    address: "62B Phạm Ngọc Thạch, Ward 6, District 3, Ho Chi Minh City",
+    testimonialsTitle: "Patient Testimonials",
+    testimonials: [
+      {
+        quote: "The best dental care I've ever experienced. Professional and painless!",
+        author: "Michael Johnson"
+      },
+      {
+        quote: "My smile has never looked better. Thank you for your excellent work!",
+        author: "Sarah Williams"
+      }
+    ]
   };
 
   // Vietnamese content
@@ -86,7 +84,18 @@ export default function Home() {
       }
     ],
     locationTitle: "Vị Trí Của Chúng Tôi",
-    address: "62B Phạm Ngọc Thạch, Phường 6, Quận 3, Thành phố Hồ Chí Minh"
+    address: "62B Phạm Ngọc Thạch, Phường 6, Quận 3, Thành phố Hồ Chí Minh",
+    testimonialsTitle: "Đánh Giá Từ Bệnh Nhân",
+    testimonials: [
+      {
+        quote: "Dịch vụ nha khoa tốt nhất tôi từng trải nghiệm. Chuyên nghiệp và không đau đớn!",
+        author: "Nguyễn Văn A"
+      },
+      {
+        quote: "Nụ cười của tôi chưa bao giờ đẹp như thế này. Cảm ơn các bạn!",
+        author: "Trần Thị B"
+      }
+    ]
   };
 
   // Simplified Chinese content
@@ -120,7 +129,18 @@ export default function Home() {
       }
     ],
     locationTitle: "我们的位置",
-    address: "越南胡志明市第三郡第六坊范玉石街62B号"
+    address: "越南胡志明市第三郡第六坊范玉石街62B号",
+    testimonialsTitle: "患者评价",
+    testimonials: [
+      {
+        quote: "这是我经历过最好的牙科护理。专业且无痛！",
+        author: "张伟"
+      },
+      {
+        quote: "我的笑容从未如此美好。感谢你们的出色工作！",
+        author: "李娜"
+      }
+    ]
   };
 
   // Traditional Chinese content
@@ -154,7 +174,18 @@ export default function Home() {
       }
     ],
     locationTitle: "我們的位置",
-    address: "越南胡志明市第三郡第六坊范玉石街62B號"
+    address: "越南胡志明市第三郡第六坊范玉石街62B號",
+    testimonialsTitle: "患者評價",
+    testimonials: [
+      {
+        quote: "這是我經歷過最好的牙科護理。專業且無痛！",
+        author: "張偉"
+      },
+      {
+        quote: "我的笑容從未如此美好。感謝你們的出色工作！",
+        author: "李娜"
+      }
+    ]
   };
 
   const content = 
@@ -175,17 +206,6 @@ export default function Home() {
 
   return (
     <main className="min-h-[calc(100vh-4rem)] bg-[#f7f2e7]">
-      {/* Language Toggle Button */}
-      <button 
-        onClick={toggleLanguage}
-        className="fixed bottom-6 right-6 bg-[#d4af37] text-white font-bold py-3 px-4 rounded-full shadow-lg hover:bg-[#c19d30] transition-all z-50 flex items-center gap-2"
-        style={{ fontFamily: "'Playfair Display', serif" }}
-      >
-        {language === 'english' ? 'EN' : 
-         language === 'vietnamese' ? 'VN' : 
-         language === 'simplified' ? '简' : '繁'}
-      </button>
-
       {/* Hero Section */}
       <section className="py-28 px-4 max-w-6xl mx-auto text-center">
         <h1 
@@ -211,7 +231,7 @@ export default function Home() {
         </Link>
       </section>
 
-      {/* Services Section - Slider with Flipping Cards */}
+      {/* Services Section */}
       <section className="py-16 bg-[#fffaf0]">
         <div className="max-w-6xl mx-auto px-4 relative">
           <h2 
@@ -250,7 +270,7 @@ export default function Home() {
                 <div key={index} className="w-1/3 flex-shrink-0 px-4">
                   <div className="group h-96 [perspective:1000px]">
                     <div className="relative h-full w-full rounded-lg shadow-lg transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                      {/* Front of Card - Image Dominant */}
+                      {/* Front of Card */}
                       <div className="absolute inset-0 [backface-visibility:hidden] flex flex-col">
                         <div className="h-3/4 overflow-hidden">
                           <img 
@@ -275,7 +295,7 @@ export default function Home() {
                         </div>
                       </div>
                       
-                      {/* Back of Card - Full Details */}
+                      {/* Back of Card */}
                       <div className="absolute inset-0 bg-[#d4af37] p-4 rounded-lg flex flex-col items-center justify-center [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
                         <h3 
                           className="text-lg font-bold text-[#1f2937] mb-2 text-center"
@@ -317,8 +337,38 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 
+            className="text-3xl font-bold text-[#1f2937] mb-12 text-center border-b-2 border-[#d4af37] pb-2 inline-block"
+            style={{ fontFamily: "'Playfair Display', serif" }}
+          >
+            {content.testimonialsTitle}
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {content.testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-[#fffaf0] p-8 rounded-lg shadow-md">
+                <p 
+                  className="text-[#1f2937] italic mb-4"
+                  style={{ fontFamily: "'Cormorant', serif" }}
+                >
+                  "{testimonial.quote}"
+                </p>
+                <p 
+                  className="text-[#d4af37] font-semibold"
+                  style={{ fontFamily: "'Playfair Display', serif" }}
+                >
+                  — {testimonial.author}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Map Section */}
-      <section className="py-12 bg-white">
+      <section className="py-12 bg-[#f7f2e7]">
         <div className="max-w-6xl mx-auto px-4">
           <h2 
             className="text-3xl font-bold text-[#1f2937] mb-8 text-center"
@@ -327,7 +377,6 @@ export default function Home() {
             {content.locationTitle}
           </h2>
           
-          {/* Map Container */}
           <div className="relative overflow-hidden rounded-xl border-4 border-[#1f2937] shadow-xl">
             <div className="relative pb-[56.25%] h-0">
               <iframe
