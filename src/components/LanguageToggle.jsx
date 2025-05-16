@@ -1,11 +1,13 @@
 import { useState } from 'react';
 
-export default function LanguageToggle({ currentLanguage, onLanguageChange }) {
+export default function LanguageToggle({ currentLanguage = 'vietnamese', onLanguageChange }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const languages = [
-    { code: 'english', label: 'EN' },
     { code: 'vietnamese', label: 'VN' },
+    { code: 'english', label: 'EN' },
+    { code: 'french', label: 'FR' },
+    { code: 'korean', label: '한' },
     { code: 'simplified', label: '简' },
     { code: 'traditional', label: '繁' }
   ];
@@ -15,55 +17,49 @@ export default function LanguageToggle({ currentLanguage, onLanguageChange }) {
     setIsOpen(false);
   };
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
     <div className="fixed bottom-6 right-6 z-50">
-      {/* Main Toggle Button */}
-      <button 
-        onClick={toggleMenu}
-        className="bg-[#d4af37] text-white font-bold py-3 px-4 rounded-full shadow-lg hover:bg-[#c19d30] transition-all flex items-center gap-2"
-        style={{ fontFamily: "'Playfair Display', serif" }}
-      >
-        {currentLanguage === 'english' ? 'EN' : 
-         currentLanguage === 'vietnamese' ? 'VN' : 
-         currentLanguage === 'simplified' ? '简' : '繁'}
-        <svg 
-          xmlns="http://www.w3.org/2000/svg" 
-          className={`h-4 w-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} 
-          viewBox="0 0 20 20" 
-          fill="currentColor"
-        >
-          <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-        </svg>
-      </button>
-
-      {/* Language Options Panel */}
+      {/* Language Options Bar */}
       {isOpen && (
-        <div className="absolute bottom-full right-0 mb-2 w-40 bg-white rounded-lg shadow-xl overflow-hidden border border-[#d4af37]">
-          {languages.map((lang) => (
-            <button
-              key={lang.code}
-              onClick={() => handleLanguageChange(lang.code)}
-              className={`w-full px-4 py-3 text-left transition-colors
-                ${currentLanguage === lang.code 
-                  ? 'bg-[#d4af37] text-white' 
-                  : 'text-[#1f2937] hover:bg-[#f7f2e7]'}
-                flex items-center gap-2`}
-              style={{ fontFamily: "'Cormorant', serif" }}
-            >
-              {lang.label}
-              {currentLanguage === lang.code && (
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
-              )}
-            </button>
-          ))}
+        <div className="absolute bottom-full right-0 mb-2 w-12 bg-white rounded-t-lg rounded-b-sm shadow-lg overflow-hidden border border-[#d4af37] border-b-0">
+          <div className="overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+            {languages.map((lang) => (
+              <button
+                key={lang.code}
+                onClick={() => handleLanguageChange(lang.code)}
+                className={`w-full h-10 flex items-center justify-center text-sm font-medium transition-colors
+                  ${currentLanguage === lang.code 
+                    ? 'bg-[#d4af37] text-white' 
+                    : 'text-[#1f2937] hover:bg-[#f7f2e7]'}
+                  border-b border-[#d4af37] last:border-b-0`}
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                {lang.label}
+              </button>
+            ))}
+          </div>
         </div>
       )}
+
+      {/* Main Toggle Button */}
+      <button 
+        onClick={() => setIsOpen(!isOpen)}
+        className={`bg-[#d4af37] text-white font-bold h-12 w-12 rounded-full shadow-lg transition-all flex items-center justify-center text-sm
+          ${isOpen ? 'rounded-t-none rounded-b-full' : 'hover:bg-[#c19d30]'}`}
+        style={{ fontFamily: "'Inter', sans-serif" }}
+      >
+        {isOpen ? (
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+          </svg>
+        ) : (
+          currentLanguage === 'vietnamese' ? 'VN' : 
+          currentLanguage === 'english' ? 'EN' : 
+            currentLanguage === 'korean' ? '한' :
+          currentLanguage === 'french' ? 'FR' :
+          currentLanguage === 'simplified' ? '简' : '繁'
+        )}
+      </button>
     </div>
   );
 }

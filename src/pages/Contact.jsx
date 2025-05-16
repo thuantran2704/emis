@@ -6,6 +6,7 @@ import instagram from '../pics/instagram.jpg';
 
 export default function Contact({ language }) {
   // Vietnamese content
+  
   const vietnameseContent = {
     title: "Liên Hệ",
     highlight: "Chúng Tôi",
@@ -125,11 +126,73 @@ export default function Contact({ language }) {
     ]
   };
 
+  // French content
+  const frenchContent = {
+    title: "Contactez-",
+    highlight: "Nous",
+    getInTouch: "Nous Contacter",
+    bookAppointment: "Prendre Rendez-vous",
+    contactInfo: {
+      phone: "Téléphone",
+      email: "Email",
+      facebook: "Facebook",
+      instagram: "Instagram"
+    },
+    formLabels: {
+      name: "Votre Nom",
+      email: "Email",
+      phone: "Numéro de Téléphone",
+      date: "Date de Rendez-vous",
+      service: "Service",
+      message: "Message",
+      submit: "Envoyer le Message"
+    },
+    services: [
+      "Consultation Générale",
+      "Implant Dentaire",
+      "Appareil Dentaire",
+      "Blanchiment des Dents",
+      "Plaquage Dentaire"
+    ]
+  };
+
+  // Korean content
+  const koreanContent = {
+    title: "연락",
+    highlight: "하기",
+    getInTouch: "연락처 정보",
+    bookAppointment: "예약하기",
+    contactInfo: {
+      phone: "전화번호",
+      email: "이메일",
+      facebook: "페이스북",
+      instagram: "인스타그램"
+    },
+    formLabels: {
+      name: "이름",
+      email: "이메일",
+      phone: "전화번호",
+      date: "예약 날짜",
+      service: "서비스",
+      message: "메시지",
+      submit: "메시지 보내기"
+    },
+    services: [
+      "일반 검진",
+      "임플란트",
+      "치아 교정",
+      "치아 미백",
+      "충치 치료"
+    ]
+  };
+
   const content = 
     language === 'vietnamese' ? vietnameseContent :
     language === 'english' ? englishContent :
     language === 'simplified' ? simplifiedContent :
-    traditionalContent;
+    language === 'traditional' ? traditionalContent :
+    language === 'french' ? frenchContent :
+    koreanContent;
 
   const [formData, setFormData] = useState({
     name: '',

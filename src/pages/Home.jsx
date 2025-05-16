@@ -40,17 +40,6 @@ export default function Home({ language }) {
     ],
     locationTitle: "Our Location",
     address: "62B Phạm Ngọc Thạch, Ward 6, District 3, Ho Chi Minh City",
-    testimonialsTitle: "Patient Testimonials",
-    testimonials: [
-      {
-        quote: "The best dental care I've ever experienced. Professional and painless!",
-        author: "Michael Johnson"
-      },
-      {
-        quote: "My smile has never looked better. Thank you for your excellent work!",
-        author: "Sarah Williams"
-      }
-    ]
   };
 
   // Vietnamese content
@@ -85,17 +74,6 @@ export default function Home({ language }) {
     ],
     locationTitle: "Vị Trí Của Chúng Tôi",
     address: "62B Phạm Ngọc Thạch, Phường 6, Quận 3, Thành phố Hồ Chí Minh",
-    testimonialsTitle: "Đánh Giá Từ Bệnh Nhân",
-    testimonials: [
-      {
-        quote: "Dịch vụ nha khoa tốt nhất tôi từng trải nghiệm. Chuyên nghiệp và không đau đớn!",
-        author: "Nguyễn Văn A"
-      },
-      {
-        quote: "Nụ cười của tôi chưa bao giờ đẹp như thế này. Cảm ơn các bạn!",
-        author: "Trần Thị B"
-      }
-    ]
   };
 
   // Simplified Chinese content
@@ -130,19 +108,75 @@ export default function Home({ language }) {
     ],
     locationTitle: "我们的位置",
     address: "越南胡志明市第三郡第六坊范玉石街62B号",
-    testimonialsTitle: "患者评价",
-    testimonials: [
-      {
-        quote: "这是我经历过最好的牙科护理。专业且无痛！",
-        author: "张伟"
-      },
-      {
-        quote: "我的笑容从未如此美好。感谢你们的出色工作！",
-        author: "李娜"
-      }
-    ]
   };
 
+    const frenchContent = {
+    heroTitle: "Soins Dentaires Premium",
+    heroHighlight: "Dentaires",
+    heroSubtitle: "Découvrez des services dentaires complets avec notre équipe d'experts.",
+    servicesTitle: "SERVICES DE SANTÉ BUCCO-DENTAIRE",
+    bookButton: "Prendre Rendez-vous",
+    bookNow: "Réserver",
+    services: [
+      { 
+        name: "Dentisterie Générale", 
+        desc: "Examens et nettoyages de routine",
+        details: "Lors de votre rendez-vous, nous utilisons des radiographies numériques avancées pour examiner vos dents contre les caries, fractures ou infections.",
+      },
+      { 
+        name: "Implants Dentaires", 
+        desc: "Solution pour dents manquantes",
+        details: "Implants en titane insérés dans votre mâchoire pour remplacer les racines dentaires perdues et prévenir la détérioration osseuse.",
+      },
+      { 
+        name: "Couronnes Dentaires", 
+        desc: "Revêtements en porcelaine",
+        details: "Aide à soulager la douleur dentaire des dents affectées et améliore l'apparence de votre sourire.",
+      },
+      { 
+        name: "Invisalign", 
+        desc: "Aligneurs dentaires transparents",
+        details: "Des aligneurs en plastique transparent déplacent progressivement les dents dans le bon alignement, amovibles pour manger et nettoyer.",
+      }
+    ],
+    locationTitle: "Notre Emplacement",
+    address: "62B Phạm Ngọc Thạch, Ward 6, District 3, Ho Chi Minh City",
+
+  };
+
+  // Korean content
+  const koreanContent = {
+    heroTitle: "프리미엄 치과 서비스",
+    heroHighlight: "치과",
+    heroSubtitle: "저희 전문가 팀과 함께 포괄적인 치과 서비스를 경험해보세요.",
+    servicesTitle: "구강 건강 서비스",
+    bookButton: "상담 예약",
+    bookNow: "예약하기",
+    services: [
+      { 
+        name: "일반 치과", 
+        desc: "정기 검진 및 청소",
+        details: "진료 시 고급 디지털 X-레이를 사용하여 치아의 충치, 균열 또는 감염을 검사합니다.",
+      },
+      { 
+        name: "치과 임플란트", 
+        desc: "빠진 치아 솔루션",
+        details: "잃어버린 치아 뿌리를 대체하고 뼈 손상을 방지하기 위해 턱뼈에 티타늄 임플란트를 삽입합니다.",
+      },
+      { 
+        name: "치과 크라운", 
+        desc: "도자기 치아 덮개",
+        details: "영향을 받은 치아의 치통을 완화하고 미소의 외관을 개선합니다.",
+      },
+      { 
+        name: "인비절라인", 
+        desc: "투명 치아 정렬기",
+        details: "투명 플라스틱 정렬기가 치아를 점차적으로 올바른 위치로 이동시켜 먹고 청소할 때 제거할 수 있습니다.",
+      }
+    ],
+    locationTitle: "우리 위치",
+    address: "베트남 호치민시 3군 6동 Phạm Ngọc Thạch 62B",
+  };
   // Traditional Chinese content
   const traditionalContent = {
     heroTitle: "優質牙科護理服務",
@@ -175,21 +209,12 @@ export default function Home({ language }) {
     ],
     locationTitle: "我們的位置",
     address: "越南胡志明市第三郡第六坊范玉石街62B號",
-    testimonialsTitle: "患者評價",
-    testimonials: [
-      {
-        quote: "這是我經歷過最好的牙科護理。專業且無痛！",
-        author: "張偉"
-      },
-      {
-        quote: "我的笑容從未如此美好。感謝你們的出色工作！",
-        author: "李娜"
-      }
-    ]
   };
 
   const content = 
     language === 'english' ? englishContent :
+    language === 'french' ? frenchContent :
+    language === 'korean' ? koreanContent :
     language === 'vietnamese' ? vietnameseContent :
     language === 'simplified' ? simplifiedContent :
     traditionalContent;
@@ -332,36 +357,6 @@ export default function Home({ language }) {
                 onClick={() => setCurrentIndex(index)}
                 className={`w-3 h-3 rounded-full ${currentIndex === index ? 'bg-[#d4af37]' : 'bg-gray-300'}`}
               />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 
-            className="text-3xl font-bold text-[#1f2937] mb-12 text-center border-b-2 border-[#d4af37] pb-2 inline-block"
-            style={{ fontFamily: "'Playfair Display', serif" }}
-          >
-            {content.testimonialsTitle}
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            {content.testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-[#fffaf0] p-8 rounded-lg shadow-md">
-                <p 
-                  className="text-[#1f2937] italic mb-4"
-                  style={{ fontFamily: "'Cormorant', serif" }}
-                >
-                  "{testimonial.quote}"
-                </p>
-                <p 
-                  className="text-[#d4af37] font-semibold"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
-                >
-                  — {testimonial.author}
-                </p>
-              </div>
             ))}
           </div>
         </div>

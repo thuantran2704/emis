@@ -9,22 +9,15 @@ import LanguageToggle from './components/LanguageToggle';
 export default function App() {
   const [language, setLanguage] = useState('vietnamese');
 
-  const toggleLanguage = () => {
-    setLanguage(prev => {
-      switch(prev) {
-        case 'vietnamese': return 'english';
-        case 'english': return 'simplified';
-        case 'simplified': return 'traditional';
-        case 'traditional': return 'vietnamese';
-        default: return 'vietnamese';
-      }
-    });
+  // This now directly sets the selected language
+  const handleLanguageChange = (selectedLanguage) => {
+    setLanguage(selectedLanguage);
   };
 
   return (
     <Router>
       <div className="min-h-screen bg-[#fffaf0]">
-        <Navbar />
+        <Navbar language={language} />
         <Routes>
           <Route path="/" element={<Home language={language} />} />
           <Route path="/contact" element={<Contact language={language} />} />
@@ -32,7 +25,7 @@ export default function App() {
         </Routes>
         <LanguageToggle 
           currentLanguage={language} 
-          onLanguageChange={toggleLanguage} 
+          onLanguageChange={handleLanguageChange}  // Now passes the selected language directly
         />
       </div>
     </Router>
