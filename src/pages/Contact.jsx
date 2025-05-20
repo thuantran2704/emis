@@ -3,6 +3,7 @@ import mailIcon from '../pics/mail.jpg';
 import phoneIcon from '../pics/phone.jpg';
 import facebook from '../pics/facebook.jpg';
 import instagram from '../pics/instagram.jpg';
+import zaloIcon from '../pics/zalo.jpg';
 
 export default function Contact({ language }) {
   // Vietnamese content
@@ -211,12 +212,54 @@ export default function Contact({ language }) {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission logic here
-    console.log('Form submitted:', formData);
-    // You would typically send this data to your backend
-  };
+// Update your handleSubmit function in the Contact component
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  
+  try {
+    const response = await fetch('http://localhost:5000/api/appointments', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+
+    const data = await response.json();
+    console.log('Success:', data);
+    
+    // Reset form after successful submission
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      date: '',
+      service: '',
+      message: ''
+    });
+
+    // Show success message to user
+    alert(language === 'english' ? 'Appointment booked successfully!' : 
+          language === 'vietnamese' ? 'Đặt lịch hẹn thành công!' :
+          language === 'simplified' ? '预约成功!' :
+          language === 'traditional' ? '預約成功!' :
+          language === 'french' ? 'Rendez-vous réservé avec succès!' :
+          '예약이 성공적으로 완료되었습니다!');
+
+  } catch (error) {
+    console.error('Error:', error);
+    alert(language === 'english' ? 'Failed to book appointment. Please try again.' : 
+          language === 'vietnamese' ? 'Đặt lịch hẹn không thành công. Vui lòng thử lại.' :
+          language === 'simplified' ? '预约失败，请重试。' :
+          language === 'traditional' ? '預約失敗，請重試。' :
+          language === 'french' ? 'Échec de la réservation. Veuillez réessayer.' :
+          '예약에 실패했습니다. 다시 시도해 주세요.');
+  }
+};
 
   return (
     <main className="min-h-[calc(100vh-4rem)] bg-[#f7f2e7]">
@@ -253,7 +296,21 @@ export default function Contact({ language }) {
                   >
                     {content.contactInfo.phone}
                   </h3>
-                  <p style={{ fontFamily: "'Cormorant', serif" }}>+84 692 225 388</p>
+                  <p style={{ fontFamily: "'Cormorant', serif" }}>091 910 0021</p>
+                </div>
+              </li>
+              <li className="flex items-start gap-4">
+                <div className="bg-white p-2 rounded-full">
+                  <img src={zaloIcon} alt="Zalo" className="h-6 w-6 object-contain" />
+                </div>
+                <div>
+                  <h3 
+                    className="font-semibold"
+                    style={{ fontFamily: "'Cormorant', serif" }}
+                  >
+                    Zalo
+                  </h3>
+                  <p style={{ fontFamily: "'Cormorant', serif" }}>https://zalo.me/0919100021</p>
                 </div>
               </li>
               <li className="flex items-start gap-4">
@@ -267,9 +324,10 @@ export default function Contact({ language }) {
                   >
                     {content.contactInfo.email}
                   </h3>
-                  <p style={{ fontFamily: "'Cormorant', serif" }}>info@emis-dental.com</p>
+                  <p style={{ fontFamily: "'Cormorant', serif" }}>Emisdentalclinic@gmail.com</p>
                 </div>
               </li>
+              
               <li className="flex items-start gap-4">
                 <div className="bg-white p-2 rounded-full">
                   <img src={facebook} alt="Facebook" className="h-6 w-6 object-contain" />
@@ -281,10 +339,10 @@ export default function Contact({ language }) {
                   >
                     {content.contactInfo.facebook}
                   </h3>
-                  <p style={{ fontFamily: "'Cormorant', serif" }}>facebook.com/emis-dental</p>
+                  <p style={{ fontFamily: "'Cormorant', serif" }}>facebook.com/emisdental</p>
                 </div>
               </li>
-              <li className="flex items-start gap-4">
+              {/* <li className="flex items-start gap-4">
                 <div className="bg-white p-2 rounded-full">
                   <img src={instagram} alt="Instagram" className="h-6 w-6 object-contain" />
                 </div>
@@ -297,7 +355,7 @@ export default function Contact({ language }) {
                   </h3>
                   <p style={{ fontFamily: "'Cormorant', serif" }}>instagram.com/emis-dental</p>
                 </div>
-              </li>
+              </li> */}
             </ul>
           </div>
           
