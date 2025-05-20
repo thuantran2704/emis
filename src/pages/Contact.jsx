@@ -4,10 +4,8 @@ import phoneIcon from '../pics/phone.jpg';
 import facebook from '../pics/facebook.jpg';
 import instagram from '../pics/instagram.jpg';
 import zaloIcon from '../pics/zalo.jpg';
-
+import Alert from '../components/alert';
 export default function Contact({ language }) {
-  // Vietnamese content
-  
   const vietnameseContent = {
     title: "Liên Hệ",
     highlight: "Chúng Tôi",
@@ -37,7 +35,6 @@ export default function Contact({ language }) {
     ]
   };
 
-  // English content
   const englishContent = {
     title: "Contact Us",
     highlight: "Us",
@@ -67,7 +64,6 @@ export default function Contact({ language }) {
     ]
   };
 
-  // Simplified Chinese content
   const simplifiedContent = {
     title: "联系我们",
     highlight: "我们",
@@ -97,7 +93,6 @@ export default function Contact({ language }) {
     ]
   };
 
-  // Traditional Chinese content
   const traditionalContent = {
     title: "聯繫我們",
     highlight: "我們",
@@ -127,7 +122,6 @@ export default function Contact({ language }) {
     ]
   };
 
-  // French content
   const frenchContent = {
     title: "Contactez-",
     highlight: "Nous",
@@ -157,7 +151,6 @@ export default function Contact({ language }) {
     ]
   };
 
-  // Korean content
   const koreanContent = {
     title: "연락",
     highlight: "하기",
@@ -187,7 +180,7 @@ export default function Contact({ language }) {
     ]
   };
 
-  const content = 
+  const content =
     language === 'vietnamese' ? vietnameseContent :
     language === 'english' ? englishContent :
     language === 'simplified' ? simplifiedContent :
@@ -204,6 +197,8 @@ export default function Contact({ language }) {
     message: ''
   });
 
+  const [alert, setAlert] = useState({ show: false, message: '', type: 'success' });
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -212,57 +207,68 @@ export default function Contact({ language }) {
     }));
   };
 
-// Update your handleSubmit function in the Contact component
-const handleSubmit = async (e) => {
-  e.preventDefault();
-  
-  try {
-    const response = await fetch('http://localhost:5000/api/appointments', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    });
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/appointments`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      const data = await response.json();
+      console.log('Success:', data);
+
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        date: '',
+        service: '',
+        message: ''
+      });
+
+      setAlert({
+        show: true,
+        message: language === 'english' ? 'Appointment booked successfully!' : 
+                 language === 'vietnamese' ? 'Đặt lịch hẹn thành công!' :
+                 language === 'simplified' ? '预约成功!' :
+                 language === 'traditional' ? '預約成功!' :
+                 language === 'french' ? 'Rendez-vous réservé avec succès!' :
+                 '예약이 성공적으로 완료되었습니다!',
+        type: 'success'
+      });
+
+    } catch (error) {
+      console.error('Error:', error);
+      setAlert({
+        show: true,
+        message: language === 'english' ? 'Failed to book appointment. Please try again.' : 
+                 language === 'vietnamese' ? 'Đặt lịch hẹn không thành công. Vui lòng thử lại.' :
+                 language === 'simplified' ? '预约失败，请重试。' :
+                 language === 'traditional' ? '預約失敗，請重試。' :
+                 language === 'french' ? 'Échec de la réservation. Veuillez réessayer.' :
+                 '예약에 실패했습니다. 다시 시도해 주세요.',
+        type: 'error'
+      });
     }
-
-    const data = await response.json();
-    console.log('Success:', data);
-    
-    // Reset form after successful submission
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      date: '',
-      service: '',
-      message: ''
-    });
-
-    // Show success message to user
-    alert(language === 'english' ? 'Appointment booked successfully!' : 
-          language === 'vietnamese' ? 'Đặt lịch hẹn thành công!' :
-          language === 'simplified' ? '预约成功!' :
-          language === 'traditional' ? '預約成功!' :
-          language === 'french' ? 'Rendez-vous réservé avec succès!' :
-          '예약이 성공적으로 완료되었습니다!');
-
-  } catch (error) {
-    console.error('Error:', error);
-    alert(language === 'english' ? 'Failed to book appointment. Please try again.' : 
-          language === 'vietnamese' ? 'Đặt lịch hẹn không thành công. Vui lòng thử lại.' :
-          language === 'simplified' ? '预约失败，请重试。' :
-          language === 'traditional' ? '預約失敗，請重試。' :
-          language === 'french' ? 'Échec de la réservation. Veuillez réessayer.' :
-          '예약에 실패했습니다. 다시 시도해 주세요.');
-  }
-};
+  };
 
   return (
     <main className="min-h-[calc(100vh-4rem)] bg-[#f7f2e7]">
+      {alert.show && (
+        <Alert
+          message={alert.message}
+          type={alert.type}
+          onClose={() => setAlert({ ...alert, show: false })}
+        />
+      )}
       <section className="py-20 px-4 max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h1 
