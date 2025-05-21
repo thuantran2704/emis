@@ -39,7 +39,7 @@ export default function Navbar() {
               <span className="absolute bottom-1 left-3 right-3 h-px bg-[#2a3439] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
             </Link>
             
-            <Link 
+            {/* <Link 
               to="/about" 
               className="relative text-[#2a3439] font-medium px-3 py-2 transition-all duration-300 group"
               style={{ fontFamily: "'Cormorant', serif" }}
@@ -48,7 +48,7 @@ export default function Navbar() {
                 About
               </span>
               <span className="absolute bottom-1 left-3 right-3 h-px bg-[#2a3439] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-            </Link>
+            </Link> */}
             
             <Link 
               to="/contact" 
