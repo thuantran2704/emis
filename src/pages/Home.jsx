@@ -5,8 +5,7 @@ import implant from '../pics/implant.jpg';
 import crown from '../pics/crown.jpg';
 import invisalign from '../pics/invisalign.jpg';
 import { Helmet } from 'react-helmet';
-import slider from '../components/slider.jsx';
-import MapSection from '../components/map.jsx';
+
 export default function Home({ language }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -336,24 +335,152 @@ export default function Home({ language }) {
       {/* Services Section */}
       <section className="py-16 bg-[#fffaf0]">
         <div className="max-w-6xl mx-auto px-4 relative">
-          <h2
+          <h2 
             className="text-3xl font-bold text-[#1f2937] mb-12 text-center border-b-2 border-[#d4af37] pb-2 inline-block"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
             {content.servicesTitle}
           </h2>
+          
+          <div className="relative overflow-hidden">
+            {/* Navigation Arrows */}
+            <button 
+              onClick={prevSlide}
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#d4af37] text-white p-3 rounded-full shadow-md hover:bg-[#c19d30] transition"
+              style={{ fontFamily: "'Cormorant', serif" }}
+              aria-label="Previous services"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            
+            <button 
+              onClick={nextSlide}
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#d4af37] text-white p-3 rounded-full shadow-md hover:bg-[#c19d30] transition"
+              style={{ fontFamily: "'Cormorant', serif" }}
+              aria-label="Next services"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
 
-          <Slider
-            services={content.services}
-            serviceImages={serviceImages}
-            bookNow={content.bookNow}
-          />
+            {/* Slider Container */}
+            <div className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(calc(-${currentIndex * (100/3)}%))` }}>
+              {content.services.map((service, index) => (
+                <div key={index} className="w-1/3 flex-shrink-0 px-4" itemScope itemType="https://schema.org/MedicalProcedure">
+                  <div className="group h-96 [perspective:1000px]">
+                    <div className="relative h-full w-full rounded-lg shadow-lg transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                      {/* Front of Card */}
+                      <div className="absolute inset-0 [backface-visibility:hidden] flex flex-col">
+                        <div className="h-3/4 overflow-hidden">
+                          <img 
+                            src={serviceImages[index]} 
+                            alt={`${service.name} service at our dental clinic`}
+                            className="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                            loading="lazy"
+                            itemProp="image"
+                          />
+                        </div>
+                        <div className="h-1/4 bg-[#f7f2e7] p-3 flex flex-col items-center justify-center">
+                          <h3 
+                            className="text-lg font-bold text-[#1f2937] text-center"
+                            style={{ fontFamily: "'Playfair Display', serif" }}
+                            itemProp="name"
+                          >
+                            {service.name}
+                          </h3>
+                          <p 
+                            className="text-[#6b7280] text-sm text-center"
+                            style={{ fontFamily: "'Cormorant', serif" }}
+                            itemProp="description"
+                          >
+                            {service.desc}
+                          </p>
+                        </div>
+                      </div>
+                      
+                      {/* Back of Card */}
+                      <div className="absolute inset-0 bg-[#d4af37] p-4 rounded-lg flex flex-col items-center justify-center [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
+                        <h3 
+                          className="text-lg font-bold text-[#1f2937] mb-2 text-center"
+                          style={{ fontFamily: "'Playfair Display', serif" }}
+                        >
+                          {service.name}
+                        </h3>
+                        <p 
+                          className="text-[#1f2937] text-sm text-center mb-4"
+                          style={{ fontFamily: "'Cormorant', serif" }}
+                          itemProp="potentialAction"
+                        >
+                          {service.details}
+                        </p>
+                        <Link 
+                          to="/contact" 
+                          className="bg-[#1f2937] text-[#f7f2e7] px-4 py-2 rounded-full text-sm font-medium hover:bg-opacity-90 transition"
+                          style={{ fontFamily: "'Playfair Display', serif" }}
+                          aria-label={`Book ${service.name} appointment`}
+                        >
+                          {content.bookNow}
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Indicators */}
+          <div className="flex justify-center mt-8 gap-2">
+            {Array.from({length: content.services.length - 2}).map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`w-3 h-3 rounded-full ${currentIndex === index ? 'bg-[#d4af37]' : 'bg-gray-300'}`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Map Section */}
-    <MapSection address={content.address} locationTitle={content.locationTitle} />
+      <section className="py-12 bg-[#f7f2e7]" itemScope itemType="https://schema.org/LocalBusiness">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 
+            className="text-3xl font-bold text-[#1f2937] mb-8 text-center"
+            style={{ fontFamily: "'Playfair Display', serif" }}
+          >
+            {content.locationTitle}
+          </h2>
+          
+          <div className="relative overflow-hidden rounded-xl border-4 border-[#1f2937] shadow-xl">
+            <div className="relative pb-[56.25%] h-0">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7838.736219916501!2d106.69290884019306!3d10.783092789410368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f36962c096f%3A0x8a34a0035dd5f6c8!2zNjJiIFBo4bqhbSBOZ-G7jWMgVGjhuqFjaCwgUGjGsOG7nW5nIDYsIFF14bqtbiAzLCBI4buTIENow60gTWluaCwgVmlldG5hbQ!5e0!3m2!1sen!2sus!4v1747347945896!5m2!1sen!2sus"
+                className="absolute top-0 left-0 w-full h-full"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Dental Clinic Location"
+                aria-label="Google Maps location of our dental clinic"
+                itemProp="hasMap"
+              />
+            </div>
+          </div>
 
+          <p 
+            className="text-center text-gray-600 mt-4"
+            style={{ fontFamily: "'Cormorant', serif" }}
+            itemProp="address"
+          >
+            {content.address}
+          </p>
+        </div>
+      </section>
     </main>
   );
 }
