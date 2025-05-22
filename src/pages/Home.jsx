@@ -6,7 +6,7 @@ import crown from '../pics/crown.jpg';
 import invisalign from '../pics/invisalign.jpg';
 import { Helmet } from 'react-helmet';
 import slider from '../components/slider';
-import MapSection from '../components/MapSection';
+import MapSection from '../components/map';
 export default function Home({ language }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
