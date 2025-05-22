@@ -8,19 +8,18 @@ export default function Cards({ services, serviceImages, bookNow, currentIndex }
         className="flex transition-transform duration-500 ease-in-out"
         style={{ 
           width: `${services.length * 100}%`,
-          transform: `translateX(-${currentIndex * (100 / services.length)}%)` 
+          transform: `translateX(-${currentIndex * 100}%)` 
         }}
       >
         {services.map((service, index) => (
           <div 
             key={index} 
             className="w-full flex-shrink-0"
-            style={{ width: `${100 / services.length}%` }}
+            style={{ width: '100%' }}  // ✅ fixed here
             itemScope 
             itemType="https://schema.org/MedicalProcedure"
           >
             <div className="group h-96 [perspective:1000px] mx-auto max-w-md px-4">
-              {/* Rest of your card content remains exactly the same */}
               <div className="relative h-full w-full rounded-lg shadow-lg transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                 {/* Front of Card */}
                 <div className="absolute inset-0 [backface-visibility:hidden] flex flex-col">
