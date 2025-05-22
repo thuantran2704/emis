@@ -1,10 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import ServiceCard from './ServiceCard';
 
 const ServicesSlider = ({ services, serviceImages, bookNowText }) => {
   const [cardsPerView, setCardsPerView] = useState(1);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [transitionEnabled, setTransitionEnabled] = useState(true);
+  const sliderRef = useRef(null);
 
   // Update cards per view on window resize
   useEffect(() => {
@@ -19,30 +21,51 @@ const ServicesSlider = ({ services, serviceImages, bookNowText }) => {
     return () => window.removeEventListener('resize', updateCardsPerView);
   }, []);
 
-  // Infinite scroll logic
+  // Handle transition end for infinite loop
+  const handleTransitionEnd = () => {
+    if (currentIndex >= services.length) {
+      setTransitionEnabled(false);
+      setCurrentIndex(currentIndex % services.length);
+    } else if (currentIndex < 0) {
+      setTransitionEnabled(false);
+      setCurrentIndex(services.length - 1);
+    }
+  };
+
+  // Re-enable transition after resetting position
+  useEffect(() => {
+    if (!transitionEnabled) {
+      setTimeout(() => {
+        setTransitionEnabled(true);
+      }, 50);
+    }
+  }, [transitionEnabled]);
+
+  // Infinite scroll logic with smooth transitions
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      (prevIndex + 1) % services.length
-    );
+    if (transitionEnabled) {
+      setCurrentIndex((prevIndex) => prevIndex + 1);
+    }
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      (prevIndex - 1 + services.length) % services.length
-    );
-  };
-
-  // Compute visible slice of cards (looping)
-  const getVisibleCards = () => {
-    const visible = [];
-    for (let i = 0; i < cardsPerView; i++) {
-      const index = (currentIndex + i) % services.length;
-      visible.push({ service: services[index], image: serviceImages[index], key: index });
+    if (transitionEnabled) {
+      setCurrentIndex((prevIndex) => prevIndex - 1);
     }
-    return visible;
   };
 
-  const visibleCards = getVisibleCards();
+  // Calculate transform value for smooth sliding
+  const getTransformValue = () => {
+    if (sliderRef.current) {
+      const slideWidth = sliderRef.current.offsetWidth / cardsPerView;
+      return -currentIndex * slideWidth;
+    }
+    return 0;
+  };
+
+  // Duplicate slides for seamless infinite loop
+  const extendedServices = [...services, ...services, ...services];
+  const extendedServiceImages = [...serviceImages, ...serviceImages, ...serviceImages];
 
   return (
     <div className="relative w-full overflow-hidden">
@@ -68,16 +91,24 @@ const ServicesSlider = ({ services, serviceImages, bookNowText }) => {
       </button>
 
       {/* Cards View */}
-      <div className="flex transition-all duration-500 ease-in-out">
-        {visibleCards.map(({ service, image, key }) => (
+      <div 
+        ref={sliderRef}
+        className="flex transition-all duration-500 ease-in-out"
+        style={{
+          transform: `translateX(${getTransformValue()}px)`,
+          transition: transitionEnabled ? 'transform 500ms ease-in-out' : 'none'
+        }}
+        onTransitionEnd={handleTransitionEnd}
+      >
+        {extendedServices.map((service, index) => (
           <div
-            key={key}
+            key={index}
             style={{ flex: `0 0 ${100 / cardsPerView}%` }}
             className="px-2"
           >
             <ServiceCard
               service={service}
-              image={image}
+              image={extendedServiceImages[index]}
               bookNowText={bookNowText}
             />
           </div>
