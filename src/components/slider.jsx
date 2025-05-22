@@ -6,11 +6,11 @@ export default function Slider({ services, serviceImages, bookNow }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % (services.length - 2));
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % services.length);
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + (services.length - 2)) % (services.length - 2));
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + services.length) % services.length);
   };
 
   return (
@@ -48,7 +48,7 @@ export default function Slider({ services, serviceImages, bookNow }) {
 
       {/* Indicators */}
       <div className="flex justify-center mt-8 gap-2">
-        {Array.from({length: services.length - 2}).map((_, index) => (
+        {services.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}

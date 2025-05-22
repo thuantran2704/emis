@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 export default function Cards({ services, serviceImages, bookNow, currentIndex }) {
   return (
     <div className="flex transition-transform duration-500 ease-in-out"
-      style={{ transform: `translateX(calc(-${currentIndex * (100/3)}%))` }}>
+      style={{ transform: `translateX(calc(-${currentIndex * 100}%))` }}>
       {services.map((service, index) => (
-        <div key={index} className="w-1/3 flex-shrink-0 px-4" itemScope itemType="https://schema.org/MedicalProcedure">
-          <div className="group h-96 [perspective:1000px]">
+        <div key={index} className="w-full flex-shrink-0 px-4" itemScope itemType="https://schema.org/MedicalProcedure">
+          <div className="group h-96 [perspective:1000px] mx-auto max-w-md">
             <div className="relative h-full w-full rounded-lg shadow-lg transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
               {/* Front of Card */}
               <div className="absolute inset-0 [backface-visibility:hidden] flex flex-col">
