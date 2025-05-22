@@ -6,15 +6,26 @@ export default function Slider({ services, serviceImages, bookNow }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % services.length);
+    setCurrentIndex((prevIndex) => 
+      prevIndex === services.length - 1 ? 0 : prevIndex + 1
+    );
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + services.length) % services.length);
+    setCurrentIndex((prevIndex) => 
+      prevIndex === 0 ? services.length - 1 : prevIndex - 1
+    );
   };
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative">
+      <Cards 
+        services={services} 
+        serviceImages={serviceImages} 
+        bookNow={bookNow} 
+        currentIndex={currentIndex} 
+      />
+      
       {/* Navigation Arrows */}
       <button 
         onClick={prevSlide}
@@ -37,14 +48,6 @@ export default function Slider({ services, serviceImages, bookNow }) {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
         </svg>
       </button>
-
-      {/* Cards Component */}
-      <Cards 
-        services={services} 
-        serviceImages={serviceImages} 
-        bookNow={bookNow} 
-        currentIndex={currentIndex} 
-      />
 
       {/* Indicators */}
       <div className="flex justify-center mt-8 gap-2">
