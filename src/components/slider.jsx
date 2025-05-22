@@ -1,7 +1,6 @@
 // components/Slider.jsx
 import { useState } from 'react';
-import Cards from './Cards';
-
+import Cards from './card.jsx';
 export default function Slider({ services, serviceImages, bookNow }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
