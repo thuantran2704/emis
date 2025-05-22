@@ -1,21 +1,40 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import ServiceCard from './ServiceCard';
 
 const ServicesSlider = ({ services, serviceImages, bookNowText }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [cardsPerView, setCardsPerView] = useState(1);
+
+  // Handle responsive cards per view
+  useEffect(() => {
+    const updateCardsPerView = () => {
+      const width = window.innerWidth;
+      if (width >= 1024) setCardsPerView(3); // desktop
+      else if (width >= 768) setCardsPerView(2); // tablet
+      else setCardsPerView(1); // mobile
+    };
+
+    updateCardsPerView();
+    window.addEventListener('resize', updateCardsPerView);
+    return () => window.removeEventListener('resize', updateCardsPerView);
+  }, []);
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % services.length);
+    setCurrentIndex((prevIndex) =>
+      (prevIndex + 1) % Math.ceil(services.length / cardsPerView)
+    );
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + services.length) % services.length);
+    setCurrentIndex((prevIndex) =>
+      (prevIndex - 1 + Math.ceil(services.length / cardsPerView)) % Math.ceil(services.length / cardsPerView)
+    );
   };
 
   return (
     <div className="relative overflow-hidden">
-      {/* Navigation Arrows */}
+      {/* Arrows */}
       <button 
         onClick={prevSlide}
         className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#d4af37] text-white p-3 rounded-full shadow-md hover:bg-[#c19d30] transition"
@@ -25,7 +44,7 @@ const ServicesSlider = ({ services, serviceImages, bookNowText }) => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
         </svg>
       </button>
-      
+
       <button 
         onClick={nextSlide}
         className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#d4af37] text-white p-3 rounded-full shadow-md hover:bg-[#c19d30] transition"
@@ -36,22 +55,24 @@ const ServicesSlider = ({ services, serviceImages, bookNowText }) => {
         </svg>
       </button>
 
-      {/* Slider Container */}
+      {/* Slider */}
       <div className="flex transition-transform duration-500 ease-in-out"
-        style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+        style={{ width: `${(services.length / cardsPerView) * 100}%`, transform: `translateX(-${currentIndex * (100 / (services.length / cardsPerView))}%)` }}
+      >
         {services.map((service, index) => (
-          <ServiceCard 
-            key={index}
-            service={service}
-            image={serviceImages[index]}
-            bookNowText={bookNowText}
-          />
+          <div key={index} style={{ flex: `0 0 ${100 / cardsPerView}%` }}>
+            <ServiceCard
+              service={service}
+              image={serviceImages[index]}
+              bookNowText={bookNowText}
+            />
+          </div>
         ))}
       </div>
 
       {/* Indicators */}
       <div className="flex justify-center mt-8 gap-2">
-        {services.map((_, index) => (
+        {Array.from({ length: Math.ceil(services.length / cardsPerView) }).map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
