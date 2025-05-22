@@ -5,6 +5,7 @@ import implant from '../pics/implant.jpg';
 import crown from '../pics/crown.jpg';
 import invisalign from '../pics/invisalign.jpg';
 import { Helmet } from 'react-helmet';
+import ServicesSlider from '../components/ServicesSlider';
 
 export default function Home({ language }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -342,108 +343,12 @@ export default function Home({ language }) {
             {content.servicesTitle}
           </h2>
           
-          <div className="relative overflow-hidden">
-            {/* Navigation Arrows */}
-            <button 
-              onClick={prevSlide}
-              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#d4af37] text-white p-3 rounded-full shadow-md hover:bg-[#c19d30] transition"
-              style={{ fontFamily: "'Cormorant', serif" }}
-              aria-label="Previous services"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-            
-            <button 
-              onClick={nextSlide}
-              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#d4af37] text-white p-3 rounded-full shadow-md hover:bg-[#c19d30] transition"
-              style={{ fontFamily: "'Cormorant', serif" }}
-              aria-label="Next services"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-
-            {/* Slider Container */}
-            <div className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(calc(-${currentIndex * (100/3)}%))` }}>
-              {content.services.map((service, index) => (
-                <div key={index} className="w-1/3 flex-shrink-0 px-4" itemScope itemType="https://schema.org/MedicalProcedure">
-                  <div className="group h-96 [perspective:1000px]">
-                    <div className="relative h-full w-full rounded-lg shadow-lg transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                      {/* Front of Card */}
-                      <div className="absolute inset-0 [backface-visibility:hidden] flex flex-col">
-                        <div className="h-3/4 overflow-hidden">
-                          <img 
-                            src={serviceImages[index]} 
-                            alt={`${service.name} service at our dental clinic`}
-                            className="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
-                            loading="lazy"
-                            itemProp="image"
-                          />
-                        </div>
-                        <div className="h-1/4 bg-[#f7f2e7] p-3 flex flex-col items-center justify-center">
-                          <h3 
-                            className="text-lg font-bold text-[#1f2937] text-center"
-                            style={{ fontFamily: "'Playfair Display', serif" }}
-                            itemProp="name"
-                          >
-                            {service.name}
-                          </h3>
-                          <p 
-                            className="text-[#6b7280] text-sm text-center"
-                            style={{ fontFamily: "'Cormorant', serif" }}
-                            itemProp="description"
-                          >
-                            {service.desc}
-                          </p>
-                        </div>
-                      </div>
-                      
-                      {/* Back of Card */}
-                      <div className="absolute inset-0 bg-[#d4af37] p-4 rounded-lg flex flex-col items-center justify-center [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
-                        <h3 
-                          className="text-lg font-bold text-[#1f2937] mb-2 text-center"
-                          style={{ fontFamily: "'Playfair Display', serif" }}
-                        >
-                          {service.name}
-                        </h3>
-                        <p 
-                          className="text-[#1f2937] text-sm text-center mb-4"
-                          style={{ fontFamily: "'Cormorant', serif" }}
-                          itemProp="potentialAction"
-                        >
-                          {service.details}
-                        </p>
-                        <Link 
-                          to="/contact" 
-                          className="bg-[#1f2937] text-[#f7f2e7] px-4 py-2 rounded-full text-sm font-medium hover:bg-opacity-90 transition"
-                          style={{ fontFamily: "'Playfair Display', serif" }}
-                          aria-label={`Book ${service.name} appointment`}
-                        >
-                          {content.bookNow}
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Indicators */}
-          <div className="flex justify-center mt-8 gap-2">
-            {Array.from({length: content.services.length - 2}).map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full ${currentIndex === index ? 'bg-[#d4af37]' : 'bg-gray-300'}`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
+          <ServicesSlider 
+            services={content.services}
+            serviceImages={serviceImages}
+            bookNowText={content.bookNow}
+            language={language}
+          />
         </div>
       </section>
 
