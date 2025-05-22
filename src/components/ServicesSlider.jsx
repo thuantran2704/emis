@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import ServiceCard from './ServiceCard';
 
 const ServicesSlider = ({ services, serviceImages, bookNowText }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [cardsPerView, setCardsPerView] = useState(1);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Handle responsive cards per view
+  // Update cards per view on window resize
   useEffect(() => {
     const updateCardsPerView = () => {
       const width = window.innerWidth;
@@ -14,26 +14,38 @@ const ServicesSlider = ({ services, serviceImages, bookNowText }) => {
       else if (width >= 768) setCardsPerView(2); // tablet
       else setCardsPerView(1); // mobile
     };
-
     updateCardsPerView();
     window.addEventListener('resize', updateCardsPerView);
     return () => window.removeEventListener('resize', updateCardsPerView);
   }, []);
 
+  // Infinite scroll logic
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
-      (prevIndex + 1) % Math.ceil(services.length / cardsPerView)
+      (prevIndex + 1) % services.length
     );
   };
 
   const prevSlide = () => {
     setCurrentIndex((prevIndex) =>
-      (prevIndex - 1 + Math.ceil(services.length / cardsPerView)) % Math.ceil(services.length / cardsPerView)
+      (prevIndex - 1 + services.length) % services.length
     );
   };
 
+  // Compute visible slice of cards (looping)
+  const getVisibleCards = () => {
+    const visible = [];
+    for (let i = 0; i < cardsPerView; i++) {
+      const index = (currentIndex + i) % services.length;
+      visible.push({ service: services[index], image: serviceImages[index], key: index });
+    }
+    return visible;
+  };
+
+  const visibleCards = getVisibleCards();
+
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative w-full overflow-hidden">
       {/* Arrows */}
       <button 
         onClick={prevSlide}
@@ -55,30 +67,20 @@ const ServicesSlider = ({ services, serviceImages, bookNowText }) => {
         </svg>
       </button>
 
-      {/* Slider */}
-      <div className="flex transition-transform duration-500 ease-in-out"
-        style={{ width: `${(services.length / cardsPerView) * 100}%`, transform: `translateX(-${currentIndex * (100 / (services.length / cardsPerView))}%)` }}
-      >
-        {services.map((service, index) => (
-          <div key={index} style={{ flex: `0 0 ${100 / cardsPerView}%` }}>
+      {/* Cards View */}
+      <div className="flex transition-all duration-500 ease-in-out">
+        {visibleCards.map(({ service, image, key }) => (
+          <div
+            key={key}
+            style={{ flex: `0 0 ${100 / cardsPerView}%` }}
+            className="px-2"
+          >
             <ServiceCard
               service={service}
-              image={serviceImages[index]}
+              image={image}
               bookNowText={bookNowText}
             />
           </div>
-        ))}
-      </div>
-
-      {/* Indicators */}
-      <div className="flex justify-center mt-8 gap-2">
-        {Array.from({ length: Math.ceil(services.length / cardsPerView) }).map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentIndex(index)}
-            className={`w-3 h-3 rounded-full ${currentIndex === index ? 'bg-[#d4af37]' : 'bg-gray-300'}`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
         ))}
       </div>
     </div>
