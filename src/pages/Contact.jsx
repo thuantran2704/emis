@@ -207,58 +207,138 @@ export default function Contact({ language }) {
     }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/appointments`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  
+  try {
+    // 1. Log the form data being submitted
+    console.log('Form data being submitted:', JSON.stringify(formData, null, 2));
+    console.log('Using API endpoint:', `${import.meta.env.VITE_API_URL}/api/appointments`);
 
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
+    // 2. Make the fetch request with detailed configuration
+    const fetchStartTime = performance.now();
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/api/appointments`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'X-Requested-With': 'XMLHttpRequest',
+      },
+      body: JSON.stringify(formData),
+      credentials: 'include', // Include cookies if needed
+    });
+    const fetchDuration = performance.now() - fetchStartTime;
+    console.log(`Fetch completed in ${fetchDuration.toFixed(2)}ms`);
+
+    // 3. Log complete response details
+    console.groupCollapsed('Response Details');
+    console.log('Status:', response.status, response.statusText);
+    console.log('Headers:', Object.fromEntries(response.headers.entries()));
+    console.log('URL:', response.url);
+    console.log('Redirected:', response.redirected);
+    console.log('Type:', response.type);
+    console.groupEnd();
+
+    // 4. Handle non-OK responses
+    if (!response.ok) {
+      let errorData;
+      try {
+        errorData = await response.clone().json(); // Clone response to read twice if needed
+      } catch (e) {
+        try {
+          errorData = await response.clone().text(); // Fallback to text if not JSON
+        } catch (e) {
+          errorData = 'Unable to parse error response';
+        }
       }
 
-      const data = await response.json();
-      console.log('Success:', data);
-
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        date: '',
-        service: '',
-        message: ''
+      console.error('Server returned error:', {
+        status: response.status,
+        statusText: response.statusText,
+        url: response.url,
+        errorData,
       });
 
-      setAlert({
-        show: true,
-        message: language === 'english' ? 'Appointment booked successfully!' : 
-                 language === 'vietnamese' ? 'Đặt lịch hẹn thành công!' :
-                 language === 'simplified' ? '预约成功!' :
-                 language === 'traditional' ? '預約成功!' :
-                 language === 'french' ? 'Rendez-vous réservé avec succès!' :
-                 '예약이 성공적으로 완료되었습니다!',
-        type: 'success'
-      });
-
-    } catch (error) {
-      console.error('Error:', error);
-      setAlert({
-        show: true,
-        message: language === 'english' ? 'Failed to book appointment. Please try again.' : 
-                 language === 'vietnamese' ? 'Đặt lịch hẹn không thành công. Vui lòng thử lại.' :
-                 language === 'simplified' ? '预约失败，请重试。' :
-                 language === 'traditional' ? '預約失敗，請重試。' :
-                 language === 'french' ? 'Échec de la réservation. Veuillez réessayer.' :
-                 '예약에 실패했습니다. 다시 시도해 주세요.',
-        type: 'error'
-      });
+      throw new Error(
+        errorData?.message || 
+        errorData ||
+        `Server responded with ${response.status}: ${response.statusText}`
+      );
     }
-  };
+
+    // 5. Process successful response
+    const data = await response.json();
+    console.log('Successful response data:', data);
+
+    // 6. Reset form
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      date: '',
+      service: '',
+      message: ''
+    });
+
+    // 7. Show success alert with all language options
+    setAlert({
+      show: true,
+      message: (() => {
+        switch (language) {
+          case 'english': return 'Appointment booked successfully!';
+          case 'vietnamese': return 'Đặt lịch hẹn thành công!';
+          case 'simplified': return '预约成功!';
+          case 'traditional': return '預約成功!';
+          case 'french': return 'Rendez-vous réservé avec succès!';
+          case 'korean': return '예약이 성공적으로 완료되었습니다!';
+          default: return 'Appointment booked successfully!';
+        }
+      })(),
+      type: 'success'
+    });
+
+  } catch (error) {
+    // 8. Comprehensive error logging
+    console.groupCollapsed('Detailed Error Information');
+    console.error('Error name:', error.name);
+    console.error('Error message:', error.message);
+    console.error('Error stack:', error.stack);
+    console.error('Is network error:', error instanceof TypeError);
+    
+    if (error.name === 'TypeError') {
+      console.error('Potential CORS issue detected');
+      console.log('Suggested fixes:');
+      console.log('- Verify backend CORS configuration');
+      console.log('- Check network connectivity');
+      console.log('- Confirm API endpoint URL');
+    }
+    
+    console.groupEnd();
+
+    // 9. User-friendly error message with all language options
+    setAlert({
+      show: true,
+      message: (() => {
+        switch (language) {
+          case 'english': return 'Failed to book appointment. Please try again.';
+          case 'vietnamese': return 'Đặt lịch hẹn không thành công. Vui lòng thử lại.';
+          case 'simplified': return '预约失败，请重试。';
+          case 'traditional': return '預約失敗，請重試。';
+          case 'french': return 'Échec de la réservation. Veuillez réessayer.';
+          case 'korean': return '예약에 실패했습니다. 다시 시도해 주세요.';
+          default: return 'Failed to book appointment. Please try again.';
+        }
+      })(),
+      type: 'error'
+    });
+
+    // 10. Additional error reporting (optional)
+    if (process.env.NODE_ENV === 'production') {
+      // Here you could add error reporting to services like Sentry
+      // reportErrorToMonitoringService(error);
+    }
+  }
+};
 
   return (
     <main className="min-h-[calc(100vh-4rem)] bg-[#f7f2e7]">
