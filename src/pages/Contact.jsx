@@ -421,12 +421,13 @@ const handleSubmit = async (e) => {
               {content.bookAppointment}
             </h2>
             {/* Loading overlay */}
-          {isSubmitting && (
-            <div className="absolute inset-0 z-10 flex items-center justify-center backdrop-blur-sm bg-white/40 rounded-xl">
-              <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#d4af37]"></div>
-            </div>
-          )}
+          
             <form onSubmit={handleSubmit} className="space-y-4">
+              {isSubmitting && (
+                <div className="absolute inset-0 z-10 flex items-center justify-center backdrop-blur-sm bg-white/40 rounded-xl">
+                  <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#d4af37]"></div>
+                </div>
+              )}
               <div>
                 <label 
                   htmlFor="name" 
