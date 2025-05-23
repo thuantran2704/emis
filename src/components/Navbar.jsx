@@ -1,80 +1,29 @@
-import { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../pics/logo.jpg';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [adminAuth, setAdminAuth] = useState({
-    isAllowed: false,
-    isLoading: true
-  });
-  const navigate = useNavigate();
 
-  useEffect(() => {
-    const verifyAdminAccess = async () => {
-      try {
-        const response = await fetch('/api/verify-admin', {
-          credentials: 'include' // For cookies/session
-        });
-        
-        if (!response.ok) throw new Error('Unauthorized');
-        
-        const data = await response.json();
-        setAdminAuth({ isAllowed: data.isAdmin, isLoading: false });
-      } catch (error) {
-        setAdminAuth({ isAllowed: false, isLoading: false });
-      }
-    };
-
-    verifyAdminAccess();
-  }, []);
-
-  const handleAdminClick = (e) => {
-    if (!adminAuth.isAllowed) {
-      e.preventDefault();
-      navigate('/login?redirect=/admin');
-    }
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-
-  // Reusable components
-  const NavLink = ({ to, children, mobile = false, admin = false }) => (
-    <Link 
-      to={to}
-      onClick={admin ? handleAdminClick : undefined}
-      className={`${mobile ? 'block' : 'relative'} px-3 py-2 text-[#2a3439] font-medium rounded-md transition-all duration-300 group`}
-      style={{ fontFamily: "'Cormorant', serif" }}
-    >
-      {mobile ? (
-        <span className="hover:bg-[#2a3439] hover:text-[#C5AF73] block px-3 py-2 rounded-md">
-          {children}
-        </span>
-      ) : (
-        <>
-          <span className="opacity-90 group-hover:opacity-100">
-            {children}
-          </span>
-          {!admin && (
-            <span className="absolute bottom-1 left-3 right-3 h-px bg-[#2a3439] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-          )}
-        </>
-      )}
-    </Link>
-  );
-
   return (
+    {/* Fragment to wrap the navbar and overlay */}
     <>
+      {/* Blurred overlay for when menu is open */}
       {isMenuOpen && (
         <div 
           className="fixed inset-0 backdrop-blur-sm bg-white/30 z-40" 
           onClick={toggleMenu}
-        />
+        ></div>
       )}
 
       <nav className="bg-gradient-to-r from-[#d4af37] via-[#C5AF73] to-[#d4af37] shadow-xl fixed w-full z-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex justify-between items-center h-20">
+            {/* Logo */}
             <Link to="/" className="flex items-center space-x-3 group">
               <div className="h-14 w-14 rounded-full overflow-hidden border-2 border-[#1f2937] border-opacity-20 shadow-md">
                 <img 
@@ -94,14 +43,19 @@ export default function Navbar() {
               </span>
             </Link>
 
+
+            {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-6">
-              <NavLink to="/">Home</NavLink>
-              
-              {!adminAuth.isLoading && (
-                <NavLink to="/admin" admin>
-                  Admin
-                </NavLink>
-              )}
+              <Link 
+                to="/" 
+                className="relative text-[#2a3439] font-medium px-3 py-2 transition-all duration-300 group"
+                style={{ fontFamily: "'Cormorant', serif" }}
+              >
+                <span className="opacity-90 group-hover:opacity-100">
+                  Home
+                </span>
+                <span className="absolute bottom-1 left-3 right-3 h-px bg-[#2a3439] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+              </Link>
               
               <Link 
                 to="/contact" 
@@ -115,6 +69,7 @@ export default function Navbar() {
               </Link>
             </div>
 
+            {/* Mobile menu button */}
             <div className="md:hidden flex items-center">
               <button
                 onClick={toggleMenu}
@@ -133,19 +88,25 @@ export default function Navbar() {
           </div>
         </div>
 
+        {/* Mobile Menu */}
         <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
           <div className="px-2 pt-2 pb-4 space-y-1 bg-gradient-to-b from-[#d4af37] to-[#C5AF73] shadow-lg backdrop-blur-lg bg-white/10">
-            <NavLink to="/" mobile>Home</NavLink>
-            
-            {!adminAuth.isLoading && (
-              <NavLink to="/admin" mobile admin>
-                Admin
-              </NavLink>
-            )}
-            
-            <NavLink to="/contact" mobile>
+            <Link 
+              to="/" 
+              className="block px-3 py-2 text-[#2a3439] font-medium rounded-md hover:bg-[#2a3439] hover:text-[#C5AF73] transition-all duration-300"
+              style={{ fontFamily: "'Cormorant', serif" }}
+              onClick={toggleMenu}
+            >
+              Home
+            </Link>
+            <Link 
+              to="/contact" 
+              className="block px-3 py-2 text-[#2a3439] font-medium rounded-md hover:bg-[#2a3439] hover:text-[#C5AF73] transition-all duration-300"
+              style={{ fontFamily: "'Cormorant', serif" }}
+              onClick={toggleMenu}
+            >
               Contact
-            </NavLink>
+            </Link>
           </div>
         </div>
       </nav>
