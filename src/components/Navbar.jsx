@@ -11,10 +11,10 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Overlay for when menu is open */}
+      {/* Blurred overlay for when menu is open */}
       {isMenuOpen && (
         <div 
-          className="fixed inset-0 bg-black bg-opacity-50 z-40" 
+          className="fixed inset-0 backdrop-blur-sm bg-white/30 z-40" 
           onClick={toggleMenu}
         ></div>
       )}
@@ -22,7 +22,7 @@ export default function Navbar() {
       <nav className="bg-gradient-to-r from-[#d4af37] via-[#C5AF73] to-[#d4af37] shadow-xl fixed w-full z-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex justify-between items-center h-20">
-            {/* Logo with blended background */}
+            {/* Logo */}
             <Link to="/" className="flex items-center space-x-3 group">
               <div className="h-14 w-14 rounded-full overflow-hidden border-2 border-[#1f2937] border-opacity-20 shadow-md">
                 <img 
@@ -42,7 +42,7 @@ export default function Navbar() {
               </span>
             </Link>
 
-            {/* Desktop Navigation Links - hidden on mobile */}
+            {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-6">
               <Link 
                 to="/" 
@@ -67,11 +67,12 @@ export default function Navbar() {
               </Link>
             </div>
 
-            {/* Mobile menu button - hidden on desktop */}
+            {/* Mobile menu button */}
             <div className="md:hidden flex items-center">
               <button
                 onClick={toggleMenu}
                 className="text-[#2a3439] hover:text-gray-700 focus:outline-none"
+                aria-label="Toggle menu"
               >
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   {isMenuOpen ? (
@@ -85,9 +86,9 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Menu - shown when hamburger is clicked */}
+        {/* Mobile Menu */}
         <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
-          <div className="px-2 pt-2 pb-4 space-y-1 bg-gradient-to-b from-[#d4af37] to-[#C5AF73] shadow-lg">
+          <div className="px-2 pt-2 pb-4 space-y-1 bg-gradient-to-b from-[#d4af37] to-[#C5AF73] shadow-lg backdrop-blur-lg bg-white/10">
             <Link 
               to="/" 
               className="block px-3 py-2 text-[#2a3439] font-medium rounded-md hover:bg-[#2a3439] hover:text-[#C5AF73] transition-all duration-300"
