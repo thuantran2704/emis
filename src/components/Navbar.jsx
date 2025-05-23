@@ -1,13 +1,68 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../pics/logo.jpg';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showAdminLink, setShowAdminLink] = useState(false);
+
+  useEffect(() => {
+    // Check if user's IP is allowed to see admin link
+    // NOTE: This is just for UX - proper security must be implemented in backend
+    const checkAdminAccess = async () => {
+      try {
+        const response = await fetch('/api/check-admin-access');
+        const data = await response.json();
+        setShowAdminLink(data.isAllowed);
+      } catch (error) {
+        setShowAdminLink(false);
+        console.error('Error checking admin access:', error);
+      }
+    };
+
+    checkAdminAccess();
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  // Navigation link component to avoid repetition
+  const NavLink = ({ to, children, mobile = false }) => (
+    <Link 
+      to={to} 
+      className={`${mobile ? 'block' : 'relative'} px-3 py-2 text-[#2a3439] font-medium rounded-md transition-all duration-300 group`}
+      style={{ fontFamily: "'Cormorant', serif" }}
+      onClick={mobile ? toggleMenu : undefined}
+    >
+      {mobile ? (
+        <span className="hover:bg-[#2a3439] hover:text-[#C5AF73] block px-3 py-2 rounded-md">
+          {children}
+        </span>
+      ) : (
+        <>
+          <span className="opacity-90 group-hover:opacity-100">
+            {children}
+          </span>
+          <span className="absolute bottom-1 left-3 right-3 h-px bg-[#2a3439] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+        </>
+      )}
+    </Link>
+  );
+
+  const ContactButton = ({ mobile = false }) => (
+    <Link 
+      to="/contact" 
+      className={`${mobile ? 'block' : 'ml-4'} px-5 py-2 bg-[#2a3439] text-[#C5AF73] rounded-md hover:bg-[#1f2937] transition-all duration-300 flex items-center space-x-2 border border-[#2a3439] border-opacity-20`}
+      style={{ fontFamily: "'Cormorant', serif" }}
+      onClick={mobile ? toggleMenu : undefined}
+    >
+      <span>Contact</span>
+      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </Link>
+  );
 
   return (
     <>
@@ -44,27 +99,13 @@ export default function Navbar() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-6">
-              <Link 
-                to="/" 
-                className="relative text-[#2a3439] font-medium px-3 py-2 transition-all duration-300 group"
-                style={{ fontFamily: "'Cormorant', serif" }}
-              >
-                <span className="opacity-90 group-hover:opacity-100">
-                  Home
-                </span>
-                <span className="absolute bottom-1 left-3 right-3 h-px bg-[#2a3439] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-              </Link>
+              <NavLink to="/">Home</NavLink>
               
-              <Link 
-                to="/contact" 
-                className="ml-4 px-5 py-2 bg-[#2a3439] text-[#C5AF73] rounded-md hover:bg-[#1f2937] transition-all duration-300 flex items-center space-x-2 border border-[#2a3439] border-opacity-20"
-                style={{ fontFamily: "'Cormorant', serif" }}
-              >
-                <span>Contact</span>
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
-                </svg>
-              </Link>
+              {showAdminLink && (
+                <NavLink to="/admin">Admin</NavLink>
+              )}
+              
+              <ContactButton />
             </div>
 
             {/* Mobile menu button */}
@@ -89,22 +130,13 @@ export default function Navbar() {
         {/* Mobile Menu */}
         <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
           <div className="px-2 pt-2 pb-4 space-y-1 bg-gradient-to-b from-[#d4af37] to-[#C5AF73] shadow-lg backdrop-blur-lg bg-white/10">
-            <Link 
-              to="/" 
-              className="block px-3 py-2 text-[#2a3439] font-medium rounded-md hover:bg-[#2a3439] hover:text-[#C5AF73] transition-all duration-300"
-              style={{ fontFamily: "'Cormorant', serif" }}
-              onClick={toggleMenu}
-            >
-              Home
-            </Link>
-            <Link 
-              to="/contact" 
-              className="block px-3 py-2 text-[#2a3439] font-medium rounded-md hover:bg-[#2a3439] hover:text-[#C5AF73] transition-all duration-300"
-              style={{ fontFamily: "'Cormorant', serif" }}
-              onClick={toggleMenu}
-            >
-              Contact
-            </Link>
+            <NavLink to="/" mobile>Home</NavLink>
+            
+            {showAdminLink && (
+              <NavLink to="/admin" mobile>Admin</NavLink>
+            )}
+            
+            <ContactButton mobile />
           </div>
         </div>
       </nav>
