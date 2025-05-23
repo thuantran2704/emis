@@ -198,6 +198,7 @@ export default function Contact({ language }) {
   });
 
   const [alert, setAlert] = useState({ show: false, message: '', type: 'success' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -287,23 +288,6 @@ const handleSubmit = async (e) => {
     });
 
   } catch (error) {
-    // 8. Comprehensive error logging
-    console.groupCollapsed('Detailed Error Information');
-    console.error('Error name:', error.name);
-    console.error('Error message:', error.message);
-    console.error('Error stack:', error.stack);
-    console.error('Is network error:', error instanceof TypeError);
-    
-    if (error.name === 'TypeError') {
-      console.error('Potential CORS issue detected');
-      console.log('Suggested fixes:');
-      console.log('- Verify backend CORS configuration');
-      console.log('- Check network connectivity');
-      console.log('- Confirm API endpoint URL');
-    }
-    
-    console.groupEnd();
-
     // 9. User-friendly error message with all language options
     setAlert({
       show: true,
@@ -320,12 +304,6 @@ const handleSubmit = async (e) => {
       })(),
       type: 'error'
     });
-
-    // 10. Additional error reporting (optional)
-    if (process.env.NODE_ENV === 'production') {
-      // Here you could add error reporting to services like Sentry
-      // reportErrorToMonitoringService(error);
-    }
   }
 };
 
