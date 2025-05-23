@@ -1,39 +1,50 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from '../pics/logo.jpg';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [showAdminLink, setShowAdminLink] = useState(false);
+  const [adminAuth, setAdminAuth] = useState({
+    isAllowed: false,
+    isLoading: true
+  });
+  const navigate = useNavigate();
 
   useEffect(() => {
-    // Check if user's IP is allowed to see admin link
-    // NOTE: This is just for UX - proper security must be implemented in backend
-    const checkAdminAccess = async () => {
+    const verifyAdminAccess = async () => {
       try {
-        const response = await fetch('/api/check-admin-access');
+        const response = await fetch('/api/verify-admin', {
+          credentials: 'include' // For cookies/session
+        });
+        
+        if (!response.ok) throw new Error('Unauthorized');
+        
         const data = await response.json();
-        setShowAdminLink(data.isAllowed);
+        setAdminAuth({ isAllowed: data.isAdmin, isLoading: false });
       } catch (error) {
-        setShowAdminLink(false);
-        console.error('Error checking admin access:', error);
+        setAdminAuth({ isAllowed: false, isLoading: false });
       }
     };
 
-    checkAdminAccess();
+    verifyAdminAccess();
   }, []);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+  const handleAdminClick = (e) => {
+    if (!adminAuth.isAllowed) {
+      e.preventDefault();
+      navigate('/login?redirect=/admin');
+    }
   };
 
-  // Navigation link component to avoid repetition
-  const NavLink = ({ to, children, mobile = false }) => (
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  // Reusable components
+  const NavLink = ({ to, children, mobile = false, admin = false }) => (
     <Link 
-      to={to} 
+      to={to}
+      onClick={admin ? handleAdminClick : undefined}
       className={`${mobile ? 'block' : 'relative'} px-3 py-2 text-[#2a3439] font-medium rounded-md transition-all duration-300 group`}
       style={{ fontFamily: "'Cormorant', serif" }}
-      onClick={mobile ? toggleMenu : undefined}
     >
       {mobile ? (
         <span className="hover:bg-[#2a3439] hover:text-[#C5AF73] block px-3 py-2 rounded-md">
@@ -44,40 +55,26 @@ export default function Navbar() {
           <span className="opacity-90 group-hover:opacity-100">
             {children}
           </span>
-          <span className="absolute bottom-1 left-3 right-3 h-px bg-[#2a3439] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+          {!admin && (
+            <span className="absolute bottom-1 left-3 right-3 h-px bg-[#2a3439] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+          )}
         </>
       )}
     </Link>
   );
 
-  const ContactButton = ({ mobile = false }) => (
-    <Link 
-      to="/contact" 
-      className={`${mobile ? 'block' : 'ml-4'} px-5 py-2 bg-[#2a3439] text-[#C5AF73] rounded-md hover:bg-[#1f2937] transition-all duration-300 flex items-center space-x-2 border border-[#2a3439] border-opacity-20`}
-      style={{ fontFamily: "'Cormorant', serif" }}
-      onClick={mobile ? toggleMenu : undefined}
-    >
-      <span>Contact</span>
-      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
-      </svg>
-    </Link>
-  );
-
   return (
     <>
-      {/* Blurred overlay for when menu is open */}
       {isMenuOpen && (
         <div 
           className="fixed inset-0 backdrop-blur-sm bg-white/30 z-40" 
           onClick={toggleMenu}
-        ></div>
+        />
       )}
 
       <nav className="bg-gradient-to-r from-[#d4af37] via-[#C5AF73] to-[#d4af37] shadow-xl fixed w-full z-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex justify-between items-center h-20">
-            {/* Logo */}
             <Link to="/" className="flex items-center space-x-3 group">
               <div className="h-14 w-14 rounded-full overflow-hidden border-2 border-[#1f2937] border-opacity-20 shadow-md">
                 <img 
@@ -97,18 +94,27 @@ export default function Navbar() {
               </span>
             </Link>
 
-            {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-6">
               <NavLink to="/">Home</NavLink>
               
-              {showAdminLink && (
-                <NavLink to="/admin">Admin</NavLink>
+              {!adminAuth.isLoading && (
+                <NavLink to="/admin" admin>
+                  Admin
+                </NavLink>
               )}
               
-              <ContactButton />
+              <Link 
+                to="/contact" 
+                className="ml-4 px-5 py-2 bg-[#2a3439] text-[#C5AF73] rounded-md hover:bg-[#1f2937] transition-all duration-300 flex items-center space-x-2 border border-[#2a3439] border-opacity-20"
+                style={{ fontFamily: "'Cormorant', serif" }}
+              >
+                <span>Contact</span>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </Link>
             </div>
 
-            {/* Mobile menu button */}
             <div className="md:hidden flex items-center">
               <button
                 onClick={toggleMenu}
@@ -127,16 +133,19 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Menu */}
         <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
           <div className="px-2 pt-2 pb-4 space-y-1 bg-gradient-to-b from-[#d4af37] to-[#C5AF73] shadow-lg backdrop-blur-lg bg-white/10">
             <NavLink to="/" mobile>Home</NavLink>
             
-            {showAdminLink && (
-              <NavLink to="/admin" mobile>Admin</NavLink>
+            {!adminAuth.isLoading && (
+              <NavLink to="/admin" mobile admin>
+                Admin
+              </NavLink>
             )}
             
-            <ContactButton mobile />
+            <NavLink to="/contact" mobile>
+              Contact
+            </NavLink>
           </div>
         </div>
       </nav>
