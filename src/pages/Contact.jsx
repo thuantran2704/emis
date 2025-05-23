@@ -316,6 +316,12 @@ const handleSubmit = async (e) => {
           onClose={() => setAlert({ ...alert, show: false })}
         />
       )}
+      {/* Loading overlay - moved outside the content sections */}
+    {isSubmitting && (
+      <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm bg-white/40">
+        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#d4af37]"></div>
+      </div>
+    )}
       <section className="py-20 px-4 max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h1 
@@ -420,14 +426,8 @@ const handleSubmit = async (e) => {
             >
               {content.bookAppointment}
             </h2>
-            {/* Loading overlay */}
           
             <form onSubmit={handleSubmit} className="space-y-4">
-              {isSubmitting && (
-                <div className="absolute inset-0 z-10 flex items-center justify-center backdrop-blur-sm bg-white/40 rounded-xl">
-                  <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#d4af37]"></div>
-                </div>
-              )}
               <div>
                 <label 
                   htmlFor="name" 
