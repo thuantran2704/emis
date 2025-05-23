@@ -10,9 +10,9 @@ export default function Navbar() {
   };
 
   return (
-    {/* Fragment to wrap the navbar and overlay */}
     <>
-      {/* Blurred overlay for when menu is open */}
+      {/* blurring*/}
+      {/* blurring*/}
       {isMenuOpen && (
         <div 
           className="fixed inset-0 backdrop-blur-sm bg-white/30 z-40" 
