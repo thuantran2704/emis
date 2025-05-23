@@ -209,7 +209,7 @@ export default function Contact({ language }) {
 
 const handleSubmit = async (e) => {
   e.preventDefault();
-  
+  setIsSubmitting(true);
   try {
     // 1. Log the form data being submitted
     console.log('Form data being submitted:', JSON.stringify(formData, null, 2));
@@ -228,18 +228,8 @@ const handleSubmit = async (e) => {
       credentials: 'include', // Include cookies if needed
     });
     const fetchDuration = performance.now() - fetchStartTime;
-    console.log(`Fetch completed in ${fetchDuration.toFixed(2)}ms`);
 
-    // 3. Log complete response details
-    console.groupCollapsed('Response Details');
-    console.log('Status:', response.status, response.statusText);
-    console.log('Headers:', Object.fromEntries(response.headers.entries()));
-    console.log('URL:', response.url);
-    console.log('Redirected:', response.redirected);
-    console.log('Type:', response.type);
-    console.groupEnd();
 
-    // 4. Handle non-OK responses
     if (!response.ok) {
       let errorData;
       try {
@@ -268,8 +258,7 @@ const handleSubmit = async (e) => {
 
     // 5. Process successful response
     const data = await response.json();
-    console.log('Successful response data:', data);
-
+    setIsSubmitting(false);
     // 6. Reset form
     setFormData({
       name: '',
@@ -446,6 +435,12 @@ const handleSubmit = async (e) => {
           </div>
           
           {/* Appointment Form */}
+          {/* Loading overlay */}
+          {isSubmitting && (
+            <div className="absolute inset-0 z-10 flex items-center justify-center bg-white bg-opacity-70 rounded-xl">
+              <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#d4af37]"></div>
+            </div>
+          )}
           <div className="bg-[#fffaf0] p-8 rounded-xl shadow-lg">
             <h2 
               className="text-2xl font-bold text-[#d4af37] mb-6"
