@@ -11,8 +11,6 @@ export default function Navbar() {
 
   return (
     <>
-      {/* blurring*/}
-      {/* blurring*/}
       {isMenuOpen && (
         <div 
           className="fixed inset-0 backdrop-blur-sm bg-white/30 z-40" 
