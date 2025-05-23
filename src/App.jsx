@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
+import Admin from './pages/Admin';
 import NotFound from './pages/NotFound';
 import LanguageToggle from './components/LanguageToggle';
 
@@ -21,6 +22,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home language={language} />} />
           <Route path="/contact" element={<Contact language={language} />} />
+          <Route path="/admin" element={<Admin/>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <LanguageToggle 
