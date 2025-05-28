@@ -13,6 +13,7 @@ export default function App() {
   // This now directly sets the selected language
   const handleLanguageChange = (selectedLanguage) => {
     setLanguage(selectedLanguage);
+    //comment
   };
 
   return (
