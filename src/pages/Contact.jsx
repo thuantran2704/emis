@@ -212,10 +212,10 @@ const handleSubmit = async (e) => {
   e.preventDefault();
   setIsSubmitting(true);
   try {
-    // 1. Log the form data being submitted
-    console.log('Form data being submitted:', JSON.stringify(formData, null, 2));
-    console.log('Using API endpoint:', `${import.meta.env.VITE_API_URL}/api/appointments`);
-
+    const payload = {
+      ...formData,
+      language: language // Add current language to payload
+    };
     // 2. Make the fetch request with detailed configuration
     const fetchStartTime = performance.now();
     const response = await fetch(`${import.meta.env.VITE_API_URL}/api/appointments`, {
@@ -225,7 +225,7 @@ const handleSubmit = async (e) => {
         'Accept': 'application/json',
         'X-Requested-With': 'XMLHttpRequest',
       },
-      body: JSON.stringify(formData),
+      body: JSON.stringify(payload),
       credentials: 'include', // Include cookies if needed
     });
     const fetchDuration = performance.now() - fetchStartTime;

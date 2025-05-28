@@ -23,7 +23,14 @@ export default function App() {
           <Route path="/" element={<Home language={language} />} />
           <Route path="/contact" element={<Contact language={language} />} />
           <Route path="/admin" element={<AdminLogin/>} />
-          <Route path="/admin/dashboard" element={<AdminDashboard/>} />
+          <Route 
+          path="/admin/dashboard" 
+          element={
+            <ProtectedRoute>
+              <AdminDashboard />
+            </ProtectedRoute>
+          } 
+          />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <LanguageToggle 
