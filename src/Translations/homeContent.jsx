@@ -210,3 +210,4 @@ export const homeContent = {
     },
   };
   
+export default homeContent;
