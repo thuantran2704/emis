@@ -6,9 +6,8 @@ import instagram from '../pics/instagram.jpg';
 import zaloIcon from '../pics/zalo.jpg';
 import Alert from '../components/alert';
 import contactContent from '../Translations/contactContent';
-export default function Contact({ language }) {
 
-  
+export default function Contact({ language }) {
   const content = contactContent[language] || contactContent.english;
 
   const [formData, setFormData] = useState({
@@ -31,104 +30,122 @@ export default function Contact({ language }) {
     }));
   };
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
-  setIsSubmitting(true);
-  try {
-    const payload = {
-      ...formData,
-      language: language // Add current language to payload
-    };
-    // 2. Make the fetch request with detailed configuration
-    const fetchStartTime = performance.now();
-    const response = await fetch(`${import.meta.env.VITE_API_URL}/api/appointments`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-        'X-Requested-With': 'XMLHttpRequest',
-      },
-      body: JSON.stringify(payload),
-      credentials: 'include', // Include cookies if needed
-    });
-    const fetchDuration = performance.now() - fetchStartTime;
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    try {
+      const payload = {
+        ...formData,
+        language: language
+      };
 
-
-    if (!response.ok) {
-      let errorData;
-      try {
-        errorData = await response.clone().json(); // Clone response to read twice if needed
-      } catch (e) {
-        try {
-          errorData = await response.clone().text(); // Fallback to text if not JSON
-        } catch (e) {
-          errorData = 'Unable to parse error response';
-        }
-      }
-
-      console.error('Server returned error:', {
-        status: response.status,
-        statusText: response.statusText,
-        url: response.url,
-        errorData,
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/appointments`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+          'X-Requested-With': 'XMLHttpRequest',
+        },
+        body: JSON.stringify(payload),
+        credentials: 'include',
       });
 
-      throw new Error(
-        errorData?.message || 
-        errorData ||
-        `Server responded with ${response.status}: ${response.statusText}`
-      );
+      if (!response.ok) {
+        let errorData;
+        try {
+          errorData = await response.clone().json();
+        } catch {
+          try {
+            errorData = await response.clone().text();
+          } catch {
+            errorData = 'Unable to parse error response';
+          }
+        }
+
+        throw new Error(
+          errorData?.message ||
+          errorData ||
+          `Server responded with ${response.status}: ${response.statusText}`
+        );
+      }
+
+      await response.json();
+      setIsSubmitting(false);
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        date: '',
+        service: '',
+        message: ''
+      });
+
+      setAlert({
+        show: true,
+        message: (() => {
+          switch (language) {
+            case 'english': return 'Appointment booked successfully!';
+            case 'vietnamese': return 'Đặt lịch hẹn thành công!';
+            case 'simplified': return '预约成功!';
+            case 'traditional': return '預約成功!';
+            case 'french': return 'Rendez-vous réservé avec succès!';
+            case 'korean': return '예약이 성공적으로 완료되었습니다!';
+            default: return 'Appointment booked successfully!';
+          }
+        })(),
+        type: 'success'
+      });
+
+    } catch (error) {
+      setIsSubmitting(false);
+      setAlert({
+        show: true,
+        message: (() => {
+          switch (language) {
+            case 'english': return 'Failed to book appointment. Please try again.';
+            case 'vietnamese': return 'Đặt lịch hẹn không thành công. Vui lòng thử lại.';
+            case 'simplified': return '预约失败，请重试。';
+            case 'traditional': return '預約失敗，請重試。';
+            case 'french': return 'Échec de la réservation. Veuillez réessayer.';
+            case 'korean': return '예약에 실패했습니다. 다시 시도해 주세요.';
+            default: return 'Failed to book appointment. Please try again.';
+          }
+        })(),
+        type: 'error'
+      });
     }
+  };
 
-    // 5. Process successful response
-    const data = await response.json();
-    setIsSubmitting(false);
-    // 6. Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      date: '',
-      service: '',
-      message: ''
-    });
-
-    // 7. Show success alert with all language options
-    setAlert({
-      show: true,
-      message: (() => {
-        switch (language) {
-          case 'english': return 'Appointment booked successfully!';
-          case 'vietnamese': return 'Đặt lịch hẹn thành công!';
-          case 'simplified': return '预约成功!';
-          case 'traditional': return '預約成功!';
-          case 'french': return 'Rendez-vous réservé avec succès!';
-          case 'korean': return '예약이 성공적으로 완료되었습니다!';
-          default: return 'Appointment booked successfully!';
-        }
-      })(),
-      type: 'success'
-    });
-
-  } catch (error) {
-    // 9. User-friendly error message with all language options
-    setAlert({
-      show: true,
-      message: (() => {
-        switch (language) {
-          case 'english': return 'Failed to book appointment. Please try again.';
-          case 'vietnamese': return 'Đặt lịch hẹn không thành công. Vui lòng thử lại.';
-          case 'simplified': return '预约失败，请重试。';
-          case 'traditional': return '預約失敗，請重試。';
-          case 'french': return 'Échec de la réservation. Veuillez réessayer.';
-          case 'korean': return '예약에 실패했습니다. 다시 시도해 주세요.';
-          default: return 'Failed to book appointment. Please try again.';
-        }
-      })(),
-      type: 'error'
-    });
-  }
-};
+  const contactItems = [
+    {
+      icon: phoneIcon,
+      alt: "Phone",
+      label: content.contactInfo.phone,
+      value: "091 910 0021",
+      href: "tel:0919100021"
+    },
+    {
+      icon: mailIcon,
+      alt: "Email",
+      label: content.contactInfo.email,
+      value: "Emisdentalclinic@gmail.com",
+      href: "mailto:Emisdentalclinic@gmail.com"
+    },
+    {
+      icon: zaloIcon,
+      alt: "Zalo",
+      label: "Zalo",
+      value: "https://zalo.me/0919100021",
+      href: "https://zalo.me/0919100021"
+    },
+    {
+      icon: facebook,
+      alt: "Facebook",
+      label: content.contactInfo.facebook,
+      value: "facebook.com/emisdental",
+      href: "https://facebook.com/emisdental"
+    },
+  ];
 
   return (
     <main className="min-h-[calc(100vh-4rem)] bg-[#f7f2e7]">
@@ -139,201 +156,99 @@ const handleSubmit = async (e) => {
           onClose={() => setAlert({ ...alert, show: false })}
         />
       )}
-      {/* Loading overlay - moved outside the content sections */}
-    {isSubmitting && (
-      <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm bg-white/40">
-        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#d4af37]"></div>
-      </div>
-    )}
+
+      {isSubmitting && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm bg-white/40">
+          <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#d4af37]"></div>
+        </div>
+      )}
+
       <section className="py-20 px-4 max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h1 
+          <h1
             className="text-4xl font-bold text-[#1f2937] mb-4"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            {content.title.split(content.highlight)[0]} 
+            {content.title.split(content.highlight)[0]}
             <span className="text-[#d4af37]"> {content.highlight}</span>
           </h1>
           <div className="w-24 h-1 bg-[#d4af37] mx-auto"></div>
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Info */}
           <div className="bg-[#fffaf0] p-8 rounded-xl shadow-lg">
-            <h2 
+            <h2
               className="text-2xl font-bold text-[#d4af37] mb-6"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
               {content.getInTouch}
             </h2>
+
             <ul className="space-y-6 text-[#1f2937]">
-              <li className="flex items-start gap-4">
-                <div className="bg-white p-2 rounded-full">
-                  <img src={phoneIcon} alt="Phone" className="h-6 w-6 object-contain" />
-                </div>
-                <div>
-                  <h3 
-                    className="font-semibold"
-                    style={{ fontFamily: "'Cormorant', serif" }}
-                  >
-                    {content.contactInfo.phone}
-                  </h3>
-                  <p style={{ fontFamily: "'Cormorant', serif" }}>091 910 0021</p>
-                </div>
-              </li>
-              <li className="flex items-start gap-4">
-                <div className="bg-white p-2 rounded-full">
-                  <img src={zaloIcon} alt="Zalo" className="h-6 w-6 object-contain" />
-                </div>
-                <div>
-                  <h3 
-                    className="font-semibold"
-                    style={{ fontFamily: "'Cormorant', serif" }}
-                  >
-                    Zalo
-                  </h3>
-                  <p style={{ fontFamily: "'Cormorant', serif" }}>https://zalo.me/0919100021</p>
-                </div>
-              </li>
-              <li className="flex items-start gap-4">
-                <div className="bg-white p-2 rounded-full">
-                  <img src={mailIcon} alt="Email" className="h-6 w-6 object-contain" />
-                </div>
-                <div>
-                  <h3 
-                    className="font-semibold"
-                    style={{ fontFamily: "'Cormorant', serif" }}
-                  >
-                    {content.contactInfo.email}
-                  </h3>
-                  <p style={{ fontFamily: "'Cormorant', serif" }}>Emisdentalclinic@gmail.com</p>
-                </div>
-              </li>
-              
-              <li className="flex items-start gap-4">
-                <div className="bg-white p-2 rounded-full">
-                  <img src={facebook} alt="Facebook" className="h-6 w-6 object-contain" />
-                </div>
-                <div>
-                  <h3 
-                    className="font-semibold"
-                    style={{ fontFamily: "'Cormorant', serif" }}
-                  >
-                    {content.contactInfo.facebook}
-                  </h3>
-                  <p style={{ fontFamily: "'Cormorant', serif" }}>facebook.com/emisdental</p>
-                </div>
-              </li>
-              {/* <li className="flex items-start gap-4">
-                <div className="bg-white p-2 rounded-full">
-                  <img src={instagram} alt="Instagram" className="h-6 w-6 object-contain" />
-                </div>
-                <div>
-                  <h3 
-                    className="font-semibold"
-                    style={{ fontFamily: "'Cormorant', serif" }}
-                  >
-                    {content.contactInfo.instagram}
-                  </h3>
-                  <p style={{ fontFamily: "'Cormorant', serif" }}>instagram.com/emis-dental</p>
-                </div>
-              </li> */}
+              {contactItems.map((item, index) => (
+                <li key={index} className="flex items-start gap-4">
+                  <div className="bg-white p-2 rounded-full">
+                    <img src={item.icon} alt={item.alt} className="h-6 w-6 object-contain" />
+                  </div>
+                  <div>
+                    <h3
+                      className="font-semibold"
+                      style={{ fontFamily: "'Cormorant', serif" }}
+                    >
+                      {item.label}
+                    </h3>
+                    <p style={{ fontFamily: "'Cormorant', serif" }}>
+                      <a
+                        href={item.href}
+                        className="text-blue-600 hover:underline break-all"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {item.value}
+                      </a>
+                    </p>
+                  </div>
+                </li>
+              ))}
             </ul>
           </div>
-          
+
           {/* Appointment Form */}
           <div className="bg-[#fffaf0] p-8 rounded-xl shadow-lg">
-            <h2 
+            <h2
               className="text-2xl font-bold text-[#d4af37] mb-6"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
               {content.bookAppointment}
             </h2>
-          
+
             <form onSubmit={handleSubmit} className="space-y-4">
+              {["name", "email", "phone", "date"].map((field) => (
+                <div key={field}>
+                  <label
+                    htmlFor={field}
+                    className="block text-[#1f2937] mb-1"
+                    style={{ fontFamily: "'Cormorant', serif" }}
+                  >
+                    {content.formLabels[field]}
+                  </label>
+                  <input
+                    type={field === "date" ? "date" : field === "email" ? "email" : "text"}
+                    id={field}
+                    name={field}
+                    value={formData[field]}
+                    onChange={handleChange}
+                    className="w-full p-3 border border-[#6b7280] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
+                    style={{ fontFamily: "'Cormorant', serif" }}
+                    required
+                  />
+                </div>
+              ))}
+
               <div>
-                <label 
-                  htmlFor="name" 
-                  className="block text-[#1f2937] mb-1"
-                  style={{ fontFamily: "'Cormorant', serif" }}
-                >
-                  {content.formLabels.name}
-                </label>
-                <input 
-                  type="text" 
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="w-full p-3 border border-[#6b7280] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
-                  style={{ fontFamily: "'Cormorant', serif" }}
-                  required
-                />
-              </div>
-              
-              <div>
-                <label 
-                  htmlFor="email" 
-                  className="block text-[#1f2937] mb-1"
-                  style={{ fontFamily: "'Cormorant', serif" }}
-                >
-                  {content.formLabels.email}
-                </label>
-                <input 
-                  type="email" 
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="w-full p-3 border border-[#6b7280] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
-                  style={{ fontFamily: "'Cormorant', serif" }}
-                  required
-                />
-              </div>
-              
-              <div>
-                <label 
-                  htmlFor="phone" 
-                  className="block text-[#1f2937] mb-1"
-                  style={{ fontFamily: "'Cormorant', serif" }}
-                >
-                  {content.formLabels.phone}
-                </label>
-                <input 
-                  type="tel" 
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  className="w-full p-3 border border-[#6b7280] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
-                  style={{ fontFamily: "'Cormorant', serif" }}
-                  required
-                />
-              </div>
-              
-              <div>
-                <label 
-                  htmlFor="date" 
-                  className="block text-[#1f2937] mb-1"
-                  style={{ fontFamily: "'Cormorant', serif" }}
-                >
-                  {content.formLabels.date}
-                </label>
-                <input 
-                  type="date" 
-                  id="date"
-                  name="date"
-                  value={formData.date}
-                  onChange={handleChange}
-                  className="w-full p-3 border border-[#6b7280] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
-                  style={{ fontFamily: "'Cormorant', serif" }}
-                  required
-                />
-              </div>
-              
-              <div>
-                <label 
-                  htmlFor="service" 
+                <label
+                  htmlFor="service"
                   className="block text-[#1f2937] mb-1"
                   style={{ fontFamily: "'Cormorant', serif" }}
                 >
@@ -354,16 +269,16 @@ const handleSubmit = async (e) => {
                   ))}
                 </select>
               </div>
-              
+
               <div>
-                <label 
-                  htmlFor="message" 
+                <label
+                  htmlFor="message"
                   className="block text-[#1f2937] mb-1"
                   style={{ fontFamily: "'Cormorant', serif" }}
                 >
                   {content.formLabels.message}
                 </label>
-                <textarea 
+                <textarea
                   id="message"
                   name="message"
                   rows="4"
@@ -373,8 +288,8 @@ const handleSubmit = async (e) => {
                   style={{ fontFamily: "'Cormorant', serif" }}
                 ></textarea>
               </div>
-              
-              <button 
+
+              <button
                 type="submit"
                 className="w-full bg-[#d4af37] hover:bg-[#c19d30] text-white font-bold py-3 px-6 rounded-full transition-all text-lg shadow-md hover:shadow-lg mt-4"
                 style={{ fontFamily: "'Playfair Display', serif" }}
