@@ -11,7 +11,7 @@ import homeContent from '../Translations/homeContent';
 
 export default function Home({ language }) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const content = homeContent[language] || homeContent.english;
+  const content = homeContent[language] || homeContent.vietnamese;
 
   const serviceImages = [generalDentistry, implant, crown, invisalign];
 
