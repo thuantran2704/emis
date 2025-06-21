@@ -26,7 +26,7 @@ export default function Navbar() {
               <div className="h-14 w-14 rounded-full overflow-hidden border-2 border-[#1f2937] border-opacity-20 shadow-md">
                 <img 
                   src={logo} 
-                  alt="Emis Dental Logo" 
+                  alt="Nha Khoa Emis " 
                   className="h-full w-full object-cover"
                 />
               </div>
