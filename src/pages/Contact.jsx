@@ -34,7 +34,7 @@ export default function Contact({ language }) {
       [name]: value
     }));
   };
-
+//testing
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!recaptchaToken) {
