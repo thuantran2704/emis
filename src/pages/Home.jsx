@@ -68,21 +68,37 @@ export default function Home({ language }) {
     <main className="min-h-[calc(100vh-4rem)] bg-[#f7f2e7]">
       {/* SEO Meta Tags */}
       <Helmet>
-        <title>{content.metaTitle}</title>
-        <meta name="description" content={content.metaDescription} />
-        <meta name="keywords" content="dental, dentist, dental clinic, implants, crowns, Invisalign, Ho Chi Minh City" />
-        <meta property="og:title" content={content.metaTitle} />
-        <meta property="og:description" content={content.metaDescription} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://yourclinic.com" />
-        <meta property="og:image" content="https://yourclinic.com/og-image.jpg" />
-        <meta property="og:locale" content={language === 'vietnamese' ? 'vi_VN' : language === 'french' ? 'fr_FR' : language === 'korean' ? 'ko_KR' : language === 'simplified' ? 'zh_CN' : language === 'traditional' ? 'zh_TW' : 'en_US'} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://yourclinic.com" />
-        <script type="application/ld+json">
-          {JSON.stringify(schemaMarkup)}
-        </script>
-      </Helmet>
+          <title>{content.metaTitle}</title>
+          <meta name="description" content={content.metaDescription} />
+          <meta name="keywords" content="dental, dentist, dental clinic, implants, crowns, Invisalign, Ho Chi Minh City" />
+
+          {/* Open Graph Meta */}
+          <meta property="og:title" content={content.metaTitle} />
+          <meta property="og:description" content={content.metaDescription} />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://emisdental.com" />
+          <meta property="og:image" content="https://emisdental.com/og-image.jpg" />
+          <meta property="og:locale" content={
+            language === 'vietnamese' ? 'vi_VN' :
+            language === 'french' ? 'fr_FR' :
+            language === 'korean' ? 'ko_KR' :
+            language === 'simplified' ? 'zh_CN' :
+            language === 'traditional' ? 'zh_TW' :
+            'en_US'
+          } />
+
+          {/* Twitter Card */}
+          <meta name="twitter:card" content="summary_large_image" />
+
+          {/* Canonical URL */}
+          <link rel="canonical" href="https://emisdental.com" />
+
+          {/* JSON-LD Schema */}
+          <script type="application/ld+json">
+            {JSON.stringify(schemaMarkup)}
+          </script>
+    </Helmet>
+
 
       {/* Hero Section */}
       <section className="py-28 px-4 max-w-6xl mx-auto text-center">
