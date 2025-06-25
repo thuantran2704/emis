@@ -6,10 +6,15 @@ import instagram from '../pics/instagram.jpg';
 import zaloIcon from '../pics/zalo.jpg';
 import Alert from '../components/alert';
 import contactContent from '../Translations/contactContent';
+import ReCAPTCHA from "react-google-recaptcha"; // Add this import
 
 export default function Contact({ language }) {
   const content = contactContent[language] || contactContent.english;
+  const [recaptchaToken, setRecaptchaToken] = useState(null);
 
+  const handleRecaptchaChange = (token) => {
+    setRecaptchaToken(token);
+  };
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -32,11 +37,21 @@ export default function Contact({ language }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!recaptchaToken) {
+      // Show error (translated)
+      setAlert({
+        show: true,
+        message: "Please complete the reCAPTCHA verification",
+        type: "error"
+      });
+      return;
+    }
     setIsSubmitting(true);
     try {
       const payload = {
         ...formData,
-        language: language
+        language: language,
+        recaptchaToken
       };
 
       const response = await fetch(`${import.meta.env.VITE_API_URL}/api/appointments`, {
@@ -288,7 +303,12 @@ export default function Contact({ language }) {
                   style={{ fontFamily: "'Cormorant', serif" }}
                 ></textarea>
               </div>
-
+              <div className="my-4">
+                <ReCAPTCHA
+                  sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                  onChange={handleRecaptchaChange}
+                />
+              </div>
               <button
                 type="submit"
                 className="w-full bg-[#d4af37] hover:bg-[#c19d30] text-white font-bold py-3 px-6 rounded-full transition-all text-lg shadow-md hover:shadow-lg mt-4"
