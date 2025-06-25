@@ -28,10 +28,10 @@ export default function Home({ language }) {
     "@context": "https://schema.org",
     "@type": "Dentist",
     "name": "Premium Dental Care",
-    "image": "https://yourclinic.com/logo.jpg",
-    "@id": "https://yourclinic.com",
-    "url": "https://yourclinic.com",
-    "telephone": "+84123456789",
+    "image": "https://emisdental.com/logo.ico",
+    "@id": "https://emisdental.com",
+    "url": "https://emisdental.com",
+    "telephone": "+84919100021",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "62B Phạm Ngọc Thạch",
@@ -60,8 +60,7 @@ export default function Home({ language }) {
     },
     "priceRange": "$$",
     "sameAs": [
-      "https://www.facebook.com/yourclinic",
-      "https://www.instagram.com/yourclinic"
+      "https://www.facebook.com/emisdental",
     ]
   };
 
