@@ -1,5 +1,5 @@
 import React from 'react';
-import homeContent from '../content/homeContent'; // adjust the path as needed
+import homeContent from '../Translations/homeContent';
 
 const Services = ({ language = 'english' }) => {
   const content = homeContent[language];
