@@ -8,12 +8,12 @@ import { Helmet } from 'react-helmet';
 import ServicesSlider from '../components/ServicesSlider';
 import MapSection from '../components/MapSection';
 import homeContent from '../Translations/homeContent';
-
+import aofimplant from '../pics/aofimplant.jpg';
 export default function Home({ language }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const content = homeContent[language] || homeContent.vietnamese;
 
-  const serviceImages = [generalDentistry, implant, crown, invisalign];
+  const serviceImages = [generalDentistry, implant, crown, invisalign, aofimplant];
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % (content.services.length - 2));
