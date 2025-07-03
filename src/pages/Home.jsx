@@ -8,7 +8,7 @@ import { Helmet } from 'react-helmet';
 import ServicesSlider from '../components/ServicesSlider';
 import MapSection from '../components/MapSection';
 import homeContent from '../Translations/homeContent';
-import aofimplant from '../pics/aofimplant.jpg';
+import aofimplant from '../pics/aofimplants.jpg';
 export default function Home({ language }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const content = homeContent[language] || homeContent.vietnamese;
