@@ -25,8 +25,8 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home language={language} />} />
           <Route path="/contact" element={<Contact language={language} />} />
-          <Route path="/about" element={<About language={language} />} />
-          <Route path="/services" element={<Services language={language} />} />
+          {/* <Route path="/about" element={<About language={language} />} />
+          <Route path="/services" element={<Services language={language} />} /> */}
           <Route path="*" element={<NotFound />} />
         </Routes>
         <LanguageToggle 
