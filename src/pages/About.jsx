@@ -1,5 +1,5 @@
 import React from "react";
-import aboutContent from "../content/aboutContent"; // <-- Create this file like you did for homeContent
+import aboutContent from "../Translations/aboutContent";
 
 const About = ({ language = "english" }) => {
   const content = aboutContent[language];
