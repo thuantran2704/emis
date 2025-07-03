@@ -4,10 +4,12 @@ import logo from '../pics/logo.jpg';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const navItems = [
+    { name: 'Home', path: '/' },
+    // Add more items here if needed: { name: 'Services', path: '/services' }
+  ];
 
   return (
     <>
@@ -41,20 +43,23 @@ export default function Navbar() {
               </span>
             </Link>
 
-
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-6">
-              <Link 
-                to="/" 
-                className="relative text-[#2a3439] font-medium px-3 py-2 transition-all duration-300 group"
-                style={{ fontFamily: "'Cormorant', serif" }}
-              >
-                <span className="opacity-90 group-hover:opacity-100">
-                  Home
-                </span>
-                <span className="absolute bottom-1 left-3 right-3 h-px bg-[#2a3439] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-              </Link>
-              
+              {navItems.map((item) => (
+                <Link 
+                  key={item.name}
+                  to={item.path} 
+                  className="relative text-[#2a3439] font-medium px-3 py-2 transition-all duration-300 group"
+                  style={{ fontFamily: "'Cormorant', serif" }}
+                >
+                  <span className="opacity-90 group-hover:opacity-100">
+                    {item.name}
+                  </span>
+                  <span className="absolute bottom-1 left-3 right-3 h-px bg-[#2a3439] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                </Link>
+              ))}
+
+              {/* Separate Contact Button */}
               <Link 
                 to="/contact" 
                 className="ml-4 px-5 py-2 bg-[#2a3439] text-[#C5AF73] rounded-md hover:bg-[#1f2937] transition-all duration-300 flex items-center space-x-2 border border-[#2a3439] border-opacity-20"
@@ -67,7 +72,7 @@ export default function Navbar() {
               </Link>
             </div>
 
-            {/* Mobile menu button */}
+            {/* Mobile Menu Toggle */}
             <div className="md:hidden flex items-center">
               <button
                 onClick={toggleMenu}
@@ -89,14 +94,17 @@ export default function Navbar() {
         {/* Mobile Menu */}
         <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
           <div className="px-2 pt-2 pb-4 space-y-1 bg-gradient-to-b from-[#d4af37] to-[#C5AF73] shadow-lg backdrop-blur-lg bg-white/10">
-            <Link 
-              to="/" 
-              className="block px-3 py-2 text-[#2a3439] font-medium rounded-md hover:bg-[#2a3439] hover:text-[#C5AF73] transition-all duration-300"
-              style={{ fontFamily: "'Cormorant', serif" }}
-              onClick={toggleMenu}
-            >
-              Home
-            </Link>
+            {navItems.map((item) => (
+              <Link 
+                key={item.name}
+                to={item.path} 
+                className="block px-3 py-2 text-[#2a3439] font-medium rounded-md hover:bg-[#2a3439] hover:text-[#C5AF73] transition-all duration-300"
+                style={{ fontFamily: "'Cormorant', serif" }}
+                onClick={toggleMenu}
+              >
+                {item.name}
+              </Link>
+            ))}
             <Link 
               to="/contact" 
               className="block px-3 py-2 text-[#2a3439] font-medium rounded-md hover:bg-[#2a3439] hover:text-[#C5AF73] transition-all duration-300"
