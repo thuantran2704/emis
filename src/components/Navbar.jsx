@@ -9,6 +9,8 @@ export default function Navbar() {
   const navItems = [
     { name: 'Home', path: '/' },
     // Add more items here if needed: { name: 'Services', path: '/services' }
+    { name: 'About', path: '/about' },
+    { name: 'Services', path: '/services' },
   ];
 
   return (
