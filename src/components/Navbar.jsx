@@ -17,7 +17,7 @@ export default function Navbar() {
     <>
       {isMenuOpen && (
         <div 
-          className="fixed inset-0 backdrop-blur-sm bg-white/30 z-40" 
+          className="inset-0 backdrop-blur-sm bg-white/30 z-40" 
           onClick={toggleMenu}
         ></div>
       )}
