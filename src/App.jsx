@@ -5,6 +5,8 @@ import Home from './pages/Home';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 import LanguageToggle from './components/LanguageToggle';
+import About from './pages/About';
+import Services from './pages/Services';
 
 export default function App() {
   const [language, setLanguage] = useState('vietnamese');
@@ -23,6 +25,8 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home language={language} />} />
           <Route path="/contact" element={<Contact language={language} />} />
+          <Route path="/about" element={<About language={language} />} />
+          <Route path="/services" element={<Services language={language} />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <LanguageToggle 
