@@ -7,16 +7,16 @@ import NotFound from './pages/NotFound';
 import LanguageToggle from './components/LanguageToggle';
 import About from './pages/About';
 import Services from './pages/Services';
+import { useSelector, useDispatch } from 'react-redux'
+import { setLanguage } from './slices/languageSlice.js'
 
 export default function App() {
-  const [language, setLanguage] = useState('vietnamese');
+  const language = useSelector((state) => state.language.language);
+  const dispatch = useDispatch();
 
-  // This now directly sets the selected language
   const handleLanguageChange = (selectedLanguage) => {
-    setLanguage(selectedLanguage);
-    //comment
+    dispatch(setLanguage(selectedLanguage));
   };
-//why the fuck is this not being updated?
 
   return (
     <Router>
