@@ -2,7 +2,7 @@ import React from 'react';
 import homeContent from '../Translations/homeContent';
 import { motion } from 'framer-motion';
 
-const Services = ({ language = 'english' }) => {
+const Services = ({ language}) => {
   const content = homeContent[language];
 
   // Animation variants
