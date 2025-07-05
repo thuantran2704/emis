@@ -5,7 +5,7 @@ export const homeContent = {
     heroSubtitle: "Experience comprehensive dental services with our expert team.",
     servicesTitle: "ORAL HEALTH SERVICES",
     bookButton: "Book Consultation",
-    bookNow: "Book Now",
+    findout: "Find Out More",
     services: [
       {
         name: "General Dentistry",
@@ -68,7 +68,7 @@ export const homeContent = {
     heroSubtitle: "Trải nghiệm dịch vụ nha khoa toàn diện với đội ngũ chuyên gia của chúng tôi.",
     servicesTitle: "DỊCH VỤ CHĂM SÓC RĂNG MIỆNG",
     bookButton: "Đặt Lịch Khám",
-    bookNow: "Đặt Ngay",
+    findout: "Tìm hiểu thêm",
     services: [
       {
         name: "Nha Khoa Tổng Quát",
@@ -131,7 +131,7 @@ export const homeContent = {
     heroSubtitle: "体验我们专家团队提供的全面牙科服务。",
     servicesTitle: "口腔健康服务",
     bookButton: "预约咨询",
-    bookNow: "立即预约",
+    findout: "Find Out More",
     services: [
       {
         name: "普通牙科",
@@ -194,7 +194,7 @@ export const homeContent = {
     heroSubtitle: "體驗我們專家團隊提供的全面牙科服務。",
     servicesTitle: "口腔健康服務",
     bookButton: "預約諮詢",
-    bookNow: "立即預約",
+    findout: "Find Out More",
     services: [
       {
         name: "普通牙科",
@@ -257,7 +257,7 @@ export const homeContent = {
     heroSubtitle: "Découvrez des services dentaires complets avec notre équipe d'experts.",
     servicesTitle: "SERVICES DE SANTÉ BUCCO-DENTAIRE",
     bookButton: "Prendre Rendez-vous",
-    bookNow: "Réserver",
+    findout: "Find Out More",
     services: [
       {
         name: "Dentisterie Générale",
@@ -320,7 +320,7 @@ export const homeContent = {
     heroSubtitle: "저희 전문가 팀과 함께 포괄적인 치과 서비스를 경험해보세요.",
     servicesTitle: "구강 건강 서비스",
     bookButton: "상담 예약",
-    bookNow: "예약하기",
+    findout: "Find Out More",
     services: [
       {
         name: "일반 치과",

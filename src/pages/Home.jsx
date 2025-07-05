@@ -141,7 +141,7 @@ export default function Home({ language }) {
           <ServicesSlider 
             services={content.services} 
             serviceImages={serviceImages} 
-            bookNowText={content.bookNow} 
+            bookNowText={content.findout} 
           />
         </div>
       </section>
