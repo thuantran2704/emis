@@ -5,7 +5,7 @@ const Services = ({ language = 'english' }) => {
   const content = homeContent[language];
 
   return (
-    <div className="px-6 py-12 max-w-7xl mx-auto text-gray-800">
+    <div className="pt-20 px-6 py-12 max-w-7xl mx-auto text-gray-800">
       {/* Hero Section */}
       <section className="text-center mb-16">
         <h1 className="text-4xl font-bold mb-4">
