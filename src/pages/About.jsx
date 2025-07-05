@@ -1,6 +1,6 @@
 import React from "react";
 import aboutContent from "../Translations/aboutContent";
-
+import emishall from "../pics/Emis_hall.jpg"
 const About = ({ language}) => {
   const content = aboutContent[language];
 
