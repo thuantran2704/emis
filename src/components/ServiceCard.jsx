@@ -38,7 +38,7 @@ const ServiceCard = ({ service, image, bookNowText }) => {
             <Link 
               to="/services" 
               className="bg-[#1f2937] text-[#f7f2e7] px-4 py-2 rounded-full text-sm font-medium hover:bg-opacity-90 transition"
-              aria-label={`tìm hiểu thêm`}
+              aria-label={`Book ${service.name} appointment`}
             >
               {bookNowText}
             </Link>
