@@ -105,23 +105,6 @@ const Services = ({ language = 'english' }) => {
         </motion.div>
       </section>
 
-      {/* Location Section */}
-      <motion.section 
-        className="text-center mb-16 bg-gray-50 rounded-2xl p-12 shadow-inner"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-      >
-        <h2 className="text-2xl md:text-3xl font-semibold mb-6">{content.locationTitle}</h2>
-        <p className="text-gray-700 max-w-2xl mx-auto mb-8 leading-relaxed">{content.address}</p>
-        <div className="aspect-w-16 aspect-h-9 bg-gray-200 rounded-xl overflow-hidden shadow-lg max-w-4xl mx-auto">
-          {/* Replace with your actual map component or iframe */}
-          <div className="w-full h-64 bg-gradient-to-r from-primary to-primary-dark flex items-center justify-center text-white">
-            <span className="text-lg font-medium">Map View</span>
-          </div>
-        </div>
-      </motion.section>
 
       {/* Book Now CTA */}
       <motion.div 
