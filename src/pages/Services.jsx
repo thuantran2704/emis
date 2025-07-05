@@ -52,6 +52,7 @@ const Services = ({ language = 'english' }) => {
             </React.Fragment>
           ))}
         </motion.h1>
+      </motion.section> {/* ✅ This was missing */}
 
       {/* Services Section */}
       <section className="mb-20">
@@ -88,7 +89,6 @@ const Services = ({ language = 'english' }) => {
           ))}
         </motion.div>
       </section>
-
     </div>
   );
 };
