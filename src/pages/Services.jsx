@@ -35,7 +35,6 @@ const Services = ({ language = 'english' }) => {
               className="bg-white shadow-md border border-gray-200 p-6 rounded-lg hover:shadow-lg transition"
             >
               <h3 className="text-xl font-semibold mb-2">{service.name}</h3>
-              <p className="text-gray-600 font-medium mb-2">{service.desc}</p>
               <p className="text-sm text-gray-700">{service.details}</p>
             </div>
           ))}
@@ -55,7 +54,7 @@ const Services = ({ language = 'english' }) => {
           href="/book"
           className="inline-block bg-primary text-white px-6 py-3 rounded hover:bg-primary-dark transition"
         >
-          {content.bookNow}
+          {content.findout}
         </a>
       </div>
     </div>
