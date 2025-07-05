@@ -52,22 +52,6 @@ const Services = ({ language = 'english' }) => {
             </React.Fragment>
           ))}
         </motion.h1>
-        <motion.p 
-          className="text-lg md:text-xl mb-8 max-w-3xl mx-auto leading-relaxed"
-          variants={itemVariants}
-        >
-          {content.heroSubtitle}
-        </motion.p>
-        <motion.a
-          href="#booking"
-          className="inline-block bg-primary text-white px-8 py-4 rounded-lg hover:bg-primary-dark transition-all transform hover:-translate-y-1 shadow-lg hover:shadow-xl hover:ring-4 hover:ring-primary/20"
-          variants={itemVariants}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          {content.bookButton}
-        </motion.a>
-      </motion.section>
 
       {/* Services Section */}
       <section className="mb-20">
@@ -105,29 +89,6 @@ const Services = ({ language = 'english' }) => {
         </motion.div>
       </section>
 
-      {/* Book Now CTA */}
-      <motion.div 
-        className="text-center bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl p-8 mb-8"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-      >
-        <h3 className="text-2xl font-semibold mb-4">{content.readyToBook}</h3>
-        <p className="text-gray-700 mb-6 max-w-2xl mx-auto">{content.bookPrompt}</p>
-        <motion.a
-          id="booking"
-          href="/book"
-          className="inline-block bg-primary text-white px-8 py-4 rounded-lg hover:bg-primary-dark transition-all transform hover:-translate-y-1 shadow-lg hover:shadow-xl hover:ring-4 hover:ring-primary/30"
-          whileHover={{ 
-            scale: 1.05,
-            backgroundColor: '#2563eb' // A slightly darker blue if primary is blue-600
-          }}
-          whileTap={{ scale: 0.95 }}
-        >
-          {content.findout}
-        </motion.a>
-      </motion.div>
     </div>
   );
 };
