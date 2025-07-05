@@ -11,7 +11,7 @@ import homeContent from '../Translations/homeContent';
 import aofimplant from '../pics/aofimplants.jpg';
 import teethwhitening from '../pics/teethwhitening.jpg';
 import canal from '../pics/canal.jpg';
-import wisdom from '../pics/wisdom.jpg';
+import wisdom from '../pics/wisdomteeth.jpg';
 export default function Home({ language }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const content = homeContent[language] || homeContent.vietnamese;
