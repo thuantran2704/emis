@@ -1,15 +1,18 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../pics/logo.jpg';
+import navbarContent from '../Translations/navbarContent';
 
-export default function Navbar() {
+export default function Navbar({ language = 'vietnamese' }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
+  const content = navbarContent[language] || navbarContent.english;
+
   const navItems = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Services', path: '/services' },
+    { name: content.home, path: '/' },
+    { name: content.about, path: '/about' },
+    { name: content.services, path: '/services' },
   ];
 
   return (
@@ -60,13 +63,13 @@ export default function Navbar() {
                 </Link>
               ))}
 
-              {/* Separate Contact Button */}
+              {/* Contact Button */}
               <Link 
                 to="/contact" 
                 className="ml-4 px-5 py-2 bg-[#2a3439] text-[#C5AF73] rounded-md hover:bg-[#1f2937] transition-all duration-300 flex items-center space-x-2 border border-[#2a3439] border-opacity-20"
                 style={{ fontFamily: "'Cormorant', serif" }}
               >
-                <span>Contact</span>
+                <span>{content.contact}</span>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
                 </svg>
@@ -112,7 +115,7 @@ export default function Navbar() {
               style={{ fontFamily: "'Cormorant', serif" }}
               onClick={toggleMenu}
             >
-              Contact
+              {content.contact}
             </Link>
           </div>
         </div>
