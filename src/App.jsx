@@ -9,7 +9,8 @@ import About from './pages/About';
 import Services from './pages/Services';
 import { useSelector, useDispatch } from 'react-redux'
 import { setLanguage } from './slices/languageSlice.js'
-
+import { Helmet } from 'react-helmet';
+import { schemaMarkup } from './components/seoMarkup';
 export default function App() {
   const language = useSelector((state) => state.language.language);
   const dispatch = useDispatch();
@@ -20,6 +21,11 @@ export default function App() {
 
   return (
     <Router>
+      <Helmet>
+        <script type="application/ld+json">
+          {schemaMarkup}
+        </script>
+      </Helmet>
       <div className="min-h-screen bg-[#fffaf0]">
         <Navbar language={language} />
         <Routes>
