@@ -5,31 +5,21 @@ import { motion } from 'framer-motion';
 const Services = ({ language }) => {
   const content = homeContent[language];
 
-  // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-      },
+      transition: { staggerChildren: 0.12, delayChildren: 0.1 },
     },
   };
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-      },
-    },
+    visible: { y: 0, opacity: 1, transition: { duration: 0.5 } },
   };
 
   return (
-    <div className="pt-24 px-6 sm:px-12 max-w-7xl mx-auto text-gray-900 bg-white">
+    <div className="pt-24 px-6 sm:px-12 max-w-7xl mx-auto text-gray-800">
       {/* Hero Section */}
       <motion.section
         className="text-center mb-24 max-w-4xl mx-auto"
@@ -38,40 +28,41 @@ const Services = ({ language }) => {
         variants={containerVariants}
       >
         <motion.h1
-          className="text-5xl md:text-6xl font-serif font-extrabold mb-6 tracking-tight leading-tight"
+          className="text-4xl md:text-5xl font-bold mb-8 leading-tight"
           variants={itemVariants}
         >
           {content.heroTitle.split(content.heroHighlight).map((part, i) => (
             <React.Fragment key={i}>
               {part}
               {i === 0 && (
-                <span className="text-amber-600 font-bold relative inline-block">
+                <span className="text-primary font-bold relative inline-block">
                   {content.heroHighlight}
-                  <span className="absolute bottom-0 left-0 w-full h-1 bg-amber-300 opacity-40 transform translate-y-1 rounded-full"></span>
+                  <span className="absolute bottom-0 left-0 w-full h-1 bg-primary opacity-30 transform translate-y-1"></span>
                 </span>
               )}
             </React.Fragment>
           ))}
         </motion.h1>
         <motion.p
-          className="text-lg md:text-xl text-gray-600 font-serif max-w-3xl mx-auto mt-4"
+          className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto"
           variants={itemVariants}
         >
-          {content.heroSubtitle || ""}
+          {/* Optionally add a subtitle or description here */}
+          {content.heroSubtitle || ''}
         </motion.p>
       </motion.section>
 
       {/* Services Section */}
-      <section className="mb-28">
+      <section className="mb-24">
         <motion.h2
-          className="text-3xl md:text-4xl font-serif font-semibold text-center mb-16 relative inline-block text-gray-800"
+          className="text-3xl md:text-4xl font-semibold text-center mb-14 relative inline-block text-gray-900"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
           {content.servicesTitle}
-          <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-amber-400 rounded-full"></span>
+          <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-primary rounded-full"></span>
         </motion.h2>
 
         <motion.div
@@ -79,23 +70,20 @@ const Services = ({ language }) => {
           initial="hidden"
           whileInView="visible"
           variants={containerVariants}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: '-100px' }}
         >
           {content.services.map((service, index) => (
             <motion.div
               key={index}
-              className="bg-amber-50 border border-amber-200 p-8 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-400 cursor-pointer group"
+              className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 cursor-pointer group flex flex-col"
               variants={itemVariants}
-              whileHover={{ scale: 1.04 }}
+              whileHover={{ scale: 1.05 }}
             >
-              <div className="bg-amber-200 bg-opacity-30 w-16 h-16 rounded-xl flex items-center justify-center mb-5 group-hover:bg-opacity-50 transition-colors duration-300">
-                {/* You can replace this placeholder with icons */}
-                <div className="w-10 h-10 bg-amber-400 rounded-full opacity-90"></div>
+              <div className="bg-primary bg-opacity-15 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:bg-opacity-30 transition-colors duration-300">
+                <div className="w-10 h-10 bg-primary rounded-full opacity-90"></div>
               </div>
-              <h3 className="text-2xl font-serif font-semibold mb-3 text-amber-900">
-                {service.name}
-              </h3>
-              <p className="text-gray-700 font-serif leading-relaxed">{service.details}</p>
+              <h3 className="text-xl font-semibold mb-4 text-gray-900">{service.name}</h3>
+              <p className="text-gray-600 leading-relaxed flex-grow">{service.details}</p>
             </motion.div>
           ))}
         </motion.div>
