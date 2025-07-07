@@ -6,8 +6,9 @@ const About = ({ language }) => {
   const content = aboutContent[language];
 
   return (
-    <div className="pt-28 px-6 md:px-12 lg:px-24 max-w-5xl mx-auto text-gray-800">
-      style={{ fontFamily: "'Playfair Display', serif" }}
+    <div className="pt-28 px-6 md:px-12 lg:px-24 max-w-5xl mx-auto text-gray-800"
+    style={{ fontFamily: "'Playfair Display', serif" }}
+    >
       <h1 className="text-5xl font-extrabold text-center mb-14 tracking-tight leading-tight">
         <span className="underline decoration-yellow-300 decoration-[3px] underline-offset-[10px]">
           {content.title}
