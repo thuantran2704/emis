@@ -20,6 +20,8 @@ const Services = ({ language }) => {
 
   return (
     <div className="pt-24 px-6 sm:px-12 max-w-7xl mx-auto text-gray-800">
+      style={{ fontFamily: "'Playfair Display', serif" }}
+
       {/* Hero Section */}
       <motion.section
         className="text-center mb-24 max-w-4xl mx-auto"
