@@ -228,7 +228,7 @@ export default function Contact({ language }) {
               ))}
             </ul>
             <p
-              className="mt-6 italic text-[#555] text-sm"
+              className="mt-6 font-bold text-[#333] text-lg"
               style={{ fontFamily: "'Cormorant', serif" }}
             >
               {content.mainContact}
