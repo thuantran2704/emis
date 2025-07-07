@@ -57,7 +57,7 @@ export const homeContent = {
       }
     ],
     locationTitle: "Our Location",
-    address: "62B Phạm Ngọc Thạch, Ward 6, District 3, Ho Chi Minh City",
+    address: "62B Phạm Ngọc Thạch, Xuan Hoa Ward, Ho Chi Minh City",
     metaTitle: "Premium Dental Care in Ho Chi Minh City | General & Cosmetic Dentistry",
     metaDescription: "Expert dental services including implants, crowns, Invisalign in Ho Chi Minh City. Book your appointment today for quality dental care."
   },
@@ -120,7 +120,7 @@ export const homeContent = {
       }
     ],
     locationTitle: "Vị Trí Của Chúng Tôi",
-    address: "62B Phạm Ngọc Thạch, Phường 6, Quận 3, Thành phố Hồ Chí Minh",
+    address: "62B Phạm Ngọc Thạch, Phường Xuân Hòa, Thành phố Hồ Chí Minh",
     metaTitle: "Dịch Vụ Nha Khoa Chất Lượng Tại TP.HCM | Nha Khoa Tổng Quát & Thẩm Mỹ",
     metaDescription: "Dịch vụ nha khoa chuyên nghiệp bao gồm cấy ghép implant, mão sứ, Invisalign tại TP.HCM. Đặt lịch hẹn ngay hôm nay."
   },
@@ -309,7 +309,7 @@ export const homeContent = {
       }
     ],
     locationTitle: "Notre Emplacement",
-    address: "62B Phạm Ngọc Thạch, Ward 6, District 3, Ho Chi Minh City",
+    address: "62B Phạm Ngọc Thạch, Ward Xuân Hòa, Ho Chi Minh City",
     metaTitle: "Soins Dentaires Premium à Ho Chi Minh Ville | Dentisterie Générale & Esthétique",
     metaDescription: "Services dentaires experts incluant implants, couronnes, Invisalign à Ho Chi Minh Ville. Prenez rendez-vous dès aujourd'hui."
   },

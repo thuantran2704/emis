@@ -10,7 +10,7 @@ export const schemaMarkup = JSON.stringify({
       "@type": "PostalAddress",
       "streetAddress": "62B Phạm Ngọc Thạch",
       "addressLocality": "Ho Chi Minh City",
-      "addressRegion": "District 3",
+      "addressRegion": "Xuan Hoa Ward, District 3, Vo Thi Sau Ward",
       "postalCode": "700000",
       "addressCountry": "VN"
     },
