@@ -227,6 +227,12 @@ export default function Contact({ language }) {
                 </li>
               ))}
             </ul>
+            <p
+              className="mt-6 italic text-[#555] text-sm"
+              style={{ fontFamily: "'Cormorant', serif" }}
+            >
+              {content.mainContact}
+            </p>
           </div>
 
           {/* Appointment Form */}

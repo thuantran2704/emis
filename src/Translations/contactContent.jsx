@@ -26,7 +26,8 @@ export const contactContent = {
       "Niềng Răng",
       "Tẩy Trắng Răng",
       "Trám Răng"
-    ]
+    ],
+    mainContact: "Hình thức liên lạc chính của chúng tôi sẽ là Zalo."
   },
   english: {
     title: "Contact Us",
@@ -54,7 +55,8 @@ export const contactContent = {
       "Braces",
       "Teeth Whitening",
       "Dental Filling"
-    ]
+    ],
+    mainContact: "Our main form of communication will be Zalo."
   },
   simplified: {
     title: "联系我们",
@@ -82,7 +84,8 @@ export const contactContent = {
       "牙齿矫正",
       "牙齿美白",
       "补牙"
-    ]
+    ],
+    mainContact: "我们的主要联系方式将是 Zalo。"
   },
   traditional: {
     title: "聯繫我們",
@@ -110,7 +113,8 @@ export const contactContent = {
       "牙齒矯正",
       "牙齒美白",
       "補牙"
-    ]
+    ],
+    mainContact: "我們的主要聯絡方式將是 Zalo。"
   },
   french: {
     title: "Contactez-",
@@ -138,7 +142,8 @@ export const contactContent = {
       "Appareil Dentaire",
       "Blanchiment des Dents",
       "Plaquage Dentaire"
-    ]
+    ],
+    mainContact: "Notre principal moyen de communication sera Zalo."
   },
   korean: {
     title: "연락",
@@ -166,7 +171,8 @@ export const contactContent = {
       "치아 교정",
       "치아 미백",
       "충치 치료"
-    ]
+    ],
+    mainContact: "우리의 주요 연락 수단은 Zalo입니다."
   }
 };
 
