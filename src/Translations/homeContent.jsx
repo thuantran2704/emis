@@ -20,10 +20,10 @@ export const homeContent = {
         details: "Titanium implants replace missing tooth roots, preventing bone loss while restoring your smile's appearance and chewing function."
       },
       {
-        name: "Dental Crowns",
-        brief: "Custom-made caps that protect and restore damaged or decayed teeth.",
+        name: "Cosmetic Dental Crowns",
+        brief: "Beautiful, custom-made caps that protect and restore damaged teeth while enhancing your smile.",
         desc: "Porcelain tooth coverings",
-        details: "Crowns strengthen weakened teeth, relieve pain, and improve your smile by covering damaged teeth with natural-looking porcelain."
+        details: "Our crowns strengthen weakened teeth while giving you a natural, attractive appearance. They're designed to match your smile perfectly."
       },
       {
         name: "Invisalign",
@@ -83,10 +83,10 @@ export const homeContent = {
         details: "Implant titan thay thế chân răng đã mất, ngăn tiêu xương đồng thời phục hồi chức năng nhai và thẩm mỹ."
       },
       {
-        name: "Mão Răng Sứ",
-        brief: "Mão răng tùy chỉnh bảo vệ và phục hồi răng hư hỏng hoặc sâu nặng.",
-        desc: "Bọc răng bằng sứ",
-        details: "Mão sứ bảo vệ răng yếu, giảm đau và cải thiện thẩm mỹ với vẻ ngoài tự nhiên như răng thật."
+        name: "Răng Sứ Thẩm Mỹ",
+        brief: "Mão sứ cao cấp vừa bảo vệ răng hư tổn vừa mang lại nụ cười đẹp tự nhiên.",
+        desc: "Bọc răng sứ thẩm mỹ",
+        details: "Mão sứ của chúng tôi không chỉ bảo vệ răng yếu mà còn mang lại vẻ đẹp tự nhiên, hài hòa với nụ cười của bạn."
       },
       {
         name: "Invisalign",
@@ -146,10 +146,10 @@ export const homeContent = {
         details: "钛种植体替代缺失牙根，防止骨质流失，同时恢复咀嚼功能和美观笑容。"
       },
       {
-        name: "牙冠",
-        brief: "定制牙冠保护并修复受损或严重蛀坏的牙齿。",
+        name: "美容牙冠",
+        brief: "定制美容牙冠既保护修复受损牙齿，又能提升笑容魅力。",
         desc: "瓷牙覆盖",
-        details: "牙冠加固脆弱牙齿，缓解疼痛，通过自然外观的瓷冠改善微笑美观。"
+        details: "我们的美容牙冠在保护牙齿的同时，能为您打造自然完美的微笑曲线。"
       },
       {
         name: "隐适美",
@@ -209,10 +209,10 @@ export const homeContent = {
         details: "鈦種植體替代缺失牙根，防止骨質流失，同時恢復咀嚼功能和美觀笑容。"
       },
       {
-        name: "牙冠",
-        brief: "定制牙冠保護並修復受損或嚴重蛀壞的牙齒。",
+        name: "美容牙冠",
+        brief: "定制美容牙冠既保護修復受損牙齒，又能提升笑容魅力。",
         desc: "瓷牙覆蓋",
-        details: "牙冠加固脆弱牙齒，緩解疼痛，通過自然外觀的瓷冠改善微笑美觀。"
+        details: "我們的美容牙冠在保護牙齒的同時，能為您打造自然完美的微笑曲線。"
       },
       {
         name: "隱適美",
@@ -272,10 +272,10 @@ export const homeContent = {
         details: "Les implants en titane remplacent les racines dentaires perdues, prévenant la perte osseuse tout en restaurant fonction et esthétique."
       },
       {
-        name: "Couronnes Dentaires",
-        brief: "Coiffes sur mesure protégeant et restaurant les dents endommagées.",
+        name: "Couronnes Dentaires Esthétiques",
+        brief: "Coiffes sur mesure qui protègent les dents tout en embellissant votre sourire.",
         desc: "Revêtements en porcelaine",
-        details: "Les couronnes renforcent les dents fragiles, soulagent la douleur et améliorent l'apparence du sourire."
+        details: "Nos couronnes allient fonctionnalité et esthétique pour un résultat naturel et harmonieux."
       },
       {
         name: "Invisalign",
@@ -335,10 +335,10 @@ export const homeContent = {
         details: "티타늄 임플란트로 잃은 치아 뿌리를 대체해 골 손실을 막고 씹기 기능과 미소를 회복합니다."
       },
       {
-        name: "치과 크라운",
-        brief: "손상되거나 충치 난 치아를 보호하고 복원하는 맞춤형 덮개.",
+        name: "미용 치과 크라운",
+        brief: "손상된 치아를 보호하면서 미소를 더 아름답게 만드는 맞춤형 크라운.",
         desc: "도자기 치아 덮개",
-        details: "크라운은 약해진 치아를 강화하고 통증을 완화하며 자연스러운 미소를 만들어줍니다."
+        details: "우리의 미용 크라운은 치아를 보호하는 동시에 자연스럽고 아름다운 미소를 선사합니다."
       },
       {
         name: "인비절라인",
