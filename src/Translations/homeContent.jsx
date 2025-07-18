@@ -6,6 +6,7 @@ export const homeContent = {
     servicesTitle: "ORAL HEALTH SERVICES",
     bookButton: "Book Consultation",
     findout: "Find Out More",
+    practiceTitle: "Our Practice in Action",
     services: [
       {
         name: "General Dentistry",
@@ -69,6 +70,7 @@ export const homeContent = {
     servicesTitle: "DỊCH VỤ CHĂM SÓC RĂNG MIỆNG",
     bookButton: "Đặt Lịch Khám",
     findout: "Tìm hiểu thêm",
+    practiceTitle: "Phòng Khám Của Chúng Tôi",
     services: [
       {
         name: "Nha Khoa Tổng Quát",
@@ -132,6 +134,7 @@ export const homeContent = {
     servicesTitle: "口腔健康服务",
     bookButton: "预约咨询",
     findout: "Find Out More",
+    practiceTitle: "我们的诊所实况",
     services: [
       {
         name: "普通牙科",
@@ -195,6 +198,7 @@ export const homeContent = {
     servicesTitle: "口腔健康服務",
     bookButton: "預約諮詢",
     findout: "Find Out More",
+    practiceTitle: "我們的診所實況",
     services: [
       {
         name: "普通牙科",
@@ -258,6 +262,7 @@ export const homeContent = {
     servicesTitle: "SERVICES DE SANTÉ BUCCO-DENTAIRE",
     bookButton: "Prendre Rendez-vous",
     findout: "Find Out More",
+    practiceTitle: "Notre Pratique en Action",
     services: [
       {
         name: "Dentisterie Générale",
@@ -309,73 +314,8 @@ export const homeContent = {
       }
     ],
     locationTitle: "Notre Emplacement",
-    address: "62B Phạm Ngọc Thạch, Ward Xuân Hòa, Ho Chi Minh City",
+    address: "62B Phạm Ngọc Thạch, Ward Xuân Hòa, Ho Chi Minh Ville",
     metaTitle: "Soins Dentaires Premium à Ho Chi Minh Ville | Dentisterie Générale & Esthétique",
-    metaDescription: "Services dentaires experts incluant implants, couronnes, Invisalign à Ho Chi Minh Ville. Prenez rendez-vous dès aujourd'hui."
-  },
-
-  korean: {
-    heroTitle: "프리미엄 치과 서비스",
-    heroHighlight: "치과",
-    heroSubtitle: "저희 전문가 팀과 함께 포괄적인 치과 서비스를 경험해보세요.",
-    servicesTitle: "구강 건강 서비스",
-    bookButton: "상담 예약",
-    findout: "Find Out More",
-    services: [
-      {
-        name: "일반 치과",
-        brief: "건강한 치아와 잇몸을 위한 종합 검진과 전문적인 세척 서비스.",
-        desc: "정기 검진 및 청소",
-        details: "정기 검진으로 충치, 금간 치아 또는 감염을 조기에 발견해 악화를 방지합니다."
-      },
-      {
-        name: "치과 임플란트",
-        brief: "빠진 치아의 영구적 해결책, 자연치아와 같은 기능과 미관.",
-        desc: "빠진 치아 솔루션",
-        details: "티타늄 임플란트로 잃은 치아 뿌리를 대체해 골 손실을 막고 씹기 기능과 미소를 회복합니다."
-      },
-      {
-        name: "미용 치과 크라운",
-        brief: "손상된 치아를 보호하면서 미소를 더 아름답게 만드는 맞춤형 크라운.",
-        desc: "도자기 치아 덮개",
-        details: "우리의 미용 크라운은 치아를 보호하는 동시에 자연스럽고 아름다운 미소를 선사합니다."
-      },
-      {
-        name: "인비절라인",
-        brief: "금속 교정기 없이 투명한 장치로 치아를 교정하는 방법.",
-        desc: "투명 치아 정렬기",
-        details: "탈부착이 편리한 투명 교정기는 일상생활에 방해되지 않으면서 치아를 정렬합니다."
-      },
-      {
-        name: "올온포 임플란트",
-        brief: "4개의 임플란트로 전체 치아를 안정적으로 복원하는 솔루션.",
-        desc: "4개의 임플란트로 전체틀니 고정",
-        details: "뼈 이식 없이도 골 손실이 있는 환자에게 적합한 안정적인 전체 치아 복원 방법입니다."
-      },
-      {
-        name: "사랑니 발치",
-        brief: "문제가 되는 사랑니를 안전하고 편안하게 발치합니다.",
-        desc: "안전한 사랑니 제거",
-        details: "매복 사랑니를 발치해 통증, 감염 및 주변 치아 손상을 예방합니다."
-      },
-      {
-        name: "치아 미백",
-        brief: "전문적인 치료로 얼룩을 제거해 더 밝은 미소를 선사합니다.",
-        desc: "당신의 미소를 더 밝게",
-        details: "안전한 미백 치료로 눈에 띄게 하얗고 자신감 넘치는 미소를 만드세요."
-      },
-      {
-        name: "근관 치료",
-        brief: "통증 완화 치료로 감염된 치아를 발치 없이 보존합니다.",
-        desc: "감염된 치아를 위한 내과적 치료",
-        details: "감염된 치수 제거로 자연치아를 보존하며, 종종 크라운을 덧씌워 보호합니다."
-      }
-    ],
-    locationTitle: "우리 위치",
-    address: "베트남 호치민시 3군 6동 Phạm Ngọc Thạch 62B",
-    metaTitle: "호치민시 프리미엄 치과 서비스 | 일반 및 미용 치과",
-    metaDescription: "임플란트, 크라운, 인비절라인 등 전문 치과 서비스. 오늘 예약하고 품질 있는 치과 치료를 받으세요."
+    metaDescription: "Services dentaires experts incluant implants, couronnes, Invisalign à Ho Chi Minh Ville. Réservez votre rendez-vous aujourd'hui."
   }
 };
-
-export default homeContent;
