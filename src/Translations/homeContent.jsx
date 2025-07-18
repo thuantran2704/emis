@@ -319,3 +319,5 @@ export const homeContent = {
     metaDescription: "Services dentaires experts incluant implants, couronnes, Invisalign à Ho Chi Minh Ville. Réservez votre rendez-vous aujourd'hui."
   }
 };
+
+export default homeContent;
