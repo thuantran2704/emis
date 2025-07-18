@@ -55,8 +55,6 @@ export default function Home({ language }) {
           {/* Canonical URL */}
           <link rel="canonical" href="https://emisdental.com" />
     </Helmet>
-
-      <PracticeImages />
       {/* Hero Section */}
       <section className="py-28 px-4 max-w-6xl mx-auto text-center">
         <h1 
@@ -84,7 +82,7 @@ export default function Home({ language }) {
           {content.bookButton}
         </Link>
       </section>
-
+          <PracticeImages />
       {/* Services Section */}
       <section className="py-16 bg-[#fffaf0]">
         <div className="max-w-6xl mx-auto px-4 relative">
