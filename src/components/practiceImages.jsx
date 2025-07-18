@@ -7,12 +7,12 @@ import phongkham from '../pics/phongkham.jpg';
 
 const practiceImages = [patient1, patient2, seal, phongkham];
 
-export default function PracticeImages() {
+export default function PracticeImages({ title = "Our Practice in Action" }) {
   return (
     <section className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-3xl font-bold text-[#1f2937] mb-8 text-center border-b-2 border-[#d4af37] pb-2 inline-block">
-          Our Practice in Action
+          {title}
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {practiceImages.map((img, index) => (
