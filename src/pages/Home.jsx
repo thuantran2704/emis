@@ -12,10 +12,10 @@ import aofimplant from '../pics/aofimplants.jpg';
 import teethwhitening from '../pics/teethwhitening.jpg';
 import canal from '../pics/canal.jpg';
 import wisdom from '../pics/wisdomteeth.jpg';
+import PracticeImages from '../components/practiceImages';
 export default function Home({ language }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const content = homeContent[language] || homeContent.vietnamese;
-
   const serviceImages = [generalDentistry, implant, crown, invisalign, aofimplant,wisdom, teethwhitening, canal];
 
   const nextSlide = () => {
@@ -56,7 +56,7 @@ export default function Home({ language }) {
           <link rel="canonical" href="https://emisdental.com" />
     </Helmet>
 
-
+      <PracticeImages />
       {/* Hero Section */}
       <section className="py-28 px-4 max-w-6xl mx-auto text-center">
         <h1 
