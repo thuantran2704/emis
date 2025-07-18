@@ -4,8 +4,8 @@ import patient1 from '../pics/patient1.jpg';
 import patient2 from '../pics/patient2.jpg';
 import seal from '../pics/sealer.jpg';
 import phongkham from '../pics/phongkham.jpg';
-
-const practiceImages = [patient1, patient2, seal, phongkham];
+import reception from '../pics/reception.jpg';
+const practiceImages = [patient1, patient2, seal, phongkham, reception];
 
 export default function PracticeImages({ title = "Our Practice in Action" }) {
   return (
