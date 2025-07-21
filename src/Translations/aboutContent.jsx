@@ -3,7 +3,7 @@ export const aboutContent = {
     title: "About Us",
     subtitle:
       "Delivering quality dental care with compassion, technology, and expertise.",
-    description: `At Emis International Dental Clinic, every smile matters. We take pride in our team of highly skilled dentists who have trained in South Korea, the United States, and Europe — bringing together modern expertise and heartfelt dedication.
+    description: `At Emis International Dental Clinic, every smile matters. We take pride in our team of highly skilled dentists who have trained in South Korea, the United States, and Europe, bringing together modern expertise and heartfelt dedication.
 
 We provide personalized dental solutions using state-of-the-art equipment and gentle care. Whether you're visiting for routine cleaning or advanced treatment, we aim to make your experience comfortable and your smile brighter.
 
@@ -14,7 +14,7 @@ We are pleased to serve you in English, Vietnamese, French, and Chinese.`,
     title: "Về Chúng Tôi",
     subtitle:
       "Mang đến dịch vụ nha khoa chất lượng bằng sự tận tâm, công nghệ và chuyên môn.",
-    description: `Tại nha khoa quốc tế Emis, mỗi nụ cười đều quan trọng. Chúng tôi tự hào sở hữu đội ngũ nha sĩ giỏi, nhiều năm kinh nghiệm và được đào tạo chuyên sâu tại Hàn Quốc, Mỹ và Châu Âu — mang đến sự kết hợp giữa kiến thức chuyên môn hiện đại và tay nghề tận tâm.
+    description: `Tại nha khoa quốc tế Emis, mỗi nụ cười đều quan trọng. Chúng tôi tự hào sở hữu đội ngũ nha sĩ giỏi, nhiều năm kinh nghiệm và được đào tạo chuyên sâu tại Hàn Quốc, Mỹ và Châu Âu, mang đến sự kết hợp giữa kiến thức chuyên môn hiện đại và tay nghề tận tâm.
 
 Chúng tôi cung cấp các giải pháp nha khoa cá nhân hóa với trang thiết bị tiên tiến và phong cách chăm sóc nhẹ nhàng. Dù quý khách đến để làm sạch răng định kỳ hay điều trị chuyên sâu, chúng tôi luôn nỗ lực để mang lại trải nghiệm thoải mái và nụ cười rạng rỡ.
 
