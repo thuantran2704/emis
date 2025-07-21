@@ -105,13 +105,13 @@ export default function Home({ language }) {
           />
         </div>
       </section>
-
-      {/* Map Section */}
-      <MapSection content={content} />
       <PapersTitle 
         title={content.papersTitle} 
         images={papersImages} 
       />
+      {/* Map Section */}
+      <MapSection content={content} />
+
     </main>
   );
 }
