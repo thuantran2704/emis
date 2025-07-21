@@ -13,11 +13,19 @@ import teethwhitening from '../pics/teethwhitening.jpg';
 import canal from '../pics/canal.jpg';
 import wisdom from '../pics/wisdomteeth.jpg';
 import PracticeImages from '../components/practiceImages';
+import PapersTitle from '../components/PapersTitle';
+import licenses from '../pics/licenses.jpg';
+import paper1 from '../pics/paper1.jpg';
+import paper2 from '../pics/paper2.jpg';
+import paper3 from '../pics/paper3.jpg';
+import paper4 from '../pics/paper4.jpg';
+import paper5 from '../pics/paper5.jpg';
+
 export default function Home({ language }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const content = homeContent[language] || homeContent.vietnamese;
   const serviceImages = [generalDentistry, implant, crown, invisalign, aofimplant,wisdom, teethwhitening, canal];
-
+  const papersImages = [paper1, paper2, paper3, paper4, paper5, licenses];
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % (content.services.length - 2));
   };
@@ -100,6 +108,10 @@ export default function Home({ language }) {
 
       {/* Map Section */}
       <MapSection content={content} />
+      <PapersTitle 
+        title={content.papersTitle} 
+        images={papersImages} 
+      />
     </main>
   );
 }
