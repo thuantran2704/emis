@@ -14,7 +14,7 @@ import canal from '../pics/canal.jpg';
 import wisdom from '../pics/wisdomteeth.jpg';
 import PracticeImages from '../components/practiceImages';
 import PapersTitle from '../components/PapersTitle';
-import licenses from '../pics/licenses.jpg';
+import licenses from '../pics/license.jpg';
 import paper1 from '../pics/paper1.jpg';
 import paper2 from '../pics/paper2.jpg';
 import paper3 from '../pics/paper3.jpg';
