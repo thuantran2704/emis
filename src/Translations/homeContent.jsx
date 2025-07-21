@@ -7,6 +7,7 @@ export const homeContent = {
     bookButton: "Book Consultation",
     findout: "Find Out More",
     practiceTitle: "Our Practice in Action",
+    papersTitle: "Standard Quality Dental Clinic",
     services: [
       {
         name: "General Dentistry",
@@ -71,6 +72,7 @@ export const homeContent = {
     bookButton: "Đặt Lịch Khám",
     findout: "Tìm hiểu thêm",
     practiceTitle: "Phòng Khám Của Chúng Tôi",
+    papersTitle: "Nha Khoa Tiêu Chuẩn Chất Lượng",
     services: [
       {
         name: "Nha Khoa Tổng Quát",
@@ -135,6 +137,7 @@ export const homeContent = {
     bookButton: "预约咨询",
     findout: "Find Out More",
     practiceTitle: "我们的诊所实况",
+    papersTitle: "标准高质量牙科诊所",
     services: [
       {
         name: "普通牙科",
@@ -198,6 +201,7 @@ export const homeContent = {
     bookButton: "상담 예약",
     findout: "자세히 보기",
     practiceTitle: "우리의 진료 현장",
+    papersTitle: "표준 품질 치과",
     services: [
       {
         name: "일반 치과",
@@ -263,6 +267,7 @@ export const homeContent = {
     bookButton: "預約諮詢",
     findout: "Find Out More",
     practiceTitle: "我們的診所實況",
+    papersTitle: "標準高品質牙科診所",
     services: [
       {
         name: "普通牙科",
@@ -327,6 +332,7 @@ export const homeContent = {
     bookButton: "Prendre Rendez-vous",
     findout: "Find Out More",
     practiceTitle: "Notre Pratique en Action",
+    papersTitle: "Clinique Dentaire de Qualité Standard",
     services: [
       {
         name: "Dentisterie Générale",
