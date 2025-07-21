@@ -1,23 +1,32 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 
 export default function PapersTitle({ title, images }) {
   const [zoomImage, setZoomImage] = useState(null);
-  const containerRef = useRef(null);
+  const [startIndex, setStartIndex] = useState(0);
 
-  // Scroll container left or right by thumbnail width + gap (168px here)
-  const scrollAmount = 168;
+  const visibleCount = 4; // number of thumbnails to show at once
+  const length = images.length;
 
-  const scrollLeft = () => {
-    if (containerRef.current) {
-      containerRef.current.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-    }
+  // Move slider forward (loop around)
+  const next = () => {
+    setStartIndex((prev) => (prev + 1) % length);
   };
 
-  const scrollRight = () => {
-    if (containerRef.current) {
-      containerRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    }
+  // Move slider backward (loop around)
+  const prev = () => {
+    setStartIndex((prev) => (prev - 1 + length) % length);
   };
+
+  // Helper to get visible images with wrap-around
+  const getVisibleImages = () => {
+    let visible = [];
+    for (let i = 0; i < visibleCount; i++) {
+      visible.push(images[(startIndex + i) % length]);
+    }
+    return visible;
+  };
+
+  const visibleImages = getVisibleImages();
 
   return (
     <section className="py-16 bg-white">
@@ -26,50 +35,47 @@ export default function PapersTitle({ title, images }) {
           {title}
         </h2>
 
-        {/* Left Arrow */}
-        <button
-          onClick={scrollLeft}
-          aria-label="Scroll images left"
-          className="absolute left-0 top-1/2 -translate-y-1/2 bg-white rounded-full shadow p-2 hover:bg-gray-100 z-10"
-          style={{ transform: 'translate(-50%, -50%)' }}
-          type="button"
-        >
-          &#8592;
-        </button>
+        {/* Slider container */}
+        <div className="flex items-center justify-center gap-4">
+          {/* Prev Button */}
+          <button
+            onClick={prev}
+            aria-label="Previous images"
+            className="bg-white rounded-full shadow p-3 hover:bg-gray-100"
+            type="button"
+          >
+            &#8592;
+          </button>
 
-        {/* Scrollable thumbnails container */}
-        <div
-          ref={containerRef}
-          className="flex overflow-x-auto scrollbar-hide gap-4 px-12"
-          style={{ scrollSnapType: 'x mandatory' }}
-        >
-          {images.map((imgSrc, idx) => (
-            <button
-              key={idx}
-              onClick={() => setZoomImage(imgSrc)}
-              className="flex-shrink-0 w-40 h-40 bg-[#fefefe] rounded-2xl shadow-md overflow-hidden flex items-center justify-center cursor-zoom-in transition-transform hover:scale-105 scroll-snap-align-start"
-              aria-label={`Open image ${idx + 1} in zoom`}
-              type="button"
-            >
-              <img
-                src={imgSrc}
-                alt={`thumbnail-${idx}`}
-                className="max-w-full max-h-full object-contain"
-              />
-            </button>
-          ))}
+          {/* Visible thumbnails */}
+          <div className="flex gap-4">
+            {visibleImages.map((imgSrc, idx) => (
+              <button
+                key={startIndex + idx}
+                onClick={() => setZoomImage(imgSrc)}
+                className="w-40 h-40 bg-[#fefefe] rounded-2xl shadow-md overflow-hidden flex items-center justify-center cursor-zoom-in transition-transform hover:scale-105"
+                aria-label={`Open image ${startIndex + idx + 1} in zoom`}
+                type="button"
+              >
+                <img
+                  src={imgSrc}
+                  alt={`thumbnail-${startIndex + idx}`}
+                  className="max-w-full max-h-full object-contain"
+                />
+              </button>
+            ))}
+          </div>
+
+          {/* Next Button */}
+          <button
+            onClick={next}
+            aria-label="Next images"
+            className="bg-white rounded-full shadow p-3 hover:bg-gray-100"
+            type="button"
+          >
+            &#8594;
+          </button>
         </div>
-
-        {/* Right Arrow */}
-        <button
-          onClick={scrollRight}
-          aria-label="Scroll images right"
-          className="absolute right-0 top-1/2 -translate-y-1/2 bg-white rounded-full shadow p-2 hover:bg-gray-100 z-10"
-          style={{ transform: 'translate(50%, -50%)' }}
-          type="button"
-        >
-          &#8594;
-        </button>
 
         {/* Lightbox modal */}
         {zoomImage && (
@@ -88,4 +94,3 @@ export default function PapersTitle({ title, images }) {
     </section>
   );
 }
-
