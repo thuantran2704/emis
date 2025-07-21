@@ -25,7 +25,7 @@ export default function Home({ language }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const content = homeContent[language] || homeContent.vietnamese;
   const serviceImages = [generalDentistry, implant, crown, invisalign, aofimplant,wisdom, teethwhitening, canal];
-  const papersImages = [paper1, paper2, paper3, paper4, paper5, licenses];
+  const papersImages = [ licenses, paper1, paper2, paper3, paper4, paper5];
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % (content.services.length - 2));
   };
