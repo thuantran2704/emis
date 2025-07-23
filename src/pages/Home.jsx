@@ -22,17 +22,10 @@ import paper4 from '../pics/paper4.jpg';
 import paper5 from '../pics/paper5.jpg';
 
 export default function Home({ language }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
   const content = homeContent[language] || homeContent.vietnamese;
   const serviceImages = [generalDentistry, implant, crown, invisalign, aofimplant,wisdom, teethwhitening, canal];
-  const papersImages = [ licenses, paper1, paper2, paper3, paper4, paper5];
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % (content.services.length - 2));
-  };
+  const papersImages = [ licenses];
 
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + (content.services.length - 2)) % (content.services.length - 2));
-  };
 
   return (
     <main className="min-h-[calc(100vh-4rem)] bg-[#f7f2e7]">
