@@ -117,23 +117,24 @@ export default function PapersTitle({ title, images }) {
           {title}
         </h2>
 
-        {/* Slider container */}
         <div className="flex items-center justify-center gap-4">
-          {/* Prev Button */}
-          <button
-            onClick={prev}
-            aria-label="Previous image"
-            className="bg-white rounded-full shadow p-3 hover:bg-gray-100"
-            type="button"
-          >
-            &#8592;
-          </button>
+          {/* If multiple images, show slider buttons */}
+          {length > 1 && (
+            <button
+              onClick={prev}
+              aria-label="Previous image"
+              className="bg-white rounded-full shadow p-3 hover:bg-gray-100"
+              type="button"
+            >
+              &#8592;
+            </button>
+          )}
 
-          {/* Single Image Display */}
+          {/* Always show the image */}
           <button
             onClick={() => setZoomImage(images[currentIndex])}
             className="w-80 h-80 bg-[#fefefe] rounded-2xl shadow-md overflow-hidden flex items-center justify-center cursor-zoom-in transition-transform hover:scale-105"
-            aria-label={`Open image ${currentIndex + 1} in zoom`}
+            aria-label="Zoom image"
             type="button"
           >
             <img
@@ -143,18 +144,19 @@ export default function PapersTitle({ title, images }) {
             />
           </button>
 
-          {/* Next Button */}
-          <button
-            onClick={next}
-            aria-label="Next image"
-            className="bg-white rounded-full shadow p-3 hover:bg-gray-100"
-            type="button"
-          >
-            &#8594;
-          </button>
+          {length > 1 && (
+            <button
+              onClick={next}
+              aria-label="Next image"
+              className="bg-white rounded-full shadow p-3 hover:bg-gray-100"
+              type="button"
+            >
+              &#8594;
+            </button>
+          )}
         </div>
 
-        {/* Lightbox Modal */}
+        {/* Zoom Modal */}
         {zoomImage && (
           <div
             className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4"
