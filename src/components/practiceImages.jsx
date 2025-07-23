@@ -100,24 +100,6 @@ const About = ({ language }) => {
           {content.patientSubtitle2}
         </h2>
       </div>
-
-      {/* Section 6: Hall Image (optional/extra) */}
-      <div className="my-20 bg-gray-50/60 rounded-2xl p-8 shadow-md">
-        <h2 className="text-2xl font-semibold mb-6 text-center text-gray-700 tracking-wide">
-          {content.imageTitle || "Our Practice Hall"}
-        </h2>
-        <img
-          src={emishall}
-          alt="Facility or dental practice hall"
-          className="mx-auto rounded-2xl shadow-lg max-w-full h-auto transition-transform duration-300 hover:scale-[1.02]"
-        />
-        {content.imageCaption && (
-          <p className="mt-4 text-gray-500 text-sm text-center italic">
-            {content.imageCaption}
-          </p>
-        )}
-      </div>
-
       {/* Mission Section */}
       {content.mission && (
         <div className="bg-yellow-50 border border-yellow-200 px-8 py-8 rounded-2xl shadow-sm mb-12">
