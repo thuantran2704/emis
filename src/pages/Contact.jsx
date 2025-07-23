@@ -2,7 +2,6 @@ import { useState } from 'react';
 import mailIcon from '../pics/mail.jpg';
 import phoneIcon from '../pics/phone.jpg';
 import facebook from '../pics/facebook.jpg';
-import instagram from '../pics/instagram.jpg';
 import zaloIcon from '../pics/zalo.jpg';
 import Alert from '../components/alert';
 import contactContent from '../Translations/contactContent';
@@ -227,12 +226,6 @@ export default function Contact({ language }) {
                 </li>
               ))}
             </ul>
-            <p
-              className="mt-6 font-bold text-[#333] text-lg"
-              style={{ fontFamily: "'Cormorant', serif" }}
-            >
-              {content.mainContact}
-            </p>
           </div>
 
           {/* Appointment Form */}

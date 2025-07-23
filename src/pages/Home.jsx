@@ -79,7 +79,6 @@ export default function Home({ language }) {
           {content.bookButton}
         </Link>
       </section>
-          <PracticeImages title={content.practiceTitle} />
       {/* Services Section */}
       <section className="py-16 bg-[#fffaf0]">
         <div className="max-w-6xl mx-auto px-4 relative">
