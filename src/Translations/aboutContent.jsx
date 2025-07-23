@@ -1,111 +1,117 @@
 const aboutContent = {
   english: {
     title: "About Our Clinic",
-    introParagraph: "Welcome to our dental clinic, where compassionate care meets modern dentistry. We are dedicated to providing personalized treatments and building lasting trust with every patient.",
-    receptionSubtitle: "A Warm Welcome Awaits You",
-    philosophy: "Our philosophy centers on patient-first principles—listening, understanding, and treating each individual with respect and kindness.",
-    clinicSubtitle: "Comfort & Care in Every Corner",
-    careSection: "From your very first visit to post-treatment support, we aim to make your journey comfortable and worry-free.",
-    patientSubtitle1: "Personal Attention Every Step",
-    techSection: "We use cutting‑edge tools and strict sterilization protocols to ensure your safety and the highest quality of care.",
-    techSubtitle: "Modern Tools, Safe Hands",
-    experienceSection: "Many of our patients leave with a smile—not just because of great results, but because of how they were treated.",
-    patientSubtitle2: "Smiles That Reassure",
-    imageTitle: "Our Practice Hall",
-    imageCaption: "A clean, spacious, and inviting space for your comfort.",
-    missionTitle: "Our Mission",
-    mission: "To deliver world-class dental care with compassion, integrity, and innovation—one smile at a time."
+    introParagraph:
+      "Welcome to our dental clinic, where modern care meets traditional values. Our dedicated team is committed to delivering exceptional dental services in a welcoming and comfortable environment. From the moment you walk in, we focus on building trust and making sure every visit is a positive one.",
+    receptionSubtitle: "Welcoming Reception",
+    philosophy:
+      "Our philosophy centers around personalized care. We believe every smile is unique, and so is our approach. Whether you're here for a routine checkup or a complete transformation, we tailor every treatment to your specific needs.",
+    clinicSubtitle: "Clean & Calm Clinic",
+    careSection:
+      "Cleanliness and calmness are at the core of our clinic design. From natural light to minimal décor, everything is chosen to ease your mind and bring peace to your visit.",
+    patientSubtitle1: "Real Patient Testimonials",
+    techSection:
+      "We invest in cutting-edge technology to provide safer, faster, and more precise treatments. From digital X-rays to modern sterilization, every detail is handled with care.",
+    techSubtitle: "Trusted Technology",
+    experienceSection:
+      "At our clinic, we believe that dental visits should leave a lasting impression—not just through excellent results, but through the warmth and sincerity of care you experience. From the front desk to the treatment room, every interaction is designed to make you feel safe, heard, and valued. Patients often leave with a sense of ease, knowing they’ve been truly cared for, not just treated.",
+    patientSubtitle2: "A Lasting Impression",
   },
 
   vietnamese: {
     title: "Về Phòng Khám",
-    introParagraph: "Chào mừng bạn đến với phòng khám nha khoa của chúng tôi, nơi chăm sóc ân cần gặp gỡ công nghệ hiện đại. Chúng tôi cam kết mang đến điều trị cá nhân hóa và xây dựng lòng tin bền vững với mỗi bệnh nhân.",
-    receptionSubtitle: "Chào Đón Nhiệt Thành",
-    philosophy: "Triết lý của chúng tôi đặt bệnh nhân lên hàng đầu — lắng nghe, thấu hiểu và điều trị tôn trọng, thân thiện.",
-    clinicSubtitle: "Thoải Mái Tận Tâm Mỗi Góc",
-    careSection: "Từ lần đầu tiên đến hỗ trợ sau điều trị, chúng tôi luôn hướng đến một hành trình nhẹ nhàng, không lo lắng cho bạn.",
-    patientSubtitle1: "Chăm Sóc Cá Nhân Mỗi Khoảnh Khắc",
-    techSection: "Chúng tôi sử dụng thiết bị tiên tiến và quy trình khử trùng nghiêm ngặt để đảm bảo an toàn và chất lượng cao.",
-    techSubtitle: "Công Nghệ Hiện Đại, Tay Nghề An Toàn",
-    experienceSection: "Nhiều bệnh nhân rời đi với nụ cười—không chỉ vì kết quả tuyệt vời, mà vì cách họ được chăm sóc.",
-    patientSubtitle2: "Nụ Cười Là Niềm Tin",
-    imageTitle: "Phòng Thực Hành Của Chúng Tôi",
-    imageCaption: "Không gian sạch sẽ, rộng rãi và thân thiện.",
-    missionTitle: "Sứ Mệnh Của Chúng Tôi",
-    mission: "Mang đến chăm sóc nha khoa đẳng cấp thế giới với sự đồng cảm, liêm chính và đổi mới—từng nụ cười một."
+    introParagraph:
+      "Chào mừng bạn đến với phòng khám nha khoa của chúng tôi, nơi kết hợp giữa chăm sóc hiện đại và giá trị truyền thống. Đội ngũ tận tâm của chúng tôi cam kết mang đến dịch vụ nha khoa tuyệt vời trong môi trường thân thiện và thoải mái. Ngay từ lần đầu tiên, chúng tôi tập trung vào việc xây dựng niềm tin và tạo nên trải nghiệm tích cực cho mọi lần thăm khám.",
+    receptionSubtitle: "Tiếp Đón Thân Thiện",
+    philosophy:
+      "Triết lý của chúng tôi là chăm sóc cá nhân hoá. Mỗi nụ cười là duy nhất, và cách tiếp cận của chúng tôi cũng vậy. Dù bạn chỉ khám định kỳ hay cần điều trị toàn diện, chúng tôi luôn điều chỉnh phù hợp với nhu cầu của bạn.",
+    clinicSubtitle: "Phòng Khám Sạch & Yên Tĩnh",
+    careSection:
+      "Sự sạch sẽ và yên tĩnh là nền tảng trong thiết kế của chúng tôi. Từ ánh sáng tự nhiên đến nội thất tối giản, mọi chi tiết đều được lựa chọn để bạn cảm thấy nhẹ nhàng và an tâm.",
+    patientSubtitle1: "Câu Chuyện Từ Bệnh Nhân",
+    techSection:
+      "Chúng tôi đầu tư vào công nghệ tiên tiến để mang lại sự an toàn, nhanh chóng và chính xác. Từ X-quang kỹ thuật số đến hệ thống tiệt trùng hiện đại, từng chi tiết đều được chăm chút.",
+    techSubtitle: "Công Nghệ Đáng Tin Cậy",
+    experienceSection:
+      "Tại phòng khám của chúng tôi, mỗi lần thăm khám không chỉ là điều trị, mà còn là trải nghiệm đầy ấm áp và chân thành. Từ lễ tân đến ghế điều trị, từng tương tác đều được thiết kế để bạn cảm thấy an tâm, được lắng nghe và trân trọng. Nhiều bệnh nhân rời đi không chỉ với kết quả tốt, mà còn với cảm giác thực sự được quan tâm, không chỉ là một ca bệnh.",
+    patientSubtitle2: "Ấn Tượng Khó Quên",
   },
 
   korean: {
     title: "치과 소개",
-    introParagraph: "현대적인 기술과 따뜻한 배려가 만나는 저희 치과에 오신 것을 환영합니다. 저희는 환자 맞춤형 치료와 신뢰를 바탕으로 진료합니다.",
-    receptionSubtitle: "따뜻한 환영을 드립니다",
-    philosophy: "저희 철학은 환자 중심입니다—경청하고, 이해하며, 존중과 친절로 치료합니다.",
-    clinicSubtitle: "편안함이 머무르는 공간",
-    careSection: "첫 방문부터 사후 관리까지, 환자님이 걱정 없이 치료받으실 수 있도록 최선을 다합니다.",
-    patientSubtitle1: "세심한 돌봄의 순간들",
-    techSection: "최신 기기와 철저한 멸균 시스템으로 안전하고 품질 높은 진료를 보장합니다.",
-    techSubtitle: "첨단 장비, 믿을 수 있는 손길",
-    experienceSection: "많은 환자분들이 뛰어난 결과뿐 아니라 대우 받는 경험에 미소 짓습니다.",
-    patientSubtitle2: "신뢰의 미소",
-    imageTitle: "저희 진료실",
-    imageCaption: "쾌적하고 넓으며 따뜻한 공간입니다.",
-    missionTitle: "저희의 사명",
-    mission: "따뜻한 배려, 정직함, 혁신으로 세계 수준의 진료를 제공합니다—한 걸음에 하나의 미소를."
+    introParagraph:
+      "저희 치과는 현대적인 진료와 전통적인 가치가 조화를 이루는 곳입니다. 전문적인 팀이 환영받는 분위기에서 최고의 진료를 제공합니다. 첫 방문부터 신뢰를 쌓고 긍정적인 경험을 만드는 것이 저희의 목표입니다.",
+    receptionSubtitle: "환영하는 리셉션",
+    philosophy:
+      "저희는 환자 맞춤형 치료를 중요하게 생각합니다. 모든 미소는 특별하며, 치료도 그래야 한다고 믿습니다. 정기 검진이든, 복합적인 치료든, 각 환자에 맞게 최적화된 접근을 제공합니다.",
+    clinicSubtitle: "깨끗하고 평온한 진료실",
+    careSection:
+      "자연광과 미니멀한 인테리어로 설계된 저희 공간은 마음의 평화를 제공합니다. 청결과 안정감은 저희 치과의 핵심입니다.",
+    patientSubtitle1: "실제 환자 이야기",
+    techSection:
+      "디지털 X-ray, 현대식 멸균 시스템 등 최첨단 기술로 보다 안전하고 빠르며 정확한 치료를 보장합니다.",
+    techSubtitle: "신뢰할 수 있는 기술력",
+    experienceSection:
+      "저희 치과는 치료뿐만 아니라, 따뜻한 마음과 진심 어린 배려로 기억에 남는 경험을 제공합니다. 리셉션부터 진료까지 모든 과정에서 환자가 편안함과 존중을 느낄 수 있도록 합니다. 진료를 넘어 진심으로 돌봄을 받았다는 느낌을 받을 수 있습니다.",
+    patientSubtitle2: "기억에 남는 진료",
   },
 
   traditional: {
     title: "關於我們的診所",
-    introParagraph: "歡迎來到我們的牙科診所，這裡結合了細心照護與先進科技。我們致力於提供個人化治療，與每位病患建立長久信任。",
-    receptionSubtitle: "溫馨的迎接",
-    philosophy: "我們的理念以病患為本—傾聽、理解，用尊重和友善提供治療。",
-    clinicSubtitle: "每個角落都溫暖舒適",
-    careSection: "從初次就診到療程後的追蹤，我們致力讓您感到安心且無後顧之憂。",
-    patientSubtitle1: "個別關懷從始至終",
-    techSection: "採用先進設備與嚴格消毒流程，確保您的安全與治療品質。",
-    techSubtitle: "現代科技，安全之手",
-    experienceSection: "許多病患不僅為治療效果而微笑，還為被悉心對待而感到感動。",
-    patientSubtitle2: "令人安心的微笑",
-    imageTitle: "我們的診療大廳",
-    imageCaption: "清潔、寬敞、舒適的環境。",
-    missionTitle: "我們的使命",
-    mission: "以同理、誠信與創新，提供世界級的牙科照護—從一顆微笑開始。"
+    introParagraph:
+      "歡迎來到我們的牙科診所，在這裡，現代化的醫療與傳統價值交織。我們致力於在舒適溫馨的環境中提供最優質的牙科護理服務。從踏入診所的那一刻起，我們就致力於讓每一次看診都成為一次愉快的體驗。",
+    receptionSubtitle: "溫馨接待區",
+    philosophy:
+      "我們堅持量身訂做的治療理念。每個笑容都是獨特的，因此我們的治療方式也是如此。無論是例行檢查還是全面矯正，我們都會根據您的需求做出最佳安排。",
+    clinicSubtitle: "乾淨安靜的診所環境",
+    careSection:
+      "診所設計強調潔淨與平靜，從自然光線到極簡裝潢，每一處細節都為了讓您感到安心與放鬆。",
+    patientSubtitle1: "真實病患故事",
+    techSection:
+      "我們投資於先進技術，以確保安全、快速、精準的治療效果，從數位X光到現代化消毒程序，細節無微不至。",
+    techSubtitle: "信賴的科技",
+    experienceSection:
+      "我們相信，看牙不只是醫療行為，更是情感的連結。從前台到診間，每一次互動都充滿溫度與誠意，讓您不僅被治療，更被關心。許多患者都帶著輕鬆與安心的心情離開，因為他們知道自己真的被在乎。",
+    patientSubtitle2: "溫暖的記憶",
   },
 
   simplified: {
     title: "关于我们的诊所",
-    introParagraph: "欢迎来到我们的牙科诊所，这里将贴心关怀与现代科技完美结合。我们致力于提供个性化治疗，与每位患者建立长久信任。",
-    receptionSubtitle: "温馨的欢迎",
-    philosophy: "我们的理念以患者为中心——倾听、理解，用尊重和友善进行治疗。",
-    clinicSubtitle: "每个角落都充满舒适",
-    careSection: "从首次就诊到术后跟踪，我们全程陪伴，让您安心无忧。",
-    patientSubtitle1: "贴心关怀，从未缺席",
-    techSection: "我们采用先进设备和严格灭菌流程，确保您的安全和治疗质量。",
-    techSubtitle: "现代科技，安全之手",
-    experienceSection: "许多患者不仅因良好疗效而微笑，更因被悉心对待而感动。",
-    patientSubtitle2: "令人安心的笑容",
-    imageTitle: "我们的诊疗大厅",
-    imageCaption: "干净、宽敞、温馨的空间。",
-    missionTitle: "我们的使命",
-    mission: "以同理心、诚信和创新，提供世界一流的牙科护理——从一个微笑开始。"
+    introParagraph:
+      "欢迎来到我们的牙科诊所，在这里，现代护理与传统价值观融合。我们致力于在舒适温馨的环境中为您提供优质的牙科服务。从踏入诊所的那一刻起，我们注重建立信任，让每次就诊都成为积极的体验。",
+    receptionSubtitle: "温馨接待区",
+    philosophy:
+      "我们以个性化护理为核心理念。每个微笑都是独一无二的，我们的治疗方式也如此。不论是常规检查还是全面治疗，我们都会根据您的需求量身定制。",
+    clinicSubtitle: "干净安静的诊所环境",
+    careSection:
+      "我们的诊所设计强调清洁与平静，从自然光线到简约装修，每一个细节都旨在让您放松安心。",
+    patientSubtitle1: "真实患者故事",
+    techSection:
+      "我们引进尖端科技，确保治疗更安全、更高效、更精准。从数字X光到现代消毒系统，我们注重每一处细节。",
+    techSubtitle: "值得信赖的技术",
+    experienceSection:
+      "在我们的诊所，看牙不仅仅是治疗，更是温暖与真诚的体验。从前台到诊疗室，每一次互动都致力于让您感到被尊重、被倾听、被关心。患者们常常带着安心的心情离开，因为他们知道自己得到了真正的照顾。",
+    patientSubtitle2: "令人回味的体验",
   },
 
   french: {
     title: "À propos de notre clinique",
-    introParagraph: "Bienvenue dans notre clinique dentaire, où soin bienveillant et technologie moderne se rencontrent. Nous offrons des traitements personnalisés et cultivons une confiance durable avec chaque patient.",
-    receptionSubtitle: "Un accueil chaleureux vous attend",
-    philosophy: "Notre philosophie repose sur une approche centrée sur le patient—écoute, compréhension et traitement avec respect.",
-    clinicSubtitle: "Confort & attention à chaque recoin",
-    careSection: "De votre première visite au suivi post-traitement, nous visons à rendre votre parcours sans stress.",
-    patientSubtitle1: "Une attention personnalisée à chaque étape",
-    techSection: "Nous utilisons des outils de pointe et des protocoles de stérilisation rigoureux pour garantir votre sécurité et la meilleure qualité possible.",
-    techSubtitle: "Technologie moderne, mains sûres",
-    experienceSection: "Beaucoup de nos patients repartent le sourire — non seulement pour les résultats, mais aussi pour la façon dont ils ont été traités.",
-    patientSubtitle2: "Des sourires rassurants",
-    imageTitle: "Notre hall de pratique",
-    imageCaption: "Un espace propre, spacieux et accueillant.",
-    missionTitle: "Notre mission",
-    mission: "Offrir des soins dentaires de classe mondiale avec compassion, intégrité et innovation — sourire après sourire."
-  }
+    introParagraph:
+      "Bienvenue dans notre clinique dentaire, où les soins modernes rencontrent des valeurs humaines. Notre équipe s’engage à offrir des services dentaires exceptionnels dans un environnement chaleureux et accueillant. Dès votre arrivée, nous mettons tout en œuvre pour instaurer la confiance et garantir une expérience positive.",
+    receptionSubtitle: "Accueil Chaleureux",
+    philosophy:
+      "Notre philosophie repose sur des soins personnalisés. Chaque sourire est unique, tout comme notre approche. Qu’il s’agisse d’un simple contrôle ou d’un traitement complet, nous adaptons chaque soin à vos besoins.",
+    clinicSubtitle: "Clinique Propre & Apaisante",
+    careSection:
+      "La propreté et la sérénité sont au cœur de la conception de notre clinique. La lumière naturelle et un décor minimaliste sont pensés pour apaiser l’esprit.",
+    patientSubtitle1: "Témoignages Réels",
+    techSection:
+      "Nous investissons dans les technologies de pointe pour offrir des traitements plus sûrs, plus rapides et plus précis. Des radiographies numériques à la stérilisation moderne, chaque étape est rigoureuse.",
+    techSubtitle: "Technologie de Confiance",
+    experienceSection:
+      "Chez nous, chaque visite dentaire est conçue pour marquer les esprits — non seulement grâce aux résultats, mais aussi par la chaleur humaine que vous ressentez. De l’accueil à la salle de soins, tout est pensé pour que vous vous sentiez en sécurité, écouté et valorisé.",
+    patientSubtitle2: "Une Expérience Inoubliable",
+  },
 };
 
 export default aboutContent;
