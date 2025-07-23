@@ -1,67 +1,111 @@
-export const aboutContent = {
+const aboutContent = {
   english: {
-    title: "About Us",
-    subtitle:
-      "Delivering quality dental care with compassion, technology, and expertise.",
-    description: `At Emis International Dental Clinic, every smile matters. We take pride in our team of highly skilled dentists who have trained in South Korea, the United States, and Europe, bringing together modern expertise and heartfelt dedication.
-
-We provide personalized dental solutions using state-of-the-art equipment and gentle care. Whether you're visiting for routine cleaning or advanced treatment, we aim to make your experience comfortable and your smile brighter.
-
-We are pleased to serve you in English, Vietnamese, French, and Chinese.`,
-    imageTitle: "Inside Our Clinic",
+    title: "About Our Clinic",
+    introParagraph: "Welcome to our dental clinic, where compassionate care meets modern dentistry. We are dedicated to providing personalized treatments and building lasting trust with every patient.",
+    receptionSubtitle: "A Warm Welcome Awaits You",
+    philosophy: "Our philosophy centers on patient-first principles—listening, understanding, and treating each individual with respect and kindness.",
+    clinicSubtitle: "Comfort & Care in Every Corner",
+    careSection: "From your very first visit to post-treatment support, we aim to make your journey comfortable and worry-free.",
+    patientSubtitle1: "Personal Attention Every Step",
+    techSection: "We use cutting‑edge tools and strict sterilization protocols to ensure your safety and the highest quality of care.",
+    techSubtitle: "Modern Tools, Safe Hands",
+    experienceSection: "Many of our patients leave with a smile—not just because of great results, but because of how they were treated.",
+    patientSubtitle2: "Smiles That Reassure",
+    imageTitle: "Our Practice Hall",
+    imageCaption: "A clean, spacious, and inviting space for your comfort.",
+    missionTitle: "Our Mission",
+    mission: "To deliver world-class dental care with compassion, integrity, and innovation—one smile at a time."
   },
+
   vietnamese: {
-    title: "Về Chúng Tôi",
-    subtitle:
-      "Mang đến dịch vụ nha khoa chất lượng bằng sự tận tâm, công nghệ và chuyên môn.",
-    description: `Tại nha khoa quốc tế Emis, mỗi nụ cười đều quan trọng. Chúng tôi tự hào sở hữu đội ngũ nha sĩ giỏi, nhiều năm kinh nghiệm và được đào tạo chuyên sâu tại Hàn Quốc, Mỹ và Châu Âu, mang đến sự kết hợp giữa kiến thức chuyên môn hiện đại và tay nghề tận tâm.
-
-Chúng tôi cung cấp các giải pháp nha khoa cá nhân hóa với trang thiết bị tiên tiến và phong cách chăm sóc nhẹ nhàng. Dù quý khách đến để làm sạch răng định kỳ hay điều trị chuyên sâu, chúng tôi luôn nỗ lực để mang lại trải nghiệm thoải mái và nụ cười rạng rỡ.
-
-Hân hạnh phục vụ quý khách bằng tiếng Việt, Anh, Pháp và Trung.`,
-    imageTitle: "Bên Trong Phòng Khám",
+    title: "Về Phòng Khám",
+    introParagraph: "Chào mừng bạn đến với phòng khám nha khoa của chúng tôi, nơi chăm sóc ân cần gặp gỡ công nghệ hiện đại. Chúng tôi cam kết mang đến điều trị cá nhân hóa và xây dựng lòng tin bền vững với mỗi bệnh nhân.",
+    receptionSubtitle: "Chào Đón Nhiệt Thành",
+    philosophy: "Triết lý của chúng tôi đặt bệnh nhân lên hàng đầu — lắng nghe, thấu hiểu và điều trị tôn trọng, thân thiện.",
+    clinicSubtitle: "Thoải Mái Tận Tâm Mỗi Góc",
+    careSection: "Từ lần đầu tiên đến hỗ trợ sau điều trị, chúng tôi luôn hướng đến một hành trình nhẹ nhàng, không lo lắng cho bạn.",
+    patientSubtitle1: "Chăm Sóc Cá Nhân Mỗi Khoảnh Khắc",
+    techSection: "Chúng tôi sử dụng thiết bị tiên tiến và quy trình khử trùng nghiêm ngặt để đảm bảo an toàn và chất lượng cao.",
+    techSubtitle: "Công Nghệ Hiện Đại, Tay Nghề An Toàn",
+    experienceSection: "Nhiều bệnh nhân rời đi với nụ cười—không chỉ vì kết quả tuyệt vời, mà vì cách họ được chăm sóc.",
+    patientSubtitle2: "Nụ Cười Là Niềm Tin",
+    imageTitle: "Phòng Thực Hành Của Chúng Tôi",
+    imageCaption: "Không gian sạch sẽ, rộng rãi và thân thiện.",
+    missionTitle: "Sứ Mệnh Của Chúng Tôi",
+    mission: "Mang đến chăm sóc nha khoa đẳng cấp thế giới với sự đồng cảm, liêm chính và đổi mới—từng nụ cười một."
   },
-  simplified: {
-    title: "关于我们",
-    subtitle: "以关怀、技术和专业提供高质量牙科护理。",
-    description: `在 Emis 国际牙科诊所，每一张笑脸都值得呵护。我们的专业牙医团队在韩国、美国和欧洲接受了深入培训，结合先进技术与丰富经验，致力于为患者提供最优质的服务。
 
-我们采用先进设备，提供个性化且温和的牙科解决方案。无论您是进行常规洁牙还是复杂治疗，我们都努力让您的就诊体验更加舒适，笑容更加自信。
-
-我们很高兴能为您提供中文、越南语、英语和法语服务。`,
-    imageTitle: "我们的诊所环境",
-  },
-  traditional: {
-    title: "關於我們",
-    subtitle: "以關懷、科技和專業提供高品質牙科護理。",
-    description: `在 Emis 國際牙科診所，每一張笑容都值得珍惜。我們的專業牙醫團隊曾於韓國、美國與歐洲深造，結合最新技術與細膩關懷，致力提供優質的個人化診療。
-
-我們使用先進設備，提供溫和且專業的牙科服務。無論是例行檢查還是進階治療，我們的目標是讓您安心就診，笑得更加自信。
-
-我們誠摯為您提供中文、越南語、英文與法語服務。`,
-    imageTitle: "我們的診所環境",
-  },
-  french: {
-    title: "À Propos",
-    subtitle:
-      "Des soins dentaires de qualité, portés par la compassion, la technologie et l’expertise.",
-    description: `À la clinique dentaire internationale Emis, chaque sourire compte. Notre équipe de dentistes hautement qualifiés a été formée en Corée du Sud, aux États-Unis et en Europe, apportant une expertise de pointe alliée à une approche humaine.
-
-Nous proposons des soins dentaires personnalisés avec des équipements de dernière génération et une attention douce. Qu'il s'agisse d'un contrôle de routine ou d'un traitement avancé, notre priorité est votre confort et votre sourire éclatant.
-
-Nous sommes heureux de vous accueillir en français, vietnamien, anglais et chinois.`,
-    imageTitle: "À l'intérieur de la clinique",
-  },
   korean: {
-    title: "클리닉 소개",
-    subtitle: "따뜻한 마음과 최신 기술, 전문성으로 고품질 치과 진료를 제공합니다.",
-    description: `에미스 국제 치과에서는 모든 미소가 소중합니다. 저희 의료진은 한국, 미국, 유럽에서 전문 교육을 받은 숙련된 치과의사들로 구성되어 있으며, 현대적인 기술과 따뜻한 진료 철학을 결합하여 환자 중심의 서비스를 제공합니다.
-
-최신 장비를 사용하여 개인 맞춤형 진료를 제공하며, 정기 검진이든 고난도 치료든 환자분이 편안하고 만족스러운 경험을 하실 수 있도록 최선을 다합니다.
-
-저희는 한국어, 베트남어, 영어, 프랑스어, 중국어로 진료 서비스를 제공합니다.`,
-    imageTitle: "클리닉 내부 모습",
+    title: "치과 소개",
+    introParagraph: "현대적인 기술과 따뜻한 배려가 만나는 저희 치과에 오신 것을 환영합니다. 저희는 환자 맞춤형 치료와 신뢰를 바탕으로 진료합니다.",
+    receptionSubtitle: "따뜻한 환영을 드립니다",
+    philosophy: "저희 철학은 환자 중심입니다—경청하고, 이해하며, 존중과 친절로 치료합니다.",
+    clinicSubtitle: "편안함이 머무르는 공간",
+    careSection: "첫 방문부터 사후 관리까지, 환자님이 걱정 없이 치료받으실 수 있도록 최선을 다합니다.",
+    patientSubtitle1: "세심한 돌봄의 순간들",
+    techSection: "최신 기기와 철저한 멸균 시스템으로 안전하고 품질 높은 진료를 보장합니다.",
+    techSubtitle: "첨단 장비, 믿을 수 있는 손길",
+    experienceSection: "많은 환자분들이 뛰어난 결과뿐 아니라 대우 받는 경험에 미소 짓습니다.",
+    patientSubtitle2: "신뢰의 미소",
+    imageTitle: "저희 진료실",
+    imageCaption: "쾌적하고 넓으며 따뜻한 공간입니다.",
+    missionTitle: "저희의 사명",
+    mission: "따뜻한 배려, 정직함, 혁신으로 세계 수준의 진료를 제공합니다—한 걸음에 하나의 미소를."
   },
+
+  traditional: {
+    title: "關於我們的診所",
+    introParagraph: "歡迎來到我們的牙科診所，這裡結合了細心照護與先進科技。我們致力於提供個人化治療，與每位病患建立長久信任。",
+    receptionSubtitle: "溫馨的迎接",
+    philosophy: "我們的理念以病患為本—傾聽、理解，用尊重和友善提供治療。",
+    clinicSubtitle: "每個角落都溫暖舒適",
+    careSection: "從初次就診到療程後的追蹤，我們致力讓您感到安心且無後顧之憂。",
+    patientSubtitle1: "個別關懷從始至終",
+    techSection: "採用先進設備與嚴格消毒流程，確保您的安全與治療品質。",
+    techSubtitle: "現代科技，安全之手",
+    experienceSection: "許多病患不僅為治療效果而微笑，還為被悉心對待而感到感動。",
+    patientSubtitle2: "令人安心的微笑",
+    imageTitle: "我們的診療大廳",
+    imageCaption: "清潔、寬敞、舒適的環境。",
+    missionTitle: "我們的使命",
+    mission: "以同理、誠信與創新，提供世界級的牙科照護—從一顆微笑開始。"
+  },
+
+  simplified: {
+    title: "关于我们的诊所",
+    introParagraph: "欢迎来到我们的牙科诊所，这里将贴心关怀与现代科技完美结合。我们致力于提供个性化治疗，与每位患者建立长久信任。",
+    receptionSubtitle: "温馨的欢迎",
+    philosophy: "我们的理念以患者为中心——倾听、理解，用尊重和友善进行治疗。",
+    clinicSubtitle: "每个角落都充满舒适",
+    careSection: "从首次就诊到术后跟踪，我们全程陪伴，让您安心无忧。",
+    patientSubtitle1: "贴心关怀，从未缺席",
+    techSection: "我们采用先进设备和严格灭菌流程，确保您的安全和治疗质量。",
+    techSubtitle: "现代科技，安全之手",
+    experienceSection: "许多患者不仅因良好疗效而微笑，更因被悉心对待而感动。",
+    patientSubtitle2: "令人安心的笑容",
+    imageTitle: "我们的诊疗大厅",
+    imageCaption: "干净、宽敞、温馨的空间。",
+    missionTitle: "我们的使命",
+    mission: "以同理心、诚信和创新，提供世界一流的牙科护理——从一个微笑开始。"
+  },
+
+  french: {
+    title: "À propos de notre clinique",
+    introParagraph: "Bienvenue dans notre clinique dentaire, où soin bienveillant et technologie moderne se rencontrent. Nous offrons des traitements personnalisés et cultivons une confiance durable avec chaque patient.",
+    receptionSubtitle: "Un accueil chaleureux vous attend",
+    philosophy: "Notre philosophie repose sur une approche centrée sur le patient—écoute, compréhension et traitement avec respect.",
+    clinicSubtitle: "Confort & attention à chaque recoin",
+    careSection: "De votre première visite au suivi post-traitement, nous visons à rendre votre parcours sans stress.",
+    patientSubtitle1: "Une attention personnalisée à chaque étape",
+    techSection: "Nous utilisons des outils de pointe et des protocoles de stérilisation rigoureux pour garantir votre sécurité et la meilleure qualité possible.",
+    techSubtitle: "Technologie moderne, mains sûres",
+    experienceSection: "Beaucoup de nos patients repartent le sourire — non seulement pour les résultats, mais aussi pour la façon dont ils ont été traités.",
+    patientSubtitle2: "Des sourires rassurants",
+    imageTitle: "Notre hall de pratique",
+    imageCaption: "Un espace propre, spacieux et accueillant.",
+    missionTitle: "Notre mission",
+    mission: "Offrir des soins dentaires de classe mondiale avec compassion, intégrité et innovation — sourire après sourire."
+  }
 };
 
 export default aboutContent;

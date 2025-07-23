@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 import generalDentistry from '../pics/general.jpg';
 import implant from '../pics/implant.jpg';
 import crown from '../pics/crown.jpg';
@@ -12,7 +11,6 @@ import aofimplant from '../pics/aofimplants.jpg';
 import teethwhitening from '../pics/teethwhitening.jpg';
 import canal from '../pics/canal.jpg';
 import wisdom from '../pics/wisdomteeth.jpg';
-import PracticeImages from '../components/practiceImages';
 import PapersTitle from '../components/PapersTitle';
 import licenses from '../pics/license.jpg';
 
