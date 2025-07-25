@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function LanguageToggle({ currentLanguage = 'vietnamese', onLanguageChange }) {
+export default function LanguageToggle({ currentLanguage = 'english', onLanguageChange }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const languages = [

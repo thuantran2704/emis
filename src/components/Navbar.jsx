@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import logo from '../pics/logo.jpg';
 import navbarContent from '../Translations/navbarContent';
 
-export default function Navbar({ language = 'vietnamese' }) {
+export default function Navbar({ language = 'english' }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
