@@ -11,14 +11,14 @@ import aofimplant from '../pics/aofimplants.jpg';
 import teethwhitening from '../pics/teethwhitening.jpg';
 import canal from '../pics/canal.jpg';
 import wisdom from '../pics/wisdomteeth.jpg';
-import PapersTitle from '../components/PapersTitle';
-import licenses from '../pics/license.jpg';
+// import PapersTitle from '../components/PapersTitle';
+// import licenses from '../pics/license.jpg';
 
 
 export default function Home({ language }) {
   const content = homeContent[language] || homeContent.vietnamese;
   const serviceImages = [generalDentistry, implant, crown, invisalign, aofimplant,wisdom, teethwhitening, canal];
-  const papersImages = [ licenses];
+  // const papersImages = [ licenses];
 
 
   return (
@@ -91,10 +91,10 @@ export default function Home({ language }) {
           />
         </div>
       </section>
-      <PapersTitle 
+      {/* <PapersTitle 
         title={content.papersTitle} 
         images={papersImages} 
-      />
+      /> */}
       {/* Map Section */}
       <MapSection content={content} />
 
