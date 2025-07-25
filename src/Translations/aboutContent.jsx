@@ -9,7 +9,7 @@ const aboutContent = {
     clinicSubtitle: "Clean & Calm Clinic",
     careSection:
       "Cleanliness and calmness are at the core of our clinic design. From natural light to minimal décor, everything is chosen to ease your mind and bring peace to your visit.",
-    patientSubtitle1: "Real Patient Testimonials",
+    patientSubtitle1: "Patient Satisfaction",
     techSection:
       "We invest in cutting-edge technology to provide safer, faster, and more precise treatments. From digital X-rays to modern sterilization, every detail is handled with care.",
     techSubtitle: "Trusted Technology",
@@ -28,7 +28,7 @@ const aboutContent = {
     clinicSubtitle: "Phòng Khám Sạch & Yên Tĩnh",
     careSection:
       "Sự sạch sẽ và yên tĩnh là nền tảng trong thiết kế của chúng tôi. Từ ánh sáng tự nhiên đến nội thất tối giản, mọi chi tiết đều được lựa chọn để bạn cảm thấy nhẹ nhàng và an tâm.",
-    patientSubtitle1: "Câu Chuyện Từ Bệnh Nhân",
+    patientSubtitle1: "Bệnh Nhân Hài Lòng",
     techSection:
       "Chúng tôi đầu tư vào công nghệ tiên tiến để mang lại sự an toàn, nhanh chóng và chính xác. Từ X-quang kỹ thuật số đến hệ thống tiệt trùng hiện đại, từng chi tiết đều được chăm chút.",
     techSubtitle: "Công Nghệ Đáng Tin Cậy",
@@ -47,7 +47,7 @@ const aboutContent = {
     clinicSubtitle: "깨끗하고 평온한 진료실",
     careSection:
       "자연광과 미니멀한 인테리어로 설계된 저희 공간은 마음의 평화를 제공합니다. 청결과 안정감은 저희 치과의 핵심입니다.",
-    patientSubtitle1: "실제 환자 이야기",
+    patientSubtitle1: "환자 만족도",
     techSection:
       "디지털 X-ray, 현대식 멸균 시스템 등 최첨단 기술로 보다 안전하고 빠르며 정확한 치료를 보장합니다.",
     techSubtitle: "신뢰할 수 있는 기술력",
@@ -66,7 +66,7 @@ const aboutContent = {
     clinicSubtitle: "乾淨安靜的診所環境",
     careSection:
       "診所設計強調潔淨與平靜，從自然光線到極簡裝潢，每一處細節都為了讓您感到安心與放鬆。",
-    patientSubtitle1: "真實病患故事",
+    patientSubtitle1: "病患滿意度",
     techSection:
       "我們投資於先進技術，以確保安全、快速、精準的治療效果，從數位X光到現代化消毒程序，細節無微不至。",
     techSubtitle: "信賴的科技",
@@ -85,7 +85,7 @@ const aboutContent = {
     clinicSubtitle: "干净安静的诊所环境",
     careSection:
       "我们的诊所设计强调清洁与平静，从自然光线到简约装修，每一个细节都旨在让您放松安心。",
-    patientSubtitle1: "真实患者故事",
+    patientSubtitle1: "患者满意度",
     techSection:
       "我们引进尖端科技，确保治疗更安全、更高效、更精准。从数字X光到现代消毒系统，我们注重每一处细节。",
     techSubtitle: "值得信赖的技术",
@@ -104,7 +104,7 @@ const aboutContent = {
     clinicSubtitle: "Clinique Propre & Apaisante",
     careSection:
       "La propreté et la sérénité sont au cœur de la conception de notre clinique. La lumière naturelle et un décor minimaliste sont pensés pour apaiser l’esprit.",
-    patientSubtitle1: "Témoignages Réels",
+    patientSubtitle1: "Satisfaction des Patients",
     techSection:
       "Nous investissons dans les technologies de pointe pour offrir des traitements plus sûrs, plus rapides et plus précis. Des radiographies numériques à la stérilisation moderne, chaque étape est rigoureuse.",
     techSubtitle: "Technologie de Confiance",
