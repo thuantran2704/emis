@@ -56,9 +56,10 @@ export default function Home({ language }) {
           {/* Canonical URL */}
           <link rel="canonical" href="https://emisdental.com" />
     </Helmet>
-     <AdBanner ads={adImages} />
+     
       {/* Hero Section */}
       <section className="py-28 px-4 max-w-6xl mx-auto text-center">
+        <AdBanner ads={adImages} />
         <h1 
           className="text-5xl font-bold text-[#1f2937] mb-6"
           style={{ fontFamily: "'Playfair Display', serif" }}
