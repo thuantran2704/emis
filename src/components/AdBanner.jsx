@@ -15,8 +15,20 @@ export default function AdBanner({ ads }) {
   if (!ads || ads.length === 0) return null;
 
   return (
-    <div className="w-full overflow-hidden relative shadow-md h-96 md:h-[30rem] lg:h-[40rem] bg-black">
-      <div className="w-full h-full flex items-center justify-center">
+    <div className="w-full overflow-hidden relative shadow-md h-96 md:h-[30rem] lg:h-[40rem]">
+      {/* Blurred background layer */}
+      <div className="absolute inset-0">
+        <img
+          src={ads[current]}
+          alt=""
+          className="w-full h-full object-cover blur-2xl scale-110 opacity-60"
+        />
+        {/* Soft cream gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#f7f2e7]/40 via-transparent to-[#f7f2e7]/70" />
+      </div>
+
+      {/* Foreground image with animation */}
+      <div className="relative w-full h-full flex items-center justify-center">
         <AnimatePresence mode="wait">
           <motion.img
             key={ads[current]}
@@ -26,7 +38,7 @@ export default function AdBanner({ ads }) {
             animate={{ x: 0, rotateY: 0, opacity: 1 }}
             exit={{ x: "-100%", rotateY: -90, opacity: 0 }}
             transition={{ duration: 1, ease: "easeInOut" }}
-            className="absolute max-h-full max-w-full object-contain"
+            className="absolute max-h-full max-w-full object-contain drop-shadow-lg"
           />
         </AnimatePresence>
       </div>
