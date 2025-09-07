@@ -15,7 +15,7 @@ export default function AdBanner({ ads }) {
   if (!ads || ads.length === 0) return null;
 
   return (
-    <div className="w-full overflow-hidden relative shadow-md h-64 md:h-80 lg:h-[28rem]">
+    <div className="w-full overflow-hidden relative shadow-md h-96 md:h-[30rem] lg:h-[40rem] bg-black">
       <div className="w-full h-full flex items-center justify-center">
         <AnimatePresence mode="wait">
           <motion.img
@@ -25,8 +25,8 @@ export default function AdBanner({ ads }) {
             initial={{ x: "100%", rotateY: 90, opacity: 0 }}
             animate={{ x: 0, rotateY: 0, opacity: 1 }}
             exit={{ x: "-100%", rotateY: -90, opacity: 0 }}
-            transition={{ duration: 1, ease: "easeInOut" }} // 🕊 smoother & slower
-            className="absolute w-full h-full object-cover"
+            transition={{ duration: 1, ease: "easeInOut" }}
+            className="absolute max-h-full max-w-full object-contain"
           />
         </AnimatePresence>
       </div>
