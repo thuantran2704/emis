@@ -60,6 +60,9 @@ export default function Home({ language }) {
       {/* Hero Section */}
       <section className="py-28 px-4 max-w-6xl mx-auto text-center">
         <AdBanner ads={adImages} />
+      </section>
+      <section className="py-28 px-4 max-w-6xl mx-auto text-center">
+
         <h1 
           className="text-5xl font-bold text-[#1f2937] mb-6"
           style={{ fontFamily: "'Playfair Display', serif" }}
