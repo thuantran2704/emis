@@ -58,9 +58,9 @@ export default function Home({ language }) {
     </Helmet>
      
       {/* Hero Section */}
-      <section className="py-28 px-4 max-w-6xl mx-auto text-center">
+      {/* <section className="py-28 px-4 max-w-6xl mx-auto text-center">
         <AdBanner ads={adImages} />
-      </section>
+      </section> */}
       <section className="py-28 px-4 max-w-6xl mx-auto text-center">
 
         <h1 
