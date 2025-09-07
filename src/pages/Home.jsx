@@ -11,6 +11,12 @@ import aofimplant from '../pics/aofimplants.jpg';
 import teethwhitening from '../pics/teethwhitening.jpg';
 import canal from '../pics/canal.jpg';
 import wisdom from '../pics/wisdomteeth.jpg';
+import AdBanner from '../components/AdBanner';
+import ad1 from '../pics/ad1.jpg';
+import ad2 from '../pics/ad2.jpg';
+import ad3 from '../pics/ad3.jpg';
+import ad4 from '../pics/ad4.jpg';
+let adImages = [];
 // import PapersTitle from '../components/PapersTitle';
 // import licenses from '../pics/license.jpg';
 
@@ -19,7 +25,7 @@ export default function Home({ language }) {
   const content = homeContent[language] || homeContent.vietnamese;
   const serviceImages = [generalDentistry, implant, crown, invisalign, aofimplant,wisdom, teethwhitening, canal];
   // const papersImages = [ licenses];
-
+  adImages = [ad1,ad2,ad3,ad4];
 
   return (
     <main className="min-h-[calc(100vh-4rem)] bg-[#f7f2e7]">
@@ -50,6 +56,7 @@ export default function Home({ language }) {
           {/* Canonical URL */}
           <link rel="canonical" href="https://emisdental.com" />
     </Helmet>
+     <AdBanner ads={adImages} />
       {/* Hero Section */}
       <section className="py-28 px-4 max-w-6xl mx-auto text-center">
         <h1 
