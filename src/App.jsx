@@ -25,7 +25,7 @@ export default function App() {
           {schemaMarkup}
         </script>
       </Helmet>
-      <div className="min-h-screen bg-[#fffaf0]">
+      <div className="min-h-screen bg-[#fdfcf8]">
         <Navbar language={language} />
         <Routes>
           <Route path="/" element={<Home language={language} />} />
