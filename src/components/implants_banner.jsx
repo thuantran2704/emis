@@ -5,7 +5,6 @@ import bridge from "../pics/bridge.png";
 import implant from "../pics/implant.png";
 
 export default function ImplantCards() {
-  // Filtered implant-related items from your CSV (manually curated)
   const implants = [
     {
       icon: implant,
@@ -21,6 +20,39 @@ export default function ImplantCards() {
     },
     {
       icon: implant,
+      name: "Implant Osteen (Korea)",
+      producer: "Implant Osteen – Korean technology",
+      price: "20,000,000 VND",
+      points: [
+        "High-quality Korean implant design",
+        "Excellent value for long-term reliability",
+        "Smooth thread geometry for better stability",
+      ],
+    },
+    {
+      icon: implant,
+      name: "Implant Housen (USA)",
+      producer: "American precision-engineered implants",
+      price: "22,000,000 VND",
+      points: [
+        "US standard medical-grade titanium",
+        "Strong bone integration performance",
+        "Reliable brand used worldwide",
+      ],
+    },
+    {
+      icon: implant,
+      name: "Implant ETK (France)",
+      producer: "Implant ETK – French innovation",
+      price: "25,000,000 VND",
+      points: [
+        "High-end French implant system",
+        "Optimized surface for fast healing",
+        "Used in European dental clinics",
+      ],
+    },
+    {
+      icon: implant,
       name: "Implant Straumann (Switzerland)",
       producer: "Straumann Premium Swiss Implants",
       price: "45,000,000 VND",
@@ -32,6 +64,17 @@ export default function ImplantCards() {
       ],
     },
     {
+      icon: veneer,
+      name: "Bone Graft & Sinus Lift Procedures",
+      producer: "Supporting surgical treatments",
+      price: "3,000,000 – 10,000,000 VND",
+      points: [
+        "Artificial bone grafting for better implant support",
+        "Membrane placement for guided tissue regeneration",
+        "Closed and open sinus lift options",
+      ],
+    },
+    {
       icon: allon4,
       name: "All-on-4 / All-on-6 Implants (Korea)",
       producer: "Full-arch fixed solution",
@@ -40,7 +83,6 @@ export default function ImplantCards() {
         "Full-mouth reconstruction using 4–6 implants",
         "Restores entire arch function and aesthetics",
         "Short treatment time with strong stability",
-        "Ideal for patients with missing full arch",
       ],
     },
     {
@@ -52,19 +94,6 @@ export default function ImplantCards() {
         "Precision-milled Titanium frame for full arch",
         "High strength and long-term durability",
         "Beautiful natural porcelain crown finish",
-        "Custom CAD/CAM design for perfect fit",
-      ],
-    },
-    {
-      icon: veneer,
-      name: "Bone Graft & Sinus Lift Procedures",
-      producer: "Supporting surgical treatments",
-      price: "3,000,000 – 10,000,000 VND",
-      points: [
-        "Artificial bone grafting for better implant support",
-        "Membrane placement for guided tissue regeneration",
-        "Closed and open sinus lift options",
-        "Performed under sterile surgical conditions",
       ],
     },
   ];
@@ -82,29 +111,20 @@ export default function ImplantCards() {
               key={i}
               className="bg-white shadow-md rounded-2xl p-6 flex flex-col items-center text-center hover:shadow-xl transition-all"
             >
-              {/* Icon */}
               <img
                 src={implant.icon}
                 alt={implant.name}
                 className="w-20 h-20 mb-4 object-contain"
               />
-
-              {/* Name */}
               <h3 className="text-lg font-semibold text-[#4b4b8f] mb-1">
                 {implant.name}
               </h3>
-
-              {/* Producer */}
               <p className="text-sm text-[#6b7280] italic mb-3">
                 {implant.producer}
               </p>
-
-              {/* Price */}
               <p className="text-2xl font-bold text-[#4b4b8f] mb-4">
                 {implant.price}
               </p>
-
-              {/* Features */}
               <ul className="text-left text-[#6b7280] space-y-2">
                 {implant.points.map((pt, idx) => (
                   <li key={idx} className="flex items-start gap-2">
