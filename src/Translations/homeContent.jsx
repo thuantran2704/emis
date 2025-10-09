@@ -8,6 +8,7 @@ export const homeContent = {
     findout: "Find Out More",
     practiceTitle: "Our Practice in Action",
     papersTitle: "Standard Quality Dental Clinic",
+    introTitle: "Intro Video",
     services: [
       {
         name: "General Dentistry",
@@ -73,6 +74,7 @@ export const homeContent = {
     findout: "Tìm hiểu thêm",
     practiceTitle: "Phòng Khám Của Chúng Tôi",
     papersTitle: "Nha Khoa Tiêu Chuẩn Chất Lượng",
+    introTitle: "Video Giới Thiệu",
     services: [
       {
         name: "Nha Khoa Tổng Quát",
@@ -138,6 +140,7 @@ export const homeContent = {
     findout: "Find Out More",
     practiceTitle: "我们的诊所实况",
     papersTitle: "标准高质量牙科诊所",
+    introTitle: "介绍视频",
     services: [
       {
         name: "普通牙科",
@@ -202,6 +205,7 @@ export const homeContent = {
     findout: "자세히 보기",
     practiceTitle: "우리의 진료 현장",
     papersTitle: "표준 품질 치과",
+    introTitle: "소개 영상",
     services: [
       {
         name: "일반 치과",
@@ -268,6 +272,7 @@ export const homeContent = {
     findout: "Find Out More",
     practiceTitle: "我們的診所實況",
     papersTitle: "標準高品質牙科診所",
+    introTitle: "介紹影片",
     services: [
       {
         name: "普通牙科",
@@ -333,6 +338,7 @@ export const homeContent = {
     findout: "Find Out More",
     practiceTitle: "Notre Pratique en Action",
     papersTitle: "Clinique Dentaire de Qualité Standard",
+    introTitle: "Vidéo de Présentation",
     services: [
       {
         name: "Dentisterie Générale",

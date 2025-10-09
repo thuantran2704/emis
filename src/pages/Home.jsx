@@ -110,8 +110,8 @@ export default function Home({ language }) {
         Youtube video, emisdentalclinic
       */}
       <section className="py-16 bg-[#fdfcf8] text-center">
-        <h2 className="text-3xl font-bold text-[#1f2937] mb-8">
-          {language === 'vietnamese' ? 'Video Giới Thiệu' : 'Intro Video'}
+        <h2 className="text-4xl font-bold text-[#1f2937] mb-12 tracking-wide uppercase">
+          {content.introTitle}
         </h2>
 
         <div className="flex justify-center">
@@ -128,7 +128,6 @@ export default function Home({ language }) {
           </div>
         </div>
       </section>
-
 
       {/* Map Section */}
       <MapSection content={content} />
