@@ -112,7 +112,7 @@ export default function Home({ language }) {
         Youtube video, emisdentalclinic
       */}
       <section className="py-16 bg-[#fdfcf8] text-center">
-        <h2 className="text-3xl font-bold text-[#1f2937] mb-12 text-center border-b-2 border-[#d4af37] pb-2 inline-block">
+        <h2 className="text-3xl font-bold text-[#1f2937] mb-12 text-left border-b-2 border-[#d4af37] pb-2 inline-block">
           {content.introTitle}
         </h2>
 
