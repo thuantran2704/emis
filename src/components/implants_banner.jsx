@@ -3,7 +3,8 @@ import allon4 from "../pics/allon4.png";
 import veneer from "../pics/veneer.png";
 import bridge from "../pics/bridge.png";
 import implant from "../pics/implant.png";
-
+import ImplantQuote
+ from "./implantQuote";
 export default function ImplantCards() {
   const implants = [
     {
@@ -101,9 +102,7 @@ export default function ImplantCards() {
   return (
     <section className="py-16 bg-[#fdfcf8]">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center text-[#1f2937] mb-12 border-b-2 border-[#d4af37] inline-block pb-2">
-          Implant & Full-Arch Solutions
-        </h2>
+        <ImplantQuote/>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {implants.map((implant, i) => (
