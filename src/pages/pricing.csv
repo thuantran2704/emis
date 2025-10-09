@@ -1,0 +1,61 @@
+Tên dịch vụ (Tiếng Việt),Tên dịch vụ (Tiếng Anh),Nội dung (Tiếng Việt),Nội dung (Tiếng Anh),Đơn vị (Tiếng Việt),Đơn vị (Tiếng Anh),Giá dịch vụ chưa VAT (VND)
+Tháo lắp Composite,Composite tooth,,,1 RĂNG,1 TOOTH,700000
+Tháo lắp Việt Nam,Vietnamese tooth,,,1 RĂNG,1 TOOTH,300000
+Tháo lắp Nhật,Japanese tooth,,,1 RĂNG,1 TOOTH,400000
+Tháo lắp Mỹ,USA tooth,,,1 RĂNG,1 TOOTH,500000
+Răng sứ,Porcelain tooth,,,1 RĂNG,1 TOOTH,800000
+Hàm nhựa dẻo,Flexible denture,Toàn hàm,Full denture,Toàn hàm,Full denture,2500000
+Toàn hàm nhựa cứng,Full acrylic denture,Bán hàm,Partial denture,Bán hàm,Partial denture,1500000
+Hàm khung,Metal framework denture,1 HÀM,1 ARCH,1 HÀM,1 ARCH,7000000
+Kìm loại thường,Common metal,,,1 CÁI,1 UNIT,2500000
+Kìm loại Titan,Titan metal,,,1 CÁI,1 UNIT,3000000
+Liên kết,Connector,,,1 CÁI,1 UNIT,3500000
+CÂY GHÉP IMPLANT,IMPLANT SURGERY,Implant Bloten (Hàn Quốc),Implant Bloten (Korea),TRỤ,UNIT,15000000
+CÂY GHÉP IMPLANT,IMPLANT SURGERY,Implant Osteen (Hàn Quốc),Implant Osteen (Korea),TRỤ,UNIT,20000000
+CÂY GHÉP IMPLANT,IMPLANT SURGERY,Implant Housen (Mỹ),Implant Housen (USA),TRỤ,UNIT,22000000
+CÂY GHÉP IMPLANT,IMPLANT SURGERY,Implant ETK (Pháp),Implant ETK (France),TRỤ,UNIT,25000000
+CÂY GHÉP IMPLANT,IMPLANT SURGERY,Implant Straumann (Thụy Sỹ),Implant Straumann (Switzerland),TRỤ,UNIT,45000000
+CÂY GHÉP IMPLANT,IMPLANT SURGERY,Ghép xương nhân tạo,Artificial bone graft,ĐƠN VỊ,UNIT,5000000
+CÂY GHÉP IMPLANT,IMPLANT SURGERY,Ghép màng,Guided tissue regeneration,ĐƠN VỊ,UNIT,3000000
+CÂY GHÉP IMPLANT,IMPLANT SURGERY,Nâng xoang kín,Closed sinus lift,ĐƠN VỊ,UNIT,5000000
+CÂY GHÉP IMPLANT,IMPLANT SURGERY,Nâng xoang hở,Open sinus lift,ĐƠN VỊ,UNIT,10000000
+CÂY GHÉP IMPLANT,IMPLANT SURGERY,Implant ALL-ON-4 và ALL-ON-6 Hàn Quốc,Implant ALL-ON-4 và ALL-ON-6 Korea,1 HÀM,1 ARCH,120000000
+CÂY GHÉP IMPLANT,IMPLANT SURGERY,Implant ALL-ON-4 và ALL-ON-6 Hàn Quốc,Implant ALL-ON-4 và ALL-ON-6 Korea,1 HÀM,1 ARCH,130000000
+CÂY GHÉP IMPLANT,IMPLANT SURGERY,Implant ALL-ON-4 và ALL-ON-6 Hàn Quốc,Implant ALL-ON-4 và ALL-ON-6 Korea,1 HÀM,1 ARCH,170000000
+CÂY GHÉP IMPLANT,IMPLANT SURGERY,Phục hình toàn hàm cố định khung sườn Titan CAD/CAM + Mão sứ Titan,Full arch fixed prosthesis with Titanium frame CAD/CAM + Titanium porcelain crown,1 HÀM,1 ARCH,50000000
+CÂY GHÉP IMPLANT,IMPLANT SURGERY,Phục hình toàn hàm cố định khung sườn Titan CAD/CAM + Mão sứ Titan,Full arch fixed prosthesis with Titanium frame CAD/CAM + Titanium porcelain crown,1 HÀM,1 ARCH,80000000
+CÂY GHÉP IMPLANT,IMPLANT SURGERY,Phục hình tháo lắp toàn hàm sườn Titan CAD/CAM,Removable full arch prosthesis with Titanium frame CAD/CAM,1 HÀM,1 ARCH,80000000
+CÂY GHÉP IMPLANT,IMPLANT SURGERY,Phục hình tháo lắp toàn hàm sườn Cr-Co,Removable full arch prosthesis with Cr-Co frame,1 HÀM,1 ARCH,50000000
+NIỀNG RĂNG,ORTHODONTICS,Mắc cài kim loại (Đơn giản - Phức tạp),Metal braces (Simple - Complicated),1 RĂNG,1 TOOTH,35000000
+NIỀNG RĂNG,ORTHODONTICS,Mắc cài sứ (Đơn giản - Phức tạp),Ceramic braces (Simple - Complicated),1 RĂNG,1 TOOTH,45000000
+NIỀNG RĂNG,ORTHODONTICS,Niềng răng khay trong suốt,Clear aligners,Liệu trình,treatment,70000000
+NIỀNG RĂNG,ORTHODONTICS,Minivis,Miniscrews,1 CÁI,1 UNIT,2000000
+NIỀNG RĂNG,ORTHODONTICS,Nong hàm,Palatal expansion,1 CÁI,1 UNIT,15000000
+NIỀNG RĂNG,ORTHODONTICS,Hàm duy trì,Retainer,1 CÁI,1 UNIT,3000000
+CHỤP HÌNH,IMAGING,CHUP CTCB,Cone Beam CT scan,Lần,time,700000
+CHỤP HÌNH,IMAGING,CHUP PANORAMIC,Panoramic radiograph,Lần,time,200000
+CHỤP HÌNH,IMAGING,CHUP CEPHALO,Cephalometric radiograph,Lần,time,200000
+ĐIỀU TRỊ TUỶ,ENDODONTICS,Răng trẻ em,Primary teeth,1 RĂNG,1 TOOTH,300000
+ĐIỀU TRỊ TUỶ,ENDODONTICS,Nhóm răng cửa người lớn,Permanent incisor,1 RĂNG,1 TOOTH,500000
+ĐIỀU TRỊ TUỶ,ENDODONTICS,Răng cối nhỏ,Pre-molar,1 RĂNG,1 TOOTH,900000
+ĐIỀU TRỊ TUỶ,ENDODONTICS,Răng cối lớn,Molar,1 RĂNG,1 TOOTH,1000000
+ĐIỀU TRỊ TUỶ,ENDODONTICS,Điều trị tuỷ lại,Retreatment of root canal,1 RĂNG,1 TOOTH,2000000
+GẮN ĐÁ TOOTH JEWELRY,Gắn đá,Kim cương của bệnh nhân,Patient's diamond,1 VIÊN,1 UNIT,500000
+GẮN ĐÁ TOOTH JEWELRY,Gắn đá,Kim cương nhân tạo,Lab-grown diamond,1 VIÊN,1 UNIT,1000000
+GẮN ĐÁ TOOTH JEWELRY,Gắn đá,Đá quý,Natural gemstone,1 VIÊN,1 UNIT,0
+TẨY TRẮNG,TEETH WHITENING,Tẩy trắng tại phòng khám,In clinic,Liệu trình,treatment,3000000
+TẨY TRẮNG,TEETH WHITENING,Tẩy trắng Super White (tại phòng + máng tẩy + thuốc),Super white (In clinic + 1 set of trays + 2 syringes),Liệu trình,treatment,5000000
+TẨY TRẮNG,TEETH WHITENING,Tẩy trắng tại nhà (gồm thuốc + máng tẩy),At home (including syringes + trays),Liệu trình,treatment,2000000
+TẨY TRẮNG,TEETH WHITENING,Thuốc tẩy thêm,Additional whitening syringe,Ống,syringe,500000
+TẨY TRẮNG,TEETH WHITENING,Cặp máng tẩy,Teeth whitening trays,1 CẶP,1 set,350000
+CẠO VÔI ĐÁNH BÓNG,SCALING POLISHING,Trẻ em,Children,2 HÀM,FULL MOUTH,100000
+CẠO VÔI ĐÁNH BÓNG,SCALING POLISHING,Người lớn,Adult,2 HÀM,FULL MOUTH,300000
+CẠO VÔI ĐÁNH BÓNG,SCALING POLISHING,Điều trị nha chu,Periodontal treatment,1 RĂNG,1 TOOTH,200000
+TRÁM RĂNG,DENTAL FILLINGS,Trám răng sâu trẻ em,Fillings for children,1 RĂNG,1 TOOTH,200000
+TRÁM RĂNG,DENTAL FILLINGS,Trám răng sâu người lớn thẩm mỹ,Aesthetic fillings for adult,1 RĂNG,1 TOOTH,300000
+NHỔ RĂNG,TOOTH EXTRACTION,Răng sữa,Primary teeth,1 RĂNG,1 TOOTH,50000
+NHỔ RĂNG,TOOTH EXTRACTION,Răng cửa, chân răng,Incisor, root of the tooth,1 RĂNG,1 TOOTH,400000
+NHỔ RĂNG,TOOTH EXTRACTION,Răng hàm,Molar,1 RĂNG,1 TOOTH,500000
+NHỔ RĂNG,TOOTH EXTRACTION,Răng khôn mọc lệch ngầm,Wisdom molar,1 RĂNG,1 TOOTH,3000000
+TIỂU PHẪU,MINOR SURGICAL PROCEDURE,Cắt chóp răng,Apicoectomy,1 RĂNG,1 TOOTH,2000000
+TIỂU PHẪU,MINOR SURGICAL PROCEDURE,Cắt nướu răng,Gingivectomy,1 RĂNG,1 TOOTH,1500000
