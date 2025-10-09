@@ -106,6 +106,10 @@ export default function Home({ language }) {
         title={content.papersTitle} 
         images={papersImages} 
       /> */}
+      {/*
+        Youtube video, emisdentalclinic
+      */}
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/lwOIWFGU1LE?si=6eKTu0Au9cQF2LaO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       {/* Map Section */}
       <MapSection content={content} />
 
