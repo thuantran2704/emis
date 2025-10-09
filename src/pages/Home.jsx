@@ -12,6 +12,11 @@ import teethwhitening from '../pics/teethwhitening.jpg';
 import canal from '../pics/canal.jpg';
 import wisdom from '../pics/wisdomteeth.jpg';
 import ImplantCards from '../components/implants_banner';
+import AdBanner from '../components/AdBanner';
+import ad1 from '../pics/ad1.jpg';
+import ad2 from '../pics/ad2.jpg';
+import ad3 from '../pics/ad3.jpg';
+import ad4 from '../pics/ad4.jpg';
 
 let adImages = [];
 // import PapersTitle from '../components/PapersTitle';
@@ -117,7 +122,6 @@ export default function Home({ language }) {
               className="absolute top-0 left-0 w-full h-full"
               src="https://www.youtube.com/embed/lwOIWFGU1LE?si=6eKTu0Au9cQF2LaO"
               title="Emis Dental Intro Video"
-              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
