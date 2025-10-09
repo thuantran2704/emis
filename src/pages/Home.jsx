@@ -109,7 +109,20 @@ export default function Home({ language }) {
       {/*
         Youtube video, emisdentalclinic
       */}
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/lwOIWFGU1LE?si=6eKTu0Au9cQF2LaO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div className="flex justify-center my-8">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/lwOIWFGU1LE?si=6eKTu0Au9cQF2LaO"
+          title="Emis Dental Grand Opening"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+          className="rounded-2xl shadow-lg"
+        ></iframe>
+      </div>
+
       {/* Map Section */}
       <MapSection content={content} />
 
