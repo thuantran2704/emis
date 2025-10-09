@@ -109,19 +109,26 @@ export default function Home({ language }) {
       {/*
         Youtube video, emisdentalclinic
       */}
-      <div className="flex justify-center my-8">
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/lwOIWFGU1LE?si=6eKTu0Au9cQF2LaO"
-          title="Emis Dental Grand Opening"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen
-          className="rounded-2xl shadow-lg"
-        ></iframe>
-      </div>
+      <section className="py-16 bg-[#fdfcf8] text-center">
+        <h2 className="text-3xl font-bold text-[#1f2937] mb-8">
+          {language === 'vietnamese' ? 'Video Giới Thiệu' : 'Intro Video'}
+        </h2>
+
+        <div className="flex justify-center">
+          <div className="relative w-full max-w-4xl aspect-video rounded-2xl overflow-hidden shadow-lg">
+            <iframe
+              className="absolute top-0 left-0 w-full h-full"
+              src="https://www.youtube.com/embed/lwOIWFGU1LE?si=6eKTu0Au9cQF2LaO"
+              title="Emis Dental Intro Video"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
 
       {/* Map Section */}
       <MapSection content={content} />
