@@ -1,4 +1,4 @@
-import { implantContent } from "../content/implantContent";
+import { implantContent } from "../Translations/implantContent";
 
 export default function ImplantQuote({ language = "english" }) {
   const { banner } = implantContent[language];
