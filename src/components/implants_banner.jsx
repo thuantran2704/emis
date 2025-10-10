@@ -1,15 +1,13 @@
 import { CheckCircle } from "lucide-react";
 import { implantContent } from "../Translations/implantContent";
-
+import ImplantQuote from "./implantQuote";
 export default function ImplantCards({ language = "english" }) {
   const content = implantContent[language];
 
   return (
     <section className="py-16 bg-[#fdfcf8]">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center text-[#1f2937] mb-12 border-b-2 border-[#d4af37] inline-block pb-2">
-          {content.title}
-        </h2>
+        <ImplantQuote language = {language}/>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {content.implants.map((implant, i) => (
