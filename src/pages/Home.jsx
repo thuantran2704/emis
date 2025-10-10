@@ -129,7 +129,7 @@ export default function Home({ language }) {
           </div>
         </div>
       </section>
-      <ImplantCards/>
+      <ImplantCards language = {language}/>
       {/* Map Section */}
       <MapSection content={content} />
 
