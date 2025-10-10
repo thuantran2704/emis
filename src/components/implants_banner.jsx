@@ -1,5 +1,5 @@
 import { CheckCircle } from "lucide-react";
-import { implantContent } from "../content/implantContent";
+import { implantContent } from "../Translations/implantContent";
 
 export default function ImplantCards({ language = "english" }) {
   const content = implantContent[language];
