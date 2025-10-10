@@ -1,3 +1,5 @@
+// src/content/implantContent.jsx
+
 import implant from "../pics/implant.png";
 import bridge from "../pics/bridge.png";
 import allon4 from "../pics/allon4.png";
@@ -5,7 +7,11 @@ import veneer from "../pics/veneer.png";
 
 export const implantContent = {
   english: {
-    title: "Implant Solutions for Every Need",
+    banner: {
+      title: "Affordable Implants from",
+      highlight: "15,000,000 VND",
+      subtitle: "Healthy smiles, without the high cost.",
+    },
     implants: [
       {
         icon: implant,
@@ -55,38 +61,42 @@ export const implantContent = {
   },
 
   vietnamese: {
-    title: "Giải pháp Implant toàn diện",
+    banner: {
+      title: "Cấy ghép Implant chỉ từ",
+      highlight: "15,000,000 VND",
+      subtitle: "Nụ cười khỏe mạnh, chi phí hợp lý.",
+    },
     implants: [
       {
         icon: implant,
-        name: "Cấy ghép răng đơn lẻ",
-        producer: "Phù hợp khi mất một răng",
+        name: "Cấy ghép Implant đơn lẻ",
+        producer: "Dành cho mất răng đơn",
         price: "Từ 15,000,000 VND",
         points: [
-          "Hệ thống Implant Hàn, Pháp, Thụy Sĩ chất lượng cao",
-          "Độ bền cao và tính thẩm mỹ tự nhiên",
-          "Làm từ titanium y khoa 100% tương thích sinh học",
+          "Hệ thống Hàn, Pháp, Thụy Sỹ chất lượng cao",
+          "Phục hình bền đẹp, tự nhiên",
+          "Chất liệu titanium tương thích sinh học 100%",
         ],
       },
       {
         icon: bridge,
-        name: "Cầu răng Implant",
-        producer: "Thay thế nhiều răng bị mất",
+        name: "Cầu răng trên Implant",
+        producer: "Phục hồi nhiều răng mất liền kề",
         price: "Từ 50,000,000 VND",
         points: [
-          "Khung titanium kết hợp mão sứ thẩm mỹ",
-          "Thiết kế CAD/CAM chính xác tuyệt đối",
-          "Đảm bảo độ bền và thẩm mỹ cao",
+          "Khung Titanium kết hợp mão sứ thẩm mỹ",
+          "Thiết kế chuẩn xác bằng công nghệ CAD/CAM",
+          "Bền chắc và tự nhiên như răng thật",
         ],
       },
       {
         icon: allon4,
         name: "All-on-4 / All-on-6",
-        producer: "Giải pháp phục hình toàn hàm cố định",
+        producer: "Giải pháp phục hình toàn hàm",
         price: "Từ 120,000,000 VND",
         points: [
-          "Khôi phục toàn bộ hàm chỉ với 4–6 trụ Implant",
-          "Ăn nhai chắc chắn, thẩm mỹ tự nhiên",
+          "Phục hồi toàn bộ hàm răng với 4–6 trụ Implant",
+          "Ăn nhai ngay với hàm cố định",
           "Phù hợp cho bệnh nhân mất răng toàn hàm",
         ],
       },
@@ -96,8 +106,8 @@ export const implantContent = {
         producer: "Thủ thuật hỗ trợ cấy ghép Implant",
         price: "Từ 3,000,000 VND",
         points: [
-          "Ghép xương nhân tạo tăng độ vững trụ Implant",
-          "Nâng xoang kín / hở cho vùng xương hàm trên",
+          "Ghép xương giúp trụ Implant vững chắc hơn",
+          "Nâng xoang chuẩn bị xương hàm trên",
           "Thực hiện trong điều kiện vô trùng tuyệt đối",
         ],
       },
@@ -105,16 +115,20 @@ export const implantContent = {
   },
 
   french: {
-    title: "Solutions d’implant pour chaque besoin",
+    banner: {
+      title: "Implants abordables dès",
+      highlight: "15,000,000 VND",
+      subtitle: "Un sourire sain à prix raisonnable.",
+    },
     implants: [
       {
         icon: implant,
-        name: "Implant dentaire unique",
-        producer: "Pour une seule dent manquante",
+        name: "Implant dentaire unitaire",
+        producer: "Pour une dent manquante",
         price: "À partir de 15,000,000 VND",
         points: [
           "Systèmes coréens, français et suisses de haute qualité",
-          "Restauration durable et esthétique naturelle",
+          "Restauration durable et naturelle",
           "Fabriqué en titane 100% biocompatible",
         ],
       },
@@ -125,180 +139,192 @@ export const implantContent = {
         price: "À partir de 50,000,000 VND",
         points: [
           "Base en titane avec couronnes en porcelaine",
-          "Conception précise grâce à la technologie CAD/CAM",
-          "Esthétique et durabilité excellentes",
+          "Conception sur mesure avec précision CAD/CAM",
+          "Résistant et esthétiquement naturel",
         ],
       },
       {
         icon: allon4,
         name: "All-on-4 / All-on-6",
-        producer: "Solution de restauration complète",
+        producer: "Solution de restauration complète de l’arcade",
         price: "À partir de 120,000,000 VND",
         points: [
-          "Restaurez votre sourire complet avec 4–6 implants",
+          "Restaurez tout votre sourire avec 4–6 implants",
           "Fonction immédiate et dents fixes",
-          "Idéal pour perte totale de dents",
+          "Idéal pour les patients édentés complets",
         ],
       },
       {
         icon: veneer,
-        name: "Greffe osseuse & Élévation du sinus",
+        name: "Greffe osseuse & Élévation sinusale",
         producer: "Procédures de soutien pour implants",
         price: "À partir de 3,000,000 VND",
         points: [
-          "Renforce la stabilité des implants",
-          "Prépare la mâchoire supérieure pour les implants",
-          "Procédure chirurgicale stérile et sécurisée",
+          "Greffe osseuse pour renforcer la stabilité de l’implant",
+          "Élévation sinusale pour préparer la mâchoire supérieure",
+          "Réalisation dans des conditions chirurgicales stériles",
         ],
       },
     ],
   },
 
   korean: {
-    title: "임플란트 솔루션",
+    banner: {
+      title: "임플란트 합리적인 가격",
+      highlight: "15,000,000 VND부터",
+      subtitle: "건강한 미소, 부담 없는 비용으로.",
+    },
     implants: [
       {
         icon: implant,
         name: "단일 임플란트",
-        producer: "하나의 치아를 대체",
+        producer: "하나의 치아 결손 복원용",
         price: "15,000,000 VND부터",
         points: [
-          "한국, 프랑스, 스위스 프리미엄 시스템 사용",
-          "자연스럽고 오래가는 복원력",
-          "100% 생체 적합 티타늄 소재",
+          "한국, 프랑스, 스위스 시스템 사용",
+          "자연스럽고 오래 지속되는 결과",
+          "100% 생체 적합 티타늄 사용",
         ],
       },
       {
         icon: bridge,
         name: "임플란트 브릿지",
-        producer: "여러 개의 치아 대체",
+        producer: "여러 치아 결손 복원",
         price: "50,000,000 VND부터",
         points: [
-          "티타늄 기반에 포셀린 크라운",
-          "정밀 CAD/CAM 설계",
-          "내구성과 심미성 우수",
+          "티타늄 기반 + 세라믹 크라운",
+          "CAD/CAM 정밀 설계",
+          "튼튼하고 자연스러운 심미성",
         ],
       },
       {
         icon: allon4,
-        name: "올온포 / 올온식스",
+        name: "All-on-4 / All-on-6",
         producer: "전체 치열 복원 솔루션",
         price: "120,000,000 VND부터",
         points: [
-          "4~6개의 임플란트로 전체 치아 복원",
-          "즉시 고정형 전체 보철 가능",
-          "무치악 환자에게 이상적",
+          "4–6개의 임플란트로 전체 치열 복원",
+          "즉시 고정식 치아 가능",
+          "전체 치아 상실 환자에게 이상적",
         ],
       },
       {
         icon: veneer,
-        name: "뼈 이식 및 상악동 거상술",
+        name: "골이식 & 상악동 거상술",
         producer: "임플란트 보조 시술",
         price: "3,000,000 VND부터",
         points: [
-          "임플란트 안정성을 위한 뼈 이식",
+          "골이식으로 안정성 강화",
           "상악동 거상으로 상악 준비",
-          "멸균 환경에서 안전하게 진행",
+          "멸균된 환경에서 안전하게 진행",
         ],
       },
     ],
   },
 
   simplified: {
-    title: "全方位种植牙解决方案",
+    banner: {
+      title: "实惠种植牙仅需",
+      highlight: "15,000,000 越南盾起",
+      subtitle: "健康笑容，不再昂贵。",
+    },
     implants: [
       {
         icon: implant,
         name: "单颗种植牙",
-        producer: "适用于单颗牙缺失",
-        price: "起价 15,000,000 越南盾",
+        producer: "用于单颗缺牙修复",
+        price: "15,000,000 越南盾起",
         points: [
-          "高品质韩、法、瑞士系统可选",
-          "持久耐用且外观自然",
-          "采用100%生物相容性钛材料",
+          "韩国、法国、瑞士高品质系统",
+          "持久自然的修复效果",
+          "100%生物相容钛材质",
         ],
       },
       {
         icon: bridge,
         name: "种植牙桥",
-        producer: "替代多颗缺失牙齿",
-        price: "起价 50,000,000 越南盾",
+        producer: "用于多颗缺牙修复",
+        price: "50,000,000 越南盾起",
         points: [
-          "钛金属基底搭配瓷冠",
-          "CAD/CAM 精准设计",
-          "坚固且美观自然",
+          "钛基座搭配瓷冠",
+          "CAD/CAM精准定制",
+          "坚固耐用，外观自然",
         ],
       },
       {
         icon: allon4,
-        name: "All-on-4 / All-on-6",
-        producer: "全口种植修复方案",
-        price: "起价 120,000,000 越南盾",
+        name: "All-on-4 / All-on-6 全口种植",
+        producer: "全口修复解决方案",
+        price: "120,000,000 越南盾起",
         points: [
-          "仅需 4–6 颗种植体即可修复全口牙齿",
-          "可立即恢复功能与外观",
-          "适用于全口缺牙患者",
+          "使用4–6颗种植体修复整口牙齿",
+          "即刻固定，恢复咬合功能",
+          "适合全口牙缺失患者",
         ],
       },
       {
         icon: veneer,
-        name: "骨移植与上颌窦提升术",
-        producer: "种植前支持手术",
-        price: "起价 3,000,000 越南盾",
+        name: "骨粉植入 & 上颌窦提升",
+        producer: "辅助种植手术",
+        price: "3,000,000 越南盾起",
         points: [
-          "提高种植体稳定性的骨移植",
-          "上颌窦提升以便种植准备",
-          "在无菌环境中安全实施",
+          "骨粉植入提升种植稳定性",
+          "上颌窦提升准备上颌骨",
+          "无菌条件下精细操作",
         ],
       },
     ],
   },
 
   traditional: {
-    title: "全方位植牙解決方案",
+    banner: {
+      title: "平價植牙只需",
+      highlight: "15,000,000 越南盾起",
+      subtitle: "健康笑容，無需高昂費用。",
+    },
     implants: [
       {
         icon: implant,
         name: "單顆植牙",
-        producer: "適用於單顆缺牙",
-        price: "起價 15,000,000 越南盾",
+        producer: "用於單顆缺牙修復",
+        price: "15,000,000 越南盾起",
         points: [
-          "高品質韓國、法國及瑞士系統可選",
-          "持久耐用且外觀自然",
-          "採用100%生物相容性鈦金屬",
+          "韓國、法國、瑞士高品質系統",
+          "持久自然的修復效果",
+          "100%生物相容鈦材質",
         ],
       },
       {
         icon: bridge,
         name: "植牙牙橋",
-        producer: "替代多顆缺失牙齒",
-        price: "起價 50,000,000 越南盾",
+        producer: "用於多顆缺牙修復",
+        price: "50,000,000 越南盾起",
         points: [
-          "鈦金屬基底搭配瓷牙冠",
-          "CAD/CAM 精準設計",
-          "堅固且美觀自然",
+          "鈦合金基座搭配瓷冠",
+          "CAD/CAM精準設計",
+          "堅固耐用，自然美觀",
         ],
       },
       {
         icon: allon4,
-        name: "All-on-4 / All-on-6",
-        producer: "全口重建修復方案",
-        price: "起價 120,000,000 越南盾",
+        name: "All-on-4 / All-on-6 全口植牙",
+        producer: "全口重建解決方案",
+        price: "120,000,000 越南盾起",
         points: [
-          "僅需4–6顆植體即可修復全口牙齒",
-          "立即恢復功能與外觀",
-          "適用於全口缺牙患者",
+          "使用4–6顆植體重建整口牙齒",
+          "即刻固定式假牙",
+          "適合全口缺牙患者",
         ],
       },
       {
         icon: veneer,
-        name: "骨移植與上頜竇提升術",
-        producer: "植牙輔助手術",
-        price: "起價 3,000,000 越南盾",
+        name: "補骨 & 上頜竇提升",
+        producer: "輔助植牙手術",
+        price: "3,000,000 越南盾起",
         points: [
-          "骨移植提升植體穩定性",
-          "上頜竇提升以準備植牙",
-          "在無菌環境中安全進行",
+          "補骨手術提升穩定性",
+          "上頜竇提升準備上頜骨",
+          "無菌條件下精細操作",
         ],
       },
     ],
