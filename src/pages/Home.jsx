@@ -54,36 +54,6 @@ export default function Home({ language }) {
         {/* Canonical URL */}
         <link rel="canonical" href="https://emisdental.com" />
       </Helmet>
-     
-      {/* Hero Section */}
-      <section className="py-28 px-4 max-w-6xl mx-auto text-center">
-        <h1 
-          className="text-5xl font-bold text-[#4b4b8f] mb-6"
-          style={{ fontFamily: "'Playfair Display', serif" }}
-          itemProp="name"
-        >
-          {content.heroTitle.split(content.heroHighlight)[0]} 
-          <span className="text-[#d4af37]" itemProp="makesOffer"> {content.heroHighlight} </span>
-          {content.heroTitle.split(content.heroHighlight)[1]}
-        </h1>
-
-        <p 
-          className="text-xl text-[#6b7280] mb-10 max-w-3xl mx-auto leading-relaxed"
-          style={{ fontFamily: "'Cormorant', serif" }}
-          itemProp="description"
-        >
-          {content.heroSubtitle}
-        </p>
-
-        <Link 
-          to="/contact" 
-          className="inline-block bg-[#d4af37] hover:bg-[#c19d30] text-white font-bold py-4 px-10 rounded-full transition-all text-lg shadow-md hover:shadow-lg"
-          style={{ fontFamily: "'Playfair Display', serif" }}
-          aria-label={`${content.bookButton} for dental services`}
-        >
-          {content.bookButton}
-        </Link>
-      </section>
 
       {/* Services Section */}
       <section className="py-16 bg-[#fcfbf8]">
@@ -125,6 +95,35 @@ export default function Home({ language }) {
 
       {/* Map Section */}
       <MapSection content={content} />
+      {/* Hero Section */}
+      <section className="py-28 px-4 max-w-6xl mx-auto text-center">
+        <h1 
+          className="text-5xl font-bold text-[#4b4b8f] mb-6"
+          style={{ fontFamily: "'Playfair Display', serif" }}
+          itemProp="name"
+        >
+          {content.heroTitle.split(content.heroHighlight)[0]} 
+          <span className="text-[#d4af37]" itemProp="makesOffer"> {content.heroHighlight} </span>
+          {content.heroTitle.split(content.heroHighlight)[1]}
+        </h1>
+
+        <p 
+          className="text-xl text-[#6b7280] mb-10 max-w-3xl mx-auto leading-relaxed"
+          style={{ fontFamily: "'Cormorant', serif" }}
+          itemProp="description"
+        >
+          {content.heroSubtitle}
+        </p>
+
+        <Link 
+          to="/contact" 
+          className="inline-block bg-[#d4af37] hover:bg-[#c19d30] text-white font-bold py-4 px-10 rounded-full transition-all text-lg shadow-md hover:shadow-lg"
+          style={{ fontFamily: "'Playfair Display', serif" }}
+          aria-label={`${content.bookButton} for dental services`}
+        >
+          {content.bookButton}
+        </Link>
+      </section>
     </main>
   );
 }
