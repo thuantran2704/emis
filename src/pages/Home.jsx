@@ -17,6 +17,9 @@ import ad1 from '../pics/ad1.jpg';
 import ad2 from '../pics/ad2.jpg';
 import ad3 from '../pics/ad3.jpg';
 import ad4 from '../pics/ad4.jpg';
+import hiossenImg from '../pics/hiossen.jpg';
+import osstemImg from '../pics/osstem.jpg';
+import straumannImg from '../pics/straumann.jpg';
 
 let adImages = [];
 
@@ -94,7 +97,7 @@ export default function Home({ language }) {
           </div>
         </div>
       </section>
-
+      
       {/* Services Section */}
       <section className="py-16 bg-[#fcfbf8]">
         <div className="max-w-6xl mx-auto px-4 relative">
@@ -112,6 +115,39 @@ export default function Home({ language }) {
 
       {/* Implant Section */}
       <ImplantCards language={language} />
+
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-[#4b4b8f] mb-12 text-center border-b-2 border-[#d4af37] pb-2 inline-block">
+            {content.implantBrandsSectionTitle || "Our Implant Brands"}
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+            
+            {content.implantBrandsTitles.map((title, index) => (
+              <div key={index} className="text-center">
+                {/* Dynamically pick the right image based on title */}
+                <img
+                  src={
+                    title.toLowerCase().includes("hiossen")
+                      ? hiossenImg
+                      : title.toLowerCase().includes("osstem")
+                      ? osstemImg
+                      : straumannImg
+                  }
+                  alt={`${title} implant`}
+                  className="mx-auto rounded-2xl shadow-md mb-4"
+                />
+                <h3 className="text-xl font-semibold text-[#4b4b8f] mb-2">{title}</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  {content.implantBrandsDescriptions[index]}
+                </p>
+              </div>
+            ))}
+
+          </div>
+        </div>
+      </section>
+
 
       {/* Map Section */}
       <MapSection content={content} />
