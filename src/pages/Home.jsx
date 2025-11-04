@@ -125,18 +125,19 @@ export default function Home({ language }) {
             
             {content.implantBrandsTitles.map((title, index) => (
               <div key={index} className="text-center">
-                {/* Dynamically pick the right image based on title */}
-                <img
-                  src={
-                    title.toLowerCase().includes("hiossen")
-                      ? hiossenImg
-                      : title.toLowerCase().includes("osstem")
-                      ? osstemImg
-                      : straumannImg
-                  }
-                  alt={`${title} implant`}
-                  className="mx-auto rounded-2xl shadow-md mb-4"
-                />
+                <div className="mx-auto rounded-2xl shadow-md mb-4 bg-white p-4 flex items-center justify-center" style={{width: "250px", height: "250px"}}>
+                  <img
+                    src={
+                      title.toLowerCase().includes("hiossen")
+                        ? hiossenImg
+                        : title.toLowerCase().includes("osstem")
+                        ? osstemImg
+                        : straumannImg
+                    }
+                    alt={`${title} implant`}
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
                 <h3 className="text-xl font-semibold text-[#4b4b8f] mb-2">{title}</h3>
                 <p className="text-gray-700 leading-relaxed">
                   {content.implantBrandsDescriptions[index]}
@@ -147,6 +148,7 @@ export default function Home({ language }) {
           </div>
         </div>
       </section>
+
 
 
       {/* Map Section */}
