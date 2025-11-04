@@ -9,6 +9,7 @@ export const homeContent = {
     practiceTitle: "Our Practice in Action",
     papersTitle: "Standard Quality Dental Clinic",
     introTitle: "Intro Video",
+    implantBrandsSectionTitle: "Our Implant Brands",
     implantBrandsDescriptions: ["Reliable and high-quality implants with excellent integration for long-lasting dental restorations.",
     "Innovative design and stability for durable, natural-looking teeth.",
     "Globally recognized for precision, aesthetics, and superior clinical results."
@@ -80,6 +81,7 @@ export const homeContent = {
     practiceTitle: "Phòng Khám Của Chúng Tôi",
     papersTitle: "Nha Khoa Tiêu Chuẩn Chất Lượng",
     introTitle: "Video Giới Thiệu",
+    implantBrandsSectionTitle: "Thương Hiệu Implant Của Chúng Tôi",
     implantBrandsDescriptions: [
     "Implant chất lượng cao, đáng tin cậy với tích hợp xương tuyệt vời cho phục hình lâu dài.",
     "Thiết kế sáng tạo, ổn định cho răng bền đẹp tự nhiên.",
@@ -152,6 +154,7 @@ export const homeContent = {
     practiceTitle: "我们的诊所实况",
     papersTitle: "标准高质量牙科诊所",
     introTitle: "介绍视频",
+    implantBrandsSectionTitle: "我们的种植体品牌",
     implantBrandsDescriptions: [
       "可靠高品质的种植体，骨结合性能出色，修复持久。",
       "创新设计与稳定性，打造耐用自然的牙齿。",
@@ -224,6 +227,7 @@ export const homeContent = {
     practiceTitle: "우리의 진료 현장",
     papersTitle: "표준 품질 치과",
     introTitle: "소개 영상",
+    implantBrandsSectionTitle: "우리의 임플란트 브랜드",
     implantBrandsDescriptions: [
       "신뢰할 수 있고 고품질의 임플란트로 뛰어난 골융합과 장기적인 치아 복원을 제공합니다.",
       "혁신적인 설계와 안정성으로 자연스럽고 내구성 있는 치아를 제공합니다.",
@@ -297,6 +301,7 @@ export const homeContent = {
     practiceTitle: "我們的診所實況",
     papersTitle: "標準高品質牙科診所",
     introTitle: "介紹影片",
+    implantBrandsSectionTitle: "我們的植牙品牌",
     implantBrandsDescriptions: [
       "可靠高品質的植牙，骨整合效果出色，修復持久。",
       "創新設計與穩定性，打造耐用自然的牙齒。",
@@ -369,6 +374,7 @@ export const homeContent = {
     practiceTitle: "Notre Pratique en Action",
     papersTitle: "Clinique Dentaire de Qualité Standard",
     introTitle: "Vidéo de Présentation",
+    implantBrandsSectionTitle: "Nos Marques d'Implants",
     implantBrandsDescriptions: [
       "Implants fiables et de haute qualité avec une excellente intégration pour des restaurations durables.",
       "Design innovant et stabilité pour des dents durables et naturelles.",
