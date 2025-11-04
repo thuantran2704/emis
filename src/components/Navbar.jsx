@@ -12,7 +12,7 @@ export default function Navbar({ language = 'english' }) {
   const navItems = [
     { name: content.home, path: '/' },
     { name: content.about, path: '/about' },
-    { name: content.services, path: '/services' },
+    // { name: content.services, path: '/services' },
   ];
 
   return (
