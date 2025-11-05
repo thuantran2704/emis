@@ -20,7 +20,7 @@ export const homeContent = {
       service: "Implant Dentistry",
       text: "Learn how to maintain your dental implants for a lifetime.",
       thumbnail: "/shorts/implant_tips_thumbnail.jpg",
-      videoUrl: "https://www.youtube.com/embed/l8EngnXRACI"
+      videoUrl: "https://www.youtube.com/embed/l8EngnXRACI?si=6OYY5SzJY__N6thX"
     }
   ],
     implantBrandsTitles:  ["Hiossen Implants", "Osstem Implants", "Straumann Implants"],
