@@ -12,8 +12,17 @@ const Services = ({ language }) => {
       .then((res) => res.text())
       .then((text) => {
         const parsed = Papa.parse(text, { header: true, skipEmptyLines: true }).data;
-        setPricingData(parsed.filter((row) => row['Tên dịch vụ']));
-      });
+        // Normalize headers in case of BOM or spaces
+        const cleanData = parsed.map((row) => {
+          const normalized = {};
+          Object.keys(row).forEach((key) => {
+            normalized[key.trim()] = row[key];
+          });
+          return normalized;
+        });
+        setPricingData(cleanData.filter((row) => row['Tên dịch vụ']));
+      })
+      .catch((err) => console.error('CSV load error:', err));
   }, []);
 
   const containerVariants = {
@@ -88,7 +97,7 @@ const Services = ({ language }) => {
           viewport={{ once: true, margin: '-100px' }}
         >
           <table className="min-w-full bg-white text-left text-gray-700 text-sm md:text-base">
-            <thead className="bg-primary text-white">
+            <thead className="bg-blue-600 text-white">
               <tr>
                 <th className="px-6 py-4 font-semibold">Tên dịch vụ</th>
                 <th className="px-6 py-4 font-semibold">Nội dung</th>
@@ -96,7 +105,14 @@ const Services = ({ language }) => {
                 <th className="px-6 py-4 font-semibold">Giá (chưa VAT)</th>
               </tr>
             </thead>
-            <motion.tbody>
+
+            {/* FIX: tbody now properly animates and becomes visible */}
+            <motion.tbody
+              initial="hidden"
+              whileInView="visible"
+              variants={containerVariants}
+              viewport={{ once: true }}
+            >
               {pricingData.map((row, idx) => (
                 <motion.tr
                   key={idx}
