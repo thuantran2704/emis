@@ -88,7 +88,7 @@ export default function Home({ language }) {
           <div className="relative w-full max-w-4xl aspect-video rounded-2xl overflow-hidden shadow-lg">
             <iframe
               className="absolute top-0 left-0 w-full h-full"
-              src="https://www.youtube.com/embed/l8EngnXRACI?si=6OYY5SzJY__N6thX"
+              src="https://www.youtube.com/embed/lwOIWFGU1LE?si=6eKTu0Au9cQF2LaO"
               title="Emis Dental Intro Video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
