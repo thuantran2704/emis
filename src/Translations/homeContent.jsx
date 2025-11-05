@@ -14,6 +14,15 @@ export const homeContent = {
     "Innovative design and stability for durable, natural-looking teeth.",
     "Globally recognized for precision, aesthetics, and superior clinical results."
     ],
+    shorts: [
+    {
+      name: "Implant Care Tips",
+      service: "Implant Dentistry",
+      text: "Learn how to maintain your dental implants for a lifetime.",
+      thumbnail: "/shorts/implant_tips_thumbnail.jpg",
+      videoUrl: "https://www.youtube.com/embed/l8EngnXRACI"
+    }
+  ],
     implantBrandsTitles:  ["Hiossen Implants", "Osstem Implants", "Straumann Implants"],
     services: [
       {
@@ -81,6 +90,15 @@ export const homeContent = {
     practiceTitle: "Phòng Khám Của Chúng Tôi",
     papersTitle: "Nha Khoa Tiêu Chuẩn Chất Lượng",
     introTitle: "Video Giới Thiệu",
+    shorts: [
+      {
+        name: "Mẹo Chăm Sóc Implant",
+        service: "Nha Khoa Implant",
+        text: "Học cách chăm sóc implant để sử dụng lâu dài.",
+        thumbnail: "/shorts/implant_tips_thumbnail.jpg",
+        videoUrl: "https://www.youtube.com/embed/l8EngnXRACI"
+      }
+    ],
     implantBrandsSectionTitle: "Thương Hiệu Implant Của Chúng Tôi",
     implantBrandsDescriptions: [
     "Implant chất lượng cao, đáng tin cậy với tích hợp xương tuyệt vời cho phục hình lâu dài.",
@@ -154,6 +172,15 @@ export const homeContent = {
     practiceTitle: "我们的诊所实况",
     papersTitle: "标准高质量牙科诊所",
     introTitle: "介绍视频",
+    shorts: [
+      {
+        name: "种植牙护理技巧",
+        service: "种植牙科",
+        text: "学习如何终生维护您的牙科种植体。",
+        thumbnail: "/shorts/implant_tips_thumbnail.jpg",
+        videoUrl: "https://www.youtube.com/embed/l8EngnXRACI"
+      }
+    ],
     implantBrandsSectionTitle: "我们的种植体品牌",
     implantBrandsDescriptions: [
       "可靠高品质的种植体，骨结合性能出色，修复持久。",
@@ -227,6 +254,15 @@ export const homeContent = {
     practiceTitle: "우리의 진료 현장",
     papersTitle: "표준 품질 치과",
     introTitle: "소개 영상",
+    shorts: [
+      {
+        name: "임플란트 관리 팁",
+        service: "임플란트 치과",
+        text: "임플란트를 평생 유지하는 방법을 배워보세요.",
+        thumbnail: "/shorts/implant_tips_thumbnail.jpg",
+        videoUrl: "https://www.youtube.com/embed/l8EngnXRACI"
+      }
+    ],
     implantBrandsSectionTitle: "우리의 임플란트 브랜드",
     implantBrandsDescriptions: [
       "신뢰할 수 있고 고품질의 임플란트로 뛰어난 골융합과 장기적인 치아 복원을 제공합니다.",
@@ -301,6 +337,15 @@ export const homeContent = {
     practiceTitle: "我們的診所實況",
     papersTitle: "標準高品質牙科診所",
     introTitle: "介紹影片",
+    shorts: [
+      {
+        name: "植牙護理技巧",
+        service: "植牙牙科",
+        text: "學習如何終生維護您的牙科植牙。",
+        thumbnail: "/shorts/implant_tips_thumbnail.jpg",
+        videoUrl: "https://www.youtube.com/embed/l8EngnXRACI"
+      }
+    ],
     implantBrandsSectionTitle: "我們的植牙品牌",
     implantBrandsDescriptions: [
       "可靠高品質的植牙，骨整合效果出色，修復持久。",
@@ -374,6 +419,15 @@ export const homeContent = {
     practiceTitle: "Notre Pratique en Action",
     papersTitle: "Clinique Dentaire de Qualité Standard",
     introTitle: "Vidéo de Présentation",
+    shorts: [
+      {
+        name: "Conseils pour les Implants",
+        service: "Dentisterie Implant",
+        text: "Apprenez à entretenir vos implants dentaires toute votre vie.",
+        thumbnail: "/shorts/implant_tips_thumbnail.jpg",
+        videoUrl: "https://www.youtube.com/embed/l8EngnXRACI"
+      }
+    ],
     implantBrandsSectionTitle: "Nos Marques d'Implants",
     implantBrandsDescriptions: [
       "Implants fiables et de haute qualité avec une excellente intégration pour des restaurations durables.",

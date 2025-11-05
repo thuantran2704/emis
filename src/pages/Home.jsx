@@ -20,7 +20,7 @@ import ad4 from '../pics/ad4.jpg';
 import hiossenImg from '../pics/hiossen.jpg';
 import osstemImg from '../pics/osstem.jpg';
 import straumannImg from '../pics/straumann.jpg';
-
+import ShortsSection from '../components/CustomerFeedback';
 let adImages = [];
 
 export default function Home({ language }) {
@@ -176,7 +176,7 @@ export default function Home({ language }) {
         >
           {content.heroSubtitle}
         </p>
-
+        <ShortsSection content ={content} />
         <Link
           to="/contact"
           className="inline-block bg-[#d4af37] hover:bg-[#c19d30] text-white font-bold py-4 px-10 rounded-full transition-all text-lg shadow-md hover:shadow-lg"
