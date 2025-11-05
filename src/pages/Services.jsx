@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import homeContent from '../Translations/homeContent';
-import { motion } from 'framer-motion';
 import Papa from 'papaparse';
 
 const Services = ({ language }) => {
@@ -12,7 +11,7 @@ const Services = ({ language }) => {
       .then((res) => res.text())
       .then((text) => {
         const parsed = Papa.parse(text, { header: true, skipEmptyLines: true }).data;
-        // Normalize headers in case of BOM or spaces
+        // Clean up any weird spacing or BOM in headers
         const cleanData = parsed.map((row) => {
           const normalized = {};
           Object.keys(row).forEach((key) => {
@@ -25,35 +24,14 @@ const Services = ({ language }) => {
       .catch((err) => console.error('CSV load error:', err));
   }, []);
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.04, delayChildren: 0.1 },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { y: 8, opacity: 0 },
-    visible: { y: 0, opacity: 1, transition: { duration: 0.25 } },
-  };
-
   return (
     <div
       className="pt-24 px-6 sm:px-12 max-w-7xl mx-auto text-gray-800"
       style={{ fontFamily: "'Playfair Display', serif" }}
     >
       {/* Hero Section */}
-      <motion.section
-        className="text-center mb-20 max-w-3xl mx-auto"
-        initial="hidden"
-        animate="visible"
-        variants={containerVariants}
-      >
-        <motion.h1
-          className="text-4xl md:text-5xl font-bold mb-6 leading-tight"
-          variants={itemVariants}
-        >
+      <section className="text-center mb-20 max-w-3xl mx-auto">
+        <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
           {content.heroTitle.split(content.heroHighlight).map((part, i) => (
             <React.Fragment key={i}>
               {part}
@@ -65,39 +43,25 @@ const Services = ({ language }) => {
               )}
             </React.Fragment>
           ))}
-        </motion.h1>
+        </h1>
+
         {content.heroSubtitle && (
-          <motion.p
-            className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto"
-            variants={itemVariants}
-          >
+          <p className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto">
             {content.heroSubtitle}
-          </motion.p>
+          </p>
         )}
-      </motion.section>
+      </section>
 
       {/* Pricing Section */}
       <section className="mb-24">
-        <motion.h2
-          className="text-3xl md:text-4xl font-semibold text-center mb-10 relative text-gray-900"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-        >
+        <h2 className="text-3xl md:text-4xl font-semibold text-center mb-10 relative text-gray-900">
           Bảng giá dịch vụ
           <span className="block w-24 h-1 bg-primary rounded-full mx-auto mt-2"></span>
-        </motion.h2>
+        </h2>
 
-        <motion.div
-          className="overflow-hidden rounded-2xl border border-gray-200 shadow-lg"
-          initial="hidden"
-          whileInView="visible"
-          variants={containerVariants}
-          viewport={{ once: true, margin: '-100px' }}
-        >
+        <div className="overflow-hidden rounded-2xl border border-gray-200 shadow-lg">
           <table className="min-w-full bg-white text-left text-gray-700 text-sm md:text-base">
-            <thead className="bg-blue-600 text-white">
+            <thead className="bg-primary text-white">
               <tr>
                 <th className="px-6 py-4 font-semibold">Tên dịch vụ</th>
                 <th className="px-6 py-4 font-semibold">Nội dung</th>
@@ -105,18 +69,10 @@ const Services = ({ language }) => {
                 <th className="px-6 py-4 font-semibold">Giá (chưa VAT)</th>
               </tr>
             </thead>
-
-            {/* FIX: tbody now properly animates and becomes visible */}
-            <motion.tbody
-              initial="hidden"
-              whileInView="visible"
-              variants={containerVariants}
-              viewport={{ once: true }}
-            >
+            <tbody>
               {pricingData.map((row, idx) => (
-                <motion.tr
+                <tr
                   key={idx}
-                  variants={itemVariants}
                   className="border-b hover:bg-gray-50 transition-colors"
                 >
                   <td className="px-6 py-3 font-medium text-gray-900">
@@ -127,13 +83,12 @@ const Services = ({ language }) => {
                   <td className="px-6 py-3 text-gray-800 font-semibold">
                     {row['Giá dịch vụ (chưa VAT)'] || '-'}
                   </td>
-                </motion.tr>
+                </tr>
               ))}
-            </motion.tbody>
+            </tbody>
           </table>
-        </motion.div>
+        </div>
 
-        {/* Fallback when CSV is empty or fails to load */}
         {pricingData.length === 0 && (
           <p className="text-center mt-8 text-gray-500 italic">
             Không tìm thấy dữ liệu bảng giá. Vui lòng kiểm tra tệp pricing.csv.
