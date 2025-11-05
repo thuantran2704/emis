@@ -10,16 +10,33 @@ const Services = ({ language }) => {
     fetch('/pricing.csv')
       .then((res) => res.text())
       .then((text) => {
-        const parsed = Papa.parse(text, { header: true, skipEmptyLines: true }).data;
-        // Clean up any weird spacing or BOM in headers
-        const cleanData = parsed.map((row) => {
+        // Manually fix malformed CSV lines before parsing
+        const fixedText = text
+          .split('\n')
+          .map((line) => {
+            // Skip empty lines
+            if (!line.trim()) return '';
+            const commaCount = (line.match(/,/g) || []).length;
+            // If only 2 commas (3 columns instead of 4), add an empty field
+            if (commaCount === 2) return line.replace(/$/, ',');
+            return line;
+          })
+          .join('\n');
+
+        const parsed = Papa.parse(fixedText, {
+          header: true,
+          skipEmptyLines: true,
+        }).data;
+
+        const clean = parsed.map((row) => {
           const normalized = {};
           Object.keys(row).forEach((key) => {
-            normalized[key.trim()] = row[key];
+            normalized[key.trim()] = row[key]?.trim();
           });
           return normalized;
         });
-        setPricingData(cleanData.filter((row) => row['Tên dịch vụ']));
+
+        setPricingData(clean.filter((r) => r['Tên dịch vụ']));
       })
       .catch((err) => console.error('CSV load error:', err));
   }, []);
@@ -29,7 +46,6 @@ const Services = ({ language }) => {
       className="pt-24 px-6 sm:px-12 max-w-7xl mx-auto text-gray-800"
       style={{ fontFamily: "'Playfair Display', serif" }}
     >
-      {/* Hero Section */}
       <section className="text-center mb-20 max-w-3xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
           {content.heroTitle.split(content.heroHighlight).map((part, i) => (
@@ -44,22 +60,18 @@ const Services = ({ language }) => {
             </React.Fragment>
           ))}
         </h1>
-
         {content.heroSubtitle && (
-          <p className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto">
-            {content.heroSubtitle}
-          </p>
+          <p className="text-gray-600 text-lg md:text-xl">{content.heroSubtitle}</p>
         )}
       </section>
 
-      {/* Pricing Section */}
       <section className="mb-24">
-        <h2 className="text-3xl md:text-4xl font-semibold text-center mb-10 relative text-gray-900">
+        <h2 className="text-3xl md:text-4xl font-semibold text-center mb-10 text-gray-900 relative">
           Bảng giá dịch vụ
           <span className="block w-24 h-1 bg-primary rounded-full mx-auto mt-2"></span>
         </h2>
 
-        <div className="overflow-hidden rounded-2xl border border-gray-200 shadow-lg">
+        <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-lg">
           <table className="min-w-full bg-white text-left text-gray-700 text-sm md:text-base">
             <thead className="bg-primary text-white">
               <tr>
@@ -71,10 +83,7 @@ const Services = ({ language }) => {
             </thead>
             <tbody>
               {pricingData.map((row, idx) => (
-                <tr
-                  key={idx}
-                  className="border-b hover:bg-gray-50 transition-colors"
-                >
+                <tr key={idx} className="border-b hover:bg-gray-50">
                   <td className="px-6 py-3 font-medium text-gray-900">
                     {row['Tên dịch vụ'] || '-'}
                   </td>
