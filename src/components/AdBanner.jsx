@@ -24,7 +24,6 @@ const AdBanner = () => {
         src={adImages[currentIndex]}
         alt={`Advertisement ${currentIndex + 1}`}
         className="w-full h-full object-cover transition-opacity duration-1000"
-        loading="lazy"
       />
       <div className="absolute inset-0 bg-black/20" />
     </div>
