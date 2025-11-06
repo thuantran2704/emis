@@ -45,10 +45,8 @@ export default function AdBanner() {
       ></div>
 
       <AnimatePresence initial={false}>
-        <motion.img
+        <motion.div
           key={current}
-          src={adImages[current]}
-          alt={`ad-${current}`}
           initial={{ x: 800, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: -800, opacity: 0 }}
@@ -58,12 +56,23 @@ export default function AdBanner() {
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
-            maxWidth: "90%",
-            maxHeight: "90%",
-            borderRadius: "8px",
+            width: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
             zIndex: 1,
           }}
-        />
+        >
+          <img
+            src={adImages[current]}
+            alt={`ad-${current}`}
+            style={{
+              maxWidth: "90%",
+              maxHeight: "90%",
+              borderRadius: "8px",
+            }}
+          />
+        </motion.div>
       </AnimatePresence>
     </div>
   );
