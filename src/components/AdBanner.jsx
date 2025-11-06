@@ -11,18 +11,18 @@ const adImages = [ad1, ad2, ad3, ad4, ad5];
 export default function AdBanner() {
   const [current, setCurrent] = useState(0);
 
-  // Auto-slide every 10 seconds
+  // Auto-slide every 15 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % adImages.length);
-    }, 10000);
+    }, 15000);
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <section className="relative w-full bg-neutral-900 overflow-hidden flex justify-center items-center">
-      {/* Reduced banner height further */}
-      <div className="relative w-full h-[35vh] md:h-[40vh] lg:h-[45vh] flex justify-center items-center">
+    <section className="relative w-full bg-neutral-800 overflow-hidden flex justify-center items-center">
+      {/* Slightly taller, responsive banner */}
+      <div className="relative w-full h-[42vh] md:h-[48vh] lg:h-[54vh] flex justify-center items-center">
         <AnimatePresence mode="wait">
           <motion.img
             key={current}
@@ -38,13 +38,13 @@ export default function AdBanner() {
       </div>
 
       {/* Navigation Dots */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-3">
         {adImages.map((_, idx) => (
           <button
             key={idx}
             onClick={() => setCurrent(idx)}
-            className={`w-2.5 h-2.5 rounded-full transition-all ${
-              idx === current ? "bg-[#d4af37]" : "bg-white/40 hover:bg-white/70"
+            className={`w-3 h-3 rounded-full transition-all ${
+              idx === current ? "bg-[#d4af37]" : "bg-white/50 hover:bg-white/80"
             }`}
             aria-label={`Go to ad ${idx + 1}`}
           />
