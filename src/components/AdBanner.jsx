@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import ad1 from "../pics/ads/ad1.png";
 import ad2 from "../pics/ads/ad2.png";
 import ad3 from "../pics/ads/ad3.png";
@@ -9,47 +9,75 @@ const adImages = [ad1, ad2, ad3, ad4, ad5];
 
 export default function AdBanner() {
   const [current, setCurrent] = useState(0);
-  const [isSliding, setIsSliding] = useState(false);
-  const slideRef = useRef(null);
+  const [next, setNext] = useState(1);
+  const [direction, setDirection] = useState("right");
+  const [sliding, setSliding] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIsSliding(true);
+      setDirection("right");
+      setSliding(true);
+      setNext((prev) => (prev + 1) % adImages.length);
+
       setTimeout(() => {
         setCurrent((prev) => (prev + 1) % adImages.length);
-        setIsSliding(false);
-      }, 600); // matches transition duration
+        setSliding(false);
+      }, 700);
     }, 3000);
+
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div className="relative w-full h-[400px] md:h-[500px] overflow-hidden rounded-2xl shadow-lg bg-black">
-      {/* Slide container */}
+      {/* Background layer (blurred & darkened) */}
       <div
-        ref={slideRef}
-        className={`flex h-full w-full transition-transform duration-700 ease-in-out`}
+        className="absolute inset-0 transition-all duration-700"
         style={{
-          transform: `translateX(-${current * 100}%)`,
+          backgroundImage: `url(${adImages[current]})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          filter: "blur(25px) brightness(0.4)",
+          transform: "scale(1.1)",
         }}
-      >
-        {adImages.map((img, index) => (
-          <div
-            key={index}
-            className="w-full flex-shrink-0 h-full relative"
+      />
+
+      {/* Sliding images container */}
+      <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
+        <div
+          className={`flex items-center justify-center transition-transform duration-700 ease-in-out`}
+          style={{
+            transform: sliding
+              ? direction === "right"
+                ? "translateX(-100%)"
+                : "translateX(100%)"
+              : "translateX(0)",
+          }}
+        >
+          {/* Current Image */}
+          <img
+            src={adImages[current]}
+            alt={`Ad ${current + 1}`}
+            className="w-auto h-[300px] md:h-[400px] object-contain mx-auto rounded-lg shadow-xl transition-transform duration-700"
+          />
+
+          {/* Next Image (slides in) */}
+          <img
+            src={adImages[next]}
+            alt={`Ad ${next + 1}`}
+            className="w-auto h-[300px] md:h-[400px] object-contain mx-auto rounded-lg shadow-xl absolute left-full transition-transform duration-700"
             style={{
-              backgroundImage: `url(${img})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
+              transform: sliding
+                ? direction === "right"
+                  ? "translateX(-100%)"
+                  : "translateX(100%)"
+                : "translateX(0)",
             }}
-          >
-            {/* Optional blur overlay */}
-            <div className="absolute inset-0 bg-black/20 backdrop-blur-[2px]"></div>
-          </div>
-        ))}
+          />
+        </div>
       </div>
 
-      {/* Dot indicators */}
+      {/* Dots */}
       <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-20">
         {adImages.map((_, index) => (
           <div
