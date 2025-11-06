@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import ad1 from "../pics/ads/ad1.jpg";
-import ad2 from "../pics/ads/ad2.jpg";
-import ad3 from "../pics/ads/ad3.jpg";
-import ad4 from "../pics/ads/ad4.jpg";
-import ad5 from "../pics/ads/ad5.jpg";
+import ad1 from "../pics/ads/ad1.png";
+import ad2 from "../pics/ads/ad2.png";
+import ad3 from "../pics/ads/ad3.png";
+import ad4 from "../pics/ads/ad4.png";
+import ad5 from "../pics/ads/ad5.png";
 
 const adImages = [ad1, ad2, ad3, ad4, ad5];
 
@@ -21,7 +21,7 @@ export default function AdBanner() {
 
   return (
     <section className="relative w-full bg-black overflow-hidden flex justify-center items-center">
-      {/* Fixed banner height (adjust as needed) */}
+      {/* Reduced banner height by 20% */}
       <div className="relative w-full h-[48vh] md:h-[56vh] lg:h-[64vh] flex justify-center items-center">
         <AnimatePresence mode="wait">
           <motion.img
@@ -36,7 +36,6 @@ export default function AdBanner() {
           />
         </AnimatePresence>
       </div>
-
 
       {/* Navigation Dots */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3">
