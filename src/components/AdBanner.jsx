@@ -22,7 +22,7 @@ export default function AdBanner() {
   return (
     <section className="relative w-full bg-black overflow-hidden flex justify-center items-center">
       {/* Fixed banner height (adjust as needed) */}
-      <div className="relative w-full h-[60vh] md:h-[70vh] lg:h-[80vh] flex justify-center items-center">
+      <div className="relative w-full h-[48vh] md:h-[56vh] lg:h-[64vh] flex justify-center items-center">
         <AnimatePresence mode="wait">
           <motion.img
             key={current}
@@ -36,6 +36,7 @@ export default function AdBanner() {
           />
         </AnimatePresence>
       </div>
+
 
       {/* Navigation Dots */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3">
