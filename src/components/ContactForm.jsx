@@ -17,15 +17,10 @@ export default function ContactForm({ language }) {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleRecaptchaChange = (token) => {
-    setRecaptchaToken(token);
-  };
+  const handleRecaptchaChange = (token) => setRecaptchaToken(token);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -109,7 +104,7 @@ export default function ContactForm({ language }) {
   };
 
   return (
-    <div className="bg-[#fffaf0] rounded-2xl shadow-md p-5 max-w-md mx-auto border border-[#eee]">
+    <div className="bg-[#fffaf0] rounded-xl shadow-sm p-4 max-w-sm mx-auto border border-[#eee]">
       {alert.show && (
         <Alert
           message={alert.message}
@@ -120,31 +115,30 @@ export default function ContactForm({ language }) {
 
       {isSubmitting && (
         <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm bg-white/40">
-          <div className="animate-spin rounded-full h-10 w-10 border-t-4 border-b-4 border-[#d4af37]" />
+          <div className="animate-spin rounded-full h-8 w-8 border-t-4 border-b-4 border-[#d4af37]" />
         </div>
       )}
 
       <h3
-        className="text-xl sm:text-2xl font-bold text-[#4b4b8f] mb-3 text-center"
+        className="text-lg sm:text-xl font-bold text-[#4b4b8f] mb-2 text-center"
         style={{ fontFamily: "'Playfair Display', serif" }}
       >
         {content.bookAppointment}
       </h3>
 
-      <form onSubmit={handleSubmit} className="space-y-2.5">
+      <form onSubmit={handleSubmit} className="space-y-2">
         {["name", "email", "phone"].map((field) => (
-          <div key={field}>
-            <input
-              type={field === "email" ? "email" : "text"}
-              name={field}
-              placeholder={content.formLabels[field]}
-              value={formData[field]}
-              onChange={handleChange}
-              required
-              className="w-full p-2.5 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-[#d4af37] focus:outline-none"
-              style={{ fontFamily: "'Cormorant', serif" }}
-            />
-          </div>
+          <input
+            key={field}
+            type={field === "email" ? "email" : "text"}
+            name={field}
+            placeholder={content.formLabels[field]}
+            value={formData[field]}
+            onChange={handleChange}
+            required
+            className="w-full p-2 border border-gray-300 rounded-md text-sm focus:ring-1 focus:ring-[#d4af37] focus:outline-none"
+            style={{ fontFamily: "'Cormorant', serif" }}
+          />
         ))}
 
         <textarea
@@ -152,12 +146,12 @@ export default function ContactForm({ language }) {
           placeholder={content.formLabels.message}
           value={formData.message}
           onChange={handleChange}
-          rows="3"
-          className="w-full p-2.5 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-[#d4af37] focus:outline-none"
+          rows="2"
+          className="w-full p-2 border border-gray-300 rounded-md text-sm focus:ring-1 focus:ring-[#d4af37] focus:outline-none"
           style={{ fontFamily: "'Cormorant', serif" }}
         />
 
-        <div className="flex justify-center my-2">
+        <div className="flex justify-center my-1">
           <ReCAPTCHA
             sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
             onChange={handleRecaptchaChange}
@@ -167,7 +161,7 @@ export default function ContactForm({ language }) {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-[#d4af37] hover:bg-[#c19d30] text-white font-medium py-2.5 rounded-full transition-all shadow-md hover:shadow-lg text-sm"
+          className="w-full bg-[#d4af37] hover:bg-[#c19d30] text-white font-medium py-2 rounded-full transition-all shadow hover:shadow-md text-sm"
           style={{ fontFamily: "'Playfair Display', serif" }}
         >
           {isSubmitting ? content.formLabels.submit + "..." : content.formLabels.submit}
