@@ -24,7 +24,6 @@ export default function ContactForm({ language }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     if (!recaptchaToken) {
       setAlert({
         show: true,
@@ -48,7 +47,6 @@ export default function ContactForm({ language }) {
     setIsSubmitting(true);
     try {
       const payload = { ...formData, language, recaptchaToken };
-
       const response = await fetch(`${import.meta.env.VITE_API_URL}/api/appointments`, {
         method: "POST",
         headers: {
@@ -65,7 +63,6 @@ export default function ContactForm({ language }) {
       setFormData({ name: "", email: "", phone: "", message: "" });
       setRecaptchaToken(null);
       setIsSubmitting(false);
-
       setAlert({
         show: true,
         message:
@@ -104,69 +101,71 @@ export default function ContactForm({ language }) {
   };
 
   return (
-    <div className="bg-[#fffaf0] rounded-xl shadow-sm p-4 max-w-sm mx-auto border border-[#eee]">
-      {alert.show && (
-        <Alert
-          message={alert.message}
-          type={alert.type}
-          onClose={() => setAlert({ ...alert, show: false })}
-        />
-      )}
-
-      {isSubmitting && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm bg-white/40">
-          <div className="animate-spin rounded-full h-8 w-8 border-t-4 border-b-4 border-[#d4af37]" />
-        </div>
-      )}
-
-      <h3
-        className="text-lg sm:text-xl font-bold text-[#4b4b8f] mb-2 text-center"
-        style={{ fontFamily: "'Playfair Display', serif" }}
-      >
-        {content.bookAppointment}
-      </h3>
-
-      <form onSubmit={handleSubmit} className="space-y-2">
-        {["name", "email", "phone"].map((field) => (
-          <input
-            key={field}
-            type={field === "email" ? "email" : "text"}
-            name={field}
-            placeholder={content.formLabels[field]}
-            value={formData[field]}
-            onChange={handleChange}
-            required
-            className="w-full p-2 border border-gray-300 rounded-md text-sm focus:ring-1 focus:ring-[#d4af37] focus:outline-none"
-            style={{ fontFamily: "'Cormorant', serif" }}
+    <section className="py-16 bg-[#fdfcf8]">
+      <div className="max-w-md mx-auto bg-white rounded-2xl shadow-lg p-6 border border-[#eee]">
+        {alert.show && (
+          <Alert
+            message={alert.message}
+            type={alert.type}
+            onClose={() => setAlert({ ...alert, show: false })}
           />
-        ))}
+        )}
 
-        <textarea
-          name="message"
-          placeholder={content.formLabels.message}
-          value={formData.message}
-          onChange={handleChange}
-          rows="2"
-          className="w-full p-2 border border-gray-300 rounded-md text-sm focus:ring-1 focus:ring-[#d4af37] focus:outline-none"
-          style={{ fontFamily: "'Cormorant', serif" }}
-        />
+        {isSubmitting && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm bg-white/40">
+            <div className="animate-spin rounded-full h-8 w-8 border-t-4 border-b-4 border-[#d4af37]" />
+          </div>
+        )}
 
-        <div className="flex justify-center my-1">
-          <ReCAPTCHA
-            sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-            onChange={handleRecaptchaChange}
-          />
-        </div>
-
-        <button
-          type="submit"
-          disabled={isSubmitting}
-          className="w-full bg-[#d4af37] hover:bg-[#c19d30] text-white font-medium py-2 rounded-full transition-all shadow hover:shadow-md text-sm"
+        <h3
+          className="text-2xl font-bold text-[#4b4b8f] mb-4 text-center"
           style={{ fontFamily: "'Playfair Display', serif" }}
         >
-          {isSubmitting ? content.formLabels.submit + "..." : content.formLabels.submit}
-        </button>
-      </form>
-    </div>
+          {content.bookAppointment}
+        </h3>
+
+        <form onSubmit={handleSubmit} className="space-y-3">
+          {["name", "email", "phone"].map((field) => (
+            <input
+              key={field}
+              type={field === "email" ? "email" : "text"}
+              name={field}
+              placeholder={content.formLabels[field]}
+              value={formData[field]}
+              onChange={handleChange}
+              required
+              className="w-full p-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-[#d4af37] focus:outline-none"
+              style={{ fontFamily: "'Cormorant', serif" }}
+            />
+          ))}
+
+          <textarea
+            name="message"
+            placeholder={content.formLabels.message}
+            value={formData.message}
+            onChange={handleChange}
+            rows="3"
+            className="w-full p-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-[#d4af37] focus:outline-none"
+            style={{ fontFamily: "'Cormorant', serif" }}
+          />
+
+          <div className="flex justify-center my-2">
+            <ReCAPTCHA
+              sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+              onChange={handleRecaptchaChange}
+            />
+          </div>
+
+          <button
+            type="submit"
+            disabled={isSubmitting}
+            className="w-full bg-[#d4af37] hover:bg-[#c19d30] text-white font-medium py-2 rounded-full transition-all shadow-sm hover:shadow-md text-sm"
+            style={{ fontFamily: "'Playfair Display', serif" }}
+          >
+            {isSubmitting ? content.formLabels.submit + "..." : content.formLabels.submit}
+          </button>
+        </form>
+      </div>
+    </section>
   );
 }
