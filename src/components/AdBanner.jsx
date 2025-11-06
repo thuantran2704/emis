@@ -28,9 +28,12 @@ export default function AdBanner() {
         borderRadius: "12px",
         margin: "0 auto",
         backgroundColor: "#000",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
       }}
     >
-      {/* Background opaque image */}
+      {/* Blurred background */}
       <div
         style={{
           backgroundImage: `url(${adImages[current]})`,
@@ -38,12 +41,12 @@ export default function AdBanner() {
           backgroundPosition: "center",
           filter: "blur(10px) brightness(0.3)",
           position: "absolute",
-          width: "100%",
-          height: "100%",
+          inset: 0,
           zIndex: 0,
         }}
       ></div>
 
+      {/* Animated image */}
       <AnimatePresence initial={false}>
         <motion.div
           key={current}
@@ -52,23 +55,22 @@ export default function AdBanner() {
           exit={{ x: -800, opacity: 0 }}
           transition={{ duration: 1 }}
           style={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            width: "100%",
+            position: "relative",
+            zIndex: 1,
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            zIndex: 1,
+            width: "100%",
+            height: "100%",
           }}
         >
           <img
             src={adImages[current]}
             alt={`ad-${current}`}
             style={{
-              maxWidth: "90%",
-              maxHeight: "90%",
+              maxWidth: "100%",
+              maxHeight: "100%",
+              objectFit: "contain",
               borderRadius: "8px",
             }}
           />
