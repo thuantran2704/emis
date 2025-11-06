@@ -144,10 +144,6 @@ export default function Home({ language }) {
       </section>
 
 
-
-      {/* Map Section */}
-      <MapSection content={content} />
-
       {/* Hero Section */}
       <section className="py-28 px-4 max-w-6xl mx-auto text-center">
         <h1
@@ -180,6 +176,10 @@ export default function Home({ language }) {
           {content.bookButton}
         </Link>
       </section>
+      {/* Map Section */}
+      <MapSection content={content} />
+
+      
     </main>
   );
 }
