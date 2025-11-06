@@ -104,12 +104,14 @@ export default function Home({ language }) {
           />
         </div>
       </section>
-      {/* Ad Banner */}
-      <AdBanner/>
+      <ContactForm language={language}/>
+
       {/* Implant Section */}
       <ImplantCards language={language} />
-
-      <ContactForm language={language}/>
+      
+      {/* Ad Banner */}
+      <AdBanner/>
+      
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#4b4b8f] mb-12 text-center border-b-2 border-[#d4af37] pb-2 inline-block">
