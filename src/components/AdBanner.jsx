@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import ad1 from "../pics/ads/ad1.png";
 import ad2 from "../pics/ads/ad2.png";
 import ad3 from "../pics/ads/ad3.png";
@@ -8,50 +7,47 @@ import ad5 from "../pics/ads/ad5.png";
 
 const adImages = [ad1, ad2, ad3, ad4, ad5];
 
-export default function AdBanner() {
-  const [current, setCurrent] = useState(0);
+const AdBanner = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [flipping, setFlipping] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % adImages.length);
-    }, 3000);
+      setFlipping(true); // trigger flip animation
+      setTimeout(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % adImages.length);
+        setFlipping(false);
+      }, 600); // match half the flip duration
+    }, 10000); // change every 10 seconds
+
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div
-      style={{
-        position: "relative",
-        width: "90%",           // responsive width
-        maxWidth: "800px",
-        height: "auto",         // height adapts to image
-        aspectRatio: "2 / 1",   // keep rectangle shape
-        overflow: "hidden",
-        borderRadius: "12px",
-        margin: "0 auto",
-        backgroundColor: "rgba(0,0,0,0.6)",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <AnimatePresence initial={false}>
-        <motion.img
-          key={current}
-          src={adImages[current]}
-          alt={`ad-${current}`}
-          initial={{ x: "100%", opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          exit={{ x: "-100%", opacity: 0 }}
-          transition={{ duration: 1 }}
-          style={{
-            width: "100%",      // image shrinks to fit banner width
-            height: "100%",     // image shrinks to fit banner height
-            objectFit: "contain", // maintain aspect ratio, no stretching
-            borderRadius: "8px",
-          }}
+    <div className="w-full h-64 md:h-80 lg:h-96 perspective-1000">
+      <div
+        className={`relative w-full h-full rounded-lg overflow-hidden shadow-lg transition-transform duration-600 transform-style-preserve-3d ${
+          flipping ? "rotateY-180" : ""
+        }`}
+        style={{
+          transformStyle: "preserve-3d",
+          transition: "transform 0.6s ease-in-out",
+          transform: flipping ? "rotateY(180deg)" : "rotateY(0deg)"
+        }}
+      >
+        <img
+          src={adImages[currentIndex]}
+          alt={`Advertisement ${currentIndex + 1}`}
+          className="w-full h-full object-cover"
+          loading="lazy"
         />
-      </AnimatePresence>
+        <div
+          className="absolute inset-0 bg-black/20" // semi-opaque overlay
+          style={{ backfaceVisibility: "hidden" }}
+        />
+      </div>
     </div>
   );
-}
+};
+
+export default AdBanner;
