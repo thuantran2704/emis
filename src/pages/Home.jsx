@@ -89,8 +89,7 @@ export default function Home({ language }) {
           </div>
         </div>
       </section>
-      {/* Ad Banner */}
-      <AdBanner/>
+
       {/* Services Section */}
       <section className="py-16 bg-[#fcfbf8]">
         <div className="max-w-6xl mx-auto px-4 relative">
@@ -105,7 +104,8 @@ export default function Home({ language }) {
           />
         </div>
       </section>
-
+      {/* Ad Banner */}
+      <AdBanner/>
       {/* Implant Section */}
       <ImplantCards language={language} />
 
