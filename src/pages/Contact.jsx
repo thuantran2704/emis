@@ -149,8 +149,8 @@ export default function Contact({ language }) {
       icon: zaloIcon,
       alt: "Zalo",
       label: "Zalo",
-      value: "https://zalo.me/0919100021",
-      href: "https://zalo.me/0919100021"
+      value: "https://zalo.me/2143697215679541994",
+      href: "https://zalo.me/2143697215679541994"
     },
     {
       icon: facebook,

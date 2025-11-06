@@ -29,17 +29,27 @@ export default function ContactForm({ language }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (!recaptchaToken) {
       setAlert({
         show: true,
         message:
           language === "vietnamese"
-            ? "Vui lòng xác minh reCAPTCHA"
-            : "Please complete the reCAPTCHA verification",
+            ? "Vui lòng xác minh reCAPTCHA."
+            : language === "french"
+            ? "Veuillez compléter la vérification reCAPTCHA."
+            : language === "korean"
+            ? "reCAPTCHA 인증을 완료해주세요."
+            : language === "simplified"
+            ? "请完成 reCAPTCHA 验证。"
+            : language === "traditional"
+            ? "請完成 reCAPTCHA 驗證。"
+            : "Please complete the reCAPTCHA verification.",
         type: "error",
       });
       return;
     }
+
     setIsSubmitting(true);
     try {
       const payload = { ...formData, language, recaptchaToken };
@@ -55,18 +65,25 @@ export default function ContactForm({ language }) {
         credentials: "include",
       });
 
-      if (!response.ok) {
-        throw new Error(`Server responded with ${response.status}`);
-      }
+      if (!response.ok) throw new Error(`Server responded with ${response.status}`);
 
       setFormData({ name: "", email: "", phone: "", message: "" });
       setRecaptchaToken(null);
       setIsSubmitting(false);
+
       setAlert({
         show: true,
         message:
           language === "vietnamese"
             ? "Gửi thành công! Chúng tôi sẽ liên hệ sớm nhất."
+            : language === "french"
+            ? "Message envoyé avec succès ! Nous vous contacterons bientôt."
+            : language === "korean"
+            ? "메시지가 성공적으로 전송되었습니다!"
+            : language === "simplified"
+            ? "发送成功！我们会尽快联系您。"
+            : language === "traditional"
+            ? "發送成功！我們會盡快聯絡您。"
             : "Message sent successfully! We'll contact you soon.",
         type: "success",
       });
@@ -77,6 +94,14 @@ export default function ContactForm({ language }) {
         message:
           language === "vietnamese"
             ? "Gửi thất bại. Vui lòng thử lại."
+            : language === "french"
+            ? "Échec de l'envoi. Veuillez réessayer."
+            : language === "korean"
+            ? "전송 실패. 다시 시도해주세요."
+            : language === "simplified"
+            ? "发送失败，请重试。"
+            : language === "traditional"
+            ? "發送失敗，請重試。"
             : "Failed to send message. Please try again.",
         type: "error",
       });
@@ -84,7 +109,7 @@ export default function ContactForm({ language }) {
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-6 max-w-md mx-auto border border-[#eee]">
+    <div className="bg-[#fffaf0] rounded-2xl shadow-lg p-6 max-w-md mx-auto border border-[#eee]">
       {alert.show && (
         <Alert
           message={alert.message}
@@ -103,7 +128,7 @@ export default function ContactForm({ language }) {
         className="text-2xl font-bold text-[#4b4b8f] mb-4 text-center"
         style={{ fontFamily: "'Playfair Display', serif" }}
       >
-        {language === "vietnamese" ? "Đặt lịch hẹn nhanh" : "Quick Appointment"}
+        {content.bookAppointment}
       </h3>
 
       <form onSubmit={handleSubmit} className="space-y-3">
@@ -145,12 +170,8 @@ export default function ContactForm({ language }) {
           style={{ fontFamily: "'Playfair Display', serif" }}
         >
           {isSubmitting
-            ? language === "vietnamese"
-              ? "Đang gửi..."
-              : "Sending..."
-            : language === "vietnamese"
-            ? "Gửi ngay"
-            : "Send Now"}
+            ? content.formLabels.submit + "..."
+            : content.formLabels.submit}
         </button>
       </form>
     </div>

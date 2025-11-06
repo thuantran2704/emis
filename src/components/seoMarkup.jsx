@@ -34,6 +34,6 @@ export const schemaMarkup = JSON.stringify({
     },
     "priceRange": "$$",
     "sameAs": [
-      "https://www.facebook.com/emisdental",
+      "https://www.facebook.com/emisinternationaldental",
     ]
 });
