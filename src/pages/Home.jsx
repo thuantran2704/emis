@@ -13,15 +13,10 @@ import canal from '../pics/canal.jpg';
 import wisdom from '../pics/wisdomteeth.jpg';
 import ImplantCards from '../components/implants_banner';
 import AdBanner from '../components/AdBanner';
-import ad1 from '../pics/ad1.jpg';
-import ad2 from '../pics/ad2.jpg';
-import ad3 from '../pics/ad3.jpg';
-import ad4 from '../pics/ad4.jpg';
 import hiossenImg from '../pics/hiossen.jpg';
 import osstemImg from '../pics/osstem.jpg';
 import straumannImg from '../pics/straumann.jpg';
 import ShortsSection from '../components/CustomerFeedback';
-let adImages = [];
 
 export default function Home({ language }) {
   const content = homeContent[language] || homeContent.vietnamese;
@@ -77,7 +72,9 @@ export default function Home({ language }) {
         {/* Canonical URL */}
         <link rel="canonical" href="https://emisdental.com" />
       </Helmet>
-
+      
+      {/* Ad Banner here */}
+      <AdBanner/>
       {/* Intro Video Section */}
       <section className="py-16 bg-[#fdfcf8] text-center">
         <h2 className="text-3xl font-bold text-[#4b4b8f] mb-12 text-left border-b-2 border-[#d4af37] pb-2 inline-block">
