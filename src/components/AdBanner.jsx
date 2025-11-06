@@ -3,9 +3,10 @@ import ad1 from "../pics/ads/ad1.png";
 import ad2 from "../pics/ads/ad2.png";
 import ad3 from "../pics/ads/ad3.png";
 import ad4 from "../pics/ads/ad4.png";
+import ad5 from "../pics/ads/ad5.png";
 
 // Add all ad images here
-const adImages = [ad1, ad2, ad3, ad4];
+const adImages = [ad1, ad2, ad3, ad4, ad5];
 
 export default function AdBanner() {
   const [current, setCurrent] = useState(0);
