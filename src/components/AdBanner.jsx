@@ -13,8 +13,7 @@ export default function AdBanner() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % adImages.length);
-    }, 3000); // 3 seconds
-
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
@@ -22,11 +21,12 @@ export default function AdBanner() {
     <div
       style={{
         position: "relative",
-        width: "800px", // rectangle frame width
-        height: "400px", // rectangle frame height
+        width: "800px",
+        height: "400px",
         overflow: "hidden",
         borderRadius: "12px",
         margin: "0 auto",
+        backgroundColor: "#000",
       }}
     >
       {/* Background opaque image */}
@@ -40,24 +40,44 @@ export default function AdBanner() {
           width: "100%",
           height: "100%",
           zIndex: 0,
+          transition: "background-image 1s ease-in-out",
         }}
       ></div>
 
-      {/* Centered main image */}
-      <img
-        src={adImages[current]}
-        alt="ad"
+      {/* Slider container */}
+      <div
         style={{
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          maxWidth: "90%",
-          maxHeight: "90%",
+          display: "flex",
+          width: `${adImages.length * 100}%`,
+          transform: `translateX(-${current * (100 / adImages.length)}%)`,
+          transition: "transform 1s ease-in-out",
+          height: "100%",
+          position: "relative",
           zIndex: 1,
-          borderRadius: "8px",
         }}
-      />
+      >
+        {adImages.map((img, index) => (
+          <div
+            key={index}
+            style={{
+              flex: "0 0 100%",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <img
+              src={img}
+              alt={`ad-${index}`}
+              style={{
+                maxWidth: "90%",
+                maxHeight: "90%",
+                borderRadius: "8px",
+              }}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
