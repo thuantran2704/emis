@@ -36,7 +36,7 @@ export default function AdBanner() {
             initial={{ opacity: 0, scale: 1.03 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.97 }}
-            transition={{ duration: 1.2, ease: "easeInOut" }}
+            transition={{ duration: 0.7, ease: "easeInOut" }}
           />
         </AnimatePresence>
 
