@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useNavigate } from "react-router-dom"; // for navigation
+import { useNavigate } from "react-router-dom"; // if you still want banner click navigation
 import ad1 from "../pics/ads/ad1.jpg";
 import ad2 from "../pics/ads/ad2.jpg";
 import ad3 from "../pics/ads/ad3.jpg";
@@ -23,8 +23,10 @@ export default function AdBanner() {
   return (
     <section className="relative w-full overflow-hidden flex justify-center items-center bg-gradient-to-b from-[#fdfbf7] via-[#f8f4ec] to-[#f3efe6]">
       {/* Banner container */}
-      <div className="relative w-full h-[42vh] md:h-[48vh] lg:h-[54vh] flex justify-center items-center cursor-pointer"
-           onClick={() => navigate("/contact")}>
+      <div
+        className="relative w-full h-[42vh] md:h-[48vh] lg:h-[54vh] flex justify-center items-center cursor-pointer"
+        onClick={() => navigate("/contact")}
+      >
         <AnimatePresence mode="wait">
           <motion.img
             key={current}
@@ -47,7 +49,8 @@ export default function AdBanner() {
         {adImages.map((_, idx) => (
           <div
             key={idx}
-            className={`w-3.5 h-3.5 rounded-full transition-all duration-300 ${
+            onClick={() => setCurrent(idx)} // Click dot → switch to that ad
+            className={`w-3.5 h-3.5 rounded-full transition-all duration-300 cursor-pointer ${
               idx === current
                 ? "bg-[#d4af37] shadow-[0_0_8px_rgba(212,175,55,0.6)] scale-110"
                 : "bg-[#4b4b8f]/40"
