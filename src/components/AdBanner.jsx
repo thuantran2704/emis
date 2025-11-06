@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import ad1 from "../pics/ads/ad1.png";
 import ad2 from "../pics/ads/ad2.png";
 import ad3 from "../pics/ads/ad3.png";
@@ -40,44 +41,30 @@ export default function AdBanner() {
           width: "100%",
           height: "100%",
           zIndex: 0,
-          transition: "background-image 1s ease-in-out",
         }}
       ></div>
 
-      {/* Slider container */}
-      <div
-        style={{
-          display: "flex",
-          width: `${adImages.length * 100}%`,
-          transform: `translateX(-${current * (100 / adImages.length)}%)`,
-          transition: "transform 1s ease-in-out",
-          height: "100%",
-          position: "relative",
-          zIndex: 1,
-        }}
-      >
-        {adImages.map((img, index) => (
-          <div
-            key={index}
-            style={{
-              flex: "0 0 100%",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <img
-              src={img}
-              alt={`ad-${index}`}
-              style={{
-                maxWidth: "90%",
-                maxHeight: "90%",
-                borderRadius: "8px",
-              }}
-            />
-          </div>
-        ))}
-      </div>
+      <AnimatePresence initial={false}>
+        <motion.img
+          key={current}
+          src={adImages[current]}
+          alt={`ad-${current}`}
+          initial={{ x: 800, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          exit={{ x: -800, opacity: 0 }}
+          transition={{ duration: 1 }}
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            maxWidth: "90%",
+            maxHeight: "90%",
+            borderRadius: "8px",
+            zIndex: 1,
+          }}
+        />
+      </AnimatePresence>
     </div>
   );
 }
