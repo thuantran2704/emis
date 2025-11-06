@@ -14,7 +14,7 @@ export default function AdBanner() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % adImages.length);
-    }, 7000);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
@@ -23,12 +23,13 @@ export default function AdBanner() {
       style={{
         position: "relative",
         width: "90%",           // responsive width
-        maxWidth: "800px",      // max width
-        aspectRatio: "2 / 1",   // maintain rectangle shape
+        maxWidth: "800px",
+        height: "auto",         // height adapts to image
+        aspectRatio: "2 / 1",   // keep rectangle shape
         overflow: "hidden",
         borderRadius: "12px",
         margin: "0 auto",
-        backgroundColor: "rgba(0,0,0,0.6)", // dark grey opaque background
+        backgroundColor: "rgba(0,0,0,0.6)",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -44,8 +45,9 @@ export default function AdBanner() {
           exit={{ x: "-100%", opacity: 0 }}
           transition={{ duration: 1 }}
           style={{
-            maxWidth: "90%",
-            maxHeight: "90%",
+            width: "100%",      // image shrinks to fit banner width
+            height: "100%",     // image shrinks to fit banner height
+            objectFit: "contain", // maintain aspect ratio, no stretching
             borderRadius: "8px",
           }}
         />
