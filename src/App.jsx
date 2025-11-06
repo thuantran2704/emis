@@ -35,11 +35,12 @@ export default function App() {
           {/* <Route path="/services" element={<Services language={language} />} /> */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <Footer language={language}/>
         <LanguageToggle 
           currentLanguage={language} 
           onLanguageChange={handleLanguageChange}  // Now passes the selected language directly
         />
-        <Footer/>
+        
       </div>
     </Router>
   );
