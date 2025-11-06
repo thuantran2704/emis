@@ -1,5 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState, useEffect } from 'react';
 import ad1 from "../pics/ads/ad1.png";
 import ad2 from "../pics/ads/ad2.png";
 import ad3 from "../pics/ads/ad3.png";
@@ -8,137 +7,82 @@ import ad5 from "../pics/ads/ad5.png";
 
 const adImages = [ad1, ad2, ad3, ad4, ad5];
 
-export default function AdBanner() {
-  const [current, setCurrent] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(false);
-
-  const nextSlide = useCallback(() => {
-    setIsTransitioning(true);
-    setCurrent((prev) => (prev + 1) % adImages.length);
-  }, []);
+const AdBanner = () => {
+  const [currentAdIndex, setCurrentAdIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (!isTransitioning) {
-        nextSlide();
-      }
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [isTransitioning, nextSlide]);
+      setCurrentAdIndex((prevIndex) => 
+        prevIndex === adImages.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 5000);
 
-  const handleTransitionComplete = () => {
-    setIsTransitioning(false);
+    return () => clearInterval(interval);
+  }, []);
+
+  const handleDotClick = (index) => {
+    setCurrentAdIndex(index);
   };
 
   return (
-    <div
-      style={{
-        position: "relative",
-        width: "100%",
-        maxWidth: "1200px",
-        height: "0",
-        paddingBottom: "50%", // 2:1 aspect ratio
-        overflow: "hidden",
-        borderRadius: "12px",
-        margin: "0 auto",
-        backgroundColor: "#000",
-      }}
-    >
-      {/* Preload next image */}
-      <div style={{ display: "none" }}>
-        {adImages.map((img, index) => (
-          <img key={index} src={img} alt={`preload-${index}`} />
-        ))}
-      </div>
-
-      {/* Blurred background */}
-      <div
-        style={{
-          backgroundImage: `url(${adImages[current]})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          filter: "blur(15px) brightness(0.4)",
-          position: "absolute",
-          top: "-10%",
-          left: "-10%",
-          width: "120%",
-          height: "120%",
-          zIndex: 0,
-          transform: "scale(1.1)",
-        }}
-      />
-
-      {/* Animated image */}
-      <AnimatePresence mode="wait" onExitComplete={handleTransitionComplete}>
-        <motion.div
-          key={current}
-          initial={{ scale: 0.9, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          exit={{ scale: 0.9, opacity: 0 }}
-          transition={{ 
-            duration: 0.7,
-            ease: [0.25, 0.46, 0.45, 0.94] // Custom ease for smoother motion
-          }}
+    <div style={{
+      backgroundColor: '#f5f5f5',
+      padding: '20px',
+      borderRadius: '8px',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      minHeight: '200px',
+      width: '100%',
+      maxWidth: '800px',
+      margin: '0 auto'
+    }}>
+      <div style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: '100%'
+      }}>
+        <img 
+          src={adImages[currentAdIndex]} 
+          alt={`Advertisement ${currentAdIndex + 1}`}
           style={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            zIndex: 1,
-            width: "90%",
-            height: "90%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
+            maxWidth: '100%',
+            maxHeight: '150px',
+            width: 'auto',
+            height: 'auto',
+            objectFit: 'contain'
           }}
-        >
-          <img
-            src={adImages[current]}
-            alt={`ad-${current + 1}`}
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "contain",
-              borderRadius: "8px",
-              pointerEvents: "none", // Improve performance
-            }}
-            loading="eager"
-          />
-        </motion.div>
-      </AnimatePresence>
-
+        />
+      </div>
+      
       {/* Navigation dots */}
-      <div
-        style={{
-          position: "absolute",
-          bottom: "20px",
-          left: "50%",
-          transform: "translateX(-50%)",
-          zIndex: 2,
-          display: "flex",
-          gap: "8px",
-        }}
-      >
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        marginTop: '15px',
+        gap: '8px'
+      }}>
         {adImages.map((_, index) => (
           <button
             key={index}
-            onClick={() => {
-              setIsTransitioning(true);
-              setCurrent(index);
-            }}
+            onClick={() => handleDotClick(index)}
             style={{
-              width: "12px",
-              height: "12px",
-              borderRadius: "50%",
-              border: "none",
-              backgroundColor: current === index ? "#fff" : "rgba(255,255,255,0.5)",
-              cursor: "pointer",
-              transition: "all 0.3s ease",
+              width: '10px',
+              height: '10px',
+              borderRadius: '50%',
+              border: 'none',
+              backgroundColor: currentAdIndex === index ? '#666' : '#ccc',
+              cursor: 'pointer',
+              transition: 'background-color 0.3s ease'
             }}
-            aria-label={`Go to slide ${index + 1}`}
+            aria-label={`Go to advertisement ${index + 1}`}
           />
         ))}
       </div>
     </div>
   );
-}
+};
+
+export default AdBanner;
