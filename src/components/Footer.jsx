@@ -1,6 +1,6 @@
 import { FacebookIcon, Phone, Mail, MapPin } from "lucide-react";
 import zaloIcon from "../pics/zalo.jpg";
-
+import footerContent from "../Translations/footerContent";
 export default function Footer({ language = "english" }) {
   const content = footerContent[language];
 
