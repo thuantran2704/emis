@@ -9,22 +9,22 @@ const adImages = [ad1, ad2, ad3, ad4, ad5];
 
 export default function AdBanner() {
   const [current, setCurrent] = useState(0);
-  const [prev, setPrev] = useState(null);
+  const [next, setNext] = useState(1);
   const [sliding, setSliding] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setPrev(current);
       setSliding(true);
 
       setTimeout(() => {
-        setCurrent((current + 1) % adImages.length);
+        setCurrent(next);
+        setNext((next + 1) % adImages.length);
         setSliding(false);
-      }, 700); // match transition duration
+      }, 700); // duration of slide
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [current]);
+  }, [next]);
 
   return (
     <div className="relative w-full h-[400px] md:h-[500px] overflow-hidden rounded-2xl shadow-lg">
@@ -42,23 +42,20 @@ export default function AdBanner() {
 
       {/* Sliding images */}
       <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
-        {prev !== null && sliding && (
-          <img
-            src={adImages[prev]}
-            alt={`Ad ${prev + 1}`}
-            className="absolute object-contain max-h-[300px] md:max-h-[400px] transition-transform duration-700"
-            style={{
-              transform: "translateX(-100%)", // slide out left
-            }}
-          />
-        )}
-
         <img
           src={adImages[current]}
           alt={`Ad ${current + 1}`}
-          className={`object-contain max-h-[300px] md:max-h-[400px] transition-transform duration-700`}
+          className="absolute object-contain max-h-[300px] md:max-h-[400px] transition-transform duration-700"
           style={{
-            transform: sliding ? "translateX(0%)" : "translateX(0%)", // slide in from right
+            transform: sliding ? "translateX(-100%)" : "translateX(0%)",
+          }}
+        />
+        <img
+          src={adImages[next]}
+          alt={`Ad ${next + 1}`}
+          className="absolute object-contain max-h-[300px] md:max-h-[400px] transition-transform duration-700"
+          style={{
+            transform: sliding ? "translateX(0%)" : "translateX(100%)",
           }}
         />
       </div>
