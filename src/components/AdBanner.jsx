@@ -27,16 +27,18 @@ const AdBanner = () => {
   return (
     <div style={{
       position: 'relative',
-      backgroundColor: 'rgba(0, 0, 0, 0.3)', // Darkened opaque background
-      padding: '40px 20px',
+      backgroundImage: `url(${adImages[currentAdIndex]})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
       borderRadius: '12px',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
-      minHeight: '300px', // Larger height
+      minHeight: '400px',
       width: '100%',
-      maxWidth: '1000px', // Wider banner
+      maxWidth: '1000px',
       margin: '0 auto',
       boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)',
       overflow: 'hidden'
@@ -48,10 +50,11 @@ const AdBanner = () => {
         left: 0,
         right: 0,
         bottom: 0,
-        backgroundColor: 'rgba(0, 0, 0, 0.4)', // Dark overlay
+        backgroundColor: 'rgba(0, 0, 0, 0.6)', // Darker overlay for better contrast
         zIndex: 1
       }}></div>
       
+      {/* Main image - larger and centered */}
       <div style={{
         position: 'relative',
         zIndex: 2,
@@ -65,13 +68,13 @@ const AdBanner = () => {
           src={adImages[currentAdIndex]} 
           alt={`Advertisement ${currentAdIndex + 1}`}
           style={{
-            maxWidth: '90%',
-            maxHeight: '250px', // Larger image display
+            maxWidth: '80%',
+            maxHeight: '350px', // Much larger main image
             width: 'auto',
             height: 'auto',
             objectFit: 'contain',
             borderRadius: '8px',
-            boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)'
+            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)'
           }}
         />
       </div>
@@ -82,7 +85,8 @@ const AdBanner = () => {
         zIndex: 2,
         display: 'flex',
         justifyContent: 'center',
-        marginTop: '25px',
+        marginTop: '20px',
+        marginBottom: '20px',
         gap: '12px'
       }}>
         {adImages.map((_, index) => (
@@ -97,7 +101,7 @@ const AdBanner = () => {
               backgroundColor: currentAdIndex === index ? '#d4af37' : 'rgba(255, 255, 255, 0.5)',
               cursor: 'pointer',
               transition: 'all 0.3s ease',
-              boxShadow: '0 2px 8px rgba(0, 0, 0, 0.2)'
+              boxShadow: '0 2px 8px rgba(0, 0, 0, 0.3)'
             }}
             aria-label={`Go to advertisement ${index + 1}`}
           />
