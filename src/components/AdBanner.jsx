@@ -9,75 +9,50 @@ const adImages = [ad1, ad2, ad3, ad4, ad5];
 
 export default function AdBanner() {
   const [current, setCurrent] = useState(0);
-  const [next, setNext] = useState(1);
-  const [direction, setDirection] = useState("right");
-  const [sliding, setSliding] = useState(false);
+  const [offset, setOffset] = useState(0); // for sliding effect
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setDirection("right");
-      setSliding(true);
-      setNext((prev) => (prev + 1) % adImages.length);
+      // slide left
+      setOffset(-100);
 
       setTimeout(() => {
+        // after slide, update current image and reset offset
         setCurrent((prev) => (prev + 1) % adImages.length);
-        setSliding(false);
-      }, 700);
+        setOffset(0);
+      }, 600); // match transition duration
     }, 3000);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="relative w-full h-[400px] md:h-[500px] overflow-hidden rounded-2xl shadow-lg bg-black">
-      {/* Background layer (blurred & darkened) */}
+    <div className="relative w-full h-[400px] md:h-[500px] overflow-hidden rounded-2xl shadow-lg">
+      {/* Blurred background */}
       <div
         className="absolute inset-0 transition-all duration-700"
         style={{
           backgroundImage: `url(${adImages[current]})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          filter: "blur(25px) brightness(0.4)",
+          filter: "blur(25px) brightness(0.3)",
           transform: "scale(1.1)",
         }}
-      />
+      ></div>
 
-      {/* Sliding images container */}
-      <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
-        <div
-          className={`flex items-center justify-center transition-transform duration-700 ease-in-out`}
+      {/* Centered main image */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <img
+          src={adImages[current]}
+          alt={`Ad ${current + 1}`}
+          className="object-contain max-h-[300px] md:max-h-[400px] transition-transform duration-600"
           style={{
-            transform: sliding
-              ? direction === "right"
-                ? "translateX(-100%)"
-                : "translateX(100%)"
-              : "translateX(0)",
+            transform: `translateX(${offset}%)`,
           }}
-        >
-          {/* Current Image */}
-          <img
-            src={adImages[current]}
-            alt={`Ad ${current + 1}`}
-            className="w-auto h-[300px] md:h-[400px] object-contain mx-auto rounded-lg shadow-xl transition-transform duration-700"
-          />
-
-          {/* Next Image (slides in) */}
-          <img
-            src={adImages[next]}
-            alt={`Ad ${next + 1}`}
-            className="w-auto h-[300px] md:h-[400px] object-contain mx-auto rounded-lg shadow-xl absolute left-full transition-transform duration-700"
-            style={{
-              transform: sliding
-                ? direction === "right"
-                  ? "translateX(-100%)"
-                  : "translateX(100%)"
-                : "translateX(0)",
-            }}
-          />
-        </div>
+        />
       </div>
 
-      {/* Dots */}
+      {/* Dot indicators */}
       <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-20">
         {adImages.map((_, index) => (
           <div
