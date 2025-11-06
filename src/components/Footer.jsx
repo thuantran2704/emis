@@ -70,7 +70,7 @@ export default function Footer({ language = "english" }) {
           </h3>
           <div className="flex items-center gap-4 mb-6">
             <a
-              href="https://facebook.com/emisdental"
+              href="https://www.facebook.com/emisinternationaldental"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 bg-white rounded-full shadow hover:shadow-md transition"
@@ -78,7 +78,7 @@ export default function Footer({ language = "english" }) {
               <FacebookIcon className="text-[#1f2937]" size={20} />
             </a>
             <a
-              href="https://zalo.me/0919100021"
+              href="https://zalo.me/2143697215679541994"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 bg-white rounded-full shadow hover:shadow-md transition"
