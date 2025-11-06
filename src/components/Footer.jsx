@@ -1,5 +1,6 @@
-import { Facebook, Phone, Mail, MapPin } from "lucide-react";
+import { FacebookIcon, Phone, Mail, MapPin } from "lucide-react";
 import zaloIcon from "../pics/zalo.jpg";
+
 export default function Footer({ language = "english" }) {
   const content = footerContent[language];
 
@@ -74,7 +75,7 @@ export default function Footer({ language = "english" }) {
               rel="noopener noreferrer"
               className="p-2 bg-white rounded-full shadow hover:shadow-md transition"
             >
-              <Facebook className="text-[#1f2937]" size={20} />
+              <FacebookIcon className="text-[#1f2937]" size={20} />
             </a>
             <a
               href="https://zalo.me/0919100021"
@@ -82,7 +83,11 @@ export default function Footer({ language = "english" }) {
               rel="noopener noreferrer"
               className="p-2 bg-white rounded-full shadow hover:shadow-md transition"
             >
-              <img src={zaloIcon} alt="Zalo" className="h-5 w-5 object-contain" />
+              <img
+                src={zaloIcon}
+                alt="Zalo"
+                className="h-5 w-5 object-contain"
+              />
             </a>
           </div>
 
