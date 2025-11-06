@@ -19,13 +19,13 @@ const AdBanner = () => {
   }, []);
 
   return (
-    <div className="w-full h-64 md:h-80 lg:h-96 relative overflow-hidden rounded-lg shadow-lg">
+    <div className="w-full h-[36rem] relative overflow-hidden rounded-lg shadow-lg bg-[#111111] flex items-center justify-center">
       <img
         src={adImages[currentIndex]}
         alt={`Advertisement ${currentIndex + 1}`}
-        className="w-full h-full object-cover transition-opacity duration-1000"
+        className="max-w-full max-h-full object-contain transition-opacity duration-1000"
+        loading="lazy"
       />
-      <div className="absolute inset-0 bg-black/20" />
     </div>
   );
 };
