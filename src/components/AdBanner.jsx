@@ -19,7 +19,7 @@ export default function AdBanner() {
   }, []);
 
   return (
-    <section className="relative w-full overflow-hidden flex justify-center items-center bg-gradient-to-b from-neutral-900 via-neutral-800 to-neutral-700">
+    <section className="relative w-full overflow-hidden flex justify-center items-center bg-gradient-to-b from-[#fdfbf7] via-[#f8f4ec] to-[#f3efe6]">
       {/* Banner container */}
       <div className="relative w-full h-[42vh] md:h-[48vh] lg:h-[54vh] flex justify-center items-center">
         <AnimatePresence mode="wait">
@@ -27,7 +27,7 @@ export default function AdBanner() {
             key={current}
             src={adImages[current]}
             alt={`Ad ${current + 1}`}
-            className="max-h-full max-w-full object-contain drop-shadow-[0_8px_20px_rgba(0,0,0,0.4)]"
+            className="max-h-full max-w-full object-contain drop-shadow-[0_8px_20px_rgba(0,0,0,0.25)]"
             initial={{ opacity: 0, scale: 1.03 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.97 }}
@@ -35,8 +35,8 @@ export default function AdBanner() {
           />
         </AnimatePresence>
 
-        {/* Gentle dark fade overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-transparent pointer-events-none" />
+        {/* Gentle overlay to soften contrast */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-white/10 to-transparent pointer-events-none" />
       </div>
 
       {/* Navigation dots */}
@@ -47,8 +47,8 @@ export default function AdBanner() {
             onClick={() => setCurrent(idx)}
             className={`w-3.5 h-3.5 rounded-full transition-all duration-300 ${
               idx === current
-                ? "bg-[#d4af37] shadow-[0_0_8px_rgba(212,175,55,0.8)] scale-110"
-                : "bg-white/40 hover:bg-white/70"
+                ? "bg-[#d4af37] shadow-[0_0_8px_rgba(212,175,55,0.6)] scale-110"
+                : "bg-[#4b4b8f]/40 hover:bg-[#4b4b8f]/70"
             }`}
             aria-label={`Go to ad ${idx + 1}`}
           />
@@ -57,3 +57,4 @@ export default function AdBanner() {
     </section>
   );
 }
+
