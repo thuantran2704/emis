@@ -20,9 +20,9 @@ export default function AdBanner() {
   }, []);
 
   return (
-    <section className="relative w-full bg-black overflow-hidden flex justify-center items-center">
-      {/* Reduced banner height by 20% */}
-      <div className="relative w-full h-[30vh] md:h-[56vh] lg:h-[64vh] flex justify-center items-center">
+    <section className="relative w-full bg-neutral-900 overflow-hidden flex justify-center items-center">
+      {/* Reduced banner height further */}
+      <div className="relative w-full h-[35vh] md:h-[40vh] lg:h-[45vh] flex justify-center items-center">
         <AnimatePresence mode="wait">
           <motion.img
             key={current}
@@ -38,13 +38,13 @@ export default function AdBanner() {
       </div>
 
       {/* Navigation Dots */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3">
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
         {adImages.map((_, idx) => (
           <button
             key={idx}
             onClick={() => setCurrent(idx)}
-            className={`w-3 h-3 rounded-full transition-all ${
-              idx === current ? "bg-[#d4af37]" : "bg-white/50 hover:bg-white/80"
+            className={`w-2.5 h-2.5 rounded-full transition-all ${
+              idx === current ? "bg-[#d4af37]" : "bg-white/40 hover:bg-white/70"
             }`}
             aria-label={`Go to ad ${idx + 1}`}
           />
