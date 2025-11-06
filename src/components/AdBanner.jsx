@@ -22,7 +22,7 @@ export default function AdBanner() {
   return (
     <section className="relative w-full bg-black overflow-hidden flex justify-center items-center">
       {/* Reduced banner height by 20% */}
-      <div className="relative w-full h-[48vh] md:h-[56vh] lg:h-[64vh] flex justify-center items-center">
+      <div className="relative w-full h-[30vh] md:h-[56vh] lg:h-[64vh] flex justify-center items-center">
         <AnimatePresence mode="wait">
           <motion.img
             key={current}
