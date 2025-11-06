@@ -109,7 +109,7 @@ export default function ContactForm({ language }) {
   };
 
   return (
-    <div className="bg-[#fffaf0] rounded-2xl shadow-lg p-6 max-w-md mx-auto border border-[#eee]">
+    <div className="bg-[#fffaf0] rounded-2xl shadow-md p-5 max-w-md mx-auto border border-[#eee]">
       {alert.show && (
         <Alert
           message={alert.message}
@@ -120,18 +120,18 @@ export default function ContactForm({ language }) {
 
       {isSubmitting && (
         <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm bg-white/40">
-          <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-[#d4af37]" />
+          <div className="animate-spin rounded-full h-10 w-10 border-t-4 border-b-4 border-[#d4af37]" />
         </div>
       )}
 
       <h3
-        className="text-2xl font-bold text-[#4b4b8f] mb-4 text-center"
+        className="text-xl sm:text-2xl font-bold text-[#4b4b8f] mb-3 text-center"
         style={{ fontFamily: "'Playfair Display', serif" }}
       >
         {content.bookAppointment}
       </h3>
 
-      <form onSubmit={handleSubmit} className="space-y-3">
+      <form onSubmit={handleSubmit} className="space-y-2.5">
         {["name", "email", "phone"].map((field) => (
           <div key={field}>
             <input
@@ -141,7 +141,7 @@ export default function ContactForm({ language }) {
               value={formData[field]}
               onChange={handleChange}
               required
-              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#d4af37] focus:outline-none"
+              className="w-full p-2.5 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-[#d4af37] focus:outline-none"
               style={{ fontFamily: "'Cormorant', serif" }}
             />
           </div>
@@ -153,11 +153,11 @@ export default function ContactForm({ language }) {
           value={formData.message}
           onChange={handleChange}
           rows="3"
-          className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#d4af37] focus:outline-none"
+          className="w-full p-2.5 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-[#d4af37] focus:outline-none"
           style={{ fontFamily: "'Cormorant', serif" }}
         />
 
-        <div className="flex justify-center my-3">
+        <div className="flex justify-center my-2">
           <ReCAPTCHA
             sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
             onChange={handleRecaptchaChange}
@@ -166,12 +166,11 @@ export default function ContactForm({ language }) {
 
         <button
           type="submit"
-          className="w-full bg-[#d4af37] hover:bg-[#c19d30] text-white font-semibold py-3 rounded-full transition-all shadow-md hover:shadow-lg"
+          disabled={isSubmitting}
+          className="w-full bg-[#d4af37] hover:bg-[#c19d30] text-white font-medium py-2.5 rounded-full transition-all shadow-md hover:shadow-lg text-sm"
           style={{ fontFamily: "'Playfair Display', serif" }}
         >
-          {isSubmitting
-            ? content.formLabels.submit + "..."
-            : content.formLabels.submit}
+          {isSubmitting ? content.formLabels.submit + "..." : content.formLabels.submit}
         </button>
       </form>
     </div>
