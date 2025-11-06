@@ -69,7 +69,8 @@ export default function Home({ language }) {
         {/* Canonical URL */}
         <link rel="canonical" href="https://emisdental.com" />
       </Helmet>
-
+      {/* Ad Banner */}
+      <AdBanner/>
       {/* Intro Video Section */}
       <section className="py-16 bg-[#fdfcf8] text-center">
         <h2 className="text-3xl font-bold text-[#4b4b8f] mb-12 text-left border-b-2 border-[#d4af37] pb-2 inline-block">
