@@ -10,6 +10,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { setLanguage } from './slices/languageSlice.js'
 import { Helmet } from 'react-helmet';
 import { schemaMarkup } from './components/seoMarkup';
+import Footer from './components/Footer.jsx';
 export default function App() {
   const language = useSelector((state) => state.language.language);
   const dispatch = useDispatch();
@@ -38,6 +39,7 @@ export default function App() {
           currentLanguage={language} 
           onLanguageChange={handleLanguageChange}  // Now passes the selected language directly
         />
+        <Footer/>
       </div>
     </Router>
   );
