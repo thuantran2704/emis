@@ -22,8 +22,9 @@ export default function AdBanner() {
     <div
       style={{
         position: "relative",
-        width: "800px",
-        height: "400px",
+        width: "90%",           // responsive width
+        maxWidth: "800px",      // max width
+        aspectRatio: "2 / 1",   // maintain rectangle shape
         overflow: "hidden",
         borderRadius: "12px",
         margin: "0 auto",
@@ -38,9 +39,9 @@ export default function AdBanner() {
           key={current}
           src={adImages[current]}
           alt={`ad-${current}`}
-          initial={{ x: 800, opacity: 0 }}
+          initial={{ x: "100%", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          exit={{ x: -800, opacity: 0 }}
+          exit={{ x: "-100%", opacity: 0 }}
           transition={{ duration: 1 }}
           style={{
             maxWidth: "90%",
