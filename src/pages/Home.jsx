@@ -16,7 +16,7 @@ import AdBanner from '../components/AdBanner';
 import hiossenImg from '../pics/hiossen.jpg';
 import osstemImg from '../pics/osstem.jpg';
 import straumannImg from '../pics/straumann.jpg';
-
+import ContactForm from '../components/ContactForm';
 export default function Home({ language }) {
   const content = homeContent[language] || homeContent.vietnamese;
   const serviceImages = [
@@ -108,7 +108,8 @@ export default function Home({ language }) {
       <AdBanner/>
       {/* Implant Section */}
       <ImplantCards language={language} />
-
+      
+      <ContactForm/>
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#4b4b8f] mb-12 text-center border-b-2 border-[#d4af37] pb-2 inline-block">
