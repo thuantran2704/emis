@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Papa from "papaparse";
-import * as XLSX from "xlsx/dist/xlsx.mjs";
 
 export default function Services({ language }) {
   const [services, setServices] = useState([]);
@@ -12,21 +11,22 @@ export default function Services({ language }) {
       setLoading(true);
 
       try {
-        if (language === "vietnamese") {
-          // Load from CSV
-          const response = await fetch("/dental_services_vn.csv");
-          const text = await response.text();
-          const parsed = Papa.parse(text, { header: true });
-          setServices(parsed.data.filter((row) => row["DỊCH VỤ"]));
-        } else {
-          // Load from Excel
-          const response = await fetch("/emisdental-pricelist.xlsx");
-          const arrayBuffer = await response.arrayBuffer();
-          const workbook = XLSX.read(arrayBuffer, { type: "array" });
-          const firstSheet = workbook.Sheets[workbook.SheetNames[0]];
-          const jsonData = XLSX.utils.sheet_to_json(firstSheet);
-          setServices(jsonData);
-        }
+        // Choose which CSV file to load
+        const file =
+          language === "vietnamese"
+            ? "/dental_services_vn.csv"
+            : "/emisdental-pricelist.csv";
+
+        const response = await fetch(file);
+        const text = await response.text();
+        const parsed = Papa.parse(text, { header: true });
+
+        // Filter out empty rows
+        const validRows = parsed.data.filter(
+          (row) => Object.values(row).some((v) => v && v.trim() !== "")
+        );
+
+        setServices(validRows);
       } catch (err) {
         console.error("Error loading price data:", err);
       } finally {
@@ -74,7 +74,7 @@ export default function Services({ language }) {
                 <tr>
                   {Object.keys(filtered[0] || {}).map((key) => (
                     <th key={key} className="px-3 md:px-4 py-3 whitespace-nowrap">
-                      {key.toLowerCase()}
+                      {key}
                     </th>
                   ))}
                 </tr>
