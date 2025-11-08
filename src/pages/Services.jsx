@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Link } from "react";
 import Papa from "papaparse";
 
 export default function Services({ language }) {
@@ -114,9 +114,11 @@ export default function Services({ language }) {
         )}
 
         <div className="text-center mt-10">
-          <button className="bg-blue-600 text-white px-5 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base hover:bg-blue-700 transition">
-            {language === "vietnamese" ? "đặt lịch ngay" : "book now"}
-          </button>
+          <Link to="/contact">
+            <button className="bg-blue-600 text-white px-5 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base hover:bg-blue-700 transition">
+              {language === "vietnamese" ? "đặt lịch ngay" : "book now"}
+            </button>
+          </Link>
         </div>
       </div>
     </div>
