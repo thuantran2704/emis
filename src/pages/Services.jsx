@@ -28,15 +28,27 @@ export default function Services({ language }) {
           Object.values(row).some((val) => val && val.trim() !== "")
         );
 
-        // 🔹 Convert to lowercase if Vietnamese
+        // 🔹 Capitalize each word for Vietnamese data
         if (language === "vietnamese") {
+          const capitalizeWords = (str) =>
+            str
+              .toLowerCase()
+              .split(" ")
+              .map((word) =>
+                word.charAt(0).toUpperCase() + word.slice(1)
+              )
+              .join(" ");
+
           cleanData = cleanData.map((row) => {
-            const lowerRow = {};
+            const formattedRow = {};
             for (const key in row) {
-              lowerRow[key.toLowerCase()] =
-                row[key]?.toLowerCase().trim() || "";
+              formattedRow[
+                capitalizeWords(key.trim())
+              ] = row[key]
+                ? capitalizeWords(row[key].trim())
+                : "";
             }
-            return lowerRow;
+            return formattedRow;
           });
         }
 
@@ -50,6 +62,7 @@ export default function Services({ language }) {
 
     loadData();
   }, [language]);
+
 
 
   // Search filter (case insensitive)
