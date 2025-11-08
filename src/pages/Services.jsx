@@ -9,11 +9,9 @@ export default function Services() {
   const [search, setSearch] = useState('');
 
   useEffect(() => {
-    fetch('/dental_services_vn.csv') // ✅ Correct path (served from public/)
+    fetch('/dental_services_vn.csv')
       .then((response) => {
-        if (!response.ok) {
-          throw new Error('Failed to load CSV');
-        }
+        if (!response.ok) throw new Error('Failed to load CSV');
         return response.text();
       })
       .then((csvText) => {
@@ -33,51 +31,49 @@ export default function Services() {
   );
 
   return (
-    <main className="min-h-screen bg-[#f7f2e7] pt-24 pb-20">
-      {/* SEO Meta Tags */}
+    <main className="min-h-screen bg-[#f7f2e7] pt-20 pb-16">
+      {/* SEO */}
       <Helmet>
-        <title>Bảng Giá Dịch Vụ Nha Khoa | Emis Dental</title>
+        <title>bảng giá nha khoa | emis dental</title>
         <meta
           name="description"
-          content="Bảng giá chi tiết các dịch vụ nha khoa tại Emis Dental — bao gồm cạo vôi, trám thẩm mỹ, tẩy trắng, chỉnh nha, răng sứ, implant và nhiều dịch vụ khác."
+          content="bảng giá các dịch vụ nha khoa tại emis dental — bao gồm cạo vôi, trám, tẩy trắng, chỉnh nha, răng sứ, implant và nhiều dịch vụ khác."
         />
       </Helmet>
 
       <section className="max-w-6xl mx-auto px-4">
-        {/* Title */}
-        <h1 className="text-4xl font-bold text-[#4b4b8f] mb-6 text-center border-b-2 border-[#d4af37] pb-2 inline-block">
-          Bảng Giá Dịch Vụ Nha Khoa
+        {/* title */}
+        <h1 className="text-2xl md:text-3xl font-semibold text-[#4b4b8f] mb-6 text-center border-b-2 border-[#d4af37] pb-2 inline-block">
+          bảng giá dịch vụ nha khoa
         </h1>
 
-        {/* Search */}
-        <div className="flex justify-center mb-8">
+        {/* search bar */}
+        <div className="flex justify-center mb-6">
           <input
             type="text"
-            placeholder="Tìm dịch vụ..."
-            className="w-full max-w-md px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
+            placeholder="tìm dịch vụ..."
+            className="w-full max-w-md px-3 py-2 text-sm border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#d4af37] placeholder-gray-400"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
         </div>
 
-        {/* Table */}
+        {/* table */}
         {loading ? (
-          <div className="text-center text-gray-600 py-10">
-            Đang tải dữ liệu...
+          <div className="text-center text-gray-600 py-10 text-sm">
+            đang tải dữ liệu...
           </div>
         ) : (
           <div className="overflow-x-auto bg-white shadow-md rounded-2xl">
             <table className="min-w-full table-auto text-left border-collapse">
-              <thead className="bg-[#4b4b8f] text-white">
+              <thead className="bg-[#4b4b8f] text-white text-xs md:text-sm uppercase tracking-wide">
                 <tr>
-                  <th className="px-6 py-3 text-sm font-semibold">DỊCH VỤ</th>
-                  <th className="px-6 py-3 text-sm font-semibold">ĐƠN VỊ TÍNH</th>
-                  <th className="px-6 py-3 text-sm font-semibold">
-                    ĐƠN GIÁ (VND)
-                  </th>
+                  <th className="px-4 md:px-6 py-3 font-medium">dịch vụ</th>
+                  <th className="px-4 md:px-6 py-3 font-medium">đơn vị tính</th>
+                  <th className="px-4 md:px-6 py-3 font-medium">đơn giá (vnd)</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody className="text-sm md:text-base">
                 {filteredServices.map((service, index) => (
                   <tr
                     key={index}
@@ -85,13 +81,13 @@ export default function Services() {
                       index % 2 === 0 ? 'bg-[#fcfbf8]' : 'bg-white'
                     }`}
                   >
-                    <td className="px-6 py-3 font-medium text-gray-800">
-                      {service['DỊCH VỤ']}
+                    <td className="px-4 md:px-6 py-3 text-gray-800">
+                      {service['DỊCH VỤ']?.toLowerCase()}
                     </td>
-                    <td className="px-6 py-3 text-gray-700">
-                      {service['ĐƠN VỊ TÍNH']}
+                    <td className="px-4 md:px-6 py-3 text-gray-700">
+                      {service['ĐƠN VỊ TÍNH']?.toLowerCase()}
                     </td>
-                    <td className="px-6 py-3 text-[#d4af37] font-semibold">
+                    <td className="px-4 md:px-6 py-3 text-[#d4af37] font-medium">
                       {service['ĐƠN GIÁ']}
                     </td>
                   </tr>
@@ -101,13 +97,13 @@ export default function Services() {
           </div>
         )}
 
-        {/* CTA */}
+        {/* call-to-action */}
         <div className="text-center mt-10">
           <Link
             to="/contact"
-            className="inline-block bg-[#d4af37] hover:bg-[#c19d30] text-white font-bold py-3 px-8 rounded-full transition-all text-lg shadow-md hover:shadow-lg"
+            className="inline-block bg-[#d4af37] hover:bg-[#c19d30] text-white font-semibold py-3 px-8 rounded-full transition-all text-base shadow-md hover:shadow-lg"
           >
-            Đặt Lịch Ngay
+            đặt lịch ngay
           </Link>
         </div>
       </section>
