@@ -9,9 +9,8 @@ export default function Services({ language }) {
   useEffect(() => {
     const loadData = async () => {
       setLoading(true);
-
       try {
-        // Choose which CSV file to load
+        // Select which CSV to load
         const file =
           language === "vietnamese"
             ? "/dental_services_vn.csv"
@@ -19,14 +18,19 @@ export default function Services({ language }) {
 
         const response = await fetch(file);
         const text = await response.text();
-        const parsed = Papa.parse(text, { header: true });
 
-        // Filter out empty rows
-        const validRows = parsed.data.filter(
-          (row) => Object.values(row).some((v) => v && v.trim() !== "")
+        // Parse CSV with PapaParse
+        const parsed = Papa.parse(text, {
+          header: true,
+          skipEmptyLines: true,
+        });
+
+        // Clean out empty or null rows
+        const cleanData = parsed.data.filter((row) =>
+          Object.values(row).some((val) => val && val.trim() !== "")
         );
 
-        setServices(validRows);
+        setServices(cleanData);
       } catch (err) {
         console.error("Error loading price data:", err);
       } finally {
@@ -37,6 +41,7 @@ export default function Services({ language }) {
     loadData();
   }, [language]);
 
+  // Search filter (case insensitive)
   const filtered = services.filter((item) =>
     Object.values(item)
       .join(" ")
@@ -67,14 +72,23 @@ export default function Services({ language }) {
           <p className="text-center text-gray-500 text-sm">
             {language === "vietnamese" ? "đang tải dữ liệu..." : "loading..."}
           </p>
+        ) : filtered.length === 0 ? (
+          <p className="text-center text-gray-500 text-sm">
+            {language === "vietnamese"
+              ? "không tìm thấy dịch vụ"
+              : "no services found"}
+          </p>
         ) : (
           <div className="overflow-x-auto rounded-2xl shadow-sm">
             <table className="w-full text-left text-gray-700 text-sm md:text-base">
               <thead className="bg-gray-100 text-gray-600 uppercase text-xs md:text-sm">
                 <tr>
                   {Object.keys(filtered[0] || {}).map((key) => (
-                    <th key={key} className="px-3 md:px-4 py-3 whitespace-nowrap">
-                      {key}
+                    <th
+                      key={key}
+                      className="px-3 md:px-4 py-3 whitespace-nowrap"
+                    >
+                      {key.trim()}
                     </th>
                   ))}
                 </tr>
@@ -89,7 +103,7 @@ export default function Services({ language }) {
                   >
                     {Object.keys(row).map((col, j) => (
                       <td key={j} className="px-3 md:px-4 py-2">
-                        {row[col]}
+                        {row[col] || ""}
                       </td>
                     ))}
                   </tr>
