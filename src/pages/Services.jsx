@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Papa from "papaparse";
-import * as XLSX from "xlsx";
+import * as XLSX from "xlsx/dist/xlsx.mjs";
 
 export default function Services({ language }) {
   const [services, setServices] = useState([]);
