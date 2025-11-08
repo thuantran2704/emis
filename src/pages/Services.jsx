@@ -3,42 +3,53 @@ import { Helmet } from 'react-helmet';
 import Papa from 'papaparse';
 import { Link } from 'react-router-dom';
 
-export default function Services({ language }) {
+export default function Services() {
   const [services, setServices] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState('');
 
   useEffect(() => {
-    fetch('../../public/dental_services_vn.csv')
-      .then((response) => response.text())
+    fetch('/dental_services_vn.csv') // ✅ Correct path (served from public/)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Failed to load CSV');
+        }
+        return response.text();
+      })
       .then((csvText) => {
         const parsed = Papa.parse(csvText, { header: true });
-        setServices(parsed.data.filter(row => row['DỊCH VỤ'])); // filter out empty rows
+        const cleaned = parsed.data.filter((row) => row['DỊCH VỤ']);
+        setServices(cleaned);
         setLoading(false);
       })
-      .catch((err) => console.error('Error loading CSV:', err));
+      .catch((err) => {
+        console.error('Error loading CSV:', err);
+        setLoading(false);
+      });
   }, []);
 
-  const filteredServices = services.filter(service =>
+  const filteredServices = services.filter((service) =>
     service['DỊCH VỤ']?.toLowerCase().includes(search.toLowerCase())
   );
 
   return (
     <main className="min-h-screen bg-[#f7f2e7] pt-24 pb-20">
+      {/* SEO Meta Tags */}
       <Helmet>
-        <title>Bảng Giá Nha Khoa | Emis Dental</title>
+        <title>Bảng Giá Dịch Vụ Nha Khoa | Emis Dental</title>
         <meta
           name="description"
-          content="Bảng giá các dịch vụ nha khoa tại Emis Dental – bao gồm cạo vôi, trám răng, tẩy trắng, niềng răng, răng sứ, implant và nhiều dịch vụ khác."
+          content="Bảng giá chi tiết các dịch vụ nha khoa tại Emis Dental — bao gồm cạo vôi, trám thẩm mỹ, tẩy trắng, chỉnh nha, răng sứ, implant và nhiều dịch vụ khác."
         />
       </Helmet>
 
       <section className="max-w-6xl mx-auto px-4">
+        {/* Title */}
         <h1 className="text-4xl font-bold text-[#4b4b8f] mb-6 text-center border-b-2 border-[#d4af37] pb-2 inline-block">
           Bảng Giá Dịch Vụ Nha Khoa
         </h1>
 
-        {/* Search bar */}
+        {/* Search */}
         <div className="flex justify-center mb-8">
           <input
             type="text"
@@ -49,9 +60,11 @@ export default function Services({ language }) {
           />
         </div>
 
-        {/* Table Section */}
+        {/* Table */}
         {loading ? (
-          <div className="text-center text-gray-600 py-10">Đang tải dữ liệu...</div>
+          <div className="text-center text-gray-600 py-10">
+            Đang tải dữ liệu...
+          </div>
         ) : (
           <div className="overflow-x-auto bg-white shadow-md rounded-2xl">
             <table className="min-w-full table-auto text-left border-collapse">
@@ -59,7 +72,9 @@ export default function Services({ language }) {
                 <tr>
                   <th className="px-6 py-3 text-sm font-semibold">DỊCH VỤ</th>
                   <th className="px-6 py-3 text-sm font-semibold">ĐƠN VỊ TÍNH</th>
-                  <th className="px-6 py-3 text-sm font-semibold">ĐƠN GIÁ (VND)</th>
+                  <th className="px-6 py-3 text-sm font-semibold">
+                    ĐƠN GIÁ (VND)
+                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -73,7 +88,9 @@ export default function Services({ language }) {
                     <td className="px-6 py-3 font-medium text-gray-800">
                       {service['DỊCH VỤ']}
                     </td>
-                    <td className="px-6 py-3 text-gray-700">{service['ĐƠN VỊ TÍNH']}</td>
+                    <td className="px-6 py-3 text-gray-700">
+                      {service['ĐƠN VỊ TÍNH']}
+                    </td>
                     <td className="px-6 py-3 text-[#d4af37] font-semibold">
                       {service['ĐƠN GIÁ']}
                     </td>
@@ -84,6 +101,7 @@ export default function Services({ language }) {
           </div>
         )}
 
+        {/* CTA */}
         <div className="text-center mt-10">
           <Link
             to="/contact"
