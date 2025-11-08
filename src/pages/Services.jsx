@@ -11,7 +11,6 @@ export default function Services({ language }) {
     const loadData = async () => {
       setLoading(true);
       try {
-        // Select which CSV to load
         const file =
           language === "vietnamese"
             ? "/dental_services_vn.csv"
@@ -20,16 +19,26 @@ export default function Services({ language }) {
         const response = await fetch(file);
         const text = await response.text();
 
-        // Parse CSV with PapaParse
         const parsed = Papa.parse(text, {
           header: true,
           skipEmptyLines: true,
         });
 
-        // Clean out empty or null rows
-        const cleanData = parsed.data.filter((row) =>
+        let cleanData = parsed.data.filter((row) =>
           Object.values(row).some((val) => val && val.trim() !== "")
         );
+
+        // 🔹 Convert to lowercase if Vietnamese
+        if (language === "vietnamese") {
+          cleanData = cleanData.map((row) => {
+            const lowerRow = {};
+            for (const key in row) {
+              lowerRow[key.toLowerCase()] =
+                row[key]?.toLowerCase().trim() || "";
+            }
+            return lowerRow;
+          });
+        }
 
         setServices(cleanData);
       } catch (err) {
@@ -41,6 +50,7 @@ export default function Services({ language }) {
 
     loadData();
   }, [language]);
+
 
   // Search filter (case insensitive)
   const filtered = services.filter((item) =>
