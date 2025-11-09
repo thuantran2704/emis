@@ -10,7 +10,7 @@ import sterileRoomImg from "../pics/sterileRoom.jpg";
 
 export default function MachineBanner({ language }) {
   const content = language === "vietnamese" ? equipmentContent["vietnamese"] : equipmentContent["english"];
-  const qualityStamp = isVN ? "CHẤT LƯỢNG ĐẢM BẢO" : "PREMIUM QUALITY";
+  const qualityStamp = language === "vietnamese" ? "CHẤT LƯỢNG ĐẢM BẢO" : "PREMIUM QUALITY";
 
   const machines = [
     { key: "vatech", img: vatechImg },
