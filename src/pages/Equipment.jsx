@@ -1,20 +1,31 @@
 import React from "react";
 import equipmentContent from "../Translations/equipmentContent";
 
+// Example image imports (replace with actual images in your project)
+import vatechImg from "../pics/vatech.jpg";
+import kehongImg from "../pics/kehong.jpg";
+import hyperlightImg from "../pics/hyperlight.jpg";
+import uvStorageImg from "../pics/uvStorage.jpg";
+import hyundaiImg from "../pics/hyundai.jpg";
+import sterileRoomImg from "../pics/sterileRoom.jpg";
+
 export default function Equipment({ language }) {
   const content =
     language === "vietnamese"
       ? equipmentContent.vietnamese
       : equipmentContent.english;
 
-  // Use consistent fonts for all languages
-  const headingFont = "'Noto Serif', serif";
-  const bodyFont = "'Noto Sans', sans-serif";
+  const headingFont = "'Noto Serif', serif"; // Good for Vietnamese titles
+  const bodyFont = "'Noto Sans', sans-serif"; // Clean for descriptions
 
-  // Get all equipment keys
-  const equipmentKeys = Object.keys(content).filter(
-    (key) => key !== "title" && key !== "pageTitle" && key !== "pageIntro"
-  );
+  const equipmentList = [
+    { key: "vatech", img: vatechImg },
+    { key: "kehong", img: kehongImg },
+    { key: "hyperlight", img: hyperlightImg },
+    { key: "uvStorage", img: uvStorageImg },
+    { key: "hyundai", img: hyundaiImg },
+    { key: "sterileRoom", img: sterileRoomImg },
+  ];
 
   return (
     <main
@@ -38,51 +49,40 @@ export default function Equipment({ language }) {
         </p>
       </section>
 
-      {/* Equipment Cards */}
-      <section className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
-        {equipmentKeys.map((key) => (
-          <div
-            key={key}
-            className="bg-white rounded-3xl shadow-md hover:shadow-xl overflow-hidden transition-transform duration-300 flex flex-col"
-          >
-            {/* Equipment Intro */}
-            <div className="p-6 flex-1">
-              <h2
-                className="text-2xl font-semibold text-[#3b3b6d] mb-2"
-                style={{ fontFamily: headingFont }}
-              >
-                {content[key].title}
-              </h2>
-              <p className="text-gray-700 mb-4 font-medium">
-                {content[key].equipmentIntro}
-              </p>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                {content[key].equipmentDescription}
-              </p>
-            </div>
-          </div>
-        ))}
-      </section>
-
-      {/* Call to Action */}
-      <section className="py-20 text-center">
-        <h2
-          className="text-2xl sm:text-3xl font-semibold text-[#3b3b6d] mb-6"
-          style={{ fontFamily: headingFont }}
+      {/* Equipment Articles */}
+      {equipmentList.map(({ key, img }) => (
+        <article
+          key={key}
+          className="mb-20 bg-white rounded-2xl shadow-lg overflow-hidden"
         >
-          {language === "vietnamese"
-            ? "Trải nghiệm sự khác biệt từ công nghệ hàng đầu"
-            : "Experience the difference of world-class technology"}
-        </h2>
-        <p className="max-w-2xl mx-auto text-gray-700 text-base sm:text-lg mb-8 px-4">
-          {language === "vietnamese"
-            ? "Chúng tôi liên tục đầu tư vào thiết bị hiện đại để mang đến kết quả điều trị tối ưu nhất."
-            : "We continually invest in the latest innovations to deliver the most precise and comfortable dental care possible."}
-        </p>
-        <button className="bg-gradient-to-r from-[#d4af37] to-[#b8860b] text-white px-8 py-3 rounded-full text-sm sm:text-base font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-transform">
-          {language === "vietnamese" ? "Đặt lịch ngay" : "Book an Appointment"}
-        </button>
-      </section>
+          {/* Title */}
+          <h2
+            className="text-2xl sm:text-3xl font-bold text-[#3b3b6d] text-center py-6 px-4"
+            style={{ fontFamily: headingFont }}
+          >
+            {content[key].title}
+          </h2>
+
+          {/* Image */}
+          <div className="w-full h-64 sm:h-96 overflow-hidden flex justify-center items-center bg-[#fefcf7] border-t border-b border-[#f0e4bc]">
+            <img
+              src={img}
+              alt={content[key].title}
+              className="object-contain h-full w-full p-4 transition-transform duration-500 hover:scale-105"
+            />
+          </div>
+
+          {/* Short intro */}
+          <p className="text-center text-gray-700 text-lg sm:text-xl font-semibold py-4 px-6">
+            {content[key].equipmentIntro}
+          </p>
+
+          {/* Full description */}
+          <div className="px-6 sm:px-12 pb-8 text-gray-700 leading-relaxed text-justify">
+            {content[key].equipmentDescription}
+          </div>
+        </article>
+      ))}
     </main>
   );
 }
