@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import equipmentContent from "../Translations/EquipmentContent";
+import equipmentContent from "../Translations/equipmentContent";
 import vatechImg from "../pics/vatech.jpg";
 import kehongImg from "../pics/kehong.jpg";
 import hyperlightImg from "../pics/hyperlight.jpg";
