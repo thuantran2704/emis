@@ -1,7 +1,7 @@
 import React from "react";
 import equipmentContent from "../Translations/equipmentContent";
 
-// Example image imports (replace with actual images in your project)
+// Example image imports (replace with actual images)
 import vatechImg from "../pics/vatech.jpg";
 import kehongImg from "../pics/kehong.jpg";
 import hyperlightImg from "../pics/hyperlight.jpg";
@@ -15,8 +15,8 @@ export default function Equipment({ language }) {
       ? equipmentContent.vietnamese
       : equipmentContent.english;
 
-  const headingFont = "'Noto Serif', serif"; // Good for Vietnamese titles
-  const bodyFont = "'Noto Sans', sans-serif"; // Clean for descriptions
+  const headingFont = "'Noto Serif', serif"; // For titles
+  const bodyFont = "'Noto Sans', sans-serif"; // For description & intro
 
   const equipmentList = [
     { key: "vatech", img: vatechImg },
@@ -33,7 +33,7 @@ export default function Equipment({ language }) {
       style={{ fontFamily: bodyFont }}
     >
       {/* Page Header */}
-      <section className="text-center mb-16">
+      <header className="text-center mb-16">
         <h1
           className="text-4xl sm:text-5xl font-bold text-[#3b3b6d] mb-4"
           style={{ fontFamily: headingFont }}
@@ -47,42 +47,41 @@ export default function Equipment({ language }) {
               ? "Nha khoa của chúng tôi tự hào sở hữu hệ thống thiết bị hiện đại hàng đầu, mang lại trải nghiệm điều trị chính xác, an toàn và thoải mái tối đa cho mọi khách hàng."
               : "Our clinic proudly features cutting-edge dental equipment, ensuring precision, safety, and unmatched comfort in every procedure.")}
         </p>
-      </section>
+      </header>
 
-      {/* Equipment Articles */}
-      {equipmentList.map(({ key, img }) => (
-        <article
-          key={key}
-          className="mb-20 bg-white rounded-2xl shadow-lg overflow-hidden"
-        >
-          {/* Title */}
-          <h2
-            className="text-2xl sm:text-3xl font-bold text-[#3b3b6d] text-center py-6 px-4"
-            style={{ fontFamily: headingFont }}
-          >
-            {content[key].title}
-          </h2>
+      {/* Equipment Articles - Flowing like an article */}
+      <article className="prose prose-lg sm:prose-xl max-w-none mx-auto">
+        {equipmentList.map(({ key, img }) => (
+          <section key={key} className="mb-16">
+            {/* Title */}
+            <h2
+              className="text-3xl font-bold text-[#3b3b6d] mb-4"
+              style={{ fontFamily: headingFont }}
+            >
+              {content[key].title}
+            </h2>
 
-          {/* Image */}
-          <div className="w-full h-64 sm:h-96 overflow-hidden flex justify-center items-center bg-[#fefcf7] border-t border-b border-[#f0e4bc]">
-            <img
-              src={img}
-              alt={content[key].title}
-              className="object-contain h-full w-full p-4 transition-transform duration-500 hover:scale-105"
-            />
-          </div>
+            {/* Image */}
+            <figure className="mb-4">
+              <img
+                src={img}
+                alt={content[key].title}
+                className="w-full h-auto object-contain rounded-lg"
+              />
+              {/* Short intro as caption */}
+              <figcaption className="text-center text-gray-700 mt-2 font-semibold">
+                {content[key].equipmentIntro}
+              </figcaption>
+            </figure>
 
-          {/* Short intro */}
-          <p className="text-center text-gray-700 text-lg sm:text-xl font-semibold py-4 px-6">
-            {content[key].equipmentIntro}
-          </p>
-
-          {/* Full description */}
-          <div className="px-6 sm:px-12 pb-8 text-gray-700 leading-relaxed text-justify">
-            {content[key].equipmentDescription}
-          </div>
-        </article>
-      ))}
+            {/* Full description */}
+            <p className="text-gray-700 leading-relaxed">
+              {content[key].equipmentDescription}
+            </p>
+          </section>
+        ))}
+      </article>
     </main>
   );
 }
+
