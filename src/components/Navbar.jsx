@@ -13,6 +13,7 @@ export default function Navbar({ language = 'english' }) {
     { name: content.home, path: '/' },
     { name: content.about, path: '/about' },
     { name: content.services, path: '/services' },
+    { name: content.equipment, path: '/equipment' },
   ];
 
   return (
