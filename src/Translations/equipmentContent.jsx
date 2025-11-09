@@ -1,8 +1,11 @@
+// Translations/EquipmentContent.jsx
+
 const equipmentContent = {
   english: {
     title: "Clinic Equipment",
 
     vatech: {
+      title: "Vatech 3D CBCT Smart Plus (CT Scanner)",
       equipmentIntro:
         "At Emis Dental, we use the Vatech 3D CBCT Smart Plus, the newest generation Cone Beam CT scanner for precise diagnostics and treatment planning.",
       equipmentDescription:
@@ -10,6 +13,7 @@ const equipmentContent = {
     },
 
     kehong: {
+      title: "Kehong A8+ Dental Chair",
       equipmentIntro:
         "The Kehong A8+ dental chair offers premium comfort and precision for both patients and doctors.",
       equipmentDescription:
@@ -17,6 +21,7 @@ const equipmentContent = {
     },
 
     hyperlight: {
+      title: "HyperLight-G X-ray (Periapical Imaging)",
       equipmentIntro:
         "For periapical imaging, Emis Dental uses the HyperLight-G, a digital X-ray device that ensures accuracy and safety.",
       equipmentDescription:
@@ -24,6 +29,7 @@ const equipmentContent = {
     },
 
     uvStorage: {
+      title: "Dongju Dent UV Storage Sterilizer",
       equipmentIntro:
         "Emis Dental prioritizes infection control with the advanced UV Storage sterilization unit.",
       equipmentDescription:
@@ -31,6 +37,7 @@ const equipmentContent = {
     },
 
     hyundai: {
+      title: "Hyundai High-Temperature Sterilization Cabinet",
       equipmentIntro:
         "To ensure total sterilization, Emis Dental uses the Hyundai high-temperature drying and sterilization cabinet.",
       equipmentDescription:
@@ -38,6 +45,7 @@ const equipmentContent = {
     },
 
     sterileRoom: {
+      title: "Sterile Room",
       equipmentIntro:
         "At Emis Dental, a healthy smile begins with a sterile environment.",
       equipmentDescription:
@@ -49,6 +57,7 @@ const equipmentContent = {
     title: "Trang Thiết Bị Phòng Khám",
 
     vatech: {
+      title: "Máy CT Vatech 3D CBCT Smart Plus",
       equipmentIntro:
         "Tại Emis Dental, chúng tôi sử dụng máy chụp phim Vatech 3D CBCT Smart Plus, thế hệ Cone Beam CT mới nhất cho chẩn đoán và điều trị chính xác.",
       equipmentDescription:
@@ -56,6 +65,7 @@ const equipmentContent = {
     },
 
     kehong: {
+      title: "Ghế Nha Khoa Kehong A8+",
       equipmentIntro:
         "Ghế nha khoa Kehong A8+ mang đến sự thoải mái tối đa cho bệnh nhân và hiệu quả cao cho bác sĩ.",
       equipmentDescription:
@@ -63,6 +73,7 @@ const equipmentContent = {
     },
 
     hyperlight: {
+      title: "Máy Chụp Quanh Chóp HyperLight-G",
       equipmentIntro:
         "Emis Dental sử dụng máy chụp phim quanh chóp HyperLight-G với cảm biến kỹ thuật số hiện đại.",
       equipmentDescription:
@@ -70,6 +81,7 @@ const equipmentContent = {
     },
 
     uvStorage: {
+      title: "Máy Tiệt Trùng UV Storage Dongju Dent",
       equipmentIntro:
         "Công tác vô trùng luôn là ưu tiên hàng đầu tại Emis Dental với thiết bị khử khuẩn UV Storage hiện đại.",
       equipmentDescription:
@@ -77,6 +89,7 @@ const equipmentContent = {
     },
 
     hyundai: {
+      title: "Tủ Sấy Tiệt Trùng Hyundai",
       equipmentIntro:
         "Phòng khám sử dụng tủ sấy tiệt trùng Hyundai để đảm bảo vô trùng tuyệt đối cho mọi dụng cụ.",
       equipmentDescription:
@@ -84,12 +97,13 @@ const equipmentContent = {
     },
 
     sterileRoom: {
+      title: "Phòng Vô Trùng",
       equipmentIntro:
         "Một nụ cười khỏe mạnh bắt đầu từ môi trường điều trị vô trùng tuyệt đối.",
       equipmentDescription:
         "Phòng vô trùng tại Emis Dental được thiết kế theo tiêu chuẩn kiểm soát nhiễm khuẩn quốc tế. Dụng cụ sau sử dụng trải qua quy trình tiệt khuẩn năm bước gồm làm sạch, siêu âm, sấy khô, tiệt trùng và lưu trữ vô khuẩn. Các thiết bị hỗ trợ như tủ tiệt trùng Hyundai, máy UV Storage Dongju Dent và hệ thống Autoclave đều vận hành đúng quy trình, đảm bảo dụng cụ đạt vô trùng 100%. Phòng vô trùng tách biệt với khu điều trị, phân luồng sạch và bẩn riêng để hạn chế lây nhiễm chéo. Đội ngũ bác sĩ và phụ tá đều có chứng nhận kiểm soát nhiễm khuẩn, đảm bảo quy trình vô trùng nghiêm ngặt trong từng thao tác."
     }
   }
-}
+};
 
-export default equipmentContent
+export default equipmentContent;
