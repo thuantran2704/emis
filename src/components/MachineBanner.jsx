@@ -15,7 +15,7 @@ export default function MachineBanner({ language }) {
 
   const machines = [
     { key: "vatech", img: vatechImg },
-    { key: "kehong", img: kehongI                     mg },
+    { key: "kehong", img: kehongImg },
     { key: "hyperlight", img: hyperlightImg },
     { key: "uvStorage", img: uvStorageImg },
     { key: "hyundai", img: hyundaiImg },
