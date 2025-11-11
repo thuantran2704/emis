@@ -1,79 +1,79 @@
-Description,Unit,Service Price (VAT excluded)
-Scaling Polishing Children,FULL MOUTH,"100,000 – 200,000"
-Scaling Polishing Adult,FULL MOUTH,"300,000 – 500,000"
-Periodontal treatment,1 TOOTH,"200,000"
-Fillings for children,1 TOOTH,"200,000"
-Aesthetic fillings for adult,1 TOOTH,"300,000 – 500,000"
-Primary teeth,1 TOOTH,"50,000 – 100,000"
-"Incisor, root of the tooth",1 TOOTH,"400,000 – 500,000"
-Molar,1 TOOTH,"500,000 – 1,000,000"
-Wisdom molar (depends on the difficulty),1 TOOTH,"3,000,000 – 5,000,000"
-Apicoectomy,1 TOOTH,"2,000,000"
-Gingivectomy,1 TOOTH,"1,500,000"
-Primary teeth,1 TOOTH,"300,000 – 500,000"
-Permanent incisor,1 TOOTH,"500,000 – 1,000,000"
-Pre-molar,1 TOOTH,"900,000 – 1,500,000"
-Molar,1 TOOTH,"1,000,000 – 2,000,000"
-Retreatment of root canal,1 TOOTH,"2,000,000 – 4,000,000"
-Patient’s diamond,UNIT,"500,000"
-Lab-grown diamond (Clinic’s diamond),UNIT,"1,000,000"
-Natural gemstone (Clinic’s diamond),UNIT,Depends on the type
-At clinic,TREATMENT,"3,000,000"
-Super white (at clinic + 1 pair trays + 2 tubes),TREATMENT,"5,000,000"
-At home (includes 2 tubes + 1 pair trays),TREATMENT,"2,000,000"
-Additional tubes,TUBE,"500,000"
-Teeth whitening trays,PAIR,"350,000"
-Metal braces (Simple – complicated),TREATMENT,"35,000,000 - 45,000,000"
-Self-Ligating Braces,TREATMENT,"40,000,000 - 50,000,000"
-Ceramic braces (Simple – complicated),TREATMENT,"45,000,000 - 55,000,000"
-Self-Ligating Braces,TREATMENT,"50,000,000 - 60,000,000"
-Clear aligners (depends on the type),TREATMENT,"70,000,000 - 140,000,000"
-Minivis,UNIT,"2,000,000"
-Palatal expander,1 ARCH,"15,000,000"
-Retainer,PAIR,"3,000,000"
-Cone Beam CT scan,PER TIME,"700,000"
-Panoramic radiograph,PER TIME,"200,000"
-Cephalometric radiograph,PER TIME,"200,000"
-Metal core,UNIT,"500,000"
-Titan core,UNIT,"1,500,000"
-Zirconia core,UNIT,"3,500,000"
-Japan Titanium (2-YEAR WARRANTY),UNIT,"3,000,000"
-"EMIS Porcelain, Zico Centonia (5-YEAR WARRANTY)",1 TOOTH,"4,000,000"
-USA Zirconia (10-YEAR WARRANTY),1 TOOTH,"5,500,000"
-DD Bio GERMANY (10-YEAR WARRANTY),1 TOOTH,"6,000,000"
-Full NT200 ENGLAND (10-YEAR WARRANTY),1 TOOTH,"7,500,000"
-Cercon HT GERMANY (10-YEAR WARRANTY),1 TOOTH,"8,000,000"
-Lava USA (12-YEAR WARRANTY),1 TOOTH,"10,000,000"
-Lava Plus USA (15-YEAR WARRANTY),1 TOOTH,"12,000,000"
-Lava Esthetics USA (20-YEAR WARRANTY),1 TOOTH,"15,000,000"
-Orodent ITALY (LIFETIME WARRANTY),1 TOOTH,"20,000,000"
-Emax veneer (10-YEAR WARRANTY),UNIT,"10,000,000"
-Inlay/Onlay (10-YEAR WARRANTY),UNIT,"6,000,000"
-Composite tooth,1 TOOTH,"700,000"
-Vietnamese tooth,1 TOOTH,"300,000"
-Japanese tooth,1 TOOTH,"400,000"
-USA tooth,1 TOOTH,"500,000"
-Porcelain tooth,1 TOOTH,"800,000"
-Flexible denture (Full denture),FULL DENTURE,"2,500,000"
-Flexible denture (Partial denture),PARTIAL DENTURE,"1,500,000"
-Full acrylic denture,1 ARCH,"7,000,000"
-Metal framework denture (Common metal),1 ARCH,"2,500,000"
-Metal framework denture (Titan metal),1 ARCH,"3,000,000"
-Metal framework denture (Connector),1 ARCH,"3,500,000"
-Night guard,1 ARCH,"3,500,000"
-Biotem Implant (Korea) (7-YEAR WARRANTY),UNIT,"15,000,000"
-Osstem Implant (Korea) (10-YEAR WARRANTY),UNIT,"20,000,000"
-Hiossen Implant (USA) (13-YEAR WARRANTY),UNIT,"22,000,000"
-ETK Implant (France) (15-YEAR WARRANTY),UNIT,"25,000,000"
-Straumann Implant (Switzerland) (20-YEAR WARRANTY),UNIT,"45,000,000"
-Artificial bone graft,UNIT,"5,000,000"
-Guided tissue regeneration,UNIT,"3,000,000"
-Closed sinus lift,UNIT,"5,000,000"
-Open sinus lift,UNIT,"10,000,000"
-Implant ALL-ON-4 and ALL-ON-6 Korea (10-YEAR WARRANTY),1 ARCH,"120,000,000 - 160,000,000"
-Implant ALL-ON-4 and ALL-ON-6 Korea (15-YEAR WARRANTY),1 ARCH,"130,000,000 - 170,000,000"
-Implant ALL-ON-4 and ALL-ON-6 Korea (20-YEAR WARRANTY),1 ARCH,"170,000,000 - 230,000,000"
-"Full arch fixed restoration Titan CAD/CAM framework, + Titan porcelain crown (7-YEAR WARRANTY)",1 ARCH,"50,000,000"
-"Full arch fixed restoration Titan CAD/CAM framework, + Titan porcelain crown (10-YEAR WARRANTY)",1 ARCH,"80,000,000"
-Full arch removable restoration Titan CAD/CAM framework,1 ARCH,"80,000,000"
-Full arch removable restoration Cr-Co framework,1 ARCH,"50,000,000"
+Service Category,Description,Unit,Service Price (VAT excluded)
+SCALING POLISHING,Children,FULL MOUTH,"100,000 – 200,000"
+,Adult,FULL MOUTH,"300,000 – 500,000"
+,Periodontal treatment,1 TOOTH,200000
+DENTAL FILLINGS,Fillings for children,1 TOOTH,200000
+,Aesthetic fillings for adult,1 TOOTH,"300,000 – 500,000"
+TOOTH EXTRACTION,Primary teeth,1 TOOTH,"50,000 – 100,000"
+,Incisor, root of the tooth,1 TOOTH,"400,000 – 500,000"
+,Molar,1 TOOTH,"500,000 – 1,000,000"
+,Wisdom molar (depends on the difficulty),1 TOOTH,"3,000,000 – 5,000,000"
+MINOR SURGICAL PROCEDURE,Apicoectomy,1 TOOTH,2,000,000
+,Gingivectomy,1 TOOTH,1,500,000
+ENDODONTICS,Primary teeth,1 TOOTH,"300,000 – 500,000"
+,Permanent incisor,1 TOOTH,"500,000 – 1,000,000"
+,Pre-molar,1 TOOTH,"900,000 – 1,500,000"
+,Molar,1 TOOTH,"1,000,000 – 2,000,000"
+,Retreatment of root canal,1 TOOTH,"2,000,000 – 4,000,000"
+TOOTH JEWELRY,Patient’s diamond,UNIT,500000
+,Lab-grown diamond (Clinic’s diamond),UNIT,1,000,000
+,Natural gemstone (Clinic’s diamond),UNIT,Depends on the type
+TEETH WHITENING,At clinic,TREATMENT,3,000,000
+,Super white (at clinic + 1 pair trays + 2 tubes),TREATMENT,5,000,000
+,At home (includes 2 tubes + 1 pair trays),TREATMENT,2,000,000
+,Additional tubes,TUBE,500000
+,Teeth whitening trays,PAIR,350000
+ORTHODONTICS,Metal braces (Simple – complicated),TREATMENT,"35,000,000 - 45,000,000"
+,Self-Ligating Braces,TREATMENT,"40,000,000 - 50,000,000"
+,Ceramic braces (Simple – complicated),TREATMENT,"45,000,000 - 55,000,000"
+,Self-Ligating Braces,TREATMENT,"50,000,000 - 60,000,000"
+,Clear aligners (depends on the type),TREATMENT,"70,000,000 - 140,000,000"
+,Minivis,UNIT,2,000,000
+,Palatal expander,1 ARCH,15,000,000
+,Retainer,PAIR,3,000,000
+ORAL RADIOLOGY,Cone Beam CT scan,PER TIME,700000
+,Panoramic radiograph,PER TIME,200000
+,Cephalometric radiograph,PER TIME,200000
+AESTHETIC PORCELAIN CROWN,Metal core,UNIT,500000
+,Titan core,UNIT,1,500,000
+,Zirconia core,UNIT,3,500,000
+,Japan Titanium (2-YEAR WARRANTY),UNIT,3,000,000
+,EMIS Porcelain, Zico Centonia (5-YEAR WARRANTY),1 TOOTH,4,000,000
+,USA Zirconia (10-YEAR WARRANTY),1 TOOTH,5,500,000
+,DD Bio GERMANY (10-YEAR WARRANTY),1 TOOTH,6,000,000
+,Full NT200 ENGLAND (10-YEAR WARRANTY),1 TOOTH,7,500,000
+,Cercon HT GERMANY (10-YEAR WARRANTY),1 TOOTH,8,000,000
+,Lava USA (12-YEAR WARRANTY),1 TOOTH,10,000,000
+,Lava Plus USA (15-YEAR WARRANTY),1 TOOTH,12,000,000
+,Lava Esthetics USA (20-YEAR WARRANTY),1 TOOTH,15,000,000
+,Orodent ITALY (LIFETIME WARRANTY),1 TOOTH,20,000,000
+,Emax veneer (10-YEAR WARRANTY),UNIT,10,000,000
+,Inlay/Onlay (10-YEAR WARRANTY),UNIT,6,000,000
+REMOVABLE PROSTHODONTIC,Composite tooth,1 TOOTH,700000
+,Vietnamese tooth,1 TOOTH,300000
+,Japanese tooth,1 TOOTH,400000
+,USA tooth,1 TOOTH,500000
+,Porcelain tooth,1 TOOTH,800000
+,Flexible denture (Full denture),FULL DENTURE,2,500,000
+,Flexible denture (Partial denture),PARTIAL DENTURE,1,500,000
+,Full acrylic denture,1 ARCH,7,000,000
+,Metal framework denture (Common metal),1 ARCH,2,500,000
+,Metal framework denture (Titan metal),1 ARCH,3,000,000
+,Metal framework denture (Connector),1 ARCH,3,500,000
+,Night guard,1 ARCH,3,500,000
+IMPLANT SURGERY,Biotem Implant (Korea) (7-YEAR WARRANTY),UNIT,15,000,000
+,Osstem Implant (Korea) (10-YEAR WARRANTY),UNIT,20,000,000
+,Hiossen Implant (USA) (13-YEAR WARRANTY),UNIT,22,000,000
+,ETK Implant (France) (15-YEAR WARRANTY),UNIT,25,000,000
+,Straumann Implant (Switzerland) (20-YEAR WARRANTY),UNIT,45,000,000
+,Artificial bone graft,UNIT,5,000,000
+,Guided tissue regeneration,UNIT,3,000,000
+,Closed sinus lift,UNIT,5,000,000
+,Open sinus lift,UNIT,10,000,000
+,Implant ALL-ON-4 and ALL-ON-6 Korea (10-YEAR WARRANTY),1 ARCH,"120,000,000 - 160,000,000"
+,Implant ALL-ON-4 and ALL-ON-6 Korea (15-YEAR WARRANTY),1 ARCH,"130,000,000 - 170,000,000"
+,Implant ALL-ON-4 and ALL-ON-6 Korea (20-YEAR WARRANTY),1 ARCH,"170,000,000 - 230,000,000"
+,Full arch fixed restoration Titan CAD/CAM framework, + Titan porcelain crown (7-YEAR WARRANTY),1 ARCH,50,000,000
+,Full arch fixed restoration Titan CAD/CAM framework, + Titan porcelain crown (10-YEAR WARRANTY),1 ARCH,80,000,000
+,Full arch removable restoration Titan CAD/CAM framework,1 ARCH,80,000,000
+,Full arch removable restoration Cr-Co framework,1 ARCH,50,000,000

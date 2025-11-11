@@ -63,7 +63,32 @@ export default function Services({ language }) {
     loadData();
   }, [language]);
 
-
+  // Process data to group by service category for display
+  const processGroupedData = (data) => {
+    const grouped = [];
+    let currentCategory = "";
+    
+    data.forEach((row) => {
+      const serviceCategory = row["Service Category"] || row["Tên dịch vụ"];
+      
+      if (serviceCategory && serviceCategory.trim() !== "") {
+        currentCategory = serviceCategory;
+        grouped.push({
+          ...row,
+          _isCategoryRow: true,
+          _category: currentCategory
+        });
+      } else {
+        grouped.push({
+          ...row,
+          _isCategoryRow: false,
+          _category: currentCategory
+        });
+      }
+    });
+    
+    return grouped;
+  };
 
   // Search filter (case insensitive)
   const filtered = services.filter((item) =>
@@ -72,6 +97,8 @@ export default function Services({ language }) {
       .toLowerCase()
       .includes(search.toLowerCase())
   );
+
+  const groupedData = processGroupedData(filtered);
 
   return (
     <div className="min-h-screen bg-white text-gray-800 py-10 px-4 md:px-12 lg:px-24">
@@ -96,7 +123,7 @@ export default function Services({ language }) {
           <p className="text-center text-gray-500 text-sm">
             {language === "vietnamese" ? "đang tải dữ liệu..." : "loading..."}
           </p>
-        ) : filtered.length === 0 ? (
+        ) : groupedData.length === 0 ? (
           <p className="text-center text-gray-500 text-sm">
             {language === "vietnamese"
               ? "không tìm thấy dịch vụ"
@@ -107,29 +134,40 @@ export default function Services({ language }) {
             <table className="w-full text-left text-gray-700 text-sm md:text-base">
               <thead className="bg-gray-100 text-gray-600 uppercase text-xs md:text-sm">
                 <tr>
-                  {Object.keys(filtered[0] || {}).map((key) => (
-                    <th
-                      key={key}
-                      className="px-3 md:px-4 py-3 whitespace-nowrap"
-                    >
-                      {key.trim()}
-                    </th>
-                  ))}
+                  {Object.keys(groupedData[0] || {})
+                    .filter(key => !key.startsWith('_')) // Remove internal fields
+                    .map((key) => (
+                      <th
+                        key={key}
+                        className="px-3 md:px-4 py-3 whitespace-nowrap"
+                      >
+                        {key.trim()}
+                      </th>
+                    ))}
                 </tr>
               </thead>
               <tbody>
-                {filtered.map((row, i) => (
+                {groupedData.map((row, i) => (
                   <tr
                     key={i}
                     className={`border-b ${
                       i % 2 === 0 ? "bg-white" : "bg-gray-50"
-                    } hover:bg-blue-50 transition`}
+                    } hover:bg-blue-50 transition ${
+                      row._isCategoryRow ? "font-semibold bg-blue-100" : ""
+                    }`}
                   >
-                    {Object.keys(row).map((col, j) => (
-                      <td key={j} className="px-3 md:px-4 py-2">
-                        {row[col] || ""}
-                      </td>
-                    ))}
+                    {Object.keys(row)
+                      .filter(key => !key.startsWith('_')) // Remove internal fields
+                      .map((col, j) => (
+                        <td 
+                          key={j} 
+                          className={`px-3 md:px-4 py-2 ${
+                            col === "Service Category" || col === "Tên dịch vụ" ? "font-semibold" : ""
+                          }`}
+                        >
+                          {row[col] || ""}
+                        </td>
+                      ))}
                   </tr>
                 ))}
               </tbody>
