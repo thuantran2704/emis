@@ -70,7 +70,7 @@ export default function Footer({ language = "english" }) {
           </h3>
           <div className="flex items-center gap-4 mb-6">
             <a
-              href="https://www.facebook.com/emisinternationaldental"
+              href="https://www.facebook.com/nhakhoaquocteemis"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 bg-white rounded-full shadow hover:shadow-md transition"

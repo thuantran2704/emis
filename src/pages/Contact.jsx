@@ -156,8 +156,8 @@ export default function Contact({ language }) {
       icon: facebook,
       alt: "Facebook",
       label: content.contactInfo.facebook,
-      value: "facebook.com/emisinternationaldental",
-      href: "https://www.facebook.com/emisinternationaldental"
+      value: "https://www.facebook.com/nhakhoaquocteemis",
+      href: "https://www.facebook.com/nhakhoaquocteemis"
     },
   ];
 
