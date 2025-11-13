@@ -9,7 +9,7 @@ export default function Services({ language }) {
   // ✅ Header mapping for both languages
   const headers = {
     english: {
-      category: "Category",
+      category: "Service Category",
       desc: "Description",
       unit: "Unit",
       price: "Service Price (VAT excluded)",
