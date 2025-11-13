@@ -20,28 +20,9 @@ export default function Services({ language }) {
         const text = await response.text();
         const parsed = Papa.parse(text, { header: true, skipEmptyLines: true });
 
-        let cleanData = parsed.data.filter((row) =>
+        const cleanData = parsed.data.filter((row) =>
           Object.values(row).some((val) => val && val.trim() !== "")
         );
-
-        // Capitalize Vietnamese data
-        if (language === "vietnamese") {
-          const capitalizeWords = (str) =>
-            str
-              .toLowerCase()
-              .split(" ")
-              .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-              .join(" ");
-          cleanData = cleanData.map((row) => {
-            const formatted = {};
-            for (const key in row) {
-              formatted[capitalizeWords(key.trim())] = row[key]
-                ? capitalizeWords(row[key].trim())
-                : "";
-            }
-            return formatted;
-          });
-        }
 
         setServices(cleanData);
       } catch (err) {
@@ -50,15 +31,34 @@ export default function Services({ language }) {
         setLoading(false);
       }
     };
+
     loadData();
   }, [language]);
+
+  // ✅ Column header mapping
+  const headers = {
+    english: {
+      category: "Service Category",
+      desc: "Description",
+      unit: "Unit",
+      price: "Service Price (VAT excluded)",
+    },
+    vietnamese: {
+      category: "DANH MỤC DỊCH VỤ",
+      desc: "MÔ TẢ",
+      unit: "ĐƠN VỊ",
+      price: "GIÁ DỊCH VỤ (CHƯA VAT)",
+    },
+  };
+
+  const cols = headers[language];
 
   const groupByCategory = (data) => {
     const grouped = {};
     let currentCategory = "";
 
     data.forEach((row) => {
-      const category = row["Service Category"] || row["Tên dịch vụ"];
+      const category = row[cols.category];
       if (category && category.trim() !== "") {
         currentCategory = category.trim();
         grouped[currentCategory] = [];
@@ -115,11 +115,11 @@ export default function Services({ language }) {
                 <tr>
                   <th className="px-3 md:px-4 py-3 border-r-2 border-gray-700 whitespace-nowrap">
                     {language === "vietnamese"
-                      ? "tên dịch vụ"
+                      ? "danh mục dịch vụ"
                       : "Service Category"}
                   </th>
                   <th className="px-3 md:px-4 py-3 border-r-2 border-gray-700 whitespace-nowrap">
-                    {language === "vietnamese" ? "nội dung" : "Description"}
+                    {language === "vietnamese" ? "mô tả" : "Description"}
                   </th>
                   <th className="px-3 md:px-4 py-3 border-r-2 border-gray-700 whitespace-nowrap">
                     {language === "vietnamese" ? "đơn vị" : "Unit"}
@@ -151,13 +151,13 @@ export default function Services({ language }) {
                         </td>
                       )}
                       <td className="border-r-2 border-gray-600 px-3 md:px-4 py-2">
-                        {row["Description"] || ""}
+                        {row[cols.desc] || ""}
                       </td>
                       <td className="border-r-2 border-gray-600 px-3 md:px-4 py-2">
-                        {row["Unit"] || ""}
+                        {row[cols.unit] || ""}
                       </td>
                       <td className="px-3 md:px-4 py-2 font-medium text-gray-800">
-                        {row["Service Price (VAT excluded)"] || ""}
+                        {row[cols.price] || ""}
                       </td>
                     </tr>
                   ));
