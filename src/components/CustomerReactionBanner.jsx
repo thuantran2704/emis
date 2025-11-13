@@ -16,13 +16,13 @@ export default function CustomerReactionsBanner({ language }) {
       name: "BÉ TRƯƠNG BÁ",
       service: content.services[1],
       comment: content.comments[1],
-      videoUrl: "https://youtube.com/embed/surWZR9t57k",
+      videoUrl: "https://www.youtube.com/embed/l8EngnXRACI",
     },
     {
       name: "NGỌC TUYỀN",
       service: content.services[2],
       comment: content.comments[2],
-      videoUrl: "https://www.youtube.com/embed/l8EngnXRACI",
+      videoUrl: "https://youtube.com/embed/surWZR9t57k",
     },
   ];
 
