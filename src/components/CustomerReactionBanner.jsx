@@ -7,22 +7,22 @@ export default function CustomerReactionsBanner({ language }) {
   // Map testimonials directly from your content file
   const testimonials = [
     {
-      name: "BÉ TRƯƠNG BÁ",
+      name: "DIỄM SƯƠNG",
       service: content.services[0],
       comment: content.comments[0],
-      videoUrl: "https://www.youtube.com/embed/SHORTS_ID1",
+      videoUrl: "https://www.youtube.com/shorts/Ymwva1sJVuw",
     },
     {
-      name: "DIỄM SƯƠNG",
+      name: "BÉ TRƯƠNG BÁ",
       service: content.services[1],
       comment: content.comments[1],
-      videoUrl: "https://www.youtube.com/embed/SHORTS_ID2",
+      videoUrl: "https://youtube.com/shorts/l8EngnXRACI?si=lf5xpgGUxhCCmTRw",
     },
     {
       name: "NGỌC TUYỀN",
       service: content.services[2],
       comment: content.comments[2],
-      videoUrl: "https://www.youtube.com/embed/SHORTS_ID3",
+      videoUrl: "https://youtube.com/shorts/l8EngnXRACI?si=8ROLZDlVF9UEwwnH",
     },
   ];
 
