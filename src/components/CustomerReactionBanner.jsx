@@ -7,19 +7,19 @@ export default function CustomerReactionsBanner({ language }) {
   // Map testimonials directly from your content file
   const testimonials = [
     {
-      name: "BÉ GIA PHÚC",
+      name: "BÉ TRƯƠNG BÁ",
       service: content.services[0],
       comment: content.comments[0],
       videoUrl: "https://www.youtube.com/embed/SHORTS_ID1",
     },
     {
-      name: "TÚ TRI",
+      name: "DIỄM SƯƠNG",
       service: content.services[1],
       comment: content.comments[1],
       videoUrl: "https://www.youtube.com/embed/SHORTS_ID2",
     },
     {
-      name: "NGỌC ANH",
+      name: "NGỌC TUYỀN",
       service: content.services[2],
       comment: content.comments[2],
       videoUrl: "https://www.youtube.com/embed/SHORTS_ID3",
