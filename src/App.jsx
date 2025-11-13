@@ -12,6 +12,7 @@ import { Helmet } from 'react-helmet';
 import { schemaMarkup } from './components/seoMarkup';
 import Footer from './components/Footer.jsx';
 import Equipment from './pages/Equipment';
+import floatingContactButton from './components/floatingContactButton.jsx';
 export default function App() {
   const language = useSelector((state) => state.language.language);
   const dispatch = useDispatch();
@@ -38,6 +39,7 @@ export default function App() {
           <Route path="/equipment" element={<Equipment language={language} />} />
         </Routes>
         <Footer language={language}/>
+        <FloatingContactButton />
         <LanguageToggle 
           currentLanguage={language} 
           onLanguageChange={handleLanguageChange}  // Now passes the selected language directly
