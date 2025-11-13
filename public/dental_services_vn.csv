@@ -1,79 +1,79 @@
-﻿Tên dịch vụ,Nội dung,Đơn vị,Giá dịch vụ (chưa VAT)
-CẠO VÔI ĐÁNH BÓNG,Trẻ em,2 hàm,100.000 -- 200.000
-,"Người lớn",2 hàm,300.000 -- 500.000
-,"Điều trị nha chu",1 RĂNG,200.000
-TRÁM RĂNG,"Trám răng sâu trẻ em",1 RĂNG,200.000
-,"Trám răng sâu người lớn thẩm mỹ",1 RĂNG,300.000 -- 500.000
-NHỔ RĂNG,"Răng sữa",1 RĂNG,50.000 -- 100.000
-,"Răng cửa, chân răng",1 RĂNG,400.000 -- 500.000
-,"Răng hàm",1 RĂNG,500.000 -- 1.000.000
-,"Răng khôn mọc lệch ngầm (tuỳ độ khó)",1 RĂNG,3.000.000 -- 5.000.000
-TIỂU PHẪU,"Cắt chóp răng",1 RĂNG,2.000.000
-,"Cắt nướu răng",1 RĂNG,1.500.000
-ĐIỀU TRỊ TUỶ,"Răng trẻ em",1 RĂNG,300.000 -- 500.000
-,"Nhóm răng cửa người lớn",1 RĂNG,500.000 -- 1.000.000
-,"Răng cối nhỏ",1 RĂNG,900.000 -- 1.500.000
-,"Răng cối lớn",1 RĂNG,1.000.000 -- 2.000.000
-,"Điều trị tuỷ lại",1 RĂNG,2.000.000 -- 4.000.000
-GẮN ĐÁ,"Gắn đá","Hột của bệnh nhân",500.000
-,"Kim cương nhân tạo","Hột của phòng khám",1.000.000
-,"Đá quý","Hột của phòng khám","Tuỳ loại"
-TẨY TRẮNG,"Tại phòng","Liệu trình",3.000.000
-,"Tẩy trắng super white ( tại phòng + 1 cặp máng tẩy + 2 tuýp thuốc)","Liệu trình",5.000.000
-,"Tại nhà (gồm 2 tuýp + 1 cặp máng tẩy)","Liệu trình",2.000.000
-,"Thuốc lấy thêm","Tuýp",500.000
-,"Cặp máng tẩy","Cặp",350.000
-NIỀNG RĂNG,"Mắc cài kim loại ( Đơn giản - Phức tạp )","Liệu trình","35.000.000 - 45.000.000"
-,"Tự khoá bù thêm 5tr",,
-,"Mắc cài sứ ( Đơn giản - Phức tạp)","Liệu trình","45.000.000 - 55.000.000"
-,"Tự khoá bù thêm 5tr",,
-,"Niềng răng khay trong suốt (tuỳ loại)","Liệu trình","70.000.000 - 140.000.000"
-,"Minivis",,2.000.000
-,"Nong hàm",,15.000.000
-,"Hàm duy trì",,3.000.000
-CHỤP PHIM,"CHỤP CTCB","Lần",700.000
-,"CHỤP PANORAMIC","Lần",200.000
-,"CHỤP CEPHALO","Lần",200.000
-RĂNG SỨ THẨM MỸ,"Cùi giả kim loại","CÁI",500.000
-,"Cùi giả Titan","CÁI",1.500.000
-,"Cùi giả Zirconia","CÁI",3.500.000
-,"Răng sứ Titan Nhật","CÁI",3.000.000
-,"Răng sứ EMIS Zico Centonia","1 RĂNG",4.000.000
-,"Răng sứ Zirconia Mỹ","1 RĂNG",5.500.000
-,"Răng sứ DD Bio Đức","1 RĂNG",6.000.000
-,"Răng sứ Full NT200 Anh","1 RĂNG",7.500.000
-,"Răng sứ Cercon HT Đức","1 RĂNG",8.000.000
-,"Răng sứ Lava MỸ","1 RĂNG",10.000.000
-,"Răng sứ Lava Plus Mỹ","1 RĂNG",12.000.000
-,"Răng sứ Lava Esthetics MỸ","1 RĂNG",15.000.000
-,"Răng sứ Orodent ITALY","1 RĂNG",20.000.000
-,"Dán sứ Emax","CÁI",10.000.000
-,"Inlay/Onlay","CÁI",6.000.000
-PHỤC HÌNH THÁO LẮP,"Tháo lắp Composite","1 RĂNG",700.000
-,"Tháo lắp Việt Nam","1 RĂNG",300.000
-,"Tháo lắp Nhật","1 RĂNG",400.000
-,"Tháo lắp Mỹ","1 RĂNG",500.000
-,"Răng sứ","1 RĂNG",800.000
-,"Hàm nhựa dẻo","Toàn hàm",2.500.000
-,"Hàm nhựa dẻo","Bán hàm",1.500.000
-,"Toàn hàm nhựa cứng","1 HÀM",7.000.000
-,"Hàm khung","Kim loại thường",2.500.000
-,"Hàm khung","Kim loại Titan",3.000.000
-,"Hàm khung","Liên kết",3.500.000
-,"Máng chống nghiến","1 Hàm",3.500.000
-CẤY GHÉP IMPLANT,"Implant Biotem (Hàn Quốc) (BH 7 NĂM)","TRỤ",15.000.000
-,"Implant Osstem (Hàn Quốc) (BH 10 NĂM)","TRỤ",20.000.000
-,"Implant Hiossen (Mỹ) (BH 13 NĂM)","TRỤ",22.000.000
-,"Implant ETK (Pháp) (BH 15 NĂM)","TRỤ",25.000.000
-,"Implant Straumann (Thuỵ Sỹ) (BH 20 NĂM)","TRỤ",45.000.000
-,"Ghép xương nhân tạo","ĐƠN VỊ",5.000.000
-,"Ghép màng","ĐƠN VỊ",3.000.000
-,"Nâng xoang kín","ĐƠN VỊ",5.000.000
-,"Nâng xoang hở","ĐƠN VỊ",10.000.000
-,"Implant ALL - ON - 4 và ALL - ON - 6 Hàn (BH 10 NĂM)","1 HÀM","120.000.000 - 160.000.000"
-,"Implant ALL - ON - 4 và ALL - ON - 6 Hàn (BH 15 NĂM)","1 HÀM","130.000.000 - 170.000.000"
-,"Implant ALL - ON - 4 và ALL - ON - 6 Hàn (BH 20 NĂM)","1 HÀM","170.000.000 - 230.000.000"
-,"Phục hình toàn hàm cố định khung sườn Titan CAD/CAM + Mão sứ Titan (BH 7 NĂM)","1 HÀM",50.000.000
-,"Phục hình toàn hàm cố định khung sườn Titan CAD/CAM + Mão sứ Titan (BH 10 NĂM)","1 HÀM",80.000.000
-,"Phục hình tháo lắp toàn hàm sườn Titan CAD/CAM","1 HÀM",80.000.000
-,"Phục hình tháo lắp toàn hàm sườn Cr-Co","1 HÀM",50.000.000
+﻿DANH MỤC DỊCH VỤ,MÔ TẢ,ĐƠN VỊ,GIÁ DỊCH VỤ (CHƯA VAT)
+CẠO VÔI & ĐÁNH BÓNG,Trẻ em,CẢ HÀM,"100.000 – 200.000"
+CẠO VÔI & ĐÁNH BÓNG,Người lớn,CẢ HÀM,"300.000 – 500.000"
+CẠO VÔI & ĐÁNH BÓNG,Điều trị nha chu,1 RĂNG,200.000
+TRÁM RĂNG,Trám răng cho trẻ em,1 RĂNG,200.000
+TRÁM RĂNG,Trám thẩm mỹ cho người lớn,1 RĂNG,"300.000 – 500.000"
+NHỔ RĂNG,Răng sữa,1 RĂNG,"50.000 – 100.000"
+NHỔ RĂNG,Răng cửa, chân răng,1 RĂNG,"400.000 – 500.000"
+NHỔ RĂNG,Răng hàm,1 RĂNG,"500.000 – 1.000.000"
+NHỔ RĂNG,Răng khôn (tùy độ khó),1 RĂNG,"3.000.000 – 5.000.000"
+TIỂU PHẪU THUẬT,Cắt chóp răng,1 RĂNG,2.000.000
+TIỂU PHẪU THUẬT,Cắt nướu,1 RĂNG,1.500.000
+NỘI NHA,Răng sữa,1 RĂNG,"300.000 – 500.000"
+NỘI NHA,Răng cửa vĩnh viễn,1 RĂNG,"500.000 – 1.000.000"
+NỘI NHA,Răng tiền hàm,1 RĂNG,"900.000 – 1.500.000"
+NỘI NHA,Răng hàm,1 RĂNG,"1.000.000 – 2.000.000"
+NỘI NHA,Điều trị lại ống tủy,1 RĂNG,"2.000.000 – 4.000.000"
+GẮN ĐÁ TRANG TRÍ RĂNG,Kim cương của Khách hàng,ĐƠN VỊ,500.000
+GẮN ĐÁ TRANG TRÍ RĂNG,Kim cương nhân tạo (của Phòng khám),ĐƠN VỊ,1.000.000
+GẮN ĐÁ TRANG TRÍ RĂNG,Đá tự nhiên (của Phòng khám),ĐƠN VỊ,"Tùy theo loại"
+TẨY TRẮNG RĂNG,Tại phòng khám,LIỆU TRÌNH,3.000.000
+TẨY TRẮNG RĂNG,Super white (tại phòng khám + 1 khay + 2 tuýp),LIỆU TRÌNH,5.000.000
+TẨY TRẮNG RĂNG,Tại nhà (bao gồm 2 tuýp + 1 khay),LIỆU TRÌNH,2.000.000
+TẨY TRẮNG RĂNG,Tuýp thuốc bổ sung,TUÝP,500.000
+TẨY TRẮNG RĂNG,Khay tẩy trắng,ĐÔI,350.000
+CHỈNH NHA,Niềng kim loại (Đơn giản – phức tạp),LIỆU TRÌNH,"35.000.000 - 45.000.000"
+CHỈNH NHA,Niềng tự động (Self-Ligating),LIỆU TRÌNH,"40.000.000 - 50.000.000"
+CHỈNH NHA,Niềng mắc cài sứ (Đơn giản – phức tạp),LIỆU TRÌNH,"45.000.000 - 55.000.000"
+CHỈNH NHA,Niềng tự động (Self-Ligating),LIỆU TRÌNH,"50.000.000 - 60.000.000"
+CHỈNH NHA,Khay trong suốt (tùy loại),LIỆU TRÌNH,"70.000.000 - 140.000.000"
+CHỈNH NHA,Minivis,ĐƠN VỊ,2.000.000
+CHỈNH NHA,Khẩu cái nong rộng,1 CUNG,15.000.000
+CHỈNH NHA,Hàm duy trì,ĐÔI,3.000.000
+CHẨN ĐOÁN HÌNH ẢNH,Chụp Cone Beam CT,1 LẦN,700.000
+CHẨN ĐOÁN HÌNH ẢNH,Chụp X-Quang toàn cảnh,1 LẦN,200.000
+CHẨN ĐOÁN HÌNH ẢNH,Chụp X-Quang sọ nghiêng,1 LẦN,200.000
+RĂNG SỨ THẨM MỸ,Răng sứ kim loại,ĐƠN VỊ,500.000
+RĂNG SỨ THẨM MỸ,Răng sứ Titan,ĐƠN VỊ,1.500.000
+RĂNG SỨ THẨM MỸ,Răng sứ Zirconia,ĐƠN VỊ,3.500.000
+RĂNG SỨ THẨM MỸ,Răng sứ Nhật Titan (BẢO HÀNH 2 NĂM),ĐƠN VỊ,3.000.000
+RĂNG SỨ THẨM MỸ,Răng sứ EMIS, Zico Centonia (BẢO HÀNH 5 NĂM),1 RĂNG,4.000.000
+RĂNG SỨ THẨM MỸ,Răng sứ Zirconia Mỹ (BẢO HÀNH 10 NĂM),1 RĂNG,5.500.000
+RĂNG SỨ THẨM MỸ,Răng sứ DD Bio ĐỨC (BẢO HÀNH 10 NĂM),1 RĂNG,6.000.000
+RĂNG SỨ THẨM MỸ,Răng sứ Full NT200 ANH (BẢO HÀNH 10 NĂM),1 RĂNG,7.500.000
+RĂNG SỨ THẨM MỸ,Răng sứ Cercon HT ĐỨC (BẢO HÀNH 10 NĂM),1 RĂNG,8.000.000
+RĂNG SỨ THẨM MỸ,Răng sứ Lava Mỹ (BẢO HÀNH 12 NĂM),1 RĂNG,10.000.000
+RĂNG SỨ THẨM MỸ,Răng sứ Lava Plus Mỹ (BẢO HÀNH 15 NĂM),1 RĂNG,12.000.000
+RĂNG SỨ THẨM MỸ,Răng sứ Lava Esthetics Mỹ (BẢO HÀNH 20 NĂM),1 RĂNG,15.000.000
+RĂNG SỨ THẨM MỸ,Răng sứ Orodent Ý (BẢO HÀNH TRỌN ĐỜI),1 RĂNG,20.000.000
+RĂNG SỨ THẨM MỸ,Mặt dán sứ Emax (BẢO HÀNH 10 NĂM),ĐƠN VỊ,10.000.000
+RĂNG SỨ THẨM MỸ,Mãnh/Inlay/Onlay (BẢO HÀNH 10 NĂM),ĐƠN VỊ,6.000.000
+PHỤC HÌNH THÁO LẮP,Răng Composite,1 RĂNG,700.000
+PHỤC HÌNH THÁO LẮP,Răng Việt Nam,1 RĂNG,300.000
+PHỤC HÌNH THÁO LẮP,Răng Nhật Bản,1 RĂNG,400.000
+PHỤC HÌNH THÁO LẮP,Răng Mỹ,1 RĂNG,500.000
+PHỤC HÌNH THÁO LẮP,Răng sứ,1 RĂNG,800.000
+PHỤC HÌNH THÁO LẮP,Hàm tháo lắp dẻo (Hàm toàn phần),HÀM TOÀN PHẦN,2.500.000
+PHỤC HÌNH THÁO LẮP,Hàm tháo lắp dẻo (Hàm bán phần),HÀM BÁN PHẦN,1.500.000
+PHỤC HÌNH THÁO LẮP,Hàm toàn phần nhựa thường,1 CUNG,7.000.000
+PHỤC HÌNH THÁO LẮP,Hàm khung kim loại (Kim loại thường),1 CUNG,2.500.000
+PHỤC HÌNH THÁO LẮP,Hàm khung kim loại (Kim loại Titan),1 CUNG,3.000.000
+PHỤC HÌNH THÁO LẮP,Hàm khung kim loại (Có móc),1 CUNG,3.500.000
+PHỤC HÌNH THÁO LẮP,Máng bảo vệ răng (ngủ nghiến răng),1 CUNG,3.500.000
+PHẪU THUẬT CẤY GHÉP IMPLANT,Implant Biotem (Hàn Quốc) (BẢO HÀNH 7 NĂM),ĐƠN VỊ,15.000.000
+PHẪU THUẬT CẤY GHÉP IMPLANT,Implant Osstem (Hàn Quốc) (BẢO HÀNH 10 NĂM),ĐƠN VỊ,20.000.000
+PHẪU THUẬT CẤY GHÉP IMPLANT,Implant Hiossen (Mỹ) (BẢO HÀNH 13 NĂM),ĐƠN VỊ,22.000.000
+PHẪU THUẬT CẤY GHÉP IMPLANT,Implant ETK (Pháp) (BẢO HÀNH 15 NĂM),ĐƠN VỊ,25.000.000
+PHẪU THUẬT CẤY GHÉP IMPLANT,Implant Straumann (Thụy Sĩ) (BẢO HÀNH 20 NĂM),ĐƠN VỊ,45.000.000
+PHẪU THUẬT CẤY GHÉP IMPLANT,Ghép xương nhân tạo,ĐƠN VỊ,5.000.000
+PHẪU THUẬT CẤY GHÉP IMPLANT,Tái tạo mô có hướng dẫn,ĐƠN VỊ,3.000.000
+PHẪU THUẬT CẤY GHÉP IMPLANT,Nâng xoang kín,ĐƠN VỊ,5.000.000
+PHẪU THUẬT CẤY GHÉP IMPLANT,Nâng xoang mở,ĐƠN VỊ,10.000.000
+PHẪU THUẬT CẤY GHÉP IMPLANT,Implant ALL-ON-4 và ALL-ON-6 Hàn Quốc (BẢO HÀNH 10 NĂM),1 CUNG,"120.000.000 - 160.000.000"
+PHẪU THUẬT CẤY GHÉP IMPLANT,Implant ALL-ON-4 và ALL-ON-6 Hàn Quốc (BẢO HÀNH 15 NĂM),1 CUNG,"130.000.000 - 170.000.000"
+PHẪU THUẬT CẤY GHÉP IMPLANT,Implant ALL-ON-4 và ALL-ON-6 Hàn Quốc (BẢO HÀNH 20 NĂM),1 CUNG,"170.000.000 - 230.000.000"
+PHẪU THUẬT CẤY GHÉP IMPLANT,Phục hình cố định toàn hàm khung Titan CAD/CAM, + Mão răng sứ Titan (BẢO HÀNH 7 NĂM),1 CUNG,50.000.000
+PHẪU THUẬT CẤY GHÉP IMPLANT,Phục hình cố định toàn hàm khung Titan CAD/CAM, + Mão răng sứ Titan (BẢO HÀNH 10 NĂM),1 CUNG,80.000.000
+PHẪU THUẬT CẤY GHÉP IMPLANT,Phục hình tháo lắp toàn hàm khung Titan CAD/CAM,1 CUNG,80.000.000
+PHẪU THUẬT CẤY GHÉP IMPLANT,Phục hình tháo lắp toàn hàm khung Cr-Co,1 CUNG,50.000.000
