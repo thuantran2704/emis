@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { Phone, Mail, MessageSquare, Facebook } from "lucide-react";
+import { Phone, Mail, MessageCircle, Facebook } from "lucide-react";
 
 export default function FloatingContactButton() {
   const [isOpen, setIsOpen] = useState(false);
-//what the fuck?
+
   const items = [
     {
       label: "Phone",
@@ -18,7 +18,7 @@ export default function FloatingContactButton() {
     {
       label: "Zalo",
       href: "https://zalo.me/2143697215679541994",
-      icon: <MessageSquare className="h-5 w-5" />,
+      icon: <MessageCircle className="h-5 w-5" />, // OUTLINE chat bubble
     },
     {
       label: "Facebook",
@@ -50,29 +50,24 @@ export default function FloatingContactButton() {
       {/* Main Floating Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`h-12 w-12 rounded-full bg-[#d4af37] text-white shadow-lg flex items-center justify-center text-xl font-bold cursor-pointer animate-shake hover:bg-[#c19d30] transition-all`}
+        className="h-12 w-12 rounded-full bg-[#d4af37] text-white shadow-lg flex items-center justify-center text-xl font-bold cursor-pointer hover:bg-[#c19d30] transition-all"
       >
-        💬
+        <MessageCircle className="h-6 w-6 animate-icon-shake" /> 
       </button>
 
       {/* Animations */}
       <style>{`
-        @keyframes shake {
-          0% { transform: translate(1px, 1px) rotate(0deg); }
-          10% { transform: translate(-1px, -2px) rotate(-1deg); }
-          20% { transform: translate(-3px, 0px) rotate(1deg); }
-          30% { transform: translate(3px, 2px) rotate(0deg); }
-          40% { transform: translate(1px, -1px) rotate(1deg); }
-          50% { transform: translate(-1px, 2px) rotate(-1deg); }
-          60% { transform: translate(-3px, 1px) rotate(0deg); }
-          70% { transform: translate(3px, 1px) rotate(-1deg); }
-          80% { transform: translate(-1px, -1px) rotate(1deg); }
-          90% { transform: translate(1px, 2px) rotate(0deg); }
-          100% { transform: translate(1px, -2px) rotate(-1deg); }
+        @keyframes icon-shake {
+          0% { transform: translate(0, 0) rotate(0deg); }
+          20% { transform: translate(-1px, 1px) rotate(-3deg); }
+          40% { transform: translate(1px, -1px) rotate(3deg); }
+          60% { transform: translate(-1px, 1px) rotate(-3deg); }
+          80% { transform: translate(1px, -1px) rotate(3deg); }
+          100% { transform: translate(0, 0) rotate(0deg); }
         }
 
-        .animate-shake {
-          animation: shake 1.8s infinite;
+        .animate-icon-shake {
+          animation: icon-shake 1.8s infinite ease-in-out;
         }
 
         @keyframes fade-in {
