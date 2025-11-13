@@ -3,7 +3,7 @@ import { Phone, Mail, MessageSquare, Facebook } from "lucide-react";
 
 export default function FloatingContactButton() {
   const [isOpen, setIsOpen] = useState(false);
-
+//what the fuck?
   const items = [
     {
       label: "Phone",
