@@ -12,7 +12,7 @@ import { Helmet } from 'react-helmet';
 import { schemaMarkup } from './components/seoMarkup';
 import Footer from './components/Footer.jsx';
 import Equipment from './pages/Equipment';
-import floatingContactButton from './components/FloatingContactButton.jsx';
+import FloatingContactButton from './components/FloatingContactButton.jsx';
 export default function App() {
   const language = useSelector((state) => state.language.language);
   const dispatch = useDispatch();
