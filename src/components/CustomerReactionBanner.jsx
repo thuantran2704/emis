@@ -56,8 +56,8 @@ export default function CustomerReactionsBanner({ language }) {
               <span className="text-sm text-[#4b4b8f] font-semibold uppercase tracking-wide">
                 {t.service}
               </span>
-              <p className="text-gray-700 text-sm italic mt-3 mb-4 leading-relaxed">
-                “{t.comment}”
+              <p className="text-gray-700 text-sm mt-3 mb-4 leading-relaxed">
+                {t.comment}
               </p>
               <h3 className="text-[#4b4b8f] font-bold">{t.name}</h3>
             </div>
