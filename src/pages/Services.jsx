@@ -53,7 +53,6 @@ export default function Services({ language }) {
     loadData();
   }, [language]);
 
-  // Group rows under each category
   const groupByCategory = (data) => {
     const grouped = {};
     let currentCategory = "";
@@ -71,7 +70,6 @@ export default function Services({ language }) {
     return grouped;
   };
 
-  // Search filter
   const filtered = services.filter((item) =>
     Object.values(item)
       .join(" ")
@@ -97,7 +95,7 @@ export default function Services({ language }) {
           }
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="w-full border border-gray-300 rounded-xl p-2 text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-blue-400 mb-6"
+          className="w-full border border-gray-500 rounded-xl p-2 text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-blue-500 mb-6"
         />
 
         {loading ? (
@@ -112,18 +110,18 @@ export default function Services({ language }) {
           </p>
         ) : (
           <div className="overflow-x-auto">
-            <table className="w-full border border-gray-400 rounded-2xl shadow-sm overflow-hidden text-sm md:text-base bg-white">
-              <thead className="bg-gray-100 text-gray-700 uppercase text-xs md:text-sm border-b border-gray-400">
+            <table className="w-full border-2 border-gray-700 rounded-2xl shadow-md overflow-hidden text-sm md:text-base bg-white">
+              <thead className="bg-gray-200 text-gray-800 uppercase text-xs md:text-sm border-b-2 border-gray-700">
                 <tr>
-                  <th className="px-3 md:px-4 py-3 border-r border-gray-400 whitespace-nowrap">
+                  <th className="px-3 md:px-4 py-3 border-r-2 border-gray-700 whitespace-nowrap">
                     {language === "vietnamese"
                       ? "tên dịch vụ"
                       : "Service Category"}
                   </th>
-                  <th className="px-3 md:px-4 py-3 border-r border-gray-400 whitespace-nowrap">
+                  <th className="px-3 md:px-4 py-3 border-r-2 border-gray-700 whitespace-nowrap">
                     {language === "vietnamese" ? "nội dung" : "Description"}
                   </th>
-                  <th className="px-3 md:px-4 py-3 border-r border-gray-400 whitespace-nowrap">
+                  <th className="px-3 md:px-4 py-3 border-r-2 border-gray-700 whitespace-nowrap">
                     {language === "vietnamese" ? "đơn vị" : "Unit"}
                   </th>
                   <th className="px-3 md:px-4 py-3 whitespace-nowrap">
@@ -140,25 +138,25 @@ export default function Services({ language }) {
                   return rows.map((row, j) => (
                     <tr
                       key={`${i}-${j}`}
-                      className={`border-b border-gray-300 ${
+                      className={`border-b-2 border-gray-600 ${
                         j % 2 === 0 ? "bg-white" : "bg-gray-50"
                       }`}
                     >
                       {j === 0 && (
                         <td
                           rowSpan={rowSpan}
-                          className="border-r border-gray-400 text-center align-middle font-semibold bg-blue-100 text-blue-900 px-3 md:px-4 py-2 w-40"
+                          className="border-r-2 border-gray-700 text-center align-middle font-semibold bg-blue-100 text-blue-900 px-3 md:px-4 py-2 w-40"
                         >
                           {category}
                         </td>
                       )}
-                      <td className="border-r border-gray-300 px-3 md:px-4 py-2">
+                      <td className="border-r-2 border-gray-600 px-3 md:px-4 py-2">
                         {row["Description"] || ""}
                       </td>
-                      <td className="border-r border-gray-300 px-3 md:px-4 py-2">
+                      <td className="border-r-2 border-gray-600 px-3 md:px-4 py-2">
                         {row["Unit"] || ""}
                       </td>
-                      <td className="px-3 md:px-4 py-2">
+                      <td className="px-3 md:px-4 py-2 font-medium text-gray-800">
                         {row["Service Price (VAT excluded)"] || ""}
                       </td>
                     </tr>
