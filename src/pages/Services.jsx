@@ -53,18 +53,18 @@ export default function Services({ language }) {
     loadData();
   }, [language]);
 
-  // Group by category
-  const processGroupedData = (data) => {
-    const grouped = [];
+  // Group rows under each category
+  const groupByCategory = (data) => {
+    const grouped = {};
     let currentCategory = "";
 
     data.forEach((row) => {
       const category = row["Service Category"] || row["Tên dịch vụ"];
       if (category && category.trim() !== "") {
-        currentCategory = category;
-        grouped.push({ _isCategory: true, _category: currentCategory });
-      } else {
-        grouped.push({ ...row, _category: currentCategory, _isCategory: false });
+        currentCategory = category.trim();
+        grouped[currentCategory] = [];
+      } else if (currentCategory) {
+        grouped[currentCategory].push(row);
       }
     });
 
@@ -79,20 +79,15 @@ export default function Services({ language }) {
       .includes(search.toLowerCase())
   );
 
-  const groupedData = processGroupedData(filtered);
-
-  // Extract visible column keys
-  const visibleCols = Object.keys(services[0] || {}).filter(
-    (key) => !key.startsWith("_")
-  );
+  const groupedData = groupByCategory(filtered);
 
   return (
     <div className="min-h-screen bg-gray-50 text-gray-800 py-10 px-4 md:px-12 lg:px-24">
       <div className="max-w-5xl mx-auto">
-        <h1 className="text-center text-2xl md:text-3xl font-semibold text-gray-900 mb-8 capitalize">
+        <h1 className="text-center text-2xl md:text-3xl font-semibold text-gray-900 mb-8 uppercase">
           {language === "vietnamese"
             ? "bảng giá dịch vụ nha khoa"
-            : "dental service price list"}
+            : "international emis dental price list"}
         </h1>
 
         <input
@@ -109,7 +104,7 @@ export default function Services({ language }) {
           <p className="text-center text-gray-500 text-sm">
             {language === "vietnamese" ? "đang tải dữ liệu..." : "loading..."}
           </p>
-        ) : groupedData.length === 0 ? (
+        ) : Object.keys(groupedData).length === 0 ? (
           <p className="text-center text-gray-500 text-sm">
             {language === "vietnamese"
               ? "không tìm thấy dịch vụ"
@@ -117,45 +112,58 @@ export default function Services({ language }) {
           </p>
         ) : (
           <div className="overflow-x-auto">
-            <table className="w-full border border-gray-300 rounded-2xl shadow-sm overflow-hidden text-sm md:text-base">
-              <thead className="bg-gray-100 text-gray-700 uppercase text-xs md:text-sm border-b">
+            <table className="w-full border border-gray-400 rounded-2xl shadow-sm overflow-hidden text-sm md:text-base bg-white">
+              <thead className="bg-gray-100 text-gray-700 uppercase text-xs md:text-sm border-b border-gray-400">
                 <tr>
-                  {visibleCols.map((key) => (
-                    <th
-                      key={key}
-                      className="px-3 md:px-4 py-3 text-left whitespace-nowrap"
-                    >
-                      {key.trim()}
-                    </th>
-                  ))}
+                  <th className="px-3 md:px-4 py-3 border-r border-gray-400 whitespace-nowrap">
+                    {language === "vietnamese"
+                      ? "tên dịch vụ"
+                      : "Service Category"}
+                  </th>
+                  <th className="px-3 md:px-4 py-3 border-r border-gray-400 whitespace-nowrap">
+                    {language === "vietnamese" ? "nội dung" : "Description"}
+                  </th>
+                  <th className="px-3 md:px-4 py-3 border-r border-gray-400 whitespace-nowrap">
+                    {language === "vietnamese" ? "đơn vị" : "Unit"}
+                  </th>
+                  <th className="px-3 md:px-4 py-3 whitespace-nowrap">
+                    {language === "vietnamese"
+                      ? "giá dịch vụ (chưa VAT)"
+                      : "Service Price (VAT excluded)"}
+                  </th>
                 </tr>
               </thead>
+
               <tbody>
-                {groupedData.map((row, i) =>
-                  row._isCategory ? (
-                    <tr key={i}>
-                      <td
-                        colSpan={visibleCols.length}
-                        className="bg-blue-100 text-blue-800 font-bold uppercase px-4 py-3 border-y border-blue-200 text-center text-sm md:text-base"
-                      >
-                        {row._category}
-                      </td>
-                    </tr>
-                  ) : (
+                {Object.entries(groupedData).map(([category, rows], i) => {
+                  const rowSpan = rows.length || 1;
+                  return rows.map((row, j) => (
                     <tr
-                      key={i}
-                      className={`border-b hover:bg-blue-50 transition ${
-                        i % 2 === 0 ? "bg-white" : "bg-gray-50"
+                      key={`${i}-${j}`}
+                      className={`border-b border-gray-300 ${
+                        j % 2 === 0 ? "bg-white" : "bg-gray-50"
                       }`}
                     >
-                      {visibleCols.map((col, j) => (
-                        <td key={j} className="px-3 md:px-4 py-2">
-                          {row[col] || ""}
+                      {j === 0 && (
+                        <td
+                          rowSpan={rowSpan}
+                          className="border-r border-gray-400 text-center align-middle font-semibold bg-blue-100 text-blue-900 px-3 md:px-4 py-2 w-40"
+                        >
+                          {category}
                         </td>
-                      ))}
+                      )}
+                      <td className="border-r border-gray-300 px-3 md:px-4 py-2">
+                        {row["Description"] || ""}
+                      </td>
+                      <td className="border-r border-gray-300 px-3 md:px-4 py-2">
+                        {row["Unit"] || ""}
+                      </td>
+                      <td className="px-3 md:px-4 py-2">
+                        {row["Service Price (VAT excluded)"] || ""}
+                      </td>
                     </tr>
-                  )
-                )}
+                  ));
+                })}
               </tbody>
             </table>
           </div>
