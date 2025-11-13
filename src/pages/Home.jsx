@@ -18,6 +18,7 @@ import osstemImg from '../pics/osstem.jpg';
 import straumannImg from '../pics/straumann.jpg';
 import MachineBanner from '../components/MachineBanner';
 import ContactForm from '../components/ContactForm';
+import CustomerReactionsBanner from '../components/CustomerReactionBanner';
 export default function Home({ language }) {
   const content = homeContent[language] || homeContent.vietnamese;
   const serviceImages = [
@@ -147,7 +148,7 @@ export default function Home({ language }) {
         </div>
       </section>
 
-
+      <CustomerReactionsBanner language = {language}/>
       {/* Hero Section */}
       <section className="py-28 px-4 max-w-6xl mx-auto text-center">
         <h1
