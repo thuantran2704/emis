@@ -18,37 +18,28 @@ export default function Services({ language }) {
 
         const response = await fetch(file);
         const text = await response.text();
-
-        const parsed = Papa.parse(text, {
-          header: true,
-          skipEmptyLines: true,
-        });
+        const parsed = Papa.parse(text, { header: true, skipEmptyLines: true });
 
         let cleanData = parsed.data.filter((row) =>
           Object.values(row).some((val) => val && val.trim() !== "")
         );
 
-        // 🔹 Capitalize each word for Vietnamese data
+        // Capitalize Vietnamese data
         if (language === "vietnamese") {
           const capitalizeWords = (str) =>
             str
               .toLowerCase()
               .split(" ")
-              .map((word) =>
-                word.charAt(0).toUpperCase() + word.slice(1)
-              )
+              .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
               .join(" ");
-
           cleanData = cleanData.map((row) => {
-            const formattedRow = {};
+            const formatted = {};
             for (const key in row) {
-              formattedRow[
-                capitalizeWords(key.trim())
-              ] = row[key]
+              formatted[capitalizeWords(key.trim())] = row[key]
                 ? capitalizeWords(row[key].trim())
                 : "";
             }
-            return formattedRow;
+            return formatted;
           });
         }
 
@@ -59,38 +50,28 @@ export default function Services({ language }) {
         setLoading(false);
       }
     };
-
     loadData();
   }, [language]);
 
-  // Process data to group by service category for display
+  // Group by category
   const processGroupedData = (data) => {
     const grouped = [];
     let currentCategory = "";
-    
+
     data.forEach((row) => {
-      const serviceCategory = row["Service Category"] || row["Tên dịch vụ"];
-      
-      if (serviceCategory && serviceCategory.trim() !== "") {
-        currentCategory = serviceCategory;
-        grouped.push({
-          ...row,
-          _isCategoryRow: true,
-          _category: currentCategory
-        });
+      const category = row["Service Category"] || row["Tên dịch vụ"];
+      if (category && category.trim() !== "") {
+        currentCategory = category;
+        grouped.push({ _isCategory: true, _category: currentCategory });
       } else {
-        grouped.push({
-          ...row,
-          _isCategoryRow: false,
-          _category: currentCategory
-        });
+        grouped.push({ ...row, _category: currentCategory, _isCategory: false });
       }
     });
-    
+
     return grouped;
   };
 
-  // Search filter (case insensitive)
+  // Search filter
   const filtered = services.filter((item) =>
     Object.values(item)
       .join(" ")
@@ -100,10 +81,15 @@ export default function Services({ language }) {
 
   const groupedData = processGroupedData(filtered);
 
+  // Extract visible column keys
+  const visibleCols = Object.keys(services[0] || {}).filter(
+    (key) => !key.startsWith("_")
+  );
+
   return (
-    <div className="min-h-screen bg-white text-gray-800 py-10 px-4 md:px-12 lg:px-24">
+    <div className="min-h-screen bg-gray-50 text-gray-800 py-10 px-4 md:px-12 lg:px-24">
       <div className="max-w-5xl mx-auto">
-        <h1 className="text-center text-2xl md:text-3xl font-semibold text-gray-900 mb-8">
+        <h1 className="text-center text-2xl md:text-3xl font-semibold text-gray-900 mb-8 capitalize">
           {language === "vietnamese"
             ? "bảng giá dịch vụ nha khoa"
             : "dental service price list"}
@@ -130,46 +116,46 @@ export default function Services({ language }) {
               : "no services found"}
           </p>
         ) : (
-          <div className="overflow-x-auto rounded-2xl shadow-sm">
-            <table className="w-full text-left text-gray-700 text-sm md:text-base">
-              <thead className="bg-gray-100 text-gray-600 uppercase text-xs md:text-sm">
+          <div className="overflow-x-auto">
+            <table className="w-full border border-gray-300 rounded-2xl shadow-sm overflow-hidden text-sm md:text-base">
+              <thead className="bg-gray-100 text-gray-700 uppercase text-xs md:text-sm border-b">
                 <tr>
-                  {Object.keys(groupedData[0] || {})
-                    .filter(key => !key.startsWith('_')) // Remove internal fields
-                    .map((key) => (
-                      <th
-                        key={key}
-                        className="px-3 md:px-4 py-3 whitespace-nowrap"
-                      >
-                        {key.trim()}
-                      </th>
-                    ))}
+                  {visibleCols.map((key) => (
+                    <th
+                      key={key}
+                      className="px-3 md:px-4 py-3 text-left whitespace-nowrap"
+                    >
+                      {key.trim()}
+                    </th>
+                  ))}
                 </tr>
               </thead>
               <tbody>
-                {groupedData.map((row, i) => (
-                  <tr
-                    key={i}
-                    className={`border-b ${
-                      i % 2 === 0 ? "bg-white" : "bg-gray-50"
-                    } hover:bg-blue-50 transition ${
-                      row._isCategoryRow ? "font-semibold bg-blue-100" : ""
-                    }`}
-                  >
-                    {Object.keys(row)
-                      .filter(key => !key.startsWith('_')) // Remove internal fields
-                      .map((col, j) => (
-                        <td 
-                          key={j} 
-                          className={`px-3 md:px-4 py-2 ${
-                            col === "Service Category" || col === "Tên dịch vụ" ? "font-semibold" : ""
-                          }`}
-                        >
+                {groupedData.map((row, i) =>
+                  row._isCategory ? (
+                    <tr key={i}>
+                      <td
+                        colSpan={visibleCols.length}
+                        className="bg-blue-100 text-blue-800 font-bold uppercase px-4 py-3 border-y border-blue-200 text-center text-sm md:text-base"
+                      >
+                        {row._category}
+                      </td>
+                    </tr>
+                  ) : (
+                    <tr
+                      key={i}
+                      className={`border-b hover:bg-blue-50 transition ${
+                        i % 2 === 0 ? "bg-white" : "bg-gray-50"
+                      }`}
+                    >
+                      {visibleCols.map((col, j) => (
+                        <td key={j} className="px-3 md:px-4 py-2">
                           {row[col] || ""}
                         </td>
                       ))}
-                  </tr>
-                ))}
+                    </tr>
+                  )
+                )}
               </tbody>
             </table>
           </div>
