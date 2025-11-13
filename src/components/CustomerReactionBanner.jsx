@@ -10,19 +10,19 @@ export default function CustomerReactionsBanner({ language }) {
       name: "DIỄM SƯƠNG",
       service: content.services[0],
       comment: content.comments[0],
-      videoUrl: "https://www.youtube.com/shorts/Ymwva1sJVuw",
+      videoUrl: "https://youtube.com/embed/Ymwva1sJVuw",
     },
     {
       name: "BÉ TRƯƠNG BÁ",
       service: content.services[1],
       comment: content.comments[1],
-      videoUrl: "https://youtube.com/shorts/l8EngnXRACI?si=lf5xpgGUxhCCmTRw",
+      videoUrl: "https://youtube.com/embed/surWZR9t57k",
     },
     {
       name: "NGỌC TUYỀN",
       service: content.services[2],
       comment: content.comments[2],
-      videoUrl: "https://youtube.com/shorts/l8EngnXRACI?si=8ROLZDlVF9UEwwnH",
+      videoUrl: "https://www.youtube.com/embed/l8EngnXRACI",
     },
   ];
 
