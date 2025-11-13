@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, Mail, MessageCircle, Facebook } from "lucide-react";
+import { Phone, Mail, MessageSquare, Facebook, MessageCircle } from "lucide-react";
 
 export default function FloatingContactButton() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +18,7 @@ export default function FloatingContactButton() {
     {
       label: "Zalo",
       href: "https://zalo.me/2143697215679541994",
-      icon: <MessageCircle className="h-5 w-5" />, // OUTLINE chat bubble
+      icon: <MessageSquare className="h-5 w-5" />,
     },
     {
       label: "Facebook",
@@ -29,7 +29,7 @@ export default function FloatingContactButton() {
 
   return (
     <div className="fixed bottom-6 left-6 z-[9999]">
-      {/* Sliding menu */}
+      {/* Panel */}
       {isOpen && (
         <div className="absolute bottom-full left-0 mb-3 w-52 bg-white rounded-xl shadow-xl border border-[#d4af37] overflow-hidden animate-fade-in">
           {items.map((item, idx) => (
@@ -47,34 +47,38 @@ export default function FloatingContactButton() {
         </div>
       )}
 
-      {/* Main Floating Button */}
+      {/* Floating Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="h-12 w-12 rounded-full bg-[#d4af37] text-white shadow-lg flex items-center justify-center text-xl font-bold cursor-pointer hover:bg-[#c19d30] transition-all"
+        className="h-12 w-12 rounded-full bg-[#d4af37] text-white shadow-lg flex items-center justify-center cursor-pointer hover:bg-[#c19d30] transition-all"
       >
-        <MessageCircle className="h-6 w-6 animate-icon-shake" /> 
+        {/* ICON ONLY SHAKES */}
+        <MessageCircle className="h-7 w-7 animate-vibrate" strokeWidth={2} />
       </button>
 
       {/* Animations */}
       <style>{`
-        @keyframes icon-shake {
-          0% { transform: translate(0, 0) rotate(0deg); }
-          20% { transform: translate(-1px, 1px) rotate(-3deg); }
-          40% { transform: translate(1px, -1px) rotate(3deg); }
-          60% { transform: translate(-1px, 1px) rotate(-3deg); }
-          80% { transform: translate(1px, -1px) rotate(3deg); }
-          100% { transform: translate(0, 0) rotate(0deg); }
+        /* PHONE CALL STYLE VIBRATION */
+        @keyframes vibrate {
+          0%   { transform: rotate(0deg); }
+          15%  { transform: rotate(-15deg); }
+          30%  { transform: rotate(15deg); }
+          45%  { transform: rotate(-10deg); }
+          60%  { transform: rotate(10deg); }
+          75%  { transform: rotate(-5deg); }
+          100% { transform: rotate(0deg); }
         }
 
-        .animate-icon-shake {
-          animation: icon-shake 1.8s infinite ease-in-out;
+        .animate-vibrate {
+          animation: vibrate 1s ease-in-out infinite;
+          transform-origin: center;
         }
 
+        /* Menu fade in */
         @keyframes fade-in {
           from { opacity: 0; transform: translateY(10px); }
           to { opacity: 1; transform: translateY(0); }
         }
-
         .animate-fade-in {
           animation: fade-in 0.25s ease-out;
         }
