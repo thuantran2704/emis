@@ -8,7 +8,7 @@ export const homeContent = {
     findout: "Find Out More",
     practiceTitle: "Our Practice in Action",
     papersTitle: "Standard Quality Dental Clinic",
-    introTitle: "Intro Video",
+    introTitle: "Welcome to Emis Dental",
     implantBrandsSectionTitle: "Our Implant Brands",
     implantBrandsDescriptions: ["Reliable and high-quality implants with excellent integration for long-lasting dental restorations.",
     "Innovative design and stability for durable, natural-looking teeth.",
@@ -89,7 +89,7 @@ export const homeContent = {
     findout: "Tìm hiểu thêm",
     practiceTitle: "Phòng Khám Của Chúng Tôi",
     papersTitle: "Nha Khoa Tiêu Chuẩn Chất Lượng",
-    introTitle: "Video Giới Thiệu",
+    introTitle: "Chào Mừng Đến Với Nha Khoa Emis",
     shorts: [
       {
         name: "Mẹo Chăm Sóc Implant",
@@ -171,7 +171,7 @@ export const homeContent = {
     findout: "Find Out More",
     practiceTitle: "我们的诊所实况",
     papersTitle: "标准高质量牙科诊所",
-    introTitle: "介绍视频",
+    introTitle: "欢迎来到 Emis 牙科",
     shorts: [
       {
         name: "种植牙护理技巧",
@@ -253,7 +253,7 @@ export const homeContent = {
     findout: "자세히 보기",
     practiceTitle: "우리의 진료 현장",
     papersTitle: "표준 품질 치과",
-    introTitle: "소개 영상",
+    introTitle: "Emis 치과에 오신 것을 환영합니다",
     shorts: [
       {
         name: "임플란트 관리 팁",
@@ -336,7 +336,7 @@ export const homeContent = {
     findout: "Find Out More",
     practiceTitle: "我們的診所實況",
     papersTitle: "標準高品質牙科診所",
-    introTitle: "介紹影片",
+    introTitle: "歡迎來到 Emis 牙科",
     shorts: [
       {
         name: "植牙護理技巧",
@@ -418,7 +418,7 @@ export const homeContent = {
     findout: "Find Out More",
     practiceTitle: "Notre Pratique en Action",
     papersTitle: "Clinique Dentaire de Qualité Standard",
-    introTitle: "Vidéo de Présentation",
+    introTitle: "Bienvenue à Clinique Dentaire Emis",
     shorts: [
       {
         name: "Conseils pour les Implants",

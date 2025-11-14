@@ -7,7 +7,7 @@ export default function CustomerReactionsBanner({ language }) {
   // Map testimonials directly from your content file
   const testimonials = [
     {
-      name: "DIỄM SƯƠNG",
+      name: "CHỊ DIỄM SƯƠNG",
       service: content.services[0],
       comment: content.comments[0],
       videoUrl: "https://youtube.com/embed/Ymwva1sJVuw",
@@ -19,7 +19,7 @@ export default function CustomerReactionsBanner({ language }) {
       videoUrl: "https://www.youtube.com/embed/l8EngnXRACI",
     },
     {
-      name: "NGỌC TUYỀN",
+      name: "CHỊ NGỌC TUYỀN",
       service: content.services[2],
       comment: content.comments[2],
       videoUrl: "https://youtube.com/embed/surWZR9t57k",
