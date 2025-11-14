@@ -29,13 +29,19 @@ export default function MachineBanner({ language }) {
 
       <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
         {/* Title */}
-        <h2 className="text-4xl font-serif font-bold text-[#3b3b6d] mb-4 drop-shadow-sm">
+        <h2
+          className="text-4xl font-bold text-[#3b3b6d] mb-4 drop-shadow-sm"
+          style={{ fontFamily: "'Cormorant Garamond', serif" }}
+        >
           {content.title}
         </h2>
         <div className="w-28 h-[2px] mx-auto bg-gradient-to-r from-[#d4af37] to-[#f6e58d] mb-10"></div>
 
         {/* Intro */}
-        <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-16 leading-relaxed">
+        <p
+          className="text-lg text-gray-700 max-w-3xl mx-auto mb-16 leading-relaxed"
+          style={{ fontFamily: "'Noto Serif', serif" }}
+        >
           {content.introText ||
             (isVN
               ? "Trang bị công nghệ hiện đại, khẳng định đẳng cấp và sự an tâm trong từng chi tiết điều trị."
@@ -58,7 +64,7 @@ export default function MachineBanner({ language }) {
                 </div>
               </div>
 
-              {/* Image - shrink to fit beautifully */}
+              {/* Image */}
               <div className="bg-[#fdfcf7] h-56 flex items-center justify-center border-b border-[#f0e4bc] overflow-hidden">
                 <img
                   src={img}
@@ -69,10 +75,16 @@ export default function MachineBanner({ language }) {
 
               {/* Text Content */}
               <div className="p-6 text-left">
-                <h3 className="text-2xl font-serif font-semibold text-[#3b3b6d] mb-3">
+                <h3
+                  className="text-2xl font-semibold text-[#3b3b6d] mb-3"
+                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                >
                   {content[key]?.title}
                 </h3>
-                <p className="text-gray-700 text-sm leading-relaxed mb-1">
+                <p
+                  className="text-gray-700 text-sm leading-relaxed mb-1"
+                  style={{ fontFamily: "'Noto Serif', serif" }}
+                >
                   {content[key]?.equipmentIntro}
                 </p>
               </div>
