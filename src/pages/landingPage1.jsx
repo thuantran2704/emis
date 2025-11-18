@@ -1,12 +1,11 @@
-import React from 'react';
-import img1 from '/pics/WEB/veneer/1.png';
-import img2 from '/pics/WEB/veneer/2.png';
-import img3 from '/pics/WEB/veneer/3.png';
-import img4 from '/pics/WEB/veneer/4.png';
-import img5 from '/pics/WEB/veneer/5.png';
-import img6 from '/pics/WEB/veneer/6.png';
-import img7 from '/pics/WEB/veneer/7.png';
-import img8 from '/pics/WEB/veneer/8.png';
+import img1 from '../pics/WEB/veneer/1.png';
+import img2 from '../pics/WEB/veneer/2.png';
+import img3 from '../pics/WEB/veneer/3.png';
+import img4 from '../pics/WEB/veneer/4.png';
+import img5 from '../pics/WEB/veneer/5.png';
+import img6 from '../pics/WEB/veneer/6.png';
+import img7 from '../pics/WEB/veneer/7.png';
+import img8 from '../pics/WEB/veneer/8.png';
 
 export default function LandingPage1() {
   return (
