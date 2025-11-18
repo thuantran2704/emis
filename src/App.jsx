@@ -38,7 +38,7 @@ export default function App() {
           <Route path="/services" element={<Services language={language} />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/equipment" element={<Equipment language={language} />} />
-          <Route path="/testing" element={<landingPage1 />} />
+          <Route path="/testing" element={<LandingPage1 />} />
         </Routes>
         <Footer language={language}/>
         <FloatingContactButton />
