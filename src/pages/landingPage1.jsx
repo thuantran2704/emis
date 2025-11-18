@@ -1,140 +1,135 @@
-import Image from "next/image";
-
-export default function VeneerPage() {
+export default function LandingPage1() {
   return (
-    <div className="w-full flex flex-col gap-10 py-10">
-      {/* SECTION 1 — TITLE */}
-      <section className="text-center max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold mb-4">Dán Sứ Veneer Thẩm Mỹ Cao Cấp</h1>
-        <p className="text-lg text-gray-600">Giải pháp thẩm mỹ răng tối ưu – bảo tồn răng thật tối đa</p>
-      </section>
+    <div className="w-full flex flex-col items-center bg-white text-black">
 
-      {/* SECTION 2 — PARAGRAPH + IMAGE */}
-      <section className="grid md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
-        <div className="space-y-4 text-gray-700 text-lg leading-relaxed">
-          <h2 className="text-2xl font-semibold">1. Dán Sứ Veneer là Gì?</h2>
+      {/* Section 1 – Paragraph + Image */}
+      <section className="max-w-5xl w-full px-4 py-10 flex flex-col md:flex-row items-center gap-8">
+        <div className="flex-1 text-lg leading-relaxed">
           <p>
-            Dán sứ Veneer là kỹ thuật thẩm mỹ hiện đại, sử dụng một lớp sứ mỏng từ 0.2 – 0.6mm để 
-            dán lên mặt ngoài của răng. Khác với bọc răng sứ, phương pháp này chỉ mài rất ít hoặc 
-            thậm chí không mài răng, giúp bảo tồn mô răng thật tối đa.
+            Veneers are ultra-thin porcelain or composite shells that cover the front
+            surface of your teeth to improve shape, color, and symmetry. They are one
+            of the most popular cosmetic dentistry solutions because they create an
+            instantly brighter and more aligned smile with minimal tooth preparation.
           </p>
         </div>
-        <Image
-          src="/pics/WEB/veneer/1.png"
-          alt="Dán sứ veneer là gì"
-          width={600}
-          height={400}
-          className="rounded-2xl shadow"
+        <img
+          src="/images/veneer1.png"
+          alt="veneers step"
+          className="flex-1 w-full rounded-xl"
         />
       </section>
 
-      {/* SECTION 3 — IMAGE + PARAGRAPH */}
-      <section className="grid md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
-        <Image
-          src="/pics/WEB/veneer/2.png"
-          alt="Trường hợp nên dán sứ veneer"
-          width={600}
-          height={400}
-          className="rounded-2xl shadow order-2 md:order-1"
+      {/* Section 2 – Image + Paragraph */}
+      <section className="max-w-5xl w-full px-4 py-10 flex flex-col md:flex-row-reverse items-center gap-8">
+        <img
+          src="/images/veneer2.png"
+          alt="veneer consultation"
+          className="flex-1 w-full rounded-xl"
         />
-        <div className="space-y-4 text-gray-700 text-lg leading-relaxed order-1 md:order-2">
-          <h2 className="text-2xl font-semibold">2. Trường Hợp Nào Nên Dán Sứ Veneer?</h2>
-          <p>Dán sứ Veneer phù hợp khi bạn có:</p>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Răng nhiễm màu nhẹ, không thể tẩy trắng.</li>
-            <li>Răng sứt mẻ nhẹ, mẻ cạnh.</li>
-            <li>Răng ngắn, nhỏ, hình dáng không đẹp.</li>
-            <li>Răng thưa kẽ nhẹ.</li>
-            <li>Người muốn cải thiện nụ cười nhưng không muốn mài răng nhiều.</li>
-          </ul>
-        </div>
-      </section>
-
-      {/* SECTION 4 — PARAGRAPH ONLY */}
-      <section className="max-w-6xl mx-auto space-y-4 text-gray-700 text-lg leading-relaxed">
-        <h2 className="text-2xl font-semibold">3. Các Loại Veneer Cao Cấp tại Emis Dental</h2>
-        <p>
-          Tại Emis Dental, chúng tôi sử dụng các dòng sứ cao cấp như Emax Veneer (Đức) – vật liệu 
-          Lithium Disilicate nổi tiếng với độ mỏng, độ trong và khả năng mô phỏng răng tự nhiên xuất sắc.
-        </p>
-      </section>
-
-      {/* SECTION 5 — IMAGE */}
-      <section className="max-w-6xl mx-auto">
-        <Image
-          src="/pics/WEB/veneer/3.png"
-          alt="Emax Veneer"
-          width={1200}
-          height={600}
-          className="rounded-2xl shadow"
-        />
-      </section>
-
-      {/* SECTION 6 — PARAGRAPH */}
-      <section className="max-w-6xl mx-auto space-y-4 text-gray-700 text-lg leading-relaxed">
-        <h2 className="text-2xl font-semibold">4. Vì Sao Khách Hàng Ưu Chuộng Veneer?</h2>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>Bảo tồn răng thật tối đa, hầu như không mài răng.</li>
-          <li>Thẩm mỹ tự nhiên, không đổi màu theo thời gian.</li>
-          <li>Bền chắc, ăn nhai thoải mái.</li>
-          <li>Thời gian thực hiện nhanh – hiệu quả gần như tức thì.</li>
-        </ul>
-      </section>
-
-      {/* SECTION 7 — PARAGRAPH + IMAGE */}
-      <section className="grid md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
-        <div className="space-y-4 text-gray-700 text-lg leading-relaxed">
-          <h2 className="text-2xl font-semibold">5. Cá Nhân Hóa Nụ Cười – Smile Design</h2>
+        <div className="flex-1 text-lg leading-relaxed">
           <p>
-            Emis Dental thiết kế nụ cười dựa trên khuôn mặt, đường cười, màu da và tính cách của từng khách hàng. 
-            Công nghệ mock-up cho phép bạn xem trước nụ cười mới trước khi làm.
+            The veneer process typically begins with a consultation where your dentist
+            evaluates your dental structure, listens to your cosmetic goals, and helps
+            you choose the right shade and material. Digital imaging may also be used
+            to preview your future smile on-screen.
           </p>
         </div>
-        <Image
-          src="/pics/WEB/veneer/4.png"
-          alt="Smile Design"
-          width={600}
-          height={400}
-          className="rounded-2xl shadow"
+      </section>
+
+      {/* Section 3 – Paragraph + Image */}
+      <section className="max-w-5xl w-full px-4 py-10 flex flex-col md:flex-row items-center gap-8">
+        <div className="flex-1 text-lg leading-relaxed">
+          <p>
+            Veneers require only minimal enamel removal to ensure a perfect fit and
+            natural appearance. This preserves most of the tooth structure while still
+            allowing the veneer to bond securely and last for many years.
+          </p>
+        </div>
+        <img
+          src="/images/veneer3.png"
+          alt="enamel preparation"
+          className="flex-1 w-full rounded-xl"
         />
       </section>
 
-      {/* SECTION 8 — PARAGRAPH ONLY */}
-      <section className="max-w-6xl mx-auto space-y-4 text-gray-700 text-lg leading-relaxed">
-        <h2 className="text-2xl font-semibold">6. Quy Trình Dán Sứ Veneer</h2>
-        <ol className="list-decimal pl-6 space-y-2">
-          <li>Thăm khám, chụp phim, thiết kế nụ cười.</li>
-          <li>Mô phỏng & mài răng tối thiểu (nếu cần).</li>
-          <li>Chế tác veneer tại Labo.</li>
-          <li>Thử và gắn veneer cố định.</li>
-        </ol>
-      </section>
-
-      {/* SECTION 9 — PARAGRAPH */}
-      <section className="max-w-6xl mx-auto space-y-4 text-gray-700 text-lg leading-relaxed">
-        <h2 className="text-2xl font-semibold">7. Bảng Giá Dán Sứ Veneer</h2>
-        <p>
-          Dòng sứ Emax Veneer được bảo hành 10 năm – phù hợp cho khách hàng yêu cầu thẩm mỹ cao. 
-          Bác sĩ sẽ tư vấn loại Veneer tối ưu nhất dựa trên cấu trúc răng của bạn.
-        </p>
-      </section>
-
-      {/* SECTION 10 — PARAGRAPH + IMAGE */}
-      <section className="grid md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
-        <Image
-          src="/pics/WEB/veneer/5.png"
-          alt="Vì sao chọn Emis Dental"
-          width={600}
-          height={400}
-          className="rounded-2xl shadow order-2 md:order-1"
+      {/* Section 4 – Image + Paragraph */}
+      <section className="max-w-5xl w-full px-4 py-10 flex flex-col md:flex-row-reverse items-center gap-8">
+        <img
+          src="/images/veneer4.png"
+          alt="veneer bonding"
+          className="flex-1 w-full rounded-xl"
         />
-        <div className="space-y-4 text-gray-700 text-lg leading-relaxed order-1 md:order-2">
-          <h2 className="text-2xl font-semibold">8. Vì Sao Chọn Emis Dental?</h2>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Bác sĩ chuyên sâu, mài răng tối thiểu.</li>
-            <li>Trang thiết bị hiện đại: Cone Beam CT, máy Scan răng…</li>
-            <li>Sử dụng sứ Emax chính hãng, bảo hành dài hạn.</li>
-          </ul>
+        <div className="flex-1 text-lg leading-relaxed">
+          <p>
+            Once the custom veneers are created, your dentist bonds them permanently
+            to your natural teeth using advanced adhesive technology. After final
+            adjustments, your smile looks brighter, more symmetrical, and naturally
+            beautiful.
+          </p>
+        </div>
+      </section>
+
+      {/* Section 5 – Paragraph + Image */}
+      <section className="max-w-5xl w-full px-4 py-10 flex flex-col md:flex-row items-center gap-8">
+        <div className="flex-1 text-lg leading-relaxed">
+          <p>
+            Veneers are stain-resistant and durable, making them a long-term cosmetic
+            solution for discoloration, chips, gaps, and minor misalignment. With
+            proper care, they typically last 10–15 years or longer.
+          </p>
+        </div>
+        <img
+          src="/images/veneer5.png"
+          alt="veneers durability"
+          className="flex-1 w-full rounded-xl"
+        />
+      </section>
+
+      {/* Section 6 – Image + Paragraph */}
+      <section className="max-w-5xl w-full px-4 py-10 flex flex-col md:flex-row-reverse items-center gap-8">
+        <img
+          src="/images/veneer6.png"
+          alt="veneers smile care"
+          className="flex-1 w-full rounded-xl"
+        />
+        <div className="flex-1 text-lg leading-relaxed">
+          <p>
+            Proper care includes regular brushing, flossing, and avoiding habits like
+            chewing on pens or ice. Veneers do not require special maintenance beyond
+            maintaining normal oral hygiene and routine dental checkups.
+          </p>
+        </div>
+      </section>
+
+      {/* Section 7 – Paragraph + Image */}
+      <section className="max-w-5xl w-full px-4 py-10 flex flex-col md:flex-row items-center gap-8">
+        <div className="flex-1 text-lg leading-relaxed">
+          <p>
+            Many patients choose veneers for fast, non-surgical smile transformations.
+            Whether you want a Hollywood-style smile or subtle enhancements, veneers
+            can be tailored precisely to your aesthetic goals.
+          </p>
+        </div>
+        <img
+          src="/images/veneer7.png"
+          alt="custom veneer result"
+          className="flex-1 w-full rounded-xl"
+        />
+      </section>
+
+      {/* Section 8 – Image + Paragraph */}
+      <section className="max-w-5xl w-full px-4 py-10 flex flex-col md:flex-row-reverse items-center gap-8">
+        <img
+          src="/images/veneer8.png"
+          alt="veneers final result"
+          className="flex-1 w-full rounded-xl"
+        />
+        <div className="flex-1 text-lg leading-relaxed">
+          <p>
+            The final result is a bright, balanced, and confident smile that feels
+            completely natural. Veneers are one of the most effective ways to elevate
+            your appearance while maintaining the full function of your natural teeth.
+          </p>
         </div>
       </section>
     </div>
