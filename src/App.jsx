@@ -13,7 +13,7 @@ import { schemaMarkup } from './components/seoMarkup';
 import Footer from './components/Footer.jsx';
 import Equipment from './pages/Equipment';
 import FloatingContactButton from './components/floatingContactButton.jsx';
-import landingPage1 from './pages/landingPage1.jsx';
+import LandingPage1 from './pages/landingPage1.jsx';
 export default function App() {
   const language = useSelector((state) => state.language.language);
   const dispatch = useDispatch();
