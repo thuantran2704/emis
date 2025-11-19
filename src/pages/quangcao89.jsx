@@ -4,7 +4,7 @@ import ContactForm from "../components/ContactForm";
 
 export default function ImplantLandingPage({ language = "english" }) {
   return (
-    <div style={{ fontFamily: "'Arial', sans-serif", color: "#333" }}>
+    <div style={{ fontFamily: "'Roboto', sans-serif", color: "#333" }}>
       {/* Navbar placeholder */}
       <div style={{ height: "70px" }}></div>
 
@@ -17,7 +17,7 @@ export default function ImplantLandingPage({ language = "english" }) {
           justifyContent: "space-between",
           alignItems: "center",
           backgroundColor: "#fce8d4",
-          padding: "40px 30px",
+          padding: "40px 20px",
           borderRadius: "20px",
           maxWidth: "1100px",
           margin: "20px auto",
@@ -51,27 +51,13 @@ export default function ImplantLandingPage({ language = "english" }) {
               textShadow: "1px 1px 2px rgba(0,0,0,0.1)",
             }}
           >
-            TRỒNG RĂNG IMPLANT HIOSSEN (HÀN QUỐC) <br /> CHỈ 8.900.000Đ
+            TRỒNG RĂNG IMPLANT HIOSSEN (HÀN QUỐC) <br />
+            <span className="neon-flicker">CHỈ 8.900.000Đ</span>
           </h1>
           <p style={{ fontSize: "1.15rem", marginBottom: "25px", color: "#4b4b4b" }}>
             Phục hồi răng mất an toàn – thẩm mỹ tự nhiên. Nhận tư vấn miễn phí và ưu đãi đặc biệt từ Emis Dental.
           </p>
-          <button
-            style={{
-              backgroundColor: "#f7941e",
-              color: "#fff",
-              padding: "14px 30px",
-              fontSize: "1.1rem",
-              border: "none",
-              borderRadius: "10px",
-              cursor: "pointer",
-              fontWeight: "700",
-              boxShadow: "0 5px 12px rgba(0,0,0,0.15)",
-              transition: "all 0.3s ease",
-            }}
-            onMouseOver={(e) => (e.currentTarget.style.backgroundColor = "#e18312")}
-            onMouseOut={(e) => (e.currentTarget.style.backgroundColor = "#f7941e")}
-          >
+          <button className="cta-button">
             ĐẶT HẸN TƯ VẤN NGAY
           </button>
         </div>
@@ -155,30 +141,15 @@ export default function ImplantLandingPage({ language = "english" }) {
         <p style={{ fontSize: "1.1rem", marginBottom: "10px" }}>
           Giá gốc: <s>22.000.000 VNĐ</s>
         </p>
-        <p style={{ fontSize: "1.6rem", fontWeight: "bold", color: "#f7941e", marginBottom: "25px" }}>
-          Chỉ còn 8.900.000 VNĐ
+        <p style={{ fontSize: "1.6rem", fontWeight: "bold", marginBottom: "25px", color: "#f7941e" }}>
+          <span className="neon-flicker">Chỉ còn 8.900.000 VNĐ</span>
         </p>
         <ul style={{ textAlign: "left", display: "inline-block", marginBottom: "35px", lineHeight: "1.7" }}>
           <li>Miễn phí thăm khám và tư vấn 1:1 cùng bác sĩ chuyên khoa Implant</li>
           <li>Miễn phí chụp phim CT Cone Beam 3D</li>
           <li>Ưu đãi có số lượng giới hạn, đăng ký sớm để giữ suất</li>
         </ul>
-        <button
-          style={{
-            backgroundColor: "#f7941e",
-            color: "#fff",
-            padding: "14px 30px",
-            fontSize: "1.1rem",
-            border: "none",
-            borderRadius: "10px",
-            cursor: "pointer",
-            fontWeight: "700",
-            boxShadow: "0 5px 15px rgba(0,0,0,0.1)",
-            transition: "all 0.3s ease",
-          }}
-          onMouseOver={(e) => (e.currentTarget.style.backgroundColor = "#e18312")}
-          onMouseOut={(e) => (e.currentTarget.style.backgroundColor = "#f7941e")}
-        >
+        <button className="cta-button">
           ĐẶT HẸN NGAY
         </button>
       </section>
@@ -186,20 +157,57 @@ export default function ImplantLandingPage({ language = "english" }) {
       {/* Contact Form */}
       <ContactForm language={language} />
 
-      {/* Footer */}
-      <footer
-        style={{
-          textAlign: "center",
-          padding: "40px 20px",
-          backgroundColor: "#f8f1e7",
-          marginTop: "30px",
-        }}
-      >
-        <p style={{ marginBottom: "5px", fontWeight: "600" }}>CÔNG TY TNHH NHA KHOA QUỐC TẾ EMIS</p>
-        <p style={{ marginBottom: "5px" }}>Hotline: 0919 100 021 – 0768 117 068</p>
-        <p style={{ marginBottom: "5px" }}>Email: emisdentalclinic@gmail.com</p>
-        <p>Địa chỉ: 62B Phạm Ngọc Thạch, Phường Xuân Hòa, TP.HCM</p>
-      </footer>
+      {/* Neon Flicker CSS */}
+      <style>
+        {`
+          .neon-flicker {
+            color: #f7941e;
+            text-shadow:
+              0 0 5px #f7941e,
+              0 0 10px #f7941e,
+              0 0 20px #f7941e,
+              0 0 40px #ffae34;
+            animation: flicker 1.5s infinite alternate;
+          }
+
+          @keyframes flicker {
+            0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+              opacity: 1;
+            }
+            20%, 22%, 24%, 55% {
+              opacity: 0.6;
+            }
+          }
+
+          .cta-button {
+            background-color: #f7941e;
+            color: #fff;
+            padding: 14px 30px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 700;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+          }
+          .cta-button:hover {
+            background-color: #e18312;
+          }
+
+          /* Responsive adjustments */
+          @media (max-width: 768px) {
+            section {
+              flex-direction: column !important;
+              text-align: center !important;
+            }
+            .cta-button {
+              width: 80%;
+              margin: 0 auto;
+            }
+          }
+        `}
+      </style>
     </div>
   );
 }
