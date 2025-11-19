@@ -30,13 +30,39 @@ export default function ImplantInfo({ language }) {
     { id: "section7", number: "7", title: isViet ? "Lý Do Nên Chọn Emis Dental" : "Why Choose Emis Dental" },
   ];
 
-  const brandData = [
-    { name: isViet ? "Osstem (Hàn Quốc) — tuổi thọ trung bình ~10 năm" : "Osstem (Korea) — approx. 10-year lifespan", img: osstemImg },
-    { name: isViet ? "Hiossen (Mỹ) — tuổi thọ trung bình ~13 năm" : "Hiossen (USA) — approx. 13-year lifespan", img: hiossenImg },
-    { name: isViet ? "Straumann (Thụy Sĩ) — tuổi thọ trung bình ~20 năm" : "Straumann (Switzerland) — approx. 20-year lifespan", img: straumannImg },
-     { name: isViet ? "Biotem (Hàn Quốc) — tuổi thọ trung bình ~7 năm" : "Biotem (Korea) — approx. 7-year lifespan", img: biotemImg },
-      { name: isViet ? "ETK (Pháp) — tuổi thọ trung bình ~15 năm" : "ETK (France) — approx. 15-year lifespan", img: etkImg },
-  ];
+const brandData = [
+  { 
+    name: isViet 
+      ? "Osstem từ Hàn Quốc, tuổi thọ trung bình khoảng 10 năm" 
+      : "Osstem from South Korea with an average lifespan of around 10 years", 
+    img: osstemImg 
+  },
+  { 
+    name: isViet 
+      ? "Hiossen từ Hoa Kỳ, tuổi thọ trung bình khoảng 13 năm" 
+      : "Hiossen from the United States with an average lifespan of around 13 years", 
+    img: hiossenImg 
+  },
+  { 
+    name: isViet 
+      ? "Straumann từ Thụy Sĩ, tuổi thọ trung bình khoảng 20 năm" 
+      : "Straumann from Switzerland with an average lifespan of around 20 years", 
+    img: straumannImg 
+  },
+  { 
+    name: isViet 
+      ? "Biotem từ Hàn Quốc, tuổi thọ trung bình khoảng 7 năm" 
+      : "Biotem from South Korea with an average lifespan of around 7 years", 
+    img: biotemImg 
+  },
+  { 
+    name: isViet 
+      ? "ETK từ Pháp, tuổi thọ trung bình khoảng 15 năm" 
+      : "ETK from France with an average lifespan of around 15 years", 
+    img: etkImg 
+  },
+];
+
 
   // ---------------- UI COMPONENT ---------------- //
 
