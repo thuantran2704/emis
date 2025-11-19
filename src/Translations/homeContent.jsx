@@ -10,9 +10,13 @@ export const homeContent = {
     papersTitle: "Standard Quality Dental Clinic",
     introTitle: "Welcome to Emis Dental",
     implantBrandsSectionTitle: "Our Implant Brands",
-    implantBrandsDescriptions: ["Reliable and high-quality implants with excellent integration for long-lasting dental restorations.",
-    "Innovative design and stability for durable, natural-looking teeth.",
-    "Globally recognized for precision, aesthetics, and superior clinical results."
+    implantBrandsTitles: ["Hiossen Implants", "Osstem Implants", "Straumann Implants", "Implant Biotem", "Implant ETK"],
+    implantBrandsDescriptions: [
+      "Reliable and high-quality implants with excellent integration for long-lasting dental restorations.",
+      "Innovative design and stability for durable, natural-looking teeth.",
+      "Globally recognized for precision, aesthetics, and superior clinical results.",
+      "Korean precision engineering with 7-year warranty, featuring optimal biocompatibility and rapid healing.",
+      "French dental excellence with 15-year warranty, renowned for exceptional durability and bone preservation."
     ],
     shorts: [
     {
@@ -23,7 +27,6 @@ export const homeContent = {
       videoUrl: "https://www.youtube.com/embed/l8EngnXRACI?si=6OYY5SzJY__N6thX"
     }
   ],
-    implantBrandsTitles:  ["Hiossen Implants", "Osstem Implants", "Straumann Implants"],
     services: [
       {
         name: "General Dentistry",
@@ -100,12 +103,14 @@ export const homeContent = {
       }
     ],
     implantBrandsSectionTitle: "Thương Hiệu Implant Của Chúng Tôi",
+    implantBrandsTitles: ["Hiossen Implants", "Osstem Implants", "Straumann Implants", "Implant Biotem", "Implant ETK"],
     implantBrandsDescriptions: [
-    "Implant chất lượng cao, đáng tin cậy với tích hợp xương tuyệt vời cho phục hình lâu dài.",
-    "Thiết kế sáng tạo, ổn định cho răng bền đẹp tự nhiên.",
-    "Được công nhận toàn cầu về độ chính xác, thẩm mỹ và kết quả lâm sàng vượt trội."
+      "Implant chất lượng cao, đáng tin cậy với tích hợp xương tuyệt vời cho phục hình lâu dài.",
+      "Thiết kế sáng tạo, ổn định cho răng bền đẹp tự nhiên.",
+      "Được công nhận toàn cầu về độ chính xác, thẩm mỹ và kết quả lâm sàng vượt trội.",
+      "Công nghệ Hàn Quốc với bảo hành 7 năm, tích hợp xương nhanh và tương thích sinh học tối ưu.",
+      "Chất lượng Pháp với bảo hành 15 năm, nổi tiếng về độ bền vượt trội và bảo tồn xương hàm."
     ],
-    implantBrandsTitles:  ["Hiossen Implants", "Osstem Implants", "Straumann Implants"],
     services: [
       {
         name: "Nha Khoa Tổng Quát",
@@ -182,13 +187,14 @@ export const homeContent = {
       }
     ],
     implantBrandsSectionTitle: "我们的种植体品牌",
+    implantBrandsTitles: ["Hiossen Implants", "Osstem Implants", "Straumann Implants", "Implant Biotem", "Implant ETK"],
     implantBrandsDescriptions: [
       "可靠高品质的种植体，骨结合性能出色，修复持久。",
       "创新设计与稳定性，打造耐用自然的牙齿。",
-      "全球公认，精确、美观，临床效果优异。"
+      "全球公认，精确、美观，临床效果优异。",
+      "韩国精密工艺，7年质保，具有最佳生物相容性和快速愈合特性。",
+      "法国牙科卓越品质，15年质保，以卓越耐用性和骨保存闻名。"
     ],
-    implantBrandsTitles:  ["Hiossen Implants", "Osstem Implants", "Straumann Implants"],
-
     services: [
       {
         name: "普通牙科",
@@ -264,12 +270,14 @@ export const homeContent = {
       }
     ],
     implantBrandsSectionTitle: "우리의 임플란트 브랜드",
+    implantBrandsTitles: ["Hiossen Implants", "Osstem Implants", "Straumann Implants", "Implant Biotem", "Implant ETK"],
     implantBrandsDescriptions: [
       "신뢰할 수 있고 고품질의 임플란트로 뛰어난 골융합과 장기적인 치아 복원을 제공합니다.",
       "혁신적인 설계와 안정성으로 자연스럽고 내구성 있는 치아를 제공합니다.",
-      "정밀함, 심미성, 뛰어난 임상 결과로 전 세계적으로 인정받았습니다."
+      "정밀함, 심미성, 뛰어난 임상 결과로 전 세계적으로 인정받았습니다.",
+      "7년 보증의 한국 정밀 공학, 최적의 생체 적합성과 빠른 치유 기능을 갖췄습니다.",
+      "15년 보증의 프랑스 치과 기술, 뛰어난 내구성과 골 보존으로 유명합니다."
     ],
-    implantBrandsTitles:  ["Hiossen Implants", "Osstem Implants", "Straumann Implants"],
     services: [
       {
         name: "일반 치과",
@@ -347,12 +355,14 @@ export const homeContent = {
       }
     ],
     implantBrandsSectionTitle: "我們的植牙品牌",
+    implantBrandsTitles: ["Hiossen Implants", "Osstem Implants", "Straumann Implants", "Implant Biotem", "Implant ETK"],
     implantBrandsDescriptions: [
       "可靠高品質的植牙，骨整合效果出色，修復持久。",
       "創新設計與穩定性，打造耐用自然的牙齒。",
-      "全球公認，精準、美觀，臨床效果優異。"
+      "全球公認，精準、美觀，臨床效果優異。",
+      "韓國精密工藝，7年保固，具有最佳生物相容性和快速癒合特性。",
+      "法國牙科卓越品質，15年保固，以卓越耐用性和骨保存聞名。"
     ],
-    implantBrandsTitles:  ["Hiossen Implants", "Osstem Implants", "Straumann Implants"],
     services: [
       {
         name: "普通牙科",
@@ -429,12 +439,14 @@ export const homeContent = {
       }
     ],
     implantBrandsSectionTitle: "Nos Marques d'Implants",
+    implantBrandsTitles: ["Hiossen Implants", "Osstem Implants", "Straumann Implants", "Implant Biotem", "Implant ETK"],
     implantBrandsDescriptions: [
       "Implants fiables et de haute qualité avec une excellente intégration pour des restaurations durables.",
       "Design innovant et stabilité pour des dents durables et naturelles.",
-      "Reconnu mondialement pour sa précision, son esthétique et ses résultats cliniques supérieurs."
+      "Reconnu mondialement pour sa précision, son esthétique et ses résultats cliniques supérieurs.",
+      "Ingénierie coréenne de précision avec garantie de 7 ans, biocompatibilité optimale et cicatrisation rapide.",
+      "Excellence dentaire française avec garantie de 15 ans, réputée pour sa durabilité exceptionnelle et préservation osseuse."
     ],
-    implantBrandsTitles:  ["Hiossen Implants", "Osstem Implants", "Straumann Implants"],
     services: [
       {
         name: "Dentisterie Générale",
