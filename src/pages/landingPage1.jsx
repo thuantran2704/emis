@@ -1,188 +1,168 @@
-import React, { useState, useEffect } from "react";
-
-// --- Section 5 Images (Smile Design Forms) ---
-import form1Eng from "../pics/WEB/forms/eng/1.png";
-import form2Eng from "../pics/WEB/forms/eng/2.png";
-import form3Eng from "../pics/WEB/forms/eng/3.png";
-import form4Eng from "../pics/WEB/forms/eng/4.png";
-import form5Eng from "../pics/WEB/forms/eng/5.png";
-import form6Eng from "../pics/WEB/forms/eng/6.png";
-import form7Eng from "../pics/WEB/forms/eng/7.png";
-import form8Eng from "../pics/WEB/forms/eng/8.png";
-
-import form1Vie from "../pics/WEB/forms/vie/1.png";
-import form2Vie from "../pics/WEB/forms/vie/2.png";
-import form3Vie from "../pics/WEB/forms/vie/3.png";
-import form4Vie from "../pics/WEB/forms/vie/4.png";
-import form5Vie from "../pics/WEB/forms/vie/5.png";
-import form6Vie from "../pics/WEB/forms/vie/6.png";
-import form7Vie from "../pics/WEB/forms/vie/7.png";
-import form8Vie from "../pics/WEB/forms/vie/8.png";
-
-// --- Section 7 Images (Crown Types) ---
-import crown1Eng from "../pics/WEB/veneer/eng/1.png";
-import crown2Eng from "../pics/WEB/veneer/eng/2.png";
-import crown3Eng from "../pics/WEB/veneer/eng/3.png";
-import crown4Eng from "../pics/WEB/veneer/eng/4.png";
-import crown5Eng from "../pics/WEB/veneer/eng/5.png";
-import crown6Eng from "../pics/WEB/veneer/eng/6.png";
-import crown7Eng from "../pics/WEB/veneer/eng/7.png";
-import crown8Eng from "../pics/WEB/veneer/eng/8.png";
-
-import crown1Vie from "../pics/WEB/veneer/vie/1.png";
-import crown2Vie from "../pics/WEB/veneer/vie/2.png";
-import crown3Vie from "../pics/WEB/veneer/vie/3.png";
-import crown4Vie from "../pics/WEB/veneer/vie/4.png";
-import crown5Vie from "../pics/WEB/veneer/vie/5.png";
-import crown6Vie from "../pics/WEB/veneer/vie/6.png";
-import crown7Vie from "../pics/WEB/veneer/vie/7.png";
-import crown8Vie from "../pics/WEB/veneer/vie/8.png";
+import React from "react";
 
 export default function CrownLanding({ language }) {
-  // ---------------- CONTENT ----------------
-  const sections = [
-    {
-      title: "1. Bọc Răng Sứ là Gì?",
-      content: `Bọc răng sứ là phương pháp phục hình răng thẩm mỹ bằng cách sử dụng một mão sứ rỗng được chế tác tinh xảo để chụp lên toàn bộ chiếc răng thật đã được mài nhỏ. Kỹ thuật này giúp khắc phục hiệu quả các tình trạng răng thưa, hô nhẹ, sứt mẻ, vỡ hoặc xỉn màu. Sau khi bọc sứ, hàm răng trở nên trắng sáng, đều đẹp và bền chắc, mang lại sự hài hòa tự nhiên khi cười và nói.`
-    },
-    {
-      title: "2. Trường Hợp Nào Nên Bọc Răng Sứ?",
-      content: `Bọc răng sứ là lựa chọn lý tưởng cho các trường hợp sau:
-Răng nhiễm màu kháng sinh tetracycline, tẩy trắng không còn hiệu quả.
-Răng sứt mẻ hoặc vỡ lớn do chấn thương.
-Răng lệch lạc nhẹ, hô móm nhẹ, răng thưa và muốn cải thiện nhanh chóng.
-Răng sâu vỡ lớn, răng chết tủy hoặc đã điều trị tủy và cần được bảo vệ.
-Răng cần phục hình sau khi làm cầu răng hoặc cấy ghép Implant.`
-    },
-    {
-      title: "3. Các Loại Răng Sứ Cao Cấp Tại Emis Dental",
-      content: `Tại Emis Dental, chúng tôi cam kết sử dụng các dòng sứ chính hãng và có bảo hành minh bạch theo thời gian hãng quy định. Các loại răng sứ phổ biến gồm:
-Sứ Kim Loại Titan: Răng sứ Titan Nhật, bảo hành 2 năm.
-Sứ Toàn Sứ EMIS: Răng sứ EMIS Zico Centonia, bảo hành 5 năm.
-Sứ Toàn Sứ Zirconia Đức và Mỹ:
-Răng sứ Zirconia Mỹ, bảo hành 10 năm.
-Răng sứ DD Bio Đức, bảo hành 10 năm.
-Răng sứ Cercon HT Đức, bảo hành 10 năm.
-Sứ Lava Mỹ: Lava, Lava Plus và Lava Esthetics, bảo hành từ 12 đến 20 năm.
-Sứ Orodent Italy: Bảo hành trọn đời.
-Dán Sứ Veneer Emax: Bảo hành 10 năm, giúp bảo tồn răng thật tối đa.`
-    },
-    {
-      title: "4. Ưu Điểm Vượt Trội Của Bọc Răng Sứ Thẩm Mỹ",
-      content: `Bọc răng sứ mang lại nhiều ưu điểm nổi bật:
-Cải thiện thẩm mỹ tinh tế với hình dáng và màu sắc tự nhiên.
-Đảm bảo ăn nhai bền vững với độ bền lên đến 30 năm nếu chăm sóc tốt.
-Bảo tồn răng thật nhờ khả năng bao bọc và bảo vệ trước vi khuẩn, nhiệt độ và hóa chất.
-Đối với răng đã chữa tủy, bọc sứ giúp hạn chế nguy cơ mẻ vỡ hiệu quả.`
-    },
-    {
-      title: "5. Các Dáng Răng Sứ Nào Được Ưa Chuộng Trên Thị Trường?",
-      content: `Tùy vào mong muốn và khuôn mặt, các dáng răng sứ thường được khách hàng lựa chọn. Một số dáng thông dụng bao gồm tự nhiên, siêu trắng trẻ trung, thanh lịch hoặc sang trọng. (File hình chị gửi DÁNG RĂNG)`
-    },
-    {
-      title: "6. Quy Trình Bọc Răng Sứ Chuẩn Y Khoa tại Emis Dental",
-      content: `Quy trình bọc răng sứ được thực hiện bởi đội ngũ bác sĩ chính quy, đảm bảo chính xác và an toàn:
-Bước 1: Thăm khám và tư vấn cùng chụp X-quang.
-Bước 2: Lập kế hoạch điều trị, lấy dấu răng và thiết kế nụ cười dựa trên tính cách, màu da, màu tóc và sở thích.
-Bước 3: Mài cùi răng tối thiểu và lấy dấu gửi Labo.
-Bước 4: Gắn răng tạm bằng vật liệu an toàn như acrylic hoặc composite.
-Bước 5: Thử sứ để kiểm tra độ khít sát, màu sắc, hình dáng và cảm giác ăn nhai.
-Bước 6: Gắn sứ cố định vĩnh viễn sau khi tinh chỉnh hoàn tất.`
-    },
-    {
-      title: "7. Các Loại Răng Sứ tại Emis Dental",
-      content: `Răng sứ mô phỏng hình dáng, kích thước và màu sắc tương tự răng thật. Hiện nay có hai dòng chính là răng sứ kim loại và răng sứ toàn sứ. Chúng gồm năm loại: kim loại thường, Titan, Chrom Cobalt, kim loại quý và toàn sứ. Mỗi loại phù hợp với nhu cầu bọc răng khác nhau.
-Tại Emis Dental, các loại răng sứ toàn sứ được nhập từ những thương hiệu lớn trên thế giới. (Folder chị gửi LOẠI RĂNG)`
-    },
-    {
-      title: "8. Vì Sao Bạn Nên Chọn Làm Răng Sứ tại Emis Dental?",
-      content: `Nha khoa uy tín với cam kết chất lượng xây dựng qua từng ca điều trị.
-Vật liệu chính hãng 100 phần trăm từ các thương hiệu lớn như Lava, Orodent, Zirconia và Emax cùng thẻ bảo hành từ hãng.
-Quy trình chuẩn y khoa đảm bảo vô trùng và an toàn.
-Đội ngũ bác sĩ chuyên môn cao với kinh nghiệm dày dạn trong thiết kế nụ cười và phục hình thẩm mỹ.`
-    }
-  ];
+  const isVN = language === "vietnamese";
 
-  // ---------------- IMAGES ----------------
-  const formImages = language === "vietnamese"
-    ? [form1Vie, form2Vie, form3Vie, form4Vie, form5Vie, form6Vie, form7Vie, form8Vie]
-    : [form1Eng, form2Eng, form3Eng, form4Eng, form5Eng, form6Eng, form7Eng, form8Eng];
+  const content = {
+    title: isVN ? "BỌC RĂNG SỨ THẨM MỸ" : "AESTHETIC DENTAL CROWNS",
 
-  const crownImages = language === "vietnamese"
-    ? [crown1Vie, crown2Vie, crown3Vie, crown4Vie, crown5Vie, crown6Vie, crown7Vie, crown8Vie]
-    : [crown1Eng, crown2Eng, crown3Eng, crown4Eng, crown5Eng, crown6Eng, crown7Eng, crown8Eng];
+    section1Title: isVN ? "1. Bọc Răng Sứ Là Gì?" : "1. What Is a Dental Crown?",
+    section1Text: isVN
+      ? "Bọc răng sứ là phương pháp phục hình thẩm mỹ sử dụng mão sứ được chế tác chính xác để bao phủ phần răng thật đã được mài tối thiểu. Kỹ thuật này giúp cải thiện các tình trạng như thưa răng, hô nhẹ, mẻ, vỡ, nhiễm màu nặng. Sau khi bọc sứ, răng sáng hơn, đều hơn và bền chắc hơn, mang lại nụ cười tự nhiên và tự tin."
+      : "A dental crown is an aesthetic restoration method using a precisely fabricated porcelain cap to cover a minimally reduced natural tooth. This technique effectively corrects gaps, mild protrusion, chips, fractures, and intrinsic discoloration. After placement, the teeth appear brighter, more uniform, and structurally stronger, providing a natural and confident smile.",
 
-  // ---------------- SLIDER ----------------
-  const ImageSlider = ({ images }) => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [visibleSlides, setVisibleSlides] = useState(4);
+    section2Title: isVN ? "2. Khi Nào Nên Bọc Răng Sứ?" : "2. When Should You Consider a Dental Crown?",
+    section2List: isVN
+      ? [
+          "Răng nhiễm màu nặng, không thể cải thiện bằng tẩy trắng.",
+          "Răng mẻ, vỡ, nứt.",
+          "Răng hô nhẹ, lệch nhẹ hoặc thưa cần phục hình nhanh.",
+          "Răng sâu lớn, răng sứt mẻ, răng đã lấy tủy.",
+          "Răng cần bảo vệ khi làm cầu răng hoặc phục hình trên Implant.",
+        ]
+      : [
+          "Teeth with severe intrinsic discoloration unresponsive to whitening.",
+          "Chipped or fractured teeth.",
+          "Mildly misaligned, slightly protruded, or gapped teeth requiring quick correction.",
+          "Teeth with large cavities, fractures, or root canal–treated teeth.",
+          "Teeth requiring protection after bridge placement or Implant restoration.",
+        ],
 
-    useEffect(() => {
-      const updateSlides = () => {
-        if (window.innerWidth >= 1024) setVisibleSlides(4);
-        else if (window.innerWidth >= 640) setVisibleSlides(2);
-        else setVisibleSlides(1);
-      };
-      updateSlides();
-      window.addEventListener("resize", updateSlides);
-      return () => window.removeEventListener("resize", updateSlides);
-    }, []);
+    section3Title: isVN ? "3. Các Loại Sứ Cao Cấp Tại Emis Dental" : "3. High-Quality Crown Materials at Emis Dental",
+    section3List: isVN
+      ? [
+          "Sứ Titan Nhật – bảo hành 2 năm.",
+          "Sứ toàn sứ EMIS Zico Centonia – bảo hành 5 năm.",
+          "Sứ Zirconia Mỹ và Đức – bảo hành 10 năm.",
+          "Lava Mỹ: Lava, Lava Plus, Lava Esthetics – bảo hành 12–20 năm.",
+          "Orodent Ý – bảo hành trọn đời.",
+          "Emax Veneer – bảo hành 10 năm, bảo tồn răng tối đa.",
+        ]
+      : [
+          "Titanium Metal-Ceramic (Japan) – 2-year warranty.",
+          "EMIS Zico Centonia All-Ceramic – 5-year warranty.",
+          "U.S. & German Zirconia – 10-year warranty.",
+          "Lava USA: Lava, Lava Plus, Lava Esthetics – 12–20-year warranty.",
+          "Orodent Italy – Lifetime warranty.",
+          "Emax Veneer – 10-year warranty; maximizes natural tooth preservation.",
+        ],
 
-    const next = () => setCurrentIndex(prev => (prev + 1) % images.length);
-    const prev = () => setCurrentIndex(prev => (prev - 1 + images.length) % images.length);
+    section4Title: isVN ? "4. Ưu Điểm Của Bọc Răng Sứ" : "4. Advantages of Aesthetic Dental Crowns",
+    section4List: isVN
+      ? [
+          "Thẩm mỹ tự nhiên, trắng sáng và đồng đều.",
+          "Chức năng ăn nhai bền chắc, tuổi thọ lên đến 30 năm.",
+          "Bảo vệ răng thật khỏi vi khuẩn, nhiệt và hóa chất.",
+          "Hạn chế gãy vỡ cho răng đã lấy tủy.",
+        ]
+      : [
+          "Natural aesthetics with brightness and uniformity.",
+          "Strong chewing function; lifespan up to 30 years with proper care.",
+          "Protects natural teeth from bacteria, temperature, and chemicals.",
+          "Reduces fracture risk for root canal–treated teeth.",
+        ],
 
-    return (
-      <div className="relative w-full overflow-hidden my-10">
-        <button onClick={prev} className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#d4af37] text-white p-2 rounded-full">
-          &#8249;
-        </button>
-        <button onClick={next} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#d4af37] text-white p-2 rounded-full">
-          &#8250;
-        </button>
+    section5Title: isVN ? "5. Các Dáng Răng Được Yêu Thích" : "5. Popular Crown Shapes and Styles",
+    section5Text: isVN
+      ? "Tùy theo khuôn mặt và sở thích, khách hàng có thể lựa chọn các kiểu dáng răng tự nhiên, trẻ trung, trắng sáng hoặc sang trọng."
+      : "Depending on facial structure and preference, patients may choose natural, bright-white, youthful, or premium aesthetic crown designs.",
 
-        <div
-          className="flex transition-transform duration-500"
-          style={{ transform: `translateX(-${currentIndex * (100 / visibleSlides)}%)` }}
-        >
-          {images.map((img, i) => (
-            <div key={i} className="px-2 flex-shrink-0" style={{ width: `${100 / visibleSlides}%` }}>
-              <img src={img} className="rounded-lg shadow-md w-full object-cover" />
-            </div>
-          ))}
-        </div>
-      </div>
-    );
+    section6Title: isVN ? "6. Quy Trình Bọc Răng Sứ Tại Emis Dental" : "6. Clinical Workflow for Crown Treatment at Emis Dental",
+    section6List: isVN
+      ? [
+          "Thăm khám – tư vấn dáng răng.",
+          "Chụp X-quang kiểm tra cấu trúc răng.",
+          "Gây tê – mài răng tối thiểu.",
+          "Lấy dấu kỹ thuật số.",
+          "Đắp răng tạm.",
+          "Lắp răng sứ – kiểm tra khớp cắn.",
+        ]
+      : [
+          "Clinical examination – crown design consultation.",
+          "X-ray imaging to assess tooth structure.",
+          "Local anesthesia – minimal tooth reduction.",
+          "Digital impression scanning.",
+          "Temporary crown placement.",
+          "Final crown placement – occlusion check.",
+        ],
+
+    section7Title: isVN ? "7. Chăm Sóc Sau Khi Bọc Sứ" : "7. Post-Crown Care Instructions",
+    section7List: isVN
+      ? [
+          "Đánh răng 2–3 lần/ngày bằng bàn chải lông mềm.",
+          "Dùng chỉ nha khoa và nước súc miệng hằng ngày.",
+          "Tránh cắn đồ quá cứng ở răng mới bọc.",
+          "Tái khám định kỳ 6 tháng/lần.",
+        ]
+      : [
+          "Brush 2–3 times daily with a soft-bristle toothbrush.",
+          "Use dental floss and mouthwash daily.",
+          "Avoid biting excessively hard foods.",
+          "Schedule routine check-ups every 6 months.",
+        ],
+
+    section8Title: isVN ? "8. Bảng Giá Dịch Vụ" : "8. Service Price List",
+    section8Text: isVN
+      ? "Emis Dental cam kết minh bạch chi phí – đúng giá – đúng chất lượng. Giá có thể thay đổi tùy tình trạng răng và vật liệu khách hàng chọn."
+      : "Emis Dental guarantees transparent pricing and high-quality materials. Final cost may vary depending on tooth condition and material selection.",
   };
 
-  // ---------------- RENDER ----------------
   return (
-    <div className="w-full flex justify-center pt-20 px-4">
-      <div className="max-w-5xl w-full bg-white shadow-xl rounded-2xl p-8 md:p-12">
-        <h1 className="text-4xl font-bold text-gray-900 text-center mb-10">
-          Bọc Răng Sứ Thẩm Mỹ
-        </h1>
+    <div className="w-full bg-white text-black">
+      <div className="max-w-5xl mx-auto px-4 py-10">
+        <h1 className="text-3xl font-bold mb-8">{content.title}</h1>
 
-        <div className="space-y-16 text-gray-800 text-[17px] leading-relaxed">
-          {sections.map((sec, i) => (
-            <div key={i}>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">{sec.title}</h2>
+        {/* Section 1 */}
+        <h2 className="text-2xl font-semibold mt-6 mb-2">{content.section1Title}</h2>
+        <p className="leading-relaxed">{content.section1Text}</p>
 
-              <p className="whitespace-pre-line">{sec.content}</p>
-
-              {/* Section 5 Slider */}
-              {i === 4 && <ImageSlider images={formImages} />}
-
-              {/* Section 7 Gallery */}
-              {i === 6 && (
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-6">
-                  {crownImages.map((img, idx) => (
-                    <img key={idx} src={img} className="rounded-lg shadow-md w-full object-cover" />
-                  ))}
-                </div>
-              )}
-            </div>
+        {/* Section 2 */}
+        <h2 className="text-2xl font-semibold mt-6 mb-2">{content.section2Title}</h2>
+        <ul className="list-disc ml-6 space-y-1">
+          {content.section2List.map((item, i) => (
+            <li key={i}>{item}</li>
           ))}
-        </div>
+        </ul>
+
+        {/* Section 3 */}
+        <h2 className="text-2xl font-semibold mt-6 mb-2">{content.section3Title}</h2>
+        <ul className="list-disc ml-6 space-y-1">
+          {content.section3List.map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
+        </ul>
+
+        {/* Section 4 */}
+        <h2 className="text-2xl font-semibold mt-6 mb-2">{content.section4Title}</h2>
+        <ul className="list-disc ml-6 space-y-1">
+          {content.section4List.map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
+        </ul>
+
+        {/* Section 5 */}
+        <h2 className="text-2xl font-semibold mt-6 mb-2">{content.section5Title}</h2>
+        <p className="leading-relaxed mb-4">{content.section5Text}</p>
+
+        {/* Section 6 */}
+        <h2 className="text-2xl font-semibold mt-6 mb-2">{content.section6Title}</h2>
+        <ul className="list-disc ml-6 space-y-1">
+          {content.section6List.map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
+        </ul>
+
+        {/* Section 7 */}
+        <h2 className="text-2xl font-semibold mt-6 mb-2">{content.section7Title}</h2>
+        <ul className="list-disc ml-6 space-y-1">
+          {content.section7List.map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
+        </ul>
+
+        {/* Section 8 */}
+        <h2 className="text-2xl font-semibold mt-6 mb-2">{content.section8Title}</h2>
+        <p className="leading-relaxed">{content.section8Text}</p>
       </div>
     </div>
   );
