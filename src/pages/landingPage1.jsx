@@ -86,9 +86,9 @@ export default function CrownLanding({ language }) {
         : `Depending on facial features and preferences, popular crown shapes include: natural, ultra-white youthful, elegant, or luxurious.`
     },
     {
-      id: "shapes-slider",
+      id: "shapes-gallery",
       title: isVie ? "Ví Dụ Dáng Răng" : "Example Smile Designs",
-      slider: "forms"
+      gallery: "forms"
     },
     {
       id: "types",
@@ -100,7 +100,7 @@ export default function CrownLanding({ language }) {
     {
       id: "crown-gallery",
       title: isVie ? "Ví Dụ Các Loại Răng Sứ" : "Example Crown Types",
-      slider: "crowns"
+      gallery: "crowns"
     },
     {
       id: "benefits",
@@ -127,52 +127,28 @@ export default function CrownLanding({ language }) {
     ? [crown1Vie, crown2Vie, crown3Vie, crown4Vie, crown5Vie, crown6Vie, crown7Vie, crown8Vie]
     : [crown1Eng, crown2Eng, crown3Eng, crown4Eng, crown5Eng, crown6Eng, crown7Eng, crown8Eng];
 
-  // ---------------- SLIDER COMPONENT ----------------
-  const ImageSlider = ({ images }) => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [visibleSlides, setVisibleSlides] = useState(4);
-
-    useEffect(() => {
-      const updateSlides = () => {
-        if (window.innerWidth >= 1024) setVisibleSlides(4);
-        else if (window.innerWidth >= 640) setVisibleSlides(2);
-        else setVisibleSlides(1);
-      };
-      updateSlides();
-      window.addEventListener("resize", updateSlides);
-      return () => window.removeEventListener("resize", updateSlides);
-    }, []);
-
-    const next = () => setCurrentIndex(prev => (prev + 1) % images.length);
-    const prev = () => setCurrentIndex(prev => (prev - 1 + images.length) % images.length);
-
+  // ---------------- GALLERY COMPONENT ----------------
+  const ImageGallery = ({ images, columns = 4 }) => {
     return (
-      <div className="relative w-full overflow-hidden my-12">
-        <div className="flex items-center justify-between mb-6">
-          <div className="w-4 h-1 bg-gradient-to-r from-[#d4af37] to-amber-200 rounded-full"></div>
-          <div className="flex space-x-2 mx-4">
-            <button onClick={prev} className="p-2 rounded-full bg-white shadow-lg border border-gray-200 hover:bg-gray-50 transition-colors">
-              <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-            <button onClick={next} className="p-2 rounded-full bg-white shadow-lg border border-gray-200 hover:bg-gray-50 transition-colors">
-              <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-          </div>
-          <div className="w-4 h-1 bg-gradient-to-l from-[#d4af37] to-amber-200 rounded-full"></div>
-        </div>
-
-        <div
-          className="flex transition-transform duration-500 ease-out"
-          style={{ transform: `translateX(-${currentIndex * (100 / visibleSlides)}%)` }}
-        >
-          {images.map((img, i) => (
-            <div key={i} className="px-3 flex-shrink-0" style={{ width: `${100 / visibleSlides}%` }}>
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-                <img src={img} className="w-full h-48 object-cover" alt={`Example ${i + 1}`} />
+      <div className="ml-6 mt-8">
+        <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-${columns} gap-6`}>
+          {images.map((img, idx) => (
+            <div 
+              key={idx} 
+              className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
+            >
+              <div className="relative overflow-hidden">
+                <img 
+                  src={img} 
+                  className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105" 
+                  alt={`Design ${idx + 1}`} 
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
+              </div>
+              <div className="p-4 text-center">
+                <span className="text-sm font-medium text-gray-600">
+                  {isVie ? `Thiết kế ${idx + 1}` : `Design ${idx + 1}`}
+                </span>
               </div>
             </div>
           ))}
@@ -184,7 +160,7 @@ export default function CrownLanding({ language }) {
   // ---------------- RENDER ----------------
   return (
     <div className="w-full flex justify-center pt-20 px-4 bg-gradient-to-br from-amber-50 to-white min-h-screen">
-      <div className="max-w-4xl w-full">
+      <div className="max-w-6xl w-full">
         {/* Article Header */}
         <header className="text-center mb-16 pt-8">
           <div className="inline-block px-4 py-2 bg-amber-100 text-amber-800 rounded-full text-sm font-medium mb-6">
@@ -219,19 +195,31 @@ export default function CrownLanding({ language }) {
                     </div>
                   )}
 
-                  {/* Sliders and Galleries */}
-                  {sec.slider === "forms" && <ImageSlider images={formImages} />}
-                  
-                  {sec.slider === "crowns" && (
-                    <div className="ml-6 mt-8">
-                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {crownImages.map((img, idx) => (
-                          <div key={idx} className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                            <img src={img} className="w-full h-48 object-cover" alt={`Crown type ${idx + 1}`} />
-                          </div>
-                        ))}
+                  {/* Galleries */}
+                  {sec.gallery === "forms" && (
+                    <>
+                      <div className="ml-6 mt-8 mb-6">
+                        <p className="text-gray-600 text-lg italic">
+                          {isVie 
+                            ? "Khám phá các thiết kế nụ cười đa dạng phù hợp với từng khuôn mặt"
+                            : "Explore diverse smile designs tailored to different facial features"}
+                        </p>
                       </div>
-                    </div>
+                      <ImageGallery images={formImages} columns={4} />
+                    </>
+                  )}
+                  
+                  {sec.gallery === "crowns" && (
+                    <>
+                      <div className="ml-6 mt-8 mb-6">
+                        <p className="text-gray-600 text-lg italic">
+                          {isVie 
+                            ? "Các loại răng sứ cao cấp với chất lượng và thẩm mỹ vượt trội"
+                            : "Premium crown types offering superior quality and aesthetics"}
+                        </p>
+                      </div>
+                      <ImageGallery images={crownImages} columns={4} />
+                    </>
                   )}
                 </section>
               ))}
