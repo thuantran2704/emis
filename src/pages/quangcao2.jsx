@@ -145,8 +145,9 @@ export default function PorcelainTeethLandingPage({ language }) {
             marginBottom: "15px",
             fontSize: "0.9rem",
             backdropFilter: "blur(10px)",
+            fontFamily: "'Noto Sans', sans-serif",
           }}>
-            🎉 LIMITED TIME OFFER
+            🎉 {language === "vietnamese" ? "ƯU ĐÃI GIỚI HẠN" : "LIMITED TIME OFFER"}
           </div>
           <h1
             style={{
@@ -168,6 +169,7 @@ export default function PorcelainTeethLandingPage({ language }) {
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
             textShadow: "0 0 20px rgba(255,215,0,0.3)",
+            fontFamily: "'Roboto Mono', monospace",
           }}>
             {t.heroPrice}
           </div>
@@ -175,7 +177,8 @@ export default function PorcelainTeethLandingPage({ language }) {
             fontSize: "1.2rem", 
             marginBottom: "30px", 
             opacity: 0.9,
-            lineHeight: "1.5"
+            lineHeight: "1.5",
+            fontFamily: "'Noto Sans', sans-serif",
           }}>
             {t.heroDesc}
           </p>
@@ -196,6 +199,7 @@ export default function PorcelainTeethLandingPage({ language }) {
               fontSize: "2.2rem",
               fontWeight: "700",
               position: "relative",
+              fontFamily: "'Cormorant', serif",
             }}
           >
             {t.benefitsTitle}
@@ -257,11 +261,17 @@ export default function PorcelainTeethLandingPage({ language }) {
                     fontWeight: "700",
                     marginBottom: "15px",
                     fontSize: "1.3rem",
+                    fontFamily: "'Noto Sans', sans-serif",
                   }}
                 >
                   {benefit.title}
                 </h3>
-                <p style={{ color: "#555", lineHeight: "1.6", fontSize: "1rem" }}>
+                <p style={{ 
+                  color: "#555", 
+                  lineHeight: "1.6", 
+                  fontSize: "1rem",
+                  fontFamily: "'Noto Sans', sans-serif",
+                }}>
                   {benefit.desc}
                 </p>
               </div>
@@ -280,6 +290,7 @@ export default function PorcelainTeethLandingPage({ language }) {
               color: "#764ba2",
               fontSize: "2rem",
               fontWeight: "700",
+              fontFamily: "'Cormorant', serif",
             }}
           >
             {t.whyChooseTitle}
@@ -301,13 +312,15 @@ export default function PorcelainTeethLandingPage({ language }) {
                   backgroundColor: "white",
                   borderRadius: "12px",
                   boxShadow: "0 5px 15px rgba(0,0,0,0.05)",
+                  fontFamily: "'Noto Sans', sans-serif",
                 }}
               >
                 <div style={{
                   color: "#764ba2",
                   fontSize: "1.2rem",
                   marginRight: "15px",
-                  minWidth: "25px"
+                  minWidth: "25px",
+                  fontFamily: "'Noto Sans', sans-serif",
                 }}>✓</div>
                 <span style={{ lineHeight: "1.5" }}>{item}</span>
               </div>
@@ -336,6 +349,7 @@ export default function PorcelainTeethLandingPage({ language }) {
               fontSize: "2.5rem",
               fontWeight: "800",
               textShadow: "2px 2px 4px rgba(0,0,0,0.2)",
+              fontFamily: "'Cormorant', serif",
             }}
           >
             {t.specialOfferTitle}
@@ -352,7 +366,8 @@ export default function PorcelainTeethLandingPage({ language }) {
             <div style={{
               textDecoration: "line-through",
               color: "rgba(255,255,255,0.8)",
-              fontSize: "1.3rem"
+              fontSize: "1.3rem",
+              fontFamily: "'Noto Sans', sans-serif",
             }}>
               {t.originalPrice}
             </div>
@@ -360,7 +375,8 @@ export default function PorcelainTeethLandingPage({ language }) {
               fontSize: "2.5rem",
               fontWeight: "900",
               color: "white",
-              textShadow: "2px 2px 8px rgba(0,0,0,0.3)"
+              textShadow: "2px 2px 8px rgba(0,0,0,0.3)",
+              fontFamily: "'Roboto Mono', monospace",
             }}>
               {t.offerPrice}
             </div>
@@ -382,6 +398,7 @@ export default function PorcelainTeethLandingPage({ language }) {
                 lineHeight: "1.8",
                 fontSize: "1.1rem",
                 color: "white",
+                fontFamily: "'Noto Sans', sans-serif",
               }}
             >
               {t.specialList.map((item, idx) => (
@@ -396,7 +413,8 @@ export default function PorcelainTeethLandingPage({ language }) {
             fontSize: "1rem",
             color: "rgba(255,255,255,0.9)",
             marginBottom: "25px",
-            fontStyle: "italic"
+            fontStyle: "italic",
+            fontFamily: "'Noto Sans', sans-serif",
           }}>
             {language === "vietnamese" 
               ? "Lưu ý: Số lượng suất ưu đãi có hạn. Chương trình chỉ áp dụng cho khách hàng đăng ký hẹn trong tháng 11."
@@ -429,6 +447,7 @@ export default function PorcelainTeethLandingPage({ language }) {
             transition: all 0.3s ease;
             text-decoration: none;
             display: inline-block;
+            font-family: 'Noto Sans', sans-serif;
           }
           .cta-button-primary:hover {
             transform: translateY(-3px);
@@ -448,6 +467,7 @@ export default function PorcelainTeethLandingPage({ language }) {
             transition: all 0.3s ease;
             text-decoration: none;
             display: inline-block;
+            font-family: 'Noto Sans', sans-serif;
           }
           .cta-button-secondary:hover {
             transform: translateY(-3px);
