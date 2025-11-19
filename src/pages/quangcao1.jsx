@@ -168,7 +168,7 @@ export default function ImplantLandingPage({ language }) {
             <span
               className="neon-flicker"
               style={{
-                fontFamily: "'Roboto Mono', monospace",
+                fontFamily:  "'Noto Sans', sans-serif",
                 fontSize: "2.2rem",
                 fontWeight: "900",
                 display: "block",
@@ -345,7 +345,7 @@ export default function ImplantLandingPage({ language }) {
               fontWeight: "bold",
               marginBottom: "10px",
               color: "#e74c3c",
-              fontFamily: "'Roboto Mono', monospace",
+              fontFamily:  "'Noto Sans', sans-serif",
             }}
           >
             <span className="neon-flicker">{t.heroPrice}</span>
