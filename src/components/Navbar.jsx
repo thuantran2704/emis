@@ -42,14 +42,15 @@ export default function Navbar({ language = 'english' }) {
               <div className="h-14 w-14 rounded-full overflow-hidden border-2 border-[#1f2937] border-opacity-20 shadow-md">
                 <img 
                   src={logo} 
-                  alt="Nha Khoa Emis " 
+                  alt="Nha Khoa Emis" 
                   className="h-full w-full object-cover"
                 />
               </div>
               <span 
                 className="text-2xl font-bold text-[#1f2937] tracking-tight"
                 style={{ 
-                  fontFamily: "'Cormorant', serif",
+                  fontFamily: "'Be Vietnam Pro', sans-serif",
+                  fontWeight: '800',
                   textShadow: '1px 1px 2px rgba(0,0,0,0.1)'
                 }}
               >
@@ -64,7 +65,7 @@ export default function Navbar({ language = 'english' }) {
                   key={item.name}
                   to={item.path} 
                   className="relative text-[#2a3439] font-medium px-3 py-2 transition-all duration-300 group"
-                  style={{ fontFamily: "'Cormorant', serif" }}
+                  style={{ fontFamily: "'Be Vietnam Pro', sans-serif", fontWeight: '600' }}
                 >
                   <span className="opacity-90 group-hover:opacity-100">
                     {item.name}
@@ -78,7 +79,7 @@ export default function Navbar({ language = 'english' }) {
                 <button
                   onClick={toggleGratitude}
                   className="relative text-[#2a3439] font-medium px-3 py-2 transition-all duration-300 group flex items-center space-x-1"
-                  style={{ fontFamily: "'Cormorant', serif" }}
+                  style={{ fontFamily: "'Be Vietnam Pro', sans-serif", fontWeight: '600' }}
                 >
                   <span className="opacity-90 group-hover:opacity-100">
                     {content.gratitude}
@@ -102,7 +103,7 @@ export default function Navbar({ language = 'english' }) {
                         key={item.name}
                         to={item.path}
                         className="block px-4 py-3 text-[#2a3439] hover:bg-[#f8f9fa] transition-all duration-200 border-b border-gray-100 last:border-b-0"
-                        style={{ fontFamily: "'Cormorant', serif" }}
+                        style={{ fontFamily: "'Be Vietnam Pro', sans-serif", fontWeight: '500' }}
                         onClick={() => setIsGratitudeOpen(false)}
                       >
                         <span className="font-medium">{item.name}</span>
@@ -116,7 +117,7 @@ export default function Navbar({ language = 'english' }) {
               <Link 
                 to="/contact" 
                 className="ml-4 px-5 py-2 bg-[#2a3439] text-[#C5AF73] rounded-md hover:bg-[#1f2937] transition-all duration-300 flex items-center space-x-2 border border-[#2a3439] border-opacity-20"
-                style={{ fontFamily: "'Cormorant', serif" }}
+                style={{ fontFamily: "'Be Vietnam Pro', sans-serif", fontWeight: '600' }}
               >
                 <span>{content.contact}</span>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -152,7 +153,7 @@ export default function Navbar({ language = 'english' }) {
                 key={item.name}
                 to={item.path} 
                 className="block px-3 py-2 text-[#2a3439] font-medium rounded-md hover:bg-[#2a3439] hover:text-[#C5AF73] transition-all duration-300"
-                style={{ fontFamily: "'Cormorant', serif" }}
+                style={{ fontFamily: "'Be Vietnam Pro', sans-serif", fontWeight: '600' }}
                 onClick={toggleMenu}
               >
                 {item.name}
@@ -161,7 +162,10 @@ export default function Navbar({ language = 'english' }) {
             
             {/* Mobile Gratitude Section */}
             <div className="border-t border-[#2a3439] border-opacity-20 pt-2 mt-2">
-              <div className="px-3 py-2 text-[#2a3439] font-medium">
+              <div 
+                className="px-3 py-2 text-[#2a3439] font-medium"
+                style={{ fontFamily: "'Be Vietnam Pro', sans-serif", fontWeight: '600' }}
+              >
                 {content.gratitude}
               </div>
               {gratitudeItems.map((item) => (
@@ -169,7 +173,7 @@ export default function Navbar({ language = 'english' }) {
                   key={item.name}
                   to={item.path}
                   className="block px-6 py-2 text-[#2a3439] font-medium rounded-md hover:bg-[#2a3439] hover:text-[#C5AF73] transition-all duration-300 text-sm"
-                  style={{ fontFamily: "'Cormorant', serif" }}
+                  style={{ fontFamily: "'Be Vietnam Pro', sans-serif", fontWeight: '500' }}
                   onClick={toggleMenu}
                 >
                   {item.name}
@@ -180,7 +184,7 @@ export default function Navbar({ language = 'english' }) {
             <Link 
               to="/contact" 
               className="block px-3 py-2 text-[#2a3439] font-medium rounded-md hover:bg-[#2a3439] hover:text-[#C5AF73] transition-all duration-300"
-              style={{ fontFamily: "'Cormorant', serif" }}
+              style={{ fontFamily: "'Be Vietnam Pro', sans-serif", fontWeight: '600' }}
               onClick={toggleMenu}
             >
               {content.contact}
