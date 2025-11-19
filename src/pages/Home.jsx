@@ -16,6 +16,8 @@ import AdBanner from '../components/AdBanner';
 import hiossenImg from '../pics/hiossen.jpg';
 import osstemImg from '../pics/osstem.jpg';
 import straumannImg from '../pics/straumann.jpg';
+import etkImg from '../pics/etk.jpg';
+import biotemImg from '../pics/biotem.jpg';
 import MachineBanner from '../components/MachineBanner';
 import ContactForm from '../components/ContactForm';
 import CustomerReactionsBanner from '../components/CustomerReactionBanner';
@@ -121,7 +123,6 @@ export default function Home({ language }) {
             {content.implantBrandsSectionTitle || "Our Implant Brands"}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-
             {content.implantBrandsTitles.map((title, index) => (
               <div key={index} className="text-center">
                 <div className="mx-auto rounded-2xl shadow-md mb-4 bg-white p-4 flex items-center justify-center" style={{width: "250px", height: "250px"}}>
@@ -131,7 +132,13 @@ export default function Home({ language }) {
                         ? hiossenImg
                         : title.toLowerCase().includes("osstem")
                         ? osstemImg
-                        : straumannImg
+                        : title.toLowerCase().includes("straumann")
+                        ? straumannImg
+                        : title.toLowerCase().includes("etk")
+                        ? etkImg
+                        : title.toLowerCase().includes("biotem")
+                        ? biotemImg
+                        : straumannImg // fallback image
                     }
                     alt={`${title} implant`}
                     className="max-w-full max-h-full object-contain"
@@ -143,7 +150,6 @@ export default function Home({ language }) {
                 </p>
               </div>
             ))}
-
           </div>
         </div>
       </section>
