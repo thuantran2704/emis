@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import adImg from "../pics/ads/ad1.jpg";
 import ContactForm from "../components/ContactForm";
@@ -135,7 +134,8 @@ export default function ImplantLandingPage({ language }) {
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            alignItems: "flex-start",
+            alignItems: "center", // Changed from flex-start to center
+            textAlign: "center", // Added to center text content
           }}
         >
           <h1
@@ -160,6 +160,7 @@ export default function ImplantLandingPage({ language }) {
           <div style={{
             display: "flex",
             alignItems: "center",
+            justifyContent: "center", // Added to center the content
             gap: "15px",
             marginBottom: "15px",
             flexWrap: "wrap"
@@ -440,7 +441,7 @@ export default function ImplantLandingPage({ language }) {
             text-decoration: none;
             display: inline-block;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letterSpacing: "0.5px";
           }
           
           .cta-button:hover {

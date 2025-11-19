@@ -16,7 +16,8 @@ import FloatingContactButton from './components/floatingContactButton.jsx';
 import LandingPage1 from './pages/landingPage1.jsx';
 import PorcelainTeethLandingPage from './pages/quangcao2.jsx';
 import ImplantInfo from './pages/implantInfo.jsx';
-import ImplantLandingPage from "./pages/quangcao89.jsx";
+import ImplantLandingPage from "./pages/quangcao1.jsx";
+import TeethWhiteningLandingPage from './pages/quangcao3.jsx';
 import CrownPage from './pages/bocRang.jsx';
 export default function App() {
   const language = useSelector((state) => state.language.language);
@@ -40,13 +41,14 @@ export default function App() {
           <Route path="/contact" element={<Contact language={language} />} />
           <Route path="/about" element={<About language={language} />} />
           <Route path="/services" element={<Services language={language} />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/teeth-whitening" element={<TeethWhiteningLandingPage language={language} />} />
           <Route path="/equipment" element={<Equipment language={language} />} />
           <Route path="/testing" element={<LandingPage1 language={language}/>} />
           <Route path="/implant" element={<ImplantInfo language = {language}/>}/>
           <Route path="/qc1" element={<ImplantLandingPage language= {language}/>}/>
           <Route path="crown" element={<CrownPage language={language}/>}/>
           <Route path="/qc2" element={<PorcelainTeethLandingPage language={language}/>}/>
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer language={language}/>
         <FloatingContactButton />
