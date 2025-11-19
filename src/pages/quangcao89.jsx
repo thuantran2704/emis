@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import adImg from "../pics/ads/ad1.jpg";
 import ContactForm from "../components/ContactForm";
 
@@ -42,7 +43,7 @@ export default function ImplantLandingPage({ language = "english" }) {
           <h1
             style={{
               fontSize: "2.2rem",
-              color: "#b85c1e",
+              color: "#f7941e",
               marginBottom: "15px",
               fontWeight: "800",
               lineHeight: "1.2",
@@ -51,14 +52,16 @@ export default function ImplantLandingPage({ language = "english" }) {
             }}
           >
             TRỒNG RĂNG IMPLANT HIOSSEN (HÀN QUỐC) <br />
-            <span className="neon-flicker">CHỈ 8.900.000Đ</span>
+            <span className="neon-flicker" style={{ fontFamily: "'Roboto Mono', monospace" }}>
+              CHỈ 8.900.000Đ
+            </span>
           </h1>
           <p style={{ fontSize: "1.15rem", marginBottom: "25px", color: "#4b4b4b" }}>
             Phục hồi răng mất an toàn – thẩm mỹ tự nhiên. Nhận tư vấn miễn phí và ưu đãi đặc biệt từ Emis Dental.
           </p>
-          <button className="cta-button">
+          <Link to="/contact" className="cta-button">
             ĐẶT HẸN TƯ VẤN NGAY
-          </button>
+          </Link>
         </div>
       </section>
 
@@ -116,7 +119,14 @@ export default function ImplantLandingPage({ language = "english" }) {
               onMouseOver={(e) => (e.currentTarget.style.transform = "translateY(-5px)")}
               onMouseOut={(e) => (e.currentTarget.style.transform = "translateY(0)")}
             >
-              <h3 style={{ color: "#b78d44", fontWeight: "700", marginBottom: "10px", fontSize: "1.25rem" }}>
+              <h3
+                style={{
+                  color: "#b78d44",
+                  fontWeight: "700",
+                  marginBottom: "10px",
+                  fontSize: "1.25rem",
+                }}
+              >
                 {benefit.title}
               </h3>
               <p style={{ color: "#555", lineHeight: "1.5" }}>{benefit.desc}</p>
@@ -134,23 +144,45 @@ export default function ImplantLandingPage({ language = "english" }) {
           borderTop: "5px solid #f7941e",
         }}
       >
-        <h2 style={{ color: "#b78d44", marginBottom: "30px", fontSize: "2rem", fontWeight: "700" }}>
+        <h2
+          style={{
+            color: "#b78d44",
+            marginBottom: "30px",
+            fontSize: "2rem",
+            fontWeight: "700",
+          }}
+        >
           ƯU ĐÃI ĐẶC BIỆT
         </h2>
         <p style={{ fontSize: "1.1rem", marginBottom: "10px" }}>
-          Giá gốc: <s>22.000.000 VNĐ</s>
+          Giá gốc: <s style={{ fontFamily: "'Roboto Mono', monospace" }}>22.000.000 VNĐ</s>
         </p>
-        <p style={{ fontSize: "1.6rem", fontWeight: "bold", marginBottom: "25px", color: "#f7941e" }}>
+        <p
+          style={{
+            fontSize: "1.6rem",
+            fontWeight: "bold",
+            marginBottom: "25px",
+            color: "#f7941e",
+            fontFamily: "'Roboto Mono', monospace",
+          }}
+        >
           <span className="neon-flicker">Chỉ còn 8.900.000 VNĐ</span>
         </p>
-        <ul style={{ textAlign: "left", display: "inline-block", marginBottom: "35px", lineHeight: "1.7" }}>
+        <ul
+          style={{
+            textAlign: "left",
+            display: "inline-block",
+            marginBottom: "35px",
+            lineHeight: "1.7",
+          }}
+        >
           <li>Miễn phí thăm khám và tư vấn 1:1 cùng bác sĩ chuyên khoa Implant</li>
           <li>Miễn phí chụp phim CT Cone Beam 3D</li>
           <li>Ưu đãi có số lượng giới hạn, đăng ký sớm để giữ suất</li>
         </ul>
-        <button className="cta-button">
+        <Link to="/contact" className="cta-button">
           ĐẶT HẸN NGAY
-        </button>
+        </Link>
       </section>
 
       {/* Contact Form */}
@@ -160,24 +192,24 @@ export default function ImplantLandingPage({ language = "english" }) {
       <style>
         {`
           .neon-flicker {
-            color: #f7941e;
+            color: #f7941e; /* main text */
             text-shadow:
-              0 0 5px #f7941e,
-              0 0 10px #f7941e,
-              0 0 15px #f7941e,
-              0 0 20px #ffae34;
+              0 0 5px #fff56d,
+              0 0 10px #fff56d,
+              0 0 15px #fff56d,
+              0 0 20px #fff56d;
             animation: glowPulse 2.5s infinite alternate;
           }
 
           @keyframes glowPulse {
             0% {
-              text-shadow: 0 0 5px #f7941e, 0 0 10px #f7941e, 0 0 15px #f7941e, 0 0 20px #ffae34;
+              text-shadow: 0 0 3px #fff56d, 0 0 6px #fff56d, 0 0 9px #fff56d, 0 0 12px #fff56d;
             }
             50% {
-              text-shadow: 0 0 7px #f7941e, 0 0 12px #f7941e, 0 0 18px #f7941e, 0 0 25px #ffae34;
+              text-shadow: 0 0 6px #fff56d, 0 0 12px #fff56d, 0 0 18px #fff56d, 0 0 24px #fff56d;
             }
             100% {
-              text-shadow: 0 0 5px #f7941e, 0 0 10px #f7941e, 0 0 15px #f7941e, 0 0 20px #ffae34;
+              text-shadow: 0 0 3px #fff56d, 0 0 6px #fff56d, 0 0 9px #fff56d, 0 0 12px #fff56d;
             }
           }
 
@@ -192,12 +224,13 @@ export default function ImplantLandingPage({ language = "english" }) {
             font-weight: 700;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
           }
           .cta-button:hover {
             background-color: #e18312;
           }
 
-          /* Responsive adjustments */
           @media (max-width: 768px) {
             section {
               flex-direction: column !important;
