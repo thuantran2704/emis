@@ -102,12 +102,12 @@ Bước 6: Gắn Sứ Chính Thức: Kiểm tra và gắn sứ cố định vĩn
   ];
 
   // --- Section 5 / Smile Design Slider Images ---
-  const formImages = language === "vie"
+  const formImages = language === "vietnamese"
     ? [form1Vie, form2Vie, form3Vie, form4Vie, form5Vie, form6Vie, form7Vie, form8Vie]
     : [form1Eng, form2Eng, form3Eng, form4Eng, form5Eng, form6Eng, form7Eng, form8Eng];
 
   // --- Section 7 / Crown Gallery Images ---
-  const crownImages = language === "vie"
+  const crownImages = language === "vietnamese"
     ? [crown1Vie, crown2Vie, crown3Vie, crown4Vie, crown5Vie, crown6Vie, crown7Vie, crown8Vie]
     : [crown1Eng, crown2Eng, crown3Eng, crown4Eng, crown5Eng, crown6Eng, crown7Eng, crown8Eng];
 
@@ -194,3 +194,4 @@ Bước 6: Gắn Sứ Chính Thức: Kiểm tra và gắn sứ cố định vĩn
     </div>
   );
 }
+
