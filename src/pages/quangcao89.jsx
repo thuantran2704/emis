@@ -4,7 +4,7 @@ import ContactForm from "../components/ContactForm";
 
 export default function ImplantLandingPage({ language = "english" }) {
   return (
-    <div style={{ fontFamily: "'Roboto', sans-serif", color: "#333" }}>
+    <div style={{ fontFamily: "'Noto Sans', sans-serif", color: "#333" }}>
       {/* Navbar placeholder */}
       <div style={{ height: "70px" }}></div>
 
@@ -24,7 +24,6 @@ export default function ImplantLandingPage({ language = "english" }) {
           boxShadow: "0 10px 25px rgba(0,0,0,0.12)",
         }}
       >
-        {/* Image */}
         <div style={{ flex: "1 1 250px", textAlign: "center", marginBottom: "20px" }}>
           <img
             src={adImg}
@@ -39,7 +38,6 @@ export default function ImplantLandingPage({ language = "english" }) {
           />
         </div>
 
-        {/* Text & CTA */}
         <div style={{ flex: "2 1 450px", padding: "0 20px" }}>
           <h1
             style={{
@@ -49,6 +47,7 @@ export default function ImplantLandingPage({ language = "english" }) {
               fontWeight: "800",
               lineHeight: "1.2",
               textShadow: "1px 1px 2px rgba(0,0,0,0.1)",
+              fontFamily: "'Cormorant', serif",
             }}
           >
             TRỒNG RĂNG IMPLANT HIOSSEN (HÀN QUỐC) <br />
@@ -157,7 +156,7 @@ export default function ImplantLandingPage({ language = "english" }) {
       {/* Contact Form */}
       <ContactForm language={language} />
 
-      {/* Neon Flicker CSS */}
+      {/* Neon Flicker & CTA CSS */}
       <style>
         {`
           .neon-flicker {
@@ -165,17 +164,20 @@ export default function ImplantLandingPage({ language = "english" }) {
             text-shadow:
               0 0 5px #f7941e,
               0 0 10px #f7941e,
-              0 0 20px #f7941e,
-              0 0 40px #ffae34;
-            animation: flicker 1.5s infinite alternate;
+              0 0 15px #f7941e,
+              0 0 20px #ffae34;
+            animation: glowPulse 2.5s infinite alternate;
           }
 
-          @keyframes flicker {
-            0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-              opacity: 1;
+          @keyframes glowPulse {
+            0% {
+              text-shadow: 0 0 5px #f7941e, 0 0 10px #f7941e, 0 0 15px #f7941e, 0 0 20px #ffae34;
             }
-            20%, 22%, 24%, 55% {
-              opacity: 0.6;
+            50% {
+              text-shadow: 0 0 7px #f7941e, 0 0 12px #f7941e, 0 0 18px #f7941e, 0 0 25px #ffae34;
+            }
+            100% {
+              text-shadow: 0 0 5px #f7941e, 0 0 10px #f7941e, 0 0 15px #f7941e, 0 0 20px #ffae34;
             }
           }
 
