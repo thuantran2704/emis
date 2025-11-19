@@ -4,6 +4,79 @@ import adImg from "../pics/ads/ad1.jpg";
 import ContactForm from "../components/ContactForm";
 
 export default function ImplantLandingPage({ language = "english" }) {
+  const text = {
+    english: {
+      heroTitle: "HIOSSEN DENTAL IMPLANT (KOREA)",
+      heroPrice: "ONLY 8,900,000 VND",
+      heroDesc:
+        "Safe tooth restoration – natural aesthetics. Get free consultation and special offers from Emis Dental.",
+      heroCTA: "BOOK CONSULTATION NOW",
+      benefitsTitle: "WHY CHOOSE HIOSSEN IMPLANT",
+      benefits: [
+        {
+          title: "Excellent Osseointegration",
+          desc: "Made of 100% pure Titanium with advanced SA technology, ensuring fast and stable bone integration.",
+        },
+        {
+          title: "Optimized Design",
+          desc: "Threaded design increases initial stability even in soft bone, ensuring strong implant support.",
+        },
+        {
+          title: "Long Lifespan",
+          desc: "Lasts a lifetime if properly implanted and maintained.",
+        },
+        {
+          title: "Safe & Aesthetic",
+          desc: "Restores chewing function and delivers a natural, aesthetic smile.",
+        },
+      ],
+      specialOfferTitle: "SPECIAL OFFER",
+      originalPrice: "Original price: 22,000,000 VND",
+      offerCTA: "BOOK NOW",
+      specialList: [
+        "Free 1:1 consultation with Implant specialist",
+        "Free CT Cone Beam 3D scan",
+        "Limited offer – register early to secure your spot",
+      ],
+    },
+    vietnamese: {
+      heroTitle: "TRỒNG RĂNG IMPLANT HIOSSEN (HÀN QUỐC)",
+      heroPrice: "CHỈ 8.900.000Đ",
+      heroDesc:
+        "Phục hồi răng mất an toàn – thẩm mỹ tự nhiên. Nhận tư vấn miễn phí và ưu đãi đặc biệt từ Emis Dental.",
+      heroCTA: "ĐẶT HẸN TƯ VẤN NGAY",
+      benefitsTitle: "LÝ DO CHỌN TRỤ IMPLANT HIOSSEN",
+      benefits: [
+        {
+          title: "Tích Hợp Xương Vượt Trội",
+          desc: "Trụ làm từ 100% Titanium tinh khiết với công nghệ SA tiên tiến, giúp tích hợp xương nhanh và ổn định.",
+        },
+        {
+          title: "Thiết Kế Tối Ưu",
+          desc: "Ren xoắn tăng độ ổn định ban đầu ngay cả trong xương xốp, đảm bảo trụ vững chắc sau cấy.",
+        },
+        {
+          title: "Tuổi Thọ Cao",
+          desc: "Trụ Implant Hiossen tồn tại bền lâu trọn đời nếu cấy đúng kỹ thuật và chăm sóc tốt.",
+        },
+        {
+          title: "An Toàn & Thẩm Mỹ",
+          desc: "Phục hồi chức năng ăn nhai và mang lại nụ cười tự nhiên, thẩm mỹ.",
+        },
+      ],
+      specialOfferTitle: "ƯU ĐÃI ĐẶC BIỆT",
+      originalPrice: "Giá gốc: 22.000.000 VNĐ",
+      offerCTA: "ĐẶT HẸN NGAY",
+      specialList: [
+        "Miễn phí thăm khám và tư vấn 1:1 cùng bác sĩ chuyên khoa Implant",
+        "Miễn phí chụp phim CT Cone Beam 3D",
+        "Ưu đãi có số lượng giới hạn, đăng ký sớm để giữ suất",
+      ],
+    },
+  };
+
+  const t = text[language];
+
   return (
     <div style={{ fontFamily: "'Noto Sans', sans-serif", color: "#333" }}>
       {/* Navbar placeholder */}
@@ -45,7 +118,7 @@ export default function ImplantLandingPage({ language = "english" }) {
             padding: "0 20px",
             display: "flex",
             flexDirection: "column",
-            justifyContent: "center", // vertical center
+            justifyContent: "center",
             alignItems: "flex-start",
           }}
         >
@@ -62,25 +135,25 @@ export default function ImplantLandingPage({ language = "english" }) {
               overflow: "hidden",
             }}
           >
-            TRỒNG RĂNG IMPLANT HIOSSEN (HÀN QUỐC)
+            {t.heroTitle}
           </h1>
           <span
             className="neon-flicker"
             style={{
               fontFamily: "'Roboto Mono', monospace",
-              fontSize: "2.4rem", // bigger price
+              fontSize: "2.4rem",
               fontWeight: "900",
               display: "block",
               marginBottom: "15px",
             }}
           >
-            CHỈ 8.900.000Đ
+            {t.heroPrice}
           </span>
           <p style={{ fontSize: "1.15rem", marginBottom: "25px", color: "#4b4b4b" }}>
-            Phục hồi răng mất an toàn – thẩm mỹ tự nhiên. Nhận tư vấn miễn phí và ưu đãi đặc biệt từ Emis Dental.
+            {t.heroDesc}
           </p>
           <Link to="/contact" className="cta-button">
-            ĐẶT HẸN TƯ VẤN NGAY
+            {t.heroCTA}
           </Link>
         </div>
       </section>
@@ -96,7 +169,7 @@ export default function ImplantLandingPage({ language = "english" }) {
             fontWeight: "700",
           }}
         >
-          LÝ DO CHỌN TRỤ IMPLANT HIOSSEN
+          {t.benefitsTitle}
         </h2>
         <div
           style={{
@@ -108,24 +181,7 @@ export default function ImplantLandingPage({ language = "english" }) {
             margin: "0 auto",
           }}
         >
-          {[
-            {
-              title: "Tích Hợp Xương Vượt Trội",
-              desc: "Trụ làm từ 100% Titanium tinh khiết với công nghệ SA tiên tiến, giúp tích hợp xương nhanh và ổn định.",
-            },
-            {
-              title: "Thiết Kế Tối Ưu",
-              desc: "Ren xoắn tăng độ ổn định ban đầu ngay cả trong xương xốp, đảm bảo trụ vững chắc sau cấy.",
-            },
-            {
-              title: "Tuổi Thọ Cao",
-              desc: "Trụ Implant Hiossen tồn tại bền lâu trọn đời nếu cấy đúng kỹ thuật và chăm sóc tốt.",
-            },
-            {
-              title: "An Toàn & Thẩm Mỹ",
-              desc: "Phục hồi chức năng ăn nhai và mang lại nụ cười tự nhiên, thẩm mỹ.",
-            },
-          ].map((benefit) => (
+          {t.benefits.map((benefit) => (
             <div
               key={benefit.title}
               style={{
@@ -172,11 +228,9 @@ export default function ImplantLandingPage({ language = "english" }) {
             fontWeight: "700",
           }}
         >
-          ƯU ĐÃI ĐẶC BIỆT
+          {t.specialOfferTitle}
         </h2>
-        <p style={{ fontSize: "1.1rem", marginBottom: "10px" }}>
-          Giá gốc: <s style={{ fontFamily: "'Roboto Mono', monospace" }}>22.000.000 VNĐ</s>
-        </p>
+        <p style={{ fontSize: "1.1rem", marginBottom: "10px" }}>{t.originalPrice}</p>
         <p
           style={{
             fontSize: "1.6rem",
@@ -186,7 +240,7 @@ export default function ImplantLandingPage({ language = "english" }) {
             fontFamily: "'Roboto Mono', monospace",
           }}
         >
-          <span className="neon-flicker">Chỉ còn 8.900.000 VNĐ</span>
+          <span className="neon-flicker">{t.heroPrice}</span>
         </p>
         <ul
           style={{
@@ -196,12 +250,12 @@ export default function ImplantLandingPage({ language = "english" }) {
             lineHeight: "1.7",
           }}
         >
-          <li>Miễn phí thăm khám và tư vấn 1:1 cùng bác sĩ chuyên khoa Implant</li>
-          <li>Miễn phí chụp phim CT Cone Beam 3D</li>
-          <li>Ưu đãi có số lượng giới hạn, đăng ký sớm để giữ suất</li>
+          {t.specialList.map((item, idx) => (
+            <li key={idx}>{item}</li>
+          ))}
         </ul>
         <Link to="/contact" className="cta-button">
-          ĐẶT HẸN NGAY
+          {t.offerCTA}
         </Link>
       </section>
 
