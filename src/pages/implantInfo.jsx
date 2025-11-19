@@ -1,9 +1,5 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-
-import typesVie from "../pics/WEB/typesTeeth/vie.png";
-import typesEng from "../pics/WEB/typesTeeth/eng.png";
-
 import hiossenImg from "../pics/hiossen.jpg";
 import osstemImg from "../pics/osstem.jpg";
 import straumannImg from "../pics/straumann.jpg";
@@ -12,7 +8,6 @@ import biotemImg from "../pics/biotem.jpg";
 
 export default function ImplantInfo({ language }) {
   const isViet = language === "vietnamese";
-  const typesImage = isViet ? typesVie : typesEng;
 
   const pageTitle = isViet
     ? "Trồng Răng Implant – Thông Tin Chuyên Sâu, Quy Trình, Chi Phí Và Lưu Ý"
@@ -130,11 +125,6 @@ export default function ImplantInfo({ language }) {
                 case "section2":
                   content = (
                     <>
-                      <img
-                        src={typesImage}
-                        alt="implant types"
-                        className="w-full rounded-xl shadow-lg my-6"
-                      />
                       <p className="mb-4">
                         {isViet
                           ? "Implant được chỉ định cho hầu hết các trường hợp mất răng từ đơn lẻ đến toàn hàm."
