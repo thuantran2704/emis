@@ -1,6 +1,4 @@
-import { useState, useEffect } from 'react';
-import { motion } from "framer-motion";
-
+import React from 'react';
 import img1 from '../pics/WEB/veneer/1.png';
 import img2 from '../pics/WEB/veneer/2.png';
 import img3 from '../pics/WEB/veneer/3.png';
@@ -12,117 +10,157 @@ import img8 from '../pics/WEB/veneer/8.png';
 
 export default function LandingPage1() {
   const images = [img1, img2, img3, img4, img5, img6, img7, img8];
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setIndex((prev) => (prev + 1) % images.length);
-    }, 4500);
-    return () => clearInterval(timer);
-  }, []);
-
-  const prevSlide = () =>
-    setIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-  const nextSlide = () =>
-    setIndex((prev) => (prev + 1) % images.length);
 
   return (
-    <div className="w-full flex flex-col bg-white text-black pt-24 pb-20">
+    <div className="w-full bg-white text-black mt-20">
 
-      {/* Intro Section */}
-      <section className="max-w-6xl mx-auto px-6 text-center py-6">
-        <h1 className="text-3xl md:text-5xl font-bold text-[#2a3439] mb-3">
-          Dán Sứ Veneer Cao Cấp
+      {/* HERO SECTION */}
+      <section className="w-full bg-gradient-to-b from-white to-[#F7F4EC] py-16 px-6 text-center">
+        <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#2a3439]"
+          style={{ fontFamily: "'Cormorant', serif" }}
+        >
+          Dán Sứ Veneer – Nụ Cười Tự Nhiên, Sang Trọng & Hoàn Hảo
         </h1>
-        <p className="text-base md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-          Công nghệ Veneer hiện đại – bảo tồn răng thật tối đa và tạo nụ cười tự nhiên.
+        <p className="max-w-3xl mx-auto text-lg leading-relaxed opacity-90">
+          Công nghệ thẩm mỹ nha khoa hiện đại giúp bảo tồn răng thật tối đa, mang lại vẻ đẹp tự nhiên tuyệt đối.
+          Tại Emis Dental, chúng tôi sử dụng dòng sứ cao cấp Emax – nổi tiếng về độ bền, độ mỏng và độ trong suốt vượt trội.
         </p>
-      </section>
 
-      {/* Slider */}
-      <section className="w-full flex justify-center px-4">
-        <div className="
-          relative w-full 
-          max-w-4xl md:max-w-5xl 
-          mx-auto rounded-2xl overflow-hidden
-          shadow-[0_8px_30px_rgba(0,0,0,0.15)]
-          bg-white">
-
-          {/* Image Container */}
-          <div className="w-full flex justify-center items-center bg-white">
-            <motion.img
-              key={index}
-              src={images[index]}
-              alt="Veneer Slide"
-              initial={{ opacity: 0, scale: 1.02 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6 }}
-              className="object-contain w-full mx-auto"
-              style={{
-                maxHeight: "50vh",      // never more than half the screen
-                minHeight: "250px",
-              }}
-            />
-          </div>
-
-          {/* Left Arrow */}
-          <button
-            onClick={prevSlide}
-            className="
-              absolute top-1/2 -translate-y-1/2 left-3
-              bg-black/30 hover:bg-black/50 
-              text-white p-3 rounded-full 
-              transition
-            ">
-            <svg xmlns="http://www.w3.org/2000/svg" 
-              className="h-5 w-5" fill="none" viewBox="0 0 24 24" 
-              stroke="currentColor" strokeWidth="2">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-
-          {/* Right Arrow */}
-          <button
-            onClick={nextSlide}
-            className="
-              absolute top-1/2 -translate-y-1/2 right-3
-              bg-black/30 hover:bg-black/50 
-              text-white p-3 rounded-full 
-              transition
-            ">
-            <svg xmlns="http://www.w3.org/2000/svg" 
-              className="h-5 w-5" fill="none" viewBox="0 0 24 24" 
-              stroke="currentColor" strokeWidth="2">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-
-          {/* Dot Indicators */}
-          <div className="absolute bottom-4 w-full flex justify-center gap-2">
-            {images.map((_, i) => (
-              <div
-                key={i}
-                onClick={() => setIndex(i)}
-                className={`
-                  h-3 w-3 rounded-full cursor-pointer transition-all
-                  ${i === index ? "bg-[#2a3439]" : "bg-gray-300"}
-                `}
-              />
-            ))}
-          </div>
+        <div className="mt-8">
+          <a 
+            href="/contact"
+            className="px-8 py-3 bg-[#2a3439] text-[#C5AF73] rounded-xl shadow-md hover:bg-[#1f2937] transition"
+            style={{ fontFamily: "'Cormorant', serif" }}
+          >
+            Đặt Lịch Tư Vấn Ngay
+          </a>
         </div>
       </section>
 
-      {/* Bottom Info Section */}
-      <section className="px-6 py-12 max-w-5xl mx-auto text-center">
-        <h2 className="text-2xl md:text-4xl font-semibold text-[#2a3439] mb-4">
-          Vật Liệu Cao Cấp – Kết Quả Tự Nhiên
+      {/* IMAGE GALLERY - INFORMATIVE AD STYLE */}
+      <section className="w-full max-w-6xl mx-auto px-6 py-16">
+        <h2 
+          className="text-3xl md:text-4xl font-bold text-center mb-12 text-[#2a3439]"
+          style={{ fontFamily: "'Cormorant', serif" }}
+        >
+          Quy Trình – Chất Liệu – Ưu Điểm – Kết Quả
         </h2>
-        <p className="text-base md:text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
-          Hình ảnh dưới đây thể hiện các loại Veneer, vật liệu sử dụng,
-          quy trình và kết quả thực tế tại Emis Dental.  
-          Mỗi hình đều đã được thiết kế kèm nội dung mô tả.
-        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          {images.map((img, index) => (
+            <div 
+              key={index}
+              className="rounded-xl overflow-hidden shadow-lg bg-white border border-gray-200"
+            >
+              <img
+                src={img}
+                alt={`Veneer Step ${index}`}
+                className="w-full object-contain"
+                style={{ maxHeight: "45vh" }}
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* INFORMATION SECTIONS */}
+      <section className="w-full max-w-5xl mx-auto px-6 py-12 space-y-12">
+
+        {/* What is Veneer */}
+        <div className="bg-white shadow-md rounded-xl p-8 border border-gray-200">
+          <h3 className="text-2xl font-bold mb-4 text-[#2a3439]"
+            style={{ fontFamily: "'Cormorant', serif" }}
+          >
+            Dán Sứ Veneer Là Gì?
+          </h3>
+          <p className="leading-relaxed text-lg opacity-90">
+            Dán sứ Veneer sử dụng lớp sứ siêu mỏng 0.2–0.6mm để dán lên bề mặt răng.
+            Giúp bảo tồn răng thật tối đa, không cần mài nhiều như bọc sứ truyền thống.
+            Màu sắc và độ trong suốt tự nhiên như răng thật.
+          </p>
+        </div>
+
+        {/* Who Should Get Veneers */}
+        <div className="bg-white shadow-md rounded-xl p-8 border border-gray-200">
+          <h3 className="text-2xl font-bold mb-4 text-[#2a3439]"
+            style={{ fontFamily: "'Cormorant', serif" }}
+          >
+            Ai Phù Hợp Với Veneer?
+          </h3>
+          <p className="leading-relaxed text-lg opacity-90">
+            Răng nhiễm màu nhẹ, răng thưa, răng sứt mẻ, răng không đều,
+            hoặc khách hàng mong muốn thẩm mỹ cao nhưng vẫn giữ tối đa răng thật.
+          </p>
+        </div>
+
+        {/* Why People Love Veneers */}
+        <div className="bg-white shadow-md rounded-xl p-8 border border-gray-200">
+          <h3 className="text-2xl font-bold mb-4 text-[#2a3439]"
+            style={{ fontFamily: "'Cormorant', serif" }}
+          >
+            Vì Sao Nhiều Khách Hàng Chọn Veneer?
+          </h3>
+          <p className="leading-relaxed text-lg opacity-90">
+            Tính thẩm mỹ cao, độ bền lớn, màu sắc tự nhiên, thời gian thực hiện nhanh chóng,
+            đặc biệt là bảo tồn mô răng thật tối đa.
+          </p>
+        </div>
+
+        {/* Smile Design */}
+        <div className="bg-white shadow-md rounded-xl p-8 border border-gray-200">
+          <h3 className="text-2xl font-bold mb-4 text-[#2a3439]"
+            style={{ fontFamily: "'Cormorant', serif" }}
+          >
+            Cá Nhân Hóa Nụ Cười – Smile Design
+          </h3>
+          <p className="leading-relaxed text-lg opacity-90">
+            Ứng dụng công nghệ mô phỏng để cho bạn xem trước nụ cười mới.
+            Phân tích khuôn mặt, dáng môi, dáng răng để tạo nụ cười hài hòa.
+          </p>
+        </div>
+
+        {/* Process */}
+        <div className="bg-white shadow-md rounded-xl p-8 border border-gray-200">
+          <h3 className="text-2xl font-bold mb-4 text-[#2a3439]"
+            style={{ fontFamily: "'Cormorant', serif" }}
+          >
+            Quy Trình Thực Hiện
+          </h3>
+          <p className="leading-relaxed text-lg opacity-90">
+            Thăm khám – Chụp phim – Smile Design – Mài răng tối thiểu – Chế tác – Thử – Gắn Veneer.
+          </p>
+        </div>
+
+        {/* Materials */}
+        <div className="bg-white shadow-md rounded-xl p-8 border border-gray-200">
+          <h3 className="text-2xl font-bold mb-4 text-[#2a3439]"
+            style={{ fontFamily: "'Cormorant', serif" }}
+          >
+            Vật Liệu Sử Dụng – Emax Veneer
+          </h3>
+          <p className="leading-relaxed text-lg opacity-90">
+            Sứ Emax Lithium Disilicate – độ bền cao, độ mỏng tuyệt vời, khả năng tương thích sinh học tốt,
+            độ tự nhiên đạt chuẩn quốc tế.
+          </p>
+        </div>
+
+      </section>
+
+      {/* FINAL CTA */}
+      <section className="text-center py-16 bg-[#F7F4EC]">
+        <h3 
+          className="text-3xl font-bold mb-6 text-[#2a3439]"
+          style={{ fontFamily: "'Cormorant', serif" }}
+        >
+          Sẵn Sàng Cho Nụ Cười Mới?
+        </h3>
+        <a 
+          href="/contact"
+          className="px-10 py-3 bg-[#2a3439] text-[#C5AF73] rounded-xl shadow-md hover:bg-[#1f2937] transition text-lg"
+          style={{ fontFamily: "'Cormorant', serif" }}
+        >
+          Đặt Lịch Tư Vấn
+        </a>
       </section>
 
     </div>
