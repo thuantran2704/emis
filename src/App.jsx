@@ -16,6 +16,7 @@ import FloatingContactButton from './components/floatingContactButton.jsx';
 import LandingPage1 from './pages/landingPage1.jsx';
 import ImplantInfo from './pages/implantInfo.jsx';
 import ImplantLandingPage from "./pages/quangcao89.jsx";
+import CrownPage from './pages/bocRang.jsx';
 export default function App() {
   const language = useSelector((state) => state.language.language);
   const dispatch = useDispatch();
@@ -43,6 +44,7 @@ export default function App() {
           <Route path="/testing" element={<LandingPage1 language={language}/>} />
           <Route path="/implant" element={<ImplantInfo language = {language}/>}/>
           <Route path="/qc1" element={<ImplantLandingPage language= {language}/>}/>
+          <Route path="crown" element={<CrownPage language={language}/>}/>
         </Routes>
         <Footer language={language}/>
         <FloatingContactButton />
