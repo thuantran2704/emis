@@ -1,76 +1,74 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import adImg from "../pics/ads/ad1.jpg";
+import adImg from "../pics/ads/ad2.jpg";
 import ContactForm from "../components/ContactForm";
 
-export default function ImplantLandingPage({ language }) {
+export default function PorcelainTeethLandingPage({ language }) {
   const text = {
     english: {
-      heroTitle: "HIOSSEN DENTAL IMPLANT (KOREA)",
-      heroPrice: "ONLY 8,900,000 VND",
-      heroDesc:
-        "Safe tooth restoration – natural aesthetics. Get free consultation and special offers from Emis Dental.",
+      heroTitle: "NOVEMBER OFFER: AESTHETIC PORCELAIN TEETH",
+      heroPrice: "FROM ONLY 2,000,000 VND",
+      heroDesc: "Create a confident smile with genuine porcelain teeth, optimized aesthetics at Emis Dental. Welcome November with our special offer.",
       heroCTA: "BOOK CONSULTATION NOW",
-      benefitsTitle: "WHY CHOOSE HIOSSEN IMPLANT",
+      benefitsTitle: "WHY CHOOSE PORCELAIN TEETH",
       benefits: [
         {
-          title: "Excellent Osseointegration",
-          desc: "Made of 100% pure Titanium with advanced SA technology, ensuring fast and stable bone integration.",
+          title: "Absolute Aesthetics",
+          desc: "Natural translucent color and light reflection identical to real teeth. No gum discoloration over time like metal-ceramic teeth.",
         },
         {
-          title: "Optimized Design",
-          desc: "Threaded design increases initial stability even in soft bone, ensuring strong implant support.",
+          title: "Safe & Biocompatible",
+          desc: "Porcelain material has high biological compatibility, completely safe for oral environment, causing no gum irritation.",
         },
         {
-          title: "Long Lifespan",
-          desc: "Lasts a lifetime if properly implanted and maintained.",
+          title: "Outstanding Durability",
+          desc: "High hardness porcelain, excellent chewing function, lasting 15-20 years or even longer with proper care.",
         },
         {
-          title: "Safe & Aesthetic",
-          desc: "Restores chewing function and delivers a natural, aesthetic smile.",
+          title: "Metal-Free Structure",
+          desc: "Made entirely from monolithic ceramic, no metal content, ensuring natural light transmission and gum health.",
         },
       ],
       specialOfferTitle: "SPECIAL OFFER",
-      originalPrice: "Original price: 22,000,000 VND",
+      originalPrice: "Original price: 4,500,000 VND",
       offerCTA: "BOOK NOW",
       specialList: [
-        "Free 1:1 consultation with Implant specialist",
-        "Free CT Cone Beam 3D scan",
-        "Limited offer – register early to secure your spot",
+        "Free 1:1 consultation with aesthetic dentistry specialists",
+        "Free on-site X-ray for comprehensive oral health check",
+        "Free scaling and polishing service when making 6+ porcelain teeth",
       ],
     },
     vietnamese: {
-      heroTitle: "TRỒNG RĂNG IMPLANT HIOSSEN (HÀN QUỐC)",
-      heroPrice: "CHỈ 8.900.000Đ",
-      heroDesc:
-        "Phục hồi răng mất an toàn – thẩm mỹ tự nhiên. Nhận tư vấn miễn phí và ưu đãi đặc biệt từ Emis Dental.",
+      heroTitle: "ƯU ĐÃI THÁNG 11: RĂNG TOÀN SỨ THẨM MỸ",
+      heroPrice: "CHỈ TỪ 2.000.000Đ",
+      heroDesc: "Kiến tạo nụ cười tự tin với răng sứ chính hãng, thẩm mỹ tối ưu tại Emis Dental. Chào đón tháng 11 với ưu đãi đặc biệt.",
       heroCTA: "ĐẶT HẸN TƯ VẤN NGAY",
-      benefitsTitle: "LÝ DO CHỌN TRỤ IMPLANT HIOSSEN",
+      benefitsTitle: "LÝ DO CHỌN RĂNG TOÀN SỨ",
       benefits: [
         {
-          title: "Tích Hợp Xương Vượt Trội",
-          desc: "Trụ làm từ 100% Titanium tinh khiết với công nghệ SA tiên tiến, giúp tích hợp xương nhanh và ổn định.",
+          title: "Thẩm Mỹ Tuyệt Đối",
+          desc: "Màu sắc trong, mờ và độ phản quang y hệt răng thật. Không gây đen viền nướu sau thời gian dài sử dụng.",
         },
         {
-          title: "Thiết Kế Tối Ưu",
-          desc: "Ren xoắn tăng độ ổn định ban đầu ngay cả trong xương xốp, đảm bảo trụ vững chắc sau cấy.",
+          title: "An Toàn & Lành Tính",
+          desc: "Vật liệu sứ có tính tương hợp sinh học cao, hoàn toàn an toàn với khoang miệng, không gây kích ứng nướu.",
         },
         {
-          title: "Tuổi Thọ Cao",
-          desc: "Trụ Implant Hiossen tồn tại bền lâu trọn đời nếu cấy đúng kỹ thuật và chăm sóc tốt.",
+          title: "Độ Bền Vượt Trội",
+          desc: "Độ cứng cao, chịu lực ăn nhai tốt, tuổi thọ lên đến 15-20 năm hoặc lâu hơn nếu chăm sóc tốt.",
         },
         {
-          title: "An Toàn & Thẩm Mỹ",
-          desc: "Phục hồi chức năng ăn nhai và mang lại nụ cười tự nhiên, thẩm mỹ.",
+          title: "Cấu Trúc Không Kim Loại",
+          desc: "Chế tác hoàn toàn từ sứ nguyên khối, không chứa kim loại, đảm bảo truyền sáng tự nhiên và sức khỏe nướu.",
         },
       ],
       specialOfferTitle: "ƯU ĐÃI ĐẶC BIỆT",
-      originalPrice: "Giá gốc: 22.000.000 VNĐ",
+      originalPrice: "Giá gốc: 4.500.000 VNĐ",
       offerCTA: "ĐẶT HẸN NGAY",
       specialList: [
-        "Miễn phí thăm khám và tư vấn 1:1 cùng bác sĩ chuyên khoa Implant",
-        "Miễn phí chụp phim CT Cone Beam 3D",
-        "Ưu đãi có số lượng giới hạn, đăng ký sớm để giữ suất",
+        "Miễn phí thăm khám và tư vấn 1:1 cùng bác sĩ chuyên khoa thẩm mỹ",
+        "Miễn phí chụp phim X-quang tại chỗ kiểm tra sức khỏe răng miệng",
+        "Tặng ngay dịch vụ cạo vôi răng và đánh bóng khi làm từ 6 răng sứ",
       ],
     },
   };
@@ -102,7 +100,7 @@ export default function ImplantLandingPage({ language }) {
         <div style={{ flex: "1 1 250px", textAlign: "center", marginBottom: "20px" }}>
           <img
             src={adImg}
-            alt="Promotional Ad"
+            alt="Porcelain Teeth Promotion"
             style={{
               width: "220px",
               height: "220px",
@@ -323,4 +321,3 @@ export default function ImplantLandingPage({ language }) {
     </div>
   );
 }
-
