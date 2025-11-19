@@ -301,7 +301,8 @@ export default function ImplantLandingPage({ language }) {
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
             text-decoration: none;
-            display: inline-block;
+            display: block;   /* center the button */
+            margin: 0 auto;   /* center the button */
           }
           .cta-button:hover {
             background-color: #e18312;
@@ -322,3 +323,4 @@ export default function ImplantLandingPage({ language }) {
     </div>
   );
 }
+
