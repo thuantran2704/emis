@@ -10,8 +10,8 @@ export default function ImplantInfo({ language }) {
   const isViet = language === "vietnamese";
 
   const pageTitle = isViet
-    ? "Trồng Răng Implant – Thông Tin Chuyên Sâu, Quy Trình, Chi Phí Và Lưu Ý"
-    : "Dental Implants – Complete Guide, Procedure, Cost, and Aftercare";
+    ? "Trồng Răng Implant - Thông Tin Chuyên Sâu, Quy Trình, Chi Phí Và Lưu Ý"
+    : "Dental Implants - Complete Guide, Procedure, Cost, and Aftercare";
 
   const sections = [
     { id: "section1", number: "1", title: isViet ? "Trồng Răng Implant Là Gì?" : "What Are Dental Implants?" },
