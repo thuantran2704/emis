@@ -1,4 +1,6 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
+import { motion } from "framer-motion";
+
 import img1 from '../pics/WEB/veneer/1.png';
 import img2 from '../pics/WEB/veneer/2.png';
 import img3 from '../pics/WEB/veneer/3.png';
@@ -9,37 +11,102 @@ import img7 from '../pics/WEB/veneer/7.png';
 import img8 from '../pics/WEB/veneer/8.png';
 
 export default function LandingPage1() {
-  const sections = [
-    { textFirst: true, img: img1, title: "1. Dán Sứ Veneer là Gì?", content: `Dán sứ Veneer là kỹ thuật thẩm mỹ nha khoa hiện đại, trong đó bác sĩ sẽ sử dụng một lớp sứ mỏng, được chế tác cá nhân hóa, có độ dày chỉ từ 0.2 – 0.6mm (tương đương với kính áp tròng), để dán cố định lên bề mặt ngoài của răng. Khác với bọc răng sứ (cần mài mô răng thật nhiều hơn), dán sứ Veneer giúp bảo tồn răng thật tối đa, chỉ mài một lượng rất nhỏ ở bề mặt hoặc thậm chí không cần mài (tùy tình trạng răng), mang lại tính thẩm mỹ cao và sự tự nhiên tuyệt đối.` },
-    { textFirst: false, img: img2, title: "2. Trường Hợp Nào Nên Dán Sứ Veneer?", content: `Dán sứ Veneer là giải pháp lý tưởng cho các trường hợp răng có khuyết điểm nhẹ, không quá nghiêm trọng về khớp cắn: Răng bị nhiễm màu, răng sứt mẻ nhẹ, răng có hình dáng không đẹp, răng thưa kẽ nhẹ, hoặc khách hàng ưu tiên bảo tồn răng thật.` },
-    { textFirst: true, img: img3, title: "3. Các Loại Veneer Cao Cấp Tại Emis Dental", content: `Tại Emis Dental, chúng tôi lựa chọn các dòng sứ Veneer chất lượng hàng đầu, cam kết độ bền, độ mỏng và tính thẩm mỹ: Dán Sứ Emax Veneer (Xuất xứ Đức): Đây là dòng sứ cao cấp được chế tác từ Lithium Disilicate, nổi tiếng với độ mỏng, độ trong suốt và khả năng mô phỏng quang học hoàn hảo của răng tự nhiên. Sứ Emax có độ bền cao, chống mài mòn tốt.` },
-    { textFirst: false, img: img4, title: "4. Vì Sao Khách Hàng Ưu Chuộng Dán Sứ Veneer?", content: `Bảo Tồn Răng Thật Tối Đa, Thẩm Mỹ Hoàn Hảo, Độ Bền Cao, Thời Gian Thực Hiện Nhanh Chóng.` },
-    { textFirst: true, img: img5, title: "5. Cá Nhân Hóa Nụ Cười Khách Hàng (Smile Design)", content: `Phân Tích Khuôn Mặt, Công Nghệ Mô Phỏng (Mock-up), Lựa Chọn Dáng Răng.` },
-    { textFirst: false, img: img6, title: "6. Quy Trình Dán Sứ Veneer Tiêu Chuẩn", content: `Thăm khám, Chụp phim & Thiết kế Nụ cười (Smile Design), Mô phỏng & Mài răng (tối thiểu), Chế tác Veneer, Thử và Gắn Veneer.` },
-    { textFirst: true, img: img7, title: "7. Bảng Giá Dán Sứ Veneer và Vật Liệu Cốt Lõi", content: `Dán Sứ Emax Veneer: Bảo hành 10 NĂM. Phân loại khác: Tùy theo yêu cầu và cấu trúc răng.` },
-    { textFirst: false, img: img8, title: "8. Vì Sao Bạn Nên Chọn Dán Sứ Veneer tại Emis Dental?", content: `Chuyên Môn Sâu về Bảo Tồn, Trang Thiết Bị Hiện Đại, Vật Liệu Sứ Emax Chính Hãng.` },
-  ];
+  const images = [img1, img2, img3, img4, img5, img6, img7, img8];
+  const [index, setIndex] = useState(0);
+
+  // Auto-slide
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIndex((prev) => (prev + 1) % images.length);
+    }, 4500);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const prevSlide = () =>
+    setIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+
+  const nextSlide = () =>
+    setIndex((prev) => (prev + 1) % images.length);
 
   return (
-    <div className="w-full flex flex-col items-center bg-white text-black">
-      {sections.map((section, index) => (
-        <section
-          key={index}
-          className={`max-w-6xl w-full px-4 py-12 flex flex-col md:flex-row items-start gap-8
-            ${section.textFirst ? '' : 'md:flex-row-reverse'}`}
-        >
-          <div className="flex-1 text-lg leading-relaxed">
-            <h2 className="text-2xl font-bold mb-4">{section.title}</h2>
-            <p>{section.content}</p>
-          </div>
-          <img
-            src={section.img}
-            alt={section.title}
-            className="flex-1 w-full max-w-md md:max-w-xl lg:max-w-2xl rounded-xl object-contain shadow-lg"
-            style={{ maxHeight: '500px' }}
+    <div className="w-full flex flex-col bg-white text-black pt-24">
+
+      {/* Intro Section (clean + premium) */}
+      <section className="max-w-6xl mx-auto px-6 text-center py-10">
+        <h1 className="text-4xl md:text-5xl font-bold text-[#2a3439] mb-4">
+          Dán Sứ Veneer Cao Cấp Tại Emis Dental
+        </h1>
+        <p className="text-lg md:text-xl max-w-3xl mx-auto text-gray-700 leading-relaxed">
+          Công nghệ Veneer mới nhất – bảo tồn răng thật tối đa, mang lại nụ cười tự nhiên, trong suốt và thẩm mỹ tuyệt đối.
+        </p>
+      </section>
+
+      {/* Slider Section */}
+      <section className="w-full flex justify-center py-10">
+        <div className="relative w-full max-w-5xl mx-auto overflow-hidden rounded-2xl shadow-xl">
+
+          {/* SLIDE IMAGE */}
+          <motion.img
+            key={index}
+            src={images[index]}
+            alt="Veneer Slide"
+            initial={{ opacity: 0, scale: 1.02 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            className="w-full h-auto object-contain bg-white"
+            style={{ maxHeight: "650px" }}
           />
-        </section>
-      ))}
+
+          {/* LEFT ARROW */}
+          <button
+            onClick={prevSlide}
+            className="absolute top-1/2 -translate-y-1/2 left-4 bg-black/30 hover:bg-black/50 text-white rounded-full p-3 transition"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          {/* RIGHT ARROW */}
+          <button
+            onClick={nextSlide}
+            className="absolute top-1/2 -translate-y-1/2 right-4 bg-black/30 hover:bg-black/50 text-white rounded-full p-3 transition"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+
+          {/* DOTS */}
+          <div className="absolute bottom-4 w-full flex justify-center gap-2">
+            {images.map((_, i) => (
+              <div
+                key={i}
+                onClick={() => setIndex(i)}
+                className={`h-3 w-3 rounded-full cursor-pointer transition-all ${
+                  i === index ? "bg-[#2a3439]" : "bg-gray-300"
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* After-slider info block */}
+      <section className="px-6 py-16 max-w-6xl mx-auto text-center">
+        <h2 className="text-3xl md:text-4xl font-semibold text-[#2a3439] mb-6">
+          Vì Sao Khách Hàng Chọn Emis Dental?
+        </h2>
+
+        <p className="text-lg md:text-xl max-w-4xl mx-auto text-gray-700 leading-relaxed">
+          Chúng tôi sử dụng vật liệu sứ cao cấp Emax và công nghệ Smile Design mới nhất.
+          Đội ngũ bác sĩ chuyên môn cao, đảm bảo mang lại kết quả đẹp tự nhiên, an toàn và lâu dài.
+        </p>
+      </section>
+
     </div>
   );
 }
