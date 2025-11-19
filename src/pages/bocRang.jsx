@@ -107,20 +107,23 @@ export default function CrownLanding({ language }) {
   return (
     <article className="w-full flex justify-center pt-20 px-4">
       <div className="max-w-5xl w-full bg-white shadow-xl rounded-2xl p-8 md:p-12 prose prose-lg">
-        <h1>BỌC RĂNG SỨ THẨM MỸ</h1>
+        {/* Main Page Title */}
+        <h1 className="text-center mb-12">BỌC RĂNG SỨ THẨM MỸ</h1>
 
         <section>
           <h2>1. Bọc Răng Sứ là Gì?</h2>
           <p>
-            Bọc răng sứ (hay Răng sứ thẩm mỹ) là phương pháp phục hình răng giả cố định, sử dụng một "mão sứ" rỗng ruột được chế tác tinh xảo để bọc chụp toàn bộ chiếc răng thật đã được mài nhỏ. Kỹ thuật này giúp khắc phục hiệu quả tình trạng răng thưa, hô, sứt mẻ hay xỉn màu, mang lại hàm răng trắng sáng, đều đẹp và bền chắc.
+            Bọc răng sứ (hay răng sứ thẩm mỹ) là phương pháp phục hình răng giả cố định. Một <strong>mão sứ</strong> rỗng ruột được chế tác tinh xảo sẽ bọc chụp toàn bộ chiếc răng thật đã được mài nhỏ. 
+            Kỹ thuật này giúp khắc phục hiệu quả các vấn đề như răng thưa, hô, sứt mẻ hay xỉn màu, mang lại hàm răng trắng sáng, đều đẹp và bền chắc.
           </p>
         </section>
 
         <section>
           <h2>2. Trường Hợp Nào Nên Bọc Răng Sứ?</h2>
+          <p>Bọc răng sứ là giải pháp lý tưởng trong những trường hợp sau:</p>
           <ul>
-            <li>Răng bị nhiễm màu kháng sinh nặng (răng nhiễm tetracycline), tẩy trắng không hiệu quả.</li>
-            <li>Răng bị sứt mẻ, vỡ lớn do chấn thương.</li>
+            <li>Răng nhiễm màu kháng sinh nặng, tẩy trắng không hiệu quả.</li>
+            <li>Răng bị sứt mẻ hoặc vỡ lớn do chấn thương.</li>
             <li>Răng lệch lạc, hô móm nhẹ, răng thưa muốn cải thiện nhanh chóng.</li>
             <li>Răng sâu vỡ lớn, răng chết tủy hoặc đã điều trị tủy cần được bảo vệ.</li>
             <li>Phục hình sau khi làm cầu răng sứ hoặc cấy ghép Implant.</li>
@@ -129,36 +132,34 @@ export default function CrownLanding({ language }) {
 
         <section>
           <h2>3. Các Loại Răng Sứ Cao Cấp Tại Emis Dental</h2>
+          <p>
+            Tại Emis Dental, chúng tôi cam kết sử dụng các dòng sứ chính hãng, có bảo hành minh bạch từ các thương hiệu hàng đầu thế giới:
+          </p>
           <ul>
             <li>Sứ Kim Loại Titan: Răng sứ Titan Nhật (Bảo hành 2 năm).</li>
             <li>Sứ Toàn Sứ EMIS: Răng sứ EMIS Zico Centonia (Bảo hành 5 năm).</li>
-            <li>Sứ Toàn Sứ Zirconia (Đức & Mỹ):
-              <ul>
-                <li>Răng sứ Zirconia Mỹ (Bảo hành 10 năm).</li>
-                <li>Răng sứ DD Bio Đức (Bảo hành 10 năm).</li>
-                <li>Răng sứ Cercon HT Đức (Bảo hành 10 năm).</li>
-              </ul>
-            </li>
-            <li>Sứ Cao Cấp Lava (Mỹ): Răng sứ Lava MỸ, Lava Plus Mỹ, Lava Esthetics MỸ (Bảo hành 12–20 năm).</li>
-            <li>Sứ Thẩm Mỹ Đỉnh Cao: Răng sứ Orodent ITALY (Bảo hành TRỌN ĐỜI).</li>
-            <li>Dán Sứ Veneer: Dán sứ Emax (Bảo hành 10 năm), giúp bảo tồn răng thật tối đa.</li>
+            <li>Sứ Toàn Sứ Zirconia (Đức & Mỹ): Răng sứ Zirconia Mỹ, DD Bio Đức, Cercon HT Đức (Bảo hành 10 năm).</li>
+            <li>Sứ Cao Cấp Lava (Mỹ): Lava MỸ, Lava Plus Mỹ, Lava Esthetics MỸ (Bảo hành 12–20 năm).</li>
+            <li>Sứ Thẩm Mỹ Đỉnh Cao: Răng sứ Orodent ITALY (Bảo hành trọn đời).</li>
+            <li>Dán Sứ Veneer: Dán sứ Emax (Bảo hành 10 năm), bảo tồn răng thật tối đa.</li>
           </ul>
         </section>
 
         <section>
           <h2>4. Ưu Điểm Vượt Trội Của Bọc Răng Sứ Thẩm Mỹ</h2>
-          <ul>
-            <li>Cải Thiện Thẩm Mỹ Tinh Tế: Giúp phục hồi hình dáng, màu sắc răng về màu tự nhiên, hài hòa với khuôn mặt.</li>
-            <li>Đảm Bảo Ăn Nhai Bền Vững: Với độ bền cao, răng sứ có thể bảo vệ mô răng tự nhiên khỏi tổn thương và khôi phục chức năng ăn nhai thoải mái như răng thật, bền đến 30 năm, thậm chí lâu hơn nếu được chăm sóc tốt.</li>
-            <li>Bảo tồn răng thật: Mão sứ bao bọc, bảo vệ răng thật khỏi tác động của vi khuẩn, hóa chất, nhiệt độ.</li>
-            <li>Bảo vệ răng đã chữa tủy: Răng dễ vỡ sau khi chữa tủy, bọc sứ giúp bảo vệ hiệu quả.</li>
-          </ul>
+          <p>
+            Bọc răng sứ được ưa chuộng nhờ những ưu điểm nổi bật:
+          </p>
+          <p><strong>Cải Thiện Thẩm Mỹ Tinh Tế:</strong> Phục hồi hình dáng, màu sắc răng về màu tự nhiên, hài hòa với khuôn mặt.</p>
+          <p><strong>Đảm Bảo Ăn Nhai Bền Vững:</strong> Răng sứ bảo vệ mô răng tự nhiên, khôi phục chức năng ăn nhai thoải mái như răng thật, bền đến 30 năm hoặc lâu hơn.</p>
+          <p><strong>Bảo Tồn Răng Thật:</strong> Mão sứ bao bọc răng thật, chống vi khuẩn, sâu răng và mòn cổ chân răng.</p>
+          <p><strong>Bảo Vệ Răng Chữa Tủy:</strong> Răng dễ vỡ sau chữa tủy, bọc sứ giúp bảo vệ hiệu quả.</p>
         </section>
 
         <section>
           <h2>5. Các Dáng Răng Sứ Nào Được Ưa Chuộng Trên Thị Trường?</h2>
           <p>
-            Tùy vào mong muốn và khuôn mặt, các dáng răng sứ thường được khách hàng lựa chọn. Gợi ý 1 số dáng răng sứ được ưa chuộng: (File hình chị gửi DÁNG RĂNG)
+            Tùy vào mong muốn và khuôn mặt, các dáng răng sứ thường được khách hàng lựa chọn. Dưới đây là một số dáng răng sứ phổ biến: (File hình chị gửi DÁNG RĂNG)
           </p>
           <ImageSlider images={formImages} language={language} />
         </section>
@@ -166,10 +167,10 @@ export default function CrownLanding({ language }) {
         <section>
           <h2>6. Quy Trình Bọc Răng Sứ Chuẩn Y Khoa tại Emis Dental</h2>
           <ol>
-            <li>Thăm khám & Tư vấn: Bác sĩ kiểm tra tổng quát, chụp phim X-quang.</li>
-            <li>Lập kế hoạch điều trị: Lấy dấu răng, thiết kế nụ cười, chọn dáng răng, màu răng phù hợp.</li>
-            <li>Mài Cùi Răng (tối thiểu): Mài cùi răng theo tỉ lệ chuẩn, hạn chế xâm lấn răng thật, lấy dấu hàm gửi Labo chế tác sứ.</li>
-            <li>Gắn răng tạm: Làm bộ răng tạm để ăn nhai trong quá trình chờ răng sứ.</li>
+            <li>Thăm khám & Tư vấn: Kiểm tra tổng quát, chụp phim X-quang.</li>
+            <li>Lập kế hoạch điều trị: Lấy dấu răng, thiết kế nụ cười, chọn dáng răng và màu răng phù hợp.</li>
+            <li>Mài Cùi Răng (tối thiểu): Mài cùi theo tỉ lệ chuẩn, hạn chế xâm lấn răng thật, gửi dấu hàm Labo chế tác sứ.</li>
+            <li>Gắn răng tạm: Cho khách hàng bộ răng tạm an toàn để ăn nhai trong thời gian chờ răng sứ.</li>
             <li>Thử sứ: Kiểm tra độ khít sát, màu sắc, hình dáng, khớp cắn và cảm giác ăn nhai.</li>
             <li>Gắn Sứ Chính Thức: Kiểm tra và gắn sứ cố định vĩnh viễn.</li>
           </ol>
@@ -178,7 +179,7 @@ export default function CrownLanding({ language }) {
         <section>
           <h2>7. Các Loại Răng Sứ tại Emis Dental</h2>
           <p>
-            Răng sứ là loại răng giả làm bằng sứ có hình dáng, kích thước và màu sắc mô phỏng tương tự như răng thật. Hiện nay, răng sứ có 2 dòng: kim loại và toàn sứ, chia thành nhiều loại phù hợp với nhu cầu bọc răng thẩm mỹ. (folder chị gửi LOẠI RĂNG)
+            Răng sứ là loại răng giả mô phỏng răng thật, chia thành 2 dòng: kim loại và toàn sứ. Mỗi loại có ưu nhược điểm riêng, phù hợp nhu cầu bọc răng thẩm mỹ. (folder chị gửi LOẠI RĂNG)
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-6">
             {crownImages.map((img, idx) => (
@@ -200,4 +201,3 @@ export default function CrownLanding({ language }) {
     </article>
   );
 }
-
