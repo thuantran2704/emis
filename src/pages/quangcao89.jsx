@@ -42,16 +42,19 @@ export default function ImplantLandingPage({ language = "english" }) {
         <div style={{ flex: "2 1 450px", padding: "0 20px" }}>
           <h1
             style={{
-              fontSize: "2.2rem",
+              fontSize: "clamp(1.8rem, 4vw, 2.2rem)", // auto-resizes to fit
               color: "#f7941e",
               marginBottom: "15px",
               fontWeight: "800",
               lineHeight: "1.2",
               textShadow: "1px 1px 2px rgba(0,0,0,0.1)",
               fontFamily: "'Cormorant', serif",
+              whiteSpace: "nowrap", // prevent wrapping
+              overflow: "hidden",
             }}
           >
-            TRỒNG RĂNG IMPLANT HIOSSEN (HÀN QUỐC) <br />
+            TRỒNG RĂNG IMPLANT HIOSSEN (HÀN QUỐC)
+            <br />
             <span className="neon-flicker" style={{ fontFamily: "'Roboto Mono', monospace" }}>
               CHỈ 8.900.000Đ
             </span>
@@ -192,7 +195,7 @@ export default function ImplantLandingPage({ language = "english" }) {
       <style>
         {`
           .neon-flicker {
-            color: #f7941e; /* main text */
+            color: #f7941e;
             text-shadow:
               0 0 5px #fff56d,
               0 0 10px #fff56d,
@@ -246,3 +249,4 @@ export default function ImplantLandingPage({ language = "english" }) {
     </div>
   );
 }
+
