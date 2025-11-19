@@ -38,7 +38,7 @@ import eng7_6 from "../pics/WEB/veneer/eng/6.png";
 import eng7_7 from "../pics/WEB/veneer/eng/7.png";
 import eng7_8 from "../pics/WEB/veneer/eng/8.png";
 
-// --- Custom Image Slider Component ---
+// --- Image Slider Component ---
 const ImageSlider = ({ images }) => {
   const [cardsPerView, setCardsPerView] = useState(1);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -67,23 +67,17 @@ const ImageSlider = ({ images }) => {
     return -currentIndex * slideWidth;
   };
 
-  // Duplicate images for smooth looping
-  const extendedImages = [...images, ...images, ...images];
-
   return (
     <div className="relative w-full overflow-hidden my-8">
-      {/* Arrows */}
       <button
         onClick={prevSlide}
         className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#d4af37] text-white p-2 rounded-full shadow-md hover:bg-[#c19d30] transition"
-        aria-label="Previous"
       >
         &#8249;
       </button>
       <button
         onClick={nextSlide}
         className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#d4af37] text-white p-2 rounded-full shadow-md hover:bg-[#c19d30] transition"
-        aria-label="Next"
       >
         &#8250;
       </button>
@@ -93,7 +87,7 @@ const ImageSlider = ({ images }) => {
         className="flex transition-transform duration-500 ease-in-out"
         style={{ transform: `translateX(${getTransformValue()}px)` }}
       >
-        {extendedImages.map((img, index) => (
+        {images.map((img, index) => (
           <div
             key={index}
             className="px-2"
@@ -118,19 +112,37 @@ export default function CrownPage({ language }) {
   const sections = [
     {
       title: "1. Bọc Răng Sứ là Gì?",
-      content: `Bọc răng sứ (hay Răng sứ thẩm mỹ) là phương pháp phục hình răng giả cố định...`,
+      content: `Bọc răng sứ (hay Răng sứ thẩm mỹ) là phương pháp phục hình răng giả cố định, sử dụng một "mão sứ" rỗng ruột được chế tác tinh xảo để bọc chụp toàn bộ chiếc răng thật đã được mài nhỏ. Kỹ thuật này giúp khắc phục hiệu quả tình trạng răng thưa, hô, sứt mẻ hay xỉn màu, mang lại hàm răng trắng sáng, đều đẹp và bền chắc.`,
     },
     {
       title: "2. Trường Hợp Nào Nên Bọc Răng Sứ?",
-      content: `Bọc răng sứ là giải pháp lý tưởng cho những trường hợp sau: ...`,
+      content: `Bọc răng sứ là giải pháp lý tưởng cho những trường hợp sau:
+Răng bị nhiễm màu kháng sinh nặng (răng nhiễm tetracycline), tẩy trắng không hiệu quả.
+Răng bị sứt mẻ, vỡ lớn do chấn thương.
+Răng lệch lạc, hô móm nhẹ, răng thưa muốn cải thiện nhanh chóng.
+Răng sâu vỡ lớn, răng chết tủy hoặc đã điều trị tủy cần được bảo vệ.
+Phục hình sau khi làm cầu răng sứ hoặc cấy ghép Implant.`,
     },
     {
       title: "3. Các Loại Răng Sứ Cao Cấp Tại Emis Dental",
-      content: `Tại Emis Dental, chúng tôi cam kết sử dụng các dòng sứ chính hãng...`,
+      content: `Tại Emis Dental, chúng tôi cam kết sử dụng các dòng sứ chính hãng, có bảo hành minh bạch theo thời gian hãng quy định. Minh bạch về xuất xứ từ các thương hiệu hàng đầu thế giới:
+Sứ Kim Loại Titan: Răng sứ Titan Nhật (Bảo hành 2 năm).
+Sứ Toàn Sứ EMIS: Răng sứ EMIS Zico Centonia (Bảo hành 5 năm).
+Sứ Toàn Sứ Zirconia (Đức & Mỹ):
+Răng sứ Zirconia Mỹ (Bảo hành 10 năm).
+Răng sứ DD Bio Đức (Bảo hành 10 năm).
+Răng sứ Cercon HT Đức (Bảo hành 10 năm).
+Sứ Cao Cấp Lava (Mỹ): Răng sứ Lava MỸ, Lava Plus Mỹ, Lava Esthetics MỸ (Bảo hành từ 12 năm đến 20 năm).
+Sứ Thẩm Mỹ Đỉnh Cao: Răng sứ Orodent ITALY (Bảo hành TRỌN ĐỜI).
+Dán Sứ Veneer: Dán sứ Emax (Bảo hành 10 năm), giúp bảo tồn răng thật tối đa.`,
     },
     {
       title: "4. Ưu Điểm Vượt Trội Của Bọc Răng Sứ Thẩm Mỹ",
-      content: `Bọc răng sứ được ưa chuộng nhờ những ưu điểm nổi bật: ...`,
+      content: `Bọc răng sứ được ưa chuộng nhờ những ưu điểm nổi bật:
+Cải Thiện Thẩm Mỹ Tinh Tế: Giúp phục hồi hình dáng, màu sắc răng về màu tự nhiên, hài hòa với khuôn mặt.
+Đảm Bảo Ăn Nhai Bền Vững: Với độ bền cao, răng sứ có thể bảo vệ mô răng tự nhiên khỏi tổn thương và khôi phục chức năng ăn nhai thoải mái như răng thật, bền đến 30 năm, thậm chí lâu hơn nếu được chăm sóc tốt.
+Bảo tồn răng thật: Mão sứ bao bọc, bảo vệ răng thật khỏi tác động của vi khuẩn, hóa chất, nhiệt độ. Ngăn ngừa tình trạng sâu răng, mòn cổ chân răng, viêm tủy trở lại.
+Đối với những chiếc răng đã chữa tủy thì rất dễ vỡ, mẻ do không còn được nuôi dưỡng bởi tủy tăng vì thế bọc răng sứ giúp bảo vệ răng thật hiệu quả.`,
     },
     {
       title: "5. Các Dáng Răng Sứ Nào Được Ưa Chuộng Trên Thị Trường?",
@@ -141,18 +153,24 @@ export default function CrownPage({ language }) {
     },
     {
       title: "6. Quy Trình Bọc Răng Sứ Chuẩn Y Khoa tại Emis Dental",
-      content: `Quy trình bọc răng sứ được thực hiện bởi đội ngũ bác sĩ chính quy...`,
+      content: `Quy trình bọc răng sứ được thực hiện bởi đội ngũ bác sĩ chính quy, đảm bảo chính xác và an toàn:
+Bước 1: Thăm khám & Tư vấn.
+Bước 2: Lập kế hoạch điều trị.
+Bước 3: Mài Cùi Răng (tối thiểu).
+Bước 4: Gắn răng tạm.
+Bước 5: Thử sứ.
+Bước 6: Gắn Sứ Chính Thức.`,
     },
     {
       title: "7. Các Loại Răng Sứ tại Emis Dental",
-      content: `Các loại răng sứ toàn sứ tại Emis Dental được bác sĩ và khách hàng tin tưởng...`,
+      content: `Các loại răng sứ toàn sứ tại Emis Dental được bác sĩ và khách hàng tin tưởng lựa chọn đến từ các thương hiệu lớn trên thế giới.`,
       images: isViet
         ? [vie7_1, vie7_2, vie7_3, vie7_4, vie7_5, vie7_6, vie7_7, vie7_8]
         : [eng7_1, eng7_2, eng7_3, eng7_4, eng7_5, eng7_6, eng7_7, eng7_8],
     },
     {
       title: "8. Vì Sao Bạn Nên Chọn Làm Răng Sứ tại Emis Dental?",
-      content: `Nha khoa uy tín, vật liệu chính hãng, quy trình chuẩn y khoa, đội ngũ bác sĩ chuyên môn cao...`,
+      content: `Nha khoa uy tín, vật liệu chính hãng, quy trình chuẩn y khoa, đội ngũ bác sĩ chuyên môn cao.`,
     },
   ];
 
@@ -170,8 +188,6 @@ export default function CrownPage({ language }) {
                 {sec.title}
               </h2>
               <p className="whitespace-pre-line mb-6">{sec.content}</p>
-
-              {/* Show slider if images exist */}
               {sec.images && <ImageSlider images={sec.images} />}
             </div>
           ))}
