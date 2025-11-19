@@ -1,74 +1,76 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import adImg from "../pics/ads/ad2.jpg";
+import adImg from "../pics/ads/ad1.jpg";
 import ContactForm from "../components/ContactForm";
 
-export default function PorcelainTeethLandingPage({ language }) {
+export default function ImplantLandingPage({ language }) {
   const text = {
     english: {
-      heroTitle: "NOVEMBER OFFER: AESTHETIC PORCELAIN TEETH",
-      heroPrice: "FROM ONLY 2,000,000 VND",
-      heroDesc: "Create a confident smile with genuine porcelain teeth, optimized aesthetics at Emis Dental. Welcome November with our special offer.",
+      heroTitle: "HIOSSEN DENTAL IMPLANT (KOREA)",
+      heroPrice: "ONLY 8,900,000 VND",
+      heroDesc:
+        "Safe tooth restoration – natural aesthetics. Get free consultation and special offers from Emis Dental.",
       heroCTA: "BOOK CONSULTATION NOW",
-      benefitsTitle: "WHY CHOOSE PORCELAIN TEETH",
+      benefitsTitle: "WHY CHOOSE HIOSSEN IMPLANT",
       benefits: [
         {
-          title: "Absolute Aesthetics",
-          desc: "Natural translucent color and light reflection identical to real teeth. No gum discoloration over time like metal-ceramic teeth.",
+          title: "Excellent Osseointegration",
+          desc: "Made of 100% pure Titanium with advanced SA technology, ensuring fast and stable bone integration.",
         },
         {
-          title: "Safe & Biocompatible",
-          desc: "Porcelain material has high biological compatibility, completely safe for oral environment, causing no gum irritation.",
+          title: "Optimized Design",
+          desc: "Threaded design increases initial stability even in soft bone, ensuring strong implant support.",
         },
         {
-          title: "Outstanding Durability",
-          desc: "High hardness porcelain, excellent chewing function, lasting 15-20 years or even longer with proper care.",
+          title: "Long Lifespan",
+          desc: "Lasts a lifetime if properly implanted and maintained.",
         },
         {
-          title: "Metal-Free Structure",
-          desc: "Made entirely from monolithic ceramic, no metal content, ensuring natural light transmission and gum health.",
+          title: "Safe & Aesthetic",
+          desc: "Restores chewing function and delivers a natural, aesthetic smile.",
         },
       ],
       specialOfferTitle: "SPECIAL OFFER",
-      originalPrice: "Original price: 4,500,000 VND",
+      originalPrice: "Original price: 22,000,000 VND",
       offerCTA: "BOOK NOW",
       specialList: [
-        "Free 1:1 consultation with aesthetic dentistry specialists",
-        "Free on-site X-ray for comprehensive oral health check",
-        "Free scaling and polishing service when making 6+ porcelain teeth",
+        "Free 1:1 consultation with Implant specialist",
+        "Free CT Cone Beam 3D scan",
+        "Limited offer – register early to secure your spot",
       ],
     },
     vietnamese: {
-      heroTitle: "ƯU ĐÃI THÁNG 11: RĂNG TOÀN SỨ THẨM MỸ",
-      heroPrice: "CHỈ TỪ 2.000.000Đ",
-      heroDesc: "Kiến tạo nụ cười tự tin với răng sứ chính hãng, thẩm mỹ tối ưu tại Emis Dental. Chào đón tháng 11 với ưu đãi đặc biệt.",
+      heroTitle: "TRỒNG RĂNG IMPLANT HIOSSEN (HÀN QUỐC)",
+      heroPrice: "CHỈ 8.900.000Đ",
+      heroDesc:
+        "Phục hồi răng mất an toàn – thẩm mỹ tự nhiên. Nhận tư vấn miễn phí và ưu đãi đặc biệt từ Emis Dental.",
       heroCTA: "ĐẶT HẸN TƯ VẤN NGAY",
-      benefitsTitle: "LÝ DO CHỌN RĂNG TOÀN SỨ",
+      benefitsTitle: "LÝ DO CHỌN TRỤ IMPLANT HIOSSEN",
       benefits: [
         {
-          title: "Thẩm Mỹ Tuyệt Đối",
-          desc: "Màu sắc trong, mờ và độ phản quang y hệt răng thật. Không gây đen viền nướu sau thời gian dài sử dụng.",
+          title: "Tích Hợp Xương Vượt Trội",
+          desc: "Trụ làm từ 100% Titanium tinh khiết với công nghệ SA tiên tiến, giúp tích hợp xương nhanh và ổn định.",
         },
         {
-          title: "An Toàn & Lành Tính",
-          desc: "Vật liệu sứ có tính tương hợp sinh học cao, hoàn toàn an toàn với khoang miệng, không gây kích ứng nướu.",
+          title: "Thiết Kế Tối Ưu",
+          desc: "Ren xoắn tăng độ ổn định ban đầu ngay cả trong xương xốp, đảm bảo trụ vững chắc sau cấy.",
         },
         {
-          title: "Độ Bền Vượt Trội",
-          desc: "Độ cứng cao, chịu lực ăn nhai tốt, tuổi thọ lên đến 15-20 năm hoặc lâu hơn nếu chăm sóc tốt.",
+          title: "Tuổi Thọ Cao",
+          desc: "Trụ Implant Hiossen tồn tại bền lâu trọn đời nếu cấy đúng kỹ thuật và chăm sóc tốt.",
         },
         {
-          title: "Cấu Trúc Không Kim Loại",
-          desc: "Chế tác hoàn toàn từ sứ nguyên khối, không chứa kim loại, đảm bảo truyền sáng tự nhiên và sức khỏe nướu.",
+          title: "An Toàn & Thẩm Mỹ",
+          desc: "Phục hồi chức năng ăn nhai và mang lại nụ cười tự nhiên, thẩm mỹ.",
         },
       ],
       specialOfferTitle: "ƯU ĐÃI ĐẶC BIỆT",
-      originalPrice: "Giá gốc: 4.500.000 VNĐ",
+      originalPrice: "Giá gốc: 22.000.000 VNĐ",
       offerCTA: "ĐẶT HẸN NGAY",
       specialList: [
-        "Miễn phí thăm khám và tư vấn 1:1 cùng bác sĩ chuyên khoa thẩm mỹ",
-        "Miễn phí chụp phim X-quang tại chỗ kiểm tra sức khỏe răng miệng",
-        "Tặng ngay dịch vụ cạo vôi răng và đánh bóng khi làm từ 6 răng sứ",
+        "Miễn phí thăm khám và tư vấn 1:1 cùng bác sĩ chuyên khoa Implant",
+        "Miễn phí chụp phim CT Cone Beam 3D",
+        "Ưu đãi có số lượng giới hạn, đăng ký sớm để giữ suất",
       ],
     },
   };
@@ -77,7 +79,7 @@ export default function PorcelainTeethLandingPage({ language }) {
   const t = language === "vietnamese" ? text.vietnamese : text.english;
 
   return (
-    <div style={{ fontFamily: "'Noto Sans', sans-serif", color: "#333" }}>
+    <div style={{ fontFamily: "'Noto Sans', sans-serif", color: "#333", background: "linear-gradient(135deg, #fefaf7 0%, #f8f1e7 100%)" }}>
       {/* Navbar placeholder */}
       <div style={{ height: "70px" }}></div>
 
@@ -89,24 +91,39 @@ export default function PorcelainTeethLandingPage({ language }) {
           flexWrap: "wrap",
           justifyContent: "space-between",
           alignItems: "center",
-          backgroundColor: "#fce8d4",
+          background: "linear-gradient(135deg, #fce8d4 0%, #f8d4b5 100%)",
           padding: "40px 20px",
           borderRadius: "20px",
           maxWidth: "1100px",
           margin: "20px auto",
-          boxShadow: "0 10px 25px rgba(0,0,0,0.12)",
+          boxShadow: "0 15px 35px rgba(247, 148, 30, 0.25)",
+          border: "2px solid #f7941e",
+          position: "relative",
+          overflow: "hidden",
         }}
       >
+        {/* Decorative elements */}
+        <div style={{
+          position: "absolute",
+          top: "-50px",
+          right: "-50px",
+          width: "150px",
+          height: "150px",
+          background: "rgba(255, 255, 255, 0.2)",
+          borderRadius: "50%",
+        }}></div>
+        
         <div style={{ flex: "1 1 250px", textAlign: "center", marginBottom: "20px" }}>
           <img
             src={adImg}
-            alt="Porcelain Teeth Promotion"
+            alt="Promotional Ad"
             style={{
               width: "220px",
               height: "220px",
               objectFit: "cover",
               borderRadius: "20px",
-              boxShadow: "0 6px 15px rgba(0,0,0,0.15)",
+              boxShadow: "0 10px 25px rgba(0,0,0,0.2)",
+              border: "3px solid white",
             }}
           />
         </div>
@@ -123,49 +140,81 @@ export default function PorcelainTeethLandingPage({ language }) {
         >
           <h1
             style={{
-              fontSize: "clamp(1.8rem, 4vw, 2rem)",
-              color: "#f7941e",
-              marginBottom: "20px",
-              fontWeight: "800",
-              lineHeight: "1.2",
-              textShadow: "1px 1px 2px rgba(0,0,0,0.1)",
+              fontSize: "clamp(1.5rem, 4vw, 2rem)",
+              color: "#d35400",
+              marginBottom: "15px",
+              fontWeight: "900",
+              lineHeight: "1.1",
+              textShadow: "2px 2px 4px rgba(0,0,0,0.1)",
               fontFamily: "'Cormorant', serif",
               whiteSpace: "nowrap",
               overflow: "hidden",
+              textOverflow: "ellipsis",
+              width: "100%",
+              letterSpacing: "-0.5px",
             }}
           >
             {t.heroTitle}
           </h1>
-          <span
-            className="neon-flicker"
-            style={{
-              fontFamily: "'Roboto Mono', monospace",
-              fontSize: "2.4rem",
-              fontWeight: "900",
-              display: "block",
-              marginBottom: "15px",
-            }}
-          >
-            {t.heroPrice}
-          </span>
-          <p style={{ fontSize: "1.15rem", marginBottom: "25px", color: "#4b4b4b" }}>
+          
+          <div style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "15px",
+            marginBottom: "15px",
+            flexWrap: "wrap"
+          }}>
+            <span
+              className="neon-flicker"
+              style={{
+                fontFamily: "'Roboto Mono', monospace",
+                fontSize: "2.2rem",
+                fontWeight: "900",
+                display: "block",
+              }}
+            >
+              {t.heroPrice}
+            </span>
+            <span style={{
+              backgroundColor: "#e74c3c",
+              color: "white",
+              padding: "5px 12px",
+              borderRadius: "20px",
+              fontSize: "0.9rem",
+              fontWeight: "700",
+              boxShadow: "0 3px 8px rgba(231, 76, 60, 0.4)"
+            }}>
+              {language === "vietnamese" ? "GIẢM SỐC" : "HOT DEAL"}
+            </span>
+          </div>
+          
+          <p style={{ 
+            fontSize: "1.15rem", 
+            marginBottom: "25px", 
+            color: "#4b4b4b",
+            lineHeight: "1.4",
+            fontWeight: "500"
+          }}>
             {t.heroDesc}
           </p>
-          <Link to="/contact" className="cta-button">
+          
+          <Link to="/contact" className="cta-button pulse-animation">
             {t.heroCTA}
           </Link>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section style={{ padding: "60px 20px", backgroundColor: "#fff" }}>
+      <section style={{ padding: "60px 20px", backgroundColor: "transparent" }}>
         <h2
           style={{
             textAlign: "center",
             marginBottom: "50px",
-            color: "#b78d44",
-            fontSize: "2rem",
-            fontWeight: "700",
+            color: "#a67c52",
+            fontSize: "2.2rem",
+            fontWeight: "800",
+            textTransform: "uppercase",
+            letterSpacing: "1px",
           }}
         >
           {t.benefitsTitle}
@@ -180,31 +229,66 @@ export default function PorcelainTeethLandingPage({ language }) {
             margin: "0 auto",
           }}
         >
-          {t.benefits.map((benefit) => (
+          {t.benefits.map((benefit, index) => (
             <div
               key={benefit.title}
               style={{
                 flex: "1 1 260px",
-                border: "1px solid #e0d6c1",
-                padding: "25px",
+                background: "white",
+                padding: "30px 25px",
                 borderRadius: "15px",
-                boxShadow: "0 6px 15px rgba(0,0,0,0.05)",
-                transition: "transform 0.3s ease",
+                boxShadow: "0 10px 30px rgba(183, 141, 68, 0.15)",
+                transition: "all 0.4s ease",
+                border: "1px solid #f0e6d6",
+                position: "relative",
+                overflow: "hidden",
               }}
-              onMouseOver={(e) => (e.currentTarget.style.transform = "translateY(-5px)")}
-              onMouseOut={(e) => (e.currentTarget.style.transform = "translateY(0)")}
+              onMouseOver={(e) => {
+                e.currentTarget.style.transform = "translateY(-10px)";
+                e.currentTarget.style.boxShadow = "0 15px 35px rgba(183, 141, 68, 0.25)";
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.transform = "translateY(0)";
+                e.currentTarget.style.boxShadow = "0 10px 30px rgba(183, 141, 68, 0.15)";
+              }}
             >
+              <div style={{
+                position: "absolute",
+                top: "0",
+                left: "0",
+                width: "100%",
+                height: "4px",
+                background: "linear-gradient(90deg, #f7941e, #b78d44)"
+              }}></div>
+              
               <h3
                 style={{
-                  color: "#b78d44",
-                  fontWeight: "700",
-                  marginBottom: "10px",
-                  fontSize: "1.25rem",
+                  color: "#a67c52",
+                  fontWeight: "800",
+                  marginBottom: "15px",
+                  fontSize: "1.3rem",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "10px"
                 }}
               >
+                <span style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width: "28px",
+                  height: "28px",
+                  backgroundColor: "#f7941e",
+                  color: "white",
+                  borderRadius: "50%",
+                  fontSize: "0.9rem",
+                  fontWeight: "bold"
+                }}>
+                  {index + 1}
+                </span>
                 {benefit.title}
               </h3>
-              <p style={{ color: "#555", lineHeight: "1.5" }}>{benefit.desc}</p>
+              <p style={{ color: "#555", lineHeight: "1.6", fontSize: "1rem" }}>{benefit.desc}</p>
             </div>
           ))}
         </div>
@@ -213,49 +297,101 @@ export default function PorcelainTeethLandingPage({ language }) {
       {/* Special Offer Section */}
       <section
         style={{
-          backgroundColor: "#f8f1e7",
+          background: "linear-gradient(135deg, #f8f1e7 0%, #fce8d4 100%)",
           padding: "60px 20px",
           textAlign: "center",
           borderTop: "5px solid #f7941e",
+          borderBottom: "5px solid #f7941e",
+          position: "relative",
+          overflow: "hidden",
         }}
       >
+        <div style={{
+          position: "absolute",
+          top: "0",
+          left: "0",
+          right: "0",
+          height: "5px",
+          background: "linear-gradient(90deg, #f7941e, #b78d44, #f7941e)",
+        }}></div>
+        
         <h2
           style={{
-            color: "#b78d44",
+            color: "#d35400",
             marginBottom: "30px",
-            fontSize: "2rem",
-            fontWeight: "700",
+            fontSize: "2.2rem",
+            fontWeight: "800",
+            textTransform: "uppercase",
+            letterSpacing: "1px",
           }}
         >
           {t.specialOfferTitle}
         </h2>
-        <p style={{ fontSize: "1.1rem", marginBottom: "10px" }}>{t.originalPrice}</p>
-        <p
-          style={{
-            fontSize: "1.6rem",
-            fontWeight: "bold",
-            marginBottom: "25px",
-            color: "#f7941e",
-            fontFamily: "'Roboto Mono', monospace",
-          }}
-        >
-          <span className="neon-flicker">{t.heroPrice}</span>
-        </p>
-        <ul
-          style={{
-            textAlign: "left",
-            display: "inline-block",
-            marginBottom: "35px",
-            lineHeight: "1.7",
-          }}
-        >
-          {t.specialList.map((item, idx) => (
-            <li key={idx}>{item}</li>
-          ))}
-        </ul>
-        <Link to="/contact" className="cta-button">
-          {t.offerCTA}
-        </Link>
+        
+        <div style={{
+          display: "inline-block",
+          backgroundColor: "white",
+          padding: "25px 35px",
+          borderRadius: "15px",
+          boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
+          marginBottom: "30px",
+          border: "2px dashed #f7941e"
+        }}>
+          <p style={{ fontSize: "1.1rem", marginBottom: "10px", textDecoration: "line-through", color: "#888" }}>{t.originalPrice}</p>
+          <p
+            style={{
+              fontSize: "2rem",
+              fontWeight: "bold",
+              marginBottom: "10px",
+              color: "#e74c3c",
+              fontFamily: "'Roboto Mono', monospace",
+            }}
+          >
+            <span className="neon-flicker">{t.heroPrice}</span>
+          </p>
+          <p style={{
+            color: "#e74c3c",
+            fontWeight: "700",
+            fontSize: "1.1rem",
+            marginBottom: "20px"
+          }}>
+            {language === "vietnamese" ? "TIẾT KIỆM 60%" : "SAVE 60%"}
+          </p>
+          
+          <ul
+            style={{
+              textAlign: "left",
+              display: "inline-block",
+              marginBottom: "25px",
+              lineHeight: "1.7",
+            }}
+          >
+            {t.specialList.map((item, idx) => (
+              <li key={idx} style={{
+                marginBottom: "10px",
+                display: "flex",
+                alignItems: "flex-start",
+                gap: "10px"
+              }}>
+                <span style={{
+                  color: "#f7941e",
+                  fontWeight: "bold",
+                  fontSize: "1.2rem"
+                }}>✓</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+        
+        <div>
+          <Link to="/contact" className="cta-button pulse-animation" style={{
+            fontSize: "1.2rem",
+            padding: "16px 40px",
+          }}>
+            {t.offerCTA}
+          </Link>
+        </div>
       </section>
 
       {/* Contact Form */}
@@ -265,45 +401,68 @@ export default function PorcelainTeethLandingPage({ language }) {
       <style>
         {`
           .neon-flicker {
-            color: #f7941e;
+            color: #e74c3c;
             text-shadow:
-              0 0 5px #fff56d,
-              0 0 10px #fff56d,
-              0 0 15px #fff56d,
-              0 0 20px #fff56d;
-            animation: glowPulse 2.5s infinite alternate;
+              0 0 5px #ff9f43,
+              0 0 10px #ff9f43,
+              0 0 15px #ff9f43,
+              0 0 20px #ff9f43;
+            animation: glowPulse 2s infinite alternate;
             display: inline-block;
           }
 
           @keyframes glowPulse {
             0% {
-              text-shadow: 0 0 3px #fff56d, 0 0 6px #fff56d, 0 0 9px #fff56d, 0 0 12px #fff56d;
+              text-shadow: 0 0 3px #ff9f43, 0 0 6px #ff9f43, 0 0 9px #ff9f43, 0 0 12px #ff9f43;
+              transform: scale(1);
             }
             50% {
-              text-shadow: 0 0 6px #fff56d, 0 0 12px #fff56d, 0 0 18px #fff56d, 0 0 24px #fff56d;
+              text-shadow: 0 0 6px #ff9f43, 0 0 12px #ff9f43, 0 0 18px #ff9f43, 0 0 24px #ff9f43;
+              transform: scale(1.02);
             }
             100% {
-              text-shadow: 0 0 3px #fff56d, 0 0 6px #fff56d, 0 0 9px #fff56d, 0 0 12px #fff56d;
+              text-shadow: 0 0 3px #ff9f43, 0 0 6px #ff9f43, 0 0 9px #ff9f43, 0 0 12px #ff9f43;
+              transform: scale(1);
             }
           }
 
           .cta-button {
-            background-color: #f7941e;
+            background: linear-gradient(135deg, #f7941e 0%, #e67e22 100%);
             color: #fff;
             padding: 14px 30px;
             font-size: 1.1rem;
             border: none;
-            border-radius: 10px;
+            border-radius: 50px;
             cursor: pointer;
-            font-weight: 700;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            font-weight: 800;
+            box-shadow: 0 8px 20px rgba(247, 148, 30, 0.4);
             transition: all 0.3s ease;
             text-decoration: none;
-            display: block;   /* center the button */
-            margin: 0 auto;   /* center the button */
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
           }
+          
           .cta-button:hover {
-            background-color: #e18312;
+            background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(247, 148, 30, 0.5);
+          }
+          
+          .pulse-animation {
+            animation: pulse 2s infinite;
+          }
+          
+          @keyframes pulse {
+            0% {
+              box-shadow: 0 8px 20px rgba(247, 148, 30, 0.4);
+            }
+            50% {
+              box-shadow: 0 8px 25px rgba(247, 148, 30, 0.7);
+            }
+            100% {
+              box-shadow: 0 8px 20px rgba(247, 148, 30, 0.4);
+            }
           }
 
           @media (max-width: 768px) {
@@ -312,8 +471,13 @@ export default function PorcelainTeethLandingPage({ language }) {
               text-align: center !important;
             }
             .cta-button {
-              width: 80%;
+              width: 90%;
               margin: 0 auto;
+            }
+            
+            h1 {
+              font-size: 1.6rem !important;
+              white-space: normal !important;
             }
           }
         `}
