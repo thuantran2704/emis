@@ -14,6 +14,7 @@ import Footer from './components/Footer.jsx';
 import Equipment from './pages/Equipment';
 import FloatingContactButton from './components/floatingContactButton.jsx';
 import LandingPage1 from './pages/landingPage1.jsx';
+import ImplantInfo from './pages/implantInfo.jsx';
 export default function App() {
   const language = useSelector((state) => state.language.language);
   const dispatch = useDispatch();
@@ -39,6 +40,7 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
           <Route path="/equipment" element={<Equipment language={language} />} />
           <Route path="/testing" element={<LandingPage1 />} />
+          <Route path="/implant" element={<ImplantInfo language = {language}/>}/>
         </Routes>
         <Footer language={language}/>
         <FloatingContactButton />
