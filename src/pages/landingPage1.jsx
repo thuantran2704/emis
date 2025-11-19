@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 // --- Section 5 Images (Smile Design Forms) ---
 import form1Eng from "../pics/WEB/forms/eng/1.png";
@@ -41,84 +41,7 @@ import crown8Vie from "../pics/WEB/veneer/vie/8.png";
 export default function CrownLanding({ language }) {
   const isVie = language === "vietnamese";
 
-  // ---------------- CONTENT ----------------
-  const sections = [
-    {
-      id: "intro",
-      title: isVie ? "Giới Thiệu Bọc Răng Sứ" : "Introduction to Dental Crowns",
-      content: isVie
-        ? `Bọc răng sứ là phương pháp thẩm mỹ nha khoa phổ biến, giúp cải thiện hình dáng, màu sắc và chức năng của răng. Kỹ thuật này sử dụng mão răng sứ bọc lên răng thật đã được mài nhỏ, vừa bảo vệ răng, vừa mang lại nụ cười trắng sáng và tự nhiên.`
-        : `Dental crowns are a popular cosmetic dentistry procedure that enhances the shape, color, and function of teeth. This technique uses a hollow porcelain crown placed over a prepared tooth, protecting it while delivering a natural, bright smile.`
-    },
-    {
-      id: "toc",
-      title: isVie ? "Mục Lục" : "Table of Contents",
-      content: isVie
-        ? `1. Bọc Răng Sứ là Gì?\n2. Khi Nào Nên Bọc Răng Sứ?\n3. Quy Trình Chuẩn Y Khoa\n4. Các Dáng Răng Phổ Biến\n5. Các Loại Răng Sứ Cao Cấp\n6. Lợi Ích Khi Bọc Răng Sứ\n7. Vì Sao Chọn Emis Dental?`
-        : `1. What is a Dental Crown?\n2. When Should You Get a Crown?\n3. Step-by-Step Procedure\n4. Popular Crown Shapes\n5. Premium Crown Types\n6. Benefits of Dental Crowns\n7. Why Choose Emis Dental?`
-    },
-    {
-      id: "what",
-      title: isVie ? "Bọc Răng Sứ là Gì?" : "What is a Dental Crown?",
-      content: isVie
-        ? `Bọc răng sứ là phương pháp phục hình thẩm mỹ bằng cách bọc một mão sứ tinh xảo lên răng thật đã được mài nhỏ. Kỹ thuật này giúp khắc phục răng thưa, răng hô nhẹ, răng sứt mẻ hoặc xỉn màu, mang lại nụ cười đều và trắng sáng.`
-        : `A dental crown is a cosmetic restoration that covers a prepared tooth with a custom-made porcelain crown. This technique corrects gaps, minor misalignments, chipped or discolored teeth, providing a uniform, bright smile.`
-    },
-    {
-      id: "when",
-      title: isVie ? "Khi Nào Nên Bọc Răng Sứ?" : "When Should You Get a Crown?",
-      content: isVie
-        ? `Các trường hợp nên bọc răng sứ:\n- Răng nhiễm màu nặng, tẩy trắng không hiệu quả.\n- Răng sứt mẻ hoặc vỡ do chấn thương.\n- Răng lệch lạc nhẹ, răng thưa.\n- Răng đã điều trị tủy hoặc sâu lớn cần bảo vệ.\n- Phục hình sau cầu răng hoặc cấy Implant.`
-        : `Dental crowns are ideal for:\n- Teeth with severe staining that cannot be whitened.\n- Chipped or fractured teeth.\n- Slightly misaligned or gapped teeth.\n- Teeth that have undergone root canal treatment or have large cavities.\n- Restorations after bridges or dental implants.`
-    },
-    {
-      id: "procedure",
-      title: isVie ? "Quy Trình Chuẩn Y Khoa" : "Step-by-Step Procedure",
-      content: isVie
-        ? `1. Thăm khám, chụp X-quang và tư vấn.\n2. Lập kế hoạch điều trị và thiết kế nụ cười.\n3. Mài cùi răng tối thiểu, lấy dấu gửi labo.\n4. Gắn răng tạm an toàn.\n5. Thử sứ để kiểm tra màu sắc và hình dáng.\n6. Gắn sứ cố định vĩnh viễn.`
-        : `1. Consultation and X-ray imaging.\n2. Treatment planning and smile design.\n3. Minimal tooth preparation and impressions sent to the lab.\n4. Temporary crown placement.\n5. Trial crown to check fit, shape, and color.\n6. Permanent crown placement after adjustments.`
-    },
-    {
-      id: "shapes",
-      title: isVie ? "Các Dáng Răng Phổ Biến" : "Popular Crown Shapes",
-      content: isVie
-        ? `Tùy theo khuôn mặt và sở thích, các dáng răng phổ biến gồm: tự nhiên, siêu trắng trẻ trung, thanh lịch hoặc sang trọng.`
-        : `Depending on facial features and preferences, popular crown shapes include: natural, ultra-white youthful, elegant, or luxurious.`
-    },
-    {
-      id: "shapes-gallery",
-      title: isVie ? "Ví Dụ Dáng Răng" : "Example Smile Designs",
-      gallery: "forms"
-    },
-    {
-      id: "types",
-      title: isVie ? "Các Loại Răng Sứ Cao Cấp" : "Premium Crown Types",
-      content: isVie
-        ? `Tại Emis Dental, chúng tôi sử dụng các dòng sứ chính hãng với bảo hành minh bạch:\n- Sứ Titan: bảo hành 2 năm.\n- Sứ Toàn Sứ EMIS: bảo hành 5 năm.\n- Zirconia Mỹ/Đức: bảo hành 10 năm.\n- Lava Mỹ: bảo hành 12–20 năm.\n- Orodent Italy: bảo hành trọn đời.\n- Veneer Emax: bảo hành 10 năm.`
-        : `At Emis Dental, we use genuine crowns with transparent warranties:\n- Titan Crowns: 2-year warranty.\n- EMIS All-Ceramic: 5-year warranty.\n- Zirconia (US/Germany): 10-year warranty.\n- Lava (USA): 12–20 years.\n- Orodent (Italy): Lifetime warranty.\n- Emax Veneers: 10-year warranty.`
-    },
-    {
-      id: "crown-gallery",
-      title: isVie ? "Ví Dụ Các Loại Răng Sứ" : "Example Crown Types",
-      gallery: "crowns"
-    },
-    {
-      id: "benefits",
-      title: isVie ? "Lợi Ích Khi Bọc Răng Sứ" : "Benefits of Dental Crowns",
-      content: isVie
-        ? `- Cải thiện thẩm mỹ tự nhiên.\n- Ăn nhai bền vững, có thể lên tới 30 năm.\n- Bảo vệ răng thật khỏi vi khuẩn, nhiệt độ và hóa chất.\n- Giảm nguy cơ mẻ vỡ cho răng đã chữa tủy.`
-        : `- Enhances natural aesthetics.\n- Durable chewing function, potentially up to 30 years.\n- Protects natural teeth from bacteria, temperature, and chemicals.\n- Reduces chipping risk for teeth that underwent root canal.`
-    },
-    {
-      id: "why-emis",
-      title: isVie ? "Vì Sao Nên Chọn Emis Dental?" : "Why Choose Emis Dental?",
-      content: isVie
-        ? `- Nha khoa uy tín, cam kết chất lượng.\n- Vật liệu chính hãng từ Lava, Orodent, Zirconia, Emax.\n- Quy trình chuẩn y khoa, vô trùng và an toàn.\n- Đội ngũ bác sĩ giàu kinh nghiệm trong thiết kế nụ cười và phục hình thẩm mỹ.`
-        : `- Reputable dental clinic with proven quality.\n- Genuine materials from Lava, Orodent, Zirconia, and Emax.\n- Standard medical procedures, sterile and safe.\n- Experienced dentists in smile design and cosmetic restoration.`
-    }
-  ];
-
-  // ---------------- IMAGES ----------------
+  // Image arrays
   const formImages = isVie
     ? [form1Vie, form2Vie, form3Vie, form4Vie, form5Vie, form6Vie, form7Vie, form8Vie]
     : [form1Eng, form2Eng, form3Eng, form4Eng, form5Eng, form6Eng, form7Eng, form8Eng];
@@ -127,120 +50,265 @@ export default function CrownLanding({ language }) {
     ? [crown1Vie, crown2Vie, crown3Vie, crown4Vie, crown5Vie, crown6Vie, crown7Vie, crown8Vie]
     : [crown1Eng, crown2Eng, crown3Eng, crown4Eng, crown5Eng, crown6Eng, crown7Eng, crown8Eng];
 
-  // ---------------- GALLERY COMPONENT ----------------
-  const ImageGallery = ({ images, columns = 4 }) => {
-    return (
-      <div className="ml-6 mt-8">
-        <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-${columns} gap-6`}>
-          {images.map((img, idx) => (
-            <div 
-              key={idx} 
-              className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group"
-            >
-              <div className="relative overflow-hidden">
-                <img 
-                  src={img} 
-                  className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105" 
-                  alt={`Design ${idx + 1}`} 
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
-              </div>
-              <div className="p-4 text-center">
-                <span className="text-sm font-medium text-gray-600">
-                  {isVie ? `Thiết kế ${idx + 1}` : `Design ${idx + 1}`}
-                </span>
-              </div>
+  // Gallery Component
+  const ImageGallery = ({ images, title }) => (
+    <div className="my-8">
+      <h3 className="text-xl font-semibold text-gray-800 mb-4 text-center">{title}</h3>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {images.map((img, index) => (
+          <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
+            <img 
+              src={img} 
+              alt={`${isVie ? 'Thiết kế' : 'Design'} ${index + 1}`}
+              className="w-full h-40 object-cover"
+            />
+            <div className="p-3 text-center">
+              <span className="text-sm text-gray-600">
+                {isVie ? `Mẫu ${index + 1}` : `Sample ${index + 1}`}
+              </span>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
-    );
-  };
+    </div>
+  );
 
-  // ---------------- RENDER ----------------
   return (
-    <div className="w-full flex justify-center pt-20 px-4 bg-gradient-to-br from-amber-50 to-white min-h-screen">
-      <div className="max-w-6xl w-full">
-        {/* Article Header */}
-        <header className="text-center mb-16 pt-8">
-          <div className="inline-block px-4 py-2 bg-amber-100 text-amber-800 rounded-full text-sm font-medium mb-6">
+    <div className="min-h-screen bg-gradient-to-br from-amber-50 to-white py-8 px-4">
+      <div className="max-w-4xl mx-auto">
+        {/* Header */}
+        <header className="text-center mb-12">
+          <div className="inline-block px-4 py-2 bg-amber-100 text-amber-800 rounded-full text-sm font-medium mb-4">
             {isVie ? "Nha Khoa Thẩm Mỹ" : "Cosmetic Dentistry"}
           </div>
-          <h1 className="text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            {isVie ? "Bọc Răng Sứ Thẩm Mỹ" : "Cosmetic Dental Crowns"}
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            {isVie ? "Bọc Răng Sứ Thẩm Mỹ" : "Aesthetic Dental Crowns"}
           </h1>
-          <div className="w-24 h-1 bg-gradient-to-r from-[#d4af37] to-amber-300 mx-auto rounded-full"></div>
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            {isVie 
+              ? "Khám phá giải pháp phục hình răng toàn diện mang lại nụ cười hoàn hảo"
+              : "Discover comprehensive dental restoration solutions for your perfect smile"}
+          </p>
         </header>
 
         {/* Article Content */}
-        <article className="bg-white shadow-2xl rounded-3xl overflow-hidden mb-16">
-          <div className="p-10 md:p-14">
-            <div className="prose prose-lg max-w-none">
-              {sections.map((sec, i) => (
-                <section key={i} id={sec.id} className="mb-16 last:mb-0">
-                  {/* Section Header */}
-                  <div className="flex items-start mb-8">
-                    <div className="flex-shrink-0 w-2 h-12 bg-gradient-to-b from-[#d4af37] to-amber-300 rounded-full mr-4 mt-1"></div>
-                    <h2 className="text-3xl font-bold text-gray-900 mt-2">{sec.title}</h2>
-                  </div>
+        <article className="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div className="p-8">
+            {/* Introduction */}
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                <span className="w-3 h-8 bg-amber-400 rounded-full mr-3"></span>
+                {isVie ? "Giới Thiệu" : "Introduction"}
+              </h2>
+              <div className="bg-gray-50 rounded-xl p-6 border border-gray-100">
+                <p className="text-gray-700 leading-relaxed">
+                  {isVie
+                    ? "Bọc răng sứ là phương pháp thẩm mỹ nha khoa tiên tiến, sử dụng mão răng bằng sứ cao cấp bọc lên răng thật đã được mài nhỏ. Kỹ thuật này không chỉ khắc phục các khuyết điểm về hình dáng, màu sắc răng mà còn bảo vệ răng thật và phục hồi chức năng ăn nhai."
+                    : "Dental crowns are an advanced cosmetic dentistry procedure that uses high-quality porcelain crowns placed over prepared natural teeth. This technique not only corrects shape and color imperfections but also protects natural teeth and restores chewing function."}
+                </p>
+              </div>
+            </section>
 
-                  {/* Content */}
-                  {sec.content && (
-                    <div className="ml-6">
-                      <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100">
-                        <p className="text-gray-700 leading-8 text-lg whitespace-pre-line">
-                          {sec.content}
-                        </p>
-                      </div>
+            {/* What are Dental Crowns */}
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                <span className="w-3 h-8 bg-amber-400 rounded-full mr-3"></span>
+                {isVie ? "Bọc Răng Sứ Là Gì?" : "What Are Dental Crowns?"}
+              </h2>
+              <div className="bg-gray-50 rounded-xl p-6 border border-gray-100">
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  {isVie
+                    ? "Bọc răng sứ là quy trình phục hình thẩm mỹ trong đó một mão răng bằng sứ được chế tác tinh xảo sẽ bọc lên răng thật. Phương pháp này giúp:"
+                    : "Dental crowning is a cosmetic restoration procedure where a meticulously crafted porcelain crown covers your natural tooth. This method helps:"}
+                </p>
+                <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4">
+                  {isVie ? [
+                    "Khắc phục răng thưa, hô, móm nhẹ",
+                    "Phục hồi răng sứt mẻ, vỡ lớn",
+                    "Cải thiện răng nhiễm màu kháng trị",
+                    "Bảo vệ răng sau điều trị tủy",
+                    "Phục hình trên implant hoặc cầu răng"
+                  ] : [
+                    "Correct gaps, minor protrusions or misalignments",
+                    "Restore chipped or broken teeth",
+                    "Improve severely stained teeth",
+                    "Protect teeth after root canal treatment",
+                    "Restore dental implants or bridges"
+                  ].map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            </section>
+
+            {/* When to Get Crowns */}
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                <span className="w-3 h-8 bg-amber-400 rounded-full mr-3"></span>
+                {isVie ? "Khi Nào Cần Bọc Răng Sứ?" : "When Do You Need Dental Crowns?"}
+              </h2>
+              <div className="bg-amber-50 rounded-xl p-6 border border-amber-100">
+                <div className="grid md:grid-cols-2 gap-4">
+                  {isVie ? [
+                    "Răng nhiễm màu nặng không thể tẩy trắng",
+                    "Răng sứt mẻ, vỡ do chấn thương",
+                    "Răng thưa, hô nhẹ cần thẩm mỹ",
+                    "Răng sau điều trị tủy cần bảo vệ",
+                    "Răng sâu lớn, mất nhiều mô răng",
+                    "Phục hình thay thế răng mất"
+                  ] : [
+                    "Severely stained teeth that cannot be whitened",
+                    "Chipped or fractured teeth from trauma",
+                    "Gapped or slightly protruded teeth",
+                    "Teeth needing protection after root canal",
+                    "Teeth with large cavities or significant tissue loss",
+                    "Replacement of missing teeth"
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-start">
+                      <span className="w-2 h-2 bg-amber-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      <span className="text-gray-700">{item}</span>
                     </div>
-                  )}
+                  ))}
+                </div>
+              </div>
+            </section>
 
-                  {/* Galleries */}
-                  {sec.gallery === "forms" && (
-                    <>
-                      <div className="ml-6 mt-8 mb-6">
-                        <p className="text-gray-600 text-lg italic">
-                          {isVie 
-                            ? "Khám phá các thiết kế nụ cười đa dạng phù hợp với từng khuôn mặt"
-                            : "Explore diverse smile designs tailored to different facial features"}
-                        </p>
-                      </div>
-                      <ImageGallery images={formImages} columns={4} />
-                    </>
-                  )}
-                  
-                  {sec.gallery === "crowns" && (
-                    <>
-                      <div className="ml-6 mt-8 mb-6">
-                        <p className="text-gray-600 text-lg italic">
-                          {isVie 
-                            ? "Các loại răng sứ cao cấp với chất lượng và thẩm mỹ vượt trội"
-                            : "Premium crown types offering superior quality and aesthetics"}
-                        </p>
-                      </div>
-                      <ImageGallery images={crownImages} columns={4} />
-                    </>
-                  )}
-                </section>
-              ))}
-            </div>
+            {/* Smile Design Gallery */}
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                <span className="w-3 h-8 bg-amber-400 rounded-full mr-3"></span>
+                {isVie ? "Thiết Kế Nụ Cười" : "Smile Design"}
+              </h2>
+              <p className="text-gray-600 mb-6">
+                {isVie
+                  ? "Khám phá các mẫu thiết kế nụ cười phù hợp với từng khuôn mặt và sở thích cá nhân"
+                  : "Explore smile designs tailored to different facial features and personal preferences"}
+              </p>
+              <ImageGallery 
+                images={formImages} 
+                title={isVie ? "Các Mẫu Thiết Kế Nụ Cười" : "Smile Design Examples"} 
+              />
+            </section>
+
+            {/* Crown Types */}
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                <span className="w-3 h-8 bg-amber-400 rounded-full mr-3"></span>
+                {isVie ? "Các Loại Răng Sứ" : "Crown Types"}
+              </h2>
+              <div className="bg-gray-50 rounded-xl p-6 border border-gray-100 mb-6">
+                <div className="space-y-4">
+                  {isVie ? [
+                    { type: "Sứ Titan", warranty: "Bảo hành 2 năm" },
+                    { type: "Sứ Toàn Sứ EMIS", warranty: "Bảo hành 5 năm" },
+                    { type: "Zirconia Mỹ/Đức", warranty: "Bảo hành 10 năm" },
+                    { type: "Lava Mỹ", warranty: "Bảo hành 12-20 năm" },
+                    { type: "Orodent Italy", warranty: "Bảo hành trọn đời" },
+                    { type: "Veneer Emax", warranty: "Bảo hành 10 năm" }
+                  ] : [
+                    { type: "Titan Crowns", warranty: "2-year warranty" },
+                    { type: "EMIS All-Ceramic", warranty: "5-year warranty" },
+                    { type: "Zirconia (US/Germany)", warranty: "10-year warranty" },
+                    { type: "Lava (USA)", warranty: "12-20 years warranty" },
+                    { type: "Orodent (Italy)", warranty: "Lifetime warranty" },
+                    { type: "Emax Veneers", warranty: "10-year warranty" }
+                  ].map((item, index) => (
+                    <div key={index} className="flex justify-between items-center py-2 border-b border-gray-200 last:border-b-0">
+                      <span className="font-medium text-gray-800">{item.type}</span>
+                      <span className="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm">
+                        {item.warranty}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
+              <ImageGallery 
+                images={crownImages} 
+                title={isVie ? "Mẫu Răng Sứ Thực Tế" : "Actual Crown Examples"} 
+              />
+            </section>
+
+            {/* Benefits */}
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                <span className="w-3 h-8 bg-amber-400 rounded-full mr-3"></span>
+                {isVie ? "Lợi Ích" : "Benefits"}
+              </h2>
+              <div className="grid md:grid-cols-2 gap-6">
+                {isVie ? [
+                  "Thẩm mỹ tự nhiên như răng thật",
+                  "Độ bền cao, sử dụng lên đến 30 năm",
+                  "Bảo vệ răng thật toàn diện",
+                  "Khôi phục chức năng ăn nhai",
+                  "Dễ dàng vệ sinh và bảo quản",
+                  "Màu sắc ổn định, không bị xỉn theo thời gian"
+                ] : [
+                  "Natural aesthetics matching real teeth",
+                  "High durability, lasting up to 30 years",
+                  "Comprehensive protection for natural teeth",
+                  "Restored chewing function",
+                  "Easy cleaning and maintenance",
+                  "Stable color, resistant to staining over time"
+                ].map((benefit, index) => (
+                  <div key={index} className="bg-green-50 rounded-lg p-4 border border-green-100">
+                    <div className="flex items-center">
+                      <span className="w-6 h-6 bg-green-400 rounded-full flex items-center justify-center mr-3">
+                        <span className="text-white text-sm">✓</span>
+                      </span>
+                      <span className="text-gray-800 font-medium">{benefit}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* Why Choose Us */}
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                <span className="w-3 h-8 bg-amber-400 rounded-full mr-3"></span>
+                {isVie ? "Tại Sao Chọn Emis Dental?" : "Why Choose Emis Dental?"}
+              </h2>
+              <div className="bg-blue-50 rounded-xl p-6 border border-blue-100">
+                <div className="space-y-4">
+                  {isVie ? [
+                    "Phòng khám đạt tiêu chuẩn quốc tế với trang thiết bị hiện đại",
+                    "Đội ngũ bác sĩ giàu kinh nghiệm, chuyên môn cao",
+                    "Vật liệu chính hãng từ các thương hiệu uy tín toàn cầu",
+                    "Quy trình vô trùng tuyệt đối, an toàn tối đa",
+                    "Bảo hành minh bạch, chính sách rõ ràng",
+                    "Tư vấn tận tâm, thiết kế nụ cười cá nhân hóa"
+                  ] : [
+                    "International standard clinic with modern equipment",
+                    "Experienced, highly specialized dental team",
+                    "Genuine materials from reputable global brands",
+                    "Absolute sterilization procedures, maximum safety",
+                    "Transparent warranty, clear policies",
+                    "Dedicated consultation, personalized smile design"
+                  ].map((point, index) => (
+                    <div key={index} className="flex items-start">
+                      <span className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      <span className="text-gray-700">{point}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
           </div>
 
-          {/* Article Footer */}
-          <footer className="bg-gradient-to-r from-amber-50 to-yellow-50 border-t border-amber-200 p-10 text-center">
-            <div className="max-w-2xl mx-auto">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                {isVie ? "Bắt Đầu Hành Trình Nụ Cười Mới" : "Start Your Smile Journey Today"}
-              </h3>
-              <p className="text-gray-700 mb-6 text-lg">
-                {isVie 
-                  ? "Liên hệ với chúng tôi để được tư vấn miễn phí và thiết kế nụ cười hoàn hảo."
-                  : "Contact us for a free consultation and design your perfect smile."}
-              </p>
-              <button className="bg-gradient-to-r from-[#d4af37] to-amber-400 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                {isVie ? "Đặt Lịch Tư Vấn" : "Schedule Consultation"}
-              </button>
-            </div>
+          {/* CTA Footer */}
+          <footer className="bg-gradient-to-r from-amber-500 to-amber-400 text-white py-12 px-8 text-center">
+            <h3 className="text-2xl font-bold mb-4">
+              {isVie ? "Bắt Đầu Hành Trình Nụ Cười Mới" : "Start Your Smile Journey Today"}
+            </h3>
+            <p className="mb-6 text-amber-100 max-w-2xl mx-auto">
+              {isVie
+                ? "Liên hệ ngay với chúng tôi để được tư vấn miễn phí và thiết kế nụ cười hoàn hảo nhất cho bạn"
+                : "Contact us today for a free consultation and design the perfect smile just for you"}
+            </p>
+            <button className="bg-white text-amber-600 px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+              {isVie ? "Đặt Lịch Tư Vấn Miễn Phí" : "Schedule Free Consultation"}
+            </button>
           </footer>
         </article>
       </div>
