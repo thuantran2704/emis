@@ -39,26 +39,43 @@ export default function ImplantLandingPage({ language = "english" }) {
           />
         </div>
 
-        <div style={{ flex: "2 1 450px", padding: "0 20px" }}>
+        <div
+          style={{
+            flex: "2 1 450px",
+            padding: "0 20px",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center", // vertical center
+            alignItems: "flex-start",
+          }}
+        >
           <h1
             style={{
-              fontSize: "clamp(1.8rem, 4vw, 2.2rem)", // auto-resizes to fit
+              fontSize: "clamp(1.8rem, 4vw, 2rem)",
               color: "#f7941e",
-              marginBottom: "15px",
+              marginBottom: "20px",
               fontWeight: "800",
               lineHeight: "1.2",
               textShadow: "1px 1px 2px rgba(0,0,0,0.1)",
               fontFamily: "'Cormorant', serif",
-              whiteSpace: "nowrap", // prevent wrapping
+              whiteSpace: "nowrap",
               overflow: "hidden",
             }}
           >
             TRỒNG RĂNG IMPLANT HIOSSEN (HÀN QUỐC)
-            <br />
-            <span className="neon-flicker" style={{ fontFamily: "'Roboto Mono', monospace" }}>
-              CHỈ 8.900.000Đ
-            </span>
           </h1>
+          <span
+            className="neon-flicker"
+            style={{
+              fontFamily: "'Roboto Mono', monospace",
+              fontSize: "2.4rem", // bigger price
+              fontWeight: "900",
+              display: "block",
+              marginBottom: "15px",
+            }}
+          >
+            CHỈ 8.900.000Đ
+          </span>
           <p style={{ fontSize: "1.15rem", marginBottom: "25px", color: "#4b4b4b" }}>
             Phục hồi răng mất an toàn – thẩm mỹ tự nhiên. Nhận tư vấn miễn phí và ưu đãi đặc biệt từ Emis Dental.
           </p>
@@ -202,6 +219,7 @@ export default function ImplantLandingPage({ language = "english" }) {
               0 0 15px #fff56d,
               0 0 20px #fff56d;
             animation: glowPulse 2.5s infinite alternate;
+            display: inline-block;
           }
 
           @keyframes glowPulse {
@@ -249,4 +267,5 @@ export default function ImplantLandingPage({ language = "english" }) {
     </div>
   );
 }
+
 
