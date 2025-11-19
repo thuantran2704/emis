@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import adImg from "../pics/ads/ad1.jpg";
 import ContactForm from "../components/ContactForm";
 
-export default function ImplantLandingPage({ language = "english" }) {
+export default function ImplantLandingPage({ language }) {
   const text = {
     english: {
       heroTitle: "HIOSSEN DENTAL IMPLANT (KOREA)",
@@ -75,7 +75,8 @@ export default function ImplantLandingPage({ language = "english" }) {
     },
   };
 
-  const t = text[language];
+  // Default to English if language is not Vietnamese
+  const t = language === "vietnamese" ? text.vietnamese : text.english;
 
   return (
     <div style={{ fontFamily: "'Noto Sans', sans-serif", color: "#333" }}>
@@ -321,5 +322,3 @@ export default function ImplantLandingPage({ language = "english" }) {
     </div>
   );
 }
-
-
