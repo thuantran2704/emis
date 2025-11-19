@@ -37,7 +37,7 @@ const customerContent = {
     ],
   },
 
-  traditionalChinese: {
+  traditional: {
     customerTitle: "顧客回饋",
     services: ["隱形矯正", "兒童矯正", "美學瓷牙貼片"],
     comments: [
@@ -47,7 +47,7 @@ const customerContent = {
     ],
   },
 
-  simplifiedChinese: {
+  simplified: {
     customerTitle: "客户好评",
     services: ["隐形牙套", "儿童牙齿矫正", "美容瓷贴面"],
     comments: [
