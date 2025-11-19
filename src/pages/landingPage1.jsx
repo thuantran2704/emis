@@ -1,6 +1,6 @@
 import React from 'react';
 import img1 from '../pics/WEB/veneer/1.png';
-import img2 from '../pics/WEB/vene er/2.png';
+import img2 from '../pics/WEB/veneer/2.png';
 import img3 from '../pics/WEB/veneer/3.png';
 import img4 from '../pics/WEB/veneer/4.png';
 import img5 from '../pics/WEB/veneer/5.png';
