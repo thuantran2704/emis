@@ -5,7 +5,9 @@ import navbarContent from '../Translations/navbarContent';
 
 export default function Navbar({ language = 'english' }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isGratitudeOpen, setIsGratitudeOpen] = useState(false);
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const toggleGratitude = () => setIsGratitudeOpen(!isGratitudeOpen);
 
   const content = navbarContent[language] || navbarContent.english;
 
@@ -14,6 +16,13 @@ export default function Navbar({ language = 'english' }) {
     { name: content.about, path: '/about' },
     { name: content.services, path: '/services' },
     { name: content.equipment, path: '/equipment' },
+  ];
+
+  const gratitudeItems = [
+    { name: content.implantPromo, path: '/qc1' },
+    { name: content.porcelainPromo, path: '/qc2' },
+    { name: content.whiteningPromo, path: '/qc3' },
+    { name: content.novemberPromo, path: '/qc4' },
   ];
 
   return (
@@ -64,6 +73,45 @@ export default function Navbar({ language = 'english' }) {
                 </Link>
               ))}
 
+              {/* Gratitude Dropdown */}
+              <div className="relative">
+                <button
+                  onClick={toggleGratitude}
+                  className="relative text-[#2a3439] font-medium px-3 py-2 transition-all duration-300 group flex items-center space-x-1"
+                  style={{ fontFamily: "'Cormorant', serif" }}
+                >
+                  <span className="opacity-90 group-hover:opacity-100">
+                    {content.gratitude}
+                  </span>
+                  <svg 
+                    className={`w-4 h-4 transition-transform duration-300 ${isGratitudeOpen ? 'rotate-180' : ''}`}
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                  <span className="absolute bottom-1 left-3 right-3 h-px bg-[#2a3439] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                </button>
+
+                {/* Dropdown Menu */}
+                {isGratitudeOpen && (
+                  <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-md shadow-lg py-2 z-50 border border-gray-200">
+                    {gratitudeItems.map((item) => (
+                      <Link
+                        key={item.name}
+                        to={item.path}
+                        className="block px-4 py-3 text-[#2a3439] hover:bg-[#f8f9fa] transition-all duration-200 border-b border-gray-100 last:border-b-0"
+                        style={{ fontFamily: "'Cormorant', serif" }}
+                        onClick={() => setIsGratitudeOpen(false)}
+                      >
+                        <span className="font-medium">{item.name}</span>
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
               {/* Contact Button */}
               <Link 
                 to="/contact" 
@@ -110,6 +158,25 @@ export default function Navbar({ language = 'english' }) {
                 {item.name}
               </Link>
             ))}
+            
+            {/* Mobile Gratitude Section */}
+            <div className="border-t border-[#2a3439] border-opacity-20 pt-2 mt-2">
+              <div className="px-3 py-2 text-[#2a3439] font-medium">
+                {content.gratitude}
+              </div>
+              {gratitudeItems.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className="block px-6 py-2 text-[#2a3439] font-medium rounded-md hover:bg-[#2a3439] hover:text-[#C5AF73] transition-all duration-300 text-sm"
+                  style={{ fontFamily: "'Cormorant', serif" }}
+                  onClick={toggleMenu}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+
             <Link 
               to="/contact" 
               className="block px-3 py-2 text-[#2a3439] font-medium rounded-md hover:bg-[#2a3439] hover:text-[#C5AF73] transition-all duration-300"
@@ -121,6 +188,14 @@ export default function Navbar({ language = 'english' }) {
           </div>
         </div>
       </nav>
+
+      {/* Close dropdown when clicking outside */}
+      {isGratitudeOpen && (
+        <div 
+          className="fixed inset-0 z-40" 
+          onClick={() => setIsGratitudeOpen(false)}
+        ></div>
+      )}
     </>
   );
 }

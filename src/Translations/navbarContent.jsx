@@ -5,6 +5,11 @@ const navbarContent = {
     services: "Price List",
     contact: "Contact",
     equipment: "Equipment",
+    gratitude: "Gratitude Promotion",
+    implantPromo: "Implant Only 8.9M",
+    porcelainPromo: "Porcelain Teeth From 2M",
+    whiteningPromo: "Whitening 1.5M",
+    novemberPromo: "November Specials"
   },
   vietnamese: {
     home: "Trang Chủ",
@@ -12,6 +17,11 @@ const navbarContent = {
     services: "Bảng Giá",
     contact: "Liên Hệ",
     equipment: "Trang Thiết Bị",
+    gratitude: "Tri Ân",
+    implantPromo: "Trồng Răng Implant 8.9TR",
+    porcelainPromo: "Răng Sứ Từ 2TR",
+    whiteningPromo: "Tẩy Trắng 1.5TR",
+    novemberPromo: "Tri Ân Tháng 11"
   },
   french: {
     home: "Accueil",
@@ -19,6 +29,11 @@ const navbarContent = {
     services: "Tarifs",
     contact: "Contact",
     equipment: "Équipements",
+    gratitude: "Promotion de Reconnaissance",
+    implantPromo: "Implant à 8.9M",
+    porcelainPromo: "Couronne Porcelaine à 2M",
+    whiteningPromo: "Blanchiment 1.5M",
+    novemberPromo: "Promotions de Novembre"
   },
   simplified: {
     home: "首页",
@@ -26,6 +41,11 @@ const navbarContent = {
     services: "价目表",
     contact: "联系我们",
     equipment: "设备",
+    gratitude: "感恩回馈",
+    implantPromo: "种植牙仅890万",
+    porcelainPromo: "烤瓷牙从200万起",
+    whiteningPromo: "牙齿美白150万",
+    novemberPromo: "十一月特惠"
   },
   traditional: {
     home: "首頁",
@@ -33,6 +53,11 @@ const navbarContent = {
     services: "價目表",
     contact: "聯絡我們",
     equipment: "設備",
+    gratitude: "感恩回饋",
+    implantPromo: "植牙僅890萬",
+    porcelainPromo: "瓷牙從200萬起",
+    whiteningPromo: "牙齒美白150萬",
+    novemberPromo: "十一月特惠"
   },
   korean: {
     home: "홈",
@@ -40,6 +65,11 @@ const navbarContent = {
     services: "가격표",
     contact: "연락처",
     equipment: "장비",
+    gratitude: "감사 프로모션",
+    implantPromo: "임플란트 890만 동",
+    porcelainPromo: "도재 크라운 200만 동부터",
+    whiteningPromo: "치아 미백 150만 동",
+    novemberPromo: "11월 특별 할인"
   },
 };
 
