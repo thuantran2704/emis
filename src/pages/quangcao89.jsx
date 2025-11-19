@@ -167,7 +167,7 @@ export default function ImplantLandingPage({ language }) {
             <span
               className="neon-flicker"
               style={{
-                fontFamily: "'Noto Sans', monospace",
+                fontFamily: "'Roboto Mono', monospace",
                 fontSize: "2.2rem",
                 fontWeight: "900",
                 display: "block",
