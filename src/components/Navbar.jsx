@@ -73,7 +73,7 @@ export default function Navbar({ language = 'english' }) {
                 </Link>
               ))}
 
-              {/* Gratitude Dropdown */}
+              {/* Gratitude Dropdown Button */}
               <div className="relative">
                 <button
                   onClick={toggleGratitude}
