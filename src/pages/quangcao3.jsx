@@ -98,7 +98,7 @@ export default function TeethWhiteningLandingPage({ language }) {
   const t = language === "vietnamese" ? text.vietnamese : text.english;
 
   return (
-    <div style={{ fontFamily: "'Noto Sans', sans-serif", color: "#333", backgroundColor: "#fafafa" }}>
+    <div style={{ fontFamily: "'Noto Sans', sans-serif", color: "#222", backgroundColor: "#fafafa" }}>
       {/* Navbar placeholder */}
       <div style={{ height: "70px" }}></div>
 
@@ -110,7 +110,7 @@ export default function TeethWhiteningLandingPage({ language }) {
           flexWrap: "wrap",
           justifyContent: "space-between",
           alignItems: "center",
-          background: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+          background: "linear-gradient(135deg, #1a6fc4 0%, #00c6fb 100%)",
           padding: "50px 20px",
           borderRadius: "0 0 30px 30px",
           maxWidth: "1200px",
@@ -128,8 +128,8 @@ export default function TeethWhiteningLandingPage({ language }) {
               height: "280px",
               objectFit: "cover",
               borderRadius: "20px",
-              boxShadow: "0 10px 30px rgba(0,0,0,0.2)",
-              border: "3px solid rgba(255,255,255,0.3)",
+              boxShadow: "0 10px 30px rgba(0,0,0,0.3)",
+              border: "3px solid rgba(255,255,255,0.4)",
             }}
           />
         </div>
@@ -145,12 +145,15 @@ export default function TeethWhiteningLandingPage({ language }) {
           }}
         >
           <div style={{
-            backgroundColor: "rgba(255,255,255,0.15)",
+            backgroundColor: "rgba(0,0,0,0.3)",
             padding: "10px 20px",
             borderRadius: "30px",
             marginBottom: "15px",
             fontSize: "0.9rem",
             backdropFilter: "blur(10px)",
+            border: "1px solid rgba(255,255,255,0.2)",
+            color: "#fff",
+            fontWeight: "600"
           }}>
             ✨ LIMITED TIME OFFER
           </div>
@@ -160,8 +163,9 @@ export default function TeethWhiteningLandingPage({ language }) {
               marginBottom: "10px",
               fontWeight: "800",
               lineHeight: "1.1",
-              textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
+              textShadow: "2px 2px 6px rgba(0,0,0,0.5)",
               fontFamily: "'Cormorant', serif",
+              color: "#fff"
             }}
           >
             {t.heroTitle}
@@ -170,26 +174,28 @@ export default function TeethWhiteningLandingPage({ language }) {
             fontSize: "2.2rem",
             fontWeight: "900",
             marginBottom: "5px",
-            background: "linear-gradient(45deg, #FFFFFF, #E0F7FF)",
+            background: "linear-gradient(45deg, #FFD700, #FFF8DC)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
-            textShadow: "0 0 20px rgba(255,255,255,0.3)",
+            textShadow: "0 0 20px rgba(255,215,0,0.4)",
           }}>
             {t.heroPrice}
           </div>
           <div style={{
             fontSize: "1.2rem",
             marginBottom: "20px",
-            opacity: 0.9,
-            fontWeight: "600"
+            fontWeight: "600",
+            color: "#fff",
+            textShadow: "1px 1px 3px rgba(0,0,0,0.5)"
           }}>
             {t.heroSubtitle}
           </div>
           <p style={{ 
             fontSize: "1.1rem", 
             marginBottom: "30px", 
-            opacity: 0.9,
-            lineHeight: "1.4"
+            lineHeight: "1.4",
+            color: "#fff",
+            textShadow: "1px 1px 2px rgba(0,0,0,0.3)"
           }}>
             {t.heroDesc}
           </p>
@@ -206,9 +212,10 @@ export default function TeethWhiteningLandingPage({ language }) {
             style={{
               textAlign: "center",
               marginBottom: "30px",
-              color: "#4facfe",
+              color: "#1a6fc4",
               fontSize: "2rem",
               fontWeight: "700",
+              textShadow: "1px 1px 2px rgba(0,0,0,0.1)",
             }}
           >
             {t.offerTitle}
@@ -218,8 +225,9 @@ export default function TeethWhiteningLandingPage({ language }) {
             textAlign: "center",
             fontSize: "1.1rem",
             marginBottom: "30px",
-            color: "#555",
-            lineHeight: "1.6"
+            color: "#333",
+            lineHeight: "1.6",
+            fontWeight: "500"
           }}>
             {t.offerDesc}
           </p>
@@ -234,33 +242,36 @@ export default function TeethWhiteningLandingPage({ language }) {
           }}>
             <div style={{
               textDecoration: "line-through",
-              color: "#888",
-              fontSize: "1.3rem"
+              color: "#666",
+              fontSize: "1.3rem",
+              fontWeight: "600"
             }}>
               {t.originalPrice}
             </div>
             <div style={{
               fontSize: "2.2rem",
               fontWeight: "900",
-              color: "#4facfe",
-              textShadow: "2px 2px 8px rgba(79,172,254,0.3)"
+              color: "#1a6fc4",
+              textShadow: "2px 2px 8px rgba(26,111,196,0.3)"
             }}>
               {t.offerPrice}
             </div>
           </div>
 
           <div style={{
-            backgroundColor: "#f8f9fa",
+            backgroundColor: "#f0f8ff",
             padding: "30px",
             borderRadius: "20px",
             marginBottom: "30px",
-            border: "2px dashed #4facfe"
+            border: "2px dashed #1a6fc4",
+            boxShadow: "0 5px 15px rgba(0,0,0,0.08)"
           }}>
             <h3 style={{
-              color: "#4facfe",
+              color: "#1a6fc4",
               marginBottom: "20px",
               fontSize: "1.3rem",
-              textAlign: "center"
+              textAlign: "center",
+              fontWeight: "700"
             }}>
               {t.packageIncludes}
             </h3>
@@ -270,12 +281,16 @@ export default function TeethWhiteningLandingPage({ language }) {
                 display: "inline-block",
                 lineHeight: "1.8",
                 fontSize: "1.1rem",
-                color: "#333",
+                color: "#222",
               }}
             >
               {t.specialList.map((item, idx) => (
-                <li key={idx} style={{ marginBottom: "15px", paddingLeft: "10px" }}>
-                  <strong>🎁 {item}</strong>
+                <li key={idx} style={{ 
+                  marginBottom: "15px", 
+                  paddingLeft: "10px",
+                  fontWeight: "600"
+                }}>
+                  <strong style={{ color: "#1a6fc4" }}>🎁 {item}</strong>
                 </li>
               ))}
             </ul>
@@ -283,10 +298,15 @@ export default function TeethWhiteningLandingPage({ language }) {
 
           <div style={{
             fontSize: "0.9rem",
-            color: "#666",
+            color: "#444",
             textAlign: "center",
             fontStyle: "italic",
-            marginBottom: "30px"
+            marginBottom: "30px",
+            fontWeight: "500",
+            backgroundColor: "#fff8e1",
+            padding: "15px",
+            borderRadius: "10px",
+            border: "1px solid #ffecb3"
           }}>
             {t.note}
           </div>
@@ -300,15 +320,16 @@ export default function TeethWhiteningLandingPage({ language }) {
       </section>
 
       {/* Why Choose Us Section */}
-      <section style={{ padding: "60px 20px", backgroundColor: "#f8f9fa" }}>
+      <section style={{ padding: "60px 20px", backgroundColor: "#f0f8ff" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
           <h2
             style={{
               textAlign: "center",
               marginBottom: "20px",
-              color: "#4facfe",
+              color: "#1a6fc4",
               fontSize: "2.2rem",
               fontWeight: "700",
+              textShadow: "1px 1px 2px rgba(0,0,0,0.1)",
             }}
           >
             {t.whyChooseTitle}
@@ -318,11 +339,12 @@ export default function TeethWhiteningLandingPage({ language }) {
             textAlign: "center",
             fontSize: "1.1rem",
             marginBottom: "50px",
-            color: "#555",
+            color: "#333",
             lineHeight: "1.6",
             maxWidth: "800px",
             marginLeft: "auto",
-            marginRight: "auto"
+            marginRight: "auto",
+            fontWeight: "500"
           }}>
             {t.whyChooseDesc}
           </p>
@@ -338,22 +360,22 @@ export default function TeethWhiteningLandingPage({ language }) {
               <div
                 key={benefit.title}
                 style={{
-                  background: "linear-gradient(145deg, #ffffff, #f5f5f5)",
+                  background: "linear-gradient(145deg, #ffffff, #f8fbff)",
                   padding: "35px 25px",
                   borderRadius: "20px",
-                  boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
+                  boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
                   transition: "all 0.4s ease",
-                  border: "1px solid #f0f0f0",
+                  border: "2px solid #e3f2fd",
                   position: "relative",
                   overflow: "hidden",
                 }}
                 onMouseOver={(e) => {
                   e.currentTarget.style.transform = "translateY(-10px)";
-                  e.currentTarget.style.boxShadow = "0 20px 40px rgba(79,172,254,0.15)";
+                  e.currentTarget.style.boxShadow = "0 20px 40px rgba(26,111,196,0.2)";
                 }}
                 onMouseOut={(e) => {
                   e.currentTarget.style.transform = "translateY(0)";
-                  e.currentTarget.style.boxShadow = "0 10px 30px rgba(0,0,0,0.08)";
+                  e.currentTarget.style.boxShadow = "0 10px 30px rgba(0,0,0,0.1)";
                 }}
               >
                 <div style={{
@@ -362,26 +384,32 @@ export default function TeethWhiteningLandingPage({ language }) {
                   left: "0",
                   width: "100%",
                   height: "4px",
-                  background: "linear-gradient(90deg, #4facfe, #00f2fe)",
+                  background: "linear-gradient(90deg, #1a6fc4, #00c6fb)",
                 }}></div>
                 <div style={{
                   fontSize: "2.5rem",
                   marginBottom: "20px",
-                  color: "#4facfe"
+                  color: "#1a6fc4"
                 }}>
                   {["💎", "✨", "🦷", "🌟", "👨‍⚕️"][index]}
                 </div>
                 <h3
                   style={{
-                    color: "#4facfe",
+                    color: "#1a6fc4",
                     fontWeight: "700",
                     marginBottom: "15px",
                     fontSize: "1.3rem",
+                    textShadow: "0.5px 0.5px 1px rgba(0,0,0,0.1)",
                   }}
                 >
                   {benefit.title}
                 </h3>
-                <p style={{ color: "#555", lineHeight: "1.6", fontSize: "1rem" }}>
+                <p style={{ 
+                  color: "#444", 
+                  lineHeight: "1.6", 
+                  fontSize: "1rem",
+                  fontWeight: "500"
+                }}>
                   {benefit.desc}
                 </p>
               </div>
@@ -393,13 +421,13 @@ export default function TeethWhiteningLandingPage({ language }) {
       {/* Final CTA Section */}
       <section
         style={{
-          background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+          background: "linear-gradient(135deg, #1a6fc4 0%, #004d99 100%)",
           padding: "60px 20px",
           textAlign: "center",
           borderRadius: "30px 30px 0 0",
           margin: "40px auto 0",
           maxWidth: "1200px",
-          boxShadow: "0 -10px 30px rgba(0,0,0,0.1)",
+          boxShadow: "0 -10px 30px rgba(0,0,0,0.2)",
           color: "white",
         }}
       >
@@ -409,7 +437,8 @@ export default function TeethWhiteningLandingPage({ language }) {
               marginBottom: "20px",
               fontSize: "2.2rem",
               fontWeight: "800",
-              textShadow: "2px 2px 4px rgba(0,0,0,0.2)",
+              textShadow: "2px 2px 6px rgba(0,0,0,0.5)",
+              color: "#fff"
             }}
           >
             {t.finalCTA}
@@ -418,8 +447,10 @@ export default function TeethWhiteningLandingPage({ language }) {
           <p style={{
             fontSize: "1.2rem",
             marginBottom: "35px",
-            opacity: 0.9,
-            lineHeight: "1.5"
+            lineHeight: "1.5",
+            color: "#fff",
+            textShadow: "1px 1px 3px rgba(0,0,0,0.3)",
+            fontWeight: "500"
           }}>
             {t.finalDesc}
           </p>
@@ -437,43 +468,45 @@ export default function TeethWhiteningLandingPage({ language }) {
       <style>
         {`
           .cta-button-primary {
-            background: linear-gradient(45deg, #4facfe, #00f2fe);
-            color: white;
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            color: #222;
             padding: 16px 35px;
             font-size: 1.2rem;
             border: none;
             border-radius: 50px;
             cursor: pointer;
             font-weight: 700;
-            box-shadow: 0 10px 25px rgba(79,172,254,0.3);
+            box-shadow: 0 10px 25px rgba(255,165,0,0.4);
             transition: all 0.3s ease;
             text-decoration: none;
             display: inline-block;
+            border: 2px solid rgba(255,255,255,0.3);
           }
           .cta-button-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(79,172,254,0.4);
+            box-shadow: 0 15px 35px rgba(255,165,0,0.6);
+            background: linear-gradient(45deg, #FFA500, #FFD700);
           }
 
           .cta-button-secondary {
-            background: white;
-            color: #4facfe;
+            background: #1a6fc4;
+            color: white;
             padding: 16px 40px;
             font-size: 1.2rem;
-            border: 2px solid #4facfe;
+            border: 2px solid #1a6fc4;
             border-radius: 50px;
             cursor: pointer;
             font-weight: 700;
-            boxShadow: 0 10px 25px rgba(0,0,0,0.1);
+            boxShadow: 0 10px 25px rgba(26,111,196,0.3);
             transition: all 0.3s ease;
             text-decoration: none;
             display: inline-block;
           }
           .cta-button-secondary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(79,172,254,0.3);
-            background: #4facfe;
-            color: white;
+            box-shadow: 0 15px 35px rgba(26,111,196,0.5);
+            background: #004d99;
+            border-color: #004d99;
           }
 
           @media (max-width: 768px) {
@@ -491,6 +524,11 @@ export default function TeethWhiteningLandingPage({ language }) {
               font-size: clamp(1.5rem, 4vw, 1.8rem) !important;
               line-height: 1.2 !important;
             }
+          }
+
+          /* Additional contrast improvements */
+          li strong {
+            color: #1a6fc4 !important;
           }
         `}
       </style>

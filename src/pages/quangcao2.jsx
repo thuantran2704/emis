@@ -104,7 +104,7 @@ export default function PorcelainTeethLandingPage({ language }) {
           flexWrap: "wrap",
           justifyContent: "space-between",
           alignItems: "center",
-          background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+          background: "linear-gradient(135deg, #4a5568 0%, #2d3748 100%)",
           padding: "50px 20px",
           borderRadius: "0 0 30px 30px",
           maxWidth: "1200px",
@@ -139,12 +139,14 @@ export default function PorcelainTeethLandingPage({ language }) {
           }}
         >
           <div style={{
-            backgroundColor: "rgba(255,255,255,0.15)",
+            backgroundColor: "rgba(255,255,255,0.2)",
             padding: "10px 20px",
             borderRadius: "30px",
             marginBottom: "15px",
             fontSize: "0.9rem",
             backdropFilter: "blur(10px)",
+            color: "white",
+            fontWeight: "600",
           }}>
             🎉 LIMITED TIME OFFER
           </div>
@@ -160,6 +162,7 @@ export default function PorcelainTeethLandingPage({ language }) {
               whiteSpace: "nowrap",
               overflow: "hidden",
               textOverflow: "ellipsis",
+              color: "white",
             }}
           >
             {t.heroTitle}
@@ -178,8 +181,9 @@ export default function PorcelainTeethLandingPage({ language }) {
           <p style={{ 
             fontSize: "1.1rem", 
             marginBottom: "30px", 
-            opacity: 0.9,
-            lineHeight: "1.4"
+            opacity: 0.95,
+            lineHeight: "1.4",
+            color: "white",
           }}>
             {t.heroDesc}
           </p>
@@ -196,7 +200,7 @@ export default function PorcelainTeethLandingPage({ language }) {
             style={{
               textAlign: "center",
               marginBottom: "50px",
-              color: "#764ba2",
+              color: "#2d3748",
               fontSize: "2.2rem",
               fontWeight: "700",
               position: "relative",
@@ -206,7 +210,7 @@ export default function PorcelainTeethLandingPage({ language }) {
             <div style={{
               width: "80px",
               height: "4px",
-              background: "linear-gradient(90deg, #764ba2, #667eea)",
+              background: "linear-gradient(90deg, #4a5568, #2d3748)",
               margin: "15px auto 0",
               borderRadius: "2px"
             }}></div>
@@ -222,18 +226,18 @@ export default function PorcelainTeethLandingPage({ language }) {
               <div
                 key={benefit.title}
                 style={{
-                  background: "linear-gradient(145deg, #ffffff, #f5f5f5)",
+                  background: "linear-gradient(145deg, #ffffff, #f8f9fa)",
                   padding: "35px 25px",
                   borderRadius: "20px",
                   boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
                   transition: "all 0.4s ease",
-                  border: "1px solid #f0f0f0",
+                  border: "1px solid #e2e8f0",
                   position: "relative",
                   overflow: "hidden",
                 }}
                 onMouseOver={(e) => {
                   e.currentTarget.style.transform = "translateY(-10px)";
-                  e.currentTarget.style.boxShadow = "0 20px 40px rgba(118,75,162,0.15)";
+                  e.currentTarget.style.boxShadow = "0 20px 40px rgba(45,55,72,0.15)";
                 }}
                 onMouseOut={(e) => {
                   e.currentTarget.style.transform = "translateY(0)";
@@ -246,18 +250,18 @@ export default function PorcelainTeethLandingPage({ language }) {
                   left: "0",
                   width: "100%",
                   height: "4px",
-                  background: "linear-gradient(90deg, #667eea, #764ba2)",
+                  background: "linear-gradient(90deg, #4a5568, #2d3748)",
                 }}></div>
                 <div style={{
                   fontSize: "2.5rem",
                   marginBottom: "20px",
-                  color: "#764ba2"
+                  color: "#2d3748"
                 }}>
                   {["💎", "✨", "🦷", "🌟"][index]}
                 </div>
                 <h3
                   style={{
-                    color: "#764ba2",
+                    color: "#2d3748",
                     fontWeight: "700",
                     marginBottom: "15px",
                     fontSize: "1.3rem",
@@ -265,7 +269,7 @@ export default function PorcelainTeethLandingPage({ language }) {
                 >
                   {benefit.title}
                 </h3>
-                <p style={{ color: "#555", lineHeight: "1.6", fontSize: "1rem" }}>
+                <p style={{ color: "#4a5568", lineHeight: "1.6", fontSize: "1rem" }}>
                   {benefit.desc}
                 </p>
               </div>
@@ -281,7 +285,7 @@ export default function PorcelainTeethLandingPage({ language }) {
             style={{
               textAlign: "center",
               marginBottom: "40px",
-              color: "#764ba2",
+              color: "#2d3748",
               fontSize: "2rem",
               fontWeight: "700",
             }}
@@ -301,35 +305,37 @@ export default function PorcelainTeethLandingPage({ language }) {
                 style={{
                   display: "flex",
                   alignItems: "flex-start",
-                  padding: "15px",
+                  padding: "20px",
                   backgroundColor: "white",
                   borderRadius: "12px",
-                  boxShadow: "0 5px 15px rgba(0,0,0,0.05)",
+                  boxShadow: "0 5px 15px rgba(0,0,0,0.08)",
+                  border: "1px solid #e2e8f0",
                 }}
               >
                 <div style={{
-                  color: "#764ba2",
+                  color: "#2d3748",
                   fontSize: "1.2rem",
                   marginRight: "15px",
-                  minWidth: "25px"
+                  minWidth: "25px",
+                  fontWeight: "bold"
                 }}>✓</div>
-                <span style={{ lineHeight: "1.5" }}>{item}</span>
+                <span style={{ lineHeight: "1.5", color: "#4a5568", fontWeight: "500" }}>{item}</span>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Special Offer Section */}
+      {/* Special Offer Section - Improved Contrast */}
       <section
         style={{
-          background: "linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%)",
+          background: "linear-gradient(135deg, #d84315 0%, #bf360c 100%)",
           padding: "60px 20px",
           textAlign: "center",
           borderRadius: "30px 30px 0 0",
           margin: "40px auto 0",
           maxWidth: "1200px",
-          boxShadow: "0 -10px 30px rgba(0,0,0,0.1)",
+          boxShadow: "0 -10px 30px rgba(0,0,0,0.15)",
         }}
       >
         <div style={{ maxWidth: "800px", margin: "0 auto" }}>
@@ -339,7 +345,7 @@ export default function PorcelainTeethLandingPage({ language }) {
               marginBottom: "30px",
               fontSize: "2.5rem",
               fontWeight: "800",
-              textShadow: "2px 2px 4px rgba(0,0,0,0.2)",
+              textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
             }}
           >
             {t.specialOfferTitle}
@@ -355,8 +361,9 @@ export default function PorcelainTeethLandingPage({ language }) {
           }}>
             <div style={{
               textDecoration: "line-through",
-              color: "rgba(255,255,255,0.8)",
-              fontSize: "1.3rem"
+              color: "rgba(255,255,255,0.9)",
+              fontSize: "1.3rem",
+              fontWeight: "600"
             }}>
               {t.originalPrice}
             </div>
@@ -364,7 +371,7 @@ export default function PorcelainTeethLandingPage({ language }) {
               fontSize: "2.5rem",
               fontWeight: "900",
               color: "white",
-              textShadow: "2px 2px 8px rgba(0,0,0,0.3)"
+              textShadow: "2px 2px 8px rgba(0,0,0,0.4)"
             }}>
               {t.offerPrice}
             </div>
@@ -372,11 +379,12 @@ export default function PorcelainTeethLandingPage({ language }) {
 
           <div
             style={{
-              backgroundColor: "rgba(255,255,255,0.2)",
+              backgroundColor: "rgba(255,255,255,0.15)",
               padding: "30px",
               borderRadius: "20px",
               marginBottom: "35px",
               backdropFilter: "blur(10px)",
+              border: "1px solid rgba(255,255,255,0.2)",
             }}
           >
             <ul
@@ -386,6 +394,7 @@ export default function PorcelainTeethLandingPage({ language }) {
                 lineHeight: "1.8",
                 fontSize: "1.1rem",
                 color: "white",
+                fontWeight: "600",
               }}
             >
               {t.specialList.map((item, idx) => (
@@ -398,9 +407,10 @@ export default function PorcelainTeethLandingPage({ language }) {
 
           <div style={{
             fontSize: "1rem",
-            color: "rgba(255,255,255,0.9)",
+            color: "rgba(255,255,255,0.95)",
             marginBottom: "25px",
-            fontStyle: "italic"
+            fontStyle: "italic",
+            fontWeight: "500"
           }}>
             {language === "vietnamese" 
               ? "Lưu ý: Số lượng suất ưu đãi có hạn. Chương trình chỉ áp dụng cho khách hàng đăng ký hẹn trong tháng 11."
@@ -422,41 +432,43 @@ export default function PorcelainTeethLandingPage({ language }) {
         {`
           .cta-button-primary {
             background: linear-gradient(45deg, #FFD700, #FFA500);
-            color: #333;
+            color: #2d3748;
             padding: 16px 35px;
             font-size: 1.2rem;
             border: none;
             border-radius: 50px;
             cursor: pointer;
             font-weight: 700;
-            box-shadow: 0 10px 25px rgba(255,165,0,0.3);
+            box-shadow: 0 10px 25px rgba(255,165,0,0.4);
             transition: all 0.3s ease;
             text-decoration: none;
             display: inline-block;
           }
           .cta-button-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(255,165,0,0.4);
+            box-shadow: 0 15px 35px rgba(255,165,0,0.5);
+            color: #2d3748;
           }
 
           .cta-button-secondary {
             background: white;
-            color: #ff6b6b;
+            color: #d84315;
             padding: 16px 40px;
             font-size: 1.2rem;
             border: none;
             border-radius: 50px;
             cursor: pointer;
             font-weight: 700;
-            boxShadow: 0 10px 25px rgba(0,0,0,0.2);
+            boxShadow: 0 10px 25px rgba(0,0,0,0.3);
             transition: all 0.3s ease;
             text-decoration: none;
             display: inline-block;
           }
           .cta-button-secondary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
             background: #f8f9fa;
+            color: #d84315;
           }
 
           @media (max-width: 768px) {
