@@ -1,5 +1,4 @@
-import React from 'react';
-import ServicesSlider from "../components/ServicesSlider";
+import React, { useState, useEffect, useRef } from 'react';
 
 import img1 from '../pics/WEB/veneer/1.png';
 import img2 from '../pics/WEB/veneer/2.png';
@@ -57,8 +56,77 @@ Vật liệu sứ chính hãng – Đảm bảo độ bền & tự nhiên tối 
 
   const sliderImages = [img1, img2, img3, img4, img5, img6, img7, img8];
 
-  // Replace service cards with pure images (no text, no labels)
-  const sliderServiceObjects = sliderImages.map(() => ({}));
+  // --- Custom Image Slider Component ---
+  const ImageSlider = ({ images }) => {
+    const [cardsPerView, setCardsPerView] = useState(1);
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const sliderRef = useRef(null);
+
+    useEffect(() => {
+      const updateCardsPerView = () => {
+        const width = window.innerWidth;
+        if (width >= 1024) setCardsPerView(4);
+        else if (width >= 768) setCardsPerView(2);
+        else setCardsPerView(1);
+      };
+      updateCardsPerView();
+      window.addEventListener('resize', updateCardsPerView);
+      return () => window.removeEventListener('resize', updateCardsPerView);
+    }, []);
+
+    const nextSlide = () => setCurrentIndex((prev) => (prev + 1) % images.length);
+    const prevSlide = () => setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+
+    const getTransformValue = () => {
+      if (!sliderRef.current) return 0;
+      const slideWidth = sliderRef.current.offsetWidth / cardsPerView;
+      return -currentIndex * slideWidth;
+    };
+
+    // Duplicate images for smoother looping
+    const extendedImages = [...images, ...images, ...images];
+
+    return (
+      <div className="relative w-full overflow-hidden my-10">
+        {/* Arrows */}
+        <button
+          onClick={prevSlide}
+          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#d4af37] text-white p-2 rounded-full shadow-md hover:bg-[#c19d30] transition"
+          aria-label="Previous"
+        >
+          &#8249;
+        </button>
+        <button
+          onClick={nextSlide}
+          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#d4af37] text-white p-2 rounded-full shadow-md hover:bg-[#c19d30] transition"
+          aria-label="Next"
+        >
+          &#8250;
+        </button>
+
+        {/* Slider */}
+        <div
+          ref={sliderRef}
+          className="flex transition-transform duration-500 ease-in-out"
+          style={{ transform: `translateX(${getTransformValue()}px)` }}
+        >
+          {extendedImages.map((img, index) => (
+            <div
+              key={index}
+              className="px-2"
+              style={{ flex: `0 0 ${100 / cardsPerView}%` }}
+            >
+              <img
+                src={img}
+                alt={`Slide ${index}`}
+                className="w-full h-auto rounded-lg shadow-md object-cover"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  };
 
   return (
     <div className="w-full flex justify-center pt-20 px-4">
@@ -71,28 +139,11 @@ Vật liệu sứ chính hãng – Đảm bảo độ bền & tự nhiên tối 
         <div className="space-y-16 text-gray-800 text-[17px] leading-relaxed">
           {sections.map((sec, i) => (
             <div key={i}>
+              <h2 className="text-2xl font-bold text-gray-900 mb-3">{sec.title}</h2>
+              <p className="whitespace-pre-line mb-6">{sec.content}</p>
 
-              {/* Section Title */}
-              <h2 className="text-2xl font-bold text-gray-900 mb-3">
-                {sec.title}
-              </h2>
-
-              {/* Section Text */}
-              <p className="whitespace-pre-line mb-6">
-                {sec.content}
-              </p>
-
-              {/* Inject slider ONLY under section 3 */}
-              {i === 2 && (
-                <div className="my-10">
-                  <ServicesSlider
-                    services={sliderServiceObjects}
-                    serviceImages={sliderImages}
-                    bookNowText="" // removed button text 
-                  />
-                </div>
-              )}
-
+              {/* Custom slider under section 3 */}
+              {i === 2 && <ImageSlider images={sliderImages} />}
             </div>
           ))}
         </div>
