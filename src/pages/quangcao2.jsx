@@ -1,104 +1,98 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import adImg from "../pics/ads/ad3.jpg";
+import adImg from "../pics/ads/ad2.jpg";
 import ContactForm from "../components/ContactForm";
 
-export default function TeethWhiteningLandingPage({ language }) {
+export default function PorcelainTeethLandingPage({ language }) {
   const text = {
     english: {
-      heroTitle: "HIGH-TECH TEETH WHITENING - NOVEMBER OFFER",
-      heroPrice: "50% OFF ONLY 1,500,000 VND",
-      heroSubtitle: "Safe & Radiant Smile (Original Price: 3,000,000 VND)",
-      heroDesc: "Dreaming of a radiant white smile but concerned about costs? This November, Emis International Dentistry brings you the opportunity to 'upgrade' your smile at an unprecedented price. With just 60 minutes at our clinic, advanced whitening technology will effectively remove yellow stains and discoloration from food, tea, coffee... bringing instant confidence.",
-      heroCTA: "REGISTER FOR FREE CONSULTATION",
-      offerTitle: "🌟 SPECIAL OFFER DETAILS (November Only)",
-      offerDesc: "Experience international standard teeth whitening service at the best price:",
-      originalPrice: "Original price: 3,000,000 VND",
-      offerPrice: "SPECIAL OFFER: ONLY 1,500,000 VND",
-      packageIncludes: "🎁 The 1,500,000 VND package includes:",
+      heroTitle: "NOVEMBER OFFER: AESTHETIC PORCELAIN TEETH",
+      heroPrice: "FROM ONLY 2,000,000 VND",
+      heroDesc: "Create a confident smile with genuine porcelain teeth, optimized aesthetics at Emis Dental. Welcome November with our special 'Brilliant Smile - Welcome Thousands of Joy' program.",
+      heroCTA: "REGISTER FOR OFFER NOW",
+      benefitsTitle: "PORCELAIN TEETH - THE LEADING AESTHETIC RESTORATION SOLUTION",
+      benefits: [
+        {
+          title: "Absolute Aesthetics",
+          desc: "Natural translucent color and light reflection identical to real teeth. No gum discoloration over time like metal-ceramic teeth.",
+        },
+        {
+          title: "Safe & Biocompatible",
+          desc: "Porcelain material has high biological compatibility, completely safe for oral environment, causing no gum irritation.",
+        },
+        {
+          title: "Outstanding Durability",
+          desc: "High hardness porcelain, excellent chewing function, lasting 15-20 years or even longer with proper care.",
+        },
+        {
+          title: "Metal-Free Structure",
+          desc: "Made entirely from monolithic ceramic, no metal content, ensuring natural light transmission and gum health.",
+        },
+      ],
+      specialOfferTitle: "NOVEMBER SPECIAL OFFER",
+      originalPrice: "Original price: 4,500,000 VND",
+      offerPrice: "FROM 2,000,000 VND",
+      offerCTA: "REGISTER NOW",
       specialList: [
-        "FREE 100%: 1:1 examination and consultation with specialist dentist",
-        "FREE 100%: Scaling and polishing, comprehensive teeth surface cleaning before whitening for optimal results",
-        "01 session: High-tech teeth whitening at the clinic (60 minutes)",
+        "FREE 1:1 consultation with aesthetic dentistry specialists",
+        "FREE on-site X-ray for comprehensive oral health check",
+        "FREE scaling and polishing service when making 6+ porcelain teeth",
       ],
-      note: "Note: Promotion only applies to customers who register and successfully book appointments in November.",
-      whyChooseTitle: "WHY CHOOSE TEETH WHITENING AT EMIS DENTAL?",
-      whyChooseDesc: "Different from home methods, teeth whitening at Emis Dental ensures 3 factors: Effectiveness - Safety - Speed under the supervision of professional dentists.",
+      whyChooseTitle: "WHY CUSTOMERS CHOOSE EMIS DENTAL",
       whyChoose: [
-        {
-          title: "Modern Whitening Technology",
-          desc: "We use advanced Blue Laser light technology to activate whitening gel, helping teeth whiten quickly and evenly.",
-        },
-        {
-          title: "Absolutely Safe for Tooth Enamel",
-          desc: "Emis Dental commits to using premium Pola Office whitening gel with controlled concentration, FDA certified for oral health safety. The gel doesn't erode enamel or affect tooth structure.",
-        },
-        {
-          title: "Visible Results After 1 Session",
-          desc: "After just 60-90 minutes, your teeth can brighten by 2-4 shades (depending on original tooth condition), bringing clear aesthetic results.",
-        },
-        {
-          title: "Minimized Sensitivity",
-          desc: "The procedure follows medical standards, including gum protection and desensitizing gel application. Emis Dental uses Pola Office whitening gel (Australian origin) for maximum comfort during and after treatment.",
-        },
-        {
-          title: "Direct Doctor Performance",
-          desc: "The entire process from examination, color assessment to whitening is performed by specialist dentists, ensuring safety and desired results.",
-        },
+        "Genuine material commitment with official warranty (IDPI)",
+        "Expert dentists with 10+ years experience in smile aesthetics",
+        "Modern CAD/CAM technology for precise, comfortable treatment",
+        "Maximum tooth preservation, minimal discomfort during procedure",
       ],
-      finalCTA: "REGISTER FOR FREE CONSULTATION NOW!",
-      finalDesc: "Don't let yellow teeth diminish your confidence. Just 1,500,000 VND for a radiant smile to welcome year-end festivities. Contact Emis Dental today!",
     },
     vietnamese: {
-      heroTitle: "TẨY TRẮNG RĂNG CÔNG NGHỆ CAO - ƯU ĐÃI THÁNG 11",
-      heroPrice: "GIẢM 50% CHỈ CÒN 1.500.000Đ",
-      heroSubtitle: "Nụ Cười Trắng Sáng An Toàn (Giá Gốc 3.000.000đ)",
-      heroDesc: "Bạn mong muốn sở hữu nụ cười trắng sáng rạng rỡ nhưng còn e ngại chi phí? Trong tháng 11 này, Nha khoa Quốc tế Emis mang đến cơ hội 'nâng cấp' nụ cười với chi phí ưu đãi chưa từng có. Chỉ với 60 phút tại phòng khám, công nghệ tẩy trắng tiên tiến sẽ giúp bạn loại bỏ hiệu quả các mảng bám ố vàng, xỉn màu do thực phẩm, trà, cà phê... mang lại sự tự tin tức thì.",
-      heroCTA: "ĐĂNG KÝ TƯ VẤN MIỄN PHÍ",
-      offerTitle: "🌟 CHI TIẾT GÓI ƯU ĐÃI ĐẶC BIỆT (Chỉ trong tháng 11)",
-      offerDesc: "Tận hưởng dịch vụ tẩy trắng răng tiêu chuẩn quốc tế với mức giá tốt nhất:",
-      originalPrice: "Giá gốc: 3.000.000 VNĐ",
-      offerPrice: "GIÁ ƯU ĐÃI: CHỈ CÒN 1.500.000 VNĐ",
-      packageIncludes: "🎁 Gói ưu đãi 1.500.000 VNĐ đã bao gồm trọn gói:",
+      heroTitle: "ƯU ĐÃI THÁNG 11: RĂNG TOÀN SỨ THẨM MỸ",
+      heroPrice: "CHỈ TỪ 2.000.000Đ",
+      heroDesc: "Kiến tạo nụ cười tự tin với răng sứ chính hãng, thẩm mỹ tối ưu tại Emis Dental. Chào đón tháng 11 với chương trình 'Rạng Rỡ Nụ Cười - Đón Ngàn Niềm Vui' đặc biệt.",
+      heroCTA: "ĐĂNG KÝ NHẬN ƯU ĐÃI NGAY",
+      benefitsTitle: "RĂNG TOÀN SỨ - GIẢI PHÁP PHỤC HÌNH THẨM MỸ HÀNG ĐẦU",
+      benefits: [
+        {
+          title: "Thẩm Mỹ Tuyệt Đối",
+          desc: "Màu sắc trong, mờ và độ phản quang y hệt răng thật. Không gây đen viền nướu sau thời gian dài sử dụng.",
+        },
+        {
+          title: "An Toàn & Lành Tính",
+          desc: "Vật liệu sứ có tính tương hợp sinh học cao, hoàn toàn an toàn với khoang miệng, không gây kích ứng nướu.",
+        },
+        {
+          title: "Độ Bền Vượt Trội",
+          desc: "Độ cứng cao, chịu lực ăn nhai tốt, tuổi thọ lên đến 15-20 năm hoặc lâu hơn nếu chăm sóc tốt.",
+        },
+        {
+          title: "Cấu Trúc Không Kim Loại",
+          desc: "Chế tác hoàn toàn từ sứ nguyên khối, không chứa kim loại, đảm bảo truyền sáng tự nhiên và sức khỏe nướu.",
+        },
+      ],
+      specialOfferTitle: "ƯU ĐÃI ĐẶC BIỆT THÁNG 11",
+      originalPrice: "Giá gốc: 4.500.000 VNĐ",
+      offerPrice: "CHỈ TỪ 2.000.000 VNĐ",
+      offerCTA: "ĐĂNG KÝ NGAY",
       specialList: [
-        "MIỄN PHÍ 100%: Thăm khám và tư vấn 1:1 cùng bác sĩ chuyên khoa",
-        "MIỄN PHÍ 100%: Cạo vôi răng và đánh bóng, làm sạch bề mặt răng toàn diện trước khi tẩy trắng để đảm bảo hiệu quả tối ưu",
-        "01 liệu trình: Tẩy trắng răng công nghệ cao tại phòng khám (60 phút)",
+        "MIỄN PHÍ 100%: Thăm khám, tư vấn 1:1 cùng bác sĩ chuyên khoa thẩm mỹ",
+        "MIỄN PHÍ 100%: Chụp phim X-quang tại chỗ kiểm tra sức khỏe răng miệng",
+        "TẶNG NGAY: Dịch vụ cạo vôi răng và đánh bóng khi làm từ 6 răng sứ",
       ],
-      note: "Lưu ý: Chương trình ưu đãi chỉ áp dụng cho khách hàng đăng ký và đặt lịch hẹn thành công trong tháng 11.",
-      whyChooseTitle: "TẠI SAO NÊN CHỌN TẨY TRẮNG RĂNG TẠI EMIS DENTAL?",
-      whyChooseDesc: "Khác biệt với các phương pháp tại nhà, tẩy trắng răng tại Emis Dental đảm bảo 3 yếu tố: Hiệu Quả - An Toàn - Nhanh Chóng dưới sự giám sát của bác sĩ chuyên môn.",
+      whyChooseTitle: "TẠI SAO KHÁCH HÀNG TIN CHỌN EMIS DENTAL?",
       whyChoose: [
-        {
-          title: "Công Nghệ Tẩy Trắng Hiện Đại",
-          desc: "Chúng tôi sử dụng công nghệ đèn chiếu Blue Laser hiện đại kích hoạt thuốc tẩy trắng, giúp răng bật tone nhanh chóng và đồng đều.",
-        },
-        {
-          title: "An Toàn Tuyệt Đối Cho Men Răng",
-          desc: "Emis Dental cam kết sử dụng thuốc tẩy trắng Pola Office cao cấp, có nồng độ được kiểm soát, được FDA (Hoa Kỳ) chứng nhận an toàn cho sức khỏe răng miệng. Thuốc không gây mài mòn men răng, không ảnh hưởng đến cấu trúc răng.",
-        },
-        {
-          title: "Hiệu Quả Thấy Rõ Sau 1 Lần Hẹn",
-          desc: "Chỉ sau 60-90 phút, hàm răng của bạn có thể bật sáng từ 2 đến 4 tone (tùy thuộc vào tình trạng răng gốc), mang lại hiệu quả thẩm mỹ rõ rệt.",
-        },
-        {
-          title: "Giảm Thiểu Ê Buốt Tối Đa",
-          desc: "Quy trình được thực hiện chuẩn y khoa, bao gồm bước che nướu và bôi gel chống ê buốt, và Emis Dental sử dụng thuốc tẩy trắng răng Pola Office (Xuất xứ Úc) giúp khách hàng cảm thấy thoải mái tối đa trong và sau khi điều trị.",
-        },
-        {
-          title: "Trực Tiếp Bác Sĩ Thực Hiện",
-          desc: "Toàn bộ quá trình từ thăm khám, đánh giá màu răng đến thực hiện tẩy trắng đều do bác sĩ chuyên khoa phụ trách, đảm bảo quy trình an toàn và kết quả như ý.",
-        },
+        "Cam kết vật liệu chính hãng với bảo hành chính thức (IDPI)",
+        "Bác sĩ chuyên môn cao với 10+ năm kinh nghiệm thẩm mỹ nụ cười",
+        "Công nghệ CAD/CAM hiện đại cho điều trị chính xác, thoải mái",
+        "Bảo tồn răng tối đa, không gây ê buốt trong quá trình thực hiện",
       ],
-      finalCTA: "ĐĂNG KÝ TƯ VẤN MIỄN PHÍ NGAY!",
-      finalDesc: "Đừng để hàm răng ố vàng làm bạn mất tự tin. Chỉ 1.500.000đ cho một nụ cười rạng rỡ đón lễ hội cuối năm. Hãy liên hệ Emis Dental ngay hôm nay!",
     },
   };
 
   const t = language === "vietnamese" ? text.vietnamese : text.english;
 
   return (
-    <div style={{ fontFamily: "'Noto Sans', sans-serif", color: "#222", backgroundColor: "#fafafa" }}>
+    <div style={{ fontFamily: "'Inter', 'Be Vietnam Pro', 'Segoe UI', sans-serif", color: "#333", backgroundColor: "#fafafa" }}>
       {/* Navbar placeholder */}
       <div style={{ height: "70px" }}></div>
 
@@ -110,7 +104,7 @@ export default function TeethWhiteningLandingPage({ language }) {
           flexWrap: "wrap",
           justifyContent: "space-between",
           alignItems: "center",
-          background: "linear-gradient(135deg, #1a6fc4 0%, #00c6fb 100%)",
+          background: "linear-gradient(135deg, #4a5568 0%, #2d3748 100%)",
           padding: "50px 20px",
           borderRadius: "0 0 30px 30px",
           maxWidth: "1200px",
@@ -122,14 +116,14 @@ export default function TeethWhiteningLandingPage({ language }) {
         <div style={{ flex: "1 1 300px", textAlign: "center", marginBottom: "30px" }}>
           <img
             src={adImg}
-            alt="Teeth Whitening Promotion"
+            alt="Porcelain Teeth Promotion"
             style={{
               width: "280px",
               height: "280px",
               objectFit: "cover",
               borderRadius: "20px",
-              boxShadow: "0 10px 30px rgba(0,0,0,0.3)",
-              border: "3px solid rgba(255,255,255,0.4)",
+              boxShadow: "0 10px 30px rgba(0,0,0,0.2)",
+              border: "3px solid rgba(255,255,255,0.3)",
             }}
           />
         </div>
@@ -145,66 +139,53 @@ export default function TeethWhiteningLandingPage({ language }) {
           }}
         >
           <div style={{
-            backgroundColor: "rgba(0,0,0,0.3)",
+            backgroundColor: "rgba(255,255,255,0.2)",
             padding: "10px 20px",
             borderRadius: "30px",
             marginBottom: "15px",
             fontSize: "0.9rem",
             backdropFilter: "blur(10px)",
-            border: "1px solid rgba(255,255,255,0.2)",
-            color: "#fff",
+            color: "white",
             fontWeight: "600",
-            fontFamily: "'Noto Sans', sans-serif"
           }}>
-            ✨ {language === "vietnamese" ? "ƯU ĐÃI GIỚI HẠN" : "LIMITED TIME OFFER"}
+            🎉 LIMITED TIME OFFER
           </div>
           <h1
             style={{
               fontSize: "clamp(1.8rem, 3.5vw, 2.2rem)",
-              marginBottom: "10px",
+              marginBottom: "15px",
               fontWeight: "800",
               lineHeight: "1.1",
-              textShadow: "2px 2px 6px rgba(0,0,0,0.5)",
-              fontFamily: "'Noto Sans', sans-serif",
-              color: "#fff"
+              textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
+              fontFamily: "'Be Vietnam Pro', 'Inter', sans-serif",
+              width: "100%",
+              whiteSpace: "nowrap",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+              color: "white",
             }}
           >
             {t.heroTitle}
           </h1>
-          <div 
-            className="hero-price"
-            style={{
-              fontSize: "2.2rem",
-              fontWeight: "900",
-              marginBottom: "5px",
-              background: "linear-gradient(45deg, #FFD700, #FFF8DC)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              textShadow: "0 0 20px rgba(255,215,0,0.4)",
-              fontFamily: "'Noto Sans', sans-serif",
-              textAlign: "left",
-              width: "100%"
-            }}
-          >
-            {t.heroPrice}
-          </div>
           <div style={{
-            fontSize: "1.2rem",
-            marginBottom: "20px",
-            fontWeight: "600",
-            color: "#fff",
-            textShadow: "1px 1px 3px rgba(0,0,0,0.5)",
-            fontFamily: "'Noto Sans', sans-serif"
+            fontSize: "2.5rem",
+            fontWeight: "900",
+            marginBottom: "15px",
+            background: "linear-gradient(45deg, #FFD700, #FFEC8B)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            textShadow: "0 0 20px rgba(255,215,0,0.3)",
+            fontFamily: "'Be Vietnam Pro', 'Inter', sans-serif",
           }}>
-            {t.heroSubtitle}
+            {t.heroPrice}
           </div>
           <p style={{ 
             fontSize: "1.1rem", 
             marginBottom: "30px", 
+            opacity: 0.95,
             lineHeight: "1.4",
-            color: "#fff",
-            textShadow: "1px 1px 2px rgba(0,0,0,0.3)",
-            fontFamily: "'Noto Sans', sans-serif"
+            color: "white",
+            fontFamily: "'Inter', 'Segoe UI', sans-serif",
           }}>
             {t.heroDesc}
           </p>
@@ -214,186 +195,56 @@ export default function TeethWhiteningLandingPage({ language }) {
         </div>
       </section>
 
-      {/* Special Offer Section */}
+      {/* Benefits Section with Card Layout */}
       <section style={{ padding: "60px 20px", backgroundColor: "#fff" }}>
-        <div style={{ maxWidth: "800px", margin: "0 auto" }}>
-          <h2
-            style={{
-              textAlign: "center",
-              marginBottom: "30px",
-              color: "#1a6fc4",
-              fontSize: "2rem",
-              fontWeight: "700",
-              textShadow: "1px 1px 2px rgba(0,0,0,0.1)",
-              fontFamily: "'Noto Sans', sans-serif",
-            }}
-          >
-            {t.offerTitle}
-          </h2>
-          
-          <p style={{
-            textAlign: "center",
-            fontSize: "1.1rem",
-            marginBottom: "30px",
-            color: "#333",
-            lineHeight: "1.6",
-            fontWeight: "500",
-            fontFamily: "'Noto Sans', sans-serif",
-          }}>
-            {t.offerDesc}
-          </p>
-
-          <div style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            gap: "30px",
-            marginBottom: "40px",
-            flexWrap: "wrap"
-          }}>
-            <div style={{
-              textDecoration: "line-through",
-              color: "#666",
-              fontSize: "1.3rem",
-              fontWeight: "600",
-              fontFamily: "'Noto Sans', sans-serif",
-            }}>
-              {t.originalPrice}
-            </div>
-            <div style={{
-              fontSize: "2.2rem",
-              fontWeight: "900",
-              color: "#1a6fc4",
-              textShadow: "2px 2px 8px rgba(26,111,196,0.3)",
-              fontFamily: "'Noto Sans', sans-serif",
-            }}>
-              {t.offerPrice}
-            </div>
-          </div>
-
-          <div style={{
-            backgroundColor: "#f0f8ff",
-            padding: "30px",
-            borderRadius: "20px",
-            marginBottom: "30px",
-            border: "2px dashed #1a6fc4",
-            boxShadow: "0 5px 15px rgba(0,0,0,0.08)"
-          }}>
-            <h3 style={{
-              color: "#1a6fc4",
-              marginBottom: "20px",
-              fontSize: "1.3rem",
-              textAlign: "center",
-              fontWeight: "700",
-              fontFamily: "'Noto Sans', sans-serif",
-            }}>
-              {t.packageIncludes}
-            </h3>
-            <ul
-              style={{
-                textAlign: "left",
-                display: "inline-block",
-                lineHeight: "1.8",
-                fontSize: "1.1rem",
-                color: "#222",
-                fontFamily: "'Noto Sans', sans-serif",
-              }}
-            >
-              {t.specialList.map((item, idx) => (
-                <li key={idx} style={{ 
-                  marginBottom: "15px", 
-                  paddingLeft: "10px",
-                  fontWeight: "600"
-                }}>
-                  <strong style={{ color: "#1a6fc4" }}>🎁 {item}</strong>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div style={{
-            fontSize: "0.9rem",
-            color: "#444",
-            textAlign: "center",
-            fontStyle: "italic",
-            marginBottom: "30px",
-            fontWeight: "500",
-            backgroundColor: "#fff8e1",
-            padding: "15px",
-            borderRadius: "10px",
-            border: "1px solid #ffecb3",
-            fontFamily: "'Noto Sans', sans-serif",
-          }}>
-            {t.note}
-          </div>
-
-          <div style={{ textAlign: "center" }}>
-            <Link to="/contact" className="cta-button-secondary">
-              {t.heroCTA}
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us Section */}
-      <section style={{ padding: "60px 20px", backgroundColor: "#f0f8ff" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
           <h2
             style={{
               textAlign: "center",
-              marginBottom: "20px",
-              color: "#1a6fc4",
+              marginBottom: "50px",
+              color: "#2d3748",
               fontSize: "2.2rem",
               fontWeight: "700",
-              textShadow: "1px 1px 2px rgba(0,0,0,0.1)",
-              fontFamily: "'Noto Sans', sans-serif",
+              position: "relative",
+              fontFamily: "'Be Vietnam Pro', 'Inter', sans-serif",
             }}
           >
-            {t.whyChooseTitle}
+            {t.benefitsTitle}
+            <div style={{
+              width: "80px",
+              height: "4px",
+              background: "linear-gradient(90deg, #4a5568, #2d3748)",
+              margin: "15px auto 0",
+              borderRadius: "2px"
+            }}></div>
           </h2>
-          
-          <p style={{
-            textAlign: "center",
-            fontSize: "1.1rem",
-            marginBottom: "50px",
-            color: "#333",
-            lineHeight: "1.6",
-            maxWidth: "800px",
-            marginLeft: "auto",
-            marginRight: "auto",
-            fontWeight: "500",
-            fontFamily: "'Noto Sans', sans-serif",
-          }}>
-            {t.whyChooseDesc}
-          </p>
-
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
               gap: "30px",
             }}
           >
-            {t.whyChoose.map((benefit, index) => (
+            {t.benefits.map((benefit, index) => (
               <div
                 key={benefit.title}
                 style={{
-                  background: "linear-gradient(145deg, #ffffff, #f8fbff)",
+                  background: "linear-gradient(145deg, #ffffff, #f8f9fa)",
                   padding: "35px 25px",
                   borderRadius: "20px",
-                  boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
+                  boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
                   transition: "all 0.4s ease",
-                  border: "2px solid #e3f2fd",
+                  border: "1px solid #e2e8f0",
                   position: "relative",
                   overflow: "hidden",
                 }}
                 onMouseOver={(e) => {
                   e.currentTarget.style.transform = "translateY(-10px)";
-                  e.currentTarget.style.boxShadow = "0 20px 40px rgba(26,111,196,0.2)";
+                  e.currentTarget.style.boxShadow = "0 20px 40px rgba(45,55,72,0.15)";
                 }}
                 onMouseOut={(e) => {
                   e.currentTarget.style.transform = "translateY(0)";
-                  e.currentTarget.style.boxShadow = "0 10px 30px rgba(0,0,0,0.1)";
+                  e.currentTarget.style.boxShadow = "0 10px 30px rgba(0,0,0,0.08)";
                 }}
               >
                 <div style={{
@@ -402,33 +253,31 @@ export default function TeethWhiteningLandingPage({ language }) {
                   left: "0",
                   width: "100%",
                   height: "4px",
-                  background: "linear-gradient(90deg, #1a6fc4, #00c6fb)",
+                  background: "linear-gradient(90deg, #4a5568, #2d3748)",
                 }}></div>
                 <div style={{
                   fontSize: "2.5rem",
                   marginBottom: "20px",
-                  color: "#1a6fc4"
+                  color: "#2d3748"
                 }}>
-                  {["💎", "✨", "🦷", "🌟", "👨‍⚕️"][index]}
+                  {["💎", "✨", "🦷", "🌟"][index]}
                 </div>
                 <h3
                   style={{
-                    color: "#1a6fc4",
+                    color: "#2d3748",
                     fontWeight: "700",
                     marginBottom: "15px",
                     fontSize: "1.3rem",
-                    textShadow: "0.5px 0.5px 1px rgba(0,0,0,0.1)",
-                    fontFamily: "'Noto Sans', sans-serif",
+                    fontFamily: "'Be Vietnam Pro', 'Inter', sans-serif",
                   }}
                 >
                   {benefit.title}
                 </h3>
                 <p style={{ 
-                  color: "#444", 
+                  color: "#4a5568", 
                   lineHeight: "1.6", 
                   fontSize: "1rem",
-                  fontWeight: "500",
-                  fontFamily: "'Noto Sans', sans-serif",
+                  fontFamily: "'Inter', 'Segoe UI', sans-serif",
                 }}>
                   {benefit.desc}
                 </p>
@@ -438,47 +287,159 @@ export default function TeethWhiteningLandingPage({ language }) {
         </div>
       </section>
 
-      {/* Final CTA Section */}
+      {/* Why Choose Us Section */}
+      <section style={{ padding: "60px 20px", backgroundColor: "#f8f9fa" }}>
+        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
+          <h2
+            style={{
+              textAlign: "center",
+              marginBottom: "40px",
+              color: "#2d3748",
+              fontSize: "2rem",
+              fontWeight: "700",
+              fontFamily: "'Be Vietnam Pro', 'Inter', sans-serif",
+            }}
+          >
+            {t.whyChooseTitle}
+          </h2>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+              gap: "20px",
+            }}
+          >
+            {t.whyChoose.map((item, index) => (
+              <div
+                key={index}
+                style={{
+                  display: "flex",
+                  alignItems: "flex-start",
+                  padding: "20px",
+                  backgroundColor: "white",
+                  borderRadius: "12px",
+                  boxShadow: "0 5px 15px rgba(0,0,0,0.08)",
+                  border: "1px solid #e2e8f0",
+                }}
+              >
+                <div style={{
+                  color: "#2d3748",
+                  fontSize: "1.2rem",
+                  marginRight: "15px",
+                  minWidth: "25px",
+                  fontWeight: "bold"
+                }}>✓</div>
+                <span style={{ 
+                  lineHeight: "1.5", 
+                  color: "#4a5568", 
+                  fontWeight: "500",
+                  fontFamily: "'Inter', 'Segoe UI', sans-serif",
+                }}>{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Special Offer Section - Improved Contrast */}
       <section
         style={{
-          background: "linear-gradient(135deg, #1a6fc4 0%, #004d99 100%)",
+          background: "linear-gradient(135deg, #d84315 0%, #bf360c 100%)",
           padding: "60px 20px",
           textAlign: "center",
           borderRadius: "30px 30px 0 0",
           margin: "40px auto 0",
           maxWidth: "1200px",
-          boxShadow: "0 -10px 30px rgba(0,0,0,0.2)",
-          color: "white",
+          boxShadow: "0 -10px 30px rgba(0,0,0,0.15)",
         }}
       >
         <div style={{ maxWidth: "800px", margin: "0 auto" }}>
           <h2
             style={{
-              marginBottom: "20px",
-              fontSize: "2.2rem",
+              color: "white",
+              marginBottom: "30px",
+              fontSize: "2.5rem",
               fontWeight: "800",
-              textShadow: "2px 2px 6px rgba(0,0,0,0.5)",
-              color: "#fff",
-              fontFamily: "'Noto Sans', sans-serif",
+              textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
+              fontFamily: "'Be Vietnam Pro', 'Inter', sans-serif",
             }}
           >
-            {t.finalCTA}
+            {t.specialOfferTitle}
           </h2>
           
-          <p style={{
-            fontSize: "1.2rem",
-            marginBottom: "35px",
-            lineHeight: "1.5",
-            color: "#fff",
-            textShadow: "1px 1px 3px rgba(0,0,0,0.3)",
-            fontWeight: "500",
-            fontFamily: "'Noto Sans', sans-serif",
+          <div style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "30px",
+            marginBottom: "30px",
+            flexWrap: "wrap"
           }}>
-            {t.finalDesc}
-          </p>
+            <div style={{
+              textDecoration: "line-through",
+              color: "rgba(255,255,255,0.9)",
+              fontSize: "1.3rem",
+              fontWeight: "600",
+              fontFamily: "'Inter', 'Segoe UI', sans-serif",
+            }}>
+              {t.originalPrice}
+            </div>
+            <div style={{
+              fontSize: "2.5rem",
+              fontWeight: "900",
+              color: "white",
+              textShadow: "2px 2px 8px rgba(0,0,0,0.4)",
+              fontFamily: "'Be Vietnam Pro', 'Inter', sans-serif",
+            }}>
+              {t.offerPrice}
+            </div>
+          </div>
 
-          <Link to="/contact" className="cta-button-primary">
-            {t.heroCTA}
+          <div
+            style={{
+              backgroundColor: "rgba(255,255,255,0.15)",
+              padding: "30px",
+              borderRadius: "20px",
+              marginBottom: "35px",
+              backdropFilter: "blur(10px)",
+              border: "1px solid rgba(255,255,255,0.2)",
+            }}
+          >
+            <ul
+              style={{
+                textAlign: "left",
+                display: "inline-block",
+                lineHeight: "1.8",
+                fontSize: "1.1rem",
+                color: "white",
+                fontWeight: "600",
+                fontFamily: "'Inter', 'Segoe UI', sans-serif",
+              }}
+            >
+              {t.specialList.map((item, idx) => (
+                <li key={idx} style={{ marginBottom: "15px", paddingLeft: "10px" }}>
+                  <strong>🎁 {item}</strong>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div style={{
+            fontSize: "1rem",
+            color: "rgba(255,255,255,0.95)",
+            marginBottom: "25px",
+            fontStyle: "italic",
+            fontWeight: "500",
+            fontFamily: "'Inter', 'Segoe UI', sans-serif",
+          }}>
+            {language === "vietnamese" 
+              ? "Lưu ý: Số lượng suất ưu đãi có hạn. Chương trình chỉ áp dụng cho khách hàng đăng ký hẹn trong tháng 11."
+              : "Note: Limited number of offers. Program only applies to customers who register in November."
+            }
+          </div>
+
+          <Link to="/contact" className="cta-button-secondary">
+            {t.offerCTA}
           </Link>
         </div>
       </section>
@@ -491,7 +452,7 @@ export default function TeethWhiteningLandingPage({ language }) {
         {`
           .cta-button-primary {
             background: linear-gradient(45deg, #FFD700, #FFA500);
-            color: #222;
+            color: #2d3748;
             padding: 16px 35px;
             font-size: 1.2rem;
             border: none;
@@ -502,35 +463,34 @@ export default function TeethWhiteningLandingPage({ language }) {
             transition: all 0.3s ease;
             text-decoration: none;
             display: inline-block;
-            border: 2px solid rgba(255,255,255,0.3);
-            font-family: 'Noto Sans', sans-serif;
+            font-family: 'Be Vietnam Pro', 'Inter', sans-serif;
           }
           .cta-button-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(255,165,0,0.6);
-            background: linear-gradient(45deg, #FFA500, #FFD700);
+            box-shadow: 0 15px 35px rgba(255,165,0,0.5);
+            color: #2d3748;
           }
 
           .cta-button-secondary {
-            background: #1a6fc4;
-            color: white;
+            background: white;
+            color: #d84315;
             padding: 16px 40px;
             font-size: 1.2rem;
-            border: 2px solid #1a6fc4;
+            border: none;
             border-radius: 50px;
             cursor: pointer;
             font-weight: 700;
-            boxShadow: 0 10px 25px rgba(26,111,196,0.3);
+            boxShadow: 0 10px 25px rgba(0,0,0,0.3);
             transition: all 0.3s ease;
             text-decoration: none;
             display: inline-block;
-            font-family: 'Noto Sans', sans-serif;
+            font-family: 'Be Vietnam Pro', 'Inter', sans-serif;
           }
           .cta-button-secondary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(26,111,196,0.5);
-            background: #004d99;
-            border-color: #004d99;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+            background: #f8f9fa;
+            color: #d84315;
           }
 
           @media (max-width: 768px) {
@@ -538,34 +498,17 @@ export default function TeethWhiteningLandingPage({ language }) {
               flex-direction: column !important;
               text-align: center !important;
             }
-            
             .cta-button-primary, .cta-button-secondary {
               width: 90%;
               margin: 0 auto;
             }
             
+            /* Adjust title for mobile to prevent overflow */
             h1 {
               white-space: normal !important;
               font-size: clamp(1.5rem, 4vw, 1.8rem) !important;
               line-height: 1.2 !important;
             }
-            
-            /* Center the price on mobile */
-            .hero-price {
-              text-align: center !important;
-              width: 100% !important;
-            }
-            
-            /* Center all hero content on mobile */
-            .hero-content {
-              align-items: center !important;
-              text-align: center !important;
-            }
-          }
-
-          /* Additional contrast improvements */
-          li strong {
-            color: #1a6fc4 !important;
           }
         `}
       </style>
