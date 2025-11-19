@@ -12,8 +12,8 @@ import typesEng from "../pics/WEB/typesTeeth/eng.png";
 import hiossenImg from "../pics/hiossen.jpg";
 import osstemImg from "../pics/osstem.jpg";
 import straumannImg from "../pics/straumann.jpg";
-import etkImg from "../pics/etk.jpg";
-import biotemImg from "../pics/biotem.jpg";
+// import etkImg from "../pics/etk.jpg";
+// import biotemImg from "../pics/biotem.jpg";
 
 export default function ImplantInfo({ language }) {
   const isViet = language === "vietnamese";
@@ -24,10 +24,10 @@ export default function ImplantInfo({ language }) {
     : "Dental Implants – Full Information And Procedure";
 
   const brandData = [
-    { name: "Biotem (Hàn Quốc) 7 Năm", img: biotemImg },
+    // { name: "Biotem (Hàn Quốc) 7 Năm", img: biotemImg },
     { name: "Osstem (Hàn Quốc) 10 Năm", img: osstemImg },
     { name: "Hiossen (Mỹ) 13 Năm", img: hiossenImg },
-    { name: "ETK (Pháp) 15 Năm", img: etkImg },
+    // { name: "ETK (Pháp) 15 Năm", img: etkImg },
     { name: "Straumann (Thụy Sĩ) 20 Năm", img: straumannImg }
   ];
 
