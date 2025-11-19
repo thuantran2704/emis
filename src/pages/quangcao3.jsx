@@ -98,7 +98,7 @@ export default function TeethWhiteningLandingPage({ language }) {
   const t = language === "vietnamese" ? text.vietnamese : text.english;
 
   return (
-    <div style={{ fontFamily: "'Noto Sans', sans-serif", color: "#222", backgroundColor: "#fafafa" }}>
+    <div style={{ fontFamily: "'Inter', 'Be Vietnam Pro', 'Segoe UI', system-ui, sans-serif", color: "#222", backgroundColor: "#fafafa" }}>
       {/* Navbar placeholder */}
       <div style={{ height: "70px" }}></div>
 
@@ -164,7 +164,7 @@ export default function TeethWhiteningLandingPage({ language }) {
               fontWeight: "800",
               lineHeight: "1.1",
               textShadow: "2px 2px 6px rgba(0,0,0,0.5)",
-              fontFamily: "'Cormorant', serif",
+              fontFamily: "'Be Vietnam Pro', 'Inter', sans-serif",
               color: "#fff"
             }}
           >
@@ -467,6 +467,10 @@ export default function TeethWhiteningLandingPage({ language }) {
       {/* Custom CSS */}
       <style>
         {`
+          /* Import fonts that support Vietnamese */
+          @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap');
+          
           .cta-button-primary {
             background: linear-gradient(45deg, #FFD700, #FFA500);
             color: #222;
@@ -481,6 +485,7 @@ export default function TeethWhiteningLandingPage({ language }) {
             text-decoration: none;
             display: inline-block;
             border: 2px solid rgba(255,255,255,0.3);
+            font-family: 'Be Vietnam Pro', 'Inter', sans-serif;
           }
           .cta-button-primary:hover {
             transform: translateY(-3px);
@@ -501,6 +506,7 @@ export default function TeethWhiteningLandingPage({ language }) {
             transition: all 0.3s ease;
             text-decoration: none;
             display: inline-block;
+            font-family: 'Be Vietnam Pro', 'Inter', sans-serif;
           }
           .cta-button-secondary:hover {
             transform: translateY(-3px);

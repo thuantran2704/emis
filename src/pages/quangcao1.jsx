@@ -78,7 +78,7 @@ export default function ImplantLandingPage({ language }) {
   const t = language === "vietnamese" ? text.vietnamese : text.english;
 
   return (
-    <div style={{ fontFamily: "'Noto Sans', sans-serif", color: "#333", background: "linear-gradient(135deg, #fefaf7 0%, #f8f1e7 100%)" }}>
+    <div style={{ fontFamily: "'Inter', 'Noto Sans Vietnamese', 'Be Vietnam Pro', sans-serif", color: "#333", background: "linear-gradient(135deg, #fefaf7 0%, #f8f1e7 100%)" }}>
       {/* Navbar placeholder */}
       <div style={{ height: "70px" }}></div>
 
@@ -134,8 +134,8 @@ export default function ImplantLandingPage({ language }) {
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            alignItems: "center", // Changed from flex-start to center
-            textAlign: "center", // Added to center text content
+            alignItems: "center",
+            textAlign: "center",
           }}
         >
           <h1
@@ -144,12 +144,11 @@ export default function ImplantLandingPage({ language }) {
               color: "#d35400",
               marginBottom: "15px",
               fontWeight: "900",
-              lineHeight: "1.1",
+              lineHeight: "1.2",
               textShadow: "2px 2px 4px rgba(0,0,0,0.1)",
-              fontFamily: "'Cormorant', serif",
-              whiteSpace: "nowrap",
-              overflow: "hidden",
-              textOverflow: "ellipsis",
+              fontFamily: "'Inter', 'Be Vietnam Pro', sans-serif",
+              wordWrap: "break-word",
+              overflowWrap: "break-word",
               width: "100%",
               letterSpacing: "-0.5px",
             }}
@@ -160,7 +159,7 @@ export default function ImplantLandingPage({ language }) {
           <div style={{
             display: "flex",
             alignItems: "center",
-            justifyContent: "center", // Added to center the content
+            justifyContent: "center",
             gap: "15px",
             marginBottom: "15px",
             flexWrap: "wrap"
@@ -168,10 +167,11 @@ export default function ImplantLandingPage({ language }) {
             <span
               className="neon-flicker"
               style={{
-                fontFamily:  "'Noto Sans', sans-serif",
+                fontFamily: "'Inter', 'Be Vietnam Pro', sans-serif",
                 fontSize: "2.2rem",
                 fontWeight: "900",
                 display: "block",
+                lineHeight: "1.2",
               }}
             >
               {t.heroPrice}
@@ -193,7 +193,7 @@ export default function ImplantLandingPage({ language }) {
             fontSize: "1.15rem", 
             marginBottom: "25px", 
             color: "#4b4b4b",
-            lineHeight: "1.4",
+            lineHeight: "1.5",
             fontWeight: "500"
           }}>
             {t.heroDesc}
@@ -216,6 +216,9 @@ export default function ImplantLandingPage({ language }) {
             fontWeight: "800",
             textTransform: "uppercase",
             letterSpacing: "1px",
+            fontFamily: "'Inter', 'Be Vietnam Pro', sans-serif",
+            lineHeight: "1.3",
+            padding: "0 10px",
           }}
         >
           {t.benefitsTitle}
@@ -269,8 +272,10 @@ export default function ImplantLandingPage({ language }) {
                   marginBottom: "15px",
                   fontSize: "1.3rem",
                   display: "flex",
-                  alignItems: "center",
-                  gap: "10px"
+                  alignItems: "flex-start",
+                  gap: "10px",
+                  fontFamily: "'Inter', 'Be Vietnam Pro', sans-serif",
+                  lineHeight: "1.4",
                 }}
               >
                 <span style={{
@@ -283,13 +288,20 @@ export default function ImplantLandingPage({ language }) {
                   color: "white",
                   borderRadius: "50%",
                   fontSize: "0.9rem",
-                  fontWeight: "bold"
+                  fontWeight: "bold",
+                  flexShrink: 0,
+                  marginTop: "2px",
                 }}>
                   {index + 1}
                 </span>
                 {benefit.title}
               </h3>
-              <p style={{ color: "#555", lineHeight: "1.6", fontSize: "1rem" }}>{benefit.desc}</p>
+              <p style={{ 
+                color: "#555", 
+                lineHeight: "1.6", 
+                fontSize: "1rem",
+                fontFamily: "'Inter', 'Be Vietnam Pro', sans-serif",
+              }}>{benefit.desc}</p>
             </div>
           ))}
         </div>
@@ -324,6 +336,9 @@ export default function ImplantLandingPage({ language }) {
             fontWeight: "800",
             textTransform: "uppercase",
             letterSpacing: "1px",
+            fontFamily: "'Inter', 'Be Vietnam Pro', sans-serif",
+            lineHeight: "1.3",
+            padding: "0 10px",
           }}
         >
           {t.specialOfferTitle}
@@ -336,16 +351,24 @@ export default function ImplantLandingPage({ language }) {
           borderRadius: "15px",
           boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
           marginBottom: "30px",
-          border: "2px dashed #f7941e"
+          border: "2px dashed #f7941e",
+          maxWidth: "90%",
         }}>
-          <p style={{ fontSize: "1.1rem", marginBottom: "10px", textDecoration: "line-through", color: "#888" }}>{t.originalPrice}</p>
+          <p style={{ 
+            fontSize: "1.1rem", 
+            marginBottom: "10px", 
+            textDecoration: "line-through", 
+            color: "#888",
+            fontFamily: "'Inter', 'Be Vietnam Pro', sans-serif",
+          }}>{t.originalPrice}</p>
           <p
             style={{
               fontSize: "2rem",
               fontWeight: "bold",
               marginBottom: "10px",
               color: "#e74c3c",
-              fontFamily:  "'Noto Sans', sans-serif",
+              fontFamily: "'Inter', 'Be Vietnam Pro', sans-serif",
+              lineHeight: "1.2",
             }}
           >
             <span className="neon-flicker">{t.heroPrice}</span>
@@ -354,7 +377,8 @@ export default function ImplantLandingPage({ language }) {
             color: "#e74c3c",
             fontWeight: "700",
             fontSize: "1.1rem",
-            marginBottom: "20px"
+            marginBottom: "20px",
+            fontFamily: "'Inter', 'Be Vietnam Pro', sans-serif",
           }}>
             {language === "vietnamese" ? "TIẾT KIỆM 60%" : "SAVE 60%"}
           </p>
@@ -372,12 +396,15 @@ export default function ImplantLandingPage({ language }) {
                 marginBottom: "10px",
                 display: "flex",
                 alignItems: "flex-start",
-                gap: "10px"
+                gap: "10px",
+                fontFamily: "'Inter', 'Be Vietnam Pro', sans-serif",
               }}>
                 <span style={{
                   color: "#f7941e",
                   fontWeight: "bold",
-                  fontSize: "1.2rem"
+                  fontSize: "1.2rem",
+                  flexShrink: 0,
+                  marginTop: "2px",
                 }}>✓</span>
                 {item}
               </li>
@@ -389,6 +416,7 @@ export default function ImplantLandingPage({ language }) {
           <Link to="/contact" className="cta-button pulse-animation" style={{
             fontSize: "1.2rem",
             padding: "16px 40px",
+            fontFamily: "'Inter', 'Be Vietnam Pro', sans-serif",
           }}>
             {t.offerCTA}
           </Link>
@@ -401,6 +429,9 @@ export default function ImplantLandingPage({ language }) {
       {/* Neon Flicker & CTA CSS */}
       <style>
         {`
+          @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800;900&display=swap');
+          
           .neon-flicker {
             color: #e74c3c;
             text-shadow:
@@ -410,6 +441,7 @@ export default function ImplantLandingPage({ language }) {
               0 0 20px #ff9f43;
             animation: glowPulse 2s infinite alternate;
             display: inline-block;
+            font-family: 'Inter', 'Be Vietnam Pro', sans-serif;
           }
 
           @keyframes glowPulse {
@@ -441,7 +473,9 @@ export default function ImplantLandingPage({ language }) {
             text-decoration: none;
             display: inline-block;
             text-transform: uppercase;
-            letterSpacing: "0.5px";
+            letter-spacing: 0.5px;
+            font-family: 'Inter', 'Be Vietnam Pro', sans-serif;
+            line-height: 1.2;
           }
           
           .cta-button:hover {
@@ -466,6 +500,13 @@ export default function ImplantLandingPage({ language }) {
             }
           }
 
+          /* Ensure proper text rendering for Vietnamese characters */
+          * {
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+          }
+
           @media (max-width: 768px) {
             section {
               flex-direction: column !important;
@@ -479,6 +520,12 @@ export default function ImplantLandingPage({ language }) {
             h1 {
               font-size: 1.6rem !important;
               white-space: normal !important;
+              line-height: 1.3 !important;
+            }
+            
+            h2 {
+              font-size: 1.8rem !important;
+              line-height: 1.3 !important;
             }
           }
         `}
