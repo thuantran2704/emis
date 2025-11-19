@@ -7,6 +7,8 @@ import typesEng from "../pics/WEB/typesTeeth/eng.png";
 import hiossenImg from "../pics/hiossen.jpg";
 import osstemImg from "../pics/osstem.jpg";
 import straumannImg from "../pics/straumann.jpg";
+import etkImg from "../pics/etk.jpg";
+import biotemImg from "../pics/biotem.jpg";
 
 export default function ImplantInfo({ language }) {
   const isViet = language === "vietnamese";
@@ -32,6 +34,8 @@ export default function ImplantInfo({ language }) {
     { name: isViet ? "Osstem (Hàn Quốc) — tuổi thọ trung bình ~10 năm" : "Osstem (Korea) — approx. 10-year lifespan", img: osstemImg },
     { name: isViet ? "Hiossen (Mỹ) — tuổi thọ trung bình ~13 năm" : "Hiossen (USA) — approx. 13-year lifespan", img: hiossenImg },
     { name: isViet ? "Straumann (Thụy Sĩ) — tuổi thọ trung bình ~20 năm" : "Straumann (Switzerland) — approx. 20-year lifespan", img: straumannImg },
+     { name: isViet ? "Biotem (Hàn Quốc) — tuổi thọ trung bình ~7 năm" : "Biotem (Korea) — approx. 7-year lifespan", img: biotemImg },
+      { name: isViet ? "ETK (Pháp) — tuổi thọ trung bình ~15 năm" : "ETK (France) — approx. 15-year lifespan", img: etkImg },
   ];
 
   // ---------------- UI COMPONENT ---------------- //
