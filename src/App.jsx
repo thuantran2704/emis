@@ -39,7 +39,7 @@ export default function App() {
           <Route path="/services" element={<Services language={language} />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/equipment" element={<Equipment language={language} />} />
-          <Route path="/testing" element={<LandingPage1 />} />
+          <Route path="/testing" element={<LandingPage1 language={language}/>} />
           <Route path="/implant" element={<ImplantInfo language = {language}/>}/>
         </Routes>
         <Footer language={language}/>
