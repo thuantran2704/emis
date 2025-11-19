@@ -75,39 +75,73 @@ export default function CrownLanding({ language }) {
     }
   ];
 
-  // --- Section 5 / Smile Design Slider ---
+  // --- Section 5 / Smile Design Slider Images ---
   const formImages = language === "vie"
     ? [form1Vie, form2Vie, form3Vie, form4Vie, form5Vie, form6Vie, form7Vie, form8Vie]
     : [form1Eng, form2Eng, form3Eng, form4Eng, form5Eng, form6Eng, form7Eng, form8Eng];
 
-  // --- Section 7 / Crown Gallery ---
+  // --- Section 7 / Crown Gallery Images ---
   const crownImages = language === "vie"
     ? [crown1Vie, crown2Vie, crown3Vie, crown4Vie, crown5Vie, crown6Vie, crown7Vie, crown8Vie]
     : [crown1Eng, crown2Eng, crown3Eng, crown4Eng, crown5Eng, crown6Eng, crown7Eng, crown8Eng];
 
-  // --- Slider Component for Section 5 ---
-  const ImageSlider = ({ images }) => {
+  // --- Responsive Slider Component for Section 5 ---
+  const ImageSlider = ({ images, language }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const sliderRef = useRef(null);
+    const [visibleSlides, setVisibleSlides] = useState(4);
+
+    // Update visible slides based on screen width
+    useEffect(() => {
+      const handleResize = () => {
+        if (window.innerWidth >= 1024) setVisibleSlides(4); // large screens
+        else if (window.innerWidth >= 640) setVisibleSlides(2); // medium
+        else setVisibleSlides(1); // mobile
+      };
+
+      handleResize();
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    // Reset slider when language changes
+    useEffect(() => {
+      setCurrentIndex(0);
+    }, [language]);
 
     const nextSlide = () => setCurrentIndex((prev) => (prev + 1) % images.length);
     const prevSlide = () => setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
 
     const getTransformValue = () => {
-      if (!sliderRef.current) return 0;
-      const width = sliderRef.current.offsetWidth;
-      return -currentIndex * (width * 0.8); // show 80% per slide
+      const width = 100 / visibleSlides;
+      return -currentIndex * width;
     };
 
     return (
       <div className="relative w-full overflow-hidden my-10">
-        <button onClick={prevSlide} className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#d4af37] text-white p-2 rounded-full">&#8249;</button>
-        <button onClick={nextSlide} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#d4af37] text-white p-2 rounded-full">&#8250;</button>
+        <button
+          onClick={prevSlide}
+          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#d4af37] text-white p-2 rounded-full"
+        >
+          &#8249;
+        </button>
+        <button
+          onClick={nextSlide}
+          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#d4af37] text-white p-2 rounded-full"
+        >
+          &#8250;
+        </button>
 
-        <div ref={sliderRef} className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(${getTransformValue()}px)` }}>
+        <div
+          className="flex transition-transform duration-500 ease-in-out"
+          style={{ transform: `translateX(${getTransformValue()}%)` }}
+        >
           {images.map((img, idx) => (
-            <div key={idx} className="px-2 flex-shrink-0 w-4/5">
-              <img src={img} alt={`Slide ${idx}`} className="rounded-lg shadow-md w-full object-cover"/>
+            <div
+              key={idx}
+              className="px-2 flex-shrink-0"
+              style={{ width: `${100 / visibleSlides}%` }}
+            >
+              <img src={img} alt={`Slide ${idx}`} className="rounded-lg shadow-md w-full object-cover" />
             </div>
           ))}
         </div>
@@ -127,13 +161,18 @@ export default function CrownLanding({ language }) {
               <p className="whitespace-pre-line mb-6">{sec.content}</p>
 
               {/* Section 5 Slider */}
-              {i === 4 && <ImageSlider images={formImages} />}
+              {i === 4 && <ImageSlider images={formImages} language={language} />}
 
               {/* Section 7 Gallery */}
               {i === 6 && (
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-6">
                   {crownImages.map((img, idx) => (
-                    <img key={idx} src={img} alt={`Crown ${idx}`} className="rounded-lg shadow-md w-full object-cover"/>
+                    <img
+                      key={idx}
+                      src={img}
+                      alt={`Crown ${idx}`}
+                      className="rounded-lg shadow-md w-full object-cover"
+                    />
                   ))}
                 </div>
               )}
