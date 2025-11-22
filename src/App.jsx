@@ -13,7 +13,7 @@ import { schemaMarkup } from './components/seoMarkup';
 import Footer from './components/Footer.jsx';
 import Equipment from './pages/Equipment';
 import FloatingContactButton from './components/floatingContactButton.jsx';
-import LandingPage1 from './pages/landingPage1.jsx';
+import VeneerLanding from './pages/landingPage1.jsx';
 import PorcelainTeethLandingPage from './pages/quangcao2.jsx';
 import ImplantInfo from './pages/implantInfo.jsx';
 import ImplantLandingPage from "./pages/quangcao1.jsx";
@@ -43,7 +43,7 @@ export default function App() {
           <Route path="/about" element={<About language={language} />} />
           <Route path="/services" element={<Services language={language} />} />
           <Route path="/equipment" element={<Equipment language={language} />} />
-          <Route path="/testing" element={<LandingPage1 language={language}/>} />
+          <Route path="/testing" element={<VeneerLanding language={language}/>} />
           <Route path="/implant" element={<ImplantInfo language = {language}/>}/>
           <Route path="/qc1" element={<ImplantLandingPage language= {language}/>}/>
           <Route path="crown" element={<CrownPage language={language}/>}/>
