@@ -1,5 +1,5 @@
 import React from "react";
-import sonContent from "../data/sonContent"; // your content
+import sonContent from "../data/sonContent";
 import bs0 from "../pics/bs/bs0.png";
 import bs1 from "../pics/bs/bs1.png";
 import bs2 from "../pics/bs/bs2.png";
@@ -8,12 +8,14 @@ import bs4 from "../pics/bs/bs4.png";
 
 export default function SonPage({ language = "english" }) {
   const content = sonContent[language];
-
   const bsImages = [bs0, bs1, bs2, bs3, bs4];
 
   return (
-    <div className="min-h-screen bg-gray-50 pt-24 px-4"> {/* pt-24 leaves space for navbar */}
-      <div className="max-w-6xl mx-auto">
+    <div className="relative bg-gray-50">
+      {/* Invisible spacer to leave room for fixed navbar */}
+      <div className="h-20 md:h-24"></div>
+
+      <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <header className="text-center mb-12">
           <div className="flex justify-center flex-wrap gap-4 mb-4">
