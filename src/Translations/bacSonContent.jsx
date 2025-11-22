@@ -59,12 +59,6 @@ const sonContent = {
       title: "Choose Emis Dental - Choose Peace of Mind",
       content: "At Emis Dental, patients are treated by a team of certified implant specialists with modern equipment including 3D Conebeam CT machines, intraoral scanning systems, closed sterile rooms, and infection control procedures meeting Ministry of Health standards.",
       question: "Ready to create your dream smile with certified dentists at Emis Dental?",
-      contact: {
-        address: "62B Pham Ngoc Thach, Xuan Hoa Ward, Ho Chi Minh City",
-        phone: "0919.100.021 - 0768.117.068",
-        hotline: "0919.100.021 (Hotline/Zalo)",
-        fanpage: "https://www.facebook.com/nhakhoaquocteemis"
-      }
     }
   },
 
@@ -128,12 +122,6 @@ const sonContent = {
       title: "Chọn Emis Dental – Chọn Sự An Tâm",
       content: "Tại Emis Dental, khách hàng được điều trị bởi đội ngũ bác sĩ chuyên khoa Implant được cấp chứng chỉ hành nghề chính quy, với trang thiết bị hiện đại như máy CT Conebeam 3D, hệ thống scan trong miệng, phòng vô trùng khép kín và quy trình kiểm soát nhiễm khuẩn đạt chuẩn Bộ Y Tế.",
       question: "Bạn đã sẵn sàng để kiến tạo nụ cười mơ ước cùng bác sĩ chính quy tại Emis Dental?",
-      contact: {
-        address: "62B Phạm Ngọc Thạch, phường Xuân Hòa, thành phố Hồ Chí Minh",
-        phone: "0919.100.021 – 0768.117.068",
-        hotline: "0919.100.021 (Hotline/Zalo)",
-        fanpage: "https://www.facebook.com/nhakhoaquocteemis"
-      }
     }
   }
 };
