@@ -1,5 +1,5 @@
 import React from "react";
-import sonContent from "../data/sonContent"; // your content
+import sonContent from "../Translations/bacSonContent";
 import bs0 from "../pics/bs/bs0.png";
 import bs1 from "../pics/bs/bs1.png";
 import bs2 from "../pics/bs/bs2.png";
