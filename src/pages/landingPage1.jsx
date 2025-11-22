@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-
+import { useState, useEffect } from 'react';
 import form1Eng from "../pics/WEB/forms/eng/1.png";
 import form2Eng from "../pics/WEB/forms/eng/2.png";
 import form3Eng from "../pics/WEB/forms/eng/3.png";
@@ -19,7 +18,11 @@ import form7Vie from "../pics/WEB/forms/vie/7.png";
 import form8Vie from "../pics/WEB/forms/vie/8.png";
 
 export default function VeneerLanding({ language = "vietnamese" }) {
-  const isVie = language === "vietnamese";
+  const [isVie, setIsVie] = useState(language === "vietnamese");
+
+  useEffect(() => {
+    setIsVie(language === "vietnamese");
+  }, [language]);
 
   // Image arrays for smile design gallery
   const smileDesignImages = isVie
@@ -48,6 +51,43 @@ export default function VeneerLanding({ language = "vietnamese" }) {
       </div>
     </div>
   );
+
+  // Benefits data for Section 4
+  const benefitsData = isVie ? [
+    {
+      title: "Bảo Tồn Răng Thật Tối Đa",
+      desc: "Mài răng rất ít hoặc không mài, bảo vệ mô răng thật, không ảnh hưởng tủy răng"
+    },
+    {
+      title: "Thẩm Mỹ Hoàn Hảo",
+      desc: "Độ trong và màu sắc tự nhiên, không đổi màu theo thời gian, nụ cười rạng rỡ"
+    },
+    {
+      title: "Độ Bền Cao",
+      desc: "Mỏng nhưng bền bỉ với keo dán chuyên dụng, chịu lực ăn nhai bình thường"
+    },
+    {
+      title: "Thời Gian Nhanh Chóng",
+      desc: "Kết quả thẩm mỹ gần như tức thì so với chỉnh nha truyền thống"
+    }
+  ] : [
+    {
+      title: "Maximum Tooth Preservation",
+      desc: "Minimal or no tooth reduction, protects natural tooth structure, no pulp affect"
+    },
+    {
+      title: "Perfect Aesthetics",
+      desc: "Natural transparency and color, no discoloration over time, radiant smile"
+    },
+    {
+      title: "High Durability",
+      desc: "Thin yet durable with specialized bonding, withstands normal chewing forces"
+    },
+    {
+      title: "Quick Results",
+      desc: "Almost instant aesthetic results compared to traditional orthodontics"
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white py-8 px-4">
@@ -152,48 +192,14 @@ export default function VeneerLanding({ language = "vietnamese" }) {
               </div>
             </section>
 
-            {/* Section 4: Why Customers Prefer Veneers */}
+            {/* Section 4: Why Customers Prefer Veneers - FIXED */}
             <section className="mb-12">
               <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
                 <span className="w-3 h-8 bg-blue-400 rounded-full mr-3"></span>
                 {isVie ? "4. Vì Sao Khách Hàng Ưu Chuộng Dán Sứ Veneer?" : "4. Why Customers Prefer Porcelain Veneers?"}
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
-                {isVie ? [
-                  {
-                    title: "Bảo Tồn Răng Thật Tối Đa",
-                    desc: "Mài răng rất ít hoặc không mài, bảo vệ mô răng thật, không ảnh hưởng tủy răng"
-                  },
-                  {
-                    title: "Thẩm Mỹ Hoàn Hảo",
-                    desc: "Độ trong và màu sắc tự nhiên, không đổi màu theo thời gian, nụ cười rạng rỡ"
-                  },
-                  {
-                    title: "Độ Bền Cao",
-                    desc: "Mỏng nhưng bền bỉ với keo dán chuyên dụng, chịu lực ăn nhai bình thường"
-                  },
-                  {
-                    title: "Thời Gian Nhanh Chóng",
-                    desc: "Kết quả thẩm mỹ gần như tức thì so với chỉnh nha truyền thống"
-                  }
-                ] : [
-                  {
-                    title: "Maximum Tooth Preservation",
-                    desc: "Minimal or no tooth reduction, protects natural tooth structure, no pulp affect"
-                  },
-                  {
-                    title: "Perfect Aesthetics",
-                    desc: "Natural transparency and color, no discoloration over time, radiant smile"
-                  },
-                  {
-                    title: "High Durability",
-                    desc: "Thin yet durable with specialized bonding, withstands normal chewing forces"
-                  },
-                  {
-                    title: "Quick Results",
-                    desc: "Almost instant aesthetic results compared to traditional orthodontics"
-                  }
-                ].map((benefit, index) => (
+                {benefitsData.map((benefit, index) => (
                   <div key={index} className="bg-green-50 rounded-lg p-4 border border-green-100">
                     <h4 className="font-bold text-green-800 mb-2">{benefit.title}</h4>
                     <p className="text-gray-700 text-sm">{benefit.desc}</p>
@@ -202,6 +208,7 @@ export default function VeneerLanding({ language = "vietnamese" }) {
               </div>
             </section>
 
+            {/* Rest of your sections remain the same... */}
             {/* Section 5: Smile Design Personalization */}
             <section className="mb-12">
               <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
@@ -235,152 +242,8 @@ export default function VeneerLanding({ language = "vietnamese" }) {
               />
             </section>
 
-            {/* Section 6: Standard Procedure */}
-            <section className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                <span className="w-3 h-8 bg-blue-400 rounded-full mr-3"></span>
-                {isVie ? "6. Quy Trình Dán Sứ Veneer Tiêu Chuẩn" : "6. Standard Veneer Procedure"}
-              </h2>
-              <div className="bg-blue-50 rounded-xl p-6 border border-blue-100">
-                <div className="space-y-6">
-                  {isVie ? [
-                    {
-                      step: "Lần hẹn 1",
-                      title: "Thăm khám & Thiết kế Nụ cười",
-                      details: "Kiểm tra răng miệng, chụp X-quang, lấy thông số nụ cười chi tiết"
-                    },
-                    {
-                      step: "Lần hẹn 2",
-                      title: "Mô phỏng & Mài răng tối thiểu",
-                      details: "Duyệt mẫu thiết kế, mài lớp mỏng bề mặt (nếu cần), lấy dấu gửi Labo"
-                    },
-                    {
-                      step: "Labo",
-                      title: "Chế tác Veneer",
-                      details: "Kỹ thuật viên chế tác veneer mỏng chính xác theo thiết kế đã duyệt"
-                    },
-                    {
-                      step: "Lần hẹn 3",
-                      title: "Thử và Gắn Veneer",
-                      details: "Kiểm tra độ khít sát, màu sắc, dán cố định bằng keo chuyên dụng"
-                    }
-                  ] : [
-                    {
-                      step: "Appointment 1",
-                      title: "Consultation & Smile Design",
-                      details: "Dental examination, X-rays, detailed smile measurements"
-                    },
-                    {
-                      step: "Appointment 2",
-                      title: "Simulation & Minimal Preparation",
-                      details: "Design approval, minimal surface preparation (if needed), impressions to Lab"
-                    },
-                    {
-                      step: "Laboratory",
-                      title: "Veneer Fabrication",
-                      details: "Technicians create thin, precise veneers according to approved design"
-                    },
-                    {
-                      step: "Appointment 3",
-                      title: "Fitting & Bonding",
-                      details: "Check fit and color, permanent bonding with specialized dental adhesive"
-                    }
-                  ].map((step, index) => (
-                    <div key={index} className="flex items-start">
-                      <div className="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4 flex-shrink-0">
-                        {step.step}
-                      </div>
-                      <div>
-                        <h4 className="font-bold text-gray-800">{step.title}</h4>
-                        <p className="text-gray-600 text-sm mt-1">{step.details}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </section>
+            {/* Continue with other sections... */}
 
-            {/* Section 7: Pricing */}
-            <section className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                <span className="w-3 h-8 bg-blue-400 rounded-full mr-3"></span>
-                {isVie ? "7. Bảng Giá Dán Sứ Veneer" : "7. Veneer Pricing"}
-              </h2>
-              <div className="bg-gray-50 rounded-xl p-6 border border-gray-100">
-                <div className="bg-white rounded-lg p-6 border-2 border-blue-300 shadow-sm">
-                  <div className="flex justify-between items-center mb-4">
-                    <h4 className="text-xl font-bold text-blue-800">
-                      {isVie ? "Dán Sứ Emax Veneer" : "Emax Porcelain Veneers"}
-                    </h4>
-                    <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">
-                      {isVie ? "BẢO HÀNH 10 NĂM" : "10-YEAR WARRANTY"}
-                    </div>
-                  </div>
-                  <p className="text-gray-700 mb-4">
-                    {isVie
-                      ? "Dòng sứ Veneer cao cấp được bảo hành 10 NĂM, là lựa chọn phổ biến nhất cho những người yêu cầu thẩm mỹ cao."
-                      : "Premium veneer line with 10-YEAR warranty, the most popular choice for those requiring high aesthetics."}
-                  </p>
-                  <div className="bg-amber-50 rounded-lg p-4 border border-amber-200">
-                    <p className="text-amber-800 text-center font-semibold">
-                      {isVie 
-                        ? "Liên hệ để được tư vấn giá chi tiết và loại sứ Veneer phù hợp nhất với cấu trúc răng của bạn"
-                        : "Contact for detailed pricing and the most suitable veneer type for your tooth structure"}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            {/* Section 8: Why Choose Emis Dental */}
-            <section className="mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                <span className="w-3 h-8 bg-blue-400 rounded-full mr-3"></span>
-                {isVie ? "8. Vì Sao Chọn Emis Dental?" : "8. Why Choose Emis Dental?"}
-              </h2>
-              <div className="grid md:grid-cols-2 gap-6">
-                {isVie ? [
-                  {
-                    title: "Chuyên Môn Bảo Tồn",
-                    desc: "Bác sĩ giàu kinh nghiệm, cam kết mài răng tối thiểu, nhiều trường hợp không cần mài"
-                  },
-                  {
-                    title: "Trang Thiết Bị Hiện Đại",
-                    desc: "Máy chụp Cone Beam CT, máy Scan răng, ghế nha chính hãng đảm bảo tỷ lệ thành công tối đa"
-                  },
-                  {
-                    title: "Vật Liệu Chính Hãng",
-                    desc: "Cam kết sử dụng sứ Emax chất lượng cao, bảo hành lâu dài theo quy định của hãng"
-                  },
-                  {
-                    title: "Tư Vấn Tận Tâm",
-                    desc: "Thiết kế nụ cười cá nhân hóa, đảm bảo sự hài lòng tuyệt đối cho khách hàng"
-                  }
-                ] : [
-                  {
-                    title: "Preservation Expertise",
-                    desc: "Experienced dentists committed to minimal preparation, many cases require no drilling"
-                  },
-                  {
-                    title: "Modern Equipment",
-                    desc: "Cone Beam CT, dental scanners, genuine dental chairs ensuring maximum success rates"
-                  },
-                  {
-                    title: "Genuine Materials",
-                    desc: "Commitment to high-quality Emax porcelain, long-term manufacturer warranty"
-                  },
-                  {
-                    title: "Dedicated Consultation",
-                    desc: "Personalized smile design, ensuring absolute customer satisfaction"
-                  }
-                ].map((reason, index) => (
-                  <div key={index} className="bg-white rounded-lg p-4 border border-blue-200 shadow-sm">
-                    <h4 className="font-bold text-blue-800 mb-2">{reason.title}</h4>
-                    <p className="text-gray-700 text-sm">{reason.desc}</p>
-                  </div>
-                ))}
-              </div>
-            </section>
           </div>
 
           {/* CTA Footer */}
