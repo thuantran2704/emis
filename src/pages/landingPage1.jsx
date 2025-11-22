@@ -16,7 +16,7 @@ import form6Vie from "../pics/WEB/forms/vie/6.png";
 import form7Vie from "../pics/WEB/forms/vie/7.png";
 import form8Vie from "../pics/WEB/forms/vie/8.png";
 
-export default function VeneerLanding({ language = "vietnamese" }) {
+export default function VeneerLanding   ({ language = "vietnamese" }) {
   const isVie = language === "vietnamese";
 
   // Image arrays for smile design gallery
