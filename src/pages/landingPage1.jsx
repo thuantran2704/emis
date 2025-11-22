@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+
 import form1Eng from "../pics/WEB/forms/eng/1.png";
 import form2Eng from "../pics/WEB/forms/eng/2.png";
 import form3Eng from "../pics/WEB/forms/eng/3.png";
@@ -17,7 +19,7 @@ import form7Vie from "../pics/WEB/forms/vie/7.png";
 import form8Vie from "../pics/WEB/forms/vie/8.png";
 
 export default function VeneerLanding({ language = "vietnamese" }) {
-  const [isVie, setIsVie] = useState(language === "vietnamese");
+  const isVie = language === "vietnamese";
 
   // Image arrays for smile design gallery
   const smileDesignImages = isVie
