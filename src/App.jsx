@@ -19,7 +19,7 @@ import ImplantInfo from './pages/implantInfo.jsx';
 import ImplantLandingPage from "./pages/quangcao1.jsx";
 import TeethWhiteningLandingPage from './pages/quangcao3.jsx';
 import NovemberSpecialLandingPage from './pages/quangcao4.jsx';
-import CrownPage from './pages/bocRang.jsx';
+import CrownLanding from './pages/bocRang.jsx';
 export default function App() {
   const language = useSelector((state) => state.language.language);
   const dispatch = useDispatch();
@@ -46,7 +46,7 @@ export default function App() {
           <Route path="/testing" element={<VeneerLanding language={language}/>} />
           <Route path="/implant" element={<ImplantInfo language = {language}/>}/>
           <Route path="/qc1" element={<ImplantLandingPage language= {language}/>}/>
-          <Route path="crown" element={<CrownPage language={language}/>}/>
+          <Route path="/crown" element={<CrownLanding language={language}/>}/>
           <Route path="/qc2" element={<PorcelainTeethLandingPage language={language}/>}/>
           <Route path="/qc3" element={<TeethWhiteningLandingPage language={language} />} />
           <Route path="/qc4" element={<NovemberSpecialLandingPage language={language} />} />
