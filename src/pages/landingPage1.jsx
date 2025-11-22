@@ -1,6 +1,4 @@
-import React from "react";
 
-// Import images for smile design gallery
 import form1Eng from "../pics/WEB/forms/eng/1.png";
 import form2Eng from "../pics/WEB/forms/eng/2.png";
 import form3Eng from "../pics/WEB/forms/eng/3.png";
@@ -20,7 +18,12 @@ import form7Vie from "../pics/WEB/forms/vie/7.png";
 import form8Vie from "../pics/WEB/forms/vie/8.png";
 
 export default function VeneerLanding({ language }) {
-  const isVie = language === "vietnamese";
+  const [isVie, setIsVie] = React.useState(false);
+
+  React.useEffect(() => {
+    setIsVie(language?.toLowerCase() === "vietnamese");
+  }, [language]);
+
 
   // Image arrays for smile design gallery
   const smileDesignImages = isVie
