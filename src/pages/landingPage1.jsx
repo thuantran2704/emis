@@ -16,36 +16,36 @@ import form6Vie from "../pics/WEB/forms/vie/6.png";
 import form7Vie from "../pics/WEB/forms/vie/7.png";
 import form8Vie from "../pics/WEB/forms/vie/8.png";
 
-export default function VeneerLanding   ({ language = "vietnamese" }) {
-  const isVie = language === "vietnamese";
+export default function VeneerLanding({ language = "vietnamese" }) {
+  const [isVie, setIsVie] = useState(language === "vietnamese");
 
   // Image arrays for smile design gallery
-  // const smileDesignImages = isVie
-  //   ? [form1Vie, form2Vie, form3Vie, form4Vie, form5Vie, form6Vie, form7Vie, form8Vie]
-  //   : [form1Eng, form2Eng, form3Eng, form4Eng, form5Eng, form6Eng, form7Eng, form8Eng];
+  const smileDesignImages = isVie
+    ? [form1Vie, form2Vie, form3Vie, form4Vie, form5Vie, form6Vie, form7Vie, form8Vie]
+    : [form1Eng, form2Eng, form3Eng, form4Eng, form5Eng, form6Eng, form7Eng, form8Eng];
 
-  // // Gallery Component
-  // const ImageGallery = ({ images, title }) => (
-  //   <div className="my-8">
-  //     <h3 className="text-xl font-semibold text-gray-800 mb-4 text-center">{title}</h3>
-  //     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-  //       {images.map((img, index) => (
-  //         <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow duration-300">
-  //           <img 
-  //             src={img} 
-  //             alt={`${isVie ? 'Thiết kế' : 'Design'} ${index + 1}`}
-  //             className="w-full h-40 object-cover hover:scale-105 transition-transform duration-300"
-  //           />
-  //           <div className="p-3 text-center">
-  //             <span className="text-sm text-gray-600">
-  //               {isVie ? `Mẫu ${index + 1}` : `Sample ${index + 1}`}
-  //             </span>
-  //           </div>
-  //         </div>
-  //       ))}
-  //     </div>
-  //   </div>
-  // );
+  // Gallery Component
+  const ImageGallery = ({ images, title }) => (
+    <div className="my-8">
+      <h3 className="text-xl font-semibold text-gray-800 mb-4 text-center">{title}</h3>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {images.map((img, index) => (
+          <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+            <img 
+              src={img} 
+              alt={`${isVie ? 'Thiết kế' : 'Design'} ${index + 1}`}
+              className="w-full h-40 object-cover hover:scale-105 transition-transform duration-300"
+            />
+            <div className="p-3 text-center">
+              <span className="text-sm text-gray-600">
+                {isVie ? `Mẫu ${index + 1}` : `Sample ${index + 1}`}
+              </span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white py-8 px-4">
@@ -227,10 +227,10 @@ export default function VeneerLanding   ({ language = "vietnamese" }) {
                 </div>
               </div>
               
-              {/* <ImageGallery 
+              <ImageGallery 
                 images={smileDesignImages} 
                 title={isVie ? "Các Mẫu Thiết Kế Nụ Cười" : "Smile Design Examples"} 
-              /> */}
+              />
             </section>
 
             {/* Section 6: Standard Procedure */}
