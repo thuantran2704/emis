@@ -18,12 +18,7 @@ import form7Vie from "../pics/WEB/forms/vie/7.png";
 import form8Vie from "../pics/WEB/forms/vie/8.png";
 
 export default function VeneerLanding({ language }) {
-  const [isVie, setIsVie] = React.useState(false);
-
-  React.useEffect(() => {
-    setIsVie(language?.toLowerCase() === "vietnamese");
-  }, [language]);
-
+  const isVie = language === "vietnamese";
 
   // Image arrays for smile design gallery
   const smileDesignImages = isVie
