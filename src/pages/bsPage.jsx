@@ -1,5 +1,5 @@
 import React from "react";
-import sonContent from "../Translations/bacSonContent";
+import sonContent from "../data/sonContent"; // your content
 import bs0 from "../pics/bs/bs0.png";
 import bs1 from "../pics/bs/bs1.png";
 import bs2 from "../pics/bs/bs2.png";
@@ -12,7 +12,7 @@ export default function SonPage({ language = "english" }) {
   const bsImages = [bs0, bs1, bs2, bs3, bs4];
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8 px-4">
+    <div className="min-h-screen bg-gray-50 pt-24 px-4"> {/* pt-24 leaves space for navbar */}
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <header className="text-center mb-12">
