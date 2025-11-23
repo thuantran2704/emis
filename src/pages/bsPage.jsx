@@ -1,6 +1,5 @@
-import React from 'react';
 import { useSelector } from 'react-redux';
-import sonContent from '../Translations/sonContent';
+import sonContent from '../Translations/bacSonContent';
 
 import bs0 from '../pics/bs/bs0.jpg';
 import bs1 from '../pics/bs/bs1.jpg';
