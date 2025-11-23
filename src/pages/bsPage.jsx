@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux'; // Assuming language comes from Redux
-import sonContent from '../Translations/bacSonContent';
+import sonContent from '../Translations/sonContent';
 import bs0 from '../pics/bs/bs0.png';
 import bs1 from '../pics/bs/bs1.png';
 import bs2 from '../pics/bs/bs2.png';
