@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Papa from "papaparse";
-
+import { useSelector } from 'react-redux';
 /**
  * Robust Services component:
  * - Tries multiple filenames for each language (no more brittle filenames)
@@ -9,7 +9,8 @@ import Papa from "papaparse";
  * - Keeps search, nice table layout, and thick borders
  */
 
-export default function Services({ language }) {
+export default function Services() {
+  const language = useSelector((state) => state.language.language);
   const [services, setServices] = useState([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");

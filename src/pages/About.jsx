@@ -6,8 +6,9 @@ import patient2 from "../pics/patient2.jpg";
 import seal from "../pics/sealer.jpg";
 import phongkham from "../pics/phongkham.jpg";
 import reception from "../pics/reception.jpg";
-
-const About = ({ language }) => {
+import { useSelector } from 'react-redux';
+const About = () => {
+  const language = useSelector((state) => state.language.language);
   const content = aboutContent[language];
 
   return (

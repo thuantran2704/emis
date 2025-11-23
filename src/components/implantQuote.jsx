@@ -1,6 +1,7 @@
 import { implantContent } from "../Translations/implantContent";
-
-export default function ImplantQuote({ language = "english" }) {
+import { useSelector } from 'react-redux';
+export default function ImplantQuote() {
+  const language = useSelector((state) => state.language.language);
   const { banner } = implantContent[language];
 
   return (

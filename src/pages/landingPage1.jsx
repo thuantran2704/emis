@@ -16,8 +16,9 @@ import form5Vie from "../pics/WEB/forms/vie/5.png";
 import form6Vie from "../pics/WEB/forms/vie/6.png";
 import form7Vie from "../pics/WEB/forms/vie/7.png";
 import form8Vie from "../pics/WEB/forms/vie/8.png";
-
-export default function VeneerLanding({ language = "vietnamese" }) {
+import { useSelector } from 'react-redux';
+export default function VeneerLanding() {
+  const language = useSelector((state) => state.language.language);
   const [isVie, setIsVie] = useState(language === "vietnamese");
 
   useEffect(() => {

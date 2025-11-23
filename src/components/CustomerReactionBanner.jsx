@@ -1,7 +1,7 @@
-import React from "react";
 import customerContent from "../Translations/customerContent";
-
-export default function CustomerReactionsBanner({ language }) {
+import { useSelector } from 'react-redux';
+export default function CustomerReactionsBanner() {
+  const language = useSelector((state) => state.language.language);
   const content = customerContent[language] || customerContent.vietnamese;
 
   // Map testimonials directly from your content file

@@ -38,7 +38,10 @@ import crown6Vie from "../pics/WEB/veneer/vie/6.png";
 import crown7Vie from "../pics/WEB/veneer/vie/7.png";
 import crown8Vie from "../pics/WEB/veneer/vie/8.png";
 
-export default function CrownLanding({ language }) {
+import { useSelector } from 'react-redux';
+
+export default function CrownLanding() {
+  const language = useSelector((state) => state.language.language);
   // --- Sections Content (Using Full Text Provided) ---
   const sections = [
     {
@@ -177,7 +180,7 @@ Bước 6: Gắn Sứ Chính Thức: Kiểm tra và gắn sứ cố định vĩn
               <p className="whitespace-pre-line mb-6">{sec.content}</p>
 
               {/* Section 5 Slider */}
-              {i === 4 && <ImageSlider images={formImages} language={language} />}
+              {i === 4 && <ImageSlider images={formImages}/>}
 
               {/* Section 7 Gallery */}
               {i === 6 && (

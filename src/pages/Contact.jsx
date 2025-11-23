@@ -6,8 +6,9 @@ import zaloIcon from '../pics/zalo.jpg';
 import Alert from '../components/alert';
 import contactContent from '../Translations/contactContent';
 import ReCAPTCHA from "react-google-recaptcha"; // Add this import
-
-export default function Contact({ language }) {
+import { useSelector } from 'react-redux';
+export default function Contact() {
+  const language = useSelector((state) => state.language.language);
   const content = contactContent[language] || contactContent.english;
   const [recaptchaToken, setRecaptchaToken] = useState(null);
 

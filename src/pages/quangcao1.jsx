@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import adImg from "../pics/ads/ad1.jpg";
 import ContactForm from "../components/ContactForm";
-
-export default function ImplantLandingPage({ language }) {
+import { useSelector } from 'react-redux';
+export default function ImplantLandingPage() {
+  const language = useSelector((state) => state.language.language);
   const text = {
     english: {
       heroTitle: "HIOSSEN DENTAL IMPLANT (KOREA)",
@@ -424,7 +425,7 @@ export default function ImplantLandingPage({ language }) {
       </section>
 
       {/* Contact Form */}
-      <ContactForm language={language} />
+      <ContactForm/>
 
       {/* Neon Flicker & CTA CSS */}
       <style>

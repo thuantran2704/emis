@@ -2,8 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import adImg from "../pics/ads/ad3.jpg";
 import ContactForm from "../components/ContactForm";
-
-export default function TeethWhiteningLandingPage({ language }) {
+import { useSelector } from 'react-redux';
+export default function TeethWhiteningLandingPage() {
+  const language = useSelector((state) => state.language.language);
   const text = {
     english: {
       heroTitle: "HIGH-TECH TEETH WHITENING - NOVEMBER OFFER",
@@ -462,7 +463,7 @@ export default function TeethWhiteningLandingPage({ language }) {
       </section>
 
       {/* Contact Form */}
-      <ContactForm language={language} />
+      <ContactForm/>
 
       {/* Custom CSS */}
       <style>

@@ -2,8 +2,9 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../pics/logo.jpg';
 import navbarContent from '../Translations/navbarContent';
-
-export default function Navbar({ language = 'english' }) {
+import { useSelector } from 'react-redux';
+export default function Navbar() {
+  const language = useSelector((state) => state.language.language);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isGratitudeOpen, setIsGratitudeOpen] = useState(false);
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);

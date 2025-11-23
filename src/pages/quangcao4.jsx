@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 import adImg4 from "../pics/ads/ad4.jpg";
 import adImg5 from "../pics/ads/ad5.jpg";
 import ContactForm from "../components/ContactForm";
-
-export default function NovemberSpecialLandingPage({ language }) {
+import { useSelector } from 'react-redux';
+export default function NovemberSpecialLandingPage() {
+  const language = useSelector((state) => state.language.language);
   const adImage = language === "vietnamese" ? adImg4 : adImg5;
   
   const text = {
@@ -537,7 +538,7 @@ export default function NovemberSpecialLandingPage({ language }) {
       </section>
 
       {/* Contact Form */}
-      <ContactForm language={language} />
+      <ContactForm/>
 
       {/* Custom CSS */}
       <style>

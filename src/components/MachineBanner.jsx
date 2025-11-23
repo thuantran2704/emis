@@ -7,8 +7,9 @@ import hyperlightImg from "../pics/hyperlight.jpg";
 import uvStorageImg from "../pics/uvStorage.jpg";
 import hyundaiImg from "../pics/hyundai.jpg";
 import sterileRoomImg from "../pics/sterileRoom.jpg";
-
-export default function MachineBanner({ language }) {
+import { useSelector } from 'react-redux';
+export default function MachineBanner() {
+  const language = useSelector((state) => state.language.language);
   const isVN = language === "vietnamese";
   const content = isVN ? equipmentContent[language] : equipmentContent["english"];
   const qualityStamp = isVN ? "CHẤT LƯỢNG ĐẢM BẢO" : "PREMIUM QUALITY";

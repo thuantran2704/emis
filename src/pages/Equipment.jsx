@@ -8,8 +8,9 @@ import hyperlightImg from "../pics/hyperlight.jpg";
 import uvStorageImg from "../pics/uvStorage.jpg";
 import hyundaiImg from "../pics/hyundai.jpg";
 import sterileRoomImg from "../pics/sterileRoom.jpg";
-
-export default function Equipment({ language }) {
+import { useSelector } from 'react-redux';
+export default function Equipment() {
+  const language = useSelector((state) => state.language.language);
   const content =
     language === "vietnamese"
       ? equipmentContent.vietnamese

@@ -1,7 +1,12 @@
 import { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { setLanguage } from '../slices/languageSlice';
 
-export default function LanguageToggle({ currentLanguage = 'english', onLanguageChange }) {
+export default function LanguageToggle() {
   const [isOpen, setIsOpen] = useState(false);
+  const dispatch = useDispatch();
+
+  const currentLanguage = useSelector((state) => state.language.language);
 
   const languages = [
     { code: 'vietnamese', label: 'VN' },
@@ -13,13 +18,12 @@ export default function LanguageToggle({ currentLanguage = 'english', onLanguage
   ];
 
   const handleLanguageChange = (lang) => {
-    onLanguageChange(lang);
+    dispatch(setLanguage(lang));   // 🔥 update Redux store
     setIsOpen(false);
   };
 
   return (
     <div className="fixed bottom-6 right-6 z-50">
-      {/* Language Options Bar */}
       {isOpen && (
         <div className="absolute bottom-full right-0 mb-2 w-12 bg-white rounded-t-lg rounded-b-sm shadow-lg overflow-hidden border border-[#d4af37] border-b-0">
           <div className="overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
@@ -41,7 +45,6 @@ export default function LanguageToggle({ currentLanguage = 'english', onLanguage
         </div>
       )}
 
-      {/* Main Toggle Button */}
       <button 
         onClick={() => setIsOpen(!isOpen)}
         className={`bg-[#d4af37] text-white font-bold h-12 w-12 rounded-full shadow-lg transition-all flex items-center justify-center text-sm
@@ -55,7 +58,7 @@ export default function LanguageToggle({ currentLanguage = 'english', onLanguage
         ) : (
           currentLanguage === 'vietnamese' ? 'VN' : 
           currentLanguage === 'english' ? 'EN' : 
-            currentLanguage === 'korean' ? '한' :
+          currentLanguage === 'korean' ? '한' :
           currentLanguage === 'french' ? 'FR' :
           currentLanguage === 'simplified' ? '简' : '繁'
         )}

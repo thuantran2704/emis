@@ -20,8 +20,10 @@ import etkImg from '../pics/etk.jpg';
 import biotemImg from '../pics/biotem.jpg';
 import MachineBanner from '../components/MachineBanner';
 import ContactForm from '../components/ContactForm';
+import { useSelector } from 'react-redux';
 import CustomerReactionsBanner from '../components/CustomerReactionBanner';
-export default function Home({ language }) {
+export default function Home() {
+  const language = useSelector((state) => state.language.language);
   const content = homeContent[language] || homeContent.vietnamese;
   const serviceImages = [
     generalDentistry,
@@ -111,12 +113,12 @@ export default function Home({ language }) {
           />
         </div>
       </section>
-      <ContactForm language={language}/>
+      <ContactForm/>
 
       {/* Implant Section */}
-      <ImplantCards language={language} />
+      <ImplantCards/>
       
-      <MachineBanner language={language} />
+      <MachineBanner/>
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#4b4b8f] mb-12 text-center border-b-2 border-[#d4af37] pb-2 inline-block">
@@ -154,7 +156,7 @@ export default function Home({ language }) {
         </div>
       </section>
 
-      <CustomerReactionsBanner language = {language}/>
+      <CustomerReactionsBanner/>
       {/* Hero Section */}
       <section className="py-28 px-4 max-w-6xl mx-auto text-center">
         <h1

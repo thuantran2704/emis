@@ -1,7 +1,9 @@
 import { FacebookIcon, Phone, Mail, MapPin } from "lucide-react";
 import zaloIcon from "../pics/zalo.jpg";
 import footerContent from "../Translations/footerContent";
-export default function Footer({ language = "english" }) {
+import { useSelector } from 'react-redux';
+export default function Footer() {
+  const language = useSelector((state) => state.language.language);
   const content = footerContent[language];
 
   return (

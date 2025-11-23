@@ -2,8 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import adImg from "../pics/ads/ad2.jpg";
 import ContactForm from "../components/ContactForm";
-
-export default function PorcelainTeethLandingPage({ language }) {
+import { useSelector } from 'react-redux';
+export default function PorcelainTeethLandingPage() {
+  const language = useSelector((state) => state.language.language);
   const text = {
     english: {
       heroTitle: "NOVEMBER OFFER: AESTHETIC PORCELAIN TEETH",
@@ -445,7 +446,7 @@ export default function PorcelainTeethLandingPage({ language }) {
       </section>
 
       {/* Contact Form */}
-      <ContactForm language={language} />
+      <ContactForm/>
 
       {/* Custom CSS */}
       <style>
