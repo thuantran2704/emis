@@ -5,8 +5,9 @@ import osstemImg from "../pics/osstem.jpg";
 import straumannImg from "../pics/straumann.jpg";
 import etkImg from "../pics/etk.jpg";
 import biotemImg from "../pics/biotem.jpg";
-
-export default function ImplantInfo({ language }) {
+import { useSelector } from "react-redux";
+export default function ImplantInfo() {
+  const language = useSelector((state) => state.language.language);
   const isViet = language === "vietnamese";
 
   const pageTitle = isViet
