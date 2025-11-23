@@ -16,7 +16,7 @@ export default function SonPage() {
   return (
     <main className="bg-gray-50">
       {/* Spacer for fixed navbar */}
-      <div className="h-20 md:h-20 lg:h-24"></div>
+      <div className="h-32 md:h-20 lg:h-24"></div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Title & Subtitle */}
