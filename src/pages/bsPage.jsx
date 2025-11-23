@@ -8,8 +8,9 @@ import bs3 from '../pics/bs/bs3.png';
 import bs4 from '../pics/bs/bs4.png';
 
 export default function SonPage() {
-  const language = useSelector((state) => state.language) || 'english';
-  const content = sonContent[language];
+  const language = useSelector((state) => state.language);
+  // If language is 'vietnamese' use that, otherwise default to 'english'
+  const content = language === 'vietnamese' ? sonContent.vietnamese : sonContent.english;
 
   const images = [bs0, bs1, bs2, bs3, bs4];
 
