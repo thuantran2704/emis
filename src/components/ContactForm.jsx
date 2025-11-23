@@ -2,7 +2,7 @@ import { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import Alert from "./alert";
 import contactContent from "../Translations/contactContent";
-import
+import { useSelector } from 'react-redux';
 export default function ContactForm() {
   const language = useSelector((state) => state.language.language);
   const content = contactContent[language] || contactContent.english;
