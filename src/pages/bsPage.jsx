@@ -1,11 +1,11 @@
 import { useSelector } from 'react-redux';
 import sonContent from '../Translations/bacSonContent';
 
-import bs0 from '../pics/bs/bs0.jpg';
-import bs1 from '../pics/bs/bs1.jpg';
-import bs2 from '../pics/bs/bs2.jpg';
-import bs3 from '../pics/bs/bs3.jpg';
-import bs4 from '../pics/bs/bs4.jpg';
+import bs0 from '../pics/bs/bs0.png';
+import bs1 from '../pics/bs/bs1.png';
+import bs2 from '../pics/bs/bs2.png';
+import bs3 from '../pics/bs/bs3.png';
+import bs4 from '../pics/bs/bs4.png';
 
 export default function SonPage() {
   const language = useSelector((state) => state.language) || 'english';
