@@ -1,4 +1,3 @@
-import React from 'react';
 import { useSelector } from 'react-redux';
 import sonContent from '../Translations/bacSonContent';
 import bs0 from '../pics/bs/bs0.png';
@@ -8,110 +7,171 @@ import bs3 from '../pics/bs/bs3.png';
 import bs4 from '../pics/bs/bs4.png';
 
 export default function SonPage() {
-  const language = useSelector((state) => state.language);
-  // If language is 'vietnamese' use that, otherwise default to 'english'
-  const content = language === 'vietnamese' ? sonContent['vietnamese'] : sonContent['english'];
-
+  const language = useSelector((state) => state.language.language);
+  const content = language === 'vietnamese' ? sonContent.vietnamese : sonContent.english;
   const images = [bs0, bs1, bs2, bs3, bs4];
 
   return (
-    <main className="bg-gray-50">
+    <main className="bg-white">
       {/* Spacer for fixed navbar */}
       <div className="h-20 md:h-24"></div>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-        {/* Title & Subtitle */}
-        <header className="text-center space-y-4">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#2a3439]">
+      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Article Header */}
+        <header className="text-center py-12 border-b border-gray-200">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-gray-900 mb-6 leading-tight">
             {content.title}
           </h1>
-          <p className="text-lg sm:text-xl text-gray-700">{content.subtitle}</p>
+          <p className="text-xl sm:text-2xl text-gray-600 font-light max-w-3xl mx-auto leading-relaxed">
+            {content.subtitle}
+          </p>
+          <div className="w-24 h-1 bg-[#d4af37] mx-auto mt-8"></div>
         </header>
 
-        {/* Intro Paragraph */}
-        <section className="prose prose-lg mx-auto text-gray-700">
-          <p>{content.introParagraph}</p>
-        </section>
+        {/* Featured Image */}
+        <div className="my-12 rounded-2xl overflow-hidden shadow-xl">
+          <img
+            src={images[0]}
+            alt={content.title}
+            className="w-full h-96 object-cover"
+          />
+        </div>
 
-        {/* Image Gallery */}
-        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {images.map((img, idx) => (
-            <div key={idx} className="overflow-hidden rounded-lg shadow-md">
-              <img
-                src={img}
-                alt={`Dr. Son ${idx}`}
-                className="w-full h-64 object-cover sm:h-48 md:h-56 lg:h-64"
-              />
+        {/* Article Content */}
+        <div className="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-gray-900 prose-p:text-gray-700 prose-li:text-gray-700">
+          
+          {/* Introduction */}
+          <section className="mb-16">
+            <p className="text-xl leading-relaxed text-gray-700 font-light mb-8">
+              {content.introParagraph}
+            </p>
+          </section>
+
+          {/* Professional Overview */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-serif font-bold mb-8 text-gray-900">
+              {content.professionalInfo.title}
+            </h2>
+            <div className="bg-gray-50 rounded-xl p-8 border-l-4 border-[#d4af37]">
+              <ul className="space-y-3">
+                {content.professionalInfo.items.map((item, idx) => (
+                  <li key={idx} className="flex items-start">
+                    <span className="text-[#d4af37] mr-3">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-          ))}
-        </section>
+          </section>
 
-        {/* Professional Information */}
-        <section className="space-y-4">
-          <h2 className="text-2xl font-semibold text-[#2a3439]">
-            {content.professionalInfo.title}
-          </h2>
-          <ul className="list-disc list-inside text-gray-700 space-y-1">
-            {content.professionalInfo.items.map((item, idx) => (
-              <li key={idx}>{item}</li>
-            ))}
-          </ul>
-        </section>
+          {/* Education & Training */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-serif font-bold mb-8 text-gray-900">
+              {content.education.title}
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-xl font-semibold mb-4 text-gray-800">
+                  {language === 'vietnamese' ? 'Đào Tạo Chính Quy' : 'Formal Education'}
+                </h3>
+                <p className="text-gray-700 leading-relaxed">{content.education.formalEducation}</p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-4 text-gray-800">
+                  {language === 'vietnamese' ? 'Đào Tạo Nâng Cao' : 'Advanced Training'}
+                </h3>
+                <ul className="space-y-3">
+                  {content.education.advancedTraining.map((item, idx) => (
+                    <li key={idx} className="flex items-start">
+                      <span className="text-[#d4af37] mr-3">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </section>
 
-        {/* Education & Training */}
-        <section className="space-y-4">
-          <h2 className="text-2xl font-semibold text-[#2a3439]">
-            {content.education.title}
-          </h2>
-          <p className="text-gray-700">{content.education.formalEducation}</p>
-          <ul className="list-disc list-inside text-gray-700 space-y-1">
-            {content.education.advancedTraining.map((item, idx) => (
-              <li key={idx}>{item}</li>
-            ))}
-          </ul>
-        </section>
+          {/* Image Gallery */}
+          <section className="mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {images.slice(1).map((img, idx) => (
+                <div key={idx} className="overflow-hidden rounded-xl shadow-lg">
+                  <img
+                    src={img}
+                    alt={`${content.title} ${idx + 1}`}
+                    className="w-full h-64 object-cover transition-transform duration-300 hover:scale-105"
+                  />
+                </div>
+              ))}
+            </div>
+          </section>
 
-        {/* Clinical Experience */}
-        <section className="space-y-4">
-          <h2 className="text-2xl font-semibold text-[#2a3439]">
-            {content.clinicalExperience.title}
-          </h2>
-          <p className="text-gray-700">{content.clinicalExperience.content}</p>
-        </section>
+          {/* Clinical Experience */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-serif font-bold mb-6 text-gray-900">
+              {content.clinicalExperience.title}
+            </h2>
+            <p className="text-lg leading-relaxed text-gray-700 bg-blue-50 rounded-xl p-8 border border-blue-100">
+              {content.clinicalExperience.content}
+            </p>
+          </section>
 
-        {/* Philosophy */}
-        <section className="space-y-4">
-          <h2 className="text-2xl font-semibold text-[#2a3439]">
-            {content.philosophy.title}
-          </h2>
-          <blockquote className="border-l-4 border-[#d4af37] pl-4 italic text-gray-700">
-            {content.philosophy.quote}
-          </blockquote>
-          <ul className="list-disc list-inside text-gray-700 space-y-1">
-            {content.philosophy.values.map((val, idx) => (
-              <li key={idx}>{val}</li>
-            ))}
-          </ul>
-        </section>
+          {/* Philosophy */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-serif font-bold mb-8 text-gray-900">
+              {content.philosophy.title}
+            </h2>
+            <blockquote className="text-2xl font-serif italic text-gray-700 text-center border-y border-gray-200 py-8 my-8">
+              {content.philosophy.quote}
+            </blockquote>
+            <div className="bg-amber-50 rounded-xl p-8">
+              <h3 className="text-xl font-semibold mb-6 text-gray-800">
+                {language === 'vietnamese' ? 'Giá Trị Cốt Lõi' : 'Core Values'}
+              </h3>
+              <ul className="grid md:grid-cols-2 gap-4">
+                {content.philosophy.values.map((val, idx) => (
+                  <li key={idx} className="flex items-start bg-white rounded-lg p-4 shadow-sm">
+                    <span className="text-[#d4af37] font-bold mr-3">{idx + 1}.</span>
+                    <span>{val}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
 
-        {/* Testimonials */}
-        <section className="space-y-4">
-          <h2 className="text-2xl font-semibold text-[#2a3439]">
-            {content.testimonials.title}
-          </h2>
-          <div className="space-y-3 text-gray-700">
-            <p className="italic">"{content.testimonials.patientReview}"</p>
-            <p className="italic">"{content.testimonials.colleagueReview}"</p>
-          </div>
-        </section>
+          {/* Testimonials */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-serif font-bold mb-8 text-gray-900">
+              {content.testimonials.title}
+            </h2>
+            <div className="space-y-6">
+              <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm">
+                <p className="text-lg italic text-gray-700 mb-4">{content.testimonials.patientReview}</p>
+                <p className="text-gray-600 font-medium">
+                  {language === 'vietnamese' ? '— Khách Hàng Hài Lòng' : '— Satisfied Patient'}
+                </p>
+              </div>
+              <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm">
+                <p className="text-lg italic text-gray-700 mb-4">{content.testimonials.colleagueReview}</p>
+                <p className="text-gray-600 font-medium">
+                  {language === 'vietnamese' ? '— Đồng Nghiệp Chuyên Môn' : '— Professional Colleague'}
+                </p>
+              </div>
+            </div>
+          </section>
 
-        {/* Call to Action */}
-        <section className="bg-[#d4af37]/20 rounded-lg p-6 text-center space-y-4">
-          <h2 className="text-2xl font-semibold text-[#2a3439]">{content.cta.title}</h2>
-          <p className="text-gray-700">{content.cta.content}</p>
-          <p className="font-medium text-gray-800">{content.cta.question}</p>
-        </section>
-      </div>
+          {/* Call to Action */}
+          <section className="bg-gradient-to-r from-[#d4af37] to-amber-600 rounded-2xl p-12 text-center text-white mb-16">
+            <h2 className="text-3xl font-serif font-bold mb-4">{content.cta.title}</h2>
+            <p className="text-xl mb-6 opacity-95">{content.cta.content}</p>
+            <p className="text-lg font-semibold opacity-90">{content.cta.question}</p>
+            <button className="mt-8 bg-white text-[#d4af37] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-300">
+              {language === 'vietnamese' ? 'Đặt Lịch Tư Vấn' : 'Schedule Your Consultation'}
+            </button>
+          </section>
+        </div>
+      </article>
     </main>
   );
 }
