@@ -46,12 +46,12 @@ export default function App() {
           <Route path="/equipment" element={<Equipment language={language} />} />
           <Route path="/testing" element={<VeneerLanding language={language}/>} />
           <Route path="/implant" element={<ImplantInfo language = {language}/>}/>
-          <Route path="/qc1" element={<ImplantLandingPage language= {language}/>}/>
           <Route path="/crown" element={<CrownLanding language={language}/>}/>
+          <Route path="/qc1" element={<ImplantLandingPage language= {language}/>}/>
           <Route path="/qc2" element={<PorcelainTeethLandingPage language={language}/>}/>
           <Route path="/qc3" element={<TeethWhiteningLandingPage language={language} />} />
           <Route path="/qc4" element={<NovemberSpecialLandingPage language={language} />} />
-          <Route path="bs" element={<SonPage language={language}/>}/>
+          <Route path="/bs" element={<SonPage language={language}/>}/>
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer language={language}/>
