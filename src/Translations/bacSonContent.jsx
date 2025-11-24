@@ -50,7 +50,7 @@ const sonContent = {
     },
 
     // Certifications (NEW)
-    certifications: {
+    certification: {
       title: "Certifications",
       description: "Dr. Son’s official certificate."
     },
@@ -130,7 +130,7 @@ const sonContent = {
     },
 
     // Certifications (NEW)
-    certifications: {
+    certification: {
       title: "Chứng Chỉ",
       description: "Giấy chứng nhận chính thức của bác sĩ Sơn."
     },
