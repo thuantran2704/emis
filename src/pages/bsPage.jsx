@@ -7,13 +7,10 @@ import bs2 from '../pics/bs/bs2.png';
 import bs3 from '../pics/bs/bs3.png';
 import bs4 from '../pics/bs/bs4.png';
 import sonPapers from '../pics/bs/sonPapers.jpg';
-import { useMemo } from 'react';
 
 export default function SonPage() {
   const language = useSelector((state) => state.language);
-  const content = useMemo(() => {
-    return language === 'vietnamese' ? sonContent.vietnamese : sonContent.english;
-  }, [language]);
+  const content = language === 'vietnamese' ? sonContent.vietnamese : sonContent.english;
 
   const images = [bs0, bs1, bs2, bs3, bs4];
 
