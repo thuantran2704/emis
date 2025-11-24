@@ -16,7 +16,6 @@ export default function Navbar() {
 
   const content = navbarContent[language] || navbarContent.english;
 
-  // Submenu under About
   const aboutDropdownItems = [
     { name: content.drSon, path: '/dr-son' },
     { name: content.veneer, path: '/veneer' },
@@ -33,7 +32,6 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Blur overlay for mobile menu */}
       {isMenuOpen && (
         <div className="inset-0 backdrop-blur-sm bg-white/30 z-40" onClick={toggleMenu}></div>
       )}
@@ -41,7 +39,6 @@ export default function Navbar() {
       <nav className="bg-gradient-to-r from-[#d4af37] via-[#C5AF73] to-[#d4af37] shadow-xl fixed w-full z-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex justify-between items-center h-20">
-            
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3 group">
               <div className="h-14 w-14 rounded-full overflow-hidden border-2 border-[#1f2937] border-opacity-20 shadow-md">
@@ -61,8 +58,6 @@ export default function Navbar() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-6">
-
-              {/* Home */}
               <Link
                 to="/"
                 className="relative text-[#2a3439] font-medium px-3 py-2 transition-all duration-300 group"
@@ -71,10 +66,8 @@ export default function Navbar() {
                 {content.home}
               </Link>
 
-              {/* ABOUT + DROPDOWN (fixed alignment) */}
+              {/* ABOUT + DROPDOWN */}
               <div className="relative flex items-center">
-                
-                {/* About link */}
                 <Link
                   to="/about"
                   className="text-[#2a3439] font-medium px-3 py-2 transition-all duration-300 group"
@@ -83,15 +76,9 @@ export default function Navbar() {
                   {content.about}
                 </Link>
 
-                {/* Dropdown toggle arrow */}
-                <button
-                  onClick={toggleAbout}
-                  className="ml-1 text-[#2a3439] hover:text-gray-700"
-                >
+                <button onClick={toggleAbout} className="ml-1 text-[#2a3439] hover:text-gray-700" aria-label="Toggle about submenu">
                   <svg
-                    className={`w-4 h-4 transition-transform duration-300 ${
-                      isAboutOpen ? 'rotate-180' : ''
-                    }`}
+                    className={`w-4 h-4 transition-transform duration-300 ${isAboutOpen ? 'rotate-180' : ''}`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -100,7 +87,6 @@ export default function Navbar() {
                   </svg>
                 </button>
 
-                {/* About dropdown */}
                 {isAboutOpen && (
                   <div className="absolute top-full left-0 mt-3 w-56 bg-white rounded-md shadow-lg py-2 z-50 border border-gray-200">
                     {aboutDropdownItems.map((sub) => (
@@ -118,7 +104,6 @@ export default function Navbar() {
                 )}
               </div>
 
-              {/* Services */}
               <Link
                 to="/services"
                 className="text-[#2a3439] font-medium px-3 py-2"
@@ -127,7 +112,6 @@ export default function Navbar() {
                 {content.services}
               </Link>
 
-              {/* Equipment */}
               <Link
                 to="/equipment"
                 className="text-[#2a3439] font-medium px-3 py-2"
@@ -136,7 +120,7 @@ export default function Navbar() {
                 {content.equipment}
               </Link>
 
-              {/* Gratitude dropdown */}
+              {/* Gratitude Dropdown */}
               <div className="relative">
                 <button
                   onClick={toggleGratitude}
@@ -145,9 +129,7 @@ export default function Navbar() {
                 >
                   {content.gratitude}
                   <svg
-                    className={`w-4 h-4 ml-1 transition-transform duration-300 ${
-                      isGratitudeOpen ? 'rotate-180' : ''
-                    }`}
+                    className={`w-4 h-4 ml-1 transition-transform duration-300 ${isGratitudeOpen ? 'rotate-180' : ''}`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -172,7 +154,6 @@ export default function Navbar() {
                 )}
               </div>
 
-              {/* Contact Button */}
               <Link
                 to="/contact"
                 className="ml-4 px-5 py-2 bg-[#2a3439] text-[#C5AF73] rounded-md hover:bg-[#1f2937] transition"
@@ -182,12 +163,9 @@ export default function Navbar() {
               </Link>
             </div>
 
-            {/* Mobile Menu Toggle */}
+            {/* Mobile Toggle */}
             <div className="md:hidden flex items-center">
-              <button
-                onClick={toggleMenu}
-                className="text-[#2a3439] hover:text-gray-700 focus:outline-none"
-              >
+              <button onClick={toggleMenu} className="text-[#2a3439] hover:text-gray-700 focus:outline-none" aria-label="Toggle menu">
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   {isMenuOpen ? (
                     <path strokeLinecap="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
@@ -203,8 +181,6 @@ export default function Navbar() {
         {/* Mobile Menu */}
         <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
           <div className="px-2 pt-2 pb-4 space-y-1 bg-gradient-to-b from-[#d4af37] to-[#C5AF73] shadow-lg">
-            
-            {/* Home */}
             <Link
               to="/"
               className="block px-3 py-2 font-medium text-[#2a3439] hover:bg-[#2a3439] hover:text-[#C5AF73] rounded-md"
@@ -213,22 +189,37 @@ export default function Navbar() {
               {content.home}
             </Link>
 
-            {/* ABOUT MOBILE DROPDOWN */}
+            {/* MOBILE: About link + arrow (fixed so About is tappable) */}
             <div>
-              <button
-                onClick={toggleAbout}
-                className="w-full flex justify-between px-3 py-2 font-medium text-[#2a3439] hover:bg-[#2a3439] hover:text-[#C5AF73] rounded-md"
-              >
-                {content.about}
-                <svg
-                  className={`w-4 h-4 transition-transform ${isAboutOpen ? 'rotate-180' : ''}`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+              <div className="flex items-center justify-between px-3 py-2 rounded-md">
+                {/* Left: actual link to /about */}
+                <Link
+                  to="/about"
+                  className="font-medium text-[#2a3439] hover:text-[#C5AF73]"
+                  onClick={() => {
+                    setIsAboutOpen(false);
+                    toggleMenu();
+                  }}
                 >
-                  <path strokeLinecap="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
+                  {content.about}
+                </Link>
+
+                {/* Right: arrow to toggle submenu */}
+                <button
+                  onClick={toggleAbout}
+                  className="p-1 rounded hover:bg-white/20 text-[#2a3439]"
+                  aria-label="Toggle about submenu"
+                >
+                  <svg
+                    className={`w-4 h-4 transition-transform ${isAboutOpen ? 'rotate-180' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+              </div>
 
               {isAboutOpen && (
                 <div className="ml-4 mt-1">
@@ -246,7 +237,6 @@ export default function Navbar() {
               )}
             </div>
 
-            {/* Services */}
             <Link
               to="/services"
               className="block px-3 py-2 text-[#2a3439] font-medium rounded-md hover:bg-[#2a3439] hover:text-[#C5AF73]"
@@ -255,7 +245,6 @@ export default function Navbar() {
               {content.services}
             </Link>
 
-            {/* Equipment */}
             <Link
               to="/equipment"
               className="block px-3 py-2 text-[#2a3439] font-medium rounded-md hover:bg-[#2a3439] hover:text-[#C5AF73]"
@@ -297,7 +286,6 @@ export default function Navbar() {
               )}
             </div>
 
-            {/* Contact */}
             <Link
               to="/contact"
               className="block px-3 py-2 text-[#2a3439] font-medium rounded-md hover:bg-[#2a3439] hover:text-[#C5AF73]"
