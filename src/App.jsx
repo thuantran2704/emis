@@ -35,14 +35,14 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/equipment" element={<Equipment />} />
-          <Route path="/testing" element={<VeneerLanding/>} />
-          <Route path="/implant" element={<ImplantInfo/>}/>
-          <Route path="/crown" element={<CrownLanding/>}/>
           <Route path="/qc1" element={<ImplantLandingPage/>}/>
           <Route path="/qc2" element={<PorcelainTeethLandingPage />}/>
           <Route path="/qc3" element={<TeethWhiteningLandingPage />} />
           <Route path="/qc4" element={<NovemberSpecialLandingPage />} />
-          <Route path="/bs" element={<SonPage/>}/>
+          <Route path="/dr-son" element={<SonPage/>}/>
+          <Route path="/veneer" element={<VeneerLanding/>} />
+          <Route path="/implant" element={<ImplantInfo/>}/>
+          <Route path="/crown" element={<CrownLanding/>}/>
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer/>

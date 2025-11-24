@@ -9,7 +9,11 @@ const navbarContent = {
     implantPromo: "Implant Only 8.9M",
     porcelainPromo: "Porcelain Teeth From 2M",
     whiteningPromo: "Whitening 1.5M",
-    novemberPromo: "November Specials"
+    novemberPromo: "November Specials",
+    drSon: "Meet Dr. Son",
+    veneer: "Veneers",
+    implant: "Implants",
+    crown: "Crowns"
   },
   vietnamese: {
     home: "Trang Chủ",
@@ -21,7 +25,11 @@ const navbarContent = {
     implantPromo: "Trồng Răng Implant 8.9TR",
     porcelainPromo: "Răng Sứ Từ 2TR",
     whiteningPromo: "Tẩy Trắng 1.5TR",
-    novemberPromo: "Tri Ân Tháng 11"
+    novemberPromo: "Tri Ân Tháng 11",
+    drSon: "Giới Thiệu Bác Sĩ",
+    veneer: "Mặt Dán Sứ",
+    implant: "Trồng Răng",
+    crown: "Răng Sứ"
   },
   french: {
     home: "Accueil",
@@ -33,7 +41,11 @@ const navbarContent = {
     implantPromo: "Implant à 8.9M",
     porcelainPromo: "Couronne Porcelaine à 2M",
     whiteningPromo: "Blanchiment 1.5M",
-    novemberPromo: "Promotions de Novembre"
+    novemberPromo: "Promotions de Novembre",
+    drSon: "Présentation du Dr Son",
+    veneer: "Facettes Dentaires",
+    implant: "Implants",
+    crown: "Couronnes"
   },
   simplified: {
     home: "首页",
@@ -45,7 +57,11 @@ const navbarContent = {
     implantPromo: "种植牙仅890万",
     porcelainPromo: "烤瓷牙从200万起",
     whiteningPromo: "牙齿美白150万",
-    novemberPromo: "十一月特惠"
+    novemberPromo: "十一月特惠",
+    drSon: "医生介绍",
+    veneer: "牙贴面",
+    implant: "种植牙",
+    crown: "牙冠"
   },
   traditional: {
     home: "首頁",
@@ -57,7 +73,11 @@ const navbarContent = {
     implantPromo: "植牙僅890萬",
     porcelainPromo: "瓷牙從200萬起",
     whiteningPromo: "牙齒美白150萬",
-    novemberPromo: "十一月特惠"
+    novemberPromo: "十一月特惠",
+    drSon: "醫生介紹",
+    veneer: "牙貼面",
+    implant: "植牙",
+    crown: "牙冠"
   },
   korean: {
     home: "홈",
@@ -69,7 +89,11 @@ const navbarContent = {
     implantPromo: "임플란트 890만 동",
     porcelainPromo: "도재 크라운 200만 동부터",
     whiteningPromo: "치아 미백 150만 동",
-    novemberPromo: "11월 특별 할인"
+    novemberPromo: "11월 특별 할인",
+    drSon: "의사 소개",
+    veneer: "베니어",
+    implant: "임플란트",
+    crown: "크라운"
   },
 };
 
