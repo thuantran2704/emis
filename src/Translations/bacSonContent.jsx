@@ -5,7 +5,7 @@ const sonContent = {
     
     introParagraph:
       "With formal training from Ho Chi Minh City University of Medicine and Pharmacy and over 10 years of specialized experience in dental implants, aesthetic prosthetics, and sinus lift - bone grafting surgery, Dr. Nguyen The Son is one of the prominent experts at Emis Dental. Patients highly appreciate Dr. Son for his skilled hands, precise techniques, and dedicated working style, delivering stable, natural, and long-lasting prosthetic results for thousands of patients.",
-    
+
     // Professional Information
     professionalInfo: {
       title: "Professional Information",
@@ -18,10 +18,13 @@ const sonContent = {
       ],
     },
 
-    // Education & Training
+    // Education
     education: {
       title: "Education & Advanced Training",
+      formalEducationTitle: "Formal Education",
       formalEducation: "Dentist - Ho Chi Minh City University of Medicine and Pharmacy",
+
+      advancedTrainingTitle: "Advanced Training",
       advancedTraining: [
         "Aesthetic Zone Implant - Ho Chi Minh City Hospital of Odonto-Stomatology",
         "Implant - ID4 Solution (All-on-4) - Sagodent",
@@ -35,48 +38,53 @@ const sonContent = {
     clinicalExperience: {
       title: "Clinical Experience",
       content:
-        "With over 3,000 dental implant cases ranging from simple to complex, along with hundreds of full-mouth aesthetic ceramic restorations, Dr. Nguyen The Son has helped numerous patients restore chewing function, improve appearance, and regain confidence in communication. Additionally, Dr. Son has extensive experience handling long-term tooth loss cases, jawbone resorption, or weak bone conditions, applying advanced bone grafting - sinus lift techniques to optimize implant success rates.",
+        "With over 3,000 dental implant cases ranging from simple to complex, along with hundreds of full-mouth aesthetic ceramic restorations, Dr. Nguyen The Son has helped numerous patients restore chewing function, improve appearance, and regain confidence. He also has extensive experience handling long-term tooth loss, jawbone resorption, or weak bone structure, using advanced bone grafting and sinus lift techniques to maximize implant success rates.",
     },
 
     // Philosophy
     philosophy: {
       title: "Professional Philosophy & Style",
       quote: "\"Dental treatment is not just about technique, but also art and responsibility.\"",
+
+      coreValuesTitle: "Core Values",
       values: [
-        "Listening and Understanding Patients: Each treatment plan is personalized based on individual conditions and needs.",
-        "Precise Technique - Absolute Sterilization: Ensuring maximum safety and effectiveness in every clinical procedure.",
-        "Continuous Learning - Adopting New Technologies: Applying digital implant technology and 3D diagnostic systems to the treatment process.",
+        "Listening and Understanding Patients: Each treatment plan is personalized based on individual needs.",
+        "Precise Technique – Absolute Sterilization: Ensuring maximum safety and effectiveness in every clinical procedure.",
+        "Continuous Learning – Adopting New Technologies: Applying digital implant systems and 3D diagnostic tools.",
       ],
     },
 
-    // Certifications (NEW)
+    // Certifications
     certification: {
       title: "Certifications",
-      description: "Dr. Son’s official certificate."
+      description: "Dr. Son’s official certificate.",
     },
 
     // Testimonials
     testimonials: {
       title: "Patient & Colleague Reviews",
       patientReview:
-        "\"Dr. Son is very dedicated and meticulous. I was very worried about getting implants, but the doctor consulted thoroughly, making me completely at ease. The treatment results made me extremely satisfied.\" - Ms. Mai, patient at Emis Dental",
+        "\"Dr. Son is very dedicated and meticulous. I was worried about getting implants, but he explained everything clearly and helped me feel at ease. The results exceeded my expectations.\" – Ms. Mai",
+      patientLabel: "Patient Review",
+
       colleagueReview:
-        "\"Dr. Son is always serious, receptive, and careful in every treatment case. He is a model dentist with both solid expertise and professional ethics.\" - Dr. Tran Minh, colleague at Emis Dental",
+        "\"Dr. Son is always serious, receptive, and careful in every treatment case. He is a model dentist with both strong expertise and professional ethics.\" – Dr. Tran Minh",
+      colleagueLabel: "Colleague Review",
     },
 
     // Call to Action
     cta: {
-      title: "Choose Emis Dental - Choose Peace of Mind",
+      title: "Choose Emis Dental – Choose Peace of Mind",
       content:
-        "At Emis Dental, patients are treated by a team of certified implant specialists with modern equipment including 3D Conebeam CT machines, intraoral scanning systems, closed sterile rooms, and infection control procedures meeting Ministry of Health standards.",
-      question:
-        "Ready to create your dream smile with certified dentists at Emis Dental?",
+        "At Emis Dental, patients are treated by certified implant specialists with modern equipment including 3D Conebeam CT, intraoral scanners, sterile rooms, and Ministry-standard infection control.",
+      question: "Ready to create your dream smile with certified dentists at Emis Dental?",
+      button: "Schedule Consultation",
     },
   },
 
-  // ============================================
+  // ======================================================================
   // VIETNAMESE
-  // ============================================
+  // ======================================================================
 
   vietnamese: {
     title: "Bác Sĩ Nguyễn Thế Sơn - Bác Sĩ Trưởng Tại Emis Dental",
@@ -97,11 +105,15 @@ const sonContent = {
       ],
     },
 
-    // Education & Training
+    // Education
     education: {
       title: "Quá Trình Đào Tạo & Chuyên Môn Nâng Cao",
+
+      formalEducationTitle: "Đào Tạo Chính Quy",
       formalEducation:
         "Bác sĩ Răng Hàm Mặt – Đại học Y Dược TP. Hồ Chí Minh",
+
+      advancedTrainingTitle: "Đào Tạo Nâng Cao",
       advancedTraining: [
         "Implant vùng thẩm mỹ – Bệnh viện Răng Hàm Mặt TP.HCM",
         "Implant – ID4 Solution (All-on-4) – Sagodent",
@@ -115,42 +127,47 @@ const sonContent = {
     clinicalExperience: {
       title: "Kinh Nghiệm Lâm Sàng",
       content:
-        "Với hơn 3.000 ca trồng răng Implant từ đơn giản đến phức tạp, cùng hàng trăm ca phục hình răng sứ thẩm mỹ toàn hàm, bác sĩ Nguyễn Thế Sơn đã giúp rất nhiều khách hàng phục hồi khả năng ăn nhai, cải thiện diện mạo và lấy lại sự tự tin trong giao tiếp. Bên cạnh đó, bác sĩ còn có nhiều kinh nghiệm xử lý các trường hợp mất răng lâu năm, tiêu xương hàm hoặc xương yếu, áp dụng các kỹ thuật ghép xương – nâng xoang tiên tiến để tối ưu tỷ lệ thành công của Implant.",
+        "Với hơn 3.000 ca trồng răng Implant từ đơn giản đến phức tạp, cùng hàng trăm ca phục hình răng sứ thẩm mỹ toàn hàm, bác sĩ Nguyễn Thế Sơn đã giúp rất nhiều khách hàng phục hồi khả năng ăn nhai, cải thiện diện mạo và lấy lại sự tự tin. Bác sĩ có kinh nghiệm xử lý các trường hợp mất răng lâu năm, tiêu xương hàm hoặc xương yếu, ứng dụng kỹ thuật ghép xương – nâng xoang tiên tiến để tối ưu tỷ lệ thành công của Implant.",
     },
 
     // Philosophy
     philosophy: {
       title: "Phong Cách Và Triết Lý Nghề Nghiệp",
       quote: "\"Điều trị nha khoa không chỉ là kỹ thuật, mà còn là nghệ thuật và trách nhiệm.\"",
+
+      coreValuesTitle: "Giá Trị Cốt Lõi",
       values: [
-        "Lắng nghe và thấu hiểu khách hàng: Mỗi kế hoạch điều trị đều được cá nhân hóa, dựa trên tình trạng và nhu cầu riêng.",
-        "Kỹ thuật chuẩn xác – vô trùng tuyệt đối: Đảm bảo an toàn và hiệu quả tối đa trong từng thao tác lâm sàng.",
-        "Không ngừng học hỏi – cập nhật công nghệ mới: Ứng dụng công nghệ Implant kỹ thuật số và hệ thống chẩn đoán 3D vào quy trình điều trị.",
+        "Lắng nghe và thấu hiểu khách hàng: Mỗi kế hoạch điều trị được cá nhân hóa.",
+        "Kỹ thuật chuẩn xác – vô trùng tuyệt đối: Đảm bảo an toàn tối đa.",
+        "Không ngừng học hỏi – cập nhật công nghệ mới: Ứng dụng Implant kỹ thuật số và hệ thống chẩn đoán 3D.",
       ],
     },
 
-    // Certifications (NEW)
+    // Certifications
     certification: {
       title: "Chứng Chỉ",
-      description: "Giấy chứng nhận chính thức của bác sĩ Sơn."
+      description: "Giấy chứng nhận chính thức của bác sĩ Sơn.",
     },
 
     // Testimonials
     testimonials: {
       title: "Khách Hàng Và Đồng Nghiệp Đánh Giá",
       patientReview:
-        "\"Bác sĩ Sơn rất tận tâm và tỉ mỉ. Tôi từng rất lo lắng khi trồng Implant, nhưng bác sĩ tư vấn kỹ càng, giúp tôi hoàn toàn yên tâm. Kết quả sau điều trị khiến tôi vô cùng hài lòng.\" – Cô Mai, khách hàng tại Emis Dental",
+        "\"Bác sĩ Sơn rất tận tâm và tỉ mỉ. Tôi từng lo lắng khi trồng Implant, nhưng bác sĩ tư vấn rất kỹ, giúp tôi yên tâm hoàn toàn. Kết quả khiến tôi vô cùng hài lòng.\" – Cô Mai",
+      patientLabel: "Đánh Giá Khách Hàng",
+
       colleagueReview:
-        "\"Bác sĩ Sơn luôn nghiêm túc, cầu thị và kỹ lưỡng trong từng ca điều trị. Anh là hình mẫu bác sĩ nha khoa vừa có chuyên môn vững, vừa có đạo đức nghề nghiệp.\" – BS. Trần Minh, đồng nghiệp tại Emis Dental",
+        "\"Bác sĩ Sơn luôn nghiêm túc, cầu thị và kỹ lưỡng trong từng ca điều trị. Anh là hình mẫu bác sĩ vừa có chuyên môn vững, vừa có đạo đức nghề nghiệp.\" – BS. Trần Minh",
+      colleagueLabel: "Đánh Giá Đồng Nghiệp",
     },
 
     // Call to Action
     cta: {
       title: "Chọn Emis Dental – Chọn Sự An Tâm",
       content:
-        "Tại Emis Dental, khách hàng được điều trị bởi đội ngũ bác sĩ chuyên khoa Implant được cấp chứng chỉ hành nghề chính quy, với trang thiết bị hiện đại như máy CT Conebeam 3D, hệ thống scan trong miệng, phòng vô trùng khép kín và quy trình kiểm soát nhiễm khuẩn đạt chuẩn Bộ Y Tế.",
-      question:
-        "Bạn đã sẵn sàng để kiến tạo nụ cười mơ ước cùng bác sĩ chính quy tại Emis Dental?",
+        "Tại Emis Dental, khách hàng được điều trị bởi đội ngũ bác sĩ Implant chính quy với thiết bị hiện đại như máy CT Conebeam 3D, máy scan trong miệng, phòng vô trùng khép kín và quy trình chuẩn Bộ Y Tế.",
+      question: "Bạn đã sẵn sàng kiến tạo nụ cười mơ ước cùng bác sĩ chính quy tại Emis Dental?",
+      button: "Đặt Lịch Tư Vấn",
     },
   },
 };

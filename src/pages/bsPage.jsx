@@ -10,17 +10,18 @@ import sonPapers from '../pics/bs/sonPapers.jpg';
 
 export default function SonPage() {
   const language = useSelector((state) => state.language.language);
-  const content = language === 'vietnamese' ? sonContent['vietnamese'] : sonContent['english'];
+  const content = sonContent[language];
 
   const images = [bs0, bs1, bs2, bs3, bs4];
 
   return (
     <main className="bg-white">
-      {/* Spacer for fixed navbar */}
+      {/* Navbar spacer */}
       <div className="h-20 md:h-24"></div>
 
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Article Header */}
+
+        {/* Header */}
         <header className="text-center py-12 border-b border-gray-200">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-['Be_Vietnam_Pro'] font-bold text-gray-900 mb-6 leading-tight">
             {content.title}
@@ -40,10 +41,10 @@ export default function SonPage() {
           />
         </div>
 
-        {/* Article Content */}
-        <div className="font-['Be_Vietnam_Pro'] prose prose-lg max-w-none prose-headings:font-['Be_Vietnam_Pro'] prose-headings:text-gray-900 prose-p:text-gray-700 prose-li:text-gray-700">
-          
-          {/* Introduction */}
+        {/* Article Body */}
+        <div className="font-['Be_Vietnam_Pro'] prose prose-lg max-w-none">
+
+          {/* Intro */}
           <section className="mb-16">
             <p className="text-xl leading-relaxed text-gray-700 font-light mb-8">
               {content.introParagraph}
@@ -52,11 +53,11 @@ export default function SonPage() {
 
           {/* Professional Overview */}
           <section className="mb-16">
-            <h2 className="text-3xl font-['Be_Vietnam_Pro'] font-bold mb-8 text-gray-900">
+            <h2 className="text-3xl font-bold mb-8 text-gray-900">
               {content.professionalInfo.title}
             </h2>
             <div className="bg-gray-50 rounded-xl p-8 border-l-4 border-[#d4af37]">
-              <ul className="space-y-3 font-['Be_Vietnam_Pro']">
+              <ul className="space-y-3">
                 {content.professionalInfo.items.map((item, idx) => (
                   <li key={idx} className="flex items-start">
                     <span className="text-[#d4af37] mr-3">•</span>
@@ -67,23 +68,29 @@ export default function SonPage() {
             </div>
           </section>
 
-          {/* Education & Training */}
+          {/* Education */}
           <section className="mb-16">
-            <h2 className="text-3xl font-['Be_Vietnam_Pro'] font-bold mb-8 text-gray-900">
+            <h2 className="text-3xl font-bold mb-8 text-gray-900">
               {content.education.title}
             </h2>
+
             <div className="grid md:grid-cols-2 gap-8">
+              {/* Formal Education */}
               <div>
-                <h3 className="text-xl font-['Be_Vietnam_Pro'] font-semibold mb-4 text-gray-800">
-                  {language === 'vietnamese' ? 'Đào Tạo Chính Quy' : 'Formal Education'}
+                <h3 className="text-xl font-semibold mb-4 text-gray-800">
+                  {content.education.formalEducationTitle}
                 </h3>
-                <p className="text-gray-700 leading-relaxed font-['Be_Vietnam_Pro']">{content.education.formalEducation}</p>
+                <p className="text-gray-700 leading-relaxed">
+                  {content.education.formalEducation}
+                </p>
               </div>
+
+              {/* Advanced Training */}
               <div>
-                <h3 className="text-xl font-['Be_Vietnam_Pro'] font-semibold mb-4 text-gray-800">
-                  {language === 'vietnamese' ? 'Đào Tạo Nâng Cao' : 'Advanced Training'}
+                <h3 className="text-xl font-semibold mb-4 text-gray-800">
+                  {content.education.advancedTrainingTitle}
                 </h3>
-                <ul className="space-y-3 font-['Be_Vietnam_Pro']">
+                <ul className="space-y-3">
                   {content.education.advancedTraining.map((item, idx) => (
                     <li key={idx} className="flex items-start">
                       <span className="text-[#d4af37] mr-3">•</span>
@@ -112,27 +119,29 @@ export default function SonPage() {
 
           {/* Clinical Experience */}
           <section className="mb-16">
-            <h2 className="text-3xl font-['Be_Vietnam_Pro'] font-bold mb-6 text-gray-900">
+            <h2 className="text-3xl font-bold mb-6 text-gray-900">
               {content.clinicalExperience.title}
             </h2>
-            <p className="text-lg leading-relaxed text-gray-700 bg-blue-50 rounded-xl p-8 border border-blue-100 font-['Be_Vietnam_Pro']">
+            <p className="text-lg leading-relaxed text-gray-700 bg-blue-50 rounded-xl p-8 border border-blue-100">
               {content.clinicalExperience.content}
             </p>
           </section>
 
           {/* Philosophy */}
           <section className="mb-16">
-            <h2 className="text-3xl font-['Be_Vietnam_Pro'] font-bold mb-8 text-gray-900">
+            <h2 className="text-3xl font-bold mb-8 text-gray-900">
               {content.philosophy.title}
             </h2>
-            <blockquote className="text-2xl font-['Be_Vietnam_Pro'] italic text-gray-700 text-center border-y border-gray-200 py-8 my-8">
+
+            <blockquote className="text-2xl italic text-gray-700 text-center border-y border-gray-200 py-8 my-8">
               {content.philosophy.quote}
             </blockquote>
+
             <div className="bg-amber-50 rounded-xl p-8">
-              <h3 className="text-xl font-['Be_Vietnam_Pro'] font-semibold mb-6 text-gray-800">
-                {language === 'vietnamese' ? 'Giá Trị Cốt Lõi' : 'Core Values'}
+              <h3 className="text-xl font-semibold mb-6 text-gray-800">
+                {content.philosophy.coreValuesTitle}
               </h3>
-              <ul className="grid md:grid-cols-2 gap-4 font-['Be_Vietnam_Pro']">
+              <ul className="grid md:grid-cols-2 gap-4">
                 {content.philosophy.values.map((val, idx) => (
                   <li key={idx} className="flex items-start bg-white rounded-lg p-4 shadow-sm">
                     <span className="text-[#d4af37] font-bold mr-3">{idx + 1}.</span>
@@ -145,54 +154,62 @@ export default function SonPage() {
 
           {/* Testimonials */}
           <section className="mb-16">
-            <h2 className="text-3xl font-['Be_Vietnam_Pro'] font-bold mb-8 text-gray-900">
+            <h2 className="text-3xl font-bold mb-8 text-gray-900">
               {content.testimonials.title}
             </h2>
+
             <div className="space-y-6">
+              {/* Patient */}
               <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm">
-                <p className="text-lg italic text-gray-700 mb-4 font-['Be_Vietnam_Pro']">{content.testimonials.patientReview}</p>
-                <p className="text-gray-600 font-medium font-['Be_Vietnam_Pro']">
-                  {language === 'vietnamese' ? '— Khách Hàng Hài Lòng' : '— Satisfied Patient'}
+                <p className="text-lg italic text-gray-700 mb-4">
+                  {content.testimonials.patientReview}
+                </p>
+                <p className="text-gray-600 font-medium">
+                  — {content.testimonials.patientLabel}
                 </p>
               </div>
+
+              {/* Colleague */}
               <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm">
-                <p className="text-lg italic text-gray-700 mb-4 font-['Be_Vietnam_Pro']">{content.testimonials.colleagueReview}</p>
-                <p className="text-gray-600 font-medium font-['Be_Vietnam_Pro']">
-                  {language === 'vietnamese' ? '— Đồng Nghiệp Chuyên Môn' : '— Professional Colleague'}
+                <p className="text-lg italic text-gray-700 mb-4">
+                  {content.testimonials.colleagueReview}
+                </p>
+                <p className="text-gray-600 font-medium">
+                  — {content.testimonials.colleagueLabel}
                 </p>
               </div>
             </div>
           </section>
 
-          {/* Call to Action */}
+          {/* CTA */}
           <section className="bg-gradient-to-r from-[#d4af37] to-amber-600 rounded-2xl p-12 text-center text-white mb-16">
-            <h2 className="text-3xl font-['Be_Vietnam_Pro'] font-bold mb-4">{content.cta.title}</h2>
-            <p className="text-xl mb-6 opacity-95 font-['Be_Vietnam_Pro']">{content.cta.content}</p>
-            <p className="text-lg font-semibold opacity-90 font-['Be_Vietnam_Pro']">{content.cta.question}</p>
-            <button className="mt-8 bg-white text-[#d4af37] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-300 font-['Be_Vietnam_Pro']">
-              {language === 'vietnamese' ? 'Đặt Lịch Tư Vấn' : 'Schedule Your Consultation'}
+            <h2 className="text-3xl font-bold mb-4">{content.cta.title}</h2>
+            <p className="text-xl mb-6 opacity-95">{content.cta.content}</p>
+            <p className="text-lg font-semibold opacity-90">{content.cta.question}</p>
+
+            <button className="mt-8 bg-white text-[#d4af37] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-300">
+              {content.cta.button}
             </button>
           </section>
 
-          {/* Publications & Certifications */}
-            <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-8 text-gray-900">
-                {content.certification.title}
-              </h2>
+          {/* Certification */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold mb-8 text-gray-900">
+              {content.certification.title}
+            </h2>
 
-              <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-200">
-                <img
-                  src={sonPapers}
-                  alt={content.certification.title}
-                  className="w-full object-cover"
-                />
-              </div>
+            <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-200">
+              <img
+                src={sonPapers}
+                alt={content.certification.title}
+                className="w-full object-cover"
+              />
+            </div>
 
-              <p className="mt-4 text-gray-600 text-center italic">
-                {content.certification.description}
-              </p>
-            </section>
-
+            <p className="mt-4 text-gray-600 text-center italic">
+              {content.certification.description}
+            </p>
+          </section>
 
         </div>
       </article>
