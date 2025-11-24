@@ -182,15 +182,28 @@ export default function SonPage() {
           </section>
 
           {/* CTA */}
+          {/* Call to Action */}
           <section className="bg-gradient-to-r from-[#d4af37] to-amber-600 rounded-2xl p-12 text-center text-white mb-16">
-            <h2 className="text-3xl font-bold mb-4">{content.cta.title}</h2>
-            <p className="text-xl mb-6 opacity-95">{content.cta.content}</p>
-            <p className="text-lg font-semibold opacity-90">{content.cta.question}</p>
+            <h2 className="text-3xl font-['Be_Vietnam_Pro'] font-bold mb-4">
+              {content.cta.title}
+            </h2>
 
-            <button className="mt-8 bg-white text-[#d4af37] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-300">
+            <p className="text-xl mb-6 opacity-95 font-['Be_Vietnam_Pro']">
+              {content.cta.content}
+            </p>
+
+            <p className="text-lg font-semibold opacity-90 font-['Be_Vietnam_Pro']">
+              {content.cta.question}
+            </p>
+
+            <a
+              href="/contact"
+              className="mt-8 inline-block bg-white text-[#d4af37] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-300 font-['Be_Vietnam_Pro']"
+            >
               {content.cta.button}
-            </button>
+            </a>
           </section>
+
 
           {/* Certification */}
           <section className="mb-16">
