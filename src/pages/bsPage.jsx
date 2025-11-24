@@ -6,6 +6,7 @@ import bs1 from '../pics/bs/bs1.png';
 import bs2 from '../pics/bs/bs2.png';
 import bs3 from '../pics/bs/bs3.png';
 import bs4 from '../pics/bs/bs4.png';
+import sonPapers from '../pics/bs/sonPapers.jpg';
 
 export default function SonPage() {
   const language = useSelector((state) => state.language);
@@ -171,6 +172,30 @@ export default function SonPage() {
               {language === 'vietnamese' ? 'Đặt Lịch Tư Vấn' : 'Schedule Your Consultation'}
             </button>
           </section>
+
+          {/* Publications & Certifications */}
+            <section className="mb-16">
+              <h2 className="text-3xl font-['Be_Vietnam_Pro'] font-bold mb-8 text-gray-900">
+                {language === 'vietnamese'
+                  ? 'Công Trình & Chứng Chỉ'
+                  : 'Publications & Certifications'}
+              </h2>
+
+              <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-200">
+                <img
+                  src={sonPapers}
+                  alt={language === 'vietnamese' ? 'Công trình & chứng chỉ' : 'Publications and Certifications'}
+                  className="w-full object-cover"
+                />
+              </div>
+
+              <p className="mt-4 text-gray-600 text-center italic font-['Be_Vietnam_Pro']">
+                {language === 'vietnamese'
+                  ? 'Một số giấy chứng nhận và công trình tiêu biểu của bác sĩ.'
+                  : 'A selection of Dr. Son’s notable certificates and publications.'}
+              </p>
+            </section>
+
         </div>
       </article>
     </main>
