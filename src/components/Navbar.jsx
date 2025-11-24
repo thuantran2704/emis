@@ -16,6 +16,11 @@ export default function Navbar() {
 
   const content = navbarContent[language] || navbarContent.english;
 
+  const submenuFont = {
+    fontFamily: "'Be Vietnam Pro', sans-serif",
+    fontWeight: '500',
+  };
+
   const aboutDropdownItems = [
     { name: content.drSon, path: '/dr-son' },
     { name: content.veneer, path: '/veneer' },
@@ -33,12 +38,16 @@ export default function Navbar() {
   return (
     <>
       {isMenuOpen && (
-        <div className="inset-0 backdrop-blur-sm bg-white/30 z-40" onClick={toggleMenu}></div>
+        <div
+          className="inset-0 backdrop-blur-sm bg-white/30 z-40"
+          onClick={toggleMenu}
+        ></div>
       )}
 
       <nav className="bg-gradient-to-r from-[#d4af37] via-[#C5AF73] to-[#d4af37] shadow-xl fixed w-full z-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex justify-between items-center h-20">
+
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3 group">
               <div className="h-14 w-14 rounded-full overflow-hidden border-2 border-[#1f2937] border-opacity-20 shadow-md">
@@ -66,7 +75,7 @@ export default function Navbar() {
                 {content.home}
               </Link>
 
-              {/* ABOUT + DROPDOWN */}
+              {/* ABOUT DESKTOP */}
               <div className="relative flex items-center">
                 <Link
                   to="/about"
@@ -76,7 +85,10 @@ export default function Navbar() {
                   {content.about}
                 </Link>
 
-                <button onClick={toggleAbout} className="ml-1 text-[#2a3439] hover:text-gray-700" aria-label="Toggle about submenu">
+                <button
+                  onClick={toggleAbout}
+                  className="ml-1 text-[#2a3439] hover:text-gray-700"
+                >
                   <svg
                     className={`w-4 h-4 transition-transform duration-300 ${isAboutOpen ? 'rotate-180' : ''}`}
                     fill="none"
@@ -94,7 +106,7 @@ export default function Navbar() {
                         key={sub.name}
                         to={sub.path}
                         className="block px-4 py-2 text-[#2a3439] hover:bg-gray-100 transition"
-                        style={{ fontFamily: "'Be Vietnam Pro', sans-serif", fontWeight: '500' }}
+                        style={submenuFont}
                         onClick={() => setIsAboutOpen(false)}
                       >
                         {sub.name}
@@ -120,7 +132,7 @@ export default function Navbar() {
                 {content.equipment}
               </Link>
 
-              {/* Gratitude Dropdown */}
+              {/* GRATITUDE DESKTOP */}
               <div className="relative">
                 <button
                   onClick={toggleGratitude}
@@ -144,7 +156,8 @@ export default function Navbar() {
                       <Link
                         key={item.name}
                         to={item.path}
-                        className="block px-4 py-3 hover:bg-gray-100 transition"
+                        className="block px-4 py-3 hover:bg-gray-100 transition text-[#2a3439]"
+                        style={submenuFont}
                         onClick={() => setIsGratitudeOpen(false)}
                       >
                         {item.name}
@@ -165,7 +178,7 @@ export default function Navbar() {
 
             {/* Mobile Toggle */}
             <div className="md:hidden flex items-center">
-              <button onClick={toggleMenu} className="text-[#2a3439] hover:text-gray-700 focus:outline-none" aria-label="Toggle menu">
+              <button onClick={toggleMenu} className="text-[#2a3439]">
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   {isMenuOpen ? (
                     <path strokeLinecap="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
@@ -181,6 +194,7 @@ export default function Navbar() {
         {/* Mobile Menu */}
         <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
           <div className="px-2 pt-2 pb-4 space-y-1 bg-gradient-to-b from-[#d4af37] to-[#C5AF73] shadow-lg">
+
             <Link
               to="/"
               className="block px-3 py-2 font-medium text-[#2a3439] hover:bg-[#2a3439] hover:text-[#C5AF73] rounded-md"
@@ -189,10 +203,9 @@ export default function Navbar() {
               {content.home}
             </Link>
 
-            {/* MOBILE: About link + arrow (fixed so About is tappable) */}
+            {/* MOBILE ABOUT */}
             <div>
               <div className="flex items-center justify-between px-3 py-2 rounded-md">
-                {/* Left: actual link to /about */}
                 <Link
                   to="/about"
                   className="font-medium text-[#2a3439] hover:text-[#C5AF73]"
@@ -204,11 +217,9 @@ export default function Navbar() {
                   {content.about}
                 </Link>
 
-                {/* Right: arrow to toggle submenu */}
                 <button
                   onClick={toggleAbout}
                   className="p-1 rounded hover:bg-white/20 text-[#2a3439]"
-                  aria-label="Toggle about submenu"
                 >
                   <svg
                     className={`w-4 h-4 transition-transform ${isAboutOpen ? 'rotate-180' : ''}`}
@@ -228,6 +239,7 @@ export default function Navbar() {
                       key={sub.name}
                       to={sub.path}
                       className="block px-3 py-2 text-[#2a3439] hover:bg-[#2a3439] hover:text-[#C5AF73] rounded-md"
+                      style={submenuFont}
                       onClick={toggleMenu}
                     >
                       {sub.name}
@@ -253,7 +265,7 @@ export default function Navbar() {
               {content.equipment}
             </Link>
 
-            {/* Gratitude Mobile */}
+            {/* MOBILE GRATITUDE */}
             <div>
               <button
                 onClick={toggleGratitude}
@@ -277,6 +289,7 @@ export default function Navbar() {
                       key={sub.name}
                       to={sub.path}
                       className="block px-3 py-2 text-[#2a3439] hover:bg-[#2a3439] hover:text-[#C5AF73] rounded-md"
+                      style={submenuFont}
                       onClick={toggleMenu}
                     >
                       {sub.name}
