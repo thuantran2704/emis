@@ -24,6 +24,12 @@ export default function CustomerReactionsBanner() {
       comment: content.comments[2],
       videoUrl: "https://youtube.com/embed/surWZR9t57k",
     },
+    {
+      name: "ANH ROMA",
+      service: content.services[3],
+      comment: content.comments[3],
+      videoUrl: "https://www.youtube.com/embed/-tyHuTtzWiE",
+    },
   ];
 
   return (
