@@ -32,7 +32,7 @@ export default function Navbar() {
     { name: content.implantPromo, path: '/qc1' },
     { name: content.porcelainPromo, path: '/qc2' },
     { name: content.whiteningPromo, path: '/qc3' },
-    { name: content.novemberPromo, path: '/qc4' },
+    // { name: content.novemberPromo, path: '/qc4' },
   ];
 
   return (
