@@ -205,7 +205,9 @@ export default function Services() {
                       )}
                       <td className="border-r-2 border-gray-600 px-3 md:px-4 py-2">{row.desc}</td>
                       <td className="border-r-2 border-gray-600 px-3 md:px-4 py-2 text-center">{row.unit}</td>
-                      <td className="px-3 md:px-4 py-2 font-medium text-gray-800 text-right">{row.price}</td>
+                      <td className="px-3 md:px-4 py-2 font-medium text-gray-800 text-right">
+                        {row.price ? `${row.price} VND` : ""}
+                      </td>
                     </tr>
                   ));
                 })}
