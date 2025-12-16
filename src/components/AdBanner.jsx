@@ -4,10 +4,8 @@ import { useNavigate } from "react-router-dom";
 import ad1 from "../pics/ads/ad1.jpg";
 import ad2 from "../pics/ads/ad2.jpg";
 import ad3 from "../pics/ads/ad3.jpg";
-import ad4 from "../pics/ads/ad4.jpg";
-import ad5 from "../pics/ads/ad5.jpg";
 
-const adImages = [ad1, ad2, ad3, ad4, ad5];
+const adImages = [ad1, ad2, ad3, ];
 
 export default function AdBanner() {
   const [current, setCurrent] = useState(0);
