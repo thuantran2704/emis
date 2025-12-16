@@ -28,6 +28,12 @@ export default function App() {
   const handleLanguageChange = (selectedLanguage) => {
     dispatch(setLanguage(selectedLanguage));
   };
+  
+    // guide add new promos:
+    // add new pics in ./pics/ads/
+    // then add a new entry in AdBanner (just the pic)
+    // Then add new path in App.jsx
+    // then create new website for it
 
   return (
     <Router>
