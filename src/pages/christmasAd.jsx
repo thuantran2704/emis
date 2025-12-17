@@ -97,13 +97,20 @@ export default function ChristmasAdsLandingPage() {
     <div style={{ fontFamily: "'Inter','Be Vietnam Pro',sans-serif" }}>
       <div style={{ height: 70 }} />
 
-      {/* General Ad Image */}
-      <section style={{ maxWidth: 1100, margin: "20px auto" }}>
+      {/* General Ad Image / Banner */}
+      <section style={{
+        maxWidth: "1400px",
+        margin: "20px auto",
+        padding: "0 16px",
+      }}>
         <img
           src={imgs.gen}
           alt="Christmas promotion"
           style={{
             width: "100%",
+            height: "auto",
+            maxHeight: "80vh",
+            objectFit: "contain",
             borderRadius: 24,
             boxShadow: "0 15px 35px rgba(0,0,0,.18)",
           }}
@@ -112,7 +119,7 @@ export default function ChristmasAdsLandingPage() {
 
       {/* Hero */}
       <section style={{
-        maxWidth: 1100,
+        maxWidth: "1400px",
         margin: "40px auto",
         padding: "40px 25px",
         textAlign: "center",
@@ -129,7 +136,7 @@ export default function ChristmasAdsLandingPage() {
       </section>
 
       {/* Ads summary */}
-      <section style={{ maxWidth: 1100, margin: "60px auto", padding: "0 20px" }}>
+      <section style={{ maxWidth: "1400px", margin: "60px auto", padding: "0 20px" }}>
         <div style={{ display: "flex", flexWrap: "wrap", gap: 25, justifyContent: "center" }}>
           {t.sections.map((s) => (
             <div key={s.title} style={{
@@ -139,7 +146,17 @@ export default function ChristmasAdsLandingPage() {
               boxShadow: "0 10px 30px rgba(183,141,68,.18)",
               overflow: "hidden",
             }}>
-              <img src={s.img} alt={s.title} style={{ width: "100%", height: 200, objectFit: "cover" }} />
+              <img
+                src={s.img}
+                alt={s.title}
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  maxHeight: "420px",
+                  objectFit: "contain",
+                  backgroundColor: "#fff",
+                }}
+              />
               <div style={{ padding: 20 }}>
                 <span style={{
                   background: "#e74c3c",
