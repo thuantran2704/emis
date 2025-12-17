@@ -97,9 +97,22 @@ export default function ChristmasAdsLandingPage() {
     <div style={{ fontFamily: "'Inter','Be Vietnam Pro',sans-serif" }}>
       <div style={{ height: 70 }} />
 
-      {/* General Ad Image / Banner */}
+      {/* Page Title */}
+      <section style={{ maxWidth: "1400px", margin: "30px auto 10px", textAlign: "center" }}>
+        <h1 style={{
+          fontSize: "clamp(1.8rem,4vw,2.6rem)",
+          fontWeight: 900,
+          color: "#d35400",
+          marginBottom: 10,
+        }}>
+          {t.heroTitle}
+        </h1>
+        <p style={{ fontSize: "1.1rem", color: "#555" }}>{t.heroDesc}</p>
+      </section>
+
+      {/* Compact General Banner */}
       <section style={{
-        maxWidth: "1400px",
+        maxWidth: "1100px",
         margin: "20px auto",
         padding: "0 16px",
       }}>
@@ -108,42 +121,33 @@ export default function ChristmasAdsLandingPage() {
           alt="Christmas promotion"
           style={{
             width: "100%",
-            height: "auto",
-            maxHeight: "80vh",
+            maxHeight: "320px",
             objectFit: "contain",
-            borderRadius: 24,
-            boxShadow: "0 15px 35px rgba(0,0,0,.18)",
+            borderRadius: 18,
+            boxShadow: "0 10px 25px rgba(0,0,0,.15)",
           }}
         />
       </section>
 
-      {/* Hero */}
-      <section style={{
-        maxWidth: "1400px",
-        margin: "40px auto",
-        padding: "40px 25px",
-        textAlign: "center",
-        background: "linear-gradient(135deg,#fce8d4,#f8d4b5)",
-        borderRadius: 24,
-        boxShadow: "0 15px 35px rgba(247,148,30,.25)",
-        border: "2px solid #f7941e",
-      }}>
-        <h1 style={{ fontWeight: 900, color: "#d35400", marginBottom: 15 }}>
-          {t.heroTitle}
-        </h1>
-        <p style={{ fontSize: "1.1rem", marginBottom: 25 }}>{t.heroDesc}</p>
-        <Link to="/contact" className="cta-button pulse-animation">{t.heroCTA}</Link>
-      </section>
+      
 
-      {/* Ads summary */}
+      {/* Promotion Slider */}
       <section style={{ maxWidth: "1400px", margin: "60px auto", padding: "0 20px" }}>
-        <div style={{ display: "flex", flexWrap: "wrap", gap: 25, justifyContent: "center" }}>
+        <div style={{
+          display: "flex",
+          gap: 30,
+          overflowX: "auto",
+          paddingBottom: 10,
+          scrollSnapType: "x mandatory",
+        }}>
           {t.sections.map((s) => (
             <div key={s.title} style={{
-              flex: "1 1 260px",
+              minWidth: 360,
+              flexShrink: 0,
+              scrollSnapAlign: "center",
               background: "#fff",
-              borderRadius: 18,
-              boxShadow: "0 10px 30px rgba(183,141,68,.18)",
+              borderRadius: 22,
+              boxShadow: "0 15px 35px rgba(183,141,68,.22)",
               overflow: "hidden",
             }}>
               <img
@@ -151,25 +155,31 @@ export default function ChristmasAdsLandingPage() {
                 alt={s.title}
                 style={{
                   width: "100%",
-                  height: "auto",
-                  maxHeight: "420px",
+                  height: "420px",
                   objectFit: "contain",
-                  backgroundColor: "#fff",
+                  background: "#fff",
                 }}
               />
-              <div style={{ padding: 20 }}>
+              <div style={{ padding: 24 }}>
                 <span style={{
                   background: "#e74c3c",
                   color: "#fff",
-                  padding: "4px 12px",
+                  padding: "6px 14px",
                   borderRadius: 20,
-                  fontSize: 12,
-                  fontWeight: 700,
+                  fontSize: 13,
+                  fontWeight: 800,
                 }}>{s.badge}</span>
-                <h3 style={{ margin: "15px 0", color: "#a67c52" }}>{s.title}</h3>
-                <ul style={{ paddingLeft: 18, lineHeight: 1.6 }}>
+                <h3 style={{ margin: "18px 0 10px", color: "#a67c52", fontSize: "1.3rem" }}>
+                  {s.title}
+                </h3>
+                <ul style={{ paddingLeft: 18, lineHeight: 1.7 }}>
                   {s.items.map((i, idx) => <li key={idx}>{i}</li>)}
                 </ul>
+                <div style={{ marginTop: 20 }}>
+                  <Link to="/contact" className="cta-button" style={{ width: "100%", textAlign: "center" }}>
+                    {t.heroCTA}
+                  </Link>
+                </div>
               </div>
             </div>
           ))}
