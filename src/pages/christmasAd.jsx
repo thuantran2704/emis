@@ -2,23 +2,38 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import ContactForm from "../components/ContactForm";
 
-// Images
-import implantImg from "../pics/ads/implant.jpg";
-import whiteningImg from "../pics/ads/whitening.jpg";
-import crownImg from "../pics/ads/crown.jpg";
-import kidsImg from "../pics/ads/kids.jpg";
+// Language-specific images
+import engGen from "../pics/ads/eng-genad.png";
+import vieGen from "../pics/ads/vie-genad.png";
+
+import engImplant from "../pics/ads/eng-implant9tr.png";
+import vieImplant from "../pics/ads/vie-implant9tr.png";
+
+import engWhite from "../pics/ads/eng-teethwhite.png";
+import vieWhite from "../pics/ads/vie-teethwhite.png";
+
+import engRemove from "../pics/ads/eng-teethremove.png";
+import vieRemove from "../pics/ads/vie-teethremove.png";
 
 export default function ChristmasAdsLandingPage() {
   const language = useSelector((state) => state.language.language);
+  const isVN = language === "vietnamese";
+
+  const imgs = {
+    gen: isVN ? vieGen : engGen,
+    implant: isVN ? vieImplant : engImplant,
+    white: isVN ? vieWhite : engWhite,
+    remove: isVN ? vieRemove : engRemove,
+  };
 
   const text = {
     english: {
       heroTitle: "CHRISTMAS SPECIAL – BRIGHT SMILE, BIG SAVINGS",
-      heroDesc: "Valid from Dec 1 – Dec 31 at Emis Dental. Limited-time offers for the holiday season.",
+      heroDesc: "Valid from Dec 1 – Dec 31 at Emis Dental. Limited-time holiday offers.",
       heroCTA: "BOOK APPOINTMENT",
       sections: [
         {
-          img: implantImg,
+          img: imgs.implant,
           title: "IMPLANT PROMOTION",
           badge: "LIMITED",
           items: [
@@ -29,22 +44,13 @@ export default function ChristmasAdsLandingPage() {
           ],
         },
         {
-          img: whiteningImg,
+          img: imgs.white,
           title: "TEETH WHITENING",
           badge: "UP TO 40% OFF",
           items: ["In-chair professional whitening – save up to 40%"],
         },
         {
-          img: crownImg,
-          title: "PORCELAIN CROWNS",
-          badge: "UP TO 40% OFF",
-          items: [
-            "Up to 40% off Zirconia & Cercon HT",
-            "Extra 5% off for 10 teeth or more",
-          ],
-        },
-        {
-          img: kidsImg,
+          img: imgs.remove,
           title: "FREE CHILD TOOTH EXTRACTION",
           badge: "FREE",
           items: ["Free baby tooth extraction for children"],
@@ -54,11 +60,11 @@ export default function ChristmasAdsLandingPage() {
     },
     vietnamese: {
       heroTitle: "ĐÓN GIÁNG SINH – RĂNG ĐẸP RẠNG RỠ, ƯU ĐÃI HẾT CỠ",
-      heroDesc: "Áp dụng từ 01/12 – 31/12 tại Emis Dental. Ưu đãi số lượng có hạn trong mùa lễ hội.",
+      heroDesc: "Áp dụng từ 01/12 – 31/12 tại Emis Dental. Ưu đãi số lượng có hạn.",
       heroCTA: "ĐẶT HẸN NGAY",
       sections: [
         {
-          img: implantImg,
+          img: imgs.implant,
           title: "ƯU ĐÃI IMPLANT",
           badge: "GIỚI HẠN",
           items: [
@@ -69,22 +75,13 @@ export default function ChristmasAdsLandingPage() {
           ],
         },
         {
-          img: whiteningImg,
+          img: imgs.white,
           title: "TẨY TRẮNG RĂNG",
           badge: "GIẢM 40%",
           items: ["Tẩy trắng răng tại ghế giảm đến 40%"],
         },
         {
-          img: crownImg,
-          title: "BỌC RĂNG SỨ",
-          badge: "GIẢM 40%",
-          items: [
-            "Giảm đến 40% các dòng Zirconia, Cercon HT",
-            "Giảm thêm 5% khi làm từ 10 răng trở lên",
-          ],
-        },
-        {
-          img: kidsImg,
+          img: imgs.remove,
           title: "NHỔ RĂNG SỮA MIỄN PHÍ",
           badge: "MIỄN PHÍ",
           items: ["Miễn phí nhổ răng sữa cho trẻ em"],
@@ -94,17 +91,30 @@ export default function ChristmasAdsLandingPage() {
     },
   };
 
-  const t = language === "vietnamese" ? text.vietnamese : text.english;
+  const t = isVN ? text.vietnamese : text.english;
 
   return (
     <div style={{ fontFamily: "'Inter','Be Vietnam Pro',sans-serif" }}>
       <div style={{ height: 70 }} />
 
+      {/* General Ad Image */}
+      <section style={{ maxWidth: 1100, margin: "20px auto" }}>
+        <img
+          src={imgs.gen}
+          alt="Christmas promotion"
+          style={{
+            width: "100%",
+            borderRadius: 24,
+            boxShadow: "0 15px 35px rgba(0,0,0,.18)",
+          }}
+        />
+      </section>
+
       {/* Hero */}
       <section style={{
         maxWidth: 1100,
-        margin: "20px auto",
-        padding: "50px 25px",
+        margin: "40px auto",
+        padding: "40px 25px",
         textAlign: "center",
         background: "linear-gradient(135deg,#fce8d4,#f8d4b5)",
         borderRadius: 24,
@@ -123,14 +133,13 @@ export default function ChristmasAdsLandingPage() {
         <div style={{ display: "flex", flexWrap: "wrap", gap: 25, justifyContent: "center" }}>
           {t.sections.map((s) => (
             <div key={s.title} style={{
-              flex: "1 1 240px",
+              flex: "1 1 260px",
               background: "#fff",
               borderRadius: 18,
               boxShadow: "0 10px 30px rgba(183,141,68,.18)",
               overflow: "hidden",
-              transition: "transform .3s",
             }}>
-              <img src={s.img} alt={s.title} style={{ width: "100%", height: 180, objectFit: "cover" }} />
+              <img src={s.img} alt={s.title} style={{ width: "100%", height: 200, objectFit: "cover" }} />
               <div style={{ padding: 20 }}>
                 <span style={{
                   background: "#e74c3c",
