@@ -48,11 +48,11 @@ export default function App() {
           <Route path="/about" element={<About  />} />
           <Route path="/services" element={<Services  />} />
           <Route path="/equipment" element={<Equipment  />} />
-          <Route path="/testing" element={<VeneerLanding />} />
+          <Route path="/veneer" element={<VeneerLanding />} />
           <Route path="/implant" element={<ImplantInfo />}/>
           <Route path="/crown" element={<CrownLanding/>}/>
           <Route path="/christmas" element={<ChristmasAdsLandingPage/>}/>
-          <Route path="bs" element={<SonPage />}/>
+          <Route path="dr-son" element={<SonPage />}/>
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer language={language}/>
