@@ -7,11 +7,9 @@ import { useSelector } from 'react-redux';
 export default function Navbar() {
   const language = useSelector((state) => state.language.language);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isGratitudeOpen, setIsGratitudeOpen] = useState(false);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  const toggleGratitude = () => setIsGratitudeOpen(!isGratitudeOpen);
   const toggleAbout = () => setIsAboutOpen(!isAboutOpen);
 
   const content = navbarContent[language] || navbarContent.english;
@@ -26,13 +24,6 @@ export default function Navbar() {
     { name: content.veneer, path: '/veneer' },
     { name: content.implant, path: '/implant' },
     { name: content.crown, path: '/crown' },
-  ];
-
-  const gratitudeItems = [
-    { name: content.implantPromo, path: '/qc1' },
-    { name: content.porcelainPromo, path: '/qc2' },
-    { name: content.whiteningPromo, path: '/qc3' },
-    // { name: content.novemberPromo, path: '/qc4' },
   ];
 
   return (
@@ -132,40 +123,14 @@ export default function Navbar() {
                 {content.equipment}
               </Link>
 
-              {/* GRATITUDE DESKTOP */}
-              <div className="relative">
-                <button
-                  onClick={toggleGratitude}
-                  className="text-[#2a3439] font-medium px-3 py-2 flex items-center"
-                  style={{ fontFamily: "'Be Vietnam Pro', sans-serif", fontWeight: '600' }}
-                >
-                  {content.gratitude}
-                  <svg
-                    className={`w-4 h-4 ml-1 transition-transform duration-300 ${isGratitudeOpen ? 'rotate-180' : ''}`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
-                  </svg>
-                </button>
-
-                {isGratitudeOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-md shadow-lg py-2 z-50 border border-gray-200">
-                    {gratitudeItems.map((item) => (
-                      <Link
-                        key={item.name}
-                        to={item.path}
-                        className="block px-4 py-3 hover:bg-gray-100 transition text-[#2a3439]"
-                        style={submenuFont}
-                        onClick={() => setIsGratitudeOpen(false)}
-                      >
-                        {item.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
+              {/* GRATITUDE - Now a direct link to /christmas */}
+              <Link
+                to="/christmas"
+                className="text-[#2a3439] font-medium px-3 py-2 transition-all duration-300"
+                style={{ fontFamily: "'Be Vietnam Pro', sans-serif", fontWeight: '600' }}
+              >
+                {content.gratitude}
+              </Link>
 
               <Link
                 to="/contact"
@@ -265,39 +230,14 @@ export default function Navbar() {
               {content.equipment}
             </Link>
 
-            {/* MOBILE GRATITUDE */}
-            <div>
-              <button
-                onClick={toggleGratitude}
-                className="w-full flex justify-between px-3 py-2 text-[#2a3439] font-medium hover:bg-[#2a3439] hover:text-[#C5AF73] rounded-md"
-              >
-                {content.gratitude}
-                <svg
-                  className={`w-4 h-4 transition-transform ${isGratitudeOpen ? 'rotate-180' : ''}`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-
-              {isGratitudeOpen && (
-                <div className="ml-4 mt-1">
-                  {gratitudeItems.map((sub) => (
-                    <Link
-                      key={sub.name}
-                      to={sub.path}
-                      className="block px-3 py-2 text-[#2a3439] hover:bg-[#2a3439] hover:text-[#C5AF73] rounded-md"
-                      style={submenuFont}
-                      onClick={toggleMenu}
-                    >
-                      {sub.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
+            {/* MOBILE GRATITUDE - Now a direct link to /christmas */}
+            <Link
+              to="/christmas"
+              className="block px-3 py-2 text-[#2a3439] font-medium rounded-md hover:bg-[#2a3439] hover:text-[#C5AF73]"
+              onClick={toggleMenu}
+            >
+              {content.gratitude}
+            </Link>
 
             <Link
               to="/contact"
