@@ -97,27 +97,168 @@ export default function ChristmasAdsLandingPage() {
     <div style={{ fontFamily: "'Inter','Be Vietnam Pro',sans-serif" }}>
       <div style={{ height: 70 }} />
 
-      {/* Page Title */}
+      {/* General Ad Image / Banner */}
       <section style={{
-        maxWidth: "1100px",
-        margin: "40px auto 20px",
-        padding: "0 20px",
-        textAlign: "center",
+        maxWidth: "1400px",
+        margin: "20px auto",
+        padding: "0 16px",
       }}>
-        <h1 style={{ fontWeight: 900, color: "#d35400", marginBottom: 10 }}>
+        <img
+          src={imgs.gen}
+          alt="Christmas promotion"
+          style={{
+            width: "100%",
+            height: "auto",
+            maxHeight: "80vh",
+            objectFit: "contain",
+            borderRadius: 24,
+            boxShadow: "0 15px 35px rgba(0,0,0,.18)",
+          }}
+        />
+      </section>
+
+      {/* Hero */}
+      <section style={{
+        maxWidth: "1400px",
+        margin: "40px auto",
+        padding: "40px 25px",
+        textAlign: "center",
+        background: "linear-gradient(135deg,#fce8d4,#f8d4b5)",
+        borderRadius: 24,
+        boxShadow: "0 15px 35px rgba(247,148,30,.25)",
+        border: "2px solid #f7941e",
+      }}>
+        <h1 style={{ fontWeight: 900, color: "#d35400", marginBottom: 15 }}>
           {t.heroTitle}
         </h1>
-        <p style={{ fontSize: "1.15rem", lineHeight: 1.7, marginBottom: 18 }}>
-          {t.heroDesc}
-        </p>
-        <p style={{ maxWidth: 900, margin: "0 auto", lineHeight: 1.7, color: "#555" }}>
-          {isVN
-            ? "Giáng Sinh này, Emis Dental mang đến những ưu đãi đặc biệt giúp bạn và gia đình chăm sóc răng miệng toàn diện với chi phí tiết kiệm nhất. Số lượng ưu đãi có hạn – áp dụng trong thời gian ngắn."
-            : "This Christmas, Emis Dental brings exclusive offers designed to help you and your family achieve healthy, confident smiles at exceptional value. Limited quantities available during the holiday season."}
-        </p>
-        <div style={{ marginTop: 25 }}>
-          <Link to="/contact" className="cta-button pulse-animation">{t.heroCTA}</Link>
+        <p style={{ fontSize: "1.1rem", marginBottom: 25 }}>{t.heroDesc}</p>
+        <Link to="/contact" className="cta-button pulse-animation">{t.heroCTA}</Link>
+      </section>
+
+      {/* Ads summary */}
+      <section style={{ maxWidth: "1400px", margin: "60px auto", padding: "0 20px" }}>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 25, justifyContent: "center" }}>
+          {t.sections.map((s) => (
+            <div key={s.title} style={{
+              flex: "1 1 260px",
+              background: "#fff",
+              borderRadius: 18,
+              boxShadow: "0 10px 30px rgba(183,141,68,.18)",
+              overflow: "hidden",
+            }}>
+              <img
+                src={s.img}
+                alt={s.title}
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  maxHeight: "420px",
+                  objectFit: "contain",
+                  backgroundColor: "#fff",
+                }}
+              />
+              <div style={{ padding: 20 }}>
+                <span style={{
+                  background: "#e74c3c",
+                  color: "#fff",
+                  padding: "4px 12px",
+                  borderRadius: 20,
+                  fontSize: 12,
+                  fontWeight: 700,
+                }}>{s.badge}</span>
+                <h3 style={{ margin: "15px 0", color: "#a67c52" }}>{s.title}</h3>
+                <ul style={{ paddingLeft: 18, lineHeight: 1.6 }}>
+                  {s.items.map((i, idx) => <li key={idx}>{i}</li>)}
+                </ul>
+              </div>
+            </div>
+          ))}
         </div>
+      </section>
+
+      {/* Gift */}
+      <section style={{
+        background: "linear-gradient(135deg,#f8f1e7,#fce8d4)",
+        padding: "50px 20px",
+        textAlign: "center",
+        borderTop: "5px solid #f7941e",
+        borderBottom: "5px solid #f7941e",
+      }}>
+        <h2 style={{ color: "#d35400", fontWeight: 800, marginBottom: 15 }}>🎄 Christmas Gift</h2>
+        <p style={{ maxWidth: 800, margin: "0 auto", lineHeight: 1.6 }}>{t.gift}</p>
+      </section>
+
+      {/* General Ad Banner */}
+      <section style={{
+        maxWidth: "1400px",
+        margin: "40px auto",
+        padding: "0 16px",
+      }}>
+        <img
+          src={imgs.gen}
+          alt="Christmas General Promotion"
+          onClick={() => window.open(imgs.gen, "_blank")}
+          style={{
+            width: "100%",
+            height: "50vh",
+            objectFit: "contain",
+            borderRadius: 24,
+            cursor: "zoom-in",
+            boxShadow: "0 15px 35px rgba(0,0,0,.2)",
+          }}
+        />
+      </section>
+
+      {/* Individual Ads */}
+      <section style={{ maxWidth: "1400px", margin: "60px auto", padding: "0 20px" }}>
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+          gap: 30,
+        }}>
+          {t.sections.map((s) => (
+            <div key={s.title} style={{ textAlign: "center" }}>
+              <img
+                src={s.img}
+                alt={s.title}
+                onClick={() => window.open(s.img, "_blank")}
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  maxHeight: "520px",
+                  objectFit: "contain",
+                  cursor: "zoom-in",
+                  borderRadius: 20,
+                  boxShadow: "0 12px 30px rgba(0,0,0,.18)",
+                  background: "#fff",
+                }}
+              />
+              <h3 style={{ marginTop: 18, color: "#a67c52", fontWeight: 800 }}>{s.title}</h3>
+              <ul style={{
+                maxWidth: 420,
+                margin: "12px auto 0",
+                textAlign: "left",
+                lineHeight: 1.7,
+              }}>
+                {s.items.map((i, idx) => (
+                  <li key={idx}>{i}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Christmas Gift */}
+      <section style={{
+        background: "linear-gradient(135deg,#f8f1e7,#fce8d4)",
+        padding: "60px 20px",
+        textAlign: "center",
+        borderTop: "5px solid #f7941e",
+        borderBottom: "5px solid #f7941e",
+      }}>
+        <h2 style={{ color: "#d35400", fontWeight: 800, marginBottom: 15 }}>🎄 Christmas Gift</h2>
+        <p style={{ maxWidth: 900, margin: "0 auto", lineHeight: 1.7 }}>{t.gift}</p>
       </section>
 
       <ContactForm />
