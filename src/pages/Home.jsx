@@ -12,7 +12,7 @@ import teethwhitening from '../pics/teethwhitening.jpg';
 import canal from '../pics/canal.jpg';
 import wisdom from '../pics/wisdomteeth.jpg';
 import ImplantCards from '../components/implants_banner';
-import AdBanner from '../components/AdBanner';
+// import AdBanner from '../components/AdBanner';
 import hiossenImg from '../pics/hiossen.jpg';
 import osstemImg from '../pics/osstem.jpg';
 import straumannImg from '../pics/straumann.jpg';
@@ -98,7 +98,7 @@ export default function Home() {
       </section>
 
       {/* Ad Banner */}
-      <AdBanner/>
+      {/* <AdBanner/> */}
       
       {/* Services Section */}
       <section className="py-16 bg-[#fcfbf8]">
