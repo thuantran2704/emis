@@ -98,104 +98,26 @@ export default function ChristmasAdsLandingPage() {
       <div style={{ height: 70 }} />
 
       {/* Page Title */}
-      <section style={{ maxWidth: "1400px", margin: "30px auto 10px", textAlign: "center" }}>
-        <h1 style={{
-          fontSize: "clamp(1.8rem,4vw,2.6rem)",
-          fontWeight: 900,
-          color: "#d35400",
-          marginBottom: 10,
-        }}>
-          {t.heroTitle}
-        </h1>
-        <p style={{ fontSize: "1.1rem", color: "#555" }}>{t.heroDesc}</p>
-      </section>
-
-      {/* Compact General Banner */}
       <section style={{
         maxWidth: "1100px",
-        margin: "20px auto",
-        padding: "0 16px",
-      }}>
-        <img
-          src={imgs.gen}
-          alt="Christmas promotion"
-          style={{
-            width: "100%",
-            maxHeight: "320px",
-            objectFit: "contain",
-            borderRadius: 18,
-            boxShadow: "0 10px 25px rgba(0,0,0,.15)",
-          }}
-        />
-      </section>
-
-      
-
-      {/* Promotion Slider */}
-      <section style={{ maxWidth: "1400px", margin: "60px auto", padding: "0 20px" }}>
-        <div style={{
-          display: "flex",
-          gap: 30,
-          overflowX: "auto",
-          paddingBottom: 10,
-          scrollSnapType: "x mandatory",
-        }}>
-          {t.sections.map((s) => (
-            <div key={s.title} style={{
-              minWidth: 360,
-              flexShrink: 0,
-              scrollSnapAlign: "center",
-              background: "#fff",
-              borderRadius: 22,
-              boxShadow: "0 15px 35px rgba(183,141,68,.22)",
-              overflow: "hidden",
-            }}>
-              <img
-                src={s.img}
-                alt={s.title}
-                style={{
-                  width: "100%",
-                  height: "420px",
-                  objectFit: "contain",
-                  background: "#fff",
-                }}
-              />
-              <div style={{ padding: 24 }}>
-                <span style={{
-                  background: "#e74c3c",
-                  color: "#fff",
-                  padding: "6px 14px",
-                  borderRadius: 20,
-                  fontSize: 13,
-                  fontWeight: 800,
-                }}>{s.badge}</span>
-                <h3 style={{ margin: "18px 0 10px", color: "#a67c52", fontSize: "1.3rem" }}>
-                  {s.title}
-                </h3>
-                <ul style={{ paddingLeft: 18, lineHeight: 1.7 }}>
-                  {s.items.map((i, idx) => <li key={idx}>{i}</li>)}
-                </ul>
-                <div style={{ marginTop: 20 }}>
-                  <Link to="/contact" className="cta-button" style={{ width: "100%", textAlign: "center" }}>
-                    {t.heroCTA}
-                  </Link>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Gift */}
-      <section style={{
-        background: "linear-gradient(135deg,#f8f1e7,#fce8d4)",
-        padding: "50px 20px",
+        margin: "40px auto 20px",
+        padding: "0 20px",
         textAlign: "center",
-        borderTop: "5px solid #f7941e",
-        borderBottom: "5px solid #f7941e",
       }}>
-        <h2 style={{ color: "#d35400", fontWeight: 800, marginBottom: 15 }}>🎄 Christmas Gift</h2>
-        <p style={{ maxWidth: 800, margin: "0 auto", lineHeight: 1.6 }}>{t.gift}</p>
+        <h1 style={{ fontWeight: 900, color: "#d35400", marginBottom: 10 }}>
+          {t.heroTitle}
+        </h1>
+        <p style={{ fontSize: "1.15rem", lineHeight: 1.7, marginBottom: 18 }}>
+          {t.heroDesc}
+        </p>
+        <p style={{ maxWidth: 900, margin: "0 auto", lineHeight: 1.7, color: "#555" }}>
+          {isVN
+            ? "Giáng Sinh này, Emis Dental mang đến những ưu đãi đặc biệt giúp bạn và gia đình chăm sóc răng miệng toàn diện với chi phí tiết kiệm nhất. Số lượng ưu đãi có hạn – áp dụng trong thời gian ngắn."
+            : "This Christmas, Emis Dental brings exclusive offers designed to help you and your family achieve healthy, confident smiles at exceptional value. Limited quantities available during the holiday season."}
+        </p>
+        <div style={{ marginTop: 25 }}>
+          <Link to="/contact" className="cta-button pulse-animation">{t.heroCTA}</Link>
+        </div>
       </section>
 
       <ContactForm />
