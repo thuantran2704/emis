@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Papa from "papaparse";
 import { useSelector } from "react-redux";
-import { getFxRate } from "../components/rateExchange";
+import { getFxRate } from "../components/exchangeRate";
 
 export default function Services() {
   const languageRedux = useSelector((state) => state.language.language);
