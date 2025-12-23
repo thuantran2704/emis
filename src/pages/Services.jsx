@@ -12,7 +12,7 @@ export default function Services() {
   const [search, setSearch] = useState("");
   const [showUSD, setShowUSD] = useState(false);
   const [fxRate, setFxRate] = useState(null);
-  const [fxLastUpdated, setFxLastUpdated] = useState(null); 
+  const [fxLastUpdated, setFxLastUpdated] = useState(null);
 
   const fileCandidates = {
     vietnamese: ["/dental_services_vn.csv", "/dental_services_vietnamese.csv", "/dental_services.csv"],
@@ -94,7 +94,6 @@ export default function Services() {
       const unitField = pickField(fields, ["unit","donvi","don vi","đơn vị"]) || fields[2];
       const priceField = pickField(fields, ["price","gia","giá","serviceprice","service price"]) || fields[3];
 
-      // Set loading while calculating
       setLoading(true);
 
       const rows = parsed.data
@@ -102,9 +101,12 @@ export default function Services() {
         .map(r => {
           const rawPrice = (r[priceField] || "").toString().trim();
 
-          // Convert to USD using cached fxRate
-          let priceUSD = "-";
-          if (fxRate) {
+          // Check if numeric
+          const isNumeric = !!rawPrice.match(/\d/);
+
+          // Convert to USD only if numeric
+          let priceUSD = rawPrice;
+          if (isNumeric && fxRate) {
             const numbers = rawPrice.match(/\d[\d,]*/g);
             if (numbers?.length) {
               const nums = numbers.map(n => parseFloat(n.replace(/,/g, "")));
@@ -115,12 +117,14 @@ export default function Services() {
             }
           }
 
+          const priceVND = isNumeric ? `${rawPrice} VND` : rawPrice;
+
           return {
             __raw: r,
             category: (r[categoryField] || "").toString().trim(),
             desc: (r[descField] || "").toString().trim(),
             unit: (r[unitField] || "").toString().trim(),
-            priceVND: rawPrice ? rawPrice + " VND" : "-",
+            priceVND,
             priceUSD,
           };
         });
