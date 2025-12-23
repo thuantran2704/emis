@@ -100,11 +100,8 @@ export default function Services() {
         .filter(r => Object.values(r).some(v => v !== null && v !== undefined && String(v).trim() !== ""))
         .map(r => {
           const rawPrice = (r[priceField] || "").toString().trim();
-
-          // Check if numeric
           const isNumeric = !!rawPrice.match(/\d/);
 
-          // Convert to USD only if numeric
           let priceUSD = rawPrice;
           if (isNumeric && fxRate) {
             const numbers = rawPrice.match(/\d[\d,]*/g);
@@ -139,7 +136,6 @@ export default function Services() {
     return () => { cancelled = true; };
   }, [language, fxRate]);
 
-  // Group by category
   const grouped = services.reduce((acc, row) => {
     const cat = row.category || "Uncategorized";
     if (!acc[cat]) acc[cat] = [];
@@ -147,7 +143,6 @@ export default function Services() {
     return acc;
   }, {});
 
-  // Filter by search
   const filtered = Object.fromEntries(
     Object.entries(grouped).map(([cat, rows]) => [
       cat,
