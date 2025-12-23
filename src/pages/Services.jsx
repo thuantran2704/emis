@@ -86,30 +86,42 @@ export default function Services() {
       const priceField = pickField(fields, ["price","gia","giá","serviceprice","service price"]) || fields[3];
 
       const rows = parsed.data
-        .filter(r => Object.values(r).some(v => v !== null && v !== undefined && String(v).trim() !== ""))
-        .map(r => {
-          const rawPrice = (r[priceField] || "").toString().trim();
+      .filter(r => Object.values(r).some(v => v !== null && v !== undefined && String(v).trim() !== ""))
+      .map(r => {
+        const rawPrice = (r[priceField] || "").toString().trim();
 
-          let priceUSD = null;
-          if (fxRate) {
-            // Handle ranges like "300,000 – 500,000" or single numbers
-            const numbers = rawPrice.match(/\d[\d,]*/g);
-            if (numbers && numbers.length > 0) {
-              const nums = numbers.map(n => parseFloat(n.replace(/,/g, "")));
-              if (nums.length === 1) priceUSD = nums[0] / fxRate;
-              else priceUSD = nums.map(n => n / fxRate).join(" – ");
+        let priceUSD = null;
+        if (fxRate) {
+          const numbers = rawPrice.match(/\d[\d,]*/g);
+          if (numbers && numbers.length > 0) {
+            const nums = numbers.map(n => parseFloat(n.replace(/,/g, "")));
+            if (nums.length === 1) {
+              let val = nums[0] / fxRate;
+              // Round to nearest 0.5 and subtract 0.01
+              val = Math.round(val * 2) / 2 - 0.01;
+              priceUSD = `${val.toFixed(2)} USD`;
+            } else {
+              priceUSD = nums
+                .map(n => {
+                  let val = n / fxRate;
+                  val = Math.round(val * 2) / 2 - 0.01;
+                  return val.toFixed(2);
+                })
+                .join(" – ") + " USD";
             }
           }
+        }
 
-          return {
-            __raw: r,
-            category: (r[categoryField] || "").toString().trim(),
-            desc: (r[descField] || "").toString().trim(),
-            unit: (r[unitField] || "").toString().trim(),
-            priceVND: rawPrice,
-            priceUSD,
-          };
-        });
+        return {
+          __raw: r,
+          category: (r[categoryField] || "").toString().trim(),
+          desc: (r[descField] || "").toString().trim(),
+          unit: (r[unitField] || "").toString().trim(),
+          priceVND: rawPrice + " VND", // append VND
+          priceUSD,
+        };
+      });
+
 
       setServices(rows);
       setLoading(false);
