@@ -12,7 +12,7 @@ export default function Services() {
   const [search, setSearch] = useState("");
   const [showUSD, setShowUSD] = useState(false);
   const [fxRate, setFxRate] = useState(null);
-  const [fxLastUpdated, setFxLastUpdated] = useState(null); // optional
+  const [fxLastUpdated, setFxLastUpdated] = useState(null); 
 
   const fileCandidates = {
     vietnamese: ["/dental_services_vn.csv", "/dental_services_vietnamese.csv", "/dental_services.csv"],
@@ -43,11 +43,11 @@ export default function Services() {
     let cancelled = false;
     const fetchRate = async () => {
       try {
-        const res = await getFxRate(); // API call once
+        const res = await getFxRate();
         if (!cancelled) {
           if (typeof res === "number") {
             setFxRate(res);
-          } else if (res && res.rate) { // if API returns { rate, lastUpdated }
+          } else if (res && res.rate) {
             setFxRate(res.rate);
             setFxLastUpdated(res.lastUpdated);
           }
@@ -60,7 +60,7 @@ export default function Services() {
     return () => { cancelled = true; };
   }, []);
 
-  // Parse CSV
+  // Parse CSV and calculate USD
   useEffect(() => {
     let cancelled = false;
     const load = async () => {
@@ -94,6 +94,9 @@ export default function Services() {
       const unitField = pickField(fields, ["unit","donvi","don vi","đơn vị"]) || fields[2];
       const priceField = pickField(fields, ["price","gia","giá","serviceprice","service price"]) || fields[3];
 
+      // Set loading while calculating
+      setLoading(true);
+
       const rows = parsed.data
         .filter(r => Object.values(r).some(v => v !== null && v !== undefined && String(v).trim() !== ""))
         .map(r => {
@@ -122,8 +125,10 @@ export default function Services() {
           };
         });
 
-      setServices(rows);
-      setLoading(false);
+      if (!cancelled) {
+        setServices(rows);
+        setLoading(false);
+      }
     };
 
     load();
@@ -177,7 +182,9 @@ export default function Services() {
         )}
 
         {loading ? (
-          <p className="text-center text-gray-500 mt-6">Loading...</p>
+          <p className="text-center text-gray-500 mt-6">
+            {fxRate ? "Calculating prices..." : "Loading..."}
+          </p>
         ) : Object.keys(filtered).every(k => filtered[k].length === 0) ? (
           <p className="text-center text-gray-500 mt-6">{language === "vietnamese" ? "Không tìm thấy dịch vụ" : "No services found"}</p>
         ) : (
@@ -226,4 +233,3 @@ export default function Services() {
     </div>
   );
 }
-
