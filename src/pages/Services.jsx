@@ -12,7 +12,7 @@ export default function Services() {
   const [search, setSearch] = useState("");
   const [showUSD, setShowUSD] = useState(false);
   const [fxRate, setFxRate] = useState(null);
-  const [fxLastUpdated, setFxLastUpdated] = useState(null);
+  const [fxLastUpdated, setFxLastUpdated] = useState(null); // optional
 
   const fileCandidates = {
     vietnamese: ["/dental_services_vn.csv", "/dental_services_vietnamese.csv", "/dental_services.csv"],
@@ -38,24 +38,26 @@ export default function Services() {
     return null;
   };
 
-  // Load FX rate
+  // Load FX rate ONCE
   useEffect(() => {
     let cancelled = false;
     const fetchRate = async () => {
       try {
-        const { rate, lastUpdated } = await getFxRate();
+        const res = await getFxRate(); // API call once
         if (!cancelled) {
-          setFxRate(rate);
-          setFxLastUpdated(lastUpdated);
+          if (typeof res === "number") {
+            setFxRate(res);
+          } else if (res && res.rate) { // if API returns { rate, lastUpdated }
+            setFxRate(res.rate);
+            setFxLastUpdated(res.lastUpdated);
+          }
         }
       } catch (err) {
         console.error("FX rate fetch failed:", err);
       }
     };
     fetchRate();
-    return () => {
-      cancelled = true;
-    };
+    return () => { cancelled = true; };
   }, []);
 
   // Parse CSV
@@ -97,25 +99,16 @@ export default function Services() {
         .map(r => {
           const rawPrice = (r[priceField] || "").toString().trim();
 
-          // Format USD
-          let priceUSD = null;
+          // Convert to USD using cached fxRate
+          let priceUSD = "-";
           if (fxRate) {
             const numbers = rawPrice.match(/\d[\d,]*/g);
-            if (numbers && numbers.length > 0) {
+            if (numbers?.length) {
               const nums = numbers.map(n => parseFloat(n.replace(/,/g, "")));
-              if (nums.length === 1) {
-                let val = nums[0] / fxRate;
-                val = Math.round(val * 2) / 2 - 0.01; // round to nearest 0.5, subtract 0.01
-                priceUSD = `${val.toFixed(2)} USD`;
-              } else {
-                priceUSD = nums
-                  .map(n => {
-                    let val = n / fxRate;
-                    val = Math.round(val * 2) / 2 - 0.01;
-                    return val.toFixed(2);
-                  })
-                  .join(" – ") + " USD";
-              }
+              const convert = (n) => Math.round((n / fxRate) * 2) / 2 - 0.01;
+              priceUSD = nums.length === 1
+                ? `${convert(nums[0]).toFixed(2)} USD`
+                : nums.map(n => convert(n).toFixed(2)).join(" – ") + " USD";
             }
           }
 
@@ -125,7 +118,7 @@ export default function Services() {
             desc: (r[descField] || "").toString().trim(),
             unit: (r[unitField] || "").toString().trim(),
             priceVND: rawPrice ? rawPrice + " VND" : "-",
-            priceUSD: priceUSD || "-",
+            priceUSD,
           };
         });
 
@@ -233,3 +226,4 @@ export default function Services() {
     </div>
   );
 }
+
