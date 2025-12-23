@@ -3,21 +3,22 @@ export async function getFxRate() {
     const response = await fetch(`${import.meta.env.VITE_API_URL}/api/exchange-rate`);
     if (!response.ok) {
       console.warn('FX API responded with status', response.status);
-      return 25000; // safe fallback
+      return { rate: 25000, lastUpdated: null }; // safe fallback
     }
 
     const data = await response.json();
 
-    // If response contains a rate, return it; otherwise fallback
     if (data && typeof data.rate === 'number') {
-      return data.rate;
+      return {
+        rate: data.rate,
+        lastUpdated: data.lastUpdated || null, // include lastUpdated if present
+      };
     }
 
     console.warn('FX API returned invalid data', data);
-    return 25000; // safe fallback
-
+    return { rate: 25000, lastUpdated: null }; // fallback
   } catch (err) {
     console.error('Error fetching FX rate:', err);
-    return 25000; // safe fallback
+    return { rate: 25000, lastUpdated: null }; // fallback
   }
 }
