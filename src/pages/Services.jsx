@@ -1,83 +1,84 @@
 import React, { useState, useEffect } from "react";
 import Papa from "papaparse";
 import { useSelector } from 'react-redux';
+import { getFxRate } from "../components/exchangeRate.jsx";
 /**
  * Robust Services component:
- * - Tries multiple filenames for each language (no more brittle filenames)
- * - Auto-detects header columns by fuzzy matching (handles accents, case, spacing)
- * - Groups rows by the detected "category" column (falls back to "Uncategorized")
- * - Keeps search, nice table layout, and thick borders
+ * - Tries multiple filenames for each language (fallback logic)
+ * - Auto-detects header columns
+ * - Groups rows by category
+ * - Supports search
+ * - Toggle button for VND ↔ USD
  */
-
 export default function Services() {
-  const language = useSelector((state) => state.language.language);
+  const languageRedux = useSelector((state) => state.language.language);
+  const language = languageRedux === "vietnamese" ? "vietnamese" : "english";
   const [services, setServices] = useState([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
+  const [showUSD, setShowUSD] = useState(false);
+  const [fxRate, setFxRate] = useState(null);
 
-  // Candidate file paths (tries them in order)
+  // CSV candidates
   const fileCandidates = {
     vietnamese: ["/dental_services_vn.csv", "/dental_services_vietnamese.csv", "/dental_services.csv"],
     english: ["/emisdental-pricelist.csv", "/dental_services.csv", "/dental_services_english.csv"],
   };
 
-  // Normalize a header string for fuzzy matching
   const normalize = (s) =>
     (s || "")
       .toString()
       .toLowerCase()
-      .normalize?.("NFD") // remove accents
+      .normalize?.("NFD")
       .replace(/[\u0300-\u036f]/g, "")
       .replace(/[^a-z0-9]/g, "");
 
-  // Find best matching header name from available fields
   const pickField = (fields, keywords) => {
     if (!fields || !fields.length) return null;
     const normFields = fields.map((f) => ({ raw: f, norm: normalize(f) }));
-    // exact contains match by keyword
     for (const kw of keywords) {
       const normKw = normalize(kw);
       const found = normFields.find((ff) => ff.norm.includes(normKw));
       if (found) return found.raw;
     }
-    // otherwise return first field that contains any keyword token
-    for (const ff of normFields) {
-      for (const kw of keywords) {
-        if (ff.norm.includes(normalize(kw))) return ff.raw;
-      }
-    }
     return null;
   };
 
+  // Load FX rate
+  useEffect(() => {
+    let cancelled = false;
+    const fetchRate = async () => {
+      try {
+        const rate = await getFxRate();
+        if (!cancelled) setFxRate(rate);
+      } catch (err) {
+        console.error("FX rate fetch failed:", err);
+      }
+    };
+    fetchRate();
+    return () => { cancelled = true; };
+  }, []);
+
+  // Load CSV services
   useEffect(() => {
     let cancelled = false;
     const load = async () => {
       setLoading(true);
       setServices([]);
-      const tries = fileCandidates[language === "vietnamese" ? "vietnamese" : "english"];
+      const tries = fileCandidates[language];
 
       let parsed = null;
       for (const path of tries) {
         try {
           const res = await fetch(path);
-          if (!res.ok) {
-            // try next candidate
-            continue;
-          }
+          if (!res.ok) continue;
           const text = await res.text();
           parsed = Papa.parse(text, { header: true, skipEmptyLines: true });
-          // if parse returned fields and data, break
-          if (parsed && (parsed.meta?.fields?.length > 0 || (parsed.data && parsed.data.length > 0))) {
-            // keep this parsed result
-            break;
-          }
-        } catch (err) {
-          // try next file
-        }
+          if (parsed && (parsed.meta?.fields?.length > 0 || (parsed.data && parsed.data.length > 0))) break;
+        } catch {}
       }
 
       if (cancelled) return;
-
       if (!parsed) {
         console.error("No CSV could be loaded for language:", language);
         setServices([]);
@@ -85,93 +86,90 @@ export default function Services() {
         return;
       }
 
-      // get fields list (meta.fields preferred)
-      const fields = parsed.meta?.fields && parsed.meta.fields.length ? parsed.meta.fields : (parsed.data[0] ? Object.keys(parsed.data[0]) : []);
+      const fields = parsed.meta?.fields?.length ? parsed.meta.fields : Object.keys(parsed.data[0] || {});
 
-      // attempt to detect columns by keywords (Vietnamese + English tokens included)
-      const categoryField =
-        pickField(fields, [
-          "servicecategory",
-          "service category",
-          "category",
-          "danhmuc",
-          "danh muc",
-          "danh muc dich vu",
-          "danh muc dich vu",
-          "danh muc dich vu", // duplicates don't matter
-          "danhmucdichvu",
-          "DANH MỤC DỊCH VỤ",
-        ]) || fields[0] || null;
+      const categoryField = pickField(fields, [
+        "servicecategory","service category","category",
+        "danhmuc","danh muc","danh muc dich vu","danhmucdichvu"
+      ]) || fields[0] || null;
 
-      const descField =
-        pickField(fields, ["description", "desc", "mota", "mo ta", "mô tả", "MÔ TẢ"]) || fields[1] || null;
+      const descField = pickField(fields, ["description","desc","mota","mo ta","mô tả"]) || fields[1] || null;
+      const unitField = pickField(fields, ["unit","donvi","don vi","đơn vị"]) || fields[2] || null;
+      const priceField = pickField(fields, ["price","gia","giá","serviceprice","service price"]) || fields[3] || null;
 
-      const unitField = pickField(fields, ["unit", "donvi", "don vi", "đơn vị", "ĐƠN VỊ", "đon vi"]) || fields[2] || null;
-
-      const priceField =
-        pickField(fields, ["price", "gia", "giá", "serviceprice", "service price", "GIÁ DỊCH VỤ"]) || fields[3] || null;
-
-      // Build cleaned rows (filter empty rows)
       const rows = parsed.data
-        .filter((r) => {
-          // at least one non-empty value
-          return Object.values(r).some((v) => v !== null && v !== undefined && String(v).trim() !== "");
-        })
-        .map((r) => ({
-          __raw: r,
-          category: (r[categoryField] || "").toString().trim(),
-          desc: (r[descField] || "").toString().trim(),
-          unit: (r[unitField] || "").toString().trim(),
-          price: (r[priceField] || "").toString().trim(),
-        }));
+        .filter(r => Object.values(r).some(v => v !== null && v !== undefined && String(v).trim() !== ""))
+        .map(r => {
+          const rawPrice = (r[priceField] || "").toString().trim();
+
+          let priceUSD = null;
+          if (fxRate) {
+            const numbers = rawPrice.match(/\d+([.,]\d+)?/g);
+            if (numbers && numbers.length > 0) {
+              const avg = numbers.map(n => parseFloat(n.replace(/,/g, ""))).reduce((a,b) => a+b, 0)/numbers.length;
+              priceUSD = avg / fxRate;
+            }
+          }
+
+          return {
+            __raw: r,
+            category: (r[categoryField] || "").toString().trim(),
+            desc: (r[descField] || "").toString().trim(),
+            unit: (r[unitField] || "").toString().trim(),
+            priceVND: rawPrice,
+            priceUSD,
+          };
+        });
 
       setServices(rows);
       setLoading(false);
     };
 
     load();
-    return () => {
-      cancelled = true;
-    };
-  }, [language]);
+    return () => { cancelled = true; };
+  }, [language, fxRate]);
 
-  // Group by category (if category blank => "Uncategorized")
+  // Group services by category
   const grouped = services.reduce((acc, row) => {
-    const cat = row.category && row.category !== "" ? row.category : "Uncategorized";
+    const cat = row.category || "Uncategorized";
     if (!acc[cat]) acc[cat] = [];
     acc[cat].push(row);
     return acc;
   }, {});
 
-  // Filter rows by search
+  // Filter by search
   const filtered = Object.fromEntries(
     Object.entries(grouped).map(([cat, rows]) => [
       cat,
-      rows.filter((r) =>
-        [r.category, r.desc, r.unit, r.price].join(" ").toLowerCase().includes(search.toLowerCase())
-      ),
+      rows.filter(r => [r.category,r.desc,r.unit,r.priceVND].join(" ").toLowerCase().includes(search.toLowerCase())),
     ])
   );
 
   return (
     <div className="min-h-screen bg-gray-50 text-gray-800 py-10 px-4 md:px-12 lg:px-24">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-center text-2xl md:text-3xl font-semibold text-gray-900 mb-8 uppercase">
+        <h1 className="text-center text-2xl md:text-3xl font-semibold text-gray-900 mb-4 uppercase">
           {language === "vietnamese" ? "Bảng giá dịch vụ nha khoa" : "International EMIS Dental Price List"}
         </h1>
 
-        <div className="w-full md:w-2/3 mx-auto mb-6">
+        <div className="flex justify-center gap-4 mb-6">
           <input
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder={language === "vietnamese" ? "Tìm dịch vụ..." : "Search service..."}
-            className="w-full border border-gray-500 rounded-xl p-2 text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="border border-gray-500 rounded-xl p-2 text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-blue-500 w-2/3"
           />
+          <button
+            onClick={() => setShowUSD(!showUSD)}
+            className="bg-blue-500 text-white rounded-xl px-4 py-2 text-sm md:text-base hover:bg-blue-600 transition"
+          >
+            {showUSD ? "Show VND" : "Show USD"}
+          </button>
         </div>
 
         {loading ? (
           <p className="text-center text-gray-500">Loading...</p>
-        ) : Object.keys(filtered).every((k) => filtered[k].length === 0) ? (
+        ) : Object.keys(filtered).every(k => filtered[k].length === 0) ? (
           <p className="text-center text-gray-500">{language === "vietnamese" ? "Không tìm thấy dịch vụ" : "No services found"}</p>
         ) : (
           <div className="overflow-x-auto">
@@ -188,7 +186,7 @@ export default function Services() {
                     {language === "vietnamese" ? "Đơn vị" : "Unit"}
                   </th>
                   <th className="px-3 md:px-4 py-3 whitespace-nowrap">
-                    {language === "vietnamese" ? "Giá dịch vụ (chưa VAT)" : "Service Price (VAT excluded)"}
+                    {language === "vietnamese" ? "Giá dịch vụ" : "Service Price"} ({showUSD ? "USD" : "VND"})
                   </th>
                 </tr>
               </thead>
@@ -206,7 +204,7 @@ export default function Services() {
                       <td className="border-r-2 border-gray-600 px-3 md:px-4 py-2">{row.desc}</td>
                       <td className="border-r-2 border-gray-600 px-3 md:px-4 py-2 text-center">{row.unit}</td>
                       <td className="px-3 md:px-4 py-2 font-medium text-gray-800 text-right">
-                        {row.price ? `${row.price} VND` : ""}
+                        {showUSD ? (row.priceUSD ? `$${row.priceUSD.toFixed(2)}` : "-") : row.priceVND}
                       </td>
                     </tr>
                   ));
