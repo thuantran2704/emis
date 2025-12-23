@@ -1,15 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Papa from "papaparse";
-import { useSelector } from 'react-redux';
-import { getFxRate } from "../components/exchangeRate.jsx";
-/**
- * Robust Services component:
- * - Tries multiple filenames for each language (fallback logic)
- * - Auto-detects header columns
- * - Groups rows by category
- * - Supports search
- * - Toggle button for VND ↔ USD
- */
+import { useSelector } from "react-redux";
+import { getFxRate } from "../components/rateExchange";
+
 export default function Services() {
   const languageRedux = useSelector((state) => state.language.language);
   const language = languageRedux === "vietnamese" ? "vietnamese" : "english";
@@ -19,7 +12,6 @@ export default function Services() {
   const [showUSD, setShowUSD] = useState(false);
   const [fxRate, setFxRate] = useState(null);
 
-  // CSV candidates
   const fileCandidates = {
     vietnamese: ["/dental_services_vn.csv", "/dental_services_vietnamese.csv", "/dental_services.csv"],
     english: ["/emisdental-pricelist.csv", "/dental_services.csv", "/dental_services_english.csv"],
@@ -59,7 +51,7 @@ export default function Services() {
     return () => { cancelled = true; };
   }, []);
 
-  // Load CSV services
+  // Parse CSV
   useEffect(() => {
     let cancelled = false;
     const load = async () => {
@@ -88,14 +80,10 @@ export default function Services() {
 
       const fields = parsed.meta?.fields?.length ? parsed.meta.fields : Object.keys(parsed.data[0] || {});
 
-      const categoryField = pickField(fields, [
-        "servicecategory","service category","category",
-        "danhmuc","danh muc","danh muc dich vu","danhmucdichvu"
-      ]) || fields[0] || null;
-
-      const descField = pickField(fields, ["description","desc","mota","mo ta","mô tả"]) || fields[1] || null;
-      const unitField = pickField(fields, ["unit","donvi","don vi","đơn vị"]) || fields[2] || null;
-      const priceField = pickField(fields, ["price","gia","giá","serviceprice","service price"]) || fields[3] || null;
+      const categoryField = pickField(fields, ["servicecategory","service category","category","danhmuc"]) || fields[0];
+      const descField = pickField(fields, ["description","desc","mota","mo ta","mô tả"]) || fields[1];
+      const unitField = pickField(fields, ["unit","donvi","don vi","đơn vị"]) || fields[2];
+      const priceField = pickField(fields, ["price","gia","giá","serviceprice","service price"]) || fields[3];
 
       const rows = parsed.data
         .filter(r => Object.values(r).some(v => v !== null && v !== undefined && String(v).trim() !== ""))
@@ -104,10 +92,12 @@ export default function Services() {
 
           let priceUSD = null;
           if (fxRate) {
-            const numbers = rawPrice.match(/\d+([.,]\d+)?/g);
+            // Handle ranges like "300,000 – 500,000" or single numbers
+            const numbers = rawPrice.match(/\d[\d,]*/g);
             if (numbers && numbers.length > 0) {
-              const avg = numbers.map(n => parseFloat(n.replace(/,/g, ""))).reduce((a,b) => a+b, 0)/numbers.length;
-              priceUSD = avg / fxRate;
+              const nums = numbers.map(n => parseFloat(n.replace(/,/g, "")));
+              if (nums.length === 1) priceUSD = nums[0] / fxRate;
+              else priceUSD = nums.map(n => n / fxRate).join(" – ");
             }
           }
 
@@ -129,7 +119,7 @@ export default function Services() {
     return () => { cancelled = true; };
   }, [language, fxRate]);
 
-  // Group services by category
+  // Group by category
   const grouped = services.reduce((acc, row) => {
     const cat = row.category || "Uncategorized";
     if (!acc[cat]) acc[cat] = [];
@@ -204,7 +194,7 @@ export default function Services() {
                       <td className="border-r-2 border-gray-600 px-3 md:px-4 py-2">{row.desc}</td>
                       <td className="border-r-2 border-gray-600 px-3 md:px-4 py-2 text-center">{row.unit}</td>
                       <td className="px-3 md:px-4 py-2 font-medium text-gray-800 text-right">
-                        {showUSD ? (row.priceUSD ? `$${row.priceUSD.toFixed(2)}` : "-") : row.priceVND}
+                        {showUSD ? (row.priceUSD ?? "-") : row.priceVND}
                       </td>
                     </tr>
                   ));
