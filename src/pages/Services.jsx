@@ -6,11 +6,13 @@ import { getFxRate } from "../components/exchangeRate";
 export default function Services() {
   const languageRedux = useSelector((state) => state.language.language);
   const language = languageRedux === "vietnamese" ? "vietnamese" : "english";
+
   const [services, setServices] = useState([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
   const [showUSD, setShowUSD] = useState(false);
   const [fxRate, setFxRate] = useState(null);
+  const [fxLastUpdated, setFxLastUpdated] = useState(null);
 
   const fileCandidates = {
     vietnamese: ["/dental_services_vn.csv", "/dental_services_vietnamese.csv", "/dental_services.csv"],
@@ -41,14 +43,19 @@ export default function Services() {
     let cancelled = false;
     const fetchRate = async () => {
       try {
-        const rate = await getFxRate();
-        if (!cancelled) setFxRate(rate);
+        const { rate, lastUpdated } = await getFxRate();
+        if (!cancelled) {
+          setFxRate(rate);
+          setFxLastUpdated(lastUpdated);
+        }
       } catch (err) {
         console.error("FX rate fetch failed:", err);
       }
     };
     fetchRate();
-    return () => { cancelled = true; };
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   // Parse CSV
@@ -86,42 +93,41 @@ export default function Services() {
       const priceField = pickField(fields, ["price","gia","giá","serviceprice","service price"]) || fields[3];
 
       const rows = parsed.data
-      .filter(r => Object.values(r).some(v => v !== null && v !== undefined && String(v).trim() !== ""))
-      .map(r => {
-        const rawPrice = (r[priceField] || "").toString().trim();
+        .filter(r => Object.values(r).some(v => v !== null && v !== undefined && String(v).trim() !== ""))
+        .map(r => {
+          const rawPrice = (r[priceField] || "").toString().trim();
 
-        let priceUSD = null;
-        if (fxRate) {
-          const numbers = rawPrice.match(/\d[\d,]*/g);
-          if (numbers && numbers.length > 0) {
-            const nums = numbers.map(n => parseFloat(n.replace(/,/g, "")));
-            if (nums.length === 1) {
-              let val = nums[0] / fxRate;
-              // Round to nearest 0.5 and subtract 0.01
-              val = Math.round(val * 2) / 2 - 0.01;
-              priceUSD = `${val.toFixed(2)} USD`;
-            } else {
-              priceUSD = nums
-                .map(n => {
-                  let val = n / fxRate;
-                  val = Math.round(val * 2) / 2 - 0.01;
-                  return val.toFixed(2);
-                })
-                .join(" – ") + " USD";
+          // Format USD
+          let priceUSD = null;
+          if (fxRate) {
+            const numbers = rawPrice.match(/\d[\d,]*/g);
+            if (numbers && numbers.length > 0) {
+              const nums = numbers.map(n => parseFloat(n.replace(/,/g, "")));
+              if (nums.length === 1) {
+                let val = nums[0] / fxRate;
+                val = Math.round(val * 2) / 2 - 0.01; // round to nearest 0.5, subtract 0.01
+                priceUSD = `${val.toFixed(2)} USD`;
+              } else {
+                priceUSD = nums
+                  .map(n => {
+                    let val = n / fxRate;
+                    val = Math.round(val * 2) / 2 - 0.01;
+                    return val.toFixed(2);
+                  })
+                  .join(" – ") + " USD";
+              }
             }
           }
-        }
 
-        return {
-          __raw: r,
-          category: (r[categoryField] || "").toString().trim(),
-          desc: (r[descField] || "").toString().trim(),
-          unit: (r[unitField] || "").toString().trim(),
-          priceVND: rawPrice + " VND", // append VND
-          priceUSD,
-        };
-      });
-
+          return {
+            __raw: r,
+            category: (r[categoryField] || "").toString().trim(),
+            desc: (r[descField] || "").toString().trim(),
+            unit: (r[unitField] || "").toString().trim(),
+            priceVND: rawPrice ? rawPrice + " VND" : "-",
+            priceUSD: priceUSD || "-",
+          };
+        });
 
       setServices(rows);
       setLoading(false);
@@ -154,7 +160,7 @@ export default function Services() {
           {language === "vietnamese" ? "Bảng giá dịch vụ nha khoa" : "International EMIS Dental Price List"}
         </h1>
 
-        <div className="flex justify-center gap-4 mb-6">
+        <div className="flex justify-center gap-4 mb-2 flex-wrap">
           <input
             value={search}
             onChange={(e) => setSearch(e.target.value)}
@@ -169,12 +175,20 @@ export default function Services() {
           </button>
         </div>
 
+        {fxLastUpdated && (
+          <p className="text-sm text-gray-500 mt-1 text-right">
+            {language === "vietnamese" 
+              ? `Tỷ giá USD/VND cập nhật lần cuối: ${new Date(fxLastUpdated).toLocaleString()}` 
+              : `FX rate last updated: ${new Date(fxLastUpdated).toLocaleString()}`}
+          </p>
+        )}
+
         {loading ? (
-          <p className="text-center text-gray-500">Loading...</p>
+          <p className="text-center text-gray-500 mt-6">Loading...</p>
         ) : Object.keys(filtered).every(k => filtered[k].length === 0) ? (
-          <p className="text-center text-gray-500">{language === "vietnamese" ? "Không tìm thấy dịch vụ" : "No services found"}</p>
+          <p className="text-center text-gray-500 mt-6">{language === "vietnamese" ? "Không tìm thấy dịch vụ" : "No services found"}</p>
         ) : (
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto mt-4">
             <table className="w-full border-2 border-gray-700 rounded-2xl shadow-md overflow-hidden text-sm md:text-base bg-white">
               <thead className="bg-gray-200 text-gray-800 uppercase text-xs md:text-sm border-b-2 border-gray-700">
                 <tr>
@@ -206,7 +220,7 @@ export default function Services() {
                       <td className="border-r-2 border-gray-600 px-3 md:px-4 py-2">{row.desc}</td>
                       <td className="border-r-2 border-gray-600 px-3 md:px-4 py-2 text-center">{row.unit}</td>
                       <td className="px-3 md:px-4 py-2 font-medium text-gray-800 text-right">
-                        {showUSD ? (row.priceUSD ?? "-") : row.priceVND}
+                        {showUSD ? row.priceUSD : row.priceVND}
                       </td>
                     </tr>
                   ));
