@@ -220,6 +220,10 @@ export default function Services() {
   return (
     <div className="min-h-screen bg-gray-50 py-10 px-4 md:px-12 lg:px-24">
       <div className="max-w-6xl mx-auto">
+        <p className="text-center text-sm md:text-base text-gray-600 mb-3 italic">
+          The price table below shows the original prices in USD/VND without any available promotion
+        </p>
+
         <h1 className="text-center text-3xl font-semibold mb-6 uppercase">
           {language === "vietnamese"
             ? "Bảng giá dịch vụ nha khoa"
