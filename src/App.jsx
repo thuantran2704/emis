@@ -19,6 +19,7 @@ import ImplantInfo from './pages/implantInfo.jsx';
 import SonPage from './pages/bsPage.jsx';
 import CrownLanding from './pages/bocRang.jsx';
 import ChristmasAdsLandingPage from './pages/christmasAd.jsx';
+import DentalVisitorProgram from './pages/flightassist.jsx';
 export default function App() {
   const language = useSelector((state) => state.language.language);
   const dispatch = useDispatch();
@@ -54,6 +55,7 @@ export default function App() {
           <Route path="/christmas" element={<ChristmasAdsLandingPage/>}/>
           <Route path="dr-son" element={<SonPage />}/>
           <Route path="*" element={<NotFound />} />
+          <Route path="/visitor-program" element={<DentalVisitorProgram />} />
         </Routes>
         <Footer language={language}/>
         <FloatingContactButton />
