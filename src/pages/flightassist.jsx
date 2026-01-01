@@ -75,7 +75,7 @@ export default function DentalVisitorProgram() {
           </h1>
         </div>
       </section>
-      <AdBanner />
+
       {/* CONTENT */}
       <section className="max-w-6xl mx-auto px-4 py-16">
         <h2 className="text-3xl font-bold text-[#4b4b8f] mb-6 text-center">
@@ -114,7 +114,7 @@ export default function DentalVisitorProgram() {
             </p>
           </div>
         </div>
-
+      <AdBanner />
         {/* CITY TOUR */}
         <div className="mt-14 bg-[#fdfcf8] rounded-2xl shadow-md p-8 max-w-4xl mx-auto">
           <h3 className="text-2xl font-semibold text-[#4b4b8f] mb-4">
