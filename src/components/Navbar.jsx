@@ -24,6 +24,7 @@ export default function Navbar() {
     { name: content.veneer, path: '/veneer' },
     { name: content.implant, path: '/implant' },
     { name: content.crown, path: '/crown' },
+    { name: content.equipment, path: '/equipment' },
   ];
 
   return (
@@ -115,13 +116,6 @@ export default function Navbar() {
                 {content.services}
               </Link>
 
-              <Link
-                to="/equipment"
-                className="text-[#2a3439] font-medium px-3 py-2"
-                style={{ fontFamily: "'Be Vietnam Pro', sans-serif", fontWeight: '600' }}
-              >
-                {content.equipment}
-              </Link>
 
               {/* GRATITUDE - Now a direct link to /christmas */}
               <Link
