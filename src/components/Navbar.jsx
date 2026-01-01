@@ -232,7 +232,7 @@ export default function Navbar() {
 
             {/* MOBILE GRATITUDE - Now a direct link to /christmas */}
             <Link
-              to="/christmas"
+              to="/visitor-program"
               className="block px-3 py-2 text-[#2a3439] font-medium rounded-md hover:bg-[#2a3439] hover:text-[#C5AF73]"
               onClick={toggleMenu}
             >
