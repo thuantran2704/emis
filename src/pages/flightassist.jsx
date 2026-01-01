@@ -14,6 +14,7 @@ import vn9 from "../pics/travel-ads/vn9.jpg";
 import vn10 from "../pics/travel-ads/vn10.jpg";
 import vn11 from "../pics/travel-ads/vn11.jpg";
 import vn12 from "../pics/travel-ads/vn12.jpg";
+import AdBanner from "../components/AdBanner";
 
 export default function DentalVisitorProgram() {
   const images = [
@@ -74,7 +75,7 @@ export default function DentalVisitorProgram() {
           </h1>
         </div>
       </section>
-
+      <AdBanner />
       {/* CONTENT */}
       <section className="max-w-6xl mx-auto px-4 py-16">
         <h2 className="text-3xl font-bold text-[#4b4b8f] mb-6 text-center">

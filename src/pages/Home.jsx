@@ -13,7 +13,6 @@ import canal from '../pics/canal.jpg';
 import wisdom from '../pics/wisdomteeth.jpg';
 import ImplantCards from '../components/implants_banner';
 // import AdBanner from '../components/AdBanner';
-import ChristmasAdBanner from'../components/AdBanner.jsx';
 import hiossenImg from '../pics/hiossen.jpg';
 import osstemImg from '../pics/osstem.jpg';
 import straumannImg from '../pics/straumann.jpg';
@@ -23,6 +22,7 @@ import MachineBanner from '../components/MachineBanner';
 import ContactForm from '../components/ContactForm';
 import { useSelector } from 'react-redux';
 import CustomerReactionsBanner from '../components/CustomerReactionBanner';
+import AdBanner from '../components/AdBanner';
 
 export default function Home() {
   const language = useSelector((state) => state.language.language);
@@ -99,9 +99,7 @@ export default function Home() {
       </section>
 
       {/* Ad Banner */}
-      {/* <AdBanner/> */}
-      <ChristmasAdBanner/>
-      
+      <AdBanner/>
       {/* Services Section */}
       <section className="py-16 bg-[#fcfbf8]">
         <div className="max-w-6xl mx-auto px-4 relative">

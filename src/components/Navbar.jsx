@@ -125,7 +125,7 @@ export default function Navbar() {
 
               {/* GRATITUDE - Now a direct link to /christmas */}
               <Link
-                to="/christmas"
+                to="/visitor-program"
                 className="text-[#2a3439] font-medium px-3 py-2 transition-all duration-300"
                 style={{ fontFamily: "'Be Vietnam Pro', sans-serif", fontWeight: '600' }}
               >

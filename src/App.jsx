@@ -15,10 +15,8 @@ import Equipment from './pages/Equipment';
 import FloatingContactButton from './components/floatingContactButton.jsx';
 import VeneerLanding from './pages/landingPage1.jsx';
 import ImplantInfo from './pages/implantInfo.jsx';
-// import NovemberSpecialLandingPage from './pages/quangcao4.jsx';
 import SonPage from './pages/bsPage.jsx';
 import CrownLanding from './pages/bocRang.jsx';
-import ChristmasAdsLandingPage from './pages/christmasAd.jsx';
 import DentalVisitorProgram from './pages/flightassist.jsx';
 export default function App() {
   const language = useSelector((state) => state.language.language);
@@ -52,7 +50,6 @@ export default function App() {
           <Route path="/veneer" element={<VeneerLanding />} />
           <Route path="/implant" element={<ImplantInfo />}/>
           <Route path="/crown" element={<CrownLanding/>}/>
-          <Route path="/christmas" element={<ChristmasAdsLandingPage/>}/>
           <Route path="dr-son" element={<SonPage />}/>
           <Route path="*" element={<NotFound />} />
           <Route path="/visitor-program" element={<DentalVisitorProgram />} />
