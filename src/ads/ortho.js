@@ -1,5 +1,5 @@
-import viImg from "../pics/ads/vie-ortho.jpg";
-import enImg from "../pics/ads/eng-ortho.jpg";
+import viImg from "../pics/tet/vie-ortho.png";
+import enImg from "../pics/tet/eng-ortho.png";
 
 export default {
   metaTitle: "Ưu Đãi Niềng Răng Tết 2026 | Emis Dental",
