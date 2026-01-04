@@ -8,9 +8,11 @@ export default function Navbar() {
   const language = useSelector((state) => state.language.language);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
+  const [isTetOpen, setIsTetOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleAbout = () => setIsAboutOpen(!isAboutOpen);
+  const toggleTet = () => setIsTetOpen(!isTetOpen);
 
   const content = navbarContent[language] || navbarContent.english;
 
@@ -22,10 +24,13 @@ export default function Navbar() {
   const aboutDropdownItems = [
     { name: content.drSon, path: '/dr-son' },
     { name: content.veneer, path: '/veneer' },
+    { name: content.equipment, path: '/equipment' },
+  ];
+
+  const tetDropdownItems = [
+    { name: content.orthodontics, path: '/orthoAd' },
     { name: content.implant, path: '/implantAd' },
     { name: content.crown, path: '/crownAd' },
-    { name: content.equipment, path: '/equipment' },
-    { name: content.orthodontics, path: '/orthoAd' },
     { name: content.whitening, path: '/whiteningAd' },
   ];
 
@@ -119,14 +124,46 @@ export default function Navbar() {
                 {content.services}
               </Link>
 
-              {/* NEW: TET OFFER */}
-              <Link
-                to="/genAd"
-                className="text-[#2a3439] font-medium px-3 py-2 transition-all duration-300"
-                style={{ fontFamily: "'Be Vietnam Pro', sans-serif", fontWeight: '600' }}
-              >
-                {content.tetOffer}
-              </Link>
+              {/* TET OFFER DROPDOWN */}
+              <div className="relative flex items-center">
+                <Link
+                  to="/genAd"
+                  className="text-[#2a3439] font-medium px-3 py-2 transition-all duration-300 group"
+                  style={{ fontFamily: "'Be Vietnam Pro', sans-serif", fontWeight: '600' }}
+                >
+                  {content.tetOffer}
+                </Link>
+
+                <button
+                  onClick={toggleTet}
+                  className="ml-1 text-[#2a3439] hover:text-gray-700"
+                >
+                  <svg
+                    className={`w-4 h-4 transition-transform duration-300 ${isTetOpen ? 'rotate-180' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+
+                {isTetOpen && (
+                  <div className="absolute top-full left-0 mt-3 w-56 bg-white rounded-md shadow-lg py-2 z-50 border border-gray-200">
+                    {tetDropdownItems.map((sub) => (
+                      <Link
+                        key={sub.name}
+                        to={sub.path}
+                        className="block px-4 py-2 text-[#2a3439] hover:bg-gray-100 transition"
+                        style={submenuFont}
+                        onClick={() => setIsTetOpen(false)}
+                      >
+                        {sub.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
 
               {/* GRATITUDE */}
               <Link
@@ -220,6 +257,7 @@ export default function Navbar() {
               )}
             </div>
 
+            {/* SERVICES */}
             <Link
               to="/services"
               className="block px-3 py-2 text-[#2a3439] font-medium rounded-md hover:bg-[#2a3439] hover:text-[#C5AF73]"
@@ -228,14 +266,51 @@ export default function Navbar() {
               {content.services}
             </Link>
 
-            {/* NEW: TET OFFER */}
-            <Link
-              to="/genAd"
-              className="block px-3 py-2 text-[#2a3439] font-medium rounded-md hover:bg-[#2a3439] hover:text-[#C5AF73]"
-              onClick={toggleMenu}
-            >
-              {content.tetOffer}
-            </Link>
+            {/* MOBILE TET OFFER */}
+            <div>
+              <div className="flex items-center justify-between px-3 py-2 rounded-md">
+                <Link
+                  to="/genAd"
+                  className="font-medium text-[#2a3439] hover:text-[#C5AF73]"
+                  onClick={() => {
+                    setIsTetOpen(false);
+                    toggleMenu();
+                  }}
+                >
+                  {content.tetOffer}
+                </Link>
+
+                <button
+                  onClick={toggleTet}
+                  className="p-1 rounded hover:bg-white/20 text-[#2a3439]"
+                >
+                  <svg
+                    className={`w-4 h-4 transition-transform ${isTetOpen ? 'rotate-180' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+              </div>
+
+              {isTetOpen && (
+                <div className="ml-4 mt-1">
+                  {tetDropdownItems.map((sub) => (
+                    <Link
+                      key={sub.name}
+                      to={sub.path}
+                      className="block px-3 py-2 text-[#2a3439] hover:bg-[#2a3439] hover:text-[#C5AF73] rounded-md"
+                      style={submenuFont}
+                      onClick={toggleMenu}
+                    >
+                      {sub.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
 
             {/* GRATITUDE */}
             <Link
@@ -246,6 +321,7 @@ export default function Navbar() {
               {content.gratitude}
             </Link>
 
+            {/* CONTACT */}
             <Link
               to="/contact"
               className="block px-3 py-2 text-[#2a3439] font-medium rounded-md hover:bg-[#2a3439] hover:text-[#C5AF73]"
