@@ -18,7 +18,6 @@ import ImplantInfo from './pages/implantInfo.jsx';
 import SonPage from './pages/bsPage.jsx';
 import CrownLanding from './pages/bocRang.jsx';
 import DentalVisitorProgram from './pages/flightassist.jsx';
-import AdArticle from './pages/AdArticle.jsx';
 import WhiteningAd from './pages/whitening.jsx';
 import ImplantAd from './pages/implant.jsx';
 import CrownAd from './pages/crown.jsx';
@@ -56,13 +55,18 @@ export default function App() {
           <Route path="/implant" element={<ImplantInfo />}/>
           <Route path="/crown" element={<CrownLanding/>}/>
           <Route path="dr-son" element={<SonPage />}/>
-          <Route path="*" element={<NotFound />} />
-          <Route path="/ads/:type" element = {<AdArticle/>}/>
           <Route path="/visitor-program" element={<DentalVisitorProgram />} />
           <Route path="/whiteningAd" element={<WhiteningAd/>}/>
           <Route path="/implantAd" element={<ImplantAd/>}/>
           <Route path="/crownAd" element={<CrownAd/>}/>
           <Route path="/orthoAd" element={<orthoAd/>}/>
+
+
+          
+          
+          
+          <Route path="*" element={<NotFound />} />
+
         </Routes>
         <Footer language={language}/>
         <FloatingContactButton />
