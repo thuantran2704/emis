@@ -2,40 +2,42 @@ import viImg from "../pics/tet/vie-crown.png";
 import enImg from "../pics/tet/eng-crown.png";
 
 export default {
-  metaTitle: "Thẩm Mỹ Răng Sứ Tết 2026 | Emis Dental",
-  metaDescription: "Giảm đến 40% thẩm mỹ răng sứ cao cấp dịp Tết",
+  metaTitle:
+    "Bọc Răng Sứ Thẩm Mỹ Tết 2026 | Emis Dental",
+  metaDescription:
+    "Bọc răng sứ chuẩn thẩm mỹ – Ưu đãi Tết 2026",
 
-  images: { vi: viImg, en: enImg },
+  images: {
+    vi: viImg,
+    en: enImg,
+  },
 
   title:
-    "THẨM MỸ RĂNG SỨ CAO CẤP – ƯU ĐÃI TỚI 40% DỊP TẾT 2026",
+    "BỌC RĂNG SỨ THẨM MỸ TẾT 2026 – KIẾN TẠO NỤ CƯỜI HOÀN HẢO",
 
   intro:
-    "Răng sứ thẩm mỹ giúp cải thiện toàn diện nụ cười, nâng tầm thần thái và sự tự tin trong giao tiếp.",
+    "Bọc răng sứ là giải pháp tối ưu giúp cải thiện màu sắc, hình dáng và chức năng răng, mang lại nụ cười đều đẹp tự nhiên trong dịp Tết 2026.",
 
   sections: [
     {
-      heading: "1. Ưu điểm thẩm mỹ răng sứ tại Emis Dental",
+      heading:
+        "1. KHI NÀO NÊN BỌC RĂNG SỨ?",
       content: [
-        "Bảo tồn răng thật tối đa",
-        "Thiết kế nụ cười cá nhân hóa",
-        "Chất liệu sứ cao cấp chính hãng",
+        "Răng xỉn màu, nhiễm tetracycline",
+        "Răng mẻ, thưa, lệch nhẹ",
+        "Răng yếu sau điều trị tủy",
       ],
     },
     {
-      heading: "2. Bảng ưu đãi Tết 2026",
+      heading:
+        "2. ƯU ĐIỂM RĂNG SỨ TẠI EMIS DENTAL",
       content: [
-        "Veneer IPS e.max: Giảm 30%",
-        "Zirconia (Đức): Giảm 40%",
-        "Cercon HT (Mỹ): Giảm 40%",
+        "Thẩm mỹ tự nhiên",
+        "Độ bền cao",
+        "An toàn sinh học",
       ],
-    },
-    {
-      heading: "3. Quy trình kỹ thuật số hiện đại",
-      content:
-        "Thiết kế nụ cười 3D, chế tác CAD/CAM và bảo hành chính hãng.",
     },
   ],
 
-  cta: "NHẬN TƯ VẤN RĂNG SỨ",
+  cta: "ĐĂNG KÝ TƯ VẤN RĂNG SỨ",
 };
