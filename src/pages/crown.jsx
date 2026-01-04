@@ -21,17 +21,19 @@ import {
   Palette,
   Gem,
   Brush,
-  Camera
+  Camera,
+  Gift,
+  Flame
 } from "lucide-react";
 
-// Import images - add these to your project
+// Import images
 import viImg from "../pics/tet/vie-crown.png";
 import enImg from "../pics/tet/eng-crown.png";
 
 const CrownAd = () => {
   const language = useSelector((state) => state.language.language);
   const isVI = language === "vietnamese";
-  // const adImage = isVI ? viImg : enImg; // Uncomment when you add images
+  const adImage = isVI ? viImg : enImg;
 
   // Vietnamese content
   const viContent = {
@@ -65,19 +67,19 @@ const CrownAd = () => {
           name: "Mặt dán sứ Veneer IPS e.max",
           discount: "Giảm 30%",
           description: "Dòng sứ siêu mỏng, siêu tự nhiên từ Thụy Sĩ",
-          color: "from-purple-500 to-pink-500"
+          color: "from-red-600 to-yellow-500"
         },
         {
           name: "Răng toàn sứ Zirconia (Đức)",
           discount: "Giảm 40%",
           description: "Độ cứng cao, chịu lực cực tốt",
-          color: "from-blue-500 to-cyan-500"
+          color: "from-red-700 to-yellow-600"
         },
         {
           name: "Răng toàn sứ Cercon HT (Mỹ)",
           discount: "Giảm 40%",
           description: "Đỉnh cao thẩm mỹ, độ bền vĩnh viễn",
-          color: "from-green-500 to-emerald-500"
+          color: "from-red-800 to-yellow-700"
         }
       ],
       specialOffer: "ĐẶC BIỆT: Giảm thêm 5% tổng hóa đơn cho khách hàng thực hiện combo từ 5 răng trở lên.",
@@ -124,7 +126,7 @@ const CrownAd = () => {
     },
     
     finalMessage: {
-      title: "TẾT LÀ DỊP ĐỂ LÀM MỚI BẢN THÂN – ĐỪNG BỎ LỠ NỤ CƯỜI ĐẸP!",
+      title: "TẾT LÀ DỊP ĐỂ LÀM MỚI BẢN THÂN – ĐỪNG BỎ LỠ NỤ CƯỜI ĐẾP!",
       content: "Người ta thường nói 'Cái răng cái tóc là góc con người'. Một nụ cười mới không chỉ giúp bạn tự tin hơn khi chụp hình kỷ niệm cùng gia đình, gặp gỡ đối tác đầu năm mà còn mang lại sự khởi đầu mới tràn đầy năng lượng và hy vọng.",
       conclusion: "Với trang thiết bị hiện đại và đội ngũ bác sĩ tận tâm, Emis Dental tự hào là địa chỉ uy tín được hàng ngàn khách hàng tin tưởng lựa chọn để gửi gắm nụ cười mỗi dịp Tết đến Xuân về."
     },
@@ -167,19 +169,19 @@ const CrownAd = () => {
           name: "Veneer IPS e.max",
           discount: "30% OFF",
           description: "Ultra-thin, ultra-natural porcelain from Switzerland",
-          color: "from-purple-500 to-pink-500"
+          color: "from-red-600 to-yellow-500"
         },
         {
           name: "Zirconia Crown (Germany)",
           discount: "40% OFF",
           description: "High hardness, excellent durability",
-          color: "from-blue-500 to-cyan-500"
+          color: "from-red-700 to-yellow-600"
         },
         {
           name: "Cercon HT Crown (USA)",
           discount: "40% OFF",
           description: "The pinnacle of aesthetics, permanent durability",
-          color: "from-green-500 to-emerald-500"
+          color: "from-red-800 to-yellow-700"
         }
       ],
       specialOffer: "SPECIAL: Additional 5% discount on total bill for customers doing combos of 5 teeth or more.",
@@ -240,71 +242,93 @@ const CrownAd = () => {
   const content = isVI ? viContent : enContent;
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <main className="min-h-screen bg-gradient-to-b from-red-50 to-white">
       <Helmet>
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaDescription} />
       </Helmet>
 
-      {/* Hero Banner */}
-      <div className="relative bg-gradient-to-r from-[#6d28d9] via-[#8b5cf6] to-[#6d28d9] pt-24 pb-12 overflow-hidden">
-        {/* Background Pattern */}
+      {/* Hero Banner with Image */}
+      <div className="relative bg-gradient-to-r from-red-600 via-red-700 to-red-600 pt-24 pb-12 overflow-hidden">
+        {/* Tet Pattern Background */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L0 30l30 30 30-30z' fill='%23ffffff'/%3E%3C/svg%3E")`,
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L0 30l30 30 30-30z' fill='%23fbbf24'/%3E%3C/svg%3E")`,
             backgroundSize: '60px 60px'
           }}></div>
         </div>
         
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            {/* Badge */}
-            <div className="inline-flex items-center bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] text-[#6d28d9] px-6 py-2 rounded-full font-bold mb-6 animate-pulse">
-              <Sparkles className="w-5 h-5 mr-2" />
-              {isVI ? "ƯU ĐÃI ĐẶC BIỆT TẾT 2026" : "SPECIAL TET 2026 OFFER"}
+          <div className="flex flex-col lg:flex-row items-center gap-8">
+            {/* Text Content */}
+            <div className="lg:w-1/2 text-center lg:text-left">
+              {/* Tet Badge */}
+              <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-yellow-500 text-red-700 px-6 py-2 rounded-full font-bold mb-6 animate-pulse">
+                <Gift className="w-5 h-5 mr-2" />
+                {isVI ? "ƯU ĐÃI ĐẶC BIỆT TẾT 2026" : "SPECIAL TET 2026 OFFER"}
+              </div>
+              
+              {/* Main Title */}
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
+                {content.heroTitle}
+              </h1>
+              
+              {/* Subtitle */}
+              <p className="text-2xl md:text-3xl font-bold text-yellow-300 mb-8">
+                {content.heroSubtitle}
+              </p>
+              
+              {/* Description */}
+              <div className="mb-8">
+                <p className="text-xl text-gray-200 mb-4">
+                  {content.heroDescription}
+                </p>
+                <p className="text-lg text-gray-300">
+                  {content.intro1} {content.intro2}
+                </p>
+              </div>
+              
+              {/* CTA Button */}
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center bg-gradient-to-r from-yellow-400 to-yellow-500 text-red-700 font-bold text-lg py-3 px-8 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              >
+                {isVI ? "ĐẶT LỊCH NGAY" : "BOOK NOW"}
+                <ChevronRight className="w-5 h-5 ml-2" />
+              </Link>
             </div>
             
-            {/* Main Title */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
-              {content.heroTitle}
-            </h1>
-            
-            {/* Subtitle */}
-            <p className="text-2xl md:text-3xl font-bold text-[#fbbf24] mb-8">
-              {content.heroSubtitle}
-            </p>
-            
-            {/* Description */}
-            <div className="max-w-3xl mx-auto">
-              <p className="text-xl text-gray-200 mb-4">
-                {content.heroDescription}
-              </p>
-              <p className="text-lg text-gray-300">
-                {content.intro1} {content.intro2}
-              </p>
+            {/* Image */}
+            <div className="lg:w-1/2">
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-3xl blur-xl opacity-30 animate-pulse"></div>
+                <img 
+                  src={adImage} 
+                  alt={isVI ? "Thẩm mỹ răng sứ Tết 2026" : "Dental Crown Aesthetics Tet 2026"}
+                  className="relative rounded-2xl shadow-2xl w-full h-auto border-4 border-yellow-400"
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Quick Info Banner */}
-      <div className="bg-gradient-to-r from-[#8b5cf6] to-[#a78bfa] py-4">
+      <div className="bg-gradient-to-r from-red-700 to-red-800 py-4 shadow-lg">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center text-white">
-              <Clock className="w-5 h-5 mr-2" />
+              <Flame className="w-5 h-5 mr-2 text-yellow-300" />
               <span className="font-semibold">{content.pricing.period}</span>
             </div>
             <div className="flex items-center text-white">
-              <Shield className="w-5 h-5 mr-2" />
+              <Shield className="w-5 h-5 mr-2 text-yellow-300" />
               <span className="font-semibold">{isVI ? "Bảo hành 5-10 năm" : "5-10 Years Warranty"}</span>
             </div>
-            <Link
-              to="/contact"
-              className="bg-white text-[#6d28d9] font-bold py-2 px-6 rounded-full hover:bg-gray-100 transition-colors"
-            >
-              {isVI ? "ĐẶT LỊCH NGAY" : "BOOK NOW"}
-            </Link>
+            <div className="flex items-center text-white">
+              <Award className="w-5 h-5 mr-2 text-yellow-300" />
+              <span className="font-semibold">{isVI ? "Chất lượng hàng đầu" : "Premium Quality"}</span>
+            </div>
           </div>
         </div>
       </div>
@@ -313,9 +337,9 @@ const CrownAd = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="space-y-16">
           {/* Why Crown Section */}
-          <section className="bg-white rounded-3xl shadow-xl p-8 md:p-10">
+          <section className="bg-white rounded-3xl shadow-xl p-8 md:p-10 border-2 border-red-100">
             <div className="flex items-center mb-8">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#6d28d9] to-[#fbbf24] rounded-xl flex items-center justify-center mr-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-red-600 to-yellow-500 rounded-xl flex items-center justify-center mr-4">
                 <Star className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
@@ -327,8 +351,8 @@ const CrownAd = () => {
             
             <div className="space-y-6">
               {content.sections[0].points.map((point, idx) => (
-                <div key={idx} className="flex items-start p-6 bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl hover:shadow-md transition-shadow">
-                  <div className="w-8 h-8 bg-gradient-to-br from-[#6d28d9] to-[#fbbf24] rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <div key={idx} className="flex items-start p-6 bg-gradient-to-r from-red-50 to-yellow-50 rounded-xl hover:shadow-md transition-shadow border border-red-100">
+                  <div className="w-8 h-8 bg-gradient-to-br from-red-600 to-yellow-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                     <span className="text-white font-bold">{idx + 1}</span>
                   </div>
                   <p className="text-gray-700 text-lg">{point}</p>
@@ -338,12 +362,17 @@ const CrownAd = () => {
           </section>
 
           {/* Pricing Section */}
-          <section className="bg-gradient-to-r from-[#faf5ff] to-[#fdf2f8] border-2 border-[#8b5cf6]/20 rounded-3xl p-8 md:p-10">
+          <section className="bg-gradient-to-r from-red-50 to-yellow-50 border-2 border-red-200 rounded-3xl p-8 md:p-10">
             <div className="text-center mb-10">
+              <div className="inline-flex items-center mb-4">
+                <div className="w-2 h-8 bg-red-600 rounded-full mr-2"></div>
+                <div className="w-2 h-10 bg-yellow-500 rounded-full mr-2"></div>
+                <div className="w-2 h-8 bg-red-600 rounded-full"></div>
+              </div>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
                 {content.pricing.title}
               </h2>
-              <div className="w-32 h-1 bg-gradient-to-r from-[#6d28d9] to-[#fbbf24] rounded-full mx-auto"></div>
+              <div className="w-32 h-1 bg-gradient-to-r from-red-600 to-yellow-500 rounded-full mx-auto"></div>
               <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
                 {content.pricing.description}
               </p>
@@ -352,11 +381,11 @@ const CrownAd = () => {
             {/* Services Grid */}
             <div className="grid md:grid-cols-3 gap-8 mb-8">
               {content.pricing.services.map((service, idx) => (
-                <div key={idx} className={`bg-gradient-to-br ${service.color} rounded-2xl p-6 text-white shadow-lg transform hover:-translate-y-2 transition-transform duration-300`}>
+                <div key={idx} className={`bg-gradient-to-br ${service.color} rounded-2xl p-6 text-white shadow-lg transform hover:-translate-y-2 transition-transform duration-300 border border-yellow-400`}>
                   <div className="text-center mb-6">
-                    <Gem className="w-12 h-12 text-white/80 mx-auto mb-4" />
+                    <Gem className="w-12 h-12 text-yellow-300 mx-auto mb-4" />
                     <h3 className="font-bold text-xl mb-2">{service.name}</h3>
-                    <div className="inline-block bg-white/20 px-4 py-2 rounded-full font-bold text-lg mb-3">
+                    <div className="inline-block bg-yellow-400/30 backdrop-blur-sm px-4 py-2 rounded-full font-bold text-lg mb-3 border border-yellow-300">
                       {service.discount}
                     </div>
                     <p className="text-white/90">{service.description}</p>
@@ -364,11 +393,11 @@ const CrownAd = () => {
                   
                   <div className="mt-6 text-center">
                     <div className="flex items-center justify-center mb-2">
-                      <CheckCircle className="w-5 h-5 mr-2" />
+                      <CheckCircle className="w-5 h-5 text-yellow-300 mr-2" />
                       <span className="text-sm">{isVI ? "Bảo hành 5-10 năm" : "5-10 Years Warranty"}</span>
                     </div>
                     <div className="flex items-center justify-center">
-                      <CheckCircle className="w-5 h-5 mr-2" />
+                      <CheckCircle className="w-5 h-5 text-yellow-300 mr-2" />
                       <span className="text-sm">{isVI ? "Không ê buốt" : "No Sensitivity"}</span>
                     </div>
                   </div>
@@ -377,9 +406,9 @@ const CrownAd = () => {
             </div>
             
             {/* Special Offer */}
-            <div className="bg-gradient-to-r from-[#6d28d9] to-[#8b5cf6] rounded-2xl p-6 text-white mb-8">
+            <div className="bg-gradient-to-r from-red-700 to-red-800 rounded-2xl p-6 text-white mb-8 border border-yellow-500">
               <div className="flex items-center justify-center mb-4">
-                <Trophy className="w-8 h-8 text-[#fbbf24] mr-3" />
+                <Trophy className="w-8 h-8 text-yellow-300 mr-3" />
                 <h3 className="text-xl font-bold">{isVI ? "ƯU ĐÃI ĐẶC BIỆT" : "SPECIAL OFFER"}</h3>
               </div>
               <p className="text-center text-lg font-semibold">{content.pricing.specialOffer}</p>
@@ -387,23 +416,23 @@ const CrownAd = () => {
             
             {/* Period & Note */}
             <div className="text-center space-y-4">
-              <div className="inline-flex items-center bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] text-[#6d28d9] px-6 py-3 rounded-full font-bold">
+              <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-yellow-500 text-red-700 px-6 py-3 rounded-full font-bold shadow-lg">
                 <Calendar className="w-5 h-5 mr-2" />
                 {content.pricing.period}
               </div>
-              <p className="text-red-600 font-semibold animate-pulse">
+              <p className="text-red-700 font-semibold animate-pulse bg-yellow-50 inline-block px-4 py-2 rounded-full border border-red-200">
                 ⚠️ {content.pricing.note}
               </p>
             </div>
           </section>
 
           {/* Process Section */}
-          <section className="bg-white rounded-3xl shadow-xl p-8 md:p-10">
+          <section className="bg-white rounded-3xl shadow-xl p-8 md:p-10 border-2 border-red-100">
             <div className="text-center mb-10">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
                 {content.process.title}
               </h2>
-              <div className="w-32 h-1 bg-gradient-to-r from-[#6d28d9] to-[#fbbf24] rounded-full mx-auto"></div>
+              <div className="w-32 h-1 bg-gradient-to-r from-red-600 to-yellow-500 rounded-full mx-auto"></div>
               <p className="text-gray-600 mt-4 max-w-3xl mx-auto">
                 {content.process.description}
               </p>
@@ -412,8 +441,8 @@ const CrownAd = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
               {content.process.steps.map((step, idx) => (
                 <div key={idx} className="relative">
-                  <div className="bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-2xl p-6 h-full hover:border-[#8b5cf6]/30 transition-colors">
-                    <div className="w-16 h-16 bg-gradient-to-br from-[#6d28d9] to-[#fbbf24] rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4">
+                  <div className="bg-gradient-to-br from-red-50 to-yellow-50 border border-red-200 rounded-2xl p-6 h-full hover:border-red-300 transition-colors">
+                    <div className="w-16 h-16 bg-gradient-to-br from-red-600 to-yellow-500 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4 shadow-lg">
                       {idx + 1}
                     </div>
                     <p className="font-medium text-gray-800 text-center">{step}</p>
@@ -421,7 +450,7 @@ const CrownAd = () => {
                   
                   {idx < content.process.steps.length - 1 && (
                     <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2">
-                      <ChevronRight className="w-8 h-8 text-gray-300" />
+                      <ChevronRight className="w-8 h-8 text-red-300" />
                     </div>
                   )}
                 </div>
@@ -429,11 +458,11 @@ const CrownAd = () => {
             </div>
             
             {/* Smile Design Feature */}
-            <div className="mt-12 bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl p-8">
+            <div className="mt-12 bg-gradient-to-r from-red-50 to-yellow-50 rounded-2xl p-8 border border-red-200">
               <div className="flex flex-col lg:flex-row items-center gap-8">
                 <div className="lg:w-1/3">
-                  <div className="bg-white rounded-xl p-6 shadow-lg">
-                    <Camera className="w-16 h-16 text-[#6d28d9] mx-auto mb-4" />
+                  <div className="bg-white rounded-xl p-6 shadow-lg border border-red-200">
+                    <Camera className="w-16 h-16 text-red-600 mx-auto mb-4" />
                     <h3 className="font-bold text-gray-800 text-center mb-2">{isVI ? "SMILEDESIGN 3D" : "3D SMILE DESIGN"}</h3>
                     <p className="text-gray-600 text-center text-sm">
                       {isVI ? "Xem trước nụ cười tương lai" : "Preview your future smile"}
@@ -451,9 +480,9 @@ const CrownAd = () => {
                     }
                   </p>
                   <div className="flex flex-wrap gap-3">
-                    <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">✓ {isVI ? "Hình ảnh 3D thực tế" : "Realistic 3D Images"}</span>
-                    <span className="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm">✓ {isVI ? "Chỉnh sửa trực tiếp" : "Live Editing"}</span>
-                    <span className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">✓ {isVI ? "Phù hợp khuôn mặt" : "Face Matching"}</span>
+                    <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm border border-red-200">✓ {isVI ? "Hình ảnh 3D thực tế" : "Realistic 3D Images"}</span>
+                    <span className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm border border-yellow-200">✓ {isVI ? "Chỉnh sửa trực tiếp" : "Live Editing"}</span>
+                    <span className="bg-red-50 text-red-700 px-3 py-1 rounded-full text-sm border border-red-200">✓ {isVI ? "Phù hợp khuôn mặt" : "Face Matching"}</span>
                   </div>
                 </div>
               </div>
@@ -461,19 +490,19 @@ const CrownAd = () => {
           </section>
 
           {/* Features Section */}
-          <section className="bg-gradient-to-r from-[#faf5ff] to-[#fdf2f8] rounded-3xl p-8 md:p-10">
+          <section className="bg-gradient-to-r from-red-50 to-yellow-50 rounded-3xl p-8 md:p-10 border-2 border-red-200">
             <div className="text-center mb-10">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
                 {content.features.title}
               </h2>
-              <div className="w-32 h-1 bg-gradient-to-r from-[#6d28d9] to-[#fbbf24] rounded-full mx-auto"></div>
+              <div className="w-32 h-1 bg-gradient-to-r from-red-600 to-yellow-500 rounded-full mx-auto"></div>
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {content.features.items.map((feature, idx) => (
-                <div key={idx} className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#6d28d9]/10 to-[#fbbf24]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <div className="text-[#6d28d9]">
+                <div key={idx} className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 border border-red-200">
+                  <div className="w-16 h-16 bg-gradient-to-br from-red-100 to-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4 border border-red-200">
+                    <div className="text-red-600">
                       {feature.icon}
                     </div>
                   </div>
@@ -485,38 +514,38 @@ const CrownAd = () => {
           </section>
 
           {/* Final Message Section */}
-          <section className="bg-gradient-to-r from-[#6d28d9] to-[#8b5cf6] rounded-3xl p-8 md:p-10 text-white">
+          <section className="bg-gradient-to-r from-red-700 to-red-800 rounded-3xl p-8 md:p-10 text-white border-2 border-yellow-500">
             <div className="text-center mb-8">
-              <Smile className="w-16 h-16 text-[#fbbf24] mx-auto mb-6" />
+              <Smile className="w-16 h-16 text-yellow-300 mx-auto mb-6" />
               <h2 className="text-2xl md:text-3xl font-bold mb-6">
                 {content.finalMessage.title}
               </h2>
             </div>
             
             <div className="max-w-3xl mx-auto">
-              <p className="text-lg text-gray-200 mb-6 text-center">
+              <p className="text-lg text-red-100 mb-6 text-center">
                 {content.finalMessage.content}
               </p>
-              <p className="text-lg text-gray-200 text-center">
+              <p className="text-lg text-red-100 text-center">
                 {content.finalMessage.conclusion}
               </p>
               
               {/* Benefits Grid */}
               <div className="grid md:grid-cols-3 gap-6 mt-10">
                 <div className="text-center p-4">
-                  <Brush className="w-10 h-10 text-[#fbbf24] mx-auto mb-3" />
+                  <Brush className="w-10 h-10 text-yellow-300 mx-auto mb-3" />
                   <h4 className="font-bold mb-2">{isVI ? "Thay đổi diện mạo" : "Transform Appearance"}</h4>
-                  <p className="text-gray-300 text-sm">{isVI ? "Nâng tầm nhan sắc chỉ sau 1 tuần" : "Elevate beauty in just 1 week"}</p>
+                  <p className="text-red-200 text-sm">{isVI ? "Nâng tầm nhan sắc chỉ sau 1 tuần" : "Elevate beauty in just 1 week"}</p>
                 </div>
                 <div className="text-center p-4">
-                  <Heart className="w-10 h-10 text-[#fbbf24] mx-auto mb-3" />
+                  <Heart className="w-10 h-10 text-yellow-300 mx-auto mb-3" />
                   <h4 className="font-bold mb-2">{isVI ? "Tự tin giao tiếp" : "Confident Communication"}</h4>
-                  <p className="text-gray-300 text-sm">{isVI ? "Tự tin trong mọi tình huống" : "Confidence in every situation"}</p>
+                  <p className="text-red-200 text-sm">{isVI ? "Tự tin trong mọi tình huống" : "Confidence in every situation"}</p>
                 </div>
                 <div className="text-center p-4">
-                  <Trophy className="w-10 h-10 text-[#fbbf24] mx-auto mb-3" />
+                  <Trophy className="w-10 h-10 text-yellow-300 mx-auto mb-3" />
                   <h4 className="font-bold mb-2">{isVI ? "Khởi đầu năm mới" : "New Year Start"}</h4>
-                  <p className="text-gray-300 text-sm">{isVI ? "Năng lượng tích cực cả năm" : "Positive energy all year"}</p>
+                  <p className="text-red-200 text-sm">{isVI ? "Năng lượng tích cực cả năm" : "Positive energy all year"}</p>
                 </div>
               </div>
             </div>
@@ -524,15 +553,15 @@ const CrownAd = () => {
 
           {/* Final CTA */}
           <section className="text-center">
-            <div className="bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] rounded-3xl p-8 md:p-10">
-              <h3 className="text-2xl md:text-3xl font-bold text-[#6d28d9] mb-6">
+            <div className="bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-3xl p-8 md:p-10 border-4 border-red-600 shadow-2xl">
+              <h3 className="text-2xl md:text-3xl font-bold text-red-700 mb-6">
                 {isVI ? "SẴN SÀNG ĐỂ CÓ NỤ CƯỜI HOÀN HẢO ĐÓN TẾT?" : "READY FOR THE PERFECT SMILE THIS TET?"}
               </h3>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center justify-center bg-[#6d28d9] text-white font-bold text-lg py-4 px-8 rounded-full shadow-2xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                  className="inline-flex items-center justify-center bg-red-700 text-white font-bold text-lg py-4 px-8 rounded-full shadow-2xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-2 border-yellow-400"
                 >
                   {content.cta.button}
                   <ChevronRight className="w-5 h-5 ml-2" />
@@ -540,54 +569,54 @@ const CrownAd = () => {
                 
                 <a
                   href="tel:0919100021"
-                  className="inline-flex items-center justify-center bg-white text-[#6d28d9] font-bold text-lg py-4 px-8 rounded-full shadow-lg hover:shadow-xl hover:bg-gray-50 transition-all duration-300"
+                  className="inline-flex items-center justify-center bg-white text-red-700 font-bold text-lg py-4 px-8 rounded-full shadow-lg hover:shadow-xl hover:bg-gray-50 transition-all duration-300 border-2 border-red-600"
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   0919 100 021
                 </a>
               </div>
               
-              <p className="text-[#6d28d9] font-semibold">{content.cta.subtext}</p>
+              <p className="text-red-700 font-semibold">{content.cta.subtext}</p>
             </div>
           </section>
         </div>
 
         {/* Contact Footer */}
-        <div className="mt-16 bg-white rounded-3xl shadow-xl p-8 border border-gray-100">
+        <div className="mt-16 bg-white rounded-3xl shadow-xl p-8 border-2 border-red-200">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">
               {isVI ? "NHA KHOA QUỐC TẾ " : "INTERNATIONAL DENTAL CLINIC "}
-              <span className="text-[#6d28d9]">EMIS DENTAL</span>
+              <span className="text-red-600">EMIS DENTAL</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-[#6d28d9] to-[#fbbf24] rounded-full mx-auto" />
+            <div className="w-24 h-1 bg-gradient-to-r from-red-600 to-yellow-500 rounded-full mx-auto" />
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-6 bg-gray-50 rounded-xl hover:bg-white transition-colors">
-              <div className="w-14 h-14 bg-[#6d28d9]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MapPin className="w-6 h-6 text-[#6d28d9]" />
+            <div className="text-center p-6 bg-red-50 rounded-xl hover:bg-white transition-colors border border-red-200">
+              <div className="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 border border-red-300">
+                <MapPin className="w-6 h-6 text-red-600" />
               </div>
               <h3 className="font-bold text-gray-800 mb-2">{isVI ? "Địa chỉ" : "Address"}</h3>
               <p className="text-gray-600">62B Phạm Ngọc Thạch, District 3, HCMC</p>
             </div>
 
-            <div className="text-center p-6 bg-gray-50 rounded-xl hover:bg-white transition-colors">
-              <div className="w-14 h-14 bg-[#fbbf24]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Phone className="w-6 h-6 text-[#fbbf24]" />
+            <div className="text-center p-6 bg-yellow-50 rounded-xl hover:bg-white transition-colors border border-yellow-200">
+              <div className="w-14 h-14 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4 border border-yellow-300">
+                <Phone className="w-6 h-6 text-yellow-600" />
               </div>
               <h3 className="font-bold text-gray-800 mb-2">Hotline</h3>
-              <p className="text-lg font-bold text-[#6d28d9]">0919 100 021</p>
-              <p className="text-lg font-bold text-[#6d28d9]">0768 117 068</p>
+              <p className="text-lg font-bold text-red-600">0919 100 021</p>
+              <p className="text-lg font-bold text-red-600">0768 117 068</p>
             </div>
 
-            <div className="text-center p-6 bg-gray-50 rounded-xl hover:bg-white transition-colors">
-              <div className="w-14 h-14 bg-[#6d28d9]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Globe className="w-6 h-6 text-[#6d28d9]" />
+            <div className="text-center p-6 bg-red-50 rounded-xl hover:bg-white transition-colors border border-red-200">
+              <div className="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 border border-red-300">
+                <Globe className="w-6 h-6 text-red-600" />
               </div>
               <h3 className="font-bold text-gray-800 mb-2">Website</h3>
               <a 
                 href="https://www.emisdental.com" 
-                className="text-[#fbbf24] hover:underline font-medium block"
+                className="text-yellow-600 hover:underline font-medium block"
                 target="_blank"
                 rel="noopener noreferrer"
               >

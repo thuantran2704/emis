@@ -30,7 +30,7 @@ import enImg from "../pics/tet/eng-implant.png";
 const ImplantAd = () => {
   const language = useSelector((state) => state.language.language);
   const isVI = language === "vietnamese";
-  // const adImage = isVI ? viImg : enImg; // Uncomment when you add images
+  const adImage = isVI ? viImg : enImg; // Uncomment when you add images
 
   // Vietnamese content
   const viContent = {
@@ -230,71 +230,87 @@ const ImplantAd = () => {
     }
   };
 
+  // Use Vietnamese if language is "vietnamese", otherwise use English
   const content = isVI ? viContent : enContent;
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <main className="min-h-screen bg-gradient-to-b from-amber-50 to-red-50">
       <Helmet>
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaDescription} />
       </Helmet>
 
-      {/* Hero Banner */}
-      <div className="relative bg-gradient-to-r from-[#1a365d] via-[#2d4a8c] to-[#1a365d] pt-24 pb-12 overflow-hidden">
-        {/* Background Pattern */}
+      {/* Hero Banner with Tet Red & Gold Theme */}
+      <div className="relative bg-gradient-to-r from-red-600 via-red-700 to-red-800 pt-24 pb-12 overflow-hidden">
+        {/* Gold Pattern Overlay */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L0 30l30 30 30-30z' fill='%23ffffff'/%3E%3C/svg%3E")`,
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54 6L6 54' stroke='%23FFD700' stroke-width='2'/%3E%3Cpath d='M54 54L6 6' stroke='%23FFD700' stroke-width='2'/%3E%3Ccircle cx='30' cy='30' r='10' fill='%23FFD700'/%3E%3C/svg%3E")`,
             backgroundSize: '60px 60px'
           }}></div>
         </div>
         
+        {/* Promotional Image */}
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            {/* Badge */}
-            <div className="inline-flex items-center bg-gradient-to-r from-[#38b2ac] to-[#81e6d9] text-[#1a365d] px-6 py-2 rounded-full font-bold mb-6 animate-pulse">
-              <Sparkles className="w-5 h-5 mr-2" />
-              {isVI ? "ƯU ĐÃI ĐẶC BIỆT TẾT 2026" : "SPECIAL TET 2026 OFFER"}
+          <div className="flex flex-col lg:flex-row items-center gap-8">
+            <div className="lg:w-1/2">
+              {/* Badge */}
+              <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-yellow-300 text-red-800 px-6 py-2 rounded-full font-bold mb-6 animate-pulse shadow-lg">
+                <Sparkles className="w-5 h-5 mr-2" />
+                {isVI ? "ƯU ĐÃI ĐẶC BIỆT TẾT 2026" : "SPECIAL TET 2026 OFFER"}
+              </div>
+              
+              {/* Main Title */}
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
+                {content.heroTitle}
+              </h1>
+              
+              {/* Subtitle */}
+              <p className="text-2xl md:text-3xl font-bold text-yellow-300 mb-8">
+                {content.heroSubtitle}
+              </p>
+              
+              {/* Description */}
+              <div className="space-y-4">
+                <p className="text-xl text-gray-100">
+                  {content.heroDescription}
+                </p>
+                <p className="text-lg text-gray-200">
+                  {content.intro1} {content.intro2}
+                </p>
+              </div>
             </div>
             
-            {/* Main Title */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
-              {content.heroTitle}
-            </h1>
-            
-            {/* Subtitle */}
-            <p className="text-2xl md:text-3xl font-bold text-[#38b2ac] mb-8">
-              {content.heroSubtitle}
-            </p>
-            
-            {/* Description */}
-            <div className="max-w-3xl mx-auto">
-              <p className="text-xl text-gray-200 mb-4">
-                {content.heroDescription}
-              </p>
-              <p className="text-lg text-gray-300">
-                {content.intro1} {content.intro2}
-              </p>
+            {/* Ad Image */}
+            <div className="lg:w-1/2">
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-r from-yellow-400 to-yellow-300 rounded-3xl blur-lg opacity-50"></div>
+                <img 
+                  src={adImage} 
+                  alt={isVI ? "Trồng răng Implant Tết 2026" : "Dental Implants Tet 2026"}
+                  className="relative rounded-2xl shadow-2xl w-full h-auto border-4 border-yellow-300"
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Quick Info Banner */}
-      <div className="bg-gradient-to-r from-[#38b2ac] to-[#4fd1c7] py-4">
+      <div className="bg-gradient-to-r from-yellow-500 to-yellow-400 py-4 shadow-lg">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex items-center text-white">
+            <div className="flex items-center text-red-800">
               <Clock className="w-5 h-5 mr-2" />
               <span className="font-semibold">{content.pricing.period}</span>
             </div>
-            <div className="flex items-center text-white">
+            <div className="flex items-center text-red-800">
               <Shield className="w-5 h-5 mr-2" />
               <span className="font-semibold">{isVI ? "Bảo hành lên đến 15 năm" : "Warranty up to 15 years"}</span>
             </div>
             <Link
               to="/contact"
-              className="bg-white text-[#1a365d] font-bold py-2 px-6 rounded-full hover:bg-gray-100 transition-colors"
+              className="bg-red-600 text-white font-bold py-2 px-6 rounded-full hover:bg-red-700 transition-colors shadow-lg hover:shadow-xl"
             >
               {isVI ? "ĐẶT LỊCH NGAY" : "BOOK NOW"}
             </Link>
@@ -306,9 +322,9 @@ const ImplantAd = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="space-y-16">
           {/* Why Implant Section */}
-          <section className="bg-white rounded-3xl shadow-xl p-8 md:p-10">
+          <section className="bg-white rounded-3xl shadow-xl p-8 md:p-10 border-2 border-yellow-100">
             <div className="flex items-center mb-8">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#1a365d] to-[#38b2ac] rounded-xl flex items-center justify-center mr-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-red-600 to-yellow-500 rounded-xl flex items-center justify-center mr-4 shadow-lg">
                 <AwardIcon className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
@@ -320,8 +336,8 @@ const ImplantAd = () => {
             
             <div className="grid md:grid-cols-2 gap-6">
               {content.sections[0].points.map((point, idx) => (
-                <div key={idx} className="flex items-start p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
-                  <CheckCircle className="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1" />
+                <div key={idx} className="flex items-start p-4 bg-gradient-to-r from-red-50 to-yellow-50 rounded-xl hover:from-red-100 hover:to-yellow-100 transition-colors border border-red-100">
+                  <CheckCircle className="w-6 h-6 text-red-600 mr-3 flex-shrink-0 mt-1" />
                   <p className="text-gray-700">{point}</p>
                 </div>
               ))}
@@ -329,12 +345,12 @@ const ImplantAd = () => {
           </section>
 
           {/* Pricing Section */}
-          <section className="bg-gradient-to-r from-[#f0fff4] to-[#e6fffa] border-2 border-[#38b2ac]/20 rounded-3xl p-8 md:p-10">
+          <section className="bg-gradient-to-r from-red-50 to-yellow-50 border-2 border-yellow-200 rounded-3xl p-8 md:p-10 shadow-lg">
             <div className="text-center mb-10">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
                 {content.pricing.title}
               </h2>
-              <div className="w-32 h-1 bg-gradient-to-r from-[#1a365d] to-[#38b2ac] rounded-full mx-auto"></div>
+              <div className="w-32 h-1 bg-gradient-to-r from-red-600 to-yellow-500 rounded-full mx-auto"></div>
             </div>
             
             {/* Single Implant Offers */}
@@ -346,26 +362,31 @@ const ImplantAd = () => {
               
               <div className="grid md:grid-cols-3 gap-6 mb-8">
                 {content.pricing.singleItems.map((item, idx) => (
-                  <div key={idx} className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
+                  <div key={idx} className="bg-white rounded-2xl p-6 shadow-lg border-2 border-red-100 hover:border-red-300 transition-all duration-300">
                     <div className="text-center mb-4">
-                      <Heart className="w-12 h-12 text-red-400 mx-auto mb-3" />
+                      <Heart className="w-12 h-12 text-red-500 mx-auto mb-3" />
                       <h4 className="font-bold text-gray-800 text-lg">{item.name}</h4>
                     </div>
                     <div className="text-center">
-                      <p className="text-3xl font-bold text-[#38b2ac]">{item.price}</p>
+                      <p className="text-3xl font-bold text-red-600">{item.price}</p>
                       <p className="text-gray-600 text-sm mt-2">{isVI ? "Bao gồm trụ + Abutment + Mão sứ" : "Includes post + Abutment + Crown"}</p>
                     </div>
                   </div>
                 ))}
                 
                 {/* Discount Card */}
-                <div className="md:col-span-2 bg-gradient-to-r from-[#1a365d] to-[#2d4a8c] rounded-2xl p-6 text-white">
-                  <h4 className="font-bold text-xl mb-4">{content.pricing.discountNote}</h4>
+                <div className="md:col-span-2 bg-gradient-to-r from-red-700 to-red-800 rounded-2xl p-6 text-white shadow-lg">
+                  <div className="flex items-center mb-4">
+                    <div className="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center mr-3">
+                      <DollarSign className="w-4 h-4 text-red-800" />
+                    </div>
+                    <h4 className="font-bold text-xl">{content.pricing.discountNote}</h4>
+                  </div>
                   <ul className="space-y-2">
                     {content.pricing.premiumBrands.map((brand, idx) => (
                       <li key={idx} className="flex items-start">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-2 flex-shrink-0 mt-1" />
-                        <span>{brand}</span>
+                        <CheckCircle className="w-5 h-5 text-yellow-400 mr-2 flex-shrink-0 mt-1" />
+                        <span className="text-gray-100">{brand}</span>
                       </li>
                     ))}
                   </ul>
@@ -374,9 +395,9 @@ const ImplantAd = () => {
             </div>
             
             {/* All-on-4 Section */}
-            <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg">
+            <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg border-2 border-yellow-100">
               <h3 className="text-xl font-bold text-gray-800 mb-6 flex items-center">
-                <Trophy className="w-5 h-5 text-[#d4af37] mr-2" />
+                <Trophy className="w-5 h-5 text-yellow-500 mr-2" />
                 {content.pricing.fullArchTitle}
               </h3>
               
@@ -384,8 +405,8 @@ const ImplantAd = () => {
               
               <div className="grid md:grid-cols-2 gap-6">
                 {content.pricing.fullArchBenefits.map((benefit, idx) => (
-                  <div key={idx} className="flex items-center bg-gray-50 rounded-xl p-4">
-                    <div className="w-10 h-10 bg-[#38b2ac] rounded-full flex items-center justify-center mr-3">
+                  <div key={idx} className="flex items-center bg-gradient-to-r from-red-50 to-yellow-50 rounded-xl p-4 border border-red-100">
+                    <div className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center mr-3 shadow-md">
                       <span className="text-white font-bold">{idx + 1}</span>
                     </div>
                     <p className="text-gray-700">{benefit}</p>
@@ -394,7 +415,7 @@ const ImplantAd = () => {
               </div>
               
               {/* Before-After Comparison */}
-              <div className="mt-8 p-6 bg-gray-50 rounded-xl">
+              <div className="mt-8 p-6 bg-gradient-to-r from-red-50 to-yellow-50 rounded-xl border border-red-100">
                 <h4 className="font-bold text-gray-800 mb-4 text-center">
                   {isVI ? "SO SÁNH CHI PHÍ IMPLANT" : "IMPLANT COST COMPARISON"}
                 </h4>
@@ -404,11 +425,11 @@ const ImplantAd = () => {
                     <p className="text-2xl font-bold text-gray-400 line-through">15-25tr</p>
                   </div>
                   <div className="flex items-center justify-center">
-                    <ChevronRight className="w-6 h-6 text-gray-400" />
+                    <ChevronRight className="w-6 h-6 text-red-600" />
                   </div>
                   <div>
-                    <p className="text-[#38b2ac] text-sm mb-1 font-bold">{isVI ? "Sau Ưu Đãi" : "After Discount"}</p>
-                    <p className="text-3xl font-bold text-[#1a365d]">8.9tr</p>
+                    <p className="text-red-600 text-sm mb-1 font-bold">{isVI ? "Sau Ưu Đãi" : "After Discount"}</p>
+                    <p className="text-3xl font-bold text-red-700">8.9tr</p>
                   </div>
                 </div>
               </div>
@@ -416,7 +437,7 @@ const ImplantAd = () => {
             
             {/* Note */}
             <div className="mt-8 text-center">
-              <div className="inline-flex items-center bg-yellow-50 text-yellow-800 px-4 py-2 rounded-full">
+              <div className="inline-flex items-center bg-yellow-50 text-red-800 px-4 py-2 rounded-full border border-yellow-200">
                 <Clock className="w-4 h-4 mr-2" />
                 {content.pricing.period}
               </div>
@@ -425,12 +446,12 @@ const ImplantAd = () => {
           </section>
 
           {/* Process Section */}
-          <section className="bg-white rounded-3xl shadow-xl p-8 md:p-10">
+          <section className="bg-white rounded-3xl shadow-xl p-8 md:p-10 border-2 border-red-50">
             <div className="text-center mb-10">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
                 {content.process.title}
               </h2>
-              <div className="w-32 h-1 bg-gradient-to-r from-[#1a365d] to-[#38b2ac] rounded-full mx-auto"></div>
+              <div className="w-32 h-1 bg-gradient-to-r from-red-600 to-yellow-500 rounded-full mx-auto"></div>
             </div>
             
             <p className="text-gray-700 text-lg mb-8 text-center max-w-3xl mx-auto">
@@ -439,9 +460,9 @@ const ImplantAd = () => {
             
             <div className="grid md:grid-cols-2 gap-6">
               {content.process.points.map((point, idx) => (
-                <div key={idx} className="bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors">
+                <div key={idx} className="bg-gradient-to-br from-red-50 to-yellow-50 rounded-xl p-6 hover:from-red-100 hover:to-yellow-100 transition-colors border border-red-100">
                   <div className="flex items-center mb-4">
-                    <div className="w-10 h-10 bg-gradient-to-br from-[#1a365d] to-[#38b2ac] rounded-full flex items-center justify-center mr-3">
+                    <div className="w-10 h-10 bg-gradient-to-br from-red-600 to-yellow-500 rounded-full flex items-center justify-center mr-3 shadow-md">
                       <span className="text-white font-bold">{idx + 1}</span>
                     </div>
                     <h3 className="font-bold text-gray-800">
@@ -458,19 +479,19 @@ const ImplantAd = () => {
           </section>
 
           {/* Features Section */}
-          <section className="bg-gradient-to-r from-[#f0fff4] to-[#e6fffa] rounded-3xl p-8 md:p-10">
+          <section className="bg-gradient-to-r from-red-50 to-yellow-50 rounded-3xl p-8 md:p-10 border-2 border-yellow-100 shadow-lg">
             <div className="text-center mb-10">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
                 {content.features.title}
               </h2>
-              <div className="w-32 h-1 bg-gradient-to-r from-[#1a365d] to-[#38b2ac] rounded-full mx-auto"></div>
+              <div className="w-32 h-1 bg-gradient-to-r from-red-600 to-yellow-500 rounded-full mx-auto"></div>
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {content.features.items.map((feature, idx) => (
-                <div key={idx} className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#1a365d]/10 to-[#38b2ac]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <div className="text-[#1a365d]">
+                <div key={idx} className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 border border-red-100 hover:border-red-300">
+                  <div className="w-16 h-16 bg-gradient-to-br from-red-100 to-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div className="text-red-600">
                       {feature.icon}
                     </div>
                   </div>
@@ -482,38 +503,40 @@ const ImplantAd = () => {
           </section>
 
           {/* Investment Section */}
-          <section className="bg-gradient-to-r from-[#1a365d] to-[#2d4a8c] rounded-3xl p-8 md:p-10 text-white">
+          <section className="bg-gradient-to-r from-red-700 to-red-800 rounded-3xl p-8 md:p-10 text-white shadow-2xl">
             <div className="text-center mb-8">
-              <Heart className="w-16 h-16 text-[#38b2ac] mx-auto mb-6" />
+              <div className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-yellow-300 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <Heart className="w-10 h-10 text-red-800" />
+              </div>
               <h2 className="text-2xl md:text-3xl font-bold mb-6">
                 {content.investment.title}
               </h2>
             </div>
             
             <div className="max-w-3xl mx-auto">
-              <p className="text-lg text-gray-200 mb-6 text-center">
+              <p className="text-lg text-gray-100 mb-6 text-center">
                 {content.investment.content}
               </p>
-              <p className="text-lg text-gray-200 text-center">
+              <p className="text-lg text-gray-100 text-center">
                 {content.investment.conclusion}
               </p>
               
               {/* Benefits Grid */}
               <div className="grid md:grid-cols-3 gap-6 mt-10">
-                <div className="text-center p-4">
-                  <Leaf className="w-10 h-10 text-[#38b2ac] mx-auto mb-3" />
+                <div className="text-center p-4 bg-red-600/20 rounded-xl backdrop-blur-sm">
+                  <Leaf className="w-10 h-10 text-yellow-300 mx-auto mb-3" />
                   <h4 className="font-bold mb-2">{isVI ? "Sức khỏe toàn diện" : "Complete Health"}</h4>
-                  <p className="text-gray-300 text-sm">{isVI ? "Cải thiện tiêu hóa, ngăn ngừa bệnh dạ dày" : "Improve digestion, prevent stomach issues"}</p>
+                  <p className="text-gray-200 text-sm">{isVI ? "Cải thiện tiêu hóa, ngăn ngừa bệnh dạ dày" : "Improve digestion, prevent stomach issues"}</p>
                 </div>
-                <div className="text-center p-4">
-                  <DollarSign className="w-10 h-10 text-[#38b2ac] mx-auto mb-3" />
+                <div className="text-center p-4 bg-red-600/20 rounded-xl backdrop-blur-sm">
+                  <DollarSign className="w-10 h-10 text-yellow-300 mx-auto mb-3" />
                   <h4 className="font-bold mb-2">{isVI ? "Tiết kiệm lâu dài" : "Long-term Savings"}</h4>
-                  <p className="text-gray-300 text-sm">{isVI ? "Đầu tư một lần, sử dụng suốt đời" : "One-time investment, lifetime use"}</p>
+                  <p className="text-gray-200 text-sm">{isVI ? "Đầu tư một lần, sử dụng suốt đời" : "One-time investment, lifetime use"}</p>
                 </div>
-                <div className="text-center p-4">
-                  <Stethoscope className="w-10 h-10 text-[#38b2ac] mx-auto mb-3" />
+                <div className="text-center p-4 bg-red-600/20 rounded-xl backdrop-blur-sm">
+                  <Stethoscope className="w-10 h-10 text-yellow-300 mx-auto mb-3" />
                   <h4 className="font-bold mb-2">{isVI ? "Phòng ngừa bệnh" : "Disease Prevention"}</h4>
-                  <p className="text-gray-300 text-sm">{isVI ? "Ngăn tiêu xương, bảo vệ răng kế cận" : "Prevent bone loss, protect adjacent teeth"}</p>
+                  <p className="text-gray-200 text-sm">{isVI ? "Ngăn tiêu xương, bảo vệ răng kế cận" : "Prevent bone loss, protect adjacent teeth"}</p>
                 </div>
               </div>
             </div>
@@ -521,15 +544,15 @@ const ImplantAd = () => {
 
           {/* Final CTA */}
           <section className="text-center">
-            <div className="bg-gradient-to-r from-[#38b2ac] to-[#4fd1c7] rounded-3xl p-8 md:p-10">
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
+            <div className="bg-gradient-to-r from-yellow-500 to-yellow-400 rounded-3xl p-8 md:p-10 shadow-2xl">
+              <h3 className="text-2xl md:text-3xl font-bold text-red-800 mb-6">
                 {isVI ? "SẴN SÀNG ĐỂ CÓ NỤ CƯỜI HOÀN HẢO ĐÓN TẾT?" : "READY FOR A PERFECT SMILE THIS TET?"}
               </h3>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center justify-center bg-white text-[#1a365d] font-bold text-lg py-4 px-8 rounded-full shadow-2xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                  className="inline-flex items-center justify-center bg-red-700 text-white font-bold text-lg py-4 px-8 rounded-full shadow-2xl hover:shadow-xl hover:-translate-y-1 hover:bg-red-800 transition-all duration-300"
                 >
                   {content.cta.button}
                   <ChevronRight className="w-5 h-5 ml-2" />
@@ -537,54 +560,54 @@ const ImplantAd = () => {
                 
                 <a
                   href="tel:0919100021"
-                  className="inline-flex items-center justify-center bg-[#1a365d] text-white font-bold text-lg py-4 px-8 rounded-full shadow-lg hover:shadow-xl hover:bg-[#2d4a8c] transition-all duration-300"
+                  className="inline-flex items-center justify-center bg-red-800 text-white font-bold text-lg py-4 px-8 rounded-full shadow-lg hover:shadow-xl hover:bg-red-900 transition-all duration-300"
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   0919 100 021
                 </a>
               </div>
               
-              <p className="text-white/80">{content.cta.subtext}</p>
+              <p className="text-red-900 font-medium">{content.cta.subtext}</p>
             </div>
           </section>
         </div>
 
         {/* Contact Footer */}
-        <div className="mt-16 bg-white rounded-3xl shadow-xl p-8 border border-gray-100">
+        <div className="mt-16 bg-white rounded-3xl shadow-xl p-8 border-2 border-yellow-100">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">
               {isVI ? "NHA KHOA QUỐC TẾ " : "INTERNATIONAL DENTAL CLINIC "}
-              <span className="text-[#38b2ac]">EMIS DENTAL</span>
+              <span className="text-red-600">EMIS DENTAL</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-[#1a365d] to-[#38b2ac] rounded-full mx-auto" />
+            <div className="w-24 h-1 bg-gradient-to-r from-red-600 to-yellow-500 rounded-full mx-auto" />
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-6 bg-gray-50 rounded-xl hover:bg-white transition-colors">
-              <div className="w-14 h-14 bg-[#1a365d]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MapPin className="w-6 h-6 text-[#1a365d]" />
+            <div className="text-center p-6 bg-gradient-to-br from-red-50 to-yellow-50 rounded-xl hover:from-red-100 hover:to-yellow-100 transition-colors border border-red-100">
+              <div className="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <MapPin className="w-6 h-6 text-red-600" />
               </div>
               <h3 className="font-bold text-gray-800 mb-2">{isVI ? "Địa chỉ" : "Address"}</h3>
               <p className="text-gray-600">62B Phạm Ngọc Thạch, District 3, HCMC</p>
             </div>
 
-            <div className="text-center p-6 bg-gray-50 rounded-xl hover:bg-white transition-colors">
-              <div className="w-14 h-14 bg-[#38b2ac]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Phone className="w-6 h-6 text-[#38b2ac]" />
+            <div className="text-center p-6 bg-gradient-to-br from-red-50 to-yellow-50 rounded-xl hover:from-red-100 hover:to-yellow-100 transition-colors border border-red-100">
+              <div className="w-14 h-14 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Phone className="w-6 h-6 text-yellow-600" />
               </div>
               <h3 className="font-bold text-gray-800 mb-2">Hotline</h3>
-              <p className="text-lg font-bold text-[#1a365d]">0919 100 021</p>
-              <p className="text-lg font-bold text-[#1a365d]">0768 117 068</p>
+              <p className="text-lg font-bold text-red-600">0919 100 021</p>
+              <p className="text-lg font-bold text-red-600">0768 117 068</p>
             </div>
 
-            <div className="text-center p-6 bg-gray-50 rounded-xl hover:bg-white transition-colors">
-              <div className="w-14 h-14 bg-[#1a365d]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Globe className="w-6 h-6 text-[#1a365d]" />
+            <div className="text-center p-6 bg-gradient-to-br from-red-50 to-yellow-50 rounded-xl hover:from-red-100 hover:to-yellow-100 transition-colors border border-red-100">
+              <div className="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Globe className="w-6 h-6 text-red-600" />
               </div>
               <h3 className="font-bold text-gray-800 mb-2">Website</h3>
               <a 
                 href="https://www.emisdental.com" 
-                className="text-[#38b2ac] hover:underline font-medium block"
+                className="text-red-600 hover:text-red-700 hover:underline font-medium block"
                 target="_blank"
                 rel="noopener noreferrer"
               >
