@@ -20,6 +20,9 @@ import CrownLanding from './pages/bocRang.jsx';
 import DentalVisitorProgram from './pages/flightassist.jsx';
 import AdArticle from './pages/AdArticle.jsx';
 import WhiteningAd from './pages/whitening.jsx';
+import ImplantAd from './pages/implant.jsx';
+import CrownAd from './pages/crown.jsx';
+import OrthoAd from './pages/ortho.jsx';
 export default function App() {
   const language = useSelector((state) => state.language.language);
   const dispatch = useDispatch();
@@ -56,7 +59,10 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
           <Route path="/ads/:type" element = {<AdArticle/>}/>
           <Route path="/visitor-program" element={<DentalVisitorProgram />} />
-          <Route path="/whitening" element={<WhiteningAd/>}/>
+          <Route path="/whiteningAd" element={<WhiteningAd/>}/>
+          <Route path="/implantAd" element={<ImplantAd/>}/>
+          <Route path="/crownAd" element={<CrownAd/>}/>
+          <Route path="/orthoAd" element={<orthoAd/>}/>
         </Routes>
         <Footer language={language}/>
         <FloatingContactButton />
