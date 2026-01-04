@@ -59,7 +59,7 @@ export default function App() {
           <Route path="/whiteningAd" element={<WhiteningAd/>}/>
           <Route path="/implantAd" element={<ImplantAd/>}/>
           <Route path="/crownAd" element={<CrownAd/>}/>
-          <Route path="/orthoAd" element={<orthoAd/>}/>
+          <Route path="/orthoAd" element={<OrthoAd/>}/>
 
 
           
