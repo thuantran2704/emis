@@ -22,9 +22,11 @@ export default function Navbar() {
   const aboutDropdownItems = [
     { name: content.drSon, path: '/dr-son' },
     { name: content.veneer, path: '/veneer' },
-    { name: content.implant, path: '/implant' },
-    { name: content.crown, path: '/crown' },
+    { name: content.implant, path: '/implantAd' },
+    { name: content.crown, path: '/crownAd' },
     { name: content.equipment, path: '/equipment' },
+    { name: content.orthodontics, path: '/orthoAd' },
+    { name: content.whitening, path: '/whiteningAd' },
   ];
 
   return (
@@ -108,6 +110,7 @@ export default function Navbar() {
                 )}
               </div>
 
+              {/* SERVICES */}
               <Link
                 to="/services"
                 className="text-[#2a3439] font-medium px-3 py-2"
@@ -116,8 +119,16 @@ export default function Navbar() {
                 {content.services}
               </Link>
 
+              {/* NEW: TET OFFER */}
+              <Link
+                to="/genAd"
+                className="text-[#2a3439] font-medium px-3 py-2 transition-all duration-300"
+                style={{ fontFamily: "'Be Vietnam Pro', sans-serif", fontWeight: '600' }}
+              >
+                {content.tetOffer}
+              </Link>
 
-              {/* GRATITUDE - Now a direct link to /christmas */}
+              {/* GRATITUDE */}
               <Link
                 to="/visitor-program"
                 className="text-[#2a3439] font-medium px-3 py-2 transition-all duration-300"
@@ -126,6 +137,7 @@ export default function Navbar() {
                 {content.gratitude}
               </Link>
 
+              {/* CONTACT */}
               <Link
                 to="/contact"
                 className="ml-4 px-5 py-2 bg-[#2a3439] text-[#C5AF73] rounded-md hover:bg-[#1f2937] transition"
@@ -216,15 +228,16 @@ export default function Navbar() {
               {content.services}
             </Link>
 
+            {/* NEW: TET OFFER */}
             <Link
-              to="/equipment"
+              to="/genAd"
               className="block px-3 py-2 text-[#2a3439] font-medium rounded-md hover:bg-[#2a3439] hover:text-[#C5AF73]"
               onClick={toggleMenu}
             >
-              {content.equipment}
+              {content.tetOffer}
             </Link>
 
-            {/* MOBILE GRATITUDE - Now a direct link to /christmas */}
+            {/* GRATITUDE */}
             <Link
               to="/visitor-program"
               className="block px-3 py-2 text-[#2a3439] font-medium rounded-md hover:bg-[#2a3439] hover:text-[#C5AF73]"

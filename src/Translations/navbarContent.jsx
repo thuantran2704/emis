@@ -9,7 +9,10 @@ const navbarContent = {
     drSon: "Meet Dr. Son",
     veneer: "Veneers",
     implant: "Implants",
-    crown: "Crowns"
+    crown: "Crowns",
+    tetOffer: "Tet Promotions",
+    orthodontics: "Orthodontics",
+    whitening: "Whitening"
   },
   vietnamese: {
     home: "Trang Chủ",
@@ -21,7 +24,10 @@ const navbarContent = {
     drSon: "Giới Thiệu Bác Sĩ",
     veneer: "Mặt Dán Sứ",
     implant: "Trồng Răng",
-    crown: "Răng Sứ"
+    crown: "Răng Sứ",
+    tetOffer: "Ưu Đãi Tết",
+    orthodontics: "Niềng Răng",
+    whitening: "Tẩy Trắng Răng"
   },
   french: {
     home: "Accueil",
@@ -33,7 +39,10 @@ const navbarContent = {
     drSon: "Présentation du Dr Son",
     veneer: "Facettes Dentaires",
     implant: "Implants",
-    crown: "Couronnes"
+    crown: "Couronnes",
+    tetOffer: "Promotions du Tet",
+    orthodontics: "Orthodontie",
+    whitening: "Blanchiment"
   },
   simplified: {
     home: "首页",
@@ -45,7 +54,10 @@ const navbarContent = {
     drSon: "医生介绍",
     veneer: "牙贴面",
     implant: "种植牙",
-    crown: "牙冠"
+    crown: "牙冠",
+    tetOffer: "春节优惠",
+    orthodontics: "牙齿矫正",
+    whitening: "美白牙齿"
   },
   traditional: {
     home: "首頁",
@@ -57,7 +69,10 @@ const navbarContent = {
     drSon: "醫生介紹",
     veneer: "牙貼面",
     implant: "植牙",
-    crown: "牙冠"
+    crown: "牙冠",
+    tetOffer: "春節優惠",
+    orthodontics: "牙齒矯正",
+    whitening: "牙齒美白"
   },
   korean: {
     home: "홈",
@@ -69,7 +84,10 @@ const navbarContent = {
     drSon: "의사 소개",
     veneer: "베니어",
     implant: "임플란트",
-    crown: "크라운"
+    crown: "크라운",
+    tetOffer: "설날 프로모션",
+    orthodontics: "교정치료",
+    whitening: "치아미백"
   },
 };
 
