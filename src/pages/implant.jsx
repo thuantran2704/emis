@@ -24,8 +24,8 @@ import {
 } from "lucide-react";
 
 // Import images - you'll need to add these to your project
-// import viImg from "../pics/tet/vie-implant.png";
-// import enImg from "../pics/tet/eng-implant.png";
+import viImg from "../pics/tet/vie-implant.png";
+import enImg from "../pics/tet/eng-implant.png";
 
 const ImplantAd = () => {
   const language = useSelector((state) => state.language.language);

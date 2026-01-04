@@ -26,8 +26,8 @@ import {
 } from "lucide-react";
 
 // Import images - add these to your project
-// import viImg from "../pics/tet/vie-ortho.png";
-// import enImg from "../pics/tet/eng-ortho.png";
+import viImg from "../pics/tet/vie-ortho.png";
+import enImg from "../pics/tet/eng-ortho.png";
 
 const OrthoAd = () => {
   const language = useSelector((state) => state.language.language);

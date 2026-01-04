@@ -25,8 +25,8 @@ import {
 } from "lucide-react";
 
 // Import images - add these to your project
-// import viImg from "../pics/tet/vie-crown.png";
-// import enImg from "../pics/tet/eng-crown.png";
+import viImg from "../pics/tet/vie-crown.png";
+import enImg from "../pics/tet/eng-crown.png";
 
 const CrownAd = () => {
   const language = useSelector((state) => state.language.language);
