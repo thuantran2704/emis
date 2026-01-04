@@ -25,14 +25,14 @@ import {
   ArrowRight
 } from "lucide-react";
 
-// Import images - add these to your project
+// Import images
 import viImg from "../pics/tet/vie-ortho.png";
 import enImg from "../pics/tet/eng-ortho.png";
 
 const OrthoAd = () => {
   const language = useSelector((state) => state.language.language);
   const isVI = language === "vietnamese";
-  // const adImage = isVI ? viImg : enImg; // Uncomment when you add images
+  const adImage = isVI ? viImg : enImg;
 
   // Vietnamese content
   const viContent = {
@@ -71,7 +71,7 @@ const OrthoAd = () => {
             "Chi phí tiết kiệm",
             "Phù hợp mọi độ tuổi"
           ],
-          color: "from-blue-500 to-cyan-500"
+          color: "from-amber-500 to-yellow-500"
         },
         {
           name: "Niềng răng mắc cài sứ thẩm mỹ",
@@ -81,7 +81,7 @@ const OrthoAd = () => {
             "Thẩm mỹ tối đa",
             "Tự tin giao tiếp"
           ],
-          color: "from-emerald-500 to-teal-500"
+          color: "from-amber-500 to-yellow-500"
         }
       ],
       period: "Chương trình diễn ra từ 01/01/2026 – 15/02/2026",
@@ -174,7 +174,7 @@ const OrthoAd = () => {
             "Cost-effective",
             "Suitable for all ages"
           ],
-          color: "from-blue-500 to-cyan-500"
+          color: "from-amber-500 to-yellow-500"
         },
         {
           name: "Ceramic aesthetic braces",
@@ -184,7 +184,7 @@ const OrthoAd = () => {
             "Maximum aesthetics",
             "Confident communication"
           ],
-          color: "from-emerald-500 to-teal-500"
+          color: "from-amber-500 to-yellow-500"
         }
       ],
       period: "Program runs from January 1, 2026 – February 15, 2026",
@@ -243,16 +243,16 @@ const OrthoAd = () => {
   const content = isVI ? viContent : enContent;
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <main className="min-h-screen bg-gradient-to-b from-red-50 to-amber-50">
       <Helmet>
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaDescription} />
       </Helmet>
 
-      {/* Hero Banner */}
-      <div className="relative bg-gradient-to-r from-[#059669] via-[#10b981] to-[#059669] pt-24 pb-12 overflow-hidden">
+      {/* Hero Banner with Image */}
+      <div className="relative bg-gradient-to-r from-red-600 via-red-500 to-red-600 pt-24 pb-12 overflow-hidden">
         {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0" style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L0 30l30 30 30-30z' fill='%23ffffff'/%3E%3C/svg%3E")`,
             backgroundSize: '60px 60px'
@@ -260,33 +260,50 @@ const OrthoAd = () => {
         </div>
         
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            {/* Badge */}
-            <div className="inline-flex items-center bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] text-[#065f46] px-6 py-2 rounded-full font-bold mb-6 animate-pulse">
-              <Sparkles className="w-5 h-5 mr-2" />
-              {isVI ? "ƯU ĐÃI ĐẶC BIỆT TẾT 2026" : "SPECIAL TET 2026 OFFER"}
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
+            {/* Content */}
+            <div className="text-white">
+              {/* Badge */}
+              <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-amber-400 text-red-800 px-6 py-2 rounded-full font-bold mb-6 animate-pulse">
+                <Sparkles className="w-5 h-5 mr-2" />
+                {isVI ? "ƯU ĐÃI ĐẶC BIỆT TẾT 2026" : "SPECIAL TET 2026 OFFER"}
+              </div>
+              
+              {/* Main Title */}
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+                {content.heroTitle}
+              </h1>
+              
+              {/* Description */}
+              <div className="space-y-4">
+                <p className="text-lg text-red-100">
+                  {content.heroDescription}
+                </p>
+                <p className="text-lg text-red-100">
+                  {content.intro1} {content.intro2}
+                </p>
+              </div>
             </div>
             
-            {/* Main Title */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
-              {content.heroTitle}
-            </h1>
-            
-            {/* Description */}
-            <div className="max-w-3xl mx-auto">
-              <p className="text-xl text-gray-200 mb-4">
-                {content.heroDescription}
-              </p>
-              <p className="text-lg text-gray-300">
-                {content.intro1} {content.intro2}
-              </p>
+            {/* Image */}
+            <div className="relative">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-amber-300">
+                <img 
+                  src={adImage} 
+                  alt={isVI ? "Ưu đãi niềng răng Tết 2026" : "Tet 2026 Braces Offer"} 
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              {/* Decorative elements */}
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-r from-yellow-400 to-amber-500 rounded-full opacity-30"></div>
+              <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-gradient-to-r from-red-500 to-red-600 rounded-full opacity-30"></div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Quick Info Banner */}
-      <div className="bg-gradient-to-r from-[#10b981] to-[#34d399] py-4">
+      <div className="bg-gradient-to-r from-red-600 to-amber-600 py-4">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center text-white">
@@ -299,7 +316,7 @@ const OrthoAd = () => {
             </div>
             <Link
               to="/contact"
-              className="bg-white text-[#065f46] font-bold py-2 px-6 rounded-full hover:bg-gray-100 transition-colors"
+              className="bg-gradient-to-r from-yellow-400 to-amber-400 text-red-800 font-bold py-2 px-6 rounded-full hover:shadow-lg transition-all hover:-translate-y-0.5"
             >
               {isVI ? "ĐẶT LỊCH NGAY" : "BOOK NOW"}
             </Link>
@@ -311,9 +328,9 @@ const OrthoAd = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="space-y-16">
           {/* Why Braces Section */}
-          <section className="bg-white rounded-3xl shadow-xl p-8 md:p-10">
+          <section className="bg-white rounded-3xl shadow-xl p-8 md:p-10 border-2 border-amber-100">
             <div className="flex items-center mb-8">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#059669] to-[#fbbf24] rounded-xl flex items-center justify-center mr-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-red-600 to-amber-500 rounded-xl flex items-center justify-center mr-4">
                 <CalendarIcon className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
@@ -325,8 +342,8 @@ const OrthoAd = () => {
             
             <div className="grid md:grid-cols-2 gap-6">
               {content.sections[0].points.map((point, idx) => (
-                <div key={idx} className="flex items-start p-6 bg-gradient-to-r from-emerald-50 to-green-50 rounded-xl hover:shadow-md transition-shadow">
-                  <div className="w-10 h-10 bg-gradient-to-br from-[#059669] to-[#fbbf24] rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <div key={idx} className="flex items-start p-6 bg-gradient-to-r from-red-50 to-amber-50 rounded-xl hover:shadow-md transition-shadow border border-red-100">
+                  <div className="w-10 h-10 bg-gradient-to-br from-red-600 to-amber-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <p className="text-gray-700">{point}</p>
@@ -336,26 +353,26 @@ const OrthoAd = () => {
           </section>
 
           {/* Pricing Section */}
-          <section className="bg-gradient-to-r from-[#f0fdf4] to-[#ecfdf5] border-2 border-[#10b981]/20 rounded-3xl p-8 md:p-10">
+          <section className="bg-gradient-to-r from-red-50 to-amber-50 border-2 border-red-200 rounded-3xl p-8 md:p-10">
             <div className="text-center mb-10">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
                 {content.pricing.title}
               </h2>
-              <div className="w-32 h-1 bg-gradient-to-r from-[#059669] to-[#fbbf24] rounded-full mx-auto"></div>
+              <div className="w-32 h-1 bg-gradient-to-r from-red-600 to-amber-500 rounded-full mx-auto"></div>
               <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
                 {content.pricing.description}
               </p>
             </div>
             
             {/* Discount Banner */}
-            <div className="bg-gradient-to-r from-[#059669] to-[#10b981] rounded-2xl p-8 text-center text-white mb-10 shadow-lg">
+            <div className="bg-gradient-to-r from-red-600 to-amber-600 rounded-2xl p-8 text-center text-white mb-10 shadow-lg">
               <div className="flex flex-col items-center">
-                <Trophy className="w-16 h-16 text-[#fbbf24] mb-4" />
+                <Trophy className="w-16 h-16 text-yellow-300 mb-4" />
                 <h3 className="text-3xl md:text-4xl font-bold mb-2">
                   {content.pricing.discount}
                 </h3>
                 <p className="text-xl">{isVI ? "GIẢM NGAY" : "INSTANT DISCOUNT"}</p>
-                <p className="text-emerald-100 mt-2">{content.pricing.note}</p>
+                <p className="text-red-100 mt-2">{content.pricing.note}</p>
               </div>
             </div>
             
@@ -394,7 +411,7 @@ const OrthoAd = () => {
             
             {/* Period */}
             <div className="text-center">
-              <div className="inline-flex items-center bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] text-[#065f46] px-6 py-3 rounded-full font-bold">
+              <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-amber-500 text-red-800 px-6 py-3 rounded-full font-bold shadow-lg">
                 <Calendar className="w-5 h-5 mr-2" />
                 {content.pricing.period}
               </div>
@@ -402,12 +419,12 @@ const OrthoAd = () => {
           </section>
 
           {/* Benefits Section */}
-          <section className="bg-white rounded-3xl shadow-xl p-8 md:p-10">
+          <section className="bg-white rounded-3xl shadow-xl p-8 md:p-10 border-2 border-amber-100">
             <div className="text-center mb-10">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
                 {content.benefits.title}
               </h2>
-              <div className="w-32 h-1 bg-gradient-to-r from-[#059669] to-[#fbbf24] rounded-full mx-auto"></div>
+              <div className="w-32 h-1 bg-gradient-to-r from-red-600 to-amber-500 rounded-full mx-auto"></div>
               <p className="text-gray-600 mt-4 max-w-3xl mx-auto">
                 {content.benefits.description}
               </p>
@@ -415,9 +432,9 @@ const OrthoAd = () => {
             
             <div className="grid md:grid-cols-2 gap-6">
               {content.benefits.points.map((point, idx) => (
-                <div key={idx} className="bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-xl p-6 hover:border-[#10b981]/30 transition-colors">
+                <div key={idx} className="bg-gradient-to-br from-red-50 to-amber-50 border border-red-200 rounded-xl p-6 hover:border-red-300 transition-colors">
                   <div className="flex items-center mb-4">
-                    <div className="w-10 h-10 bg-gradient-to-br from-[#059669] to-[#fbbf24] rounded-full flex items-center justify-center mr-3">
+                    <div className="w-10 h-10 bg-gradient-to-br from-red-600 to-amber-500 rounded-full flex items-center justify-center mr-3">
                       <span className="text-white font-bold">{idx + 1}</span>
                     </div>
                     <h3 className="font-bold text-gray-800">
@@ -434,25 +451,25 @@ const OrthoAd = () => {
           </section>
 
           {/* Timeline Section */}
-          <section className="bg-gradient-to-r from-[#f0fdf4] to-[#ecfdf5] rounded-3xl p-8 md:p-10">
+          <section className="bg-gradient-to-r from-red-50 to-amber-50 rounded-3xl p-8 md:p-10 border-2 border-red-200">
             <div className="text-center mb-10">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
                 {content.timeline.title}
               </h2>
-              <div className="w-32 h-1 bg-gradient-to-r from-[#059669] to-[#fbbf24] rounded-full mx-auto"></div>
+              <div className="w-32 h-1 bg-gradient-to-r from-red-600 to-amber-500 rounded-full mx-auto"></div>
             </div>
             
             <div className="relative">
               {/* Timeline Line */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-[#059669] via-[#10b981] to-[#059669] hidden lg:block"></div>
+              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-red-600 via-amber-500 to-red-600 hidden lg:block"></div>
               
               <div className="space-y-12">
                 {content.timeline.steps.map((step, idx) => (
                   <div key={idx} className={`flex flex-col lg:flex-row items-center ${idx % 2 === 0 ? 'lg:flex-row-reverse' : ''} gap-8`}>
                     {/* Content */}
                     <div className={`lg:w-5/12 ${idx % 2 === 0 ? 'lg:text-right' : 'lg:text-left'}`}>
-                      <div className="bg-white rounded-2xl p-6 shadow-lg">
-                        <div className="inline-flex items-center bg-gradient-to-r from-[#059669] to-[#10b981] text-white px-4 py-2 rounded-full font-bold mb-3">
+                      <div className="bg-white rounded-2xl p-6 shadow-lg border border-red-100">
+                        <div className="inline-flex items-center bg-gradient-to-r from-red-600 to-amber-500 text-white px-4 py-2 rounded-full font-bold mb-3">
                           <TrendingUp className="w-4 h-4 mr-2" />
                           {step.period}
                         </div>
@@ -463,7 +480,7 @@ const OrthoAd = () => {
                     
                     {/* Circle */}
                     <div className="relative lg:w-2/12 flex justify-center">
-                      <div className="w-16 h-16 bg-gradient-to-br from-[#059669] to-[#fbbf24] rounded-full flex items-center justify-center text-white font-bold text-2xl z-10">
+                      <div className="w-16 h-16 bg-gradient-to-br from-red-600 to-amber-500 rounded-full flex items-center justify-center text-white font-bold text-2xl z-10 shadow-lg">
                         {idx + 1}
                       </div>
                     </div>
@@ -477,38 +494,38 @@ const OrthoAd = () => {
           </section>
 
           {/* Before-After Gallery */}
-          <section className="bg-white rounded-3xl shadow-xl p-8 md:p-10">
+          <section className="bg-white rounded-3xl shadow-xl p-8 md:p-10 border-2 border-amber-100">
             <div className="text-center mb-10">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
                 {isVI ? "KẾT QUẢ NIỀNG RĂNG TẠI EMIS DENTAL" : "BRACES RESULTS AT EMIS DENTAL"}
               </h2>
-              <div className="w-32 h-1 bg-gradient-to-r from-[#059669] to-[#fbbf24] rounded-full mx-auto"></div>
+              <div className="w-32 h-1 bg-gradient-to-r from-red-600 to-amber-500 rounded-full mx-auto"></div>
             </div>
             
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="text-center p-6 bg-gradient-to-br from-emerald-50 to-green-50 rounded-2xl">
-                <div className="w-20 h-20 bg-[#059669] rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="text-center p-6 bg-gradient-to-br from-red-50 to-amber-50 rounded-2xl border border-red-100">
+                <div className="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Smile className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="font-bold text-gray-800 text-xl mb-3">{isVI ? "TRƯỚC KHI NIỀNG" : "BEFORE BRACES"}</h3>
                 <ul className="space-y-2 text-gray-700 text-left">
                   <li className="flex items-start">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3 mt-2"></div>
+                    <div className="w-2 h-2 bg-red-600 rounded-full mr-3 mt-2"></div>
                     <span>{isVI ? "Răng hô, móm, khấp khểnh" : "Overbite, underbite, crooked teeth"}</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3 mt-2"></div>
+                    <div className="w-2 h-2 bg-red-600 rounded-full mr-3 mt-2"></div>
                     <span>{isVI ? "Khớp cắn không chuẩn" : "Incorrect bite alignment"}</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-2 h-2 bg-red-500 rounded-full mr-3 mt-2"></div>
+                    <div className="w-2 h-2 bg-red-600 rounded-full mr-3 mt-2"></div>
                     <span>{isVI ? "Vệ sinh răng miệng khó khăn" : "Difficult oral hygiene"}</span>
                   </li>
                 </ul>
               </div>
               
-              <div className="text-center p-6 bg-gradient-to-br from-emerald-50 to-green-50 rounded-2xl">
-                <div className="w-20 h-20 bg-[#10b981] rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="text-center p-6 bg-gradient-to-br from-red-50 to-amber-50 rounded-2xl border border-red-100">
+                <div className="w-20 h-20 bg-gradient-to-r from-amber-500 to-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Heart className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="font-bold text-gray-800 text-xl mb-3">{isVI ? "SAU KHI NIỀNG" : "AFTER BRACES"}</h3>
@@ -531,19 +548,19 @@ const OrthoAd = () => {
           </section>
 
           {/* Investment Section */}
-          <section className="bg-gradient-to-r from-[#059669] to-[#10b981] rounded-3xl p-8 md:p-10 text-white">
+          <section className="bg-gradient-to-r from-red-600 to-amber-600 rounded-3xl p-8 md:p-10 text-white shadow-xl">
             <div className="text-center mb-8">
-              <Trophy className="w-16 h-16 text-[#fbbf24] mx-auto mb-6" />
+              <Trophy className="w-16 h-16 text-yellow-300 mx-auto mb-6" />
               <h2 className="text-2xl md:text-3xl font-bold mb-6">
                 {content.investment.title}
               </h2>
             </div>
             
             <div className="max-w-3xl mx-auto">
-              <p className="text-lg text-gray-200 mb-6 text-center">
+              <p className="text-lg text-red-100 mb-6 text-center">
                 {content.investment.content}
               </p>
-              <p className="text-lg text-gray-200 text-center font-semibold">
+              <p className="text-lg text-red-100 text-center font-semibold">
                 {content.investment.conclusion}
               </p>
               
@@ -551,24 +568,24 @@ const OrthoAd = () => {
               <div className="grid md:grid-cols-3 gap-6 mt-10">
                 <div className="text-center p-4">
                   <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <span className="text-2xl font-bold text-[#fbbf24]">18</span>
+                    <span className="text-2xl font-bold text-yellow-300">18</span>
                   </div>
                   <h4 className="font-bold mb-2">{isVI ? "Tháng" : "Months"}</h4>
-                  <p className="text-gray-300 text-sm">{isVI ? "Trung bình niềng răng" : "Average braces duration"}</p>
+                  <p className="text-red-200 text-sm">{isVI ? "Trung bình niềng răng" : "Average braces duration"}</p>
                 </div>
                 <div className="text-center p-4">
                   <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <span className="text-2xl font-bold text-[#fbbf24]">24</span>
+                    <span className="text-2xl font-bold text-yellow-300">24</span>
                   </div>
                   <h4 className="font-bold mb-2">{isVI ? "Lần tái khám" : "Check-ups"}</h4>
-                  <p className="text-gray-300 text-sm">{isVI ? "Trong suốt quá trình" : "Throughout the process"}</p>
+                  <p className="text-red-200 text-sm">{isVI ? "Trong suốt quá trình" : "Throughout the process"}</p>
                 </div>
                 <div className="text-center p-4">
                   <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <ArrowRight className="w-6 h-6 text-[#fbbf24]" />
+                    <ArrowRight className="w-6 h-6 text-yellow-300" />
                   </div>
                   <h4 className="font-bold mb-2">{isVI ? "Lộ trình rõ ràng" : "Clear Journey"}</h4>
-                  <p className="text-gray-300 text-sm">{isVI ? "Biết trước kết quả" : "Know results beforehand"}</p>
+                  <p className="text-red-200 text-sm">{isVI ? "Biết trước kết quả" : "Know results beforehand"}</p>
                 </div>
               </div>
             </div>
@@ -576,15 +593,15 @@ const OrthoAd = () => {
 
           {/* Final CTA */}
           <section className="text-center">
-            <div className="bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] rounded-3xl p-8 md:p-10">
-              <h3 className="text-2xl md:text-3xl font-bold text-[#065f46] mb-6">
+            <div className="bg-gradient-to-r from-yellow-400 to-amber-500 rounded-3xl p-8 md:p-10 shadow-xl">
+              <h3 className="text-2xl md:text-3xl font-bold text-red-800 mb-6">
                 {isVI ? "SẴN SÀNG ĐỂ BẮT ĐẦU HÀNH TRÌNH NIỀNG RĂNG?" : "READY TO START YOUR BRACES JOURNEY?"}
               </h3>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center justify-center bg-[#065f46] text-white font-bold text-lg py-4 px-8 rounded-full shadow-2xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                  className="inline-flex items-center justify-center bg-gradient-to-r from-red-700 to-red-600 text-white font-bold text-lg py-4 px-8 rounded-full shadow-2xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
                 >
                   {content.cta.button}
                   <ChevronRight className="w-5 h-5 ml-2" />
@@ -592,54 +609,54 @@ const OrthoAd = () => {
                 
                 <a
                   href="tel:0919100021"
-                  className="inline-flex items-center justify-center bg-white text-[#065f46] font-bold text-lg py-4 px-8 rounded-full shadow-lg hover:shadow-xl hover:bg-gray-50 transition-all duration-300"
+                  className="inline-flex items-center justify-center bg-white text-red-700 font-bold text-lg py-4 px-8 rounded-full shadow-lg hover:shadow-xl hover:bg-gray-50 transition-all duration-300"
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   0919 100 021
                 </a>
               </div>
               
-              <p className="text-[#065f46] font-semibold">{content.cta.subtext}</p>
+              <p className="text-red-800 font-semibold">{content.cta.subtext}</p>
             </div>
           </section>
         </div>
 
         {/* Contact Footer */}
-        <div className="mt-16 bg-white rounded-3xl shadow-xl p-8 border border-gray-100">
+        <div className="mt-16 bg-white rounded-3xl shadow-xl p-8 border-2 border-amber-100">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">
               {isVI ? "NHA KHOA QUỐC TẾ " : "INTERNATIONAL DENTAL CLINIC "}
-              <span className="text-[#059669]">EMIS DENTAL</span>
+              <span className="text-red-600">EMIS DENTAL</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-[#059669] to-[#fbbf24] rounded-full mx-auto" />
+            <div className="w-24 h-1 bg-gradient-to-r from-red-600 to-amber-500 rounded-full mx-auto" />
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-6 bg-gray-50 rounded-xl hover:bg-white transition-colors">
-              <div className="w-14 h-14 bg-[#059669]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MapPin className="w-6 h-6 text-[#059669]" />
+            <div className="text-center p-6 bg-gradient-to-r from-red-50 to-amber-50 rounded-xl hover:bg-white transition-colors border border-red-100">
+              <div className="w-14 h-14 bg-red-600/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <MapPin className="w-6 h-6 text-red-600" />
               </div>
               <h3 className="font-bold text-gray-800 mb-2">{isVI ? "Địa chỉ" : "Address"}</h3>
               <p className="text-gray-600">62B Phạm Ngọc Thạch, District 3, HCMC</p>
             </div>
 
-            <div className="text-center p-6 bg-gray-50 rounded-xl hover:bg-white transition-colors">
-              <div className="w-14 h-14 bg-[#fbbf24]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Phone className="w-6 h-6 text-[#fbbf24]" />
+            <div className="text-center p-6 bg-gradient-to-r from-red-50 to-amber-50 rounded-xl hover:bg-white transition-colors border border-red-100">
+              <div className="w-14 h-14 bg-amber-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Phone className="w-6 h-6 text-amber-600" />
               </div>
               <h3 className="font-bold text-gray-800 mb-2">Hotline</h3>
-              <p className="text-lg font-bold text-[#059669]">0919 100 021</p>
-              <p className="text-lg font-bold text-[#059669]">0768 117 068</p>
+              <p className="text-lg font-bold text-red-600">0919 100 021</p>
+              <p className="text-lg font-bold text-red-600">0768 117 068</p>
             </div>
 
-            <div className="text-center p-6 bg-gray-50 rounded-xl hover:bg-white transition-colors">
-              <div className="w-14 h-14 bg-[#059669]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Globe className="w-6 h-6 text-[#059669]" />
+            <div className="text-center p-6 bg-gradient-to-r from-red-50 to-amber-50 rounded-xl hover:bg-white transition-colors border border-red-100">
+              <div className="w-14 h-14 bg-red-600/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Globe className="w-6 h-6 text-red-600" />
               </div>
               <h3 className="font-bold text-gray-800 mb-2">Website</h3>
               <a 
                 href="https://www.emisdental.com" 
-                className="text-[#fbbf24] hover:underline font-medium block"
+                className="text-red-600 hover:underline font-medium block"
                 target="_blank"
                 rel="noopener noreferrer"
               >
