@@ -19,6 +19,7 @@ import SonPage from './pages/bsPage.jsx';
 import CrownLanding from './pages/bocRang.jsx';
 import DentalVisitorProgram from './pages/flightassist.jsx';
 import AdArticle from './pages/AdArticle.jsx';
+import WhiteningAd from './pages/whitening.jsx';
 export default function App() {
   const language = useSelector((state) => state.language.language);
   const dispatch = useDispatch();
@@ -55,6 +56,7 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
           <Route path="/ads/:type" element = {<AdArticle/>}/>
           <Route path="/visitor-program" element={<DentalVisitorProgram />} />
+          <Route path="/whitening" element={<WhiteningAd/>}/>
         </Routes>
         <Footer language={language}/>
         <FloatingContactButton />
