@@ -172,13 +172,13 @@ const CrownAd = () => {
           color: "from-red-600 to-yellow-500"
         },
         {
-          name: "Zirconia Crown (Germany)",
+          name: "Zirconia Crown (USA)",
           discount: "40% OFF",
           description: "High hardness, excellent durability",
           color: "from-red-700 to-yellow-600"
         },
         {
-          name: "Cercon HT Crown (USA)",
+          name: "Cercon HT Crown (GERMANY)",
           discount: "40% OFF",
           description: "The pinnacle of aesthetics, permanent durability",
           color: "from-red-800 to-yellow-700"
