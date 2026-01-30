@@ -10,9 +10,11 @@ export default function Services() {
   const [services, setServices] = useState([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
-  const [showUSD, setShowUSD] = useState(false);
 
-  // Use undefined for "initial state" and null for "failed/empty state"
+  // FX rate:
+  // undefined = still fetching
+  // number    = valid rate
+  // null      = failed
   const [fxRate, setFxRate] = useState(undefined);
   const [fxLastUpdated, setFxLastUpdated] = useState(null);
 
@@ -65,11 +67,11 @@ export default function Services() {
           setFxRate(res.rate);
           setFxLastUpdated(res.lastUpdated);
         } else {
-          setFxRate(null); // Mark as attempt finished but no rate found
+          setFxRate(null);
         }
       } catch (err) {
         console.error("FX fetch failed:", err);
-        if (!cancelled) setFxRate(null); 
+        if (!cancelled) setFxRate(null);
       }
     })();
 
@@ -79,14 +81,11 @@ export default function Services() {
   }, []);
 
   /* ================================
-      LOAD CSV + COMPUTE PRICES
-      ONLY AFTER FX ATTEMPT IS DONE
+      LOAD CSV AFTER FX ATTEMPT
   ================================= */
   useEffect(() => {
     let cancelled = false;
 
-    // Only block if fxRate is exactly undefined (still fetching)
-    // If it is null or a number, we proceed.
     if (fxRate === undefined) return;
 
     (async () => {
@@ -140,9 +139,8 @@ export default function Services() {
           const rawPrice = (r[priceField] || "").toString().trim();
           const numbers = rawPrice.match(/\d[\d,]*/g);
 
-          let priceUSD = rawPrice;
+          let priceUSD = "---";
 
-          // Only calculate if we actually have a valid fxRate number
           if (numbers?.length && typeof fxRate === "number") {
             const convert = (n) =>
               (Math.round((n / fxRate) * 2) / 2 - 0.01).toFixed(2);
@@ -155,9 +153,6 @@ export default function Services() {
               nums.length === 1
                 ? `${convert(nums[0])} USD`
                 : `${convert(nums[0])} – ${convert(nums[1])} USD`;
-          } else if (fxRate === null) {
-              // If FX failed, we can't show USD properly
-              priceUSD = "---"; 
           }
 
           return {
@@ -181,7 +176,7 @@ export default function Services() {
   }, [language, fxRate]);
 
   /* ================================
-      FILTER + GROUP
+      GROUP + FILTER
   ================================= */
   const grouped = useMemo(() => {
     return services.reduce((acc, r) => {
@@ -207,7 +202,7 @@ export default function Services() {
   }, [grouped, search]);
 
   /* ================================
-      HARD BLOCK UI DURING LOADING
+      LOADING STATE
   ================================= */
   if (loading) {
     return (
@@ -220,38 +215,34 @@ export default function Services() {
   return (
     <div className="min-h-screen bg-gray-50 py-10 px-4 md:px-12 lg:px-24">
       <div className="max-w-6xl mx-auto">
-        <p className="text-center text-sm md:text-base text-gray-600 mb-3 italic">
-          The price table below shows the original prices in USD/VND without any available promotion
-        </p>
-
-        <h1 className="text-center text-3xl font-semibold mb-6 uppercase">
+        <h1 className="text-center text-3xl font-semibold mb-4 uppercase">
           {language === "vietnamese"
             ? "Bảng giá dịch vụ nha khoa"
             : "International EMIS Dental Price List"}
         </h1>
 
-        <div className="flex gap-4 mb-4 justify-center flex-wrap">
-          <input
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            placeholder={
-              language === "vietnamese"
-                ? "Tìm dịch vụ..."
-                : "Search service..."
-            }
-            className="border rounded-xl p-2 w-2/3"
-          />
+        {/* LEGAL DISCLAIMER */}
+        <p className="text-xs text-gray-600 italic mb-6">
+          Vietnamese Dong (VND) is the official currency for all services.
+          Prices shown in other currencies are provided for reference only
+          based on estimated exchange rates and do not constitute a binding
+          offer. Final billing and payment are conducted exclusively in VND
+          in accordance with Vietnamese regulations.
+        </p>
 
-          <button
-            onClick={() => setShowUSD(!showUSD)}
-            className="bg-blue-500 text-white px-4 py-2 rounded-xl"
-          >
-            {showUSD ? "Show VND" : "Show USD"}
-          </button>
-        </div>
+        <input
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          placeholder={
+            language === "vietnamese"
+              ? "Tìm dịch vụ..."
+              : "Search service..."
+          }
+          className="border rounded-xl p-2 w-full mb-4"
+        />
 
         {fxLastUpdated && (
-          <p className="text-sm text-gray-500 text-right mb-2">
+          <p className="text-xs text-gray-500 text-right mb-2">
             FX updated: {new Date(fxLastUpdated).toLocaleString()}
           </p>
         )}
@@ -263,8 +254,9 @@ export default function Services() {
                 <th className="border p-3">Category</th>
                 <th className="border p-3">Description</th>
                 <th className="border p-3">Unit</th>
-                <th className="border p-3">
-                  Price ({showUSD ? "USD" : "VND"})
+                <th className="border p-3">Official Price (VND)</th>
+                <th className="border p-3 text-gray-500">
+                  Reference Price (USD)
                 </th>
               </tr>
             </thead>
@@ -283,8 +275,11 @@ export default function Services() {
                     )}
                     <td className="border p-3">{r.desc}</td>
                     <td className="border p-3 text-center">{r.unit}</td>
-                    <td className="border p-3 text-right">
-                      {showUSD ? r.priceUSD : r.priceVND}
+                    <td className="border p-3 text-right font-semibold">
+                      {r.priceVND}
+                    </td>
+                    <td className="border p-3 text-right text-gray-500">
+                      {r.priceUSD}
                     </td>
                   </tr>
                 ))
