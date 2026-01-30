@@ -11,10 +11,7 @@ export default function Services() {
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
 
-  // FX rate:
-  // undefined = still fetching
-  // number    = valid rate
-  // null      = failed
+  // FX
   const [fxRate, setFxRate] = useState(undefined);
   const [fxLastUpdated, setFxLastUpdated] = useState(null);
 
@@ -31,6 +28,33 @@ export default function Services() {
     ],
   };
 
+  /* ================================
+      UI COLUMN LABELS (LANGUAGE)
+  ================================= */
+  const columnLabels =
+    language === "vietnamese"
+      ? {
+          category: "Danh mục",
+          description: "Mô tả dịch vụ",
+          unit: "Đơn vị",
+          priceVND: "Giá chính thức (VND)",
+          priceUSD: "Giá tham khảo (USD)",
+          search: "Tìm dịch vụ...",
+          title: "Bảng giá dịch vụ nha khoa",
+        }
+      : {
+          category: "Category",
+          description: "Description",
+          unit: "Unit",
+          priceVND: "Official Price (VND)",
+          priceUSD: "Reference Price (USD)",
+          search: "Search service...",
+          title: "International EMIS Dental Price List",
+        };
+
+  /* ================================
+      CSV FIELD HELPERS
+  ================================= */
   const normalize = (s) =>
     (s || "")
       .toString()
@@ -51,7 +75,7 @@ export default function Services() {
   };
 
   /* ================================
-      LOAD FX RATE (ONCE)
+      LOAD FX RATE
   ================================= */
   useEffect(() => {
     let cancelled = false;
@@ -85,7 +109,6 @@ export default function Services() {
   ================================= */
   useEffect(() => {
     let cancelled = false;
-
     if (fxRate === undefined) return;
 
     (async () => {
@@ -202,7 +225,7 @@ export default function Services() {
   }, [grouped, search]);
 
   /* ================================
-      LOADING STATE
+      LOADING
   ================================= */
   if (loading) {
     return (
@@ -216,9 +239,7 @@ export default function Services() {
     <div className="min-h-screen bg-gray-50 py-10 px-4 md:px-12 lg:px-24">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-center text-3xl font-semibold mb-4 uppercase">
-          {language === "vietnamese"
-            ? "Bảng giá dịch vụ nha khoa"
-            : "International EMIS Dental Price List"}
+          {columnLabels.title}
         </h1>
 
         {/* LEGAL DISCLAIMER */}
@@ -233,11 +254,7 @@ export default function Services() {
         <input
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          placeholder={
-            language === "vietnamese"
-              ? "Tìm dịch vụ..."
-              : "Search service..."
-          }
+          placeholder={columnLabels.search}
           className="border rounded-xl p-2 w-full mb-4"
         />
 
@@ -251,12 +268,12 @@ export default function Services() {
           <table className="w-full border-2 border-gray-700 bg-white rounded-xl">
             <thead className="bg-gray-200 uppercase text-sm">
               <tr>
-                <th className="border p-3">Category</th>
-                <th className="border p-3">Description</th>
-                <th className="border p-3">Unit</th>
-                <th className="border p-3">Official Price (VND)</th>
+                <th className="border p-3">{columnLabels.category}</th>
+                <th className="border p-3">{columnLabels.description}</th>
+                <th className="border p-3">{columnLabels.unit}</th>
+                <th className="border p-3">{columnLabels.priceVND}</th>
                 <th className="border p-3 text-gray-500">
-                  Reference Price (USD)
+                  {columnLabels.priceUSD}
                 </th>
               </tr>
             </thead>
