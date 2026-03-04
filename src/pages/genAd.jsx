@@ -129,7 +129,7 @@ const GenAd = () => {
     },
 
     whyChoose: {
-      title: "TẠI SAO HÀNG NGÀN PHỤ NỮ TIN CHỌN EMIS DENTAL?",
+      title: "TẠI SAO NHIỀU KHÁCH HÀNG TIN CHỌN EMIS DENTAL?",
       points: [
         {
           title: "Đội ngũ bác sĩ chính quy",
@@ -278,7 +278,7 @@ const GenAd = () => {
     },
 
     whyChoose: {
-      title: "WHY THOUSANDS OF WOMEN TRUST EMIS DENTAL?",
+      title: "WHY NUMEROUS CUSTOMERS TRUST EMIS DENTAL?",
       points: [
         {
           title: "Certified Dental Team",
@@ -296,13 +296,13 @@ const GenAd = () => {
           title: "Genuine Materials",
           description: "Premium materials from world-renowned brands",
           icon: <Award className="w-6 h-6" />,
-          stat: "Genuine",
+          stat: "Auth.",
         },
         {
           title: "Long-term Warranty",
           description: "Warranty from 5 years to lifetime depending on service",
           icon: <Shield className="w-6 h-6" />,
-          stat: "Lifetime",
+          stat: "Life",
         },
       ],
     },
@@ -629,7 +629,9 @@ const GenAd = () => {
         <div className="bg-white rounded-3xl shadow-xl p-8 border-2 border-pink-100">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">
-              <span className="text-rose-600">NHA KHOA QUỐC TẾ EMIS DENTAL</span>
+              <span className="text-rose-600">
+                {isVI ? "NHA KHOA QUỐC TẾ EMIS DENTAL" : "EMIS INTERNATIONAL DENTAL CLINIC"}
+              </span>
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-rose-500 to-fuchsia-500 rounded-full mx-auto" />
           </div>
@@ -666,7 +668,7 @@ const GenAd = () => {
               >
                 <Shield className="w-8 h-8 text-pink-600 mx-auto mb-2" />
                 <div className="font-bold text-pink-700">Implant</div>
-                <div className="text-sm text-pink-600">7.9M/trụ</div>
+                <div className="text-sm text-pink-600">{isVI ? "7.9M/trụ" : "7.9M/implant"}</div>
               </Link>
             </div>
           </div>
