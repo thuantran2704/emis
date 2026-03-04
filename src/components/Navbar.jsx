@@ -8,11 +8,11 @@ export default function Navbar() {
   const language = useSelector((state) => state.language.language);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
-  const [isTetOpen, setIsTetOpen] = useState(false);
+  const [isMarchOpen, setIsMarchOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleAbout = () => setIsAboutOpen(!isAboutOpen);
-  const toggleTet = () => setIsTetOpen(!isTetOpen);
+  const toggleMarch = () => setIsMarchOpen(!isMarchOpen);
 
   const content = navbarContent[language] || navbarContent.english;
 
@@ -27,8 +27,7 @@ export default function Navbar() {
     { name: content.equipment, path: '/equipment' },
   ];
 
-  const tetDropdownItems = [
-    { name: content.orthodontics, path: '/orthoAd' },
+  const marchDropdownItems = [
     { name: content.implant, path: '/implantAd' },
     { name: content.crown, path: '/crownAd' },
     { name: content.whitening, path: '/whiteningAd' },
@@ -124,22 +123,22 @@ export default function Navbar() {
                 {content.services}
               </Link>
 
-              {/* TET OFFER DROPDOWN */}
+              {/* MARCH OFFER DROPDOWN */}
               <div className="relative flex items-center">
                 <Link
                   to="/genAd"
                   className="text-[#2a3439] font-medium px-3 py-2 transition-all duration-300 group"
                   style={{ fontFamily: "'Be Vietnam Pro', sans-serif", fontWeight: '600' }}
                 >
-                  {content.tetOffer}
+                  {content.marchOffer}
                 </Link>
 
                 <button
-                  onClick={toggleTet}
+                  onClick={toggleMarch}
                   className="ml-1 text-[#2a3439] hover:text-gray-700"
                 >
                   <svg
-                    className={`w-4 h-4 transition-transform duration-300 ${isTetOpen ? 'rotate-180' : ''}`}
+                    className={`w-4 h-4 transition-transform duration-300 ${isMarchOpen ? 'rotate-180' : ''}`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -148,15 +147,15 @@ export default function Navbar() {
                   </svg>
                 </button>
 
-                {isTetOpen && (
+                {isMarchOpen && (
                   <div className="absolute top-full left-0 mt-3 w-56 bg-white rounded-md shadow-lg py-2 z-50 border border-gray-200">
-                    {tetDropdownItems.map((sub) => (
+                    {marchDropdownItems.map((sub) => (
                       <Link
                         key={sub.name}
                         to={sub.path}
                         className="block px-4 py-2 text-[#2a3439] hover:bg-gray-100 transition"
                         style={submenuFont}
-                        onClick={() => setIsTetOpen(false)}
+                        onClick={() => setIsMarchOpen(false)}
                       >
                         {sub.name}
                       </Link>
@@ -266,26 +265,26 @@ export default function Navbar() {
               {content.services}
             </Link>
 
-            {/* MOBILE TET OFFER */}
+            {/* MOBILE MARCH OFFER */}
             <div>
               <div className="flex items-center justify-between px-3 py-2 rounded-md">
                 <Link
                   to="/genAd"
                   className="font-medium text-[#2a3439] hover:text-[#C5AF73]"
                   onClick={() => {
-                    setIsTetOpen(false);
+                    setIsMarchOpen(false);
                     toggleMenu();
                   }}
                 >
-                  {content.tetOffer}
+                  {content.marchOffer}
                 </Link>
 
                 <button
-                  onClick={toggleTet}
+                  onClick={toggleMarch}
                   className="p-1 rounded hover:bg-white/20 text-[#2a3439]"
                 >
                   <svg
-                    className={`w-4 h-4 transition-transform ${isTetOpen ? 'rotate-180' : ''}`}
+                    className={`w-4 h-4 transition-transform ${isMarchOpen ? 'rotate-180' : ''}`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -295,9 +294,9 @@ export default function Navbar() {
                 </button>
               </div>
 
-              {isTetOpen && (
+              {isMarchOpen && (
                 <div className="ml-4 mt-1">
-                  {tetDropdownItems.map((sub) => (
+                  {marchDropdownItems.map((sub) => (
                     <Link
                       key={sub.name}
                       to={sub.path}

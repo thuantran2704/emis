@@ -10,8 +10,7 @@ const navbarContent = {
     veneer: "Veneers",
     implant: "Implants",
     crown: "Crowns",
-    tetOffer: "Tet Promotions",
-    orthodontics: "Orthodontics",
+    marchOffer: "Women's Day Offers",
     whitening: "Whitening"
   },
   vietnamese: {
@@ -25,8 +24,7 @@ const navbarContent = {
     veneer: "Mặt Dán Sứ",
     implant: "Trồng Răng",
     crown: "Răng Sứ",
-    tetOffer: "Ưu Đãi Tết",
-    orthodontics: "Niềng Răng",
+    marchOffer: "Ưu Đãi 8/3",
     whitening: "Tẩy Trắng Răng"
   },
   french: {
@@ -40,8 +38,7 @@ const navbarContent = {
     veneer: "Facettes Dentaires",
     implant: "Implants",
     crown: "Couronnes",
-    tetOffer: "Promotions du Tet",
-    orthodontics: "Orthodontie",
+    marchOffer: "Offres du 8 Mars",
     whitening: "Blanchiment"
   },
   simplified: {
@@ -55,8 +52,7 @@ const navbarContent = {
     veneer: "牙贴面",
     implant: "种植牙",
     crown: "牙冠",
-    tetOffer: "春节优惠",
-    orthodontics: "牙齿矫正",
+    marchOffer: "妇女节优惠",
     whitening: "美白牙齿"
   },
   traditional: {
@@ -70,8 +66,7 @@ const navbarContent = {
     veneer: "牙貼面",
     implant: "植牙",
     crown: "牙冠",
-    tetOffer: "春節優惠",
-    orthodontics: "牙齒矯正",
+    marchOffer: "婦女節優惠",
     whitening: "牙齒美白"
   },
   korean: {
@@ -85,8 +80,7 @@ const navbarContent = {
     veneer: "베니어",
     implant: "임플란트",
     crown: "크라운",
-    tetOffer: "설날 프로모션",
-    orthodontics: "교정치료",
+    marchOffer: "여성의 날 프로모션",
     whitening: "치아미백"
   },
 };
