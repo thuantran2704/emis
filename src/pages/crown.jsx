@@ -1,12 +1,12 @@
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { 
-  Sparkles, 
-  Clock, 
-  Shield, 
-  Award, 
-  CheckCircle, 
+import {
+  Sparkles,
+  Clock,
+  Shield,
+  Award,
+  CheckCircle,
   Calendar,
   Star,
   Zap,
@@ -20,609 +20,584 @@ import {
   Smile,
   Palette,
   Gem,
-  Brush,
   Camera,
-  Gift,
-  Flame
 } from "lucide-react";
 
-// Import images
-import viImg from "../pics/tet/vie-crown.png";
-import enImg from "../pics/tet/eng-crown.png";
+import viImg from "../pics/qtpn/vie-ceramic.png";
+import enImg from "../pics/qtpn/eng-ceramic.png";
 
 const CrownAd = () => {
   const language = useSelector((state) => state.language.language);
   const isVI = language === "vietnamese";
   const adImage = isVI ? viImg : enImg;
 
-  // Vietnamese content
   const viContent = {
-    metaTitle: "Thẩm Mỹ Răng Sứ Tết 2026 - Ưu Đãi 40% | Emis Dental",
-    metaDescription: "Thẩm mỹ răng sứ cao cấp giảm đến 40% dịp Tết 2026. Nâng tầm nụ cười, rạng rỡ đón xuân tại Emis Dental.",
-    
-    heroTitle: "THẨM MỸ RĂNG SỨ CAO CẤP: ƯU ĐÃI TỚI 40%",
-    heroSubtitle: "NÂNG TẦM NỤ CƯỜI, ĐÓN TẾT SANG TẠI EMIS DENTAL",
-    heroDescription: "Một nụ cười hoàn hảo không chỉ dừng lại ở màu sắc trắng sáng, mà còn nằm ở sự hài hòa giữa form răng với khuôn mặt và sự tự nhiên trong từng nhịp giao tiếp.",
-    intro1: "Tết 2026 đang gõ cửa, đây là 'thời điểm vàng' để bạn khắc phục những khuyết điểm như răng thưa, khấp khểnh, nhiễm màu kháng sinh hay răng vỡ mẻ.",
-    intro2: "Đồng hành cùng bạn trên hành trình tân trang diện mạo, Emis Dental ra mắt chương trình ưu đãi đặc biệt: 'Nâng Tầm Nụ Cười – Rạng Rỡ Đón Xuân' với những đặc quyền chưa từng có.",
-    
+    metaTitle: "Răng Sứ Thẩm Mỹ Giảm Đến 60% - Tháng 3 Ưu Đãi | Emis Dental",
+    metaDescription:
+      "Tháng 3 ưu đãi: Giảm đến 60% tất cả dòng răng toàn sứ chính hãng Zirconia (Mỹ), DD Bio (Đức), Cercon HT (Mỹ), Lava (Mỹ) tại Emis Dental.",
+
+    heroTitle: "RĂNG SỨ THẨM MỸ",
+    heroSubtitle: "GIẢM ĐẾN 60% – ƯU ĐÃI TỐT NHẤT TRONG NĂM",
+    heroDescription:
+      "Cơ hội nâng cấp nụ cười với mức ưu đãi tốt nhất trong năm. Giảm đến 60% tất cả các dòng răng toàn sứ chính hãng tại Emis Dental.",
+
+    brands: {
+      title: "CÁC DÒNG RĂNG SỨ ĐANG ƯU ĐÃI",
+      items: [
+        { name: "Zirconia", origin: "Mỹ", discount: "Giảm đến 60%" },
+        { name: "DD Bio", origin: "Đức", discount: "Giảm đến 60%" },
+        { name: "Cercon HT", origin: "Mỹ", discount: "Giảm đến 60%" },
+        { name: "Lava", origin: "Mỹ", discount: "Giảm đến 60%" },
+      ],
+    },
+
+    suitableFor: {
+      title: "PHÙ HỢP CHO KHÁCH HÀNG MUỐN:",
+      items: [
+        "Cải thiện răng xỉn màu, nhiễm màu nặng",
+        "Khắc phục răng thưa, mẻ, lệch nhẹ, lệch khớp cắn nhẹ",
+        "Tái tạo form răng hài hòa gương mặt",
+        "Sở hữu nụ cười sáng và tự tin hơn",
+      ],
+    },
+
+    guarantees: {
+      title: "TẤT CẢ DÒNG RĂNG TOÀN SỨ TẠI EMIS DENTAL ĐỀU ĐẢM BẢO:",
+      items: [
+        "Vật liệu sứ chính hãng, có tem nhập khẩu rõ ràng",
+        "Độ bền cao, màu sắc tự nhiên, không thâm viền nướu",
+        "Thực hiện bởi bác sĩ chính quy có chuyên môn",
+        "Bảo hành dài hạn từ 5 đến 10 năm",
+      ],
+    },
+
     sections: [
       {
-        title: "TẠI SAO NÊN CHỌN THẨM MỸ RĂNG SỨ TẠI EMIS DENTAL DỊP TẾT NÀY?",
+        title: "TẠI SAO NÊN CHỌN THẨM MỸ RĂNG SỨ TẠI EMIS DENTAL?",
         icon: <Star className="w-6 h-6" />,
-        content: "Thẩm mỹ răng sứ không chỉ là một dịch vụ nha khoa, mà là một nghệ thuật giúp thay đổi thần thái khuôn mặt. Tại Emis Dental, chúng tôi cam kết mang lại nụ cười chuẩn 'tỉ lệ vàng' nhờ:",
+        content:
+          "Thẩm mỹ răng sứ không chỉ là một dịch vụ nha khoa, mà là nghệ thuật thay đổi thần thái khuôn mặt. Tại Emis Dental, chúng tôi cam kết mang lại nụ cười đạt tỉ lệ vàng nhờ:",
         points: [
-          "Bảo tồn răng thật tối đa: Chúng tôi ưu tiên các kỹ thuật ít xâm lấn. Đặc biệt với mặt dán sứ Veneer, tỉ lệ mài răng cực kỳ thấp (hoặc không mài), giúp bảo vệ cấu trúc răng thật và tủy răng, đảm bảo ăn nhai chắc khỏe như răng tự nhiên.",
-          "Thiết kế nụ cười cá nhân hóa: Mỗi khách hàng là một bản thể duy nhất. Bác sĩ tại Emis Dental sẽ tư vấn dáng răng (dáng tự nhiên, dáng thỏ, dáng celeb...) sao cho phù hợp nhất với phong cách, khuôn mặt và cả yếu tố phong thủy để mang lại may mắn cho năm mới 2026.",
-          "Chất liệu sứ cao cấp, chính hãng: 100% dòng sứ được sử dụng tại Emis Dental đều có nguồn gốc rõ ràng từ Đức, Mỹ, Thụy Sĩ... với độ bền cao, tính thấu quang tốt và không bị thâm đen viền nướu sau thời gian dài sử dụng."
-        ]
-      }
+          "Bảo tồn răng thật tối đa: Ưu tiên kỹ thuật ít xâm lấn, mài răng tối thiểu để bảo vệ cấu trúc và tủy răng tự nhiên",
+          "Thiết kế nụ cười cá nhân hóa: Bác sĩ tư vấn dáng răng phù hợp với khuôn mặt và phong cách của từng khách hàng thông qua Smile Design 3D",
+          "Chất liệu sứ cao cấp chính hãng: 100% vật liệu có nguồn gốc rõ ràng từ Đức, Mỹ với độ bền cao và tính thấu quang tốt",
+        ],
+      },
     ],
-    
-    pricing: {
-      title: "BẢNG ƯU ĐÃI THẨM MỸ RĂNG SỨ TẾT 2026 TẠI EMIS DENTAL",
-      description: "Để mọi khách hàng đều có cơ hội sở hữu nụ cười mơ ước, Emis Dental áp dụng mức giảm giá sâu nhất trong năm:",
-      services: [
-        {
-          name: "Mặt dán sứ Veneer IPS e.max",
-          discount: "Giảm 30%",
-          description: "Dòng sứ siêu mỏng, siêu tự nhiên từ Thụy Sĩ",
-          color: "from-red-600 to-yellow-500"
-        },
-        {
-          name: "Răng toàn sứ Zirconia (Đức)",
-          discount: "Giảm 40%",
-          description: "Độ cứng cao, chịu lực cực tốt",
-          color: "from-red-700 to-yellow-600"
-        },
-        {
-          name: "Răng toàn sứ Cercon HT (Mỹ)",
-          discount: "Giảm 40%",
-          description: "Đỉnh cao thẩm mỹ, độ bền vĩnh viễn",
-          color: "from-red-800 to-yellow-700"
-        }
-      ],
-      specialOffer: "ĐẶC BIỆT: Giảm thêm 5% tổng hóa đơn cho khách hàng thực hiện combo từ 5 răng trở lên.",
-      period: "Chương trình diễn ra từ 01/01/2026 – 15/02/2026.",
-      note: "Số lượng ưu đãi có hạn!"
-    },
-    
+
     process: {
-      title: "QUY TRÌNH KIẾT TẠO NỤ CƯỜI TẠI EMIS DENTAL",
-      description: "Chúng tôi ứng dụng quy trình kỹ thuật số hiện đại để đảm bảo độ chính xác tuyệt đối và rút ngắn thời gian cho khách hàng bận rộn dịp cuối năm:",
+      title: "QUY TRÌNH KIẾN TẠO NỤ CƯỜI TẠI EMIS DENTAL",
+      description:
+        "Ứng dụng quy trình kỹ thuật số hiện đại, đảm bảo độ chính xác tuyệt đối:",
       steps: [
-        "Chụp phim & Thiết kế nụ cười (Smile Design): Khách hàng có thể xem trước kết quả nụ cười tương lai thông qua phần mềm thiết kế 3D.",
-        "Vệ sinh & Xử lý bề mặt: Đảm bảo môi trường thực hiện vô trùng và bảo tồn men răng tối ưu.",
-        "Chế tác răng sứ tại Labo riêng: Sử dụng công nghệ CAD/CAM hiện đại giúp răng sứ đạt độ tinh xảo, sát khít hoàn hảo từng milimet.",
-        "Lắp răng sứ & Hiệu chỉnh: Bác sĩ điều chỉnh khớp cắn kỹ lưỡng, đảm bảo cảm giác ăn nhai thoải mái, không cộm cấn.",
-        "Chăm sóc & Bảo hành: Cấp thẻ bảo hành chính hãng và hướng dẫn chăm sóc để nụ cười luôn bền đẹp."
-      ]
+        "Chụp phim và Thiết kế nụ cười 3D: Xem trước kết quả nụ cười tương lai qua phần mềm Smile Design",
+        "Vệ sinh và xử lý bề mặt: Đảm bảo môi trường vô trùng và bảo tồn men răng tối ưu",
+        "Chế tác răng sứ tại Labo riêng: Công nghệ CAD/CAM hiện đại, độ tinh xảo từng milimet",
+        "Lắp răng sứ và hiệu chỉnh: Điều chỉnh khớp cắn kỹ lưỡng, đảm bảo cảm giác thoải mái",
+        "Chăm sóc và bảo hành: Cấp thẻ bảo hành chính hãng, hướng dẫn chăm sóc bền lâu",
+      ],
     },
-    
+
     features: {
-      title: "LỢI ÍCH KHI CHỌN THẨM MỸ RĂNG SỨ TẠI EMIS DENTAL",
+      title: "LỢI ÍCH KHI CHỌN RĂNG SỨ TẠI EMIS DENTAL",
       items: [
         {
           title: "Bảo tồn răng thật",
           description: "Mài răng tối thiểu, bảo vệ cấu trúc tự nhiên",
-          icon: <Shield className="w-8 h-8" />
+          icon: <Shield className="w-8 h-8" />,
         },
         {
           title: "Thiết kế cá nhân hóa",
-          description: "Smile Design 3D, phù hợp khuôn mặt & phong cách",
-          icon: <Palette className="w-8 h-8" />
+          description: "Smile Design 3D, phù hợp khuôn mặt và phong cách",
+          icon: <Palette className="w-8 h-8" />,
         },
         {
           title: "Chất liệu cao cấp",
-          description: "Sứ nhập khẩu chính hãng Đức, Mỹ, Thụy Sĩ",
-          icon: <Gem className="w-8 h-8" />
+          description: "Sứ nhập khẩu chính hãng Đức, Mỹ",
+          icon: <Gem className="w-8 h-8" />,
         },
         {
           title: "Đội ngũ chuyên gia",
           description: "Bác sĩ kinh nghiệm, tay nghề cao",
-          icon: <Users className="w-8 h-8" />
-        }
-      ]
+          icon: <Users className="w-8 h-8" />,
+        },
+      ],
     },
-    
+
     finalMessage: {
-      title: "TẾT LÀ DỊP ĐỂ LÀM MỚI BẢN THÂN – ĐỪNG BỎ LỠ NỤ CƯỜI ĐẾP!",
-      content: "Người ta thường nói 'Cái răng cái tóc là góc con người'. Một nụ cười mới không chỉ giúp bạn tự tin hơn khi chụp hình kỷ niệm cùng gia đình, gặp gỡ đối tác đầu năm mà còn mang lại sự khởi đầu mới tràn đầy năng lượng và hy vọng.",
-      conclusion: "Với trang thiết bị hiện đại và đội ngũ bác sĩ tận tâm, Emis Dental tự hào là địa chỉ uy tín được hàng ngàn khách hàng tin tưởng lựa chọn để gửi gắm nụ cười mỗi dịp Tết đến Xuân về."
+      title: "ĐỪNG BỎ LỠ CƠ HỘI LÀM RĂNG SỨ TIẾT KIỆM HƠN BAO GIỜ HẾT!",
+      content:
+        "Một nụ cười mới không chỉ giúp bạn tự tin hơn trong mọi tình huống mà còn mang lại nguồn năng lượng tích cực cho cả năm. Với trang thiết bị hiện đại và đội ngũ bác sĩ tận tâm, Emis Dental tự hào là địa chỉ uy tín được nhiều khách hàng tin tưởng lựa chọn.",
     },
-    
+
     cta: {
-      button: "NHẬN TƯ VẤN DÁNG RĂNG PHÙ HỢP VÀ BÁO GIÁ CHI TIẾT",
-      subtext: "Hãy để Emis Dental giúp bạn sở hữu nụ cười rạng ngời nhất đón chào năm mới 2026."
-    }
+      title: "SẴN SÀNG ĐỂ CÓ NỤ CƯỜI HOÀN HẢO?",
+      button: "NHẬN TƯ VẤN VÀ BÁO GIÁ MIỄN PHÍ",
+      subtext: "Số lượng ưu đãi có hạn – Đừng bỏ lỡ!",
+    },
   };
 
-  // English content
   const enContent = {
-    metaTitle: "Dental Crown Aesthetics Tet 2026 - Up to 40% Discount | Emis Dental",
-    metaDescription: "Premium dental crown aesthetics up to 40% off for Tet 2026. Elevate your smile, radiantly welcome spring at Emis Dental.",
-    
-    heroTitle: "PREMIUM DENTAL CROWN AESTHETICS: UP TO 40% OFF",
-    heroSubtitle: "ELEVATE YOUR SMILE, WELCOME TET IN STYLE AT EMIS DENTAL",
-    heroDescription: "A perfect smile doesn't just stop at bright color, but also lies in the harmony between tooth form and facial features, and naturalness in every interaction.",
-    intro1: "Tet 2026 is knocking at the door, this is the 'golden opportunity' for you to fix imperfections like gapped teeth, crooked teeth, antibiotic staining, or chipped teeth.",
-    intro2: "Accompanying you on your appearance renovation journey, Emis Dental launches a special promotion program: 'Elevate Your Smile – Radiantly Welcome Spring' with unprecedented privileges.",
-    
+    metaTitle: "Cosmetic Porcelain Crowns Up to 60% Off – March Special | Emis Dental",
+    metaDescription:
+      "March special: Up to 60% off all genuine all-ceramic crowns including Zirconia (USA), DD Bio (Germany), Cercon HT (USA), Lava (USA) at Emis Dental.",
+
+    heroTitle: "COSMETIC PORCELAIN CROWNS",
+    heroSubtitle: "UP TO 60% OFF – BEST DEAL OF THE YEAR",
+    heroDescription:
+      "Upgrade your smile with the best promotion of the year. Enjoy up to 60% off all genuine all-ceramic crown lines at Emis Dental.",
+
+    brands: {
+      title: "CROWN LINES ON PROMOTION",
+      items: [
+        { name: "Zirconia", origin: "USA", discount: "Up to 60% off" },
+        { name: "DD Bio", origin: "Germany", discount: "Up to 60% off" },
+        { name: "Cercon HT", origin: "USA", discount: "Up to 60% off" },
+        { name: "Lava", origin: "USA", discount: "Up to 60% off" },
+      ],
+    },
+
+    suitableFor: {
+      title: "IDEAL FOR PATIENTS WHO WANT TO:",
+      items: [
+        "Improve discolored or severely stained teeth",
+        "Correct gaps, chipped teeth, mild misalignment, or minor bite issues",
+        "Enhance tooth shape for better facial harmony",
+        "Achieve a brighter, more confident smile",
+      ],
+    },
+
+    guarantees: {
+      title: "ALL CERAMIC CROWNS AT EMIS DENTAL ARE GUARANTEED WITH:",
+      items: [
+        "Genuine certified porcelain materials with clear import documentation",
+        "High durability, natural color, and no gum line darkening over time",
+        "Treatment performed by licensed and experienced specialist dentists",
+        "Long-term warranty from 5 to 10 years",
+      ],
+    },
+
     sections: [
       {
-        title: "WHY CHOOSE DENTAL CROWN AESTHETICS AT EMIS DENTAL THIS TET?",
+        title: "WHY CHOOSE COSMETIC CROWNS AT EMIS DENTAL?",
         icon: <Star className="w-6 h-6" />,
-        content: "Dental crown aesthetics isn't just a dental service, but an art that helps change facial demeanor. At Emis Dental, we commit to delivering smiles with the perfect 'golden ratio' thanks to:",
+        content:
+          "Cosmetic crowns are not just a dental service but an art that transforms your facial appearance. At Emis Dental, we are committed to delivering smiles with the perfect golden ratio through:",
         points: [
-          "Maximum natural tooth preservation: We prioritize minimally invasive techniques. Especially with Veneer porcelain veneers, tooth reduction is extremely minimal (or none), helping protect natural tooth structure and pulp, ensuring chewing strength like natural teeth.",
-          "Personalized smile design: Each customer is a unique entity. Emis Dental doctors will advise tooth shapes (natural shape, bunny shape, celeb shape...) that best suit your style, face shape, and even feng shui elements to bring luck for the new year 2026.",
-          "Premium, genuine crown materials: 100% of crown materials used at Emis Dental have clear origins from Germany, USA, Switzerland... with high durability, good translucency, and no gum line darkening after long-term use."
-        ]
-      }
+          "Maximum natural tooth preservation: We prioritize minimally invasive techniques with minimal tooth reduction to protect natural tooth structure and pulp",
+          "Personalized smile design: Doctors advise on tooth shapes suited to each patient's face and style using 3D Smile Design software",
+          "Genuine premium crown materials: 100% of materials have clear origins from Germany and the USA, offering high durability and excellent translucency",
+        ],
+      },
     ],
-    
-    pricing: {
-      title: "TET 2026 DENTAL CROWN AESTHETICS PROMOTION TABLE AT EMIS DENTAL",
-      description: "To give every customer the opportunity to own their dream smile, Emis Dental applies the deepest discounts of the year:",
-      services: [
-        {
-          name: "Veneer IPS e.max",
-          discount: "30% OFF",
-          description: "Ultra-thin, ultra-natural porcelain from Switzerland",
-          color: "from-red-600 to-yellow-500"
-        },
-        {
-          name: "Zirconia Crown (USA)",
-          discount: "40% OFF",
-          description: "High hardness, excellent durability",
-          color: "from-red-700 to-yellow-600"
-        },
-        {
-          name: "Cercon HT Crown (GERMANY)",
-          discount: "40% OFF",
-          description: "The pinnacle of aesthetics, permanent durability",
-          color: "from-red-800 to-yellow-700"
-        }
-      ],
-      specialOffer: "SPECIAL: Additional 5% discount on total bill for customers doing combos of 5 teeth or more.",
-      period: "Program runs from January 1, 2026 – February 15, 2026.",
-      note: "Limited promotion slots available!"
-    },
-    
+
     process: {
       title: "SMILE CREATION PROCESS AT EMIS DENTAL",
-      description: "We apply modern digital processes to ensure absolute accuracy and shorten time for busy customers during year-end:",
+      description:
+        "We apply modern digital processes to ensure absolute accuracy and efficiency:",
       steps: [
-        "Imaging & Smile Design: Customers can preview future smile results through 3D design software.",
-        "Cleaning & Surface Treatment: Ensure sterile environment and optimal enamel preservation.",
-        "Crown fabrication in dedicated Lab: Using modern CAD/CAM technology helps crowns achieve exquisite precision, perfect fit to every millimeter.",
-        "Crown Installation & Adjustment: Doctor thoroughly adjusts bite, ensuring comfortable chewing sensation without roughness.",
-        "Care & Warranty: Issue genuine warranty card and provide care guidance to keep smile always beautiful."
-      ]
+        "Imaging and 3D Smile Design: Preview your future smile results through Smile Design software",
+        "Cleaning and surface treatment: Ensure sterile environment and optimal enamel preservation",
+        "Crown fabrication in dedicated Lab: Modern CAD/CAM technology for millimeter-perfect precision",
+        "Crown installation and adjustment: Thorough bite adjustment for comfortable chewing with no roughness",
+        "Care and warranty: Issue genuine warranty card and provide aftercare guidance",
+      ],
     },
-    
+
     features: {
-      title: "BENEFITS OF CHOOSING DENTAL CROWN AESTHETICS AT EMIS DENTAL",
+      title: "BENEFITS OF CHOOSING CROWNS AT EMIS DENTAL",
       items: [
         {
           title: "Natural Tooth Preservation",
           description: "Minimal tooth reduction, protect natural structure",
-          icon: <Shield className="w-8 h-8" />
+          icon: <Shield className="w-8 h-8" />,
         },
         {
           title: "Personalized Design",
-          description: "3D Smile Design, suits face shape & style",
-          icon: <Palette className="w-8 h-8" />
+          description: "3D Smile Design suited to your face and style",
+          icon: <Palette className="w-8 h-8" />,
         },
         {
           title: "Premium Materials",
-          description: "Genuine imported porcelain from Germany, USA, Switzerland",
-          icon: <Gem className="w-8 h-8" />
+          description: "Genuine imported porcelain from Germany and the USA",
+          icon: <Gem className="w-8 h-8" />,
         },
         {
           title: "Expert Team",
-          description: "Experienced, highly skilled dentists",
-          icon: <Users className="w-8 h-8" />
-        }
-      ]
+          description: "Experienced, highly skilled specialist dentists",
+          icon: <Users className="w-8 h-8" />,
+        },
+      ],
     },
-    
+
     finalMessage: {
-      title: "TET IS TIME TO RENEW YOURSELF – DON'T MISS THE BEAUTIFUL SMILE!",
-      content: "People often say 'Teeth and hair are human beauty corners'. A new smile not only helps you be more confident when taking family photos, meeting partners at year-start, but also brings a new beginning full of energy and hope.",
-      conclusion: "With modern equipment and dedicated dental team, Emis Dental proudly serves as a trusted address chosen by thousands of customers to entrust their smiles every Tet season."
+      title: "DON'T MISS THIS CHANCE TO TRANSFORM YOUR SMILE AT EXCEPTIONAL VALUE!",
+      content:
+        "A new smile not only gives you greater confidence in every situation but also brings positive energy throughout the year. With modern equipment and a dedicated dental team, Emis Dental is proud to be a trusted clinic chosen by numerous satisfied customers.",
     },
-    
+
     cta: {
-      button: "GET PERSONALIZED TOOTH SHAPE CONSULTATION & DETAILED QUOTE",
-      subtext: "Let Emis Dental help you own the most radiant smile to welcome the new year 2026."
-    }
+      title: "READY FOR YOUR PERFECT SMILE?",
+      button: "GET FREE CONSULTATION AND QUOTE",
+      subtext: "Limited promotional slots available — don't miss out!",
+    },
   };
 
   const content = isVI ? viContent : enContent;
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-red-50 to-white">
+    <main className="min-h-screen bg-gradient-to-b from-pink-50 to-white">
       <Helmet>
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaDescription} />
       </Helmet>
 
-      {/* Hero Banner with Image */}
-      <div className="relative bg-gradient-to-r from-red-600 via-red-700 to-red-600 pt-24 pb-12 overflow-hidden">
-        {/* Tet Pattern Background */}
+      {/* Hero Section */}
+      <div className="relative bg-gradient-to-r from-rose-600 via-pink-500 to-fuchsia-600 pt-24 pb-12 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L0 30l30 30 30-30z' fill='%23fbbf24'/%3E%3C/svg%3E")`,
-            backgroundSize: '60px 60px'
-          }}></div>
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.5'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+              backgroundSize: "52px 26px",
+            }}
+          ></div>
         </div>
-        
+
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center gap-8">
-            {/* Text Content */}
-            <div className="lg:w-1/2 text-center lg:text-left">
-              {/* Tet Badge */}
-              <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-yellow-500 text-red-700 px-6 py-2 rounded-full font-bold mb-6 animate-pulse">
-                <Gift className="w-5 h-5 mr-2" />
-                {isVI ? "ƯU ĐÃI ĐẶC BIỆT TẾT 2026" : "SPECIAL TET 2026 OFFER"}
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Text */}
+            <div>
+              <div className="inline-flex items-center bg-white/20 text-white px-5 py-2 rounded-full font-bold mb-6 text-sm">
+                <Heart className="w-4 h-4 mr-2 fill-white" />
+                {isVI ? "THÁNG 3 YÊU THƯƠNG – ƯU ĐÃI ĐẶC BIỆT" : "MARCH SPECIAL OFFER"}
               </div>
-              
-              {/* Main Title */}
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
+
+              <h1 className="text-4xl md:text-5xl font-black text-white mb-3 leading-tight">
                 {content.heroTitle}
               </h1>
-              
-              {/* Subtitle */}
-              <p className="text-2xl md:text-3xl font-bold text-yellow-300 mb-8">
+
+              <p className="text-2xl font-bold text-yellow-300 mb-6">
                 {content.heroSubtitle}
               </p>
-              
-              {/* Description */}
-              <div className="mb-8">
-                <p className="text-xl text-gray-200 mb-4">
-                  {content.heroDescription}
-                </p>
-                <p className="text-lg text-gray-300">
-                  {content.intro1} {content.intro2}
-                </p>
+
+              <p className="text-lg text-pink-100 mb-8">{content.heroDescription}</p>
+
+              {/* Brand pills */}
+              <div className="flex flex-wrap gap-2 mb-8">
+                {content.brands.items.map((brand, idx) => (
+                  <div key={idx} className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-4 py-2 text-white text-sm">
+                    <span className="font-bold">{brand.name}</span>
+                    <span className="text-pink-200 ml-1">({brand.origin})</span>
+                  </div>
+                ))}
               </div>
-              
-              {/* CTA Button */}
-              <Link
-                to="/contact"
-                className="inline-flex items-center justify-center bg-gradient-to-r from-yellow-400 to-yellow-500 text-red-700 font-bold text-lg py-3 px-8 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-              >
-                {isVI ? "ĐẶT LỊCH NGAY" : "BOOK NOW"}
-                <ChevronRight className="w-5 h-5 ml-2" />
-              </Link>
+
+              {/* Discount badge */}
+              <div className="bg-white/15 backdrop-blur-sm border border-white/30 rounded-2xl p-5 inline-block">
+                <p className="text-pink-200 text-sm mb-1">{isVI ? "Ưu đãi lên đến" : "Discount up to"}</p>
+                <p className="text-6xl font-black text-yellow-300">60%</p>
+                <p className="text-pink-100 text-sm mt-1">{isVI ? "tất cả dòng răng toàn sứ" : "all ceramic crown lines"}</p>
+              </div>
             </div>
-            
+
             {/* Image */}
-            <div className="lg:w-1/2">
-              <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-3xl blur-xl opacity-30 animate-pulse"></div>
-                <img 
-                  src={adImage} 
-                  alt={isVI ? "Thẩm mỹ răng sứ Tết 2026" : "Dental Crown Aesthetics Tet 2026"}
-                  className="relative rounded-2xl shadow-2xl w-full h-auto border-4 border-yellow-400"
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-r from-pink-400 via-transparent to-fuchsia-400 rounded-3xl opacity-40 blur-xl"></div>
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/30">
+                <img
+                  src={adImage}
+                  alt={isVI ? "Răng sứ thẩm mỹ tháng 3 tại Emis Dental" : "Cosmetic crowns March offer at Emis Dental"}
+                  className="w-full h-auto object-cover"
                 />
               </div>
+              <div className="absolute -top-3 -right-3 bg-yellow-400 text-rose-800 px-4 py-2 rounded-full font-black shadow-lg text-sm animate-bounce">
+                {isVI ? "GIẢM 60%!" : "60% OFF!"}
+              </div>
+
+              {/* Stats */}
+              <div className="grid grid-cols-3 gap-3 mt-4">
+                {[
+                  { icon: <Shield className="w-5 h-5" />, val: isVI ? "Chính hãng" : "Genuine", label: isVI ? "Vật liệu" : "Materials" },
+                  { icon: <Award className="w-5 h-5" />, val: "5-10 " + (isVI ? "năm" : "yrs"), label: isVI ? "Bảo hành" : "Warranty" },
+                  { icon: <Sparkles className="w-5 h-5" />, val: "CAD/CAM", label: isVI ? "Công nghệ" : "Technology" },
+                ].map((stat, idx) => (
+                  <div key={idx} className="bg-white/15 backdrop-blur-sm rounded-xl p-3 text-center text-white">
+                    <div className="text-yellow-300 flex justify-center mb-1">{stat.icon}</div>
+                    <div className="font-bold text-xs">{stat.val}</div>
+                    <div className="text-pink-200 text-xs">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
             </div>
+          </div>
+
+          <div className="mt-10 text-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center bg-white text-rose-600 font-bold text-lg py-4 px-10 rounded-full shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
+            >
+              {isVI ? "ĐẶT LỊCH TƯ VẤN MIỄN PHÍ" : "BOOK FREE CONSULTATION"}
+              <ChevronRight className="w-5 h-5 ml-2" />
+            </Link>
           </div>
         </div>
       </div>
 
-      {/* Quick Info Banner */}
-      <div className="bg-gradient-to-r from-red-700 to-red-800 py-4 shadow-lg">
+      {/* Quick Banner */}
+      <div className="bg-gradient-to-r from-pink-500 to-fuchsia-500 py-3">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-3">
             <div className="flex items-center text-white">
-              <Flame className="w-5 h-5 mr-2 text-yellow-300" />
-              <span className="font-semibold">{content.pricing.period}</span>
+              <Clock className="w-4 h-4 mr-2" />
+              <span className="font-semibold">{isVI ? "Ưu đãi áp dụng trong tháng 3/2026" : "Offer valid throughout March 2026"}</span>
             </div>
             <div className="flex items-center text-white">
-              <Shield className="w-5 h-5 mr-2 text-yellow-300" />
+              <Shield className="w-4 h-4 mr-2" />
               <span className="font-semibold">{isVI ? "Bảo hành 5-10 năm" : "5-10 Years Warranty"}</span>
             </div>
-            <div className="flex items-center text-white">
-              <Award className="w-5 h-5 mr-2 text-yellow-300" />
-              <span className="font-semibold">{isVI ? "Chất lượng hàng đầu" : "Premium Quality"}</span>
-            </div>
+            <Link
+              to="/contact"
+              className="bg-white text-pink-700 font-bold py-2 px-6 rounded-full hover:shadow-lg transition-all hover:-translate-y-0.5 text-sm"
+            >
+              {isVI ? "ĐĂNG KÝ NGAY" : "REGISTER NOW"}
+            </Link>
           </div>
         </div>
       </div>
 
       {/* Main Content */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="space-y-16">
-          {/* Why Crown Section */}
-          <section className="bg-white rounded-3xl shadow-xl p-8 md:p-10 border-2 border-red-100">
-            <div className="flex items-center mb-8">
-              <div className="w-12 h-12 bg-gradient-to-br from-red-600 to-yellow-500 rounded-xl flex items-center justify-center mr-4">
-                <Star className="w-6 h-6 text-white" />
-              </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
-                {content.sections[0].title}
+        <div className="space-y-10">
+
+          {/* Suitable For + Guarantees */}
+          <div className="grid md:grid-cols-2 gap-6">
+            <section className="bg-white rounded-3xl shadow-xl p-8 border border-pink-100">
+              <h2 className="text-xl font-bold text-gray-800 mb-6 flex items-center">
+                <div className="w-8 h-8 bg-gradient-to-br from-rose-500 to-fuchsia-500 rounded-lg flex items-center justify-center mr-3 text-white">
+                  <Smile className="w-4 h-4" />
+                </div>
+                {content.suitableFor.title}
               </h2>
+              <ul className="space-y-4">
+                {content.suitableFor.items.map((item, idx) => (
+                  <li key={idx} className="flex items-start bg-rose-50 rounded-xl p-3 border border-pink-100">
+                    <CheckCircle className="w-5 h-5 text-rose-500 mr-3 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+
+            <section className="bg-white rounded-3xl shadow-xl p-8 border border-pink-100">
+              <h2 className="text-xl font-bold text-gray-800 mb-6 flex items-center">
+                <div className="w-8 h-8 bg-gradient-to-br from-rose-500 to-fuchsia-500 rounded-lg flex items-center justify-center mr-3 text-white">
+                  <Shield className="w-4 h-4" />
+                </div>
+                {content.guarantees.title}
+              </h2>
+              <ul className="space-y-4">
+                {content.guarantees.items.map((item, idx) => (
+                  <li key={idx} className="flex items-start bg-fuchsia-50 rounded-xl p-3 border border-fuchsia-100">
+                    <CheckCircle className="w-5 h-5 text-fuchsia-500 mr-3 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          </div>
+
+          {/* Brands Grid */}
+          <section className="bg-gradient-to-r from-rose-50 to-pink-50 rounded-3xl p-8 border-2 border-pink-100">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">{content.brands.title}</h2>
+              <div className="w-32 h-1 bg-gradient-to-r from-rose-500 to-fuchsia-500 rounded-full mx-auto"></div>
             </div>
-            
-            <p className="text-gray-700 text-lg mb-6">{content.sections[0].content}</p>
-            
-            <div className="space-y-6">
-              {content.sections[0].points.map((point, idx) => (
-                <div key={idx} className="flex items-start p-6 bg-gradient-to-r from-red-50 to-yellow-50 rounded-xl hover:shadow-md transition-shadow border border-red-100">
-                  <div className="w-8 h-8 bg-gradient-to-br from-red-600 to-yellow-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                    <span className="text-white font-bold">{idx + 1}</span>
-                  </div>
-                  <p className="text-gray-700 text-lg">{point}</p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {content.brands.items.map((brand, idx) => (
+                <div key={idx} className="bg-white rounded-2xl p-5 text-center shadow-lg border border-pink-100 hover:border-rose-300 hover:shadow-xl transition-all">
+                  <Gem className="w-10 h-10 text-rose-500 mx-auto mb-3" />
+                  <h3 className="font-black text-gray-800 text-lg">{brand.name}</h3>
+                  <p className="text-fuchsia-600 text-sm font-semibold mb-2">{brand.origin}</p>
+                  <span className="inline-block bg-gradient-to-r from-rose-500 to-fuchsia-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                    {brand.discount}
+                  </span>
                 </div>
               ))}
             </div>
           </section>
 
-          {/* Pricing Section */}
-          <section className="bg-gradient-to-r from-red-50 to-yellow-50 border-2 border-red-200 rounded-3xl p-8 md:p-10">
-            <div className="text-center mb-10">
-              <div className="inline-flex items-center mb-4">
-                <div className="w-2 h-8 bg-red-600 rounded-full mr-2"></div>
-                <div className="w-2 h-10 bg-yellow-500 rounded-full mr-2"></div>
-                <div className="w-2 h-8 bg-red-600 rounded-full"></div>
-              </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
-                {content.pricing.title}
-              </h2>
-              <div className="w-32 h-1 bg-gradient-to-r from-red-600 to-yellow-500 rounded-full mx-auto"></div>
-              <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-                {content.pricing.description}
-              </p>
-            </div>
-            
-            {/* Services Grid */}
-            <div className="grid md:grid-cols-3 gap-8 mb-8">
-              {content.pricing.services.map((service, idx) => (
-                <div key={idx} className={`bg-gradient-to-br ${service.color} rounded-2xl p-6 text-white shadow-lg transform hover:-translate-y-2 transition-transform duration-300 border border-yellow-400`}>
-                  <div className="text-center mb-6">
-                    <Gem className="w-12 h-12 text-yellow-300 mx-auto mb-4" />
-                    <h3 className="font-bold text-xl mb-2">{service.name}</h3>
-                    <div className="inline-block bg-yellow-400/30 backdrop-blur-sm px-4 py-2 rounded-full font-bold text-lg mb-3 border border-yellow-300">
-                      {service.discount}
-                    </div>
-                    <p className="text-white/90">{service.description}</p>
-                  </div>
-                  
-                  <div className="mt-6 text-center">
-                    <div className="flex items-center justify-center mb-2">
-                      <CheckCircle className="w-5 h-5 text-yellow-300 mr-2" />
-                      <span className="text-sm">{isVI ? "Bảo hành 5-10 năm" : "5-10 Years Warranty"}</span>
-                    </div>
-                    <div className="flex items-center justify-center">
-                      <CheckCircle className="w-5 h-5 text-yellow-300 mr-2" />
-                      <span className="text-sm">{isVI ? "Không ê buốt" : "No Sensitivity"}</span>
-                    </div>
-                  </div>
+          {/* Why Choose Section */}
+          {content.sections.map((section, idx) => (
+            <section key={idx} className="bg-white rounded-3xl shadow-xl p-8 md:p-10">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-gradient-to-br from-rose-500 to-fuchsia-500 rounded-xl flex items-center justify-center mr-4 text-white">
+                  {section.icon}
                 </div>
-              ))}
-            </div>
-            
-            {/* Special Offer */}
-            <div className="bg-gradient-to-r from-red-700 to-red-800 rounded-2xl p-6 text-white mb-8 border border-yellow-500">
-              <div className="flex items-center justify-center mb-4">
-                <Trophy className="w-8 h-8 text-yellow-300 mr-3" />
-                <h3 className="text-xl font-bold">{isVI ? "ƯU ĐÃI ĐẶC BIỆT" : "SPECIAL OFFER"}</h3>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-800">{section.title}</h2>
               </div>
-              <p className="text-center text-lg font-semibold">{content.pricing.specialOffer}</p>
-            </div>
-            
-            {/* Period & Note */}
-            <div className="text-center space-y-4">
-              <div className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-yellow-500 text-red-700 px-6 py-3 rounded-full font-bold shadow-lg">
-                <Calendar className="w-5 h-5 mr-2" />
-                {content.pricing.period}
+              <p className="text-gray-700 text-lg mb-6">{section.content}</p>
+              <div className="space-y-4">
+                {section.points.map((point, pIdx) => (
+                  <div key={pIdx} className="flex items-start bg-gradient-to-r from-rose-50 to-pink-50 rounded-xl p-5 border border-pink-100">
+                    <div className="w-8 h-8 bg-gradient-to-br from-rose-500 to-fuchsia-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0 text-white font-bold text-sm">
+                      {pIdx + 1}
+                    </div>
+                    <p className="text-gray-700">{point}</p>
+                  </div>
+                ))}
               </div>
-              <p className="text-red-700 font-semibold animate-pulse bg-yellow-50 inline-block px-4 py-2 rounded-full border border-red-200">
-                ⚠️ {content.pricing.note}
-              </p>
-            </div>
-          </section>
+            </section>
+          ))}
 
           {/* Process Section */}
-          <section className="bg-white rounded-3xl shadow-xl p-8 md:p-10 border-2 border-red-100">
+          <section className="bg-white rounded-3xl shadow-xl p-8 md:p-10">
             <div className="text-center mb-10">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
-                {content.process.title}
-              </h2>
-              <div className="w-32 h-1 bg-gradient-to-r from-red-600 to-yellow-500 rounded-full mx-auto"></div>
-              <p className="text-gray-600 mt-4 max-w-3xl mx-auto">
-                {content.process.description}
-              </p>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">{content.process.title}</h2>
+              <div className="w-32 h-1 bg-gradient-to-r from-rose-500 to-fuchsia-500 rounded-full mx-auto mb-4"></div>
+              <p className="text-gray-600 max-w-2xl mx-auto">{content.process.description}</p>
             </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+
+            <div className="grid md:grid-cols-5 gap-4">
               {content.process.steps.map((step, idx) => (
-                <div key={idx} className="relative">
-                  <div className="bg-gradient-to-br from-red-50 to-yellow-50 border border-red-200 rounded-2xl p-6 h-full hover:border-red-300 transition-colors">
-                    <div className="w-16 h-16 bg-gradient-to-br from-red-600 to-yellow-500 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-4 shadow-lg">
+                <div key={idx} className="relative text-center">
+                  <div className="bg-gradient-to-br from-rose-50 to-pink-50 border border-pink-100 rounded-2xl p-5 h-full hover:border-rose-300 transition-colors">
+                    <div className="w-12 h-12 bg-gradient-to-br from-rose-500 to-fuchsia-500 rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-3">
                       {idx + 1}
                     </div>
-                    <p className="font-medium text-gray-800 text-center">{step}</p>
+                    <p className="text-gray-700 text-sm">{step}</p>
                   </div>
-                  
                   {idx < content.process.steps.length - 1 && (
-                    <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2">
-                      <ChevronRight className="w-8 h-8 text-red-300" />
+                    <div className="hidden md:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 z-10">
+                      <ChevronRight className="w-6 h-6 text-pink-300" />
                     </div>
                   )}
                 </div>
               ))}
             </div>
-            
-            {/* Smile Design Feature */}
-            <div className="mt-12 bg-gradient-to-r from-red-50 to-yellow-50 rounded-2xl p-8 border border-red-200">
-              <div className="flex flex-col lg:flex-row items-center gap-8">
-                <div className="lg:w-1/3">
-                  <div className="bg-white rounded-xl p-6 shadow-lg border border-red-200">
-                    <Camera className="w-16 h-16 text-red-600 mx-auto mb-4" />
-                    <h3 className="font-bold text-gray-800 text-center mb-2">{isVI ? "SMILEDESIGN 3D" : "3D SMILE DESIGN"}</h3>
-                    <p className="text-gray-600 text-center text-sm">
-                      {isVI ? "Xem trước nụ cười tương lai" : "Preview your future smile"}
-                    </p>
-                  </div>
-                </div>
-                <div className="lg:w-2/3">
-                  <h3 className="text-xl font-bold text-gray-800 mb-4">
-                    {isVI ? "Công nghệ thiết kế nụ cười 3D tiên tiến" : "Advanced 3D Smile Design Technology"}
-                  </h3>
-                  <p className="text-gray-700 mb-4">
-                    {isVI 
-                      ? "Tại Emis Dental, chúng tôi sử dụng phần mềm Smile Design 3D hiện đại giúp bạn hình dung trước kết quả cuối cùng. Bạn có thể thấy được sự thay đổi rõ rệt của nụ cười trước khi bắt đầu điều trị."
-                      : "At Emis Dental, we use modern 3D Smile Design software to help you visualize the final result beforehand. You can see the clear transformation of your smile before starting treatment."
-                    }
-                  </p>
-                  <div className="flex flex-wrap gap-3">
-                    <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm border border-red-200">✓ {isVI ? "Hình ảnh 3D thực tế" : "Realistic 3D Images"}</span>
-                    <span className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm border border-yellow-200">✓ {isVI ? "Chỉnh sửa trực tiếp" : "Live Editing"}</span>
-                    <span className="bg-red-50 text-red-700 px-3 py-1 rounded-full text-sm border border-red-200">✓ {isVI ? "Phù hợp khuôn mặt" : "Face Matching"}</span>
-                  </div>
+
+            {/* Smile Design callout */}
+            <div className="mt-8 bg-gradient-to-r from-rose-50 to-fuchsia-50 rounded-2xl p-6 border border-pink-100 flex flex-col md:flex-row items-center gap-6">
+              <div className="bg-white rounded-xl p-5 shadow-md border border-pink-100 flex-shrink-0 text-center w-40">
+                <Camera className="w-12 h-12 text-rose-500 mx-auto mb-2" />
+                <p className="font-bold text-gray-800 text-sm">3D SMILE DESIGN</p>
+                <p className="text-gray-500 text-xs">{isVI ? "Xem trước kết quả" : "Preview results"}</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-gray-800 mb-2">
+                  {isVI ? "Công nghệ thiết kế nụ cười 3D tiên tiến" : "Advanced 3D Smile Design Technology"}
+                </h3>
+                <p className="text-gray-600 mb-3">
+                  {isVI
+                    ? "Tại Emis Dental, bạn có thể xem trước kết quả nụ cười tương lai qua phần mềm Smile Design 3D trước khi bắt đầu điều trị. Không bất ngờ, không lo lắng."
+                    : "At Emis Dental, you can preview your future smile result through 3D Smile Design software before starting treatment. No surprises, no uncertainty."}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-rose-100 text-rose-700 px-3 py-1 rounded-full text-xs font-semibold border border-rose-200">
+                    {isVI ? "Hình ảnh 3D thực tế" : "Realistic 3D Preview"}
+                  </span>
+                  <span className="bg-fuchsia-100 text-fuchsia-700 px-3 py-1 rounded-full text-xs font-semibold border border-fuchsia-200">
+                    {isVI ? "Chỉnh sửa trực tiếp" : "Live Editing"}
+                  </span>
+                  <span className="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-xs font-semibold border border-pink-200">
+                    {isVI ? "Phù hợp khuôn mặt" : "Face Matching"}
+                  </span>
                 </div>
               </div>
             </div>
           </section>
 
-          {/* Features Section */}
-          <section className="bg-gradient-to-r from-red-50 to-yellow-50 rounded-3xl p-8 md:p-10 border-2 border-red-200">
+          {/* Features */}
+          <section className="bg-gradient-to-r from-rose-50 to-pink-50 rounded-3xl p-8 md:p-10 border-2 border-pink-100">
             <div className="text-center mb-10">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
-                {content.features.title}
-              </h2>
-              <div className="w-32 h-1 bg-gradient-to-r from-red-600 to-yellow-500 rounded-full mx-auto"></div>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">{content.features.title}</h2>
+              <div className="w-32 h-1 bg-gradient-to-r from-rose-500 to-fuchsia-500 rounded-full mx-auto"></div>
             </div>
-            
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {content.features.items.map((feature, idx) => (
-                <div key={idx} className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 border border-red-200">
-                  <div className="w-16 h-16 bg-gradient-to-br from-red-100 to-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4 border border-red-200">
-                    <div className="text-red-600">
-                      {feature.icon}
-                    </div>
+                <div key={idx} className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+                  <div className="w-16 h-16 bg-gradient-to-br from-rose-100 to-pink-100 rounded-full flex items-center justify-center mx-auto mb-4 text-rose-600">
+                    {feature.icon}
                   </div>
-                  <h3 className="font-bold text-gray-800 text-lg mb-2 text-center">{feature.title}</h3>
-                  <p className="text-gray-600 text-center text-sm">{feature.description}</p>
+                  <h3 className="font-bold text-gray-800 text-lg mb-2">{feature.title}</h3>
+                  <p className="text-gray-600 text-sm">{feature.description}</p>
                 </div>
               ))}
             </div>
           </section>
 
-          {/* Final Message Section */}
-          <section className="bg-gradient-to-r from-red-700 to-red-800 rounded-3xl p-8 md:p-10 text-white border-2 border-yellow-500">
-            <div className="text-center mb-8">
-              <Smile className="w-16 h-16 text-yellow-300 mx-auto mb-6" />
-              <h2 className="text-2xl md:text-3xl font-bold mb-6">
-                {content.finalMessage.title}
-              </h2>
-            </div>
-            
-            <div className="max-w-3xl mx-auto">
-              <p className="text-lg text-red-100 mb-6 text-center">
-                {content.finalMessage.content}
-              </p>
-              <p className="text-lg text-red-100 text-center">
-                {content.finalMessage.conclusion}
-              </p>
-              
-              {/* Benefits Grid */}
-              <div className="grid md:grid-cols-3 gap-6 mt-10">
-                <div className="text-center p-4">
-                  <Brush className="w-10 h-10 text-yellow-300 mx-auto mb-3" />
-                  <h4 className="font-bold mb-2">{isVI ? "Thay đổi diện mạo" : "Transform Appearance"}</h4>
-                  <p className="text-red-200 text-sm">{isVI ? "Nâng tầm nhan sắc chỉ sau 1 tuần" : "Elevate beauty in just 1 week"}</p>
-                </div>
-                <div className="text-center p-4">
-                  <Heart className="w-10 h-10 text-yellow-300 mx-auto mb-3" />
-                  <h4 className="font-bold mb-2">{isVI ? "Tự tin giao tiếp" : "Confident Communication"}</h4>
-                  <p className="text-red-200 text-sm">{isVI ? "Tự tin trong mọi tình huống" : "Confidence in every situation"}</p>
-                </div>
-                <div className="text-center p-4">
-                  <Trophy className="w-10 h-10 text-yellow-300 mx-auto mb-3" />
-                  <h4 className="font-bold mb-2">{isVI ? "Khởi đầu năm mới" : "New Year Start"}</h4>
-                  <p className="text-red-200 text-sm">{isVI ? "Năng lượng tích cực cả năm" : "Positive energy all year"}</p>
-                </div>
-              </div>
-            </div>
-          </section>
-
           {/* Final CTA */}
-          <section className="text-center">
-            <div className="bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-3xl p-8 md:p-10 border-4 border-red-600 shadow-2xl">
-              <h3 className="text-2xl md:text-3xl font-bold text-red-700 mb-6">
-                {isVI ? "SẴN SÀNG ĐỂ CÓ NỤ CƯỜI HOÀN HẢO ĐÓN TẾT?" : "READY FOR THE PERFECT SMILE THIS TET?"}
-              </h3>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center justify-center bg-red-700 text-white font-bold text-lg py-4 px-8 rounded-full shadow-2xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-2 border-yellow-400"
-                >
-                  {content.cta.button}
-                  <ChevronRight className="w-5 h-5 ml-2" />
-                </Link>
-                
-                <a
-                  href="tel:0919100021"
-                  className="inline-flex items-center justify-center bg-white text-red-700 font-bold text-lg py-4 px-8 rounded-full shadow-lg hover:shadow-xl hover:bg-gray-50 transition-all duration-300 border-2 border-red-600"
-                >
-                  <Phone className="w-5 h-5 mr-2" />
-                  0919 100 021
-                </a>
-              </div>
-              
-              <p className="text-red-700 font-semibold">{content.cta.subtext}</p>
+          <section className="bg-gradient-to-r from-rose-600 via-pink-500 to-fuchsia-600 rounded-3xl p-8 md:p-10 text-center shadow-xl">
+            <Heart className="w-16 h-16 text-white fill-white mx-auto mb-4" />
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">{content.cta.title}</h2>
+            <p className="text-pink-100 mb-8 max-w-2xl mx-auto">{content.finalMessage.content}</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center bg-white text-rose-600 font-bold text-lg py-4 px-8 rounded-full shadow-xl hover:-translate-y-1 transition-all duration-300"
+              >
+                {content.cta.button}
+                <ChevronRight className="w-5 h-5 ml-2" />
+              </Link>
+              <a
+                href="tel:0919100021"
+                className="inline-flex items-center justify-center bg-rose-800 text-white font-bold text-lg py-4 px-8 rounded-full shadow-lg hover:bg-rose-900 transition-all duration-300"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                0919 100 021
+              </a>
             </div>
+            <p className="text-pink-200 text-sm font-semibold">{content.cta.subtext}</p>
           </section>
         </div>
 
         {/* Contact Footer */}
-        <div className="mt-16 bg-white rounded-3xl shadow-xl p-8 border-2 border-red-200">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">
-              {isVI ? "NHA KHOA QUỐC TẾ " : "INTERNATIONAL DENTAL CLINIC "}
-              <span className="text-red-600">EMIS DENTAL</span>
+        <div className="mt-12 bg-white rounded-3xl shadow-xl p-8 border-2 border-pink-100">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-gray-800 mb-2">
+              {isVI ? "NHA KHOA QUỐC TẾ " : ""}
+              <span className="text-rose-600">EMIS DENTAL</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-red-600 to-yellow-500 rounded-full mx-auto" />
+            <div className="w-24 h-1 bg-gradient-to-r from-rose-500 to-fuchsia-500 rounded-full mx-auto" />
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-6 bg-red-50 rounded-xl hover:bg-white transition-colors border border-red-200">
-              <div className="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 border border-red-300">
-                <MapPin className="w-6 h-6 text-red-600" />
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="text-center p-5 bg-rose-50 rounded-xl">
+              <div className="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                <MapPin className="w-6 h-6 text-rose-600" />
               </div>
-              <h3 className="font-bold text-gray-800 mb-2">{isVI ? "Địa chỉ" : "Address"}</h3>
-              <p className="text-gray-600">62B Phạm Ngọc Thạch, District 3, HCMC</p>
+              <h3 className="font-bold text-gray-800 mb-1">{isVI ? "Địa chỉ" : "Address"}</h3>
+              <p className="text-gray-600 text-sm">62B Phạm Ngọc Thạch</p>
+              <p className="text-gray-600 text-sm">
+                {isVI ? "P. Xuân Hòa, TP.HCM" : "Vo Thi Sau Ward, District 3, HCMC"}
+              </p>
             </div>
 
-            <div className="text-center p-6 bg-yellow-50 rounded-xl hover:bg-white transition-colors border border-yellow-200">
-              <div className="w-14 h-14 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4 border border-yellow-300">
-                <Phone className="w-6 h-6 text-yellow-600" />
+            <div className="text-center p-5 bg-pink-50 rounded-xl">
+              <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Phone className="w-6 h-6 text-pink-600" />
               </div>
-              <h3 className="font-bold text-gray-800 mb-2">Hotline</h3>
-              <p className="text-lg font-bold text-red-600">0919 100 021</p>
-              <p className="text-lg font-bold text-red-600">0768 117 068</p>
+              <h3 className="font-bold text-gray-800 mb-1">Hotline</h3>
+              <p className="text-lg font-bold text-rose-600">0919 100 021</p>
+              <p className="text-lg font-bold text-rose-600">0768 117 068</p>
             </div>
 
-            <div className="text-center p-6 bg-red-50 rounded-xl hover:bg-white transition-colors border border-red-200">
-              <div className="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 border border-red-300">
-                <Globe className="w-6 h-6 text-red-600" />
+            <div className="text-center p-5 bg-fuchsia-50 rounded-xl">
+              <div className="w-12 h-12 bg-fuchsia-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Globe className="w-6 h-6 text-fuchsia-600" />
               </div>
-              <h3 className="font-bold text-gray-800 mb-2">Website</h3>
-              <a 
-                href="https://www.emisdental.com" 
-                className="text-yellow-600 hover:underline font-medium block"
+              <h3 className="font-bold text-gray-800 mb-1">Website</h3>
+              <a
+                href="https://www.emisdental.com"
+                className="text-rose-600 hover:underline font-medium block"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 www.emisdental.com
               </a>
-              <p className="text-gray-600 mt-2">8:00 – 20:00 {isVI ? "(Tất cả các ngày)" : "(All days)"}</p>
+              <p className="text-gray-500 text-sm mt-1">
+                8:00 – 20:00 {isVI ? "(Tất cả các ngày)" : "(All days)"}
+              </p>
             </div>
           </div>
         </div>
