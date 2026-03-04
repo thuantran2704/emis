@@ -21,7 +21,6 @@ import DentalVisitorProgram from './pages/flightassist.jsx';
 import WhiteningAd from './pages/whitening.jsx';
 import ImplantAd from './pages/implant.jsx';
 import CrownAd from './pages/crown.jsx';
-import OrthoAd from './pages/ortho.jsx';
 import GenAd from './pages/genAd.jsx';
 export default function App() {
   const language = useSelector((state) => state.language.language);
@@ -60,7 +59,6 @@ export default function App() {
           <Route path="/whiteningAd" element={<WhiteningAd/>}/>
           <Route path="/implantAd" element={<ImplantAd/>}/>
           <Route path="/crownAd" element={<CrownAd/>}/>
-          <Route path="/orthoAd" element={<OrthoAd/>}/>
           <Route path="genAd" element={<GenAd/>}/>
 
           
