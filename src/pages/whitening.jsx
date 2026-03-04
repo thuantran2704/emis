@@ -17,7 +17,6 @@ import {
   Globe,
   ChevronRight,
   Heart,
-  Gem,
   Sun,
 } from "lucide-react";
 
@@ -37,7 +36,7 @@ const WhiteningAd = () => {
     heroTitle: "ĐI 2 TÍNH TIỀN 1",
     heroSubtitle: "TRẮNG RĂNG AN TOÀN VỚI DEAL CỰC HỜI",
     heroDescription:
-      "Bạn muốn thay đổi nụ cười trắng sáng? Hãy đến Emis Dental và rủ 1 người bạn đi cùng, 2 bạn cùng REFRESH nụ cười nhưng chỉ cần thanh toán 1 suất.",
+      "Bạn muốn thay đổi nụ cười trắng sáng? Hãy đến Emis Dental và rủ 1 người bạn đi cùng — 2 bạn cùng REFRESH nụ cười nhưng chỉ cần thanh toán 1 suất.",
 
     dealHighlight: {
       label: "ĐẶC BIỆT: Tiết kiệm đến 70%",
@@ -78,33 +77,6 @@ const WhiteningAd = () => {
         ],
       },
     ],
-
-    crownSection: {
-      title: "RĂNG SỨ THẨM MỸ – GIẢM ĐẾN 60%",
-      subtitle: "Cơ hội nâng cấp nụ cười với mức ưu đãi tốt nhất trong năm",
-      badge: "GIẢM ĐẾN 60%",
-      description:
-        "Áp dụng cho tất cả các dòng răng toàn sứ chính hãng: Zirconia (Mỹ), DD Bio (Đức), Cercon HT (Mỹ), Lava (Mỹ) và nhiều dòng khác.",
-      suitableFor: {
-        title: "Phù hợp cho khách hàng muốn:",
-        items: [
-          "Cải thiện răng xỉn màu, nhiễm màu nặng",
-          "Khắc phục răng thưa, mẻ, lệch nhẹ, lệch khớp cắn nhẹ",
-          "Tái tạo form răng hài hòa gương mặt",
-          "Sở hữu nụ cười sáng và tự tin hơn",
-        ],
-      },
-      guarantees: {
-        title: "Tất cả dòng răng toàn sứ tại Emis Dental đều đảm bảo:",
-        items: [
-          "Vật liệu sứ chính hãng",
-          "Độ bền cao",
-          "Màu sắc tự nhiên",
-          "Thực hiện bởi bác sĩ chính quy có chuyên môn",
-        ],
-      },
-      link: "/crownAd",
-    },
 
     pricing: {
       title: "CHI TIẾT ƯU ĐÃI",
@@ -170,7 +142,7 @@ const WhiteningAd = () => {
     heroTitle: "BRING A FRIEND, PAY FOR ONE",
     heroSubtitle: "SAFE TEETH WHITENING WITH AN UNBEATABLE DEAL",
     heroDescription:
-      "Want a brighter, whiter smile? Come to Emis Dental and bring a friend along, 2 of you REFRESH your smiles, but only pay for 1 person.",
+      "Want a brighter, whiter smile? Come to Emis Dental and bring a friend along — 2 of you REFRESH your smiles, but only pay for 1 person.",
 
     dealHighlight: {
       label: "SPECIAL: Save up to 70%",
@@ -211,33 +183,6 @@ const WhiteningAd = () => {
         ],
       },
     ],
-
-    crownSection: {
-      title: "PREMIUM DENTAL CROWNS UP TO 60% OFF",
-      subtitle: "The best opportunity of the year to upgrade your smile",
-      badge: "UP TO 60% OFF",
-      description:
-        "Applies to all genuine all-ceramic crown brands: Zirconia (USA), DD Bio (Germany), Cercon HT (USA), Lava (USA) and more.",
-      suitableFor: {
-        title: "Ideal for patients who want to:",
-        items: [
-          "Correct heavily stained or discolored teeth",
-          "Fix gaps, chips, mild misalignment, or minor bite issues",
-          "Reshape teeth to better harmonize with facial features",
-          "Achieve a brighter, more confident smile",
-        ],
-      },
-      guarantees: {
-        title: "All ceramic crowns at Emis Dental come with:",
-        items: [
-          "Genuine certified ceramic materials",
-          "High durability",
-          "Natural-looking color",
-          "Performed by qualified specialist doctors",
-        ],
-      },
-      link: "/crownAd",
-    },
 
     pricing: {
       title: "PROMOTION DETAILS",
@@ -485,58 +430,6 @@ const WhiteningAd = () => {
               </div>
             </section>
           ))}
-
-          {/* Crown Upsell Section */}
-          <section className="bg-gradient-to-br from-rose-600 to-fuchsia-700 rounded-3xl p-8 md:p-10 text-white overflow-hidden relative">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
-            <div className="relative z-10">
-              <div className="flex items-start justify-between mb-4 flex-wrap gap-4">
-                <div>
-                  <span className="inline-block bg-yellow-400 text-rose-900 text-sm font-black px-4 py-1 rounded-full mb-3">
-                    {content.crownSection.badge}
-                  </span>
-                  <h2 className="text-2xl md:text-3xl font-bold">{content.crownSection.title}</h2>
-                  <p className="text-pink-200 mt-1">{content.crownSection.subtitle}</p>
-                </div>
-                <Gem className="w-12 h-12 text-yellow-300 flex-shrink-0" />
-              </div>
-
-              <p className="text-pink-100 mb-8">{content.crownSection.description}</p>
-
-              <div className="grid md:grid-cols-2 gap-8 mb-8">
-                <div>
-                  <h3 className="font-bold text-yellow-300 mb-4">{content.crownSection.suitableFor.title}</h3>
-                  <ul className="space-y-3">
-                    {content.crownSection.suitableFor.items.map((item, idx) => (
-                      <li key={idx} className="flex items-start">
-                        <CheckCircle className="w-5 h-5 text-yellow-300 mr-3 flex-shrink-0 mt-0.5" />
-                        <span className="text-pink-100">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="font-bold text-yellow-300 mb-4">{content.crownSection.guarantees.title}</h3>
-                  <ul className="space-y-3">
-                    {content.crownSection.guarantees.items.map((item, idx) => (
-                      <li key={idx} className="flex items-start">
-                        <CheckCircle className="w-5 h-5 text-yellow-300 mr-3 flex-shrink-0 mt-0.5" />
-                        <span className="text-pink-100">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              <Link
-                to={content.crownSection.link}
-                className="inline-flex items-center bg-white text-rose-700 font-bold py-3 px-8 rounded-full hover:bg-yellow-50 transition-colors shadow-lg"
-              >
-                {isVI ? "XEM CHI TIẾT ƯU ĐÃI RĂNG SỨ" : "VIEW CROWN PROMOTION DETAILS"}
-                <ChevronRight className="w-5 h-5 ml-2" />
-              </Link>
-            </div>
-          </section>
 
           {/* Process Section */}
           <section className="bg-white rounded-3xl shadow-xl p-8 md:p-10">
