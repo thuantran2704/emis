@@ -37,7 +37,7 @@ const WhiteningAd = () => {
     heroTitle: "ĐI 2 TÍNH TIỀN 1",
     heroSubtitle: "TRẮNG RĂNG AN TOÀN VỚI DEAL CỰC HỜI",
     heroDescription:
-      "Bạn muốn thay đổi nụ cười trắng sáng? Hãy đến Emis Dental và rủ 1 người bạn đi cùng — 2 bạn cùng REFRESH nụ cười nhưng chỉ cần thanh toán 1 suất.",
+      "Bạn muốn thay đổi nụ cười trắng sáng? Hãy đến Emis Dental và rủ 1 người bạn đi cùng, 2 bạn cùng REFRESH nụ cười nhưng chỉ cần thanh toán 1 suất.",
 
     dealHighlight: {
       label: "ĐẶC BIỆT: Tiết kiệm đến 70%",
@@ -170,7 +170,7 @@ const WhiteningAd = () => {
     heroTitle: "BRING A FRIEND, PAY FOR ONE",
     heroSubtitle: "SAFE TEETH WHITENING WITH AN UNBEATABLE DEAL",
     heroDescription:
-      "Want a brighter, whiter smile? Come to Emis Dental and bring a friend along — 2 of you REFRESH your smiles, but only pay for 1 person.",
+      "Want a brighter, whiter smile? Come to Emis Dental and bring a friend along, 2 of you REFRESH your smiles, but only pay for 1 person.",
 
     dealHighlight: {
       label: "SPECIAL: Save up to 70%",

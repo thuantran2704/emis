@@ -14,7 +14,7 @@ const aboutContent = {
       "We invest in cutting-edge technology to provide safer, faster, and more precise treatments. From digital X-rays to modern sterilization, every detail is handled with care.",
     techSubtitle: "Trusted Technology",
     experienceSection:
-      "At our clinic, we believe that dental visits should leave a lasting impression—not just through excellent results, but through the warmth and sincerity of care you experience. From the front desk to the treatment room, every interaction is designed to make you feel safe, heard, and valued. Patients often leave with a sense of ease, knowing they’ve been truly cared for, not just treated.",
+      "At our clinic, we believe that dental visits should leave a lasting impression, not just through excellent results, but through the warmth and sincerity of care you experience. From the front desk to the treatment room, every interaction is designed to make you feel safe, heard, and valued. Patients often leave with a sense of ease, knowing they’ve been truly cared for, not just treated.",
     patientSubtitle2: "A Lasting Impression",
   },
 
@@ -109,7 +109,7 @@ const aboutContent = {
       "Nous investissons dans les technologies de pointe pour offrir des traitements plus sûrs, plus rapides et plus précis. Des radiographies numériques à la stérilisation moderne, chaque étape est rigoureuse.",
     techSubtitle: "Technologie de Confiance",
     experienceSection:
-      "Chez nous, chaque visite dentaire est conçue pour marquer les esprits — non seulement grâce aux résultats, mais aussi par la chaleur humaine que vous ressentez. De l’accueil à la salle de soins, tout est pensé pour que vous vous sentiez en sécurité, écouté et valorisé.",
+      "Chez nous, chaque visite dentaire est conçue pour marquer les esprits, non seulement grâce aux résultats, mais aussi par la chaleur humaine que vous ressentez. De l’accueil à la salle de soins, tout est pensé pour que vous vous sentiez en sécurité, écouté et valorisé.",
     patientSubtitle2: "Une Expérience Inoubliable",
   },
 };
