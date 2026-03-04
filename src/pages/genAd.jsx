@@ -26,14 +26,9 @@ import {
   Flower,
 } from "lucide-react";
 
-// Import images - update these to March 8 images when available
-import viImg from "../pics/tet/vie-general.png";
-import enImg from "../pics/tet/eng-general.png";
-
 const GenAd = () => {
   const language = useSelector((state) => state.language.language);
   const isVI = language === "vietnamese";
-  const adImage = isVI ? viImg : enImg;
 
   const viContent = {
     metaTitle: "Ưu Đãi 8/3 - Trao Nụ Cười Trao Yêu Thương | Emis Dental",
@@ -393,17 +388,29 @@ const GenAd = () => {
               </div>
             </div>
 
-            {/* Image */}
-            <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-pink-300">
-                <img
-                  src={adImage}
-                  alt={isVI ? "Ưu đãi 8/3 tại Emis Dental" : "Women's Day Offers at Emis Dental"}
-                  className="w-full h-auto object-cover"
-                />
+            {/* Decorative Offer Cards */}
+            <div className="relative grid grid-cols-2 gap-4">
+              <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-5 text-center border border-white/30">
+                <Gem className="w-10 h-10 text-yellow-300 mx-auto mb-2" />
+                <div className="text-yellow-300 font-bold text-xl">60%</div>
+                <div className="text-white text-sm font-semibold">{isVI ? "Răng Sứ" : "Crowns"}</div>
+                <div className="text-pink-100 text-xs mt-1">{isVI ? "Giảm đến" : "Up to off"}</div>
               </div>
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-pink-300 to-rose-300 rounded-full opacity-40"></div>
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-fuchsia-400 to-pink-500 rounded-full opacity-40"></div>
+              <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-5 text-center border border-white/30 mt-6">
+                <Sun className="w-10 h-10 text-yellow-300 mx-auto mb-2" />
+                <div className="text-yellow-300 font-bold text-xl">{isVI ? "Đi 2 Tính 1" : "2-for-1"}</div>
+                <div className="text-white text-sm font-semibold">{isVI ? "Tẩy Trắng" : "Whitening"}</div>
+                <div className="text-pink-100 text-xs mt-1">2.000.000đ</div>
+              </div>
+              <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-5 text-center border border-white/30 col-span-2">
+                <Shield className="w-10 h-10 text-yellow-300 mx-auto mb-2" />
+                <div className="text-yellow-300 font-bold text-xl">7.900.000đ</div>
+                <div className="text-white text-sm font-semibold">Implant Osstem</div>
+                <div className="text-pink-100 text-xs mt-1">{isVI ? "Giá / trụ" : "Per implant"}</div>
+              </div>
+              {/* Decorative blobs */}
+              <div className="absolute -top-4 -right-4 w-20 h-20 bg-white/10 rounded-full"></div>
+              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-white/10 rounded-full"></div>
             </div>
           </div>
         </div>
