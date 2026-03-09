@@ -205,7 +205,6 @@ export default function SonPage() {
           </section>
 
 {/* 
-          Certification
           <section className="mb-16">
             <h2 className="text-3xl font-bold mb-8 text-gray-900">
               {content.certification.title}
