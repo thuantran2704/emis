@@ -204,7 +204,7 @@ export default function SonPage() {
             </a>
           </section>
 
-
+{/* 
           Certification
           <section className="mb-16">
             <h2 className="text-3xl font-bold mb-8 text-gray-900">
@@ -222,7 +222,7 @@ export default function SonPage() {
             <p className="mt-4 text-gray-600 text-center italic">
               {content.certification.description}
             </p>
-          </section>
+          </section> */}
 
         </div>
       </article>
