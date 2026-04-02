@@ -131,7 +131,7 @@ export default function Navbar() {
                   className="text-[#2a3439] font-medium px-3 py-2 transition-all duration-300 group"
                   style={{ fontFamily: "'Be Vietnam Pro', sans-serif", fontWeight: '600' }}
                 >
-                  {content.marchOffer}
+                  {content.aprilOffer}
                 </Link>
 
                 <button
@@ -277,7 +277,7 @@ export default function Navbar() {
                     toggleMenu();
                   }}
                 >
-                  {content.marchOffer}
+                  {content.aprilOffer}
                 </Link>
 
                 <button
