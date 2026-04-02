@@ -1,4 +1,5 @@
 const navbarContent = {
+
   english: {
     home: "Home",
     about: "About Us",
@@ -10,9 +11,11 @@ const navbarContent = {
     veneer: "Veneers",
     implant: "Implants",
     crown: "Crowns",
-    marchOffer: "Women's Day Offers",
+    canal: "Root Canal",
+    aprilOffer: "April Offers",
     whitening: "Whitening"
   },
+
   vietnamese: {
     home: "Trang Chủ",
     about: "Về Chúng Tôi",
@@ -24,9 +27,11 @@ const navbarContent = {
     veneer: "Mặt Dán Sứ",
     implant: "Trồng Răng",
     crown: "Răng Sứ",
-    marchOffer: "Ưu Đãi 8/3",
+    canal: "Điều Trị Tủy",
+    aprilOffer: "Ưu Đãi Tháng 4",
     whitening: "Tẩy Trắng Răng"
   },
+
   french: {
     home: "Accueil",
     about: "À Propos",
@@ -38,9 +43,11 @@ const navbarContent = {
     veneer: "Facettes Dentaires",
     implant: "Implants",
     crown: "Couronnes",
-    marchOffer: "Offres du 8 Mars",
+    canal: "Traitement de Canal",
+    aprilOffer: "Offres d'Avril",
     whitening: "Blanchiment"
   },
+
   simplified: {
     home: "首页",
     about: "关于我们",
@@ -52,9 +59,11 @@ const navbarContent = {
     veneer: "牙贴面",
     implant: "种植牙",
     crown: "牙冠",
-    marchOffer: "妇女节优惠",
-    whitening: "美白牙齿"
+    canal: "根管治疗",
+    aprilOffer: "四月优惠",
+    whitening: "牙齿美白"
   },
+
   traditional: {
     home: "首頁",
     about: "關於我們",
@@ -66,9 +75,11 @@ const navbarContent = {
     veneer: "牙貼面",
     implant: "植牙",
     crown: "牙冠",
-    marchOffer: "婦女節優惠",
+    canal: "根管治療",
+    aprilOffer: "四月優惠",
     whitening: "牙齒美白"
   },
+
   korean: {
     home: "홈",
     about: "소개",
@@ -80,9 +91,11 @@ const navbarContent = {
     veneer: "베니어",
     implant: "임플란트",
     crown: "크라운",
-    marchOffer: "여성의 날 프로모션",
+    canal: "근관 치료",
+    aprilOffer: "4월 프로모션",
     whitening: "치아미백"
   },
+
 };
 
 export default navbarContent;

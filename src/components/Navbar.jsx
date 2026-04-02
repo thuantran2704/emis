@@ -31,6 +31,7 @@ export default function Navbar() {
     { name: content.implant, path: '/implantAd' },
     { name: content.crown, path: '/crownAd' },
     { name: content.whitening, path: '/whiteningAd' },
+    { name: content.canal, path: '/canal' },
   ];
 
   return (
