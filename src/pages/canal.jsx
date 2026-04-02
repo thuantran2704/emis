@@ -175,7 +175,6 @@ const CanalAd = () => {
     },
   };
 
-  const content = isVI ? enContent : enContent;
   const c = isVI ? viContent : enContent;
 
   return (
