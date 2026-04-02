@@ -20,8 +20,8 @@ import {
   Sun,
 } from "lucide-react";
 
-import viImg from "../pics/qtpn/vie-whitening.png";
-import enImg from "../pics/qtpn/eng-whitening.png";
+import viImg from "../pics/april_disc/vie-whitening.png";
+import enImg from "../pics/april_disc/eng-whitening.png";
 
 const WhiteningAd = () => {
   const language = useSelector((state) => state.language.language);
@@ -29,50 +29,50 @@ const WhiteningAd = () => {
   const adImage = isVI ? viImg : enImg;
 
   const viContent = {
-    metaTitle: "Tẩy Trắng Răng Đi 2 Tính 1 - Chỉ 1 Triệu/Khách | Emis Dental",
+    metaTitle: "Tẩy Trắng Răng Giảm 50% - Chỉ 1.500.000Đ | Emis Dental",
     metaDescription:
-      "Rủ bạn cùng tẩy trắng răng – đi 2 chỉ tính tiền 1, chỉ còn 1.000.000đ/khách. Công nghệ Blue Laser, gel Pola Office chính hãng Úc, trắng sáng sau 60 phút.",
+      "Ưu đãi mùa đại lễ: Giảm 50% tẩy trắng răng tại Emis Dental – trọn gói chỉ 1.500.000đ. Gel Pola Office chính hãng Úc, an toàn, không ê buốt, trắng sáng sau 1 buổi.",
 
-    heroTitle: "ĐI 2 TÍNH TIỀN 1",
-    heroSubtitle: "TRẮNG RĂNG AN TOÀN VỚI DEAL CỰC HỜI",
+    heroTitle: "GIẢM 50%",
+    heroSubtitle: "TẨY TRẮNG RĂNG ĐÓN MÙA ĐẠI LỄ",
     heroDescription:
-      "Bạn muốn thay đổi nụ cười trắng sáng? Hãy đến Emis Dental và rủ 1 người bạn đi cùng — 2 bạn cùng REFRESH nụ cười nhưng chỉ cần thanh toán 1 suất.",
+      "Đón lễ rực rỡ cùng nụ cười tỏa nắng — ưu đãi có hạn từ Emis Dental. Trọn gói tẩy trắng răng chuẩn quốc tế, an toàn, không ê buốt, hiệu quả rõ rệt chỉ sau 1 buổi.",
 
     dealHighlight: {
-      label: "ĐẶC BIỆT: Tiết kiệm đến 70%",
-      price: "1.000.000đ",
-      unit: "/ khách",
+      label: "ĐẶC BIỆT: Tiết kiệm đến 50%",
+      price: "1.500.000đ",
+      unit: "/ người",
       originalPrice: "3.000.000đ",
-      note: "Áp dụng khi đến cùng 1 người bạn",
+      note: "Ưu đãi có hạn – inbox ngay để giữ suất!",
     },
 
     perks: [
-      "Trắng bật tông sau 60 phút",
-      "An toàn – chuẩn y khoa",
-      "Bác sĩ chính quy trực tiếp thực hiện",
-      "Gel tẩy trắng Pola Office chính hãng (xuất xứ Úc) – hạn chế đau ê tối đa",
+      "An toàn – Không ê buốt – Hiệu quả rõ rệt sau 1 buổi",
+      "Gel tẩy trắng Pola Office 35% chính hãng từ Úc",
+      "Trang thiết bị hiện đại, quy trình chuẩn quốc tế",
+      "Thực hiện bởi bác sĩ chính quy giàu kinh nghiệm",
     ],
 
     sections: [
       {
-        title: "TẠI SAO NÊN RỦ BẠN ĐI CÙNG?",
-        icon: <Users className="w-6 h-6" />,
+        title: "TẠI SAO NÊN TẨY TRẮNG RĂNG DỊP NÀY?",
+        icon: <Sun className="w-6 h-6" />,
         content:
-          "Đây là chương trình dành cho những ai muốn nâng cấp nụ cười cùng người thân hoặc bạn bè. Hai người đến, hai người được hưởng, nhưng chỉ trả tiền cho một người.",
+          "Mùa đại lễ là thời điểm tuyệt vời để làm mới bản thân và tỏa sáng trong mọi khoảnh khắc. Với ưu đãi 50%, bạn có thể sở hữu nụ cười trắng sáng chuẩn y khoa với mức giá cực kỳ hấp dẫn.",
         points: [
-          "Tiết kiệm tối đa: Mỗi người chỉ trả 1.000.000đ thay vì 3.000.000đ như giá gốc",
-          "Cùng nhau tự tin hơn: Bạn bè hay người thân sẽ cùng có nụ cười trắng sáng sau một buổi hẹn",
-          "Trải nghiệm thoải mái hơn: Đi cùng người quen giúp bạn thoải mái và bớt lo lắng hơn khi làm nha khoa",
+          "Tiết kiệm tối đa: Chỉ còn 1.500.000đ thay vì 3.000.000đ như giá gốc – tiết kiệm ngay 1.500.000đ",
+          "Hiệu quả tức thì: Răng trắng bật tông rõ rệt chỉ sau 1 buổi, kịp thời đón lễ với nụ cười rạng rỡ",
+          "An tâm tuyệt đối: Quy trình chuẩn y khoa, bác sĩ chính quy trực tiếp thực hiện từ đầu đến cuối",
         ],
       },
       {
         title: "CÔNG NGHỆ TẨY TRẮNG BLUE LASER TẠI EMIS DENTAL",
         icon: <Zap className="w-6 h-6" />,
         content:
-          "Tại Emis Dental, chúng tôi sử dụng công nghệ Blue Laser hiện đại kết hợp gel tẩy trắng Pola Office chính hãng từ Úc – sự lựa chọn tối ưu về cả hiệu quả lẫn an toàn.",
+          "Tại Emis Dental, chúng tôi sử dụng công nghệ Blue Laser hiện đại kết hợp gel tẩy trắng Pola Office 35% chính hãng từ Úc – sự lựa chọn tối ưu về cả hiệu quả lẫn an toàn.",
         points: [
           "Hiệu quả sau 1 lần thực hiện: Răng trắng bật tông rõ rệt chỉ trong khoảng 45 đến 60 phút, không cần nhiều buổi như tẩy trắng tại nhà",
-          "Gel Pola Office chính hãng từ Úc: Nồng độ an toàn, chứa thành phần bảo vệ men răng và hạn chế ê buốt tối đa so với các sản phẩm thông thường",
+          "Gel Pola Office 35% chính hãng từ Úc: Nồng độ an toàn, chứa thành phần bảo vệ men răng và hạn chế ê buốt tối đa so với các sản phẩm thông thường",
           "Ánh sáng Blue Laser chỉ tác động lên các phân tử màu, không ảnh hưởng đến cấu trúc răng hay nướu – được kiểm soát chặt chẽ bởi bác sĩ chuyên khoa",
         ],
       },
@@ -82,9 +82,9 @@ const WhiteningAd = () => {
       title: "CHI TIẾT ƯU ĐÃI",
       service: "Tẩy trắng răng chiếu đèn Blue Laser",
       originalPrice: "3.000.000đ",
-      discountPrice: "1.000.000đ",
-      period: "Áp dụng trong tháng 3/2026",
-      note: "Áp dụng khi đăng ký theo cặp (2 người). Chưa bao gồm cạo vôi răng.",
+      discountPrice: "1.500.000đ",
+      period: "Ưu đãi mùa đại lễ tháng 4/2026",
+      note: "Áp dụng cho khách hàng đặt lịch trong thời gian khuyến mãi. Chưa bao gồm cạo vôi răng.",
     },
 
     process: {
@@ -127,58 +127,58 @@ const WhiteningAd = () => {
     },
 
     cta: {
-      main: "Đừng bỏ lỡ cơ hội nhận ưu đãi quá hời này – inbox giữ suất ngay hôm nay!",
-      question: "Bạn đã sẵn sàng rủ bạn đi làm trắng răng chưa?",
+      main: "Ưu đãi có hạn – inbox ngay hôm nay để được tư vấn & giữ suất!",
+      question: "Bạn đã sẵn sàng đón lễ với nụ cười tỏa nắng chưa?",
       button: "ĐẶT LỊCH NGAY",
       subtext: "Hoặc liên hệ hotline để được tư vấn miễn phí!",
     },
   };
 
   const enContent = {
-    metaTitle: "Teeth Whitening 2-for-1 Deal - Only 1M VND per person | Emis Dental",
+    metaTitle: "50% Off Teeth Whitening - Only 1,500,000 VND | Emis Dental",
     metaDescription:
-      "Bring a friend and only pay for one! Teeth whitening for just 1,000,000 VND per person. Blue Laser technology, genuine Pola Office gel from Australia, whiter in 60 minutes.",
+      "Holiday season deal: 50% off teeth whitening at Emis Dental – full package for just 1,500,000 VND. Genuine Pola Office 35% gel from Australia, safe, no sensitivity, visibly whiter after one session.",
 
-    heroTitle: "BRING A FRIEND, PAY FOR ONE",
-    heroSubtitle: "SAFE TEETH WHITENING WITH AN UNBEATABLE DEAL",
+    heroTitle: "50% OFF",
+    heroSubtitle: "TEETH WHITENING THIS HOLIDAY SEASON",
     heroDescription:
-      "Want a brighter, whiter smile? Come to Emis Dental and bring a friend along — 2 of you REFRESH your smiles, but only pay for 1 person.",
+      "Celebrate the holidays with a radiant, confident smile — a limited-time offer from Emis Dental. Full international-standard whitening package: safe, no sensitivity, and visibly whiter after just one session.",
 
     dealHighlight: {
-      label: "SPECIAL: Save up to 70%",
-      price: "1,000,000 VND",
+      label: "SPECIAL: Save up to 50%",
+      price: "1,500,000 VND",
       unit: "per person",
       originalPrice: "3,000,000 VND",
-      note: "Valid when visiting with 1 friend",
+      note: "Limited offer – message us now to secure your spot!",
     },
 
     perks: [
-      "Noticeably whiter in 60 minutes",
-      "Safe and clinically approved",
-      "Performed directly by certified specialist doctors",
-      "Genuine Pola Office whitening gel (Australia) for minimal sensitivity",
+      "Safe – No sensitivity – Visible results after one session",
+      "Authentic Pola Office 35% whitening gel from Australia",
+      "Modern equipment & international-standard procedure",
+      "Performed by experienced, certified dentists",
     ],
 
     sections: [
       {
-        title: "WHY BRING A FRIEND?",
-        icon: <Users className="w-6 h-6" />,
+        title: "WHY WHITEN YOUR TEETH THIS HOLIDAY SEASON?",
+        icon: <Sun className="w-6 h-6" />,
         content:
-          "This promotion is designed for those who want to upgrade their smile together with a friend or loved one. Two people come, two people benefit, but only one person pays.",
+          "The holiday season is the perfect time to refresh your look and shine in every moment. With 50% off, you can achieve a clinically-bright smile at an incredibly attractive price.",
         points: [
-          "Maximum savings: Each person pays only 1,000,000 VND instead of the original 3,000,000 VND",
-          "Boost confidence together: Both you and your friend walk out with a brighter, whiter smile from a single appointment",
-          "A more comfortable experience: Coming with someone familiar makes the whole dental visit feel easier and more relaxed",
+          "Maximum savings: Only 1,500,000 VND instead of the original 3,000,000 VND – save 1,500,000 VND instantly",
+          "Immediate results: Noticeably whiter teeth after just one session, ready to celebrate the holidays with a radiant smile",
+          "Complete peace of mind: Clinically-standard procedure performed by certified specialist doctors from start to finish",
         ],
       },
       {
         title: "BLUE LASER WHITENING TECHNOLOGY AT EMIS DENTAL",
         icon: <Zap className="w-6 h-6" />,
         content:
-          "At Emis Dental, we combine modern Blue Laser technology with genuine Pola Office whitening gel from Australia for the best balance of results and safety.",
+          "At Emis Dental, we combine modern Blue Laser technology with genuine Pola Office 35% whitening gel from Australia for the best balance of results and safety.",
         points: [
           "Results after just one session: Teeth whiten noticeably in 45 to 60 minutes, no need for multiple sessions like at-home kits",
-          "Genuine Pola Office Gel from Australia: Safe concentration with enamel-protecting ingredients that minimize sensitivity compared to standard products",
+          "Genuine Pola Office 35% Gel from Australia: Safe concentration with enamel-protecting ingredients that minimize sensitivity compared to standard products",
           "Blue Laser light only targets color molecules without affecting tooth structure or gum tissue, closely monitored by specialist doctors throughout the session",
         ],
       },
@@ -188,9 +188,9 @@ const WhiteningAd = () => {
       title: "PROMOTION DETAILS",
       service: "Blue Laser Teeth Whitening",
       originalPrice: "3,000,000 VND",
-      discountPrice: "1,000,000 VND",
-      period: "Valid throughout March 2026",
-      note: "Applied when booking as a pair (2 people). Scaling not included.",
+      discountPrice: "1,500,000 VND",
+      period: "Holiday season offer – April 2026",
+      note: "Valid for customers who book during the promotional period. Scaling not included.",
     },
 
     process: {
@@ -233,8 +233,8 @@ const WhiteningAd = () => {
     },
 
     cta: {
-      main: "Don't miss out on this incredible deal. Send us a message today to secure your spot!",
-      question: "Ready to bring a friend and refresh your smiles together?",
+      main: "Limited-time offer – message us today to get your consultation and secure your spot!",
+      question: "Ready to celebrate the holidays with a brighter smile?",
       button: "BOOK NOW",
       subtext: "Or call our hotline for a free consultation!",
     },
@@ -267,7 +267,7 @@ const WhiteningAd = () => {
             <div className="text-left">
               <div className="inline-flex items-center bg-white/20 text-white px-5 py-2 rounded-full font-bold mb-6 text-sm">
                 <Heart className="w-4 h-4 mr-2 fill-white" />
-                {isVI ? "CHƯƠNG TRÌNH THÁNG 3 – 8/3 YÊU THƯƠNG" : "MARCH SPECIAL – WOMEN'S DAY OFFER"}
+                {isVI ? "ƯU ĐÃI MÙA ĐẠI LỄ THÁNG 4" : "APRIL HOLIDAY SEASON OFFER"}
               </div>
 
               <h1 className="text-5xl md:text-6xl font-black text-white mb-3 leading-tight">
@@ -316,13 +316,13 @@ const WhiteningAd = () => {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/30">
                 <img
                   src={adImage}
-                  alt={isVI ? "Tẩy trắng răng đi 2 tính 1 tại Emis Dental" : "2-for-1 teeth whitening at Emis Dental"}
+                  alt={isVI ? "Tẩy trắng răng giảm 50% tại Emis Dental" : "50% off teeth whitening at Emis Dental"}
                   className="w-full h-auto object-cover"
                 />
               </div>
               {/* Floating badge */}
               <div className="absolute -top-3 -right-3 bg-yellow-400 text-rose-800 px-4 py-2 rounded-full font-black shadow-lg text-sm animate-bounce">
-                {isVI ? "TIẾT KIỆM 70%!" : "SAVE 70%!"}
+                {isVI ? "GIẢM 50%!" : "SAVE 50%!"}
               </div>
 
               {/* Stats row */}

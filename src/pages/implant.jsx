@@ -21,8 +21,8 @@ import {
   DollarSign,
 } from "lucide-react";
 
-import viImg from "../pics/qtpn/vie-implant.png";
-import enImg from "../pics/qtpn/eng-implant.png";
+import viImg from "../pics/april_disc/vie-implant.png";
+import enImg from "../pics/april_disc/eng-implant.png";
 
 const ImplantAd = () => {
   const language = useSelector((state) => state.language.language);
@@ -32,12 +32,12 @@ const ImplantAd = () => {
   const viContent = {
     metaTitle: "Implant Osstem Chính Hãng Trọn Gói Chỉ 7.900.000đ | Emis Dental",
     metaDescription:
-      "Tháng 3 ưu đãi: Implant Osstem chính hãng (Hàn Quốc) trọn gói chỉ 7.900.000đ/răng. Phục hồi ăn nhai, thẩm mỹ gương mặt tại Emis Dental.",
+      "Ưu đãi đại lễ 30/4 – 1/5: Implant Osstem chính hãng (Hàn Quốc) trọn gói chỉ 7.900.000đ/răng. Phục hồi ăn nhai, thẩm mỹ gương mặt tại Emis Dental.",
 
     heroTitle: "IMPLANT OSSTEM CHÍNH HÃNG",
     heroSubtitle: "TRỌN GÓI CHỈ 7.900.000Đ / RĂNG",
     heroDescription:
-      "Mất răng lâu ngày gây nhiều biến chứng ảnh hưởng đến chức năng ăn nhai và thẩm mỹ gương mặt của bạn. Đừng lo lắng vì cơ hội phục hồi răng với dòng Implant Osstem chính hãng đang có mức giá cực tốt tại Emis Dental.",
+      "Mất răng lâu ngày không chỉ ảnh hưởng thẩm mỹ mà còn làm giảm khả năng ăn nhai, tiêu xương hàm theo thời gian. Trồng răng Implant là giải pháp phục hồi răng độc lập, giúp tái tạo lại chân răng và đảm bảo chức năng gần như răng thật.",
 
     dealHighlight: {
       label: "Giá gốc: 20.000.000đ",
@@ -50,9 +50,9 @@ const ImplantAd = () => {
     whyGreat: {
       title: "VÌ SAO ĐÂY LÀ MỨC GIÁ \"QUÁ LỢI\"?",
       items: [
-        "Implant Osstem (xuất xứ Hàn Quốc) thuộc top thương hiệu phổ biến toàn cầu",
-        "Độ tích hợp xương cao – bền chắc lâu dài",
-        "Phục hồi ăn nhai gần như răng thật",
+        "Trụ Osstem (Hàn Quốc): ổn định cao, tích hợp xương tốt",
+        "Phù hợp nhiều tình trạng mất răng",
+        "Thực hiện chỉ trong 20 phút",
         "Thực hiện bởi bác sĩ chuyên môn có chứng chỉ hành nghề",
       ],
     },
@@ -62,7 +62,7 @@ const ImplantAd = () => {
         title: "MẤT RĂNG LÂU NGÀY GÂY RA NHỮNG HỆ LỤY GÌ?",
         icon: <Shield className="w-6 h-6" />,
         content:
-          "Nhiều người chủ quan khi mất một hoặc vài chiếc răng, nhưng đây là vấn đề cần được giải quyết sớm để tránh các biến chứng nghiêm trọng:",
+          "Mất răng lâu ngày không chỉ ảnh hưởng thẩm mỹ mà còn làm giảm khả năng ăn nhai, tiêu xương hàm theo thời gian:",
         points: [
           "Tiêu xương hàm: Mất răng khiến xương hàm không được kích thích, dần bị tiêu biến theo thời gian, dẫn đến biến dạng khuôn mặt",
           "Răng kế cận bị xô lệch: Khoảng trống do mất răng khiến các răng xung quanh dần nghiêng vào, gây lệch khớp cắn và khó vệ sinh",
@@ -137,19 +137,19 @@ const ImplantAd = () => {
     cta: {
       title: "SỐ LƯỢNG ƯU ĐÃI CÓ HẠN – ĐẶT HẸN NGAY HÔM NAY!",
       button: "ĐĂNG KÝ TƯ VẤN MIỄN PHÍ",
-      subtext: "Trồng răng Implant chất lượng – chi phí tối ưu – đảm bảo quy trình y khoa.",
+      subtext: "Inbox để kiểm tra tình trạng xương và tư vấn lộ trình phù hợp – Đặt hẹn ngay hôm nay!",
     },
   };
 
   const enContent = {
     metaTitle: "Genuine Osstem Implant Package – Only 7,900,000 VND | Emis Dental",
     metaDescription:
-      "March special: Genuine Osstem Implant (Korea) complete package only 7,900,000 VND per tooth. Restore chewing function and facial aesthetics at Emis Dental.",
+      "Special holiday offer 30/4 – 1/5: Genuine Osstem Implant (Korea) complete package only 7,900,000 VND per tooth. Restore chewing function and facial aesthetics at Emis Dental.",
 
     heroTitle: "GENUINE OSSTEM IMPLANT",
     heroSubtitle: "COMPLETE PACKAGE – ONLY 7,900,000 VND / TOOTH",
     heroDescription:
-      "Long-term tooth loss can lead to serious complications, affecting both chewing function and facial aesthetics. Don't worry — this is your opportunity to restore your smile with a genuine Osstem Implant at an exceptional price at Emis Dental.",
+      "Long-term tooth loss not only affects aesthetics but also reduces chewing ability and causes jawbone resorption over time. Dental implants are an independent tooth restoration solution that helps recreate the tooth root and ensures function almost like a natural tooth.",
 
     dealHighlight: {
       label: "Original price: 20,000,000 VND",
@@ -162,9 +162,9 @@ const ImplantAd = () => {
     whyGreat: {
       title: "WHY IS THIS SUCH AN INCREDIBLE OFFER?",
       items: [
-        "Genuine Osstem Implant (Made in Korea) — one of the most trusted and widely used brands worldwide",
-        "High bone integration rate for long-lasting stability",
-        "Restores chewing function almost like natural teeth",
+        "Osstem implant (Korea): highly stable with excellent osseointegration",
+        "Suitable for many tooth loss situations",
+        "Procedure takes only 20 minutes",
         "Performed by experienced and licensed specialist dentists",
       ],
     },
@@ -174,7 +174,7 @@ const ImplantAd = () => {
         title: "WHAT COMPLICATIONS DOES LONG-TERM TOOTH LOSS CAUSE?",
         icon: <Shield className="w-6 h-6" />,
         content:
-          "Many people underestimate the impact of losing one or a few teeth, but addressing this early is critical to avoiding serious complications:",
+          "Long-term tooth loss not only affects aesthetics but also reduces chewing ability and causes jawbone resorption over time:",
         points: [
           "Jawbone resorption: Without a tooth root to stimulate the bone, the jawbone gradually shrinks over time, leading to facial deformity",
           "Adjacent teeth shifting: The gap from a missing tooth causes neighboring teeth to tilt inward, leading to bite misalignment and difficulty cleaning",
@@ -249,7 +249,7 @@ const ImplantAd = () => {
     cta: {
       title: "LIMITED PROMOTIONAL SLOTS — BOOK YOUR APPOINTMENT TODAY!",
       button: "REGISTER FOR FREE CONSULTATION",
-      subtext: "High-quality implant treatment — optimized cost — strictly following medical standards.",
+      subtext: "Inbox us to check your bone condition and receive a suitable treatment plan. Take advantage of this limited-time offer – book your appointment today!",
     },
   };
 
@@ -280,7 +280,7 @@ const ImplantAd = () => {
             <div>
               <div className="inline-flex items-center bg-white/20 text-white px-5 py-2 rounded-full font-bold mb-6 text-sm">
                 <Heart className="w-4 h-4 mr-2 fill-white" />
-                {isVI ? "THÁNG 3 YÊU THƯƠNG – ƯU ĐÃI ĐẶC BIỆT" : "MARCH SPECIAL OFFER"}
+                {isVI ? "ƯU ĐÃI ĐẠI LỄ 30/4 – 1/5" : "SPECIAL HOLIDAY OFFER 30/4 – 1/5"}
               </div>
 
               <h1 className="text-4xl md:text-5xl font-black text-white mb-3 leading-tight">
@@ -324,7 +324,7 @@ const ImplantAd = () => {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/30">
                 <img
                   src={adImage}
-                  alt={isVI ? "Implant Osstem tháng 3 tại Emis Dental" : "Osstem Implant March offer at Emis Dental"}
+                  alt={isVI ? "Implant Osstem ưu đãi đại lễ tại Emis Dental" : "Osstem Implant holiday offer at Emis Dental"}
                   className="w-full h-auto object-cover"
                 />
               </div>
@@ -367,7 +367,7 @@ const ImplantAd = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-3">
             <div className="flex items-center text-white">
               <Clock className="w-4 h-4 mr-2" />
-              <span className="font-semibold">{isVI ? "Ưu đãi áp dụng trong tháng 3/2026" : "Offer valid throughout March 2026"}</span>
+              <span className="font-semibold">{isVI ? "Ưu đãi đại lễ 30/4 – 1/5" : "Special offer for the 30/4 – 1/5 holiday"}</span>
             </div>
             <div className="flex items-center text-white">
               <Phone className="w-4 h-4 mr-2" />
