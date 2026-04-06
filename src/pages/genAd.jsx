@@ -24,6 +24,7 @@ import {
   Gem,
   Flower2,
   Flower,
+  Flag,
 } from "lucide-react";
 
 const GenAd = () => {
@@ -31,18 +32,18 @@ const GenAd = () => {
   const isVI = language === "vietnamese";
 
   const viContent = {
-    metaTitle: "Ưu Đãi 8/3 - Trao Nụ Cười Trao Yêu Thương | Emis Dental",
+    metaTitle: "Ưu Đãi 30/4 – 1/5 - Rạng Rỡ Nụ Cười Ngày Lễ | Emis Dental",
     metaDescription:
-      "Ưu đãi tháng 3: Răng sứ giảm đến 60%, Tẩy trắng đi 2 tính 1 chỉ 2 triệu, Implant Osstem chỉ 7.900.000đ/trụ tại Emis Dental",
+      "Ưu đãi đại lễ 30/4 – 1/5: Răng sứ giảm đến 60%, Tẩy trắng giảm 50% chỉ 1.500.000đ, Implant Osstem chỉ 7.900.000đ/trụ tại Emis Dental",
 
-    heroTitle: "8/3 TRAO NỤ CƯỜI – TRAO YÊU THƯƠNG",
+    heroTitle: "30/4 – 1/5 RỰC RỠ NỤ CƯỜI ĐẠI LỄ",
     heroDescription:
-      "Nhân ngày Quốc tế Phụ nữ 8/3, Emis Dental dành tặng những ưu đãi đặc biệt để mỗi nụ cười phụ nữ Việt thêm tỏa sáng và tự tin.",
+      "Nhân dịp lễ lớn 30/4 – 1/5, Emis Dental dành tặng những ưu đãi đặc biệt để bạn bước vào kỳ nghỉ với nụ cười tự tin và rạng rỡ nhất.",
     intro:
-      "Vì mỗi người phụ nữ đều xứng đáng có một nụ cười rạng rỡ – hãy để Emis Dental chăm sóc nụ cười của bạn trong tháng 3 yêu thương này!",
+      "Kỳ nghỉ lễ thêm trọn vẹn khi bạn sở hữu một nụ cười hoàn hảo – hãy để Emis Dental chăm sóc nụ cười của bạn ngay hôm nay!",
 
-    promoTitle: "ƯU ĐÃI ĐẶC BIỆT MỪNG 8/3",
-    promoSubtitle: "Chương trình áp dụng trong tháng 3/2026",
+    promoTitle: "ƯU ĐÃI ĐẶC BIỆT MỪNG ĐẠI LỄ 30/4 – 1/5",
+    promoSubtitle: "Chương trình áp dụng trong tháng 4 – 5/2026",
     promoNote: "Ưu đãi có số lượng giới hạn – Đặt lịch sớm để không bỏ lỡ!",
 
     offers: [
@@ -51,7 +52,7 @@ const GenAd = () => {
         discount: "GIẢM ĐẾN 60%",
         originalPrice: "Giá gốc",
         finalPrice: "Ưu đãi đặc biệt",
-        description: "Veneer, Zirconia, e.max – Nụ cười hoàn hảo đón 8/3",
+        description: "Veneer, Zirconia, e.max – Nụ cười hoàn hảo đón lễ lớn",
         features: [
           "Sứ cao cấp từ Đức, Mỹ, Thụy Sĩ",
           "Thiết kế nụ cười 3D cá nhân hóa",
@@ -63,15 +64,15 @@ const GenAd = () => {
         highlight: true,
       },
       {
-        title: "TẨY TRẮNG RĂNG – ĐI 2 TÍNH 1",
-        discount: "CHỈ CÒN 2.000.000Đ",
-        originalPrice: "Mua 1 tặng 1",
-        finalPrice: "2.000.000đ / 2 người",
+        title: "TẨY TRẮNG RĂNG – GIẢM 50%",
+        discount: "CHỈ CÒN 1.500.000Đ",
+        originalPrice: "Giá gốc: 3.000.000đ",
+        finalPrice: "1.500.000đ / người",
         description:
-          "Rủ bạn gái cùng đi – chỉ trả tiền 1 người! (Chưa bao gồm cạo vôi răng)",
+          "Trắng sáng rạng rỡ đón lễ chỉ sau 1 buổi! (Chưa bao gồm cạo vôi răng)",
         features: [
-          "Công nghệ Blue Laser hiện đại",
-          "Đi 2 người chỉ tính tiền 1",
+          "Gel Pola Office 35% chính hãng từ Úc",
+          "An toàn – Không ê buốt",
           "Trắng sáng sau 45–60 phút",
         ],
         icon: <Sun className="w-8 h-8" />,
@@ -88,7 +89,7 @@ const GenAd = () => {
           "Implant Osstem (Hàn Quốc) – Thương hiệu hàng đầu thế giới (Chưa bao gồm abutment)",
         features: [
           "Osstem – Top 3 thương hiệu implant thế giới",
-          "Bác sĩ chuyên khoa implant",
+          "Thực hiện chỉ trong 20 phút",
           "Bảo hành dài hạn",
         ],
         icon: <Shield className="w-8 h-8" />,
@@ -112,9 +113,9 @@ const GenAd = () => {
         {
           name: "Tẩy Trắng",
           points: [
-            "Công nghệ Blue Laser hiện đại",
-            "Gel Pola Office nhập từ Úc",
-            "Đi 2 tính 1 – Rủ bạn ngay!",
+            "Gel Pola Office 35% chính hãng từ Úc",
+            "Công nghệ hiện đại, chuẩn quốc tế",
+            "Giảm 50% – Chỉ còn 1.500.000đ!",
           ],
         },
         {
@@ -170,28 +171,28 @@ const GenAd = () => {
     },
 
     cta: {
-      title: "TẶNG NỤ CƯỜI – TẶNG YÊU THƯƠNG NHÂN 8/3",
+      title: "ĐÓN LỄ RỰC RỠ – NỤ CƯỜI TỎA SÁNG",
       description:
-        "Liên hệ ngay để được tư vấn MIỄN PHÍ và nhận ưu đãi đặc biệt mừng ngày Quốc tế Phụ nữ",
+        "Liên hệ ngay để được tư vấn MIỄN PHÍ và nhận ưu đãi đặc biệt mừng đại lễ 30/4 – 1/5",
       button: "ĐẶT LỊCH TƯ VẤN MIỄN PHÍ NGAY",
       hotline: "0919 100 021",
-      subtext: "Ưu đãi có số lượng giới hạn – Đừng bỏ lỡ cơ hội vàng tháng 3!",
+      subtext: "Ưu đãi có số lượng giới hạn – Đừng bỏ lỡ cơ hội vàng dịp đại lễ!",
     },
   };
 
   const enContent = {
-    metaTitle: "March 8th Women's Day Offers - Gift a Smile, Gift Love | Emis Dental",
+    metaTitle: "April 30 – May 1 Holiday Offers - Shine This Long Weekend | Emis Dental",
     metaDescription:
-      "March promotions: Dental crowns up to 60% off, Teeth whitening 2-for-1 only 2,000,000đ, Osstem implant only 7,900,000đ/implant at Emis Dental",
+      "Holiday promotions: Dental crowns up to 60% off, Teeth whitening 50% off only 1,500,000đ, Osstem implant only 7,900,000đ/implant at Emis Dental",
 
-    heroTitle: "MARCH 8 – GIFT A SMILE, GIFT LOVE",
+    heroTitle: "APRIL 30 – MAY 1 HOLIDAY SMILE SPECIAL",
     heroDescription:
-      "On International Women's Day, Emis Dental presents special offers to help every woman shine with a confident, radiant smile.",
+      "This National Holiday, Emis Dental presents exclusive offers so you can step into the long weekend with a confident, radiant smile.",
     intro:
-      "Because every woman deserves a beautiful smile – let Emis Dental take care of yours this Women's Day!",
+      "Make this holiday even more memorable with a perfect smile – let Emis Dental take care of yours today!",
 
-    promoTitle: "SPECIAL WOMEN'S DAY OFFERS – MARCH 8",
-    promoSubtitle: "Program valid throughout March 2026",
+    promoTitle: "SPECIAL HOLIDAY OFFERS – APRIL 30 & MAY 1",
+    promoSubtitle: "Program valid April – May 2026",
     promoNote: "Limited availability – Book early to secure your spot!",
 
     offers: [
@@ -200,7 +201,7 @@ const GenAd = () => {
         discount: "UP TO 60% OFF",
         originalPrice: "Original price",
         finalPrice: "Special offer",
-        description: "Veneer, Zirconia, e.max – Perfect smile for Women's Day",
+        description: "Veneer, Zirconia, e.max – Perfect smile for the holiday",
         features: [
           "Premium ceramics from Germany, USA, Switzerland",
           "Personalized 3D smile design",
@@ -212,15 +213,15 @@ const GenAd = () => {
         highlight: true,
       },
       {
-        title: "TEETH WHITENING – BUY 1 GET 1 FREE",
-        discount: "ONLY 2,000,000Đ",
-        originalPrice: "2-for-1 deal",
-        finalPrice: "2,000,000đ / 2 people",
+        title: "TEETH WHITENING – 50% OFF",
+        discount: "ONLY 1,500,000Đ",
+        originalPrice: "Original: 3,000,000đ",
+        finalPrice: "1,500,000đ / person",
         description:
-          "Bring a friend – only pay for one! (Scaling not included)",
+          "Shine bright this holiday – visible results in one session! (Scaling not included)",
         features: [
-          "Modern Blue Laser technology",
-          "2 people, price of 1",
+          "Authentic Pola Office 35% gel from Australia",
+          "Safe – No sensitivity",
           "Whitened in 45–60 minutes",
         ],
         icon: <Sun className="w-8 h-8" />,
@@ -237,7 +238,7 @@ const GenAd = () => {
           "Osstem Implant (Korea) – World-leading implant brand (Abutment not included)",
         features: [
           "Osstem – Top 3 implant brands worldwide",
-          "Specialist implant doctors",
+          "Procedure takes only 20 minutes",
           "Long-term warranty",
         ],
         icon: <Shield className="w-8 h-8" />,
@@ -261,9 +262,9 @@ const GenAd = () => {
         {
           name: "Teeth Whitening",
           points: [
-            "Modern Blue Laser technology",
-            "Pola Office Gel from Australia",
-            "2-for-1 – Bring your friend!",
+            "Authentic Pola Office 35% gel from Australia",
+            "International-standard procedure",
+            "50% off – Only 1,500,000đ!",
           ],
         },
         {
@@ -319,12 +320,12 @@ const GenAd = () => {
     },
 
     cta: {
-      title: "CELEBRATE WOMEN'S DAY WITH A BEAUTIFUL SMILE",
+      title: "CELEBRATE THE HOLIDAY WITH A DAZZLING SMILE",
       description:
-        "Contact us for FREE consultation and receive special Women's Day offers",
+        "Contact us for FREE consultation and receive special April 30 – May 1 holiday offers",
       button: "BOOK FREE CONSULTATION NOW",
       hotline: "0919 100 021",
-      subtext: "Limited offers – Don't miss this March opportunity!",
+      subtext: "Limited offers – Don't miss this holiday opportunity!",
     },
   };
 
@@ -339,7 +340,7 @@ const GenAd = () => {
 
       {/* Hero Section */}
       <div className="relative bg-gradient-to-r from-rose-600 via-pink-500 to-fuchsia-600 pt-24 pb-12 overflow-hidden">
-        {/* Background Pattern - floral dots */}
+        {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div
             className="absolute inset-0"
@@ -355,9 +356,9 @@ const GenAd = () => {
             {/* Content */}
             <div className="text-white">
               {/* Badge */}
-              <div className="inline-flex items-center bg-gradient-to-r from-pink-200 to-rose-200 text-rose-800 px-6 py-2 rounded-full font-bold mb-6 animate-pulse">
-                <Heart className="w-5 h-5 mr-2 fill-rose-600 text-rose-600" />
-                {isVI ? "CHƯƠNG TRÌNH ƯU ĐÃI THÁNG 3" : "MARCH SPECIAL PROMOTION"}
+              <div className="inline-flex items-center bg-gradient-to-r from-yellow-200 to-orange-200 text-orange-800 px-6 py-2 rounded-full font-bold mb-6 animate-pulse">
+                <Flag className="w-5 h-5 mr-2 fill-orange-600 text-orange-600" />
+                {isVI ? "CHƯƠNG TRÌNH ƯU ĐÃI ĐẠI LỄ 30/4 – 1/5" : "APRIL 30 – MAY 1 HOLIDAY SPECIAL"}
               </div>
 
               {/* Main Title */}
@@ -382,8 +383,8 @@ const GenAd = () => {
                   <div className="text-sm">{isVI ? "Giảm tối đa" : "Max discount"}</div>
                 </div>
                 <div className="bg-white/20 px-4 py-2 rounded-lg">
-                  <div className="text-2xl font-bold">8/3</div>
-                  <div className="text-sm">{isVI ? "Ngày yêu thương" : "Love Day"}</div>
+                  <div className="text-2xl font-bold">30/4</div>
+                  <div className="text-sm">{isVI ? "Ngày đại lễ" : "Holiday"}</div>
                 </div>
               </div>
             </div>
@@ -398,9 +399,9 @@ const GenAd = () => {
               </div>
               <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-5 text-center border border-white/30 mt-6">
                 <Sun className="w-10 h-10 text-yellow-300 mx-auto mb-2" />
-                <div className="text-yellow-300 font-bold text-xl">{isVI ? "Đi 2 Tính 1" : "2-for-1"}</div>
+                <div className="text-yellow-300 font-bold text-xl">{isVI ? "Giảm 50%" : "50% off"}</div>
                 <div className="text-white text-sm font-semibold">{isVI ? "Tẩy Trắng" : "Whitening"}</div>
-                <div className="text-pink-100 text-xs mt-1">2.000.000đ</div>
+                <div className="text-pink-100 text-xs mt-1">1.500.000đ</div>
               </div>
               <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-5 text-center border border-white/30 col-span-2">
                 <Shield className="w-10 h-10 text-yellow-300 mx-auto mb-2" />
@@ -417,7 +418,7 @@ const GenAd = () => {
       </div>
 
       {/* Quick Info Banner */}
-      <div className="bg-gradient-to-r from-pink-500 to-fuchsia-500 py-3">
+      <div className="bg-gradient-to-r from-orange-500 to-rose-500 py-3">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-3">
             <div className="flex items-center text-white">
@@ -425,12 +426,12 @@ const GenAd = () => {
               <span className="font-semibold">{content.promoSubtitle}</span>
             </div>
             <div className="flex items-center text-white">
-              <Heart className="w-4 h-4 mr-2 fill-white" />
+              <Flag className="w-4 h-4 mr-2" />
               <span className="font-semibold">{content.promoNote}</span>
             </div>
             <Link
               to="/contact"
-              className="bg-white text-pink-700 font-bold py-2 px-6 rounded-full hover:shadow-lg transition-all hover:-translate-y-0.5"
+              className="bg-white text-orange-700 font-bold py-2 px-6 rounded-full hover:shadow-lg transition-all hover:-translate-y-0.5"
             >
               {isVI ? "ĐĂNG KÝ NGAY" : "REGISTER NOW"}
             </Link>
@@ -449,8 +450,8 @@ const GenAd = () => {
             <div className="w-32 h-1 bg-gradient-to-r from-rose-500 to-fuchsia-500 rounded-full mx-auto mb-4"></div>
             <p className="text-gray-600 max-w-2xl mx-auto">
               {isVI
-                ? "3 dịch vụ chính với ưu đãi đặc biệt mừng ngày Quốc tế Phụ nữ 8/3"
-                : "3 main services with special discounts celebrating International Women's Day"}
+                ? "3 dịch vụ chính với ưu đãi đặc biệt mừng đại lễ 30/4 – 1/5"
+                : "3 main services with special discounts celebrating the April 30 – May 1 National Holiday"}
             </p>
           </div>
 
@@ -594,8 +595,8 @@ const GenAd = () => {
 
         {/* Final CTA */}
         <div className="text-center mb-12">
-          <div className="bg-gradient-to-r from-pink-400 via-rose-400 to-fuchsia-500 rounded-3xl p-8 md:p-10 shadow-xl">
-            <Heart className="w-16 h-16 text-white mx-auto mb-6 fill-white" />
+          <div className="bg-gradient-to-r from-orange-400 via-rose-500 to-fuchsia-500 rounded-3xl p-8 md:p-10 shadow-xl">
+            <Flag className="w-16 h-16 text-white mx-auto mb-6" />
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
               {content.cta.title}
             </h3>
@@ -660,7 +661,7 @@ const GenAd = () => {
                 <div className="font-bold text-fuchsia-700">
                   {isVI ? "Tẩy Trắng" : "Whitening"}
                 </div>
-                <div className="text-sm text-fuchsia-600">{isVI ? "Đi 2 tính 1" : "2-for-1"}</div>
+                <div className="text-sm text-fuchsia-600">{isVI ? "Giảm 50%" : "50% off"}</div>
               </Link>
               <Link
                 to="/implantAd"
