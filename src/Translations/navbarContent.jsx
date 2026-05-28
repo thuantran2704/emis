@@ -12,7 +12,7 @@ const navbarContent = {
     implant: "Implants",
     crown: "Crowns",
     canal: "Root Canal",
-    aprilOffer: "April Offers",
+    juneOffer: "June Offers",
     whitening: "Whitening"
   },
 
@@ -28,7 +28,7 @@ const navbarContent = {
     implant: "Trồng Răng",
     crown: "Răng Sứ",
     canal: "Điều Trị Tủy",
-    aprilOffer: "Ưu Đãi Tháng 4",
+    juneOffer: "Ưu Đãi Tháng 6",
     whitening: "Tẩy Trắng Răng"
   },
 
@@ -44,7 +44,7 @@ const navbarContent = {
     implant: "Implants",
     crown: "Couronnes",
     canal: "Traitement de Canal",
-    aprilOffer: "Offres d'Avril",
+    juneOffer: "Offres de Juin",
     whitening: "Blanchiment"
   },
 
@@ -60,7 +60,7 @@ const navbarContent = {
     implant: "种植牙",
     crown: "牙冠",
     canal: "根管治疗",
-    aprilOffer: "四月优惠",
+    juneOffer: "六月优惠",
     whitening: "牙齿美白"
   },
 
@@ -76,7 +76,7 @@ const navbarContent = {
     implant: "植牙",
     crown: "牙冠",
     canal: "根管治療",
-    aprilOffer: "四月優惠",
+    juneOffer: "六月優惠",
     whitening: "牙齒美白"
   },
 
@@ -92,7 +92,7 @@ const navbarContent = {
     implant: "임플란트",
     crown: "크라운",
     canal: "근관 치료",
-    aprilOffer: "4월 프로모션",
+    juneOffer: "6월 프로모션",
     whitening: "치아미백"
   },
 

@@ -37,20 +37,22 @@ export default function Footer() {
             className="space-y-3 text-sm"
             style={{ fontFamily: "'Cormorant', serif" }}
           >
-            <li className="flex items-center gap-3">
+            <li className="flex items-start gap-3">
               <Phone className="text-[#d4af37]" size={18} />
-              <a
-                href={`tel:${content.phone.replace(/\s/g, "")}`}
-                className="hover:text-[#c19d30] transition"
-              >
-                {content.phone}
-              </a>
-              <a
-                href={`tel:${content.phone.replace(/\s/g, "")}`}
-                className="hover:text-[#c19d30] transition"
-              >
-                {content.phone2}
-              </a>
+              <div className="flex flex-col gap-1">
+                <a
+                  href={`tel:${content.phone.replace(/\s/g, "")}`}
+                  className="hover:text-[#c19d30] transition"
+                >
+                  {content.phone}
+                </a>
+                <a
+                  href={`tel:${content.phone2.replace(/\s/g, "")}`}
+                  className="hover:text-[#c19d30] transition"
+                >
+                  {content.phone2}
+                </a>
+              </div>
             </li>
             <li className="flex items-center gap-3">
               <Mail className="text-[#d4af37]" size={18} />
