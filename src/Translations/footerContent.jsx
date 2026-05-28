@@ -7,6 +7,7 @@ const footerContent = {
     address:
       "62B Phạm Ngọc Thạch, Vo Thi Sau Ward, District 3, Ho Chi Minh City, 700000",
     phone: "091 910 0021",
+    phone2: "090 996 7649",
     email: "Emisdentalclinic@gmail.com",
     connectTitle: "Connect with Us",
     workingHoursTitle: "Working Hours",

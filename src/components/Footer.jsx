@@ -45,6 +45,12 @@ export default function Footer() {
               >
                 {content.phone}
               </a>
+              <a
+                href={`tel:${content.phone.replace(/\s/g, "")}`}
+                className="hover:text-[#c19d30] transition"
+              >
+                {content.phone2}
+              </a>
             </li>
             <li className="flex items-center gap-3">
               <Mail className="text-[#d4af37]" size={18} />
