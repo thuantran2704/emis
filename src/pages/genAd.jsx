@@ -32,18 +32,18 @@ const GenAd = () => {
   const isVI = language === "vietnamese";
 
   const viContent = {
-    metaTitle: "Ưu Đãi 30/4 – 1/5 - Rạng Rỡ Nụ Cười Ngày Lễ | Emis Dental",
+    metaTitle: "Ưu Đãi Tháng 6 - Rạng Rỡ Nụ Cười Mùa Hè | Emis Dental",
     metaDescription:
-      "Ưu đãi đại lễ 30/4 – 1/5: Răng sứ giảm đến 60%, Tẩy trắng giảm 50% chỉ 1.500.000đ, Implant Osstem chỉ 7.900.000đ/trụ tại Emis Dental",
+      "Ưu đãi tháng 6: Răng sứ giảm đến 60%, Tẩy trắng giảm 50% chỉ 1.500.000đ, Implant Osstem chỉ 7.900.000đ/trụ tại Emis Dental",
 
-    heroTitle: "30/4 – 1/5 RỰC RỠ NỤ CƯỜI ĐẠI LỄ",
+    heroTitle: "ƯU ĐÃI THÁNG 6 - NỤ CƯỜI RẠNG RỠ",
     heroDescription:
-      "Nhân dịp lễ lớn 30/4 – 1/5, Emis Dental dành tặng những ưu đãi đặc biệt để bạn bước vào kỳ nghỉ với nụ cười tự tin và rạng rỡ nhất.",
+      "Tháng 6 này, Emis Dental dành tặng ưu đãi đặc biệt để bạn tỏa sáng với nụ cười tự tin suốt mùa hè.",
     intro:
-      "Kỳ nghỉ lễ thêm trọn vẹn khi bạn sở hữu một nụ cười hoàn hảo – hãy để Emis Dental chăm sóc nụ cười của bạn ngay hôm nay!",
+      "Bắt đầu mùa hè bằng nụ cười hoàn hảo – hãy để Emis Dental chăm sóc nụ cười của bạn ngay hôm nay!",
 
-    promoTitle: "ƯU ĐÃI ĐẶC BIỆT MỪNG ĐẠI LỄ 30/4 – 1/5",
-    promoSubtitle: "Chương trình áp dụng trong tháng 4 – 5/2026",
+    promoTitle: "ƯU ĐÃI ĐẶC BIỆT THÁNG 6",
+    promoSubtitle: "Chương trình áp dụng trong tháng 6/2026",
     promoNote: "Ưu đãi có số lượng giới hạn – Đặt lịch sớm để không bỏ lỡ!",
 
     offers: [
@@ -52,7 +52,7 @@ const GenAd = () => {
         discount: "GIẢM ĐẾN 60%",
         originalPrice: "Giá gốc",
         finalPrice: "Ưu đãi đặc biệt",
-        description: "Veneer, Zirconia, e.max – Nụ cười hoàn hảo đón lễ lớn",
+        description: "Veneer, Zirconia, e.max – Nụ cười hoàn hảo cho mùa hè",
         features: [
           "Sứ cao cấp từ Đức, Mỹ, Thụy Sĩ",
           "Thiết kế nụ cười 3D cá nhân hóa",
@@ -171,28 +171,28 @@ const GenAd = () => {
     },
 
     cta: {
-      title: "ĐÓN LỄ RỰC RỠ – NỤ CƯỜI TỎA SÁNG",
+      title: "BẮT ĐẦU MÙA HÈ VỚI NỤ CƯỜI RẠNG RỞ",
       description:
-        "Liên hệ ngay để được tư vấn MIỄN PHÍ và nhận ưu đãi đặc biệt mừng đại lễ 30/4 – 1/5",
+        "Liên hệ ngay để được tư vấn MIỄN PHÍ và nhận ưu đãi đặc biệt trong tháng 6",
       button: "ĐẶT LỊCH TƯ VẤN MIỄN PHÍ NGAY",
       hotline: "0919 100 021",
-      subtext: "Ưu đãi có số lượng giới hạn – Đừng bỏ lỡ cơ hội vàng dịp đại lễ!",
+      subtext: "Ưu đãi có số lượng giới hạn – Đừng bỏ lỡ cơ hội vàng mùa hè!",
     },
   };
 
   const enContent = {
-    metaTitle: "April 30 – May 1 Holiday Offers - Shine This Long Weekend | Emis Dental",
+    metaTitle: "June Offers - Shine All Month | Emis Dental",
     metaDescription:
-      "Holiday promotions: Dental crowns up to 60% off, Teeth whitening 50% off only 1,500,000đ, Osstem implant only 7,900,000đ/implant at Emis Dental",
+      "June promotions: Dental crowns up to 60% off, Teeth whitening 50% off only 1,500,000đ, Osstem implant only 7,900,000đ/implant at Emis Dental",
 
-    heroTitle: "APRIL 30 – MAY 1 HOLIDAY SMILE SPECIAL",
+    heroTitle: "JUNE SMILE SPECIAL",
     heroDescription:
-      "This National Holiday, Emis Dental presents exclusive offers so you can step into the long weekend with a confident, radiant smile.",
+      "This June, Emis Dental offers all-month specials to keep your smile confident and radiant.",
     intro:
-      "Make this holiday even more memorable with a perfect smile – let Emis Dental take care of yours today!",
+      "Start summer with a perfect smile – let Emis Dental take care of yours today!",
 
-    promoTitle: "SPECIAL HOLIDAY OFFERS – APRIL 30 & MAY 1",
-    promoSubtitle: "Program valid April – May 2026",
+    promoTitle: "SPECIAL JUNE OFFERS",
+    promoSubtitle: "Program valid June 2026",
     promoNote: "Limited availability – Book early to secure your spot!",
 
     offers: [
@@ -201,7 +201,7 @@ const GenAd = () => {
         discount: "UP TO 60% OFF",
         originalPrice: "Original price",
         finalPrice: "Special offer",
-        description: "Veneer, Zirconia, e.max – Perfect smile for the holiday",
+        description: "Veneer, Zirconia, e.max – Perfect summer smile",
         features: [
           "Premium ceramics from Germany, USA, Switzerland",
           "Personalized 3D smile design",
@@ -218,7 +218,7 @@ const GenAd = () => {
         originalPrice: "Original: 3,000,000đ",
         finalPrice: "1,500,000đ / person",
         description:
-          "Shine bright this holiday – visible results in one session! (Scaling not included)",
+          "Shine bright this June – visible results in one session! (Scaling not included)",
         features: [
           "Authentic Pola Office 35% gel from Australia",
           "Safe – No sensitivity",
@@ -320,12 +320,12 @@ const GenAd = () => {
     },
 
     cta: {
-      title: "CELEBRATE THE HOLIDAY WITH A DAZZLING SMILE",
+      title: "START SUMMER WITH A DAZZLING SMILE",
       description:
-        "Contact us for FREE consultation and receive special April 30 – May 1 holiday offers",
+        "Contact us for FREE consultation and receive special June offers",
       button: "BOOK FREE CONSULTATION NOW",
       hotline: "0919 100 021",
-      subtext: "Limited offers – Don't miss this holiday opportunity!",
+      subtext: "Limited offers – Don't miss this summer opportunity!",
     },
   };
 
@@ -358,7 +358,7 @@ const GenAd = () => {
               {/* Badge */}
               <div className="inline-flex items-center bg-gradient-to-r from-yellow-200 to-orange-200 text-orange-800 px-6 py-2 rounded-full font-bold mb-6 animate-pulse">
                 <Flag className="w-5 h-5 mr-2 fill-orange-600 text-orange-600" />
-                {isVI ? "CHƯƠNG TRÌNH ƯU ĐÃI ĐẠI LỄ 30/4 – 1/5" : "APRIL 30 – MAY 1 HOLIDAY SPECIAL"}
+                {isVI ? "CHƯƠNG TRÌNH ƯU ĐÃI THÁNG 6" : "JUNE SPECIAL DISCOUNT"}
               </div>
 
               {/* Main Title */}
@@ -383,8 +383,8 @@ const GenAd = () => {
                   <div className="text-sm">{isVI ? "Giảm tối đa" : "Max discount"}</div>
                 </div>
                 <div className="bg-white/20 px-4 py-2 rounded-lg">
-                  <div className="text-2xl font-bold">30/4</div>
-                  <div className="text-sm">{isVI ? "Ngày đại lễ" : "Holiday"}</div>
+                  <div className="text-2xl font-bold">JUNE</div>
+                  <div className="text-sm">{isVI ? "Tháng 6" : "June"}</div>
                 </div>
               </div>
             </div>
@@ -450,8 +450,8 @@ const GenAd = () => {
             <div className="w-32 h-1 bg-gradient-to-r from-rose-500 to-fuchsia-500 rounded-full mx-auto mb-4"></div>
             <p className="text-gray-600 max-w-2xl mx-auto">
               {isVI
-                ? "3 dịch vụ chính với ưu đãi đặc biệt mừng đại lễ 30/4 – 1/5"
-                : "3 main services with special discounts celebrating the April 30 – May 1 National Holiday"}
+                ? "3 dịch vụ chính với ưu đãi đặc biệt trong tháng 6"
+                : "3 main services with special discounts throughout June"}
             </p>
           </div>
 
