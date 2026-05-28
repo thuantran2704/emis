@@ -490,6 +490,13 @@ const ImplantAd = () => {
                 <Phone className="w-5 h-5 mr-2" />
                 0919 100 021
               </a>
+              <a
+                href="tel:0909967649"
+                className="inline-flex items-center justify-center bg-rose-800 text-white font-bold text-lg py-4 px-8 rounded-full shadow-lg hover:bg-rose-900 transition-all duration-300"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                0909 967 649
+              </a>
             </div>
           </section>
         </div>

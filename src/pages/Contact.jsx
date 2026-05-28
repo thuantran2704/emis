@@ -140,6 +140,13 @@ export default function Contact() {
       href: "tel:0919100021"
     },
     {
+      icon: phoneIcon,
+      alt: "Phone",
+      label: content.contactInfo.phone,
+      value: "091 996 7649",
+      href: "tel:0909967649"
+    },
+    {
       icon: mailIcon,
       alt: "Email",
       label: content.contactInfo.email,

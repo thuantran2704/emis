@@ -11,6 +11,11 @@ export default function FloatingContactButton() {
       icon: <Phone className="h-5 w-5" />,
     },
     {
+      label: "Phone",
+      href: "tel:0909967649",
+      icon: <Phone className="h-5 w-5" />,
+    },
+    {
       label: "Email",
       href: "mailto:Emisdentalclinic@gmail.com",
       icon: <Mail className="h-5 w-5" />,
