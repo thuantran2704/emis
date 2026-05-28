@@ -20,8 +20,8 @@ import {
   Sun,
 } from "lucide-react";
 
-import viImg from "../pics/april_disc/vie-whitening.png";
-import enImg from "../pics/april_disc/eng-whitening.png";
+import viImg from "../pics/teethwhitening.jpg";
+import enImg from "../pics/teethwhitening.jpg";
 
 const WhiteningAd = () => {
   const language = useSelector((state) => state.language.language);
@@ -31,12 +31,12 @@ const WhiteningAd = () => {
   const viContent = {
     metaTitle: "Tẩy Trắng Răng Giảm 50% - Chỉ 1.500.000Đ | Emis Dental",
     metaDescription:
-      "Ưu đãi mùa đại lễ: Giảm 50% tẩy trắng răng tại Emis Dental – trọn gói chỉ 1.500.000đ. Gel Pola Office chính hãng Úc, an toàn, không ê buốt, trắng sáng sau 1 buổi.",
+      "Ưu đãi tháng 6: Giảm 50% tẩy trắng răng tại Emis Dental – trọn gói chỉ 1.500.000đ. Gel Pola Office chính hãng Úc, an toàn, không ê buốt, trắng sáng sau 1 buổi.",
 
     heroTitle: "GIẢM 50%",
-    heroSubtitle: "TẨY TRẮNG RĂNG ĐÓN MÙA ĐẠI LỄ",
+    heroSubtitle: "TẨY TRẮNG RĂNG THÁNG 6",
     heroDescription:
-      "Đón lễ rực rỡ cùng nụ cười tỏa nắng — ưu đãi có hạn từ Emis Dental. Trọn gói tẩy trắng răng chuẩn quốc tế, an toàn, không ê buốt, hiệu quả rõ rệt chỉ sau 1 buổi.",
+      "Đón hè rực rỡ cùng nụ cười tỏa nắng — ưu đãi tháng 6 từ Emis Dental. Trọn gói tẩy trắng răng chuẩn quốc tế, an toàn, không ê buốt, hiệu quả rõ rệt chỉ sau 1 buổi.",
 
     dealHighlight: {
       label: "ĐẶC BIỆT: Tiết kiệm đến 50%",
@@ -57,11 +57,11 @@ const WhiteningAd = () => {
       {
         title: "TẠI SAO NÊN TẨY TRẮNG RĂNG DỊP NÀY?",
         icon: <Sun className="w-6 h-6" />,
-        content:
-          "Mùa đại lễ là thời điểm tuyệt vời để làm mới bản thân và tỏa sáng trong mọi khoảnh khắc. Với ưu đãi 50%, bạn có thể sở hữu nụ cười trắng sáng chuẩn y khoa với mức giá cực kỳ hấp dẫn.",
+          content:
+            "Tháng 6 là thời điểm tuyệt vời để làm mới bản thân và tỏa sáng trong mọi khoảnh khắc. Với ưu đãi 50%, bạn có thể sở hữu nụ cười trắng sáng chuẩn y khoa với mức giá cực kỳ hấp dẫn.",
         points: [
           "Tiết kiệm tối đa: Chỉ còn 1.500.000đ thay vì 3.000.000đ như giá gốc – tiết kiệm ngay 1.500.000đ",
-          "Hiệu quả tức thì: Răng trắng bật tông rõ rệt chỉ sau 1 buổi, kịp thời đón lễ với nụ cười rạng rỡ",
+          "Hiệu quả tức thì: Răng trắng bật tông rõ rệt chỉ sau 1 buổi, kịp thời đón hè với nụ cười rạng rỡ",
           "An tâm tuyệt đối: Quy trình chuẩn y khoa, bác sĩ chính quy trực tiếp thực hiện từ đầu đến cuối",
         ],
       },
@@ -83,7 +83,7 @@ const WhiteningAd = () => {
       service: "Tẩy trắng răng chiếu đèn Blue Laser",
       originalPrice: "3.000.000đ",
       discountPrice: "1.500.000đ",
-      period: "Ưu đãi mùa đại lễ tháng 4/2026",
+      period: "Ưu đãi áp dụng trong tháng 6/2026",
       note: "Áp dụng cho khách hàng đặt lịch trong thời gian khuyến mãi. Chưa bao gồm cạo vôi răng.",
     },
 
@@ -137,12 +137,12 @@ const WhiteningAd = () => {
   const enContent = {
     metaTitle: "50% Off Teeth Whitening - Only 1,500,000 VND | Emis Dental",
     metaDescription:
-      "Holiday season deal: 50% off teeth whitening at Emis Dental – full package for just 1,500,000 VND. Genuine Pola Office 35% gel from Australia, safe, no sensitivity, visibly whiter after one session.",
+      "June promotion: 50% off teeth whitening at Emis Dental – full package for just 1,500,000 VND. Genuine Pola Office 35% gel from Australia, safe, no sensitivity, visibly whiter after one session.",
 
     heroTitle: "50% OFF",
-    heroSubtitle: "TEETH WHITENING THIS HOLIDAY SEASON",
+    heroSubtitle: "TEETH WHITENING THIS JUNE",
     heroDescription:
-      "Celebrate the holidays with a radiant, confident smile — a limited-time offer from Emis Dental. Full international-standard whitening package: safe, no sensitivity, and visibly whiter after just one session.",
+      "Start summer with a radiant, confident smile — a limited-time June offer from Emis Dental. Full international-standard whitening package: safe, no sensitivity, and visibly whiter after just one session.",
 
     dealHighlight: {
       label: "SPECIAL: Save up to 50%",
@@ -189,7 +189,7 @@ const WhiteningAd = () => {
       service: "Blue Laser Teeth Whitening",
       originalPrice: "3,000,000 VND",
       discountPrice: "1,500,000 VND",
-      period: "Holiday season offer – April 2026",
+      period: "June promotion – June 2026",
       note: "Valid for customers who book during the promotional period. Scaling not included.",
     },
 
@@ -234,7 +234,7 @@ const WhiteningAd = () => {
 
     cta: {
       main: "Limited-time offer – message us today to get your consultation and secure your spot!",
-      question: "Ready to celebrate the holidays with a brighter smile?",
+      question: "Ready to start summer with a brighter smile?",
       button: "BOOK NOW",
       subtext: "Or call our hotline for a free consultation!",
     },

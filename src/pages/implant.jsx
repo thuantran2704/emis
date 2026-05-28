@@ -21,8 +21,8 @@ import {
   DollarSign,
 } from "lucide-react";
 
-import viImg from "../pics/april_disc/vie-implant.png";
-import enImg from "../pics/april_disc/eng-implant.png";
+import viImg from "../pics/implant.jpg";
+import enImg from "../pics/implant.jpg";
 
 const ImplantAd = () => {
   const language = useSelector((state) => state.language.language);
@@ -32,7 +32,7 @@ const ImplantAd = () => {
   const viContent = {
     metaTitle: "Implant Osstem Chính Hãng Trọn Gói Chỉ 7.900.000đ | Emis Dental",
     metaDescription:
-      "Ưu đãi đại lễ 30/4 – 1/5: Implant Osstem chính hãng (Hàn Quốc) trọn gói chỉ 7.900.000đ/răng. Phục hồi ăn nhai, thẩm mỹ gương mặt tại Emis Dental.",
+      "Ưu đãi tháng 6: Implant Osstem chính hãng (Hàn Quốc) trọn gói chỉ 7.900.000đ/răng. Phục hồi ăn nhai, thẩm mỹ gương mặt tại Emis Dental.",
 
     heroTitle: "IMPLANT OSSTEM CHÍNH HÃNG",
     heroSubtitle: "TRỌN GÓI CHỈ 7.900.000Đ / RĂNG",
@@ -144,7 +144,7 @@ const ImplantAd = () => {
   const enContent = {
     metaTitle: "Genuine Osstem Implant Package – Only 7,900,000 VND | Emis Dental",
     metaDescription:
-      "Special holiday offer 30/4 – 1/5: Genuine Osstem Implant (Korea) complete package only 7,900,000 VND per tooth. Restore chewing function and facial aesthetics at Emis Dental.",
+      "June promotion: Genuine Osstem Implant (Korea) complete package only 7,900,000 VND per tooth. Restore chewing function and facial aesthetics at Emis Dental.",
 
     heroTitle: "GENUINE OSSTEM IMPLANT",
     heroSubtitle: "COMPLETE PACKAGE – ONLY 7,900,000 VND / TOOTH",
@@ -280,7 +280,7 @@ const ImplantAd = () => {
             <div>
               <div className="inline-flex items-center bg-white/20 text-white px-5 py-2 rounded-full font-bold mb-6 text-sm">
                 <Heart className="w-4 h-4 mr-2 fill-white" />
-                {isVI ? "ƯU ĐÃI ĐẠI LỄ 30/4 – 1/5" : "SPECIAL HOLIDAY OFFER 30/4 – 1/5"}
+                {isVI ? "ƯU ĐÃI THÁNG 6" : "JUNE SPECIAL DISCOUNT"}
               </div>
 
               <h1 className="text-4xl md:text-5xl font-black text-white mb-3 leading-tight">
@@ -324,7 +324,7 @@ const ImplantAd = () => {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/30">
                 <img
                   src={adImage}
-                  alt={isVI ? "Implant Osstem ưu đãi đại lễ tại Emis Dental" : "Osstem Implant holiday offer at Emis Dental"}
+                  alt={isVI ? "Implant Osstem ưu đãi tháng 6 tại Emis Dental" : "Osstem Implant June offer at Emis Dental"}
                   className="w-full h-auto object-cover"
                 />
               </div>
@@ -367,7 +367,7 @@ const ImplantAd = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-3">
             <div className="flex items-center text-white">
               <Clock className="w-4 h-4 mr-2" />
-              <span className="font-semibold">{isVI ? "Ưu đãi đại lễ 30/4 – 1/5" : "Special offer for the 30/4 – 1/5 holiday"}</span>
+              <span className="font-semibold">{isVI ? "Ưu đãi tháng 6" : "Special offer for June"}</span>
             </div>
             <div className="flex items-center text-white">
               <Phone className="w-4 h-4 mr-2" />

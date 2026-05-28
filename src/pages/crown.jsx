@@ -23,8 +23,8 @@ import {
   Camera,
 } from "lucide-react";
 
-import viImg from "../pics/april_disc/vie-crown.png";
-import enImg from "../pics/april_disc/eng-crown.png";
+import viImg from "../pics/crown.jpg";
+import enImg from "../pics/crown.jpg";
 
 const CrownAd = () => {
   const language = useSelector((state) => state.language.language);
@@ -32,14 +32,14 @@ const CrownAd = () => {
   const adImage = isVI ? viImg : enImg;
 
   const viContent = {
-    metaTitle: "Răng Sứ Thẩm Mỹ Giảm Đến 60% - Tháng 4 Ưu Đãi | Emis Dental",
+    metaTitle: "Răng Sứ Thẩm Mỹ Giảm Đến 60% - Ưu Đãi Tháng 6 | Emis Dental",
     metaDescription:
-      "Tháng 4 ưu đãi: Giảm đến 60% tất cả dòng răng toàn sứ chính hãng Zirconia (Mỹ), DD Bio (Đức), Cercon HT (Mỹ), Lava (Mỹ) tại Emis Dental.",
+      "Tháng 6 ưu đãi: Giảm đến 60% tất cả dòng răng toàn sứ chính hãng Zirconia (Mỹ), DD Bio (Đức), Cercon HT (Mỹ), Lava (Mỹ) tại Emis Dental.",
 
     heroTitle: "RĂNG SỨ THẨM MỸ",
     heroSubtitle: "GIẢM ĐẾN 60% – ƯU ĐÃI TỐT NHẤT TRONG NĂM",
     heroDescription:
-      "Đừng bỏ lỡ ưu đãi hấp dẫn trong tháng này. Giảm đến 60% tất cả các dòng răng toàn sứ chính hãng tại Emis Dental.",
+      "Đừng bỏ lỡ ưu đãi hấp dẫn trong tháng 6. Giảm đến 60% tất cả các dòng răng toàn sứ chính hãng tại Emis Dental.",
 
     brands: {
       title: "CÁC DÒNG RĂNG SỨ ĐANG ƯU ĐÃI",
@@ -138,9 +138,9 @@ const CrownAd = () => {
   };
 
   const enContent = {
-    metaTitle: "Cosmetic Porcelain Crowns Up to 60% Off – April Special | Emis Dental",
+    metaTitle: "Cosmetic Porcelain Crowns Up to 60% Off – June Special | Emis Dental",
     metaDescription:
-      "April special: Up to 60% off all genuine all-ceramic crowns including Zirconia (USA), DD Bio (Germany), Cercon HT (USA), Lava (USA) at Emis Dental.",
+      "June promotion: Up to 60% off all genuine all-ceramic crowns including Zirconia (USA), DD Bio (Germany), Cercon HT (USA), Lava (USA) at Emis Dental.",
 
     heroTitle: "COSMETIC PORCELAIN CROWNS",
     heroSubtitle: "UP TO 60% OFF – BEST DEAL OF THE YEAR",
@@ -270,7 +270,7 @@ const CrownAd = () => {
             <div>
               <div className="inline-flex items-center bg-white/20 text-white px-5 py-2 rounded-full font-bold mb-6 text-sm">
                 <Heart className="w-4 h-4 mr-2 fill-white" />
-                {isVI ? "THÁNG 4 ƯU ĐÃI ĐẶC BIỆT" : "APRIL SPECIAL OFFER"}
+                {isVI ? "ƯU ĐÃI ĐẶC BIỆT THÁNG 6" : "JUNE SPECIAL OFFER"}
               </div>
 
               <h1 className="text-4xl md:text-5xl font-black text-white mb-3 leading-tight">
@@ -307,7 +307,7 @@ const CrownAd = () => {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/30">
                 <img
                   src={adImage}
-                  alt={isVI ? "Răng sứ thẩm mỹ tháng 4 tại Emis Dental" : "Cosmetic crowns April offer at Emis Dental"}
+                  alt={isVI ? "Răng sứ thẩm mỹ tháng 6 tại Emis Dental" : "Cosmetic crowns June offer at Emis Dental"}
                   className="w-full h-auto object-cover"
                 />
               </div>
@@ -350,7 +350,7 @@ const CrownAd = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-3">
             <div className="flex items-center text-white">
               <Clock className="w-4 h-4 mr-2" />
-              <span className="font-semibold">{isVI ? "Ưu đãi áp dụng trong tháng 4/2026" : "Offer valid throughout April 2026"}</span>
+              <span className="font-semibold">{isVI ? "Ưu đãi áp dụng trong tháng 6/2026" : "Offer valid throughout June 2026"}</span>
             </div>
             <div className="flex items-center text-white">
               <Shield className="w-4 h-4 mr-2" />
