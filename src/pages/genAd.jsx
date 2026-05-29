@@ -683,9 +683,11 @@ const GenAd = () => {
               <h3 className="font-bold text-gray-800 mb-1">
                 {isVI ? "Giờ làm việc" : "Working Hours"}
               </h3>
-              <p className="text-gray-600 text-sm">8:00 – 20:00</p>
               <p className="text-gray-600 text-sm">
-                {isVI ? "(Tất cả các ngày)" : "(All days)"}
+                {isVI ? "Thứ 2 – Thứ 7: 8:00 – 19:00" : "Mon – Sat: 8:00 AM – 7:00 PM"}
+              </p>
+              <p className="text-gray-600 text-sm">
+                {isVI ? "Chủ nhật: 8:00 – 17:00" : "Sun: 8:00 AM – 5:00 PM"}
               </p>
             </div>
 

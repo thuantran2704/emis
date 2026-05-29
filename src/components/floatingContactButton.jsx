@@ -11,7 +11,7 @@ export default function FloatingContactButton() {
       icon: <Phone className="h-5 w-5" />,
     },
     {
-      label: "Phone",
+      label: "Phone 2",
       href: "tel:0909967649",
       icon: <Phone className="h-5 w-5" />,
     },

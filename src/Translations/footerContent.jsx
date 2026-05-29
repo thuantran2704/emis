@@ -28,7 +28,7 @@ const footerContent = {
     email: "Emisdentalclinic@gmail.com",
     connectTitle: "Kết nối với chúng tôi",
     workingHoursTitle: "Giờ làm việc",
-    workingHours: "Thứ 2 – Thứ 7: 8:00 – 19:00\nChủ nhật: 8:00 AM - 5:00 PM",
+    workingHours: "Thứ 2 – Thứ 7: 8:00 – 19:00\nChủ nhật: 8:00 – 17:00",
     rights: "Đã đăng ký bản quyền.",
   },
 
@@ -43,7 +43,7 @@ const footerContent = {
     email: "Emisdentalclinic@gmail.com",
     connectTitle: "关注我们",
     workingHoursTitle: "营业时间",
-    workingHours: "周一至周六：8:00 – 19:00\n周日：8:00 AM - 5:00 PM",
+    workingHours: "周一至周六：8:00 – 19:00\n周日：8:00 – 17:00",
     rights: "版权所有。",
   },
 
@@ -60,7 +60,7 @@ const footerContent = {
     email: "Emisdentalclinic@gmail.com",
     connectTitle: "關注我們",
     workingHoursTitle: "營業時間",
-    workingHours: "週一至週六：8:00 – 19:00\n週日：8:00 AM - 5:00 PM",
+    workingHours: "週一至週六：8:00 – 19:00\n週日：8:00 – 17:00",
     rights: "版權所有。",
   },
 
@@ -77,7 +77,7 @@ const footerContent = {
     email: "Emisdentalclinic@gmail.com",
     connectTitle: "Suivez-nous",
     workingHoursTitle: "Heures d'ouverture",
-    workingHours: "Lun – Sam : 8h00 – 19h00\nDim : 8:00 AM - 5:00 PM",
+    workingHours: "Lun – Sam : 8h00 – 19h00\nDim : 8h00 – 17h00",
     rights: "Tous droits réservés.",
   },
 
@@ -93,7 +93,7 @@ const footerContent = {
     email: "Emisdentalclinic@gmail.com",
     connectTitle: "소셜 미디어",
     workingHoursTitle: "진료 시간",
-    workingHours: "월–토: 8:00 – 19:00\n일: 8:00 AM - 5:00 PM",
+    workingHours: "월–토: 8:00 – 19:00\n일: 8:00 – 17:00",
     rights: "판권 소유.",
   },
 };
