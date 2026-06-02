@@ -1,6 +1,6 @@
 import React from "react";
 import aboutContent from "../Translations/aboutContent";
-import emishall from "../pics/Emis_hall.jpg";
+import emishall from "../pics/Phong-cho-waiting-room-Emis.jpg";
 import patient1 from "../pics/patient1.jpg";
 import patient2 from "../pics/patient2.jpg";
 import seal from "../pics/sealer.jpg";
