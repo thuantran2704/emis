@@ -139,7 +139,7 @@ export default function PapersTitle({ title, images }) {
           >
             <img
               src={images[currentIndex]}
-              alt={`Slide ${currentIndex + 1}`}
+              alt={`Document preview ${currentIndex + 1}`}
               className="max-w-full max-h-full object-contain"
             />
           </button>
@@ -164,7 +164,7 @@ export default function PapersTitle({ title, images }) {
           >
             <img
               src={zoomImage}
-              alt="Zoomed"
+              alt="Zoomed document image"
               className="max-w-full max-h-full object-contain rounded-lg shadow-lg"
             />
           </div>

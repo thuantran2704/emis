@@ -30,7 +30,7 @@ const About = () => {
       <div className="my-12">
         <img
           src={reception}
-          alt="Reception"
+          alt="Modern dental reception area at Emis Dental clinic"
           className="rounded-2xl shadow-lg mx-auto max-w-full h-auto transition-transform duration-300 hover:scale-[1.02]"
         />
         <h2 className="text-xl md:text-2xl font-semibold text-center mt-4 text-gray-600">
@@ -46,7 +46,7 @@ const About = () => {
       <div className="my-12">
         <img
           src={phongkham}
-          alt="Clinic interior"
+          alt="Dental treatment room at Emis Dental clinic with modern equipment"
           className="rounded-2xl shadow-lg mx-auto max-w-full h-auto transition-transform duration-300 hover:scale-[1.02]"
         />
         <h2 className="text-xl md:text-2xl font-semibold text-center mt-4 text-gray-600">
@@ -62,7 +62,7 @@ const About = () => {
       <div className="my-12">
         <img
           src={patient1}
-          alt="Patient interaction"
+          alt="Dentist consulting a patient during a dental visit"
           className="rounded-2xl shadow-lg mx-auto max-w-full h-auto transition-transform duration-300 hover:scale-[1.02]"
         />
         <h2 className="text-xl md:text-2xl font-semibold text-center mt-4 text-gray-600">
@@ -78,7 +78,7 @@ const About = () => {
       <div className="my-12">
         <img
           src={seal}
-          alt="Dental tools or sealant"
+          alt="Dental sealant and equipment used for modern tooth restoration"
           className="rounded-2xl shadow-lg mx-auto max-w-full h-auto transition-transform duration-300 hover:scale-[1.02]"
         />
         <h2 className="text-xl md:text-2xl font-semibold text-center mt-4 text-gray-600">
@@ -94,7 +94,7 @@ const About = () => {
       <div className="my-12">
         <img
           src={patient2}
-          alt="Happy patient"
+          alt="Satisfied patient smiling after successful dental treatment"
           className="rounded-2xl shadow-lg mx-auto max-w-full h-auto transition-transform duration-300 hover:scale-[1.02]"
         />
         <h2 className="text-xl md:text-2xl font-semibold text-center mt-4 text-gray-600">
