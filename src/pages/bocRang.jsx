@@ -2,42 +2,42 @@ import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 
 // --- Section 5 Images (Forms / Smile Design) ---
-import form1Eng from "../pics/WEB/forms/eng/1.png";
-import form2Eng from "../pics/WEB/forms/eng/2.png";
-import form3Eng from "../pics/WEB/forms/eng/3.png";
-import form4Eng from "../pics/WEB/forms/eng/4.png";
-import form5Eng from "../pics/WEB/forms/eng/5.png";
-import form6Eng from "../pics/WEB/forms/eng/6.png";
-import form7Eng from "../pics/WEB/forms/eng/7.png";
-import form8Eng from "../pics/WEB/forms/eng/8.png";
+import form1Eng from "../pics/WEB/forms/eng/01-baby-style.png";
+import form2Eng from "../pics/WEB/forms/eng/02-aggressive-style.png";
+import form3Eng from "../pics/WEB/forms/eng/03-vigorous-style.png";
+import form4Eng from "../pics/WEB/forms/eng/04-softened-style.png";
+import form5Eng from "../pics/WEB/forms/eng/05-ovan-style.png";
+import form6Eng from "../pics/WEB/forms/eng/06-youthful-style.png";
+import form7Eng from "../pics/WEB/forms/eng/07-enhanced-style.png";
+import form8Eng from "../pics/WEB/forms/eng/08-functional-style.png";
 
-import form1Vie from "../pics/WEB/forms/vie/1.png";
-import form2Vie from "../pics/WEB/forms/vie/2.png";
-import form3Vie from "../pics/WEB/forms/vie/3.png";
-import form4Vie from "../pics/WEB/forms/vie/4.png";
-import form5Vie from "../pics/WEB/forms/vie/5.png";
-import form6Vie from "../pics/WEB/forms/vie/6.png";
-import form7Vie from "../pics/WEB/forms/vie/7.png";
-import form8Vie from "../pics/WEB/forms/vie/8.png";
+import form1Vie from "../pics/WEB/forms/vie/01-rang-tre-trung.png";
+import form2Vie from "../pics/WEB/forms/vie/02-rang-ca-tinh.png";
+import form3Vie from "../pics/WEB/forms/vie/03-rang-dang-manh-me.png";
+import form4Vie from "../pics/WEB/forms/vie/04-rang-de-thuong.png";
+import form5Vie from "../pics/WEB/forms/vie/05-rang-ovan.png";
+import form6Vie from "../pics/WEB/forms/vie/06-rang-tho.png";
+import form7Vie from "../pics/WEB/forms/vie/07-dang-rang-khenh.png";
+import form8Vie from "../pics/WEB/forms/vie/08-dang-rang-nanh.png";
 
 // --- Section 7 Images (Crown / Răng Sứ Types) ---
-import crown1Eng from "../pics/WEB/veneer/eng/1.png";
-import crown2Eng from "../pics/WEB/veneer/eng/2.png";
-import crown3Eng from "../pics/WEB/veneer/eng/3.png";
-import crown4Eng from "../pics/WEB/veneer/eng/4.png";
-import crown5Eng from "../pics/WEB/veneer/eng/5.png";
-import crown6Eng from "../pics/WEB/veneer/eng/6.png";
-import crown7Eng from "../pics/WEB/veneer/eng/7.png";
-import crown8Eng from "../pics/WEB/veneer/eng/8.png";
+import crown1Eng from "../pics/WEB/veneer/eng/01-porcelain-DB-BIO-Crowns-Germany.png";
+import crown2Eng from "../pics/WEB/veneer/eng/02-zirconia-porcelain-crown.png";
+import crown3Eng from "../pics/WEB/veneer/eng/03-cercon-ht-porcelain-crowns-germany.png";
+import crown4Eng from "../pics/WEB/veneer/eng/04-lava-plus-porcelain-crowns-usa.png";
+import crown5Eng from "../pics/WEB/veneer/eng/05-full-nt200-porcelain-crowns-england.png";
+import crown6Eng from "../pics/WEB/veneer/eng/06-ordent-porcelain-crowns-italy.png";
+import crown7Eng from "../pics/WEB/veneer/eng/07-zico-centonia-porcelain-crowns-korea.png";
+import crown8Eng from "../pics/WEB/veneer/eng/08-emax-porcelain-veneer-germany.png";
 
-import crown1Vie from "../pics/WEB/veneer/vie/1.png";
-import crown2Vie from "../pics/WEB/veneer/vie/2.png";
-import crown3Vie from "../pics/WEB/veneer/vie/3.png";
-import crown4Vie from "../pics/WEB/veneer/vie/4.png";
-import crown5Vie from "../pics/WEB/veneer/vie/5.png";
-import crown6Vie from "../pics/WEB/veneer/vie/6.png";
-import crown7Vie from "../pics/WEB/veneer/vie/7.png";
-import crown8Vie from "../pics/WEB/veneer/vie/8.png";
+import crown1Vie from "../pics/WEB/veneer/vie/01-rang-su-dd-bio-duc.png";
+import crown2Vie from "../pics/WEB/veneer/vie/02-rang-su-zirconia-my.png";
+import crown3Vie from "../pics/WEB/veneer/vie/03-rang-su-cercon-ht-duc.png";
+import crown4Vie from "../pics/WEB/veneer/vie/04-rang-su-lava-plus.png";
+import crown5Vie from "../pics/WEB/veneer/vie/05-mat-dan-su-veneer-duc.png";
+import crown6Vie from "../pics/WEB/veneer/vie/06-rang-su-full-ordent-y.png";
+import crown7Vie from "../pics/WEB/veneer/vie/07-rang-su-full-nt200-anh.png";
+import crown8Vie from "../pics/WEB/veneer/vie/08-rang-su-zico-centonia-han-quoc.png";
 
 export default function CrownLanding() {
   const language = useSelector((state) => state.language.language);
@@ -180,13 +180,49 @@ Step 6: Final Crown Placement: Place permanent crowns after final checks.`
 
   // --- Section 5 / Smile Design Slider Images ---
   const formImages = language === "vietnamese"
-    ? [form1Vie, form2Vie, form3Vie, form4Vie, form5Vie, form6Vie, form7Vie, form8Vie]
-    : [form1Eng, form2Eng, form3Eng, form4Eng, form5Eng, form6Eng, form7Eng, form8Eng];
+    ? [
+        { src: form1Vie, alt: "Baby-style smile design sample for cosmetic crown planning" },
+        { src: form2Vie, alt: "Aggressive smile design sample for bold dental contours" },
+        { src: form3Vie, alt: "Vigorous smile design example with strong tooth shapes" },
+        { src: form4Vie, alt: "Softened smile design for a gentle dental appearance" },
+        { src: form5Vie, alt: "Oval smile design sample for natural-looking teeth" },
+        { src: form6Vie, alt: "Youthful smile design option for dental aesthetics" },
+        { src: form7Vie, alt: "Enhanced smile design sample with polished tooth shape" },
+        { src: form8Vie, alt: "Functional smile design for balanced dental function" },
+      ]
+    : [
+        { src: form1Eng, alt: "Baby-style smile design sample for cosmetic crown planning" },
+        { src: form2Eng, alt: "Aggressive smile design sample for bold dental contours" },
+        { src: form3Eng, alt: "Vigorous smile design example with strong tooth shapes" },
+        { src: form4Eng, alt: "Softened smile design for a gentle dental appearance" },
+        { src: form5Eng, alt: "Oval smile design sample for natural-looking teeth" },
+        { src: form6Eng, alt: "Youthful smile design option for dental aesthetics" },
+        { src: form7Eng, alt: "Enhanced smile design sample with polished tooth shape" },
+        { src: form8Eng, alt: "Functional smile design for balanced dental function" },
+      ];
 
   // --- Section 7 / Crown Gallery Images ---
   const crownImages = language === "vietnamese"
-    ? [crown1Vie, crown2Vie, crown3Vie, crown4Vie, crown5Vie, crown6Vie, crown7Vie, crown8Vie]
-    : [crown1Eng, crown2Eng, crown3Eng, crown4Eng, crown5Eng, crown6Eng, crown7Eng, crown8Eng];
+    ? [
+        { src: crown1Vie, alt: "German DD Bio porcelain dental crown example" },
+        { src: crown2Vie, alt: "American zirconia porcelain crown sample" },
+        { src: crown3Vie, alt: "German Cercon HT porcelain crown product" },
+        { src: crown4Vie, alt: "US Lava Plus porcelain crown example" },
+        { src: crown5Vie, alt: "English NT200 full porcelain crown sample" },
+        { src: crown6Vie, alt: "Italian Ordent full porcelain crown example" },
+        { src: crown7Vie, alt: "Korean Zico Centonia porcelain crown sample" },
+        { src: crown8Vie, alt: "German Emax porcelain veneer crown example" },
+      ]
+    : [
+        { src: crown1Eng, alt: "German DD Bio porcelain dental crown example" },
+        { src: crown2Eng, alt: "American zirconia porcelain crown sample" },
+        { src: crown3Eng, alt: "German Cercon HT porcelain crown product" },
+        { src: crown4Eng, alt: "US Lava Plus porcelain crown example" },
+        { src: crown5Eng, alt: "English NT200 full porcelain crown sample" },
+        { src: crown6Eng, alt: "Italian Ordent full porcelain crown example" },
+        { src: crown7Eng, alt: "Korean Zico Centonia porcelain crown sample" },
+        { src: crown8Eng, alt: "German Emax porcelain veneer crown example" },
+      ];
 
   // --- Responsive Slider Component ---
   const ImageSlider = ({ images }) => {
@@ -234,7 +270,7 @@ Step 6: Final Crown Placement: Place permanent crowns after final checks.`
         <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(${getTransformValue()}%)` }}>
           {images.map((img, idx) => (
             <div key={idx} className="px-2 flex-shrink-0" style={{ width: `${100 / visibleSlides}%` }}>
-              <img src={img} alt={`Slide ${idx}`} className="rounded-lg shadow-md w-full object-cover" />
+              <img src={img.src} alt={img.alt} className="rounded-lg shadow-md w-full object-cover" />
             </div>
           ))}
         </div>
@@ -266,7 +302,7 @@ Step 6: Final Crown Placement: Place permanent crowns after final checks.`
               {i === 6 && (
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-6">
                   {crownImages.map((img, idx) => (
-                    <img key={idx} src={img} alt={`Crown ${idx}`} className="rounded-lg shadow-md w-full object-cover" />
+                    <img key={idx} src={img.src} alt={img.alt} className="rounded-lg shadow-md w-full object-cover" />
                   ))}
                 </div>
               )}
