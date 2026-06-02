@@ -23,19 +23,19 @@ import ContactForm from '../components/ContactForm';
 import { useSelector } from 'react-redux';
 import CustomerReactionsBanner from '../components/CustomerReactionBanner';
 import AdBanner from '../components/AdBanner';
-asdadsa
+
 export default function Home() {
   const language = useSelector((state) => state.language.language);
   const content = homeContent[language] || homeContent.vietnamese;
   const serviceImages = [
-    generalDentistry,
-    implant,
-    crown,
-    invisalign,
-    aofimplant,
-    wisdom,
-    teethwhitening,
-    canal
+    { src: generalDentistry, alt: "General dentistry procedures and comprehensive tooth care" },
+    { src: implant, alt: "Dental implant illustration showing tooth replacement solution" },
+    { src: crown, alt: "Dental crown and cosmetic tooth restoration treatment" },
+    { src: invisalign, alt: "Invisalign clear aligners for orthodontic treatment" },
+    { src: aofimplant, alt: "All-on-4 dental implant solution for full mouth restoration" },
+    { src: wisdom, alt: "Wisdom teeth extraction and surgical treatment" },
+    { src: teethwhitening, alt: "Professional teeth whitening cosmetic treatment" },
+    { src: canal, alt: "Root canal endodontic treatment for tooth preservation" },
   ];
   return (
     <main className="min-h-[calc(100vh-4rem)] bg-[#f7f2e7] pt-20">
@@ -143,7 +143,7 @@ export default function Home() {
                         ? biotemImg
                         : straumannImg // fallback image
                     }
-                    alt={`${title} implant`}
+                    alt={`${title} dental implant system and tooth replacement technology`}
                     className="max-w-full max-h-full object-contain"
                   />
                 </div>
