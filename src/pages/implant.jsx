@@ -21,8 +21,8 @@ import {
   DollarSign,
 } from "lucide-react";
 
-import viImg from "../pics/implant.jpg";
-import enImg from "../pics/implant.jpg";
+import viImg from "../pics/implant-illustration.jpg";
+import enImg from "../pics/implant-illustration.jpg";
 
 const ImplantAd = () => {
   const language = useSelector((state) => state.language.language);
