@@ -18,7 +18,7 @@ import {
   ZapOff,
 } from "lucide-react";
 
-import viImg from "../pics/canal.jpg";
+import viImg from "../pics/root-canal.jpg";
 
 const CanalAd = () => {
   const language = useSelector((state) => state.language.language);
