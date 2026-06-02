@@ -23,7 +23,7 @@ import ContactForm from '../components/ContactForm';
 import { useSelector } from 'react-redux';
 import CustomerReactionsBanner from '../components/CustomerReactionBanner';
 import AdBanner from '../components/AdBanner';
-
+asdadsa
 export default function Home() {
   const language = useSelector((state) => state.language.language);
   const content = homeContent[language] || homeContent.vietnamese;

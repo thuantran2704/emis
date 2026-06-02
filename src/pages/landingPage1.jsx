@@ -1,21 +1,22 @@
 import { useState, useEffect } from 'react';
-import form1Eng from "../pics/WEB/forms/eng/1.png";
-import form2Eng from "../pics/WEB/forms/eng/2.png";
-import form3Eng from "../pics/WEB/forms/eng/3.png";
-import form4Eng from "../pics/WEB/forms/eng/4.png";
-import form5Eng from "../pics/WEB/forms/eng/5.png";
-import form6Eng from "../pics/WEB/forms/eng/6.png";
-import form7Eng from "../pics/WEB/forms/eng/7.png";
-import form8Eng from "../pics/WEB/forms/eng/8.png";
+import form1Eng from "../pics/WEB/forms/eng/01-baby-style.png";
+import form2Eng from "../pics/WEB/forms/eng/02-aggressive-style.png";
+import form3Eng from "../pics/WEB/forms/eng/03-vigorous-style.png";
+import form4Eng from "../pics/WEB/forms/eng/04-softened-style.png";
+import form5Eng from "../pics/WEB/forms/eng/05-ovan-style.png";
+import form6Eng from "../pics/WEB/forms/eng/06-youthful-style.png";
+import form7Eng from "../pics/WEB/forms/eng/07-enhanced-style.png";
+import form8Eng from "../pics/WEB/forms/eng/08-functional-style.png";
 
-import form1Vie from "../pics/WEB/forms/vie/1.png";
-import form2Vie from "../pics/WEB/forms/vie/2.png";
-import form3Vie from "../pics/WEB/forms/vie/3.png";
-import form4Vie from "../pics/WEB/forms/vie/4.png";
-import form5Vie from "../pics/WEB/forms/vie/5.png";
-import form6Vie from "../pics/WEB/forms/vie/6.png";
-import form7Vie from "../pics/WEB/forms/vie/7.png";
-import form8Vie from "../pics/WEB/forms/vie/8.png";
+import form1Vie from "../pics/WEB/forms/vie/01-rang-tre-trung.png";
+import form2Vie from "../pics/WEB/forms/vie/02-rang-ca-tinh.png";
+import form3Vie from "../pics/WEB/forms/vie/03-rang-dang-manh-me.png";
+import form4Vie from "../pics/WEB/forms/vie/04-rang-de-thuong.png";
+import form5Vie from "../pics/WEB/forms/vie/05-rang-ovan.png";
+import form6Vie from "../pics/WEB/forms/vie/06-rang-tho.png";
+import form7Vie from "../pics/WEB/forms/vie/07-dang-rang-khenh.png";
+import form8Vie from "../pics/WEB/forms/vie/08-dang-rang-nanh.png";
+
 import { useSelector } from 'react-redux';
 export default function VeneerLanding() {
   const language = useSelector((state) => state.language.language);
