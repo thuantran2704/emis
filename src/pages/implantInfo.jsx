@@ -1,10 +1,10 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import hiossenImg from "../pics/hiossen.jpg";
-import osstemImg from "../pics/osstem.jpg";
-import straumannImg from "../pics/straumann.jpg";
-import etkImg from "../pics/etk.jpg";
-import biotemImg from "../pics/biotem.jpg";
+import hiossenImg from "../pics/hiossen-implant.jpg";
+import osstemImg from "../pics/osstem-implant.jpg";
+import straumannImg from "../pics/straumann-implant.jpg";
+import etkImg from "../pics/etk-implant.jpg";
+import biotemImg from "../pics/biotem-implant.jpg";
 import { useSelector } from "react-redux";
 export default function ImplantInfo() {
   const language = useSelector((state) => state.language.language);
