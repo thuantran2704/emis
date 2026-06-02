@@ -20,8 +20,8 @@ import {
   Sun,
 } from "lucide-react";
 
-import viImg from "../pics/teethwhitening.jpg";
-import enImg from "../pics/teethwhitening.jpg";
+import viImg from "../pics/teeth-whitening.jpg";
+import enImg from "../pics/teeth-whitening.jpg";
 
 const WhiteningAd = () => {
   const language = useSelector((state) => state.language.language);
