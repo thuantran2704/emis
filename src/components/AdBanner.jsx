@@ -1,11 +1,24 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import ad1 from "../pics/ads/ad1.png";
-import ad2 from "../pics/ads/ad2.png";
-import ad3 from "../pics/ads/ad3.png";
+import ad1 from "../pics/ads/ad01-dental-implant-8.9M.png";
+import ad2 from "../pics/ads/ad02-dental-tourist.png";
+import ad3 from "../pics/ads/ad03-starting12k-dental-tourism.png";
 
-const adImages = [ad1, ad2, ad3];
+const adImages = [
+  {
+    src: ad1,
+    alt: "Affordable dental implant treatment in Vietnam with travel support",
+  },
+  {
+    src: ad2,
+    alt: "Dental tourist package for international patients with quality care",
+  },
+  {
+    src: ad3,
+    alt: "Starting price 12k dental tourism offer for cosmetic dentistry services",
+  },
+];
 
 export default function AdBanner() {
   const [current, setCurrent] = useState(0);
@@ -38,8 +51,8 @@ export default function AdBanner() {
         <AnimatePresence mode="wait">
           <motion.img
             key={current}
-            src={adImages[current]}
-            alt={`Ad ${current + 1}`}
+            src={adImages[current].src}
+            alt={adImages[current].alt}
             className="max-h-full max-w-full object-contain drop-shadow-[0_8px_20px_rgba(0,0,0,0.35)]
                        w-[85%] sm:w-[80%] md:w-[70%] lg:w-[65%] xl:w-[60%]
                        transition-all duration-700"
