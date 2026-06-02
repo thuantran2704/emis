@@ -1,18 +1,39 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import sonContent from '../Translations/bacSonContent';
-import bs0 from '../pics/bs/bs0.png';
-import bs1 from '../pics/bs/bs1.png';
-import bs2 from '../pics/bs/bs2.png';
-import bs3 from '../pics/bs/bs3.png';
-import bs4 from '../pics/bs/bs4.png';
+import bs0 from '../pics/bs/bs0-drson-surgery-implant.png';
+import bs1 from '../pics/bs/bs01-operation-implant-big.png';
+import bs2 from '../pics/bs/bs02-multiple-qualified-doctor-surgery.png';
+import bs3 from '../pics/bs/bs03-care-from-doctors-dedicated-physicians.png';
+import bs4 from '../pics/bs/bs04-beautiful-smile-fulfilled-doctors.png';
 import sonPapers from '../pics/bs/sonPapers.jpg';
 
 export default function SonPage() {
   const language = useSelector((state) => state.language.language);
   const content = sonContent[language];
 
-  const images = [bs0, bs1, bs2, bs3, bs4];
+  const images = [
+    {
+      src: bs0,
+      alt: 'Dr. Son performing dental implant surgery in a modern clinic',
+    },
+    {
+      src: bs1,
+      alt: 'Oral surgeon conducting a precision dental implant operation',
+    },
+    {
+      src: bs2,
+      alt: 'Qualified dental team collaborating during implant treatment',
+    },
+    {
+      src: bs3,
+      alt: 'Dedicated doctors providing caring dental service and patient support',
+    },
+    {
+      src: bs4,
+      alt: 'Patient smiling after successful dental treatment and implant restoration',
+    },
+  ];
 
   return (
     <main className="bg-white">
@@ -35,8 +56,8 @@ export default function SonPage() {
         {/* Featured Image */}
         <div className="my-12 rounded-2xl overflow-hidden shadow-xl">
           <img
-            src={images[0]}
-            alt={content.title}
+            src={images[0].src}
+            alt={images[0].alt}
             className="w-full h-96 object-cover"
           />
         </div>
@@ -108,8 +129,8 @@ export default function SonPage() {
               {images.slice(1).map((img, idx) => (
                 <div key={idx} className="overflow-hidden rounded-xl shadow-lg">
                   <img
-                    src={img}
-                    alt={`${content.title} ${idx + 1}`}
+                    src={img.src}
+                    alt={img.alt}
                     className="w-full h-64 object-cover transition-transform duration-300 hover:scale-105"
                   />
                 </div>
