@@ -5,7 +5,7 @@ import kehongImg from "../pics/ghe-ngoi-nha-khoa-kehong.jpg";
 import hyperlightImg from "../pics/hyperlight.jpg";
 import uvStorageImg from "../pics/uvStorage.jpg";
 import hyundaiImg from "../pics/hyundai.jpg";
-import sterileRoomImg from "../pics/sterileRoom.jpg";
+import sterileRoomImg from "../pics/sterile-room-phong-khu-trung.jpg";
 import { useSelector } from 'react-redux';
 
 export default function Equipment() {

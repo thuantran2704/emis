@@ -4,7 +4,7 @@ import emishall from "../pics/Phong-cho-waiting-room-Emis.jpg";
 import patient1 from "../pics/patient1.jpg";
 import patient2 from "../pics/patient2.jpg";
 import seal from "../pics/sealer.jpg";
-import phongkham from "../pics/phongkham.jpg";
+import phongkham from "../pics/phong-kham.jpg";
 import reception from "../pics/reception.jpg";
 import { useSelector } from 'react-redux';
 const About = () => {
