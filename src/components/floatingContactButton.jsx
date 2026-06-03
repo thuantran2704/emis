@@ -7,12 +7,12 @@ export default function FloatingContactButton() {
   const items = [
     {
       label: "Phone",
-      href: "tel:0919100021",
+      href: "tel:+84919100021",
       icon: <Phone className="h-5 w-5" />,
     },
     {
       label: "Phone 2",
-      href: "tel:0909967649",
+      href: "tel:+84909967649",
       icon: <Phone className="h-5 w-5" />,
     },
     {

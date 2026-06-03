@@ -540,18 +540,18 @@ const CrownAd = () => {
                 <ChevronRight className="w-5 h-5 ml-2" />
               </Link>
               <a
-                href="tel:0919100021"
+                href="tel:+84919100021"
                 className="inline-flex items-center justify-center bg-rose-800 text-white font-bold text-lg py-4 px-8 rounded-full shadow-lg hover:bg-rose-900 transition-all duration-300"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                0919 100 021
+                +84 919 100 021
               </a>
               <a
-                href="tel:0909967649"
+                href="tel:+84909967649"
                 className="inline-flex items-center justify-center bg-rose-800 text-white font-bold text-lg py-4 px-8 rounded-full shadow-lg hover:bg-rose-900 transition-all duration-300"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                0909 967 649
+                +84 909 967 649
               </a>
             </div>
             <p className="text-pink-200 text-sm font-semibold">{content.cta.subtext}</p>
@@ -585,8 +585,8 @@ const CrownAd = () => {
                 <Phone className="w-6 h-6 text-pink-600" />
               </div>
               <h3 className="font-bold text-gray-800 mb-1">Hotline</h3>
-              <p className="text-lg font-bold text-rose-600">0919 100 021</p>
-              <p className="text-lg font-bold text-rose-600">0768 117 068</p>
+              <p className="text-lg font-bold text-rose-600">+84 919 100 021</p>
+              <p className="text-lg font-bold text-rose-600">+84 768 117 068</p>
             </div>
 
             <div className="text-center p-5 bg-fuchsia-50 rounded-xl">
@@ -603,7 +603,9 @@ const CrownAd = () => {
                 www.emisdental.com
               </a>
               <p className="text-gray-500 text-sm mt-1">
-                8:00 – 20:00 {isVI ? "(Tất cả các ngày)" : "(All days)"}
+                {isVI
+                  ? "08:00 – 19:00 (Thứ 2–Thứ 7), 08:00 – 17:00 (Chủ nhật)"
+                  : "08:00 – 19:00 (Mon–Sat), 08:00 – 17:00 (Sun)"}
               </p>
             </div>
           </div>

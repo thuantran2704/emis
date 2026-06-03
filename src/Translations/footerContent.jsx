@@ -6,8 +6,8 @@ const footerContent = {
     contactTitle: "Contact Us",
     address:
       "62B Phạm Ngọc Thạch, Vo Thi Sau Ward, District 3, Ho Chi Minh City, 700000",
-    phone: "091 910 0021",
-    phone2: "090 996 7649",
+    phone: "+84 919 100 021",
+    phone2: "+84 909 967 649",
     email: "Emisdentalclinic@gmail.com",
     connectTitle: "Connect with Us",
     workingHoursTitle: "Working Hours",
@@ -22,8 +22,8 @@ const footerContent = {
     contactTitle: "Liên hệ",
     address:
       "62B Phạm Ngọc Thạch, Phường Võ Thị Sáu, Quận 3, Thành phố Hồ Chí Minh, 700000",
-    phone: "091 910 0021",
-    phone2: "090 996 7649",
+    phone: "+84 919 100 021",
+    phone2: "+84 909 967 649",
 
     email: "Emisdentalclinic@gmail.com",
     connectTitle: "Kết nối với chúng tôi",
@@ -39,12 +39,12 @@ const footerContent = {
     contactTitle: "联系我们",
     address:
       "越南胡志明市第三郡武氏六坊范玉石街62B号，邮编700000",
-    phone: "091 910 0021",
+    phone: "+84 919 100 021",
     email: "Emisdentalclinic@gmail.com",
     connectTitle: "关注我们",
     workingHoursTitle: "营业时间",
     workingHours: "周一至周六：8:00 – 19:00\n周日：8:00 – 17:00",
-    rights: "版权所有。",
+    rights: "版权所有。"
   },
 
   traditional: {
@@ -54,8 +54,8 @@ const footerContent = {
     contactTitle: "聯絡我們",
     address:
       "越南胡志明市第三郡武氏六坊范玉石街62B號，郵編700000",
-    phone: "091 910 0021",
-    phone2: "090 996 7649",
+    phone: "+84 919 100 021",
+    phone2: "+84 909 967 649",
 
     email: "Emisdentalclinic@gmail.com",
     connectTitle: "關注我們",
@@ -71,8 +71,8 @@ const footerContent = {
     contactTitle: "Contactez-nous",
     address:
       "62B Phạm Ngọc Thạch, Quartier Vo Thi Sau, 3e Arrondissement, Hô Chi Minh-Ville, 700000",
-    phone: "091 910 0021",
-    phone2: "090 996 7649",
+    phone: "+84 919 100 021",
+    phone2: "+84 909 967 649",
 
     email: "Emisdentalclinic@gmail.com",
     connectTitle: "Suivez-nous",
@@ -88,8 +88,8 @@ const footerContent = {
     contactTitle: "문의하기",
     address:
       "베트남 호치민시 3군 Vo Thi Sau Ward, Pham Ngoc Thach 62B, 우편번호 700000",
-    phone: "091 910 0021",
-    phone2: "090 996 7649",
+    phone: "+84 919 100 021",
+    phone2: "+84 909 967 649",
     email: "Emisdentalclinic@gmail.com",
     connectTitle: "소셜 미디어",
     workingHoursTitle: "진료 시간",

@@ -175,7 +175,7 @@ const GenAd = () => {
       description:
         "Liên hệ ngay để được tư vấn MIỄN PHÍ và nhận ưu đãi đặc biệt trong tháng 6",
       button: "ĐẶT LỊCH TƯ VẤN MIỄN PHÍ NGAY",
-      hotline: "0919 100 021",
+      hotline: "+84 919 100 021",
       subtext: "Ưu đãi có số lượng giới hạn – Đừng bỏ lỡ cơ hội vàng mùa hè!",
     },
   };
@@ -324,7 +324,7 @@ const GenAd = () => {
       description:
         "Contact us for FREE consultation and receive special June offers",
       button: "BOOK FREE CONSULTATION NOW",
-      hotline: "0919 100 021",
+      hotline: "+84 919 100 021",
       subtext: "Limited offers – Don't miss this summer opportunity!",
     },
   };
@@ -696,8 +696,8 @@ const GenAd = () => {
                 <Phone className="w-6 h-6 text-pink-600" />
               </div>
               <h3 className="font-bold text-gray-800 mb-1">Hotline</h3>
-              <p className="text-lg font-bold text-rose-600">0919 100 021</p>
-              <p className="text-lg font-bold text-rose-600">0768 117 068</p>
+              <p className="text-lg font-bold text-rose-600">+84 919 100 021</p>
+              <p className="text-lg font-bold text-rose-600">+84 768 117 068</p>
             </div>
 
             <div className="text-center p-4">

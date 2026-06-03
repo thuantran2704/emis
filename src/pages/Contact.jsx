@@ -136,15 +136,15 @@ export default function Contact() {
       icon: phoneIcon,
       alt: "Phone",
       label: content.contactInfo.phone,
-      value: "091 910 0021",
-      href: "tel:0919100021"
+      value: "+84 919 100 021",
+      href: "tel:+84919100021"
     },
     {
       icon: phoneIcon,
       alt: "Phone",
       label: content.contactInfo.phone,
-      value: "091 996 7649",
-      href: "tel:0909967649"
+      value: "+84 909 967 649",
+      href: "tel:+84909967649"
     },
     {
       icon: mailIcon,
