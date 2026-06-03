@@ -2,6 +2,7 @@ import { FacebookIcon, Phone, Mail, MapPin } from "lucide-react";
 import zaloIcon from "../pics/zalo.jpg";
 import youtubeLogo from "../pics/youtube-logo.png";
 import linkedinLogo from "../pics/linkedin-logo.png";
+import tiktokLogo from "../pics/tiktok-logo.png";
 import footerContent from "../Translations/footerContent";
 import { useSelector } from 'react-redux';
 export default function Footer() {
@@ -122,6 +123,18 @@ export default function Footer() {
               <img
                 src={linkedinLogo}
                 alt="LinkedIn"
+                className="h-5 w-5 object-contain"
+              />
+            </a>
+            <a
+              href="https://www.tiktok.com/@emisdentalclinic"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 bg-white rounded-full shadow hover:shadow-md transition"
+            >
+              <img
+                src={tiktokLogo}
+                alt="TikTok"
                 className="h-5 w-5 object-contain"
               />
             </a>

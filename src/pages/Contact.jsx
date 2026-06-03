@@ -5,6 +5,7 @@ import facebook from '../pics/facebook.jpg';
 import zaloIcon from '../pics/zalo.jpg';
 import youtubeLogo from '../pics/youtube-logo.png';
 import linkedinLogo from '../pics/linkedin-logo.png';
+import tiktokLogo from '../pics/tiktok-logo.png';
 import Alert from '../components/alert';
 import contactContent from '../Translations/contactContent';
 import ReCAPTCHA from "react-google-recaptcha"; // Add this import
@@ -191,6 +192,13 @@ export default function Contact() {
       label: "LinkedIn",
       value: "http://linkedin.com/company/emis-dental/",
       href: "http://linkedin.com/company/emis-dental/"
+    },
+    {
+      icon: tiktokLogo,
+      alt: "TikTok",
+      label: "TikTok",
+      value: "https://www.tiktok.com/@emisdentalclinic",
+      href: "https://www.tiktok.com/@emisdentalclinic"
     },
   ];
 
