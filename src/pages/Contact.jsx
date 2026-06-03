@@ -175,8 +175,8 @@ export default function Contact() {
       icon: facebook,
       alt: "WhatsApp",
       label: "WhatsApp",
-      value: "https://wa.me/84919100021",
-      href: "https://wa.me/84919100021"
+      value: "https://wa.me/84909967649",
+      href: "https://wa.me/84909967649"
     },
     */
     {

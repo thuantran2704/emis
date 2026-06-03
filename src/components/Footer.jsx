@@ -140,7 +140,7 @@ export default function Footer() {
             </a>
             {/* WhatsApp link placeholder — uncomment when ready
             <a
-              href="https://wa.me/84919100021"
+              href="https://wa.me/84909967649"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 bg-white rounded-full shadow hover:shadow-md transition"
