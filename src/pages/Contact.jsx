@@ -3,6 +3,8 @@ import mailIcon from '../pics/mail.jpg';
 import phoneIcon from '../pics/phone.jpg';
 import facebook from '../pics/facebook.jpg';
 import zaloIcon from '../pics/zalo.jpg';
+import youtubeLogo from '../pics/youtube-logo.png';
+import linkedinLogo from '../pics/linkedin-logo.png';
 import Alert from '../components/alert';
 import contactContent from '../Translations/contactContent';
 import ReCAPTCHA from "react-google-recaptcha"; // Add this import
@@ -166,6 +168,29 @@ export default function Contact() {
       label: content.contactInfo.facebook,
       value: "https://www.facebook.com/nhakhoaquocteemis",
       href: "https://www.facebook.com/nhakhoaquocteemis"
+    },
+    /* WhatsApp placeholder — uncomment when ready
+    {
+      icon: facebook,
+      alt: "WhatsApp",
+      label: "WhatsApp",
+      value: "https://wa.me/84919100021",
+      href: "https://wa.me/84919100021"
+    },
+    */
+    {
+      icon: youtubeLogo,
+      alt: "YouTube",
+      label: "YouTube",
+      value: "https://www.youtube.com/@NhaKhoaEmislogo",
+      href: "https://www.youtube.com/@NhaKhoaEmislogo"
+    },
+    {
+      icon: linkedinLogo,
+      alt: "LinkedIn",
+      label: "LinkedIn",
+      value: "http://linkedin.com/company/emis-dental/",
+      href: "http://linkedin.com/company/emis-dental/"
     },
   ];
 
