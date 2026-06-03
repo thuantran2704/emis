@@ -249,10 +249,16 @@ export default function Contact() {
             </h2>
 
             <ul className="space-y-6 text-[#1f2937]">
-              {contactItems.map((item, index) => (
+              {contactItems.map((item, index) => {
+                const Icon = item.icon;
+                return (
                 <li key={index} className="flex items-start gap-4">
-                  <div className="bg-white p-2 rounded-full">
-                    <img src={item.icon} alt={item.alt} className="h-6 w-6 object-contain" />
+                  <div className="bg-white p-2 rounded-full flex items-center justify-center">
+                    {typeof Icon === 'string' ? (
+                      <img src={Icon} alt={item.alt} className="h-6 w-6 object-contain" />
+                    ) : (
+                      <Icon className="h-6 w-6 text-[#d4af37]" />
+                    )}
                   </div>
                   <div>
                     <h3
@@ -273,7 +279,8 @@ export default function Contact() {
                     </p>
                   </div>
                 </li>
-              ))}
+                );
+              })}
             </ul>
           </div>
 
