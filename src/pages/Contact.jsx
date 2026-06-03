@@ -183,8 +183,8 @@ export default function Contact() {
       icon: youtubeLogo,
       alt: "YouTube",
       label: "YouTube",
-      value: "https://www.youtube.com/@NhaKhoaEmislogo",
-      href: "https://www.youtube.com/@NhaKhoaEmislogo"
+      value: "https://www.youtube.com/@NhaKhoaEmis",
+      href: "https://www.youtube.com/@NhaKhoaEmis"
     },
     {
       icon: linkedinLogo,

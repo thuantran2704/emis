@@ -103,7 +103,7 @@ export default function Footer() {
               />
             </a>
             <a
-              href="https://www.youtube.com/@NhaKhoaEmislogo"
+              href="https://www.youtube.com/@NhaKhoaEmis"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 bg-white rounded-full shadow hover:shadow-md transition"
