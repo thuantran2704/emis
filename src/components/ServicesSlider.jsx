@@ -65,7 +65,16 @@ const ServicesSlider = ({ services, serviceImages, bookNowText }) => {
 
   // Duplicate slides for seamless infinite loop
   const extendedServices = [...services, ...services, ...services];
-  const extendedServiceImages = [...serviceImages, ...serviceImages, ...serviceImages];
+  const extendedServiceImages = [
+    ...serviceImages.srcs,
+    ...serviceImages.srcs,
+    ...serviceImages.srcs,
+  ];
+  const extendedAltTexts = [
+    ...serviceImages.altTexts,
+    ...serviceImages.altTexts,
+    ...serviceImages.altTexts,
+  ];
 
   return (
     <div className="relative w-full overflow-hidden">
@@ -109,6 +118,7 @@ const ServicesSlider = ({ services, serviceImages, bookNowText }) => {
             <ServiceCard
               service={service}
               image={extendedServiceImages[index]}
+              altText={extendedAltTexts[index]}
               bookNowText={bookNowText}
             />
           </div>

@@ -27,16 +27,28 @@ import AdBanner from '../components/AdBanner';
 export default function Home() {
   const language = useSelector((state) => state.language.language);
   const content = homeContent[language] || homeContent.vietnamese;
-  const serviceImages = [
-    { src: generalDentistry, alt: "General dentistry procedures and comprehensive tooth care" },
-    { src: implant, alt: "Dental implant illustration showing tooth replacement solution" },
-    { src: crown, alt: "Dental crown and cosmetic tooth restoration treatment" },
-    { src: invisalign, alt: "Invisalign clear aligners for orthodontic treatment" },
-    { src: aofimplant, alt: "All-on-4 dental implant solution for full mouth restoration" },
-    { src: wisdom, alt: "Wisdom teeth extraction and surgical treatment" },
-    { src: teethwhitening, alt: "Professional teeth whitening cosmetic treatment" },
-    { src: canal, alt: "Root canal endodontic treatment for tooth preservation" },
-  ];
+  const serviceImages = {
+    srcs: [
+      generalDentistry,
+      implant,
+      crown,
+      invisalign,
+      aofimplant,
+      wisdom,
+      teethwhitening,
+      canal,
+    ],
+    altTexts: [
+      'General dentistry procedures and comprehensive tooth care',
+      'Dental implant illustration showing tooth replacement solution',
+      'Dental crown and cosmetic tooth restoration treatment',
+      'Invisalign clear aligners for orthodontic treatment',
+      'All-on-4 dental implant solution for full mouth restoration',
+      'Wisdom teeth extraction and surgical treatment',
+      'Professional teeth whitening cosmetic treatment',
+      'Root canal endodontic treatment for tooth preservation',
+    ],
+  };
   return (
     <main className="min-h-[calc(100vh-4rem)] bg-[#f7f2e7] pt-20">
       {/* SEO Meta Tags */}
@@ -109,7 +121,8 @@ export default function Home() {
 
           <ServicesSlider
             services={content.services}
-            serviceImages={serviceImages}
+            serviceImages={serviceImages.srcs}
+            serviceAltTexts={serviceImages.altTexts}
             bookNowText={content.findout}
           />
         </div>

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const ServiceCard = ({ service, image, bookNowText }) => {
+const ServiceCard = ({ service, image, altText, bookNowText }) => {
   return (
     <div className="w-full flex-shrink-0 px-4" itemScope itemType="https://schema.org/MedicalProcedure">
       <div className="group h-96 [perspective:1000px]">
@@ -11,7 +11,7 @@ const ServiceCard = ({ service, image, bookNowText }) => {
             <div className="h-3/4 overflow-hidden">
               <img 
                 src={image} 
-                alt={`${service.name} service`}
+                alt={altText || `${service.name} service`}
                 className="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
                 loading="lazy"
                 itemProp="image"
@@ -52,6 +52,7 @@ const ServiceCard = ({ service, image, bookNowText }) => {
 ServiceCard.propTypes = {
   service: PropTypes.object.isRequired,
   image: PropTypes.string.isRequired,
+  altText: PropTypes.string,
   bookNowText: PropTypes.string.isRequired
 };
 
