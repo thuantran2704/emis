@@ -6,6 +6,7 @@ import facebook from '../pics/facebook.jpg';
 import zaloIcon from '../pics/zalo.jpg';
 import youtubeLogo from '../pics/youtube-logo.png';
 import linkedinLogo from '../pics/linkedin-logo.png';
+import whatsapp from '../pics/whatsapp-logo.png';
 import tiktokLogo from '../pics/tiktok-logo.png';
 import Alert from '../components/alert';
 import contactContent from '../Translations/contactContent';
@@ -172,7 +173,7 @@ export default function Contact() {
       href: "https://www.facebook.com/nhakhoaquocteemis"
     },
     {
-      icon: facebook,
+      icon: whatsapp,
       alt: "WhatsApp",
       label: "WhatsApp",
       value: "https://wa.me/84909967649",
