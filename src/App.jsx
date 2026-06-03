@@ -36,6 +36,8 @@ function ExternalRedirect({ to }) {
 function AppShell() {
   const location = useLocation();
   const isRedirectRoute = ['/mail', '/drive'].includes(location.pathname);
+  const zohoMailUrl = import.meta.env.VITE_ZOHO_MAIL_URL || 'https://mail.zoho.com';
+  const zohoDriveUrl = import.meta.env.VITE_ZOHO_DRIVE_URL || 'https://workdrive.zoho.com';
   const language = useSelector((state) => state.language.language);
   const dispatch = useDispatch();
 
@@ -74,8 +76,8 @@ function AppShell() {
           <Route path="/crownAd" element={<CrownAd/>}/>
           <Route path="genAd" element={<GenAd/>}/>
           <Route path="/canal" element={<CanalAd />} />
-          <Route path="/mail" element={<ExternalRedirect to="https://mail.zoho.com" />} />
-          <Route path="/drive" element={<ExternalRedirect to="https://workdrive.zoho.com" />} />
+          <Route path="/mail" element={<ExternalRedirect to={zohoMailUrl} />} />
+          <Route path="/drive" element={<ExternalRedirect to={zohoDriveUrl} />} />
           <Route path="*" element={<NotFound />} />
 
         </Routes>
