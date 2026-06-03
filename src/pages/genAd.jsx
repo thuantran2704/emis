@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -575,20 +576,22 @@ const GenAd = () => {
             <div className="w-24 h-1 bg-gradient-to-r from-rose-500 to-fuchsia-500 rounded-full mx-auto"></div>
           </div>
 
-          <div className="flex flex-col md:flex-row gap-4 items-start md:items-center justify-between">
+          <div className="flex flex-col md:flex-row gap-4 items-stretch md:items-center">
             {content.process.steps.map((step, idx) => (
-              <div key={idx} className="flex md:flex-col items-center md:items-center flex-1">
-                <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-rose-500 to-fuchsia-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-4 md:mr-0 md:mb-3">
-                  {step.number}
-                </div>
-                <div className="md:text-center">
-                  <h3 className="font-bold text-gray-800 text-sm">{step.title}</h3>
-                  <p className="text-gray-600 text-xs">{step.description}</p>
+              <Fragment key={idx}>
+                <div className="flex flex-1 min-w-0 items-center md:flex-col md:items-center text-left md:text-center">
+                  <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-rose-500 to-fuchsia-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-4 md:mr-0 md:mb-3">
+                    {step.number}
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-gray-800 text-sm">{step.title}</h3>
+                    <p className="text-gray-600 text-xs">{step.description}</p>
+                  </div>
                 </div>
                 {idx < content.process.steps.length - 1 && (
-                  <ArrowRight className="hidden md:block text-pink-300 mx-2 flex-shrink-0" />
+                  <ArrowRight className="hidden md:block text-pink-300 flex-shrink-0" />
                 )}
-              </div>
+              </Fragment>
             ))}
           </div>
         </div>
