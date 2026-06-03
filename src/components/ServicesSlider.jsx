@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import ServiceCard from './ServiceCard';
 
-const ServicesSlider = ({ services, serviceImages, bookNowText }) => {
+const ServicesSlider = ({ services, serviceImages, serviceAltTexts, bookNowText }) => {
   const [cardsPerView, setCardsPerView] = useState(1);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [transitionEnabled, setTransitionEnabled] = useState(true);
@@ -66,14 +66,14 @@ const ServicesSlider = ({ services, serviceImages, bookNowText }) => {
   // Duplicate slides for seamless infinite loop
   const extendedServices = [...services, ...services, ...services];
   const extendedServiceImages = [
-    ...serviceImages.srcs,
-    ...serviceImages.srcs,
-    ...serviceImages.srcs,
+    ...serviceImages,
+    ...serviceImages,
+    ...serviceImages,
   ];
   const extendedAltTexts = [
-    ...serviceImages.altTexts,
-    ...serviceImages.altTexts,
-    ...serviceImages.altTexts,
+    ...serviceAltTexts,
+    ...serviceAltTexts,
+    ...serviceAltTexts,
   ];
 
   return (
@@ -131,6 +131,7 @@ const ServicesSlider = ({ services, serviceImages, bookNowText }) => {
 ServicesSlider.propTypes = {
   services: PropTypes.array.isRequired,
   serviceImages: PropTypes.array.isRequired,
+  serviceAltTexts: PropTypes.array.isRequired,
   bookNowText: PropTypes.string.isRequired
 };
 
