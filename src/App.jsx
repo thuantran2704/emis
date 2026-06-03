@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
@@ -33,7 +33,9 @@ function ExternalRedirect({ to }) {
   return null;
 }
 
-export default function App() {
+function AppShell() {
+  const location = useLocation();
+  const isRedirectRoute = ['/mail', '/drive'].includes(location.pathname);
   const language = useSelector((state) => state.language.language);
   const dispatch = useDispatch();
 
@@ -48,14 +50,14 @@ export default function App() {
     // then create new website for it
 
   return (
-    <Router>
+    <>
       <Helmet>
         <script type="application/ld+json">
           {schemaMarkup}
         </script>
       </Helmet>
       <div className="min-h-screen bg-[#fdfcf8]">
-        <Navbar language={language} />
+        {!isRedirectRoute && <Navbar language={language} />}
         <Routes>
           <Route path="/" element={<Home  />} />
           <Route path="/contact" element={<Contact  />} />
@@ -77,14 +79,23 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
 
         </Routes>
-        <Footer language={language}/>
-        <FloatingContactButton />
-        <LanguageToggle 
-          currentLanguage={language} 
-          onLanguageChange={handleLanguageChange}  // Now passes the selected language directly
-        />
-        
+        {!isRedirectRoute && <Footer language={language} />}
+        {!isRedirectRoute && <FloatingContactButton />}
+        {!isRedirectRoute && (
+          <LanguageToggle 
+            currentLanguage={language} 
+            onLanguageChange={handleLanguageChange}  // Now passes the selected language directly
+          />
+        )}
       </div>
+    </>
+  );
+}
+
+export default function App() {
+  return (
+    <Router>
+      <AppShell />
     </Router>
   );
 }
