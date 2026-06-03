@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { MapPin } from 'lucide-react';
 import mailIcon from '../pics/mail.jpg';
 import phoneIcon from '../pics/phone.jpg';
 import facebook from '../pics/facebook.jpg';
@@ -198,6 +199,13 @@ export default function Contact() {
       label: "TikTok",
       value: "https://www.tiktok.com/@emisdentalclinic",
       href: "https://www.tiktok.com/@emisdentalclinic"
+    },
+    {
+      icon: MapPin,
+      alt: "Google Reviews",
+      label: "Google Reviews",
+      value: "https://share.google/4ZBUKHr4X2vZxx4Fw",
+      href: "https://share.google/4ZBUKHr4X2vZxx4Fw"
     },
   ];
 
