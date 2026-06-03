@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
@@ -23,6 +24,15 @@ import ImplantAd from './pages/implant.jsx';
 import CrownAd from './pages/crown.jsx';
 import GenAd from './pages/genAd.jsx';
 import CanalAd from './pages/canal.jsx';
+
+function ExternalRedirect({ to }) {
+  useEffect(() => {
+    window.location.replace(to);
+  }, [to]);
+
+  return null;
+}
+
 export default function App() {
   const language = useSelector((state) => state.language.language);
   const dispatch = useDispatch();
@@ -62,8 +72,8 @@ export default function App() {
           <Route path="/crownAd" element={<CrownAd/>}/>
           <Route path="genAd" element={<GenAd/>}/>
           <Route path="/canal" element={<CanalAd />} />
-          <Route path="/mail" element={<Navigate to="https://mail.zoho.com" replace />} />
-          <Route path="/drive" element={<Navigate to="https://workdrive.zoho.com" replace />} />
+          <Route path="/mail" element={<ExternalRedirect to="https://mail.zoho.com" />} />
+          <Route path="/drive" element={<ExternalRedirect to="https://workdrive.zoho.com" />} />
           <Route path="*" element={<NotFound />} />
 
         </Routes>
