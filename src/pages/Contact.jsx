@@ -170,7 +170,6 @@ export default function Contact() {
       value: "https://www.facebook.com/nhakhoaquocteemis",
       href: "https://www.facebook.com/nhakhoaquocteemis"
     },
-    /* WhatsApp placeholder — uncomment when ready
     {
       icon: facebook,
       alt: "WhatsApp",
@@ -178,7 +177,7 @@ export default function Contact() {
       value: "https://wa.me/84909967649",
       href: "https://wa.me/84909967649"
     },
-    */
+
     {
       icon: youtubeLogo,
       alt: "YouTube",

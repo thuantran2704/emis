@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
@@ -62,6 +62,8 @@ export default function App() {
           <Route path="/crownAd" element={<CrownAd/>}/>
           <Route path="genAd" element={<GenAd/>}/>
           <Route path="/canal" element={<CanalAd />} />
+          <Route path="/mail" element={<Navigate to="https://mail.zoho.com" replace />} />
+          <Route path="/drive" element={<Navigate to="https://workdrive.zoho.com" replace />} />
           <Route path="*" element={<NotFound />} />
 
         </Routes>
