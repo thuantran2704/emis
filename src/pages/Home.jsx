@@ -23,10 +23,22 @@ import ContactForm from '../components/ContactForm';
 import { useSelector } from 'react-redux';
 import CustomerReactionsBanner from '../components/CustomerReactionBanner';
 import AdBanner from '../components/AdBanner';
+import ServiceSupportList from '../components/ServiceSupportList';
 
 export default function Home() {
   const language = useSelector((state) => state.language.language);
   const content = homeContent[language] || homeContent.vietnamese;
+  const serviceSupportItems = content.serviceSupportItems || [
+    'Online Consultation',
+    'Send Your X-ray',
+    'WhatsApp Support',
+    'Email Support',
+    'Treatment Timeline',
+    'Follow-up Support',
+  ];
+  const serviceSupportTitle = content.serviceSupportTitle || 'Support & Communication';
+  const serviceSupportIntro = content.serviceSupportIntro || 'Easy communication and clear guidance throughout your care journey.';
+  const serviceSupportNote = content.serviceSupportNote || 'Patients may request communication support in their preferred language whenever possible.';
   const serviceImages = {
     srcs: [
       generalDentistry,
@@ -125,6 +137,20 @@ export default function Home() {
             serviceAltTexts={serviceImages.altTexts}
             bookNowText={content.findout}
           />
+        </div>
+      </section>
+
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="mb-8 text-center md:text-left">
+            <h2 className="inline-block border-b-2 border-[#d4af37] pb-2 text-3xl font-bold text-[#4b4b8f]">
+              {serviceSupportTitle}
+            </h2>
+            <p className="mt-4 max-w-3xl text-base text-[#4b5563] md:text-lg" style={{ fontFamily: "'Cormorant', serif" }}>
+              {serviceSupportIntro}
+            </p>
+          </div>
+          <ServiceSupportList items={serviceSupportItems} note={serviceSupportNote} />
         </div>
       </section>
       <ContactForm/>
