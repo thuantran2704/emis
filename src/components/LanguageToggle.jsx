@@ -50,7 +50,7 @@ export default function LanguageToggle({ variant = 'floating' }) {
         onClick={() => setIsOpen(!isOpen)}
         className={
           isNavbar
-            ? 'inline-flex h-10 items-center justify-center rounded-md border border-[#2a3439]/15 bg-white/95 px-3 text-sm font-semibold text-[#2a3439] shadow-sm transition hover:bg-[#fffaf0]'
+            ? 'inline-flex h-10 items-center justify-center rounded-md border border-[#2a3439]/30 bg-white/95 px-3 text-sm font-semibold text-[#2a3439] shadow-sm outline outline-1 outline-[#d4af37]/60 transition hover:bg-[#fffaf0] hover:outline-[#d4af37] focus:outline-none focus:ring-2 focus:ring-[#d4af37]/40'
             : 'bg-[#d4af37] text-white font-bold h-12 w-12 rounded-full shadow-lg transition-all flex items-center justify-center text-sm hover:bg-[#c19d30]'
         }
         style={{ fontFamily: "'Inter', sans-serif" }}

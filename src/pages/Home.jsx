@@ -162,18 +162,21 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-2">
+          <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-1">
             {(content.faqItems || []).map((item, index) => (
               <details
                 key={`${item.question}-${index}`}
-                className="group rounded-2xl border border-[#eadfc9] bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+                className="group rounded-2xl border border-[#eadfc9] bg-white p-5 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-[#d4af37] hover:shadow-md"
               >
-                <summary className="cursor-pointer list-none text-lg font-semibold text-[#2a3439]" style={{ fontFamily: "'Playfair Display', serif" }}>
-                  {item.question}
+                <summary className="cursor-pointer list-none text-lg font-semibold text-[#2a3439] transition hover:text-[#4b4b8f]" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  <span className="flex items-start justify-between gap-4">
+                    <span>{item.question}</span>
+                    <span className="mt-1 text-[#d4af37] text-xl leading-none">+</span>
+                  </span>
                 </summary>
-                <p className="mt-3 text-sm text-[#4b5563] leading-relaxed md:text-base" style={{ fontFamily: "'Cormorant', serif" }}>
+                <div className="mt-3 rounded-xl bg-[#fffaf0] p-4 text-sm text-[#4b5563] leading-relaxed md:text-base" style={{ fontFamily: "'Cormorant', serif" }}>
                   {item.answer}
-                </p>
+                </div>
               </details>
             ))}
           </div>
