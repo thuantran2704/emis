@@ -43,13 +43,13 @@ const aboutContent = {
         name: 'Dr. Tran Minh Tu',
         role: 'Odonto-Maxillofacial Surgeon',
         description: 'Implant Surgery • Oral Surgery • Full-Mouth Rehabilitation. Currently practicing at Ho Chi Minh City Odonto-Maxillofacial Hospital and EMIS Premium Dental Clinic.',
-        cta: { text: 'Meet Dr. Tu', href: '/dr-son' },
+        cta: { text: 'Contact Us', href: '/contact' },
       },
       {
         name: 'Dr. Nguyen Thi Bich Van',
         role: 'Implant Prosthetics & Restorative Rehabilitation',
         description: 'Focused on restorative treatment, implant-supported rehabilitation, and long-term functional outcomes.',
-        cta: { text: 'Meet Dr. Van', href: '/dr-son' },
+        cta: { text: 'Contact Us', href: '/contact' },
       },
     ],
 
@@ -109,8 +109,8 @@ const aboutContent = {
     teamTitle: 'Đội Ngũ Đồng Hành Cùng Bạn',
     teamIntro: 'Một đội ngũ hướng tới một mục tiêu chung: giúp bệnh nhân khôi phục khả năng ăn nhai, tự tin và chất lượng cuộc sống lâu dài.',
     teamMembers: [
-      { name: 'BS. CKI Trần Minh Tú', role: 'Phẫu thuật Răng Hàm Mặt', description: 'Implant • Tiểu phẫu Răng Hàm Mặt • Phục hồi toàn hàm. Hiện đang công tác tại Bệnh viện Răng Hàm Mặt TP.HCM và EMIS Premium Dental Clinic.', cta: { text: 'Tìm Hiểu BS. Tú', href: '/dr-son' } },
-      { name: 'BS. CKI Nguyễn Thị Bích Vân', role: 'Phục hình Implant & Phục hồi chức năng', description: 'Tập trung vào phục hình Implant, phục hồi chức năng ăn nhai và kết quả lâu dài sau điều trị.', cta: { text: 'Tìm Hiểu BS. Vân', href: '/dr-son' } },
+      { name: 'BS. CKI Trần Minh Tú', role: 'Phẫu thuật Răng Hàm Mặt', description: 'Implant • Tiểu phẫu Răng Hàm Mặt • Phục hồi toàn hàm. Hiện đang công tác tại Bệnh viện Răng Hàm Mặt TP.HCM và EMIS Premium Dental Clinic.', cta: { text: 'Liên Hệ Chúng Tôi', href: '/contact' } },
+      { name: 'BS. CKI Nguyễn Thị Bích Vân', role: 'Phục hình Implant & Phục hồi chức năng', description: 'Tập trung vào phục hình Implant, phục hồi chức năng ăn nhai và kết quả lâu dài sau điều trị.', cta: { text: 'Liên Hệ Chúng Tôi', href: '/contact' } },
     ],
 
     internationalTitle: 'Hỗ Trợ Trước, Trong Và Sau Điều Trị',

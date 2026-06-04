@@ -49,6 +49,30 @@ const About = () => {
         </div>
       </section>
 
+      {/* IMAGE GALLERY (uses images provided) */}
+      <section className="py-8 bg-[#fdfcf8]">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <img src={emishall} alt="Waiting room at EMIS" className="w-full h-48 object-cover" />
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <img src={reception} alt="Reception area at EMIS" className="w-full h-48 object-cover" />
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <img src={patient1} alt="Patient consultation" className="w-full h-48 object-cover" />
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <img src={patient2} alt="Satisfied patient after treatment" className="w-full h-48 object-cover" />
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-lg sm:col-span-2 lg:col-span-1">
+              <img src={seal} alt="Sterilization and materials" className="w-full h-48 object-cover" />
+            </div>
+          </div>
+          <p className="mt-4 text-sm text-[#6b7280]">Images show clinic environment, patient care, and sterilization — arranged responsively for mobile and desktop.</p>
+        </div>
+      </section>
+
       {/* WHY PLANNING MATTERS */}
       <section className="py-16 bg-[#fcfbf8]">
         <div className="max-w-6xl mx-auto px-4">
