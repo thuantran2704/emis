@@ -45,31 +45,14 @@ const About = () => {
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#4b4b8f] mb-6 border-b-2 border-[#d4af37] inline-block pb-2">{content.approachTitle}</h2>
-          <p className="mt-4 text-base text-[#4b5563] md:text-lg" style={{ fontFamily: "'Cormorant', serif" }}>{content.approachText}</p>
-        </div>
-      </section>
-
-      {/* IMAGE GALLERY (uses images provided) */}
-      <section className="py-8 bg-[#fdfcf8]">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="rounded-2xl overflow-hidden shadow-lg">
-              <img src={emishall} alt="Waiting room at EMIS" className="w-full h-48 object-cover" />
+          <div className="grid gap-6 md:grid-cols-2 items-start mt-6">
+            <div>
+              <p className="text-base text-[#4b5563] md:text-lg" style={{ fontFamily: "'Cormorant', serif" }}>{content.approachText}</p>
             </div>
             <div className="rounded-2xl overflow-hidden shadow-lg">
-              <img src={reception} alt="Reception area at EMIS" className="w-full h-48 object-cover" />
-            </div>
-            <div className="rounded-2xl overflow-hidden shadow-lg">
-              <img src={patient1} alt="Patient consultation" className="w-full h-48 object-cover" />
-            </div>
-            <div className="rounded-2xl overflow-hidden shadow-lg">
-              <img src={patient2} alt="Satisfied patient after treatment" className="w-full h-48 object-cover" />
-            </div>
-            <div className="rounded-2xl overflow-hidden shadow-lg sm:col-span-2 lg:col-span-1">
-              <img src={seal} alt="Sterilization and materials" className="w-full h-48 object-cover" />
+              <img src={patient2} alt="Patient care consultation" className="w-full h-64 object-cover" />
             </div>
           </div>
-          <p className="mt-4 text-sm text-[#6b7280]">Images show clinic environment, patient care, and sterilization — arranged responsively for mobile and desktop.</p>
         </div>
       </section>
 
@@ -78,13 +61,18 @@ const About = () => {
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#4b4b8f] mb-6 border-b-2 border-[#d4af37] inline-block pb-2">{content.planningTitle}</h2>
 
-          <div className="grid gap-6 md:grid-cols-2 mt-6">
-            {content.planningBullets.map((b, i) => (
-              <div key={i} className="rounded-2xl bg-white p-6 border border-[#eadfc9] shadow-sm">
-                <h3 className="text-xl font-semibold text-[#4b4b8f] mb-2">{b.title}</h3>
-                <p className="text-sm text-[#4b5563] leading-relaxed">{b.text}</p>
-              </div>
-            ))}
+          <div className="grid gap-6 md:grid-cols-2 mt-6 items-start">
+            <div className="grid gap-6 md:grid-cols-1">
+              {content.planningBullets.map((b, i) => (
+                <div key={i} className="rounded-2xl bg-white p-6 border border-[#eadfc9] shadow-sm">
+                  <h3 className="text-xl font-semibold text-[#4b4b8f] mb-2">{b.title}</h3>
+                  <p className="text-sm text-[#4b5563] leading-relaxed">{b.text}</p>
+                </div>
+              ))}
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <img src={patient1} alt="Clinical treatment planning" className="w-full h-96 object-cover" />
+            </div>
           </div>
         </div>
       </section>
@@ -117,23 +105,28 @@ const About = () => {
 
       {/* TEAM */}
       <section className="py-16 bg-[#fffaf0]">
-        <div className="max-w-6xl mx-auto px-4 text-center">
+        <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#4b4b8f] mb-6 border-b-2 border-[#d4af37] inline-block pb-2">{content.teamTitle}</h2>
-          <p className="max-w-3xl mx-auto text-[#4b5563] mb-8">{content.teamIntro}</p>
+          <p className="max-w-3xl text-[#4b5563] mb-8">{content.teamIntro}</p>
 
-          <div className="grid gap-6 md:grid-cols-2">
-            {content.teamMembers.map((m, idx) => (
-              <div key={idx} className="bg-white rounded-2xl p-6 shadow-sm text-left">
-                <h3 className="text-xl font-semibold text-[#4b4b8f]">{m.name}</h3>
-                <p className="text-sm text-[#4b5563] mb-3 font-medium">{m.role}</p>
-                <p className="text-sm text-[#4b5563]">{m.description}</p>
-                {m.cta && (
-                  <div className="mt-4">
-                    <Link to={m.cta.href} className="inline-block bg-[#d4af37] text-white px-4 py-2 rounded-full text-sm">{m.cta.text}</Link>
-                  </div>
-                )}
-              </div>
-            ))}
+          <div className="grid gap-6 md:grid-cols-2 mt-8">
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <img src={reception} alt="Professional clinic team environment" className="w-full h-80 object-cover" />
+            </div>
+            <div className="space-y-4">
+              {content.teamMembers.map((m, idx) => (
+                <div key={idx} className="bg-white rounded-2xl p-6 shadow-sm text-left">
+                  <h3 className="text-xl font-semibold text-[#4b4b8f]">{m.name}</h3>
+                  <p className="text-sm text-[#4b5563] mb-3 font-medium">{m.role}</p>
+                  <p className="text-sm text-[#4b5563]">{m.description}</p>
+                  {m.cta && (
+                    <div className="mt-4">
+                      <Link to={m.cta.href} className="inline-block bg-[#d4af37] text-white px-4 py-2 rounded-full text-sm hover:bg-[#c19d30]">{m.cta.text}</Link>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -142,13 +135,20 @@ const About = () => {
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#4b4b8f] mb-6 border-b-2 border-[#d4af37] inline-block pb-2">{content.internationalTitle}</h2>
-          <p className="text-[#4b5563] max-w-3xl">{content.internationalIntro}</p>
-
-          <ul className="mt-6 grid md:grid-cols-2 gap-4 text-[#4b5563]">
-            {content.internationalBullets.map((b, i) => (
-              <li key={i} className="bg-[#fffaf0] p-4 rounded-lg border border-[#eadfc9]">{b}</li>
-            ))}
-          </ul>
+          
+          <div className="grid gap-6 md:grid-cols-2 items-start mt-6">
+            <div>
+              <p className="text-[#4b5563] max-w-3xl mb-6">{content.internationalIntro}</p>
+              <ul className="space-y-3 text-[#4b5563]">
+                {content.internationalBullets.map((b, i) => (
+                  <li key={i} className="bg-[#fffaf0] p-3 rounded-lg border border-[#eadfc9]">{b}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <img src={emishall} alt="EMIS clinic waiting room" className="w-full h-80 object-cover" />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -156,11 +156,23 @@ const About = () => {
       <section className="py-16 bg-[#fcfbf8]">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#4b4b8f] mb-6 border-b-2 border-[#d4af37] inline-block pb-2">{content.trustTitle}</h2>
-          <ul className="mt-4 space-y-2 text-[#4b5563]">
-            {content.trustBullets.map((b, i) => (
-              <li key={i}>{b}</li>
-            ))}
-          </ul>
+          
+          <div className="grid gap-6 md:grid-cols-2 items-start mt-6">
+            <div>
+              <p className="text-[#4b5563] mb-4">{content.trustIntro || 'We believe patients should have access to clear information before making treatment decisions.'}</p>
+              <ul className="space-y-2 text-[#4b5563]">
+                {content.trustBullets.map((b, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <span className="text-[#d4af37] mt-1">✓</span>
+                    <span>{b}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <img src={seal} alt="Clinical sterilization and safety protocols" className="w-full h-80 object-cover" />
+            </div>
+          </div>
         </div>
       </section>
 
