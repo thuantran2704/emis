@@ -40,6 +40,15 @@ function AppShell() {
   const language = useSelector((state) => state.language.language);
   const dispatch = useDispatch();
 
+  useEffect(() => {
+    const browserLanguage = navigator.language || navigator.languages?.[0] || '';
+    const normalizedBrowserLanguage = browserLanguage.toLowerCase();
+
+    if (normalizedBrowserLanguage.startsWith('vi')) {
+      dispatch(setLanguage('vietnamese'));
+    }
+  }, [dispatch]);
+
   const handleLanguageChange = (selectedLanguage) => {
     dispatch(setLanguage(selectedLanguage));
   };
