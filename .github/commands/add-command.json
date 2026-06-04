@@ -1,0 +1,23 @@
+{
+  "name": "add-command",
+  "description": "Create a reusable slash command boilerplate for this repo.",
+  "mode": "agent",
+  "behavior": {
+    "goal": "generate a clean command prompt file under .github/prompts/",
+    "style": "concise, implementation-focused, low-token",
+    "workflow": [
+      "identify the desired command name",
+      "validate name and uniqueness",
+      "create or update .github/prompts/<command>.prompt.md",
+      "use the standard reusable template",
+      "keep wording generic and extendable"
+    ]
+  },
+  "output": {
+    "format": [
+      "show the created file path",
+      "state the command purpose in one sentence",
+      "suggest an alternative if the name conflicts"
+    ]
+  }
+}

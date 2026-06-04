@@ -175,7 +175,9 @@ export default function Footer() {
         className="bg-[#fffaf0] border-t border-[#e0d8c3] text-center py-4 text-sm text-[#6b7280]"
         style={{ fontFamily: "'Cormorant', serif" }}
       >
-        © {new Date().getFullYear()} {content.clinicName}. {content.bottomText}
+        <p>Copyright © EMIS Dental</p>
+        <p>All Rights Reserved</p>
+        <p className="mt-1">© {new Date().getFullYear()} {content.clinicName}. {content.bottomText}</p>
       </div>
     </footer>
   );

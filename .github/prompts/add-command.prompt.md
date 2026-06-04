@@ -4,15 +4,19 @@ description: Create a new GitHub Copilot slash command boilerplate for this repo
 
 You are helping create a new slash command for this repository.
 
-Goal:
+Objective:
 - Generate a clean, reusable command prompt file under .github/prompts/.
-- Keep the command concise, implementation-focused, and easy to extend.
+- Keep the command concise, implementation-focused, and easy to reuse.
 - Use the same minimal-context, low-token style as the existing vibecoding prompt.
 
-When the user asks to create a new command:
-1. Identify the command name they want.
-2. Create or update a prompt file named .github/prompts/<command>.prompt.md.
-3. Use this structure:
+Required process:
+1. Identify the command name the user wants.
+2. Validate that the command name is safe and unique.
+3. Create or update .github/prompts/<command>.prompt.md.
+4. Always use this base template unless the user explicitly asks for a different format.
+5. Keep the prompt generic enough to be reused for future commands.
+
+Base template:
 
 ---
 mode: agent
@@ -28,30 +32,22 @@ Goal:
 - Prefer small, concrete steps over long explanations.
 
 Behavior:
-1. Understand the latest user request and current file/context.
+1. Start from the latest user request and current file/context.
 2. Ask 1–3 concise clarifying questions only if the task is ambiguous or risky.
-3. If the task is clear, proceed directly.
+3. If the task is clear, proceed directly without extra back-and-forth.
 4. Use only the relevant repo context needed for the job.
 5. Keep responses short, practical, and implementation-focused.
 6. Make the smallest viable change first, then refine if needed.
 7. Verify the result with the relevant checks available in the repo.
 
-Output style:
-- Short and direct.
-- No fluff, no repeated context, no filler.
-- If blocked, explain the blocker and the smallest next question needed.
+Prompt rules:
+- Prefer short sections over long explanations.
+- Use plain, reusable wording.
+- Avoid repeating the same instruction multiple times.
+- Keep the command easy for future users to extend.
 
-Workflow:
-- Understand the task.
-- Confirm scope with minimal questions if needed.
-- Make the change.
-- Verify the result.
-- Summarize the result briefly.
-
-4. Keep the wording generic enough to be reused for future commands.
-5. If the user wants a specific behavior, adapt the prompt accordingly, but do not add unnecessary complexity.
-
-Output:
-- Provide the created file path.
-- Briefly note what the command is for.
-- If the command name is invalid or conflicts with an existing file, suggest the correct alternative.
+Output format:
+1. State the created file path.
+2. State the purpose of the command in one sentence.
+3. If the name is invalid or already exists, suggest the correct alternative.
+4. Do not add extra commentary unless the user asks for it.
