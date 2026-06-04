@@ -121,7 +121,19 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="mb-8 text-center md:text-left">
+            <h2 className="inline-block border-b-2 border-[#d4af37] pb-2 text-3xl font-bold text-[#4b4b8f]">
+              {serviceSupportTitle}
+            </h2>
+            <p className="mt-4 max-w-3xl text-base text-[#4b5563] md:text-lg" style={{ fontFamily: "'Cormorant', serif" }}>
+              {serviceSupportIntro}
+            </p>
+          </div>
+          <ServiceSupportList items={serviceSupportItems} note={serviceSupportNote} />
+        </div>
+      </section>
       {/* Ad Banner */}
       <AdBanner/>
       {/* Services Section */}
@@ -140,19 +152,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="mb-8 text-center md:text-left">
-            <h2 className="inline-block border-b-2 border-[#d4af37] pb-2 text-3xl font-bold text-[#4b4b8f]">
-              {serviceSupportTitle}
-            </h2>
-            <p className="mt-4 max-w-3xl text-base text-[#4b5563] md:text-lg" style={{ fontFamily: "'Cormorant', serif" }}>
-              {serviceSupportIntro}
-            </p>
-          </div>
-          <ServiceSupportList items={serviceSupportItems} note={serviceSupportNote} />
-        </div>
-      </section>
       <ContactForm/>
 
       {/* Implant Section */}
