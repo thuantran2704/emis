@@ -151,7 +151,34 @@ export default function Home() {
           />
         </div>
       </section>
+      <section className="py-16 bg-[#fffaf0]">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="mb-8 text-center md:text-left">
+            <h2 className="inline-block border-b-2 border-[#d4af37] pb-2 text-3xl font-bold text-[#4b4b8f]">
+              {content.faqTitle || 'Frequently Asked Questions'}
+            </h2>
+            <p className="mt-4 max-w-3xl text-base text-[#4b5563] md:text-lg" style={{ fontFamily: "'Cormorant', serif" }}>
+              {content.faqDescription || 'Helpful answers about our clinic, treatments, and communication support.'}
+            </p>
+          </div>
 
+          <div className="grid gap-4 md:grid-cols-2">
+            {(content.faqItems || []).map((item, index) => (
+              <details
+                key={`${item.question}-${index}`}
+                className="group rounded-2xl border border-[#eadfc9] bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+              >
+                <summary className="cursor-pointer list-none text-lg font-semibold text-[#2a3439]" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  {item.question}
+                </summary>
+                <p className="mt-3 text-sm text-[#4b5563] leading-relaxed md:text-base" style={{ fontFamily: "'Cormorant', serif" }}>
+                  {item.answer}
+                </p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
       <ContactForm/>
 
       {/* Implant Section */}

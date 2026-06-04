@@ -4,6 +4,26 @@ export const homeContent = {
     heroHighlight: "Dental",
     heroSubtitle: "Experience comprehensive dental services with our expert team.",
     servicesTitle: "ORAL HEALTH SERVICES",
+    faqTitle: "Frequently Asked Questions",
+    faqDescription: "Helpful answers about our clinic, treatments, and communication support.",
+    faqItems: [
+      {
+        question: "What dental services does EMIS Dental provide?",
+        answer: "We offer general dentistry, implants, crowns, Invisalign, whitening, root canal treatment, and follow-up support."
+      },
+      {
+        question: "Can I request support in my preferred language?",
+        answer: "Yes, patients may request communication support in their preferred language whenever possible."
+      },
+      {
+        question: "How do I send my X-ray for consultation?",
+        answer: "You can share your X-ray and records through our online consultation or email support channels for faster assessment."
+      },
+      {
+        question: "Do you provide a treatment timeline?",
+        answer: "Yes, we explain the treatment stages, expected visits, and follow-up care clearly from the beginning."
+      }
+    ],
     serviceSupportTitle: "Support & Communication",
     serviceSupportIntro: "Easy communication and clear guidance throughout your treatment journey.",
     serviceSupportItems: [
@@ -99,6 +119,26 @@ export const homeContent = {
     heroHighlight: "Nha Khoa",
     heroSubtitle: "Trải nghiệm dịch vụ nha khoa toàn diện với đội ngũ chuyên gia của chúng tôi.",
     servicesTitle: "DỊCH VỤ CHĂM SÓC RĂNG MIỆNG",
+    faqTitle: "Câu Hỏi Thường Gặp",
+    faqDescription: "Những câu trả lời hữu ích về phòng khám, dịch vụ điều trị và hỗ trợ giao tiếp.",
+    faqItems: [
+      {
+        question: "EMIS Dental cung cấp những dịch vụ nha khoa nào?",
+        answer: "Chúng tôi cung cấp nha khoa tổng quát, cấy ghép implant, mão sứ, Invisalign, tẩy trắng, điều trị tủy răng và hỗ trợ theo dõi."
+      },
+      {
+        question: "Tôi có thể yêu cầu hỗ trợ bằng ngôn ngữ ưu tiên của mình không?",
+        answer: "Có, bệnh nhân có thể yêu cầu hỗ trợ giao tiếp bằng ngôn ngữ ưa thích khi có thể."
+      },
+      {
+        question: "Làm thế nào để gửi X-quang để được tư vấn?",
+        answer: "Bạn có thể gửi X-quang và hồ sơ qua tư vấn trực tuyến hoặc email hỗ trợ để được đánh giá nhanh hơn."
+      },
+      {
+        question: "Bạn có cung cấp lộ trình điều trị không?",
+        answer: "Có, chúng tôi giải thích rõ từng giai đoạn điều trị, số lượt hẹn và hỗ trợ theo dõi từ đầu."
+      }
+    ],
     serviceSupportTitle: "Hỗ Trợ & Giao Tiếp",
     serviceSupportIntro: "Giao tiếp dễ dàng và hướng dẫn rõ ràng trong suốt hành trình điều trị của bạn.",
     serviceSupportItems: [
@@ -194,6 +234,26 @@ export const homeContent = {
     heroHighlight: "牙科",
     heroSubtitle: "体验我们专家团队提供的全面牙科服务。",
     servicesTitle: "口腔健康服务",
+    faqTitle: "常见问题",
+    faqDescription: "关于诊所、治疗服务和沟通支持的实用解答。",
+    faqItems: [
+      {
+        question: "EMIS 牙科提供哪些牙科服务？",
+        answer: "我们提供普通牙科、种植牙、牙冠、隐适美、美白、根管治疗以及随访支持。"
+      },
+      {
+        question: "我可以用自己喜欢的语言获取支持吗？",
+        answer: "可以，患者如有需要，可尽量以其偏好的语言获得沟通支持。"
+      },
+      {
+        question: "我如何发送 X 光片进行咨询？",
+        answer: "您可以通过在线咨询或电子邮件支持渠道发送 X 光片和病历，以便更快地评估。"
+      },
+      {
+        question: "您是否提供治疗时间表？",
+        answer: "是的，我们会从一开始就清楚说明治疗阶段、预约次数和后续照护。"
+      }
+    ],
     serviceSupportTitle: "支持与沟通",
     serviceSupportIntro: "在整个治疗过程中保持顺畅沟通并获得清晰指导。",
     serviceSupportItems: [
@@ -288,6 +348,26 @@ export const homeContent = {
     heroHighlight: "치과",
     heroSubtitle: "전문가 팀과 함께하는 종합 치과 서비스를 경험해보세요.",
     servicesTitle: "구강 건강 서비스",
+    faqTitle: "자주 묻는 질문",
+    faqDescription: "클리닉, 치료 서비스, 소통 지원에 대한 실질적인 답변입니다.",
+    faqItems: [
+      {
+        question: "EMIS 치과는 어떤 치과 서비스를 제공하나요?",
+        answer: "일반 치과, 임플란트, 치관, 인비절라인, 미백, 신경 치료와 추후 관리 지원을 제공합니다."
+      },
+      {
+        question: "선호하는 언어로 지원을 받을 수 있나요?",
+        answer: "네, 환자는 가능한 경우 선호 언어로 의사소통 지원을 요청할 수 있습니다."
+      },
+      {
+        question: "X-ray를 보내려면 어떻게 해야 하나요?",
+        answer: "온라인 상담이나 이메일 지원 채널을 통해 X-ray와 진료 기록을 보내시면 더 빠르게 평가할 수 있습니다."
+      },
+      {
+        question: "치료 일정도 제공하나요?",
+        answer: "네, 치료 단계, 예상 방문 횟수, 추후 관리까지 처음부터 명확하게 안내해 드립니다."
+      }
+    ],
     serviceSupportTitle: "지원 및 소통",
     serviceSupportIntro: "치료 과정 전반에 걸쳐 쉬운 소통과 명확한 안내를 제공합니다.",
     serviceSupportItems: [
@@ -384,6 +464,26 @@ export const homeContent = {
     heroHighlight: "牙科",
     heroSubtitle: "體驗我們專家團隊提供的全面牙科服務。",
     servicesTitle: "口腔健康服務",
+    faqTitle: "常見問題",
+    faqDescription: "關於診所、治療服務和溝通支援的實用解答。",
+    faqItems: [
+      {
+        question: "EMIS 牙科提供哪些牙科服務？",
+        answer: "我們提供普通牙科、植牙、牙冠、隱適美、美白、根管治療以及追蹤支援。"
+      },
+      {
+        question: "我可以用自己偏好的語言獲得支援嗎？",
+        answer: "可以，患者如有需要，可盡量以其偏好的語言獲得溝通支援。"
+      },
+      {
+        question: "我如何傳送 X 光片進行諮詢？",
+        answer: "您可以透過線上諮詢或電子郵件支援管道傳送 X 光片與病歷，以便更快評估。"
+      },
+      {
+        question: "您是否提供治療時間表？",
+        answer: "是的，我們會從一開始就清楚說明治療階段、預計回診次數和後續照護。"
+      }
+    ],
     serviceSupportTitle: "支援與溝通",
     serviceSupportIntro: "在整個治療過程中保持順暢溝通並獲得清晰指導。",
     serviceSupportItems: [
@@ -479,6 +579,26 @@ export const homeContent = {
     heroHighlight: "Dentaires",
     heroSubtitle: "Découvrez des services dentaires complets avec notre équipe d'experts.",
     servicesTitle: "SERVICES DE SANTÉ BUCCO-DENTAIRE",
+    faqTitle: "Questions Fréquemment Posées",
+    faqDescription: "Des réponses utiles sur notre clinique, nos traitements et notre accompagnement de communication.",
+    faqItems: [
+      {
+        question: "Quels services dentaires propose EMIS Dental ?",
+        answer: "Nous proposons la dentisterie générale, les implants, les couronnes, Invisalign, le blanchiment, le traitement de canal et le suivi."
+      },
+      {
+        question: "Puis-je demander un support dans ma langue préférée ?",
+        answer: "Oui, les patients peuvent demander un soutien de communication dans leur langue préférée si possible."
+      },
+      {
+        question: "Comment envoyer ma radiographie pour consultation ?",
+        answer: "Vous pouvez partager vos radiographies et dossiers via notre consultation en ligne ou notre support par e-mail pour une évaluation plus rapide."
+      },
+      {
+        question: "Proposez-vous un déroulé de traitement ?",
+        answer: "Oui, nous expliquons clairement les étapes du traitement, les visites prévues et le suivi dès le début."
+      }
+    ],
     serviceSupportTitle: "Support & Communication",
     serviceSupportIntro: "Une communication fluide et des conseils clairs tout au long de votre parcours de soins.",
     serviceSupportItems: [
