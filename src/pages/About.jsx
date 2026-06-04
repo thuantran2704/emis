@@ -1,120 +1,170 @@
-import React from "react";
-import aboutContent from "../Translations/aboutContent";
-import emishall from "../pics/Phong-cho-waiting-room-Emis.jpg";
-import patient1 from "../pics/patient1.jpg";
-import patient2 from "../pics/patient2.jpg";
-import seal from "../pics/sealer.jpg";
-import phongkham from "../pics/phong-kham.jpg";
-import reception from "../pics/reception.jpg";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import aboutContent from '../Translations/aboutContent';
+import emishall from '../pics/Phong-cho-waiting-room-Emis.jpg';
+import patient1 from '../pics/patient1.jpg';
+import patient2 from '../pics/patient2.jpg';
+import seal from '../pics/sealer.jpg';
+import phongkham from '../pics/phong-kham.jpg';
+import reception from '../pics/reception.jpg';
 import { useSelector } from 'react-redux';
+import { Helmet } from 'react-helmet';
+
 const About = () => {
   const language = useSelector((state) => state.language.language);
-  const content = aboutContent[language];
+  const content = aboutContent[language] || aboutContent.vietnamese;
 
   return (
-    <div
-      className="pt-28 px-6 md:px-12 lg:px-24 max-w-5xl mx-auto text-gray-800"
-      style={{ fontFamily: "'Playfair Display', serif" }}
-    >
-      <h1 className="text-5xl font-extrabold text-center mb-14 tracking-tight leading-tight">
-        <span className="underline decoration-yellow-300 decoration-[3px] underline-offset-[10px]">
-          {content.title}
-        </span>
-      </h1>
+    <main className="min-h-[calc(100vh-4rem)] bg-[#f7f2e7] pt-20">
+      <Helmet>
+        <title>{content.metaTitle || content.heroTitle}</title>
+        <meta name="description" content={content.metaDescription || ''} />
+      </Helmet>
 
-      {/* Section 1: Introduction */}
-      <p className="text-lg md:text-xl leading-relaxed text-justify whitespace-pre-line mb-10 text-gray-700">
-        {content.introParagraph}
-      </p>
+      {/* HERO */}
+      <section className="py-24 px-4 max-w-6xl mx-auto text-center">
+        <h1 className="text-4xl md:text-5xl font-bold text-[#4b4b8f] mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+          {content.heroTitle}
+        </h1>
+        <p className="text-lg md:text-xl text-[#6b7280] mb-8 max-w-3xl mx-auto" style={{ fontFamily: "'Cormorant', serif" }}>
+          {content.heroSubtitle}
+        </p>
 
-      <div className="my-12">
-        <img
-          src={reception}
-          alt="Modern dental reception area at Emis Dental clinic with welcoming staff"
-          className="rounded-2xl shadow-lg mx-auto max-w-full h-auto transition-transform duration-300 hover:scale-[1.02]"
-        />
-        <h2 className="text-xl md:text-2xl font-semibold text-center mt-4 text-gray-600">
-          {content.receptionSubtitle}
-        </h2>
-      </div>
+        <div className="flex items-center justify-center gap-4">
+          <Link to="/contact" className="inline-block bg-[#d4af37] hover:bg-[#c19d30] text-white font-bold py-3 px-8 rounded-full transition text-lg shadow-md" style={{ fontFamily: "'Playfair Display', serif" }}>
+            {content.primaryCTA}
+          </Link>
 
-      {/* Section 2: Philosophy */}
-      <p className="text-lg md:text-xl leading-relaxed text-justify whitespace-pre-line mb-10 text-gray-700">
-        {content.philosophy}
-      </p>
-
-      <div className="my-12">
-        <img
-          src={phongkham}
-          alt="Professional dental treatment room with modern equipment and comfortable patient chair"
-          className="rounded-2xl shadow-lg mx-auto max-w-full h-auto transition-transform duration-300 hover:scale-[1.02]"
-        />
-        <h2 className="text-xl md:text-2xl font-semibold text-center mt-4 text-gray-600">
-          {content.clinicSubtitle}
-        </h2>
-      </div>
-
-      {/* Section 3: Care & Comfort */}
-      <p className="text-lg md:text-xl leading-relaxed text-justify whitespace-pre-line mb-10 text-gray-700">
-        {content.careSection}
-      </p>
-
-      <div className="my-12">
-        <img
-          src={patient1}
-          alt="Caring dentist providing professional patient treatment and consultation"
-          className="rounded-2xl shadow-lg mx-auto max-w-full h-auto transition-transform duration-300 hover:scale-[1.02]"
-        />
-        <h2 className="text-xl md:text-2xl font-semibold text-center mt-4 text-gray-600">
-          {content.patientSubtitle1}
-        </h2>
-      </div>
-
-      {/* Section 4: Modern Treatment */}
-      <p className="text-lg md:text-xl leading-relaxed text-justify whitespace-pre-line mb-10 text-gray-700">
-        {content.techSection}
-      </p>
-
-      <div className="my-12">
-        <img
-          src={seal}
-          alt="Dental treatment materials and professional sealant equipment for oral care"
-          className="rounded-2xl shadow-lg mx-auto max-w-full h-auto transition-transform duration-300 hover:scale-[1.02]"
-        />
-        <h2 className="text-xl md:text-2xl font-semibold text-center mt-4 text-gray-600">
-          {content.techSubtitle}
-        </h2>
-      </div>
-
-      {/* Section 5: Patient Experience */}
-      <p className="text-lg md:text-xl leading-relaxed text-justify whitespace-pre-line mb-10 text-gray-700">
-        {content.experienceSection}
-      </p>
-
-      <div className="my-12">
-        <img
-          src={patient2}
-          alt="Satisfied patient smiling after successful dental treatment and restoration"
-          className="rounded-2xl shadow-lg mx-auto max-w-full h-auto transition-transform duration-300 hover:scale-[1.02]"
-        />
-        <h2 className="text-xl md:text-2xl font-semibold text-center mt-4 text-gray-600">
-          {content.patientSubtitle2}
-        </h2>
-      </div>
-
-
-      {/* Mission Section */}
-      {content.mission && (
-        <div className="bg-yellow-50 border border-yellow-200 px-8 py-8 rounded-2xl shadow-sm mb-12">
-          <h2 className="text-2xl font-bold mb-4 text-yellow-700 tracking-wide">
-            {content.missionTitle}
-          </h2>
-          <p className="text-base md:text-lg leading-relaxed text-gray-700 whitespace-pre-line">
-            {content.mission}
-          </p>
+          <Link to="/dr-son" className="inline-block bg-white border border-[#d4af37] text-[#4b4b8f] font-semibold py-3 px-6 rounded-full shadow-sm hover:shadow-md">
+            {content.secondaryCTA}
+          </Link>
         </div>
-      )}
-    </div>
+      </section>
+
+      {/* OUR APPROACH */}
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-[#4b4b8f] mb-6 border-b-2 border-[#d4af37] inline-block pb-2">{content.approachTitle}</h2>
+          <p className="mt-4 text-base text-[#4b5563] md:text-lg" style={{ fontFamily: "'Cormorant', serif" }}>{content.approachText}</p>
+        </div>
+      </section>
+
+      {/* WHY PLANNING MATTERS */}
+      <section className="py-16 bg-[#fcfbf8]">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-[#4b4b8f] mb-6 border-b-2 border-[#d4af37] inline-block pb-2">{content.planningTitle}</h2>
+
+          <div className="grid gap-6 md:grid-cols-2 mt-6">
+            {content.planningBullets.map((b, i) => (
+              <div key={i} className="rounded-2xl bg-white p-6 border border-[#eadfc9] shadow-sm">
+                <h3 className="text-xl font-semibold text-[#4b4b8f] mb-2">{b.title}</h3>
+                <p className="text-sm text-[#4b5563] leading-relaxed">{b.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* TECHNOLOGY & SAFETY */}
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-[#4b4b8f] mb-6 border-b-2 border-[#d4af37] inline-block pb-2">{content.technologyTitle}</h2>
+
+          <div className="grid gap-6 md:grid-cols-2 mt-6 items-start">
+            <div>
+              <p className="text-base text-[#4b5563] md:text-lg" style={{ fontFamily: "'Cormorant', serif" }}>{content.technologyIntro}</p>
+
+              <ul className="mt-4 space-y-2 text-[#4b5563]">
+                {content.technologyBullets.map((t, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <span className="text-[#d4af37] mt-1">•</span>
+                    <span>{t}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <img src={phongkham} alt={content.technologyImageAlt || 'Clinical treatment room'} className="w-full h-64 object-cover" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* TEAM */}
+      <section className="py-16 bg-[#fffaf0]">
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-[#4b4b8f] mb-6 border-b-2 border-[#d4af37] inline-block pb-2">{content.teamTitle}</h2>
+          <p className="max-w-3xl mx-auto text-[#4b5563] mb-8">{content.teamIntro}</p>
+
+          <div className="grid gap-6 md:grid-cols-2">
+            {content.teamMembers.map((m, idx) => (
+              <div key={idx} className="bg-white rounded-2xl p-6 shadow-sm text-left">
+                <h3 className="text-xl font-semibold text-[#4b4b8f]">{m.name}</h3>
+                <p className="text-sm text-[#4b5563] mb-3 font-medium">{m.role}</p>
+                <p className="text-sm text-[#4b5563]">{m.description}</p>
+                {m.cta && (
+                  <div className="mt-4">
+                    <Link to={m.cta.href} className="inline-block bg-[#d4af37] text-white px-4 py-2 rounded-full text-sm">{m.cta.text}</Link>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SUPPORT FOR OVERSEAS */}
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-[#4b4b8f] mb-6 border-b-2 border-[#d4af37] inline-block pb-2">{content.internationalTitle}</h2>
+          <p className="text-[#4b5563] max-w-3xl">{content.internationalIntro}</p>
+
+          <ul className="mt-6 grid md:grid-cols-2 gap-4 text-[#4b5563]">
+            {content.internationalBullets.map((b, i) => (
+              <li key={i} className="bg-[#fffaf0] p-4 rounded-lg border border-[#eadfc9]">{b}</li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* TRUST & TRANSPARENCY */}
+      <section className="py-16 bg-[#fcfbf8]">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-[#4b4b8f] mb-6 border-b-2 border-[#d4af37] inline-block pb-2">{content.trustTitle}</h2>
+          <ul className="mt-4 space-y-2 text-[#4b5563]">
+            {content.trustBullets.map((b, i) => (
+              <li key={i}>{b}</li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* START STEPS */}
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-[#4b4b8f] mb-6">{content.startTitle}</h2>
+
+          <div className="mt-8 grid md:grid-cols-3 gap-6">
+            {content.steps.map((s, i) => (
+              <div key={i} className="rounded-2xl p-6 bg-[#fffaf0] border border-[#eadfc9] shadow-sm">
+                <div className="text-2xl font-bold text-[#d4af37] mb-2">{s.step}</div>
+                <div className="font-semibold text-lg text-[#4b4b8f] mb-2">{s.title}</div>
+                <p className="text-sm text-[#4b5563]">{s.text}</p>
+              </div>
+            ))}
+          </div>
+
+          <p className="mt-6 text-sm text-[#6b7280]">{content.note}</p>
+
+          <div className="mt-8 flex items-center justify-center gap-4">
+            <Link to="/contact" className="inline-block bg-[#d4af37] text-white px-6 py-3 rounded-full font-semibold">{content.primaryCTA}</Link>
+            <Link to="/contact" className="inline-block bg-white border border-[#d4af37] px-6 py-3 rounded-full font-semibold">{content.secondaryContactCTA || 'Talk With Our Team'}</Link>
+          </div>
+        </div>
+      </section>
+
+    </main>
   );
 };
 

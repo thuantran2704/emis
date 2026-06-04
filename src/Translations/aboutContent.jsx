@@ -1,116 +1,134 @@
 const aboutContent = {
   english: {
-    title: "About Our Clinic",
-    introParagraph:
-      "Welcome to our dental clinic, where modern care meets traditional values. Our dedicated team is committed to delivering exceptional dental services in a welcoming and comfortable environment. From the moment you walk in, we focus on building trust and making sure every visit is a positive one.",
-    receptionSubtitle: "Welcoming Reception",
-    philosophy:
-      "Our philosophy centers around personalized care. We believe every smile is unique, and so is our approach. Whether you're here for a routine checkup or a complete transformation, we tailor every treatment to your specific needs.",
-    clinicSubtitle: "Clean & Calm Clinic",
-    careSection:
-      "Cleanliness and calmness are at the core of our clinic design. From natural light to minimal décor, everything is chosen to ease your mind and bring peace to your visit.",
-    patientSubtitle1: "Patient Satisfaction",
-    techSection:
-      "We invest in cutting-edge technology to provide safer, faster, and more precise treatments. From digital X-rays to modern sterilization, every detail is handled with care.",
-    techSubtitle: "Trusted Technology",
-    experienceSection:
-      "At our clinic, we believe that dental visits should leave a lasting impression, not just through excellent results, but through the warmth and sincerity of care you experience. From the front desk to the treatment room, every interaction is designed to make you feel safe, heard, and valued. Patients often leave with a sense of ease, knowing they’ve been truly cared for, not just treated.",
-    patientSubtitle2: "A Lasting Impression",
+    metaTitle: 'About EMIS — Implant & Full-Mouth Rehabilitation',
+    heroTitle: 'Advanced Implant & Full-Mouth Rehabilitation Care',
+    heroSubtitle:
+      'At EMIS, we help patients restore comfort, function, and confidence through carefully planned implant and rehabilitation treatment. Whether you live in Vietnam or overseas, our goal is to help you understand your situation clearly and explore treatment options with greater confidence.',
+    primaryCTA: 'Send Your X-ray',
+    secondaryCTA: 'Meet Our Doctors',
+
+    approachTitle: 'Treatment Begins With Understanding',
+    approachText:
+      'Every patient comes with different concerns, goals, and expectations. Before discussing treatment options, we focus on understanding your condition, listening to your concerns, and helping you see what may be appropriate for your situation. We believe confident decisions begin with clear understanding.',
+
+    planningTitle: 'Careful Planning Before Treatment',
+    planningBullets: [
+      {
+        title: 'Clinical Assessment',
+        text: 'Understanding your current oral condition and treatment needs.',
+      },
+      {
+        title: '3D Imaging Evaluation',
+        text: 'Evaluating anatomy, bone structure, and clinical considerations.',
+      },
+      {
+        title: 'Treatment Planning',
+        text: 'Creating a personalized treatment pathway.',
+      },
+      {
+        title: 'Long-Term Considerations',
+        text: 'Planning for function, stability, and long-term outcomes.',
+      },
+    ],
+
+    technologyTitle: 'Supporting Better Decisions',
+    technologyIntro: 'Modern technology helps clinicians evaluate, plan, and deliver treatment with greater clarity and precision. Patient safety and treatment quality remain central to every stage of care.',
+    technologyBullets: ['3D CBCT Imaging', 'Digital Treatment Planning', 'Dedicated Implant Room', 'Sterilization Protocols'],
+    technologyImageAlt: '3D CBCT imaging and clinical implant environment',
+
+    teamTitle: 'The Team Behind Your Care',
+    teamIntro: 'A team working toward one goal: helping patients regain comfort, function, confidence, and long-term quality of life.',
+    teamMembers: [
+      {
+        name: 'Dr. Tran Minh Tu',
+        role: 'Odonto-Maxillofacial Surgeon',
+        description: 'Implant Surgery • Oral Surgery • Full-Mouth Rehabilitation. Currently practicing at Ho Chi Minh City Odonto-Maxillofacial Hospital and EMIS Premium Dental Clinic.',
+        cta: { text: 'Meet Dr. Tu', href: '/dr-son' },
+      },
+      {
+        name: 'Dr. Nguyen Thi Bich Van',
+        role: 'Implant Prosthetics & Restorative Rehabilitation',
+        description: 'Focused on restorative treatment, implant-supported rehabilitation, and long-term functional outcomes.',
+        cta: { text: 'Meet Dr. Van', href: '/dr-son' },
+      },
+    ],
+
+    internationalTitle: 'Support Before, During, And After Treatment',
+    internationalIntro: 'Many patients travel to Vietnam specifically for implant or rehabilitation treatment. To help make the process clearer and more manageable, EMIS provides support before, during, and after your visit.',
+    internationalBullets: [
+      'Online Consultation',
+      'Preliminary X-ray Review',
+      'Treatment Timeline Planning',
+      'Remote Follow-Up Support',
+      'Language Assistance When Needed',
+    ],
+
+    trustTitle: 'Building Confidence Through Clarity',
+    trustBullets: [
+      'Clinic License Information',
+      'Doctor Profiles & Credentials',
+      'Verified Google Maps Location',
+      'Official Communication Channels (WhatsApp, Email)',
+    ],
+
+    startTitle: 'What Happens Next?',
+    steps: [
+      { step: 'Step 1', title: 'Send Your X-ray', text: 'Send your X-ray so we can perform a preliminary assessment.' },
+      { step: 'Step 2', title: 'Receive A Preliminary Assessment', text: 'We provide an initial review and outline possible options.' },
+      { step: 'Step 3', title: 'Discuss Your Treatment Options', text: 'A detailed discussion to help you choose an appropriate pathway.' },
+    ],
+    note: 'A preliminary assessment helps us better understand your situation. Final treatment recommendations require an in-person examination and appropriate diagnostic imaging.',
+    primaryCTA: 'Send Your X-ray',
+    secondaryContactCTA: 'Talk With Our Team',
   },
 
   vietnamese: {
-    title: "Về Phòng Khám",
-    introParagraph:
-      "Chào mừng bạn đến với phòng khám nha khoa của chúng tôi, nơi kết hợp giữa chăm sóc hiện đại và giá trị truyền thống. Đội ngũ tận tâm của chúng tôi cam kết mang đến dịch vụ nha khoa tuyệt vời trong môi trường thân thiện và thoải mái. Ngay từ lần đầu tiên, chúng tôi tập trung vào việc xây dựng niềm tin và tạo nên trải nghiệm tích cực cho mọi lần thăm khám.",
-    receptionSubtitle: "Tiếp Đón Thân Thiện",
-    philosophy:
-      "Triết lý của chúng tôi là chăm sóc cá nhân hoá. Mỗi nụ cười là duy nhất, và cách tiếp cận của chúng tôi cũng vậy. Dù bạn chỉ khám định kỳ hay cần điều trị toàn diện, chúng tôi luôn điều chỉnh phù hợp với nhu cầu của bạn.",
-    clinicSubtitle: "Phòng Khám Sạch & Yên Tĩnh",
-    careSection:
-      "Sự sạch sẽ và yên tĩnh là nền tảng trong thiết kế của chúng tôi. Từ ánh sáng tự nhiên đến nội thất tối giản, mọi chi tiết đều được lựa chọn để bạn cảm thấy nhẹ nhàng và an tâm.",
-    patientSubtitle1: "Bệnh Nhân Hài Lòng",
-    techSection:
-      "Chúng tôi đầu tư vào công nghệ tiên tiến để mang lại sự an toàn, nhanh chóng và chính xác. Từ X-quang kỹ thuật số đến hệ thống tiệt trùng hiện đại, từng chi tiết đều được chăm chút.",
-    techSubtitle: "Công Nghệ Đáng Tin Cậy",
-    experienceSection:
-      "Tại phòng khám của chúng tôi, mỗi lần thăm khám không chỉ là điều trị, mà còn là trải nghiệm đầy ấm áp và chân thành. Từ lễ tân đến ghế điều trị, từng tương tác đều được thiết kế để bạn cảm thấy an tâm, được lắng nghe và trân trọng. Nhiều bệnh nhân rời đi không chỉ với kết quả tốt, mà còn với cảm giác thực sự được quan tâm, không chỉ là một ca bệnh.",
-    patientSubtitle2: "Ấn Tượng Khó Quên",
-  },
+    metaTitle: 'Về EMIS — Implant & Phục Hồi Toàn Hàm',
+    heroTitle: 'Chuyên Sâu Implant & Phục Hồi Toàn Hàm',
+    heroSubtitle:
+      'Tại EMIS, chúng tôi tập trung vào Implant và phục hồi toàn hàm nhằm giúp bệnh nhân khôi phục khả năng ăn nhai, sự tự tin và chất lượng cuộc sống lâu dài. Dù bạn đang sinh sống tại Việt Nam hay ở nước ngoài, chúng tôi mong muốn giúp bạn hiểu rõ sức khỏe răng miệng của mình và có đủ thông tin trước khi đưa ra lựa chọn.',
+    primaryCTA: 'Gửi X-ray Của Bạn',
+    secondaryCTA: 'Tìm Hiểu Đội Ngũ Bác Sĩ',
 
-  korean: {
-    title: "치과 소개",
-    introParagraph:
-      "저희 치과는 현대적인 진료와 전통적인 가치가 조화를 이루는 곳입니다. 전문적인 팀이 환영받는 분위기에서 최고의 진료를 제공합니다. 첫 방문부터 신뢰를 쌓고 긍정적인 경험을 만드는 것이 저희의 목표입니다.",
-    receptionSubtitle: "환영하는 리셉션",
-    philosophy:
-      "저희는 환자 맞춤형 치료를 중요하게 생각합니다. 모든 미소는 특별하며, 치료도 그래야 한다고 믿습니다. 정기 검진이든, 복합적인 치료든, 각 환자에 맞게 최적화된 접근을 제공합니다.",
-    clinicSubtitle: "깨끗하고 평온한 진료실",
-    careSection:
-      "자연광과 미니멀한 인테리어로 설계된 저희 공간은 마음의 평화를 제공합니다. 청결과 안정감은 저희 치과의 핵심입니다.",
-    patientSubtitle1: "환자 만족도",
-    techSection:
-      "디지털 X-ray, 현대식 멸균 시스템 등 최첨단 기술로 보다 안전하고 빠르며 정확한 치료를 보장합니다.",
-    techSubtitle: "신뢰할 수 있는 기술력",
-    experienceSection:
-      "저희 치과는 치료뿐만 아니라, 따뜻한 마음과 진심 어린 배려로 기억에 남는 경험을 제공합니다. 리셉션부터 진료까지 모든 과정에서 환자가 편안함과 존중을 느낄 수 있도록 합니다. 진료를 넘어 진심으로 돌봄을 받았다는 느낌을 받을 수 있습니다.",
-    patientSubtitle2: "기억에 남는 진료",
-  },
+    approachTitle: 'Điều Trị Bắt Đầu Từ Sự Thấu Hiểu',
+    approachText:
+      'Mỗi bệnh nhân đều có một mối quan tâm, nhu cầu và mục tiêu khác nhau. Trước khi xây dựng kế hoạch điều trị, chúng tôi dành thời gian để lắng nghe, đánh giá kỹ lưỡng và giúp bệnh nhân hiểu rõ những vấn đề mình đang gặp phải. Chúng tôi tin rằng những quyết định đúng đắn luôn bắt đầu từ sự thấu hiểu.',
 
-  traditional: {
-    title: "關於我們的診所",
-    introParagraph:
-      "歡迎來到我們的牙科診所，在這裡，現代化的醫療與傳統價值交織。我們致力於在舒適溫馨的環境中提供最優質的牙科護理服務。從踏入診所的那一刻起，我們就致力於讓每一次看診都成為一次愉快的體驗。",
-    receptionSubtitle: "溫馨接待區",
-    philosophy:
-      "我們堅持量身訂做的治療理念。每個笑容都是獨特的，因此我們的治療方式也是如此。無論是例行檢查還是全面矯正，我們都會根據您的需求做出最佳安排。",
-    clinicSubtitle: "乾淨安靜的診所環境",
-    careSection:
-      "診所設計強調潔淨與平靜，從自然光線到極簡裝潢，每一處細節都為了讓您感到安心與放鬆。",
-    patientSubtitle1: "病患滿意度",
-    techSection:
-      "我們投資於先進技術，以確保安全、快速、精準的治療效果，從數位X光到現代化消毒程序，細節無微不至。",
-    techSubtitle: "信賴的科技",
-    experienceSection:
-      "我們相信，看牙不只是醫療行為，更是情感的連結。從前台到診間，每一次互動都充滿溫度與誠意，讓您不僅被治療，更被關心。許多患者都帶著輕鬆與安心的心情離開，因為他們知道自己真的被在乎。",
-    patientSubtitle2: "溫暖的記憶",
-  },
+    planningTitle: 'Đánh Giá Kỹ Trước Khi Điều Trị',
+    planningBullets: [
+      { title: 'Đánh Giá Tình Trạng Hiện Tại', text: 'Đánh giá sức khỏe răng miệng hiện tại và những nhu cầu cần được giải quyết.' },
+      { title: 'Chẩn Đoán Hình Ảnh 3D', text: 'Đánh giá cấu trúc xương, giải phẫu và các yếu tố chuyên môn liên quan.' },
+      { title: 'Lập Kế Hoạch Điều Trị', text: 'Xây dựng hướng điều trị dựa trên từng trường hợp cụ thể.' },
+      { title: 'Mục Tiêu Dài Hạn', text: 'Hướng tới khả năng ăn nhai ổn định, thẩm mỹ tự nhiên và kết quả lâu dài.' },
+    ],
 
-  simplified: {
-    title: "关于我们的诊所",
-    introParagraph:
-      "欢迎来到我们的牙科诊所，在这里，现代护理与传统价值观融合。我们致力于在舒适温馨的环境中为您提供优质的牙科服务。从踏入诊所的那一刻起，我们注重建立信任，让每次就诊都成为积极的体验。",
-    receptionSubtitle: "温馨接待区",
-    philosophy:
-      "我们以个性化护理为核心理念。每个微笑都是独一无二的，我们的治疗方式也如此。不论是常规检查还是全面治疗，我们都会根据您的需求量身定制。",
-    clinicSubtitle: "干净安静的诊所环境",
-    careSection:
-      "我们的诊所设计强调清洁与平静，从自然光线到简约装修，每一个细节都旨在让您放松安心。",
-    patientSubtitle1: "患者满意度",
-    techSection:
-      "我们引进尖端科技，确保治疗更安全、更高效、更精准。从数字X光到现代消毒系统，我们注重每一处细节。",
-    techSubtitle: "值得信赖的技术",
-    experienceSection:
-      "在我们的诊所，看牙不仅仅是治疗，更是温暖与真诚的体验。从前台到诊疗室，每一次互动都致力于让您感到被尊重、被倾听、被关心。患者们常常带着安心的心情离开，因为他们知道自己得到了真正的照顾。",
-    patientSubtitle2: "令人回味的体验",
-  },
+    technologyTitle: 'Công Nghệ & An Toàn',
+    technologyIntro: 'Công nghệ giúp quá trình đánh giá, lập kế hoạch và điều trị trở nên chính xác và dễ dự đoán hơn. Sự an toàn và chất lượng điều trị luôn được đặt lên hàng đầu trong mọi giai đoạn chăm sóc.',
+    technologyBullets: ['Chẩn Đoán Hình Ảnh CBCT 3D', 'Lập Kế Hoạch Điều Trị Bằng Công Nghệ Số', 'Phòng Implant Riêng Biệt', 'Quy Trình Vô Trùng & Kiểm Soát Nhiễm Khuẩn'],
 
-  french: {
-    title: "À propos de notre clinique",
-    introParagraph:
-      "Bienvenue dans notre clinique dentaire, où les soins modernes rencontrent des valeurs humaines. Notre équipe s’engage à offrir des services dentaires exceptionnels dans un environnement chaleureux et accueillant. Dès votre arrivée, nous mettons tout en œuvre pour instaurer la confiance et garantir une expérience positive.",
-    receptionSubtitle: "Accueil Chaleureux",
-    philosophy:
-      "Notre philosophie repose sur des soins personnalisés. Chaque sourire est unique, tout comme notre approche. Qu’il s’agisse d’un simple contrôle ou d’un traitement complet, nous adaptons chaque soin à vos besoins.",
-    clinicSubtitle: "Clinique Propre & Apaisante",
-    careSection:
-      "La propreté et la sérénité sont au cœur de la conception de notre clinique. La lumière naturelle et un décor minimaliste sont pensés pour apaiser l’esprit.",
-    patientSubtitle1: "Satisfaction des Patients",
-    techSection:
-      "Nous investissons dans les technologies de pointe pour offrir des traitements plus sûrs, plus rapides et plus précis. Des radiographies numériques à la stérilisation moderne, chaque étape est rigoureuse.",
-    techSubtitle: "Technologie de Confiance",
-    experienceSection:
-      "Chez nous, chaque visite dentaire est conçue pour marquer les esprits, non seulement grâce aux résultats, mais aussi par la chaleur humaine que vous ressentez. De l’accueil à la salle de soins, tout est pensé pour que vous vous sentiez en sécurité, écouté et valorisé.",
-    patientSubtitle2: "Une Expérience Inoubliable",
+    teamTitle: 'Đội Ngũ Đồng Hành Cùng Bạn',
+    teamIntro: 'Một đội ngũ hướng tới một mục tiêu chung: giúp bệnh nhân khôi phục khả năng ăn nhai, tự tin và chất lượng cuộc sống lâu dài.',
+    teamMembers: [
+      { name: 'BS. CKI Trần Minh Tú', role: 'Phẫu thuật Răng Hàm Mặt', description: 'Implant • Tiểu phẫu Răng Hàm Mặt • Phục hồi toàn hàm. Hiện đang công tác tại Bệnh viện Răng Hàm Mặt TP.HCM và EMIS Premium Dental Clinic.', cta: { text: 'Tìm Hiểu BS. Tú', href: '/dr-son' } },
+      { name: 'BS. CKI Nguyễn Thị Bích Vân', role: 'Phục hình Implant & Phục hồi chức năng', description: 'Tập trung vào phục hình Implant, phục hồi chức năng ăn nhai và kết quả lâu dài sau điều trị.', cta: { text: 'Tìm Hiểu BS. Vân', href: '/dr-son' } },
+    ],
+
+    internationalTitle: 'Hỗ Trợ Trước, Trong Và Sau Điều Trị',
+    internationalIntro: 'Nhiều bệnh nhân lựa chọn trở về Việt Nam để làm Implant hoặc phục hồi toàn hàm. Chúng tôi cố gắng giúp quá trình này trở nên thuận tiện và rõ ràng hơn thông qua việc chuẩn bị trước và hỗ trợ xuyên suốt hành trình điều trị.',
+    internationalBullets: ['Tư Vấn Trực Tuyến', 'Đánh Giá X-ray Ban Đầu', 'Lập Kế Hoạch Theo Thời Gian Lưu Trú', 'Theo Dõi Từ Xa Sau Điều Trị', 'Hỗ Trợ Ngôn Ngữ Khi Cần'],
+
+    trustTitle: 'Minh Bạch & Đáng Tin Cậy',
+    trustBullets: ['Giấy Phép Hoạt Động', 'Hồ Sơ & Bằng Cấp Bác Sĩ', 'Google Maps & Địa Chỉ Phòng Khám', 'Kênh Liên Hệ Chính Thức (WhatsApp, Email)'],
+
+    startTitle: 'Bắt Đầu Từ Việc Hiểu Rõ Trường Hợp Của Bạn',
+    steps: [
+      { step: 'Bước 1', title: 'Gửi X-ray', text: 'Gửi X-ray hoặc chia sẻ thông tin về trường hợp của bạn.' },
+      { step: 'Bước 2', title: 'Nhận đánh giá sơ bộ', text: 'Nhận đánh giá sơ bộ từ đội ngũ EMIS.' },
+      { step: 'Bước 3', title: 'Trao đổi về lựa chọn điều trị', text: 'Cùng trao đổi về những lựa chọn có thể phù hợp với nhu cầu và mong muốn của bạn.' },
+    ],
+    note: 'Đánh giá ban đầu giúp chúng tôi hiểu rõ hơn về trường hợp bạn. Kế hoạch điều trị cuối cùng sẽ được xác định sau khi thăm khám trực tiếp và thực hiện đầy đủ các chẩn đoán cần thiết.',
+    primaryCTA: 'Gửi X-ray Của Bạn',
+    secondaryContactCTA: 'Trao Đổi Với Đội Ngũ EMIS',
   },
 };
 
