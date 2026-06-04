@@ -82,22 +82,22 @@ const About = () => {
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#4b4b8f] mb-6 border-b-2 border-[#d4af37] inline-block pb-2">{content.technologyTitle}</h2>
 
-          <div className="grid gap-6 md:grid-cols-2 mt-6 items-start">
-            <div>
-              <p className="text-base text-[#4b5563] md:text-lg" style={{ fontFamily: "'Cormorant', serif" }}>{content.technologyIntro}</p>
+          <div className="grid gap-8 md:grid-cols-2 items-center mt-6">
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <img src={phongkham} alt={content.technologyImageAlt || 'Clinical treatment room'} className="w-full h-auto object-cover" />
+            </div>
 
-              <ul className="mt-4 space-y-2 text-[#4b5563]">
+            <div>
+              <p className="text-base text-[#4b5563] md:text-lg mb-6" style={{ fontFamily: "'Cormorant', serif" }}>{content.technologyIntro}</p>
+
+              <ul className="space-y-3 text-[#4b5563]">
                 {content.technologyBullets.map((t, idx) => (
                   <li key={idx} className="flex items-start gap-3">
-                    <span className="text-[#d4af37] mt-1">•</span>
+                    <span className="text-[#d4af37] font-bold">●</span>
                     <span>{t}</span>
                   </li>
                 ))}
               </ul>
-            </div>
-
-            <div className="rounded-2xl overflow-hidden shadow-lg">
-              <img src={phongkham} alt={content.technologyImageAlt || 'Clinical treatment room'} className="w-full h-64 object-cover" />
             </div>
           </div>
         </div>
@@ -109,9 +109,9 @@ const About = () => {
           <h2 className="text-3xl font-bold text-[#4b4b8f] mb-6 border-b-2 border-[#d4af37] inline-block pb-2">{content.teamTitle}</h2>
           <p className="max-w-3xl text-[#4b5563] mb-8">{content.teamIntro}</p>
 
-          <div className="grid gap-6 md:grid-cols-2 mt-8">
+          <div className="grid gap-8 md:grid-cols-2 items-center mt-8">
             <div className="rounded-2xl overflow-hidden shadow-lg">
-              <img src={reception} alt="Professional clinic team environment" className="w-full h-80 object-cover" />
+              <img src={reception} alt="Professional clinic team environment" className="w-full h-auto object-cover" />
             </div>
             <div className="space-y-4">
               {content.teamMembers.map((m, idx) => (
@@ -136,7 +136,7 @@ const About = () => {
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#4b4b8f] mb-6 border-b-2 border-[#d4af37] inline-block pb-2">{content.internationalTitle}</h2>
           
-          <div className="grid gap-6 md:grid-cols-2 items-start mt-6">
+          <div className="grid gap-8 md:grid-cols-2 items-center mt-6">
             <div>
               <p className="text-[#4b5563] max-w-3xl mb-6">{content.internationalIntro}</p>
               <ul className="space-y-3 text-[#4b5563]">
@@ -146,7 +146,7 @@ const About = () => {
               </ul>
             </div>
             <div className="rounded-2xl overflow-hidden shadow-lg">
-              <img src={emishall} alt="EMIS clinic waiting room" className="w-full h-80 object-cover" />
+              <img src={emishall} alt="EMIS clinic waiting room" className="w-full h-auto object-cover" />
             </div>
           </div>
         </div>
@@ -157,20 +157,20 @@ const About = () => {
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-[#4b4b8f] mb-6 border-b-2 border-[#d4af37] inline-block pb-2">{content.trustTitle}</h2>
           
-          <div className="grid gap-6 md:grid-cols-2 items-start mt-6">
+          <div className="grid gap-8 md:grid-cols-2 items-center mt-6">
             <div>
-              <p className="text-[#4b5563] mb-4">{content.trustIntro || 'We believe patients should have access to clear information before making treatment decisions.'}</p>
-              <ul className="space-y-2 text-[#4b5563]">
+              <p className="text-[#4b5563] mb-6">{content.trustIntro || 'We believe patients should have access to clear information before making treatment decisions.'}</p>
+              <ul className="space-y-3 text-[#4b5563]">
                 {content.trustBullets.map((b, i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    <span className="text-[#d4af37] mt-1">✓</span>
+                  <li key={i} className="flex items-start gap-3">
+                    <span className="text-[#d4af37] font-bold">✓</span>
                     <span>{b}</span>
                   </li>
                 ))}
               </ul>
             </div>
             <div className="rounded-2xl overflow-hidden shadow-lg">
-              <img src={seal} alt="Clinical sterilization and safety protocols" className="w-full h-80 object-cover" />
+              <img src={seal} alt="Clinical sterilization and safety protocols" className="w-full h-auto object-cover" />
             </div>
           </div>
         </div>
