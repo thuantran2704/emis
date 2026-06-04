@@ -205,8 +205,8 @@ export default function Contact() {
       icon: googleMaplogo,
       alt: "Google Reviews",
       label: "Google Reviews",
-      value: "https://share.google/4ZBUKHr4X2vZxx4Fw",
-      href: "https://share.google/4ZBUKHr4X2vZxx4Fw"
+      value: "Google Business",
+      href: "https://maps.app.goo.gl/8T1cPtEKUBe6wLFz9"
     },
   ];
 

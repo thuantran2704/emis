@@ -264,7 +264,7 @@ export default function Home() {
       <section className="py-8 bg-[#fffaf0]">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <a
-            href="https://share.google/4ZBUKHr4X2vZxx4Fw"
+            href="https://maps.app.goo.gl/8T1cPtEKUBe6wLFz9"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-full bg-[#d4af37] px-6 py-3 text-white font-semibold shadow-md transition hover:bg-[#c19d30] hover:shadow-lg"
