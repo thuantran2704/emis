@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import logo from '../pics/logo.jpg';
 import navbarContent from '../Translations/navbarContent';
 import { useSelector } from 'react-redux';
+import LanguageToggle from './LanguageToggle';
 
 export default function Navbar() {
   const language = useSelector((state) => state.language.language);
@@ -182,10 +183,17 @@ export default function Navbar() {
               >
                 {content.contact}
               </Link>
+
+              <div className="ml-2">
+                <LanguageToggle variant="navbar" />
+              </div>
             </div>
 
             {/* Mobile Toggle */}
-            <div className="md:hidden flex items-center">
+            <div className="md:hidden flex items-center gap-2">
+              <div className="hidden sm:block">
+                <LanguageToggle variant="navbar" />
+              </div>
               <button onClick={toggleMenu} className="text-[#2a3439]">
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   {isMenuOpen ? (
@@ -329,6 +337,10 @@ export default function Navbar() {
             >
               {content.contact}
             </Link>
+
+            <div className="px-3 py-2 sm:hidden">
+              <LanguageToggle variant="navbar" />
+            </div>
           </div>
         </div>
       </nav>

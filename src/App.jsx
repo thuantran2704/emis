@@ -4,7 +4,6 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
-import LanguageToggle from './components/LanguageToggle';
 import About from './pages/About';
 import Services from './pages/Services';
 import { useSelector, useDispatch } from 'react-redux'
@@ -83,12 +82,6 @@ function AppShell() {
         </Routes>
         {!isRedirectRoute && <Footer language={language} />}
         {!isRedirectRoute && <FloatingContactButton />}
-        {!isRedirectRoute && (
-          <LanguageToggle 
-            currentLanguage={language} 
-            onLanguageChange={handleLanguageChange}  // Now passes the selected language directly
-          />
-        )}
       </div>
     </>
   );

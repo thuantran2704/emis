@@ -2,9 +2,10 @@ import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setLanguage } from '../slices/languageSlice';
 
-export default function LanguageToggle() {
+export default function LanguageToggle({ variant = 'floating' }) {
   const [isOpen, setIsOpen] = useState(false);
   const dispatch = useDispatch();
+  const isNavbar = variant === 'navbar';
 
   const currentLanguage = useSelector((state) => state.language.language);
 
@@ -23,9 +24,9 @@ export default function LanguageToggle() {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className={isNavbar ? 'relative' : 'fixed bottom-6 right-6 z-50'}>
       {isOpen && (
-        <div className="absolute bottom-full right-0 mb-2 w-12 bg-white rounded-t-lg rounded-b-sm shadow-lg overflow-hidden border border-[#d4af37] border-b-0">
+        <div className={`absolute ${isNavbar ? 'top-full right-0 mt-2' : 'bottom-full right-0 mb-2'} w-14 overflow-hidden rounded-lg border border-[#d4af37] bg-white shadow-lg`}>
           <div className="overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
             {languages.map((lang) => (
               <button
@@ -45,10 +46,13 @@ export default function LanguageToggle() {
         </div>
       )}
 
-      <button 
+      <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`bg-[#d4af37] text-white font-bold h-12 w-12 rounded-full shadow-lg transition-all flex items-center justify-center text-sm
-          ${isOpen ? 'rounded-t-none rounded-b-full' : 'hover:bg-[#c19d30]'}`}
+        className={
+          isNavbar
+            ? 'inline-flex h-10 items-center justify-center rounded-md border border-[#2a3439]/15 bg-white/95 px-3 text-sm font-semibold text-[#2a3439] shadow-sm transition hover:bg-[#fffaf0]'
+            : 'bg-[#d4af37] text-white font-bold h-12 w-12 rounded-full shadow-lg transition-all flex items-center justify-center text-sm hover:bg-[#c19d30]'
+        }
         style={{ fontFamily: "'Inter', sans-serif" }}
       >
         {isOpen ? (
