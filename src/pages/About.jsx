@@ -83,8 +83,8 @@ const About = () => {
           <h2 className="text-3xl font-bold text-[#4b4b8f] mb-6 border-b-2 border-[#d4af37] inline-block pb-2">{content.technologyTitle}</h2>
 
           <div className="grid gap-8 md:grid-cols-2 items-center mt-6">
-            <div className="rounded-2xl overflow-hidden shadow-lg">
-              <img src={phongkham} alt={content.technologyImageAlt || 'Clinical treatment room'} className="w-full h-auto object-cover" />
+            <div className="rounded-2xl overflow-hidden shadow-lg h-96">
+              <img src={phongkham} alt={content.technologyImageAlt || 'Clinical treatment room'} className="w-full h-full object-cover object-center" />
             </div>
 
             <div>
@@ -110,8 +110,8 @@ const About = () => {
           <p className="max-w-3xl text-[#4b5563] mb-8">{content.teamIntro}</p>
 
           <div className="grid gap-8 md:grid-cols-2 items-center mt-8">
-            <div className="rounded-2xl overflow-hidden shadow-lg">
-              <img src={reception} alt="Professional clinic team environment" className="w-full h-auto object-cover" />
+            <div className="rounded-2xl overflow-hidden shadow-lg h-96">
+              <img src={reception} alt="Professional clinic team environment" className="w-full h-full object-cover object-center" />
             </div>
             <div className="space-y-4">
               {content.teamMembers.map((m, idx) => (
@@ -145,8 +145,8 @@ const About = () => {
                 ))}
               </ul>
             </div>
-            <div className="rounded-2xl overflow-hidden shadow-lg">
-              <img src={emishall} alt="EMIS clinic waiting room" className="w-full h-auto object-cover" />
+            <div className="rounded-2xl overflow-hidden shadow-lg h-96">
+              <img src={emishall} alt="EMIS clinic waiting room" className="w-full h-full object-cover object-center" />
             </div>
           </div>
         </div>
@@ -169,8 +169,8 @@ const About = () => {
                 ))}
               </ul>
             </div>
-            <div className="rounded-2xl overflow-hidden shadow-lg">
-              <img src={seal} alt="Clinical sterilization and safety protocols" className="w-full h-auto object-cover" />
+            <div className="rounded-2xl overflow-hidden shadow-lg h-96">
+              <img src={seal} alt="Clinical sterilization and safety protocols" className="w-full h-full object-cover object-center" />
             </div>
           </div>
         </div>
