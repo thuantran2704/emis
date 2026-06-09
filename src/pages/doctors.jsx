@@ -278,7 +278,7 @@ const Doctors = () => {
     <img
         src={consultationImage}
         alt=""
-        className="absolute inset-0 w-full h-full object-cover opacity-10"
+        className="absolute inset-0 w-full h-full object-cover opacity-20"
     />
 
     <div className="relative max-w-7xl mx-auto px-6">
