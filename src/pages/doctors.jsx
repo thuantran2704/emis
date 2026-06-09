@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet';
 import drTuPortrait from '../pics/dr-tu-potrait.jpg';
 import doctorsContent from '../Translations/doctorsContent';
 import patient2 from '../pics/patient2.jpg';
-
+import consultationImage from '../pics/dr-x-ray-consultation.jpg';
 const Doctors = () => {
   const language = useSelector((state) => state.language.language);
   const content = doctorsContent[language] || doctorsContent.english;
@@ -270,6 +270,114 @@ const Doctors = () => {
         </div>
 
     </div>
+    </section>
+        {/* DECISION SECTION */}
+    <section className="relative py-28 overflow-hidden bg-white">
+
+    <img
+        src={consultationImage}
+        alt=""
+        className="absolute inset-0 w-full h-full object-cover opacity-10"
+    />
+
+    <div className="relative max-w-7xl mx-auto px-6">
+
+        <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-16 items-start">
+
+        {/* LEFT */}
+        <div>
+
+            <p
+            className="uppercase tracking-[0.25em] text-[#C5AF73] mb-4 text-sm font-semibold"
+            style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+            >
+            {content.decisionSection.eyebrow}
+            </p>
+
+            <h2
+            className="text-4xl md:text-5xl text-[#2a3439] leading-tight mb-6"
+            style={{ fontFamily: "'Playfair Display', serif" }}
+            >
+            {content.decisionSection.title}
+            </h2>
+
+            <p
+            className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8"
+            style={{ fontFamily: "'Cormorant', serif" }}
+            >
+            {content.decisionSection.subtitle}
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+
+            <Link
+                to="/contact"
+                className="px-8 py-4 rounded-full bg-[#d4af37] text-white font-semibold hover:bg-[#c19d30] transition text-center"
+                style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+            >
+                {content.decisionSection.primaryCTA}
+            </Link>
+
+            <Link
+                to="/contact"
+                className="px-8 py-4 rounded-full border border-[#d4af37] text-[#2a3439] hover:bg-white transition text-center"
+                style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+            >
+                {content.decisionSection.secondaryCTA}
+            </Link>
+
+            </div>
+
+            <p
+            className="uppercase tracking-[0.2em] text-[#C5AF73] mb-6 text-sm font-semibold"
+            style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+            >
+            {content.decisionSection.stepsTitle}
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-4 mb-10">
+
+            {content.decisionSection.steps.map((step, index) => (
+                <div
+                key={index}
+                className="bg-[#f7f2e7] rounded-3xl p-6"
+                >
+                <p
+                    className="text-[#C5AF73] text-sm tracking-[0.2em] mb-4 font-semibold"
+                    style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+                >
+                    {step.number}
+                </p>
+
+                <h3
+                    className="text-xl text-[#2a3439]"
+                    style={{ fontFamily: "'Playfair Display', serif" }}
+                >
+                    {step.title}
+                </h3>
+                </div>
+            ))}
+
+            </div>
+
+            <p
+            className="text-sm text-gray-500 leading-relaxed"
+            style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+            >
+            {content.decisionSection.note}
+            </p>
+
+        </div>
+
+        {/* RIGHT */}
+        <div className="bg-white rounded-3xl shadow-xl p-2">
+            <ContactForm />
+        </div>
+
+        </div>
+
+    </div>
+
     </section>
     </main>
   );
