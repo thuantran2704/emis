@@ -20,6 +20,36 @@ const doctorsContent = {
       primaryCTA: 'Send Your X-ray',
       secondaryCTA: 'Discuss Your Situation',
     },
+
+    journeySection: {
+      eyebrow: 'TREATMENT JOURNEY',
+
+      title: 'Different Expertise. One Treatment Journey.',
+
+      subtitle:
+        'Successful treatment is rarely the work of one person alone. Depending on the case, different members of the team may be involved in diagnosis, surgery, restoration, and follow-up care. Together, we aim to provide a treatment experience that is coordinated, personalized, and focused on long-term outcomes.',
+    },
+
+    journeyCards: [
+      {
+        number: '01',
+        title: 'Diagnosis & Planning',
+        description:
+          'Understanding the condition and creating a treatment roadmap.',
+      },
+      {
+        number: '02',
+        title: 'Surgery & Rehabilitation',
+        description:
+          'Performing treatment based on a carefully planned approach.',
+      },
+      {
+        number: '03',
+        title: 'Restoration & Follow-Up',
+        description:
+          'Supporting function, comfort, and long-term outcomes.',
+      },
+    ],
   },
 
   vietnamese: {
@@ -43,6 +73,36 @@ const doctorsContent = {
       primaryCTA: 'Gửi X-ray Của Bạn',
       secondaryCTA: 'Trao Đổi Về Trường Hợp Của Bạn',
     },
+
+    journeySection: {
+      eyebrow: 'HÀNH TRÌNH ĐIỀU TRỊ',
+
+      title: 'Mỗi Bác Sĩ Một Thế Mạnh, Cùng Một Mục Tiêu',
+
+      subtitle:
+        'Một ca Implant hoặc phục hồi toàn hàm thường không chỉ phụ thuộc vào một thủ thuật riêng lẻ. Tùy từng trường hợp, quá trình điều trị có thể cần sự phối hợp giữa chẩn đoán, phẫu thuật, phục hình và theo dõi xuyên suốt. Mục tiêu chung của đội ngũ EMIS là giúp bệnh nhân ăn nhai thoải mái hơn, tự tin hơn và duy trì kết quả ổn định theo thời gian.',
+    },
+
+    journeyCards: [
+      {
+        number: '01',
+        title: 'Chẩn Đoán & Lập Kế Hoạch',
+        description:
+          'Hiểu rõ tình trạng hiện tại và xây dựng hướng điều trị phù hợp.',
+      },
+      {
+        number: '02',
+        title: 'Phẫu Thuật & Điều Trị',
+        description:
+          'Thực hiện điều trị dựa trên kế hoạch đã được chuẩn bị kỹ lưỡng.',
+      },
+      {
+        number: '03',
+        title: 'Phục Hình & Theo Dõi',
+        description:
+          'Hướng đến khả năng ăn nhai ổn định và sự thoải mái trong sinh hoạt hằng ngày.',
+      },
+    ],
   },
 
   french: {
@@ -66,6 +126,36 @@ const doctorsContent = {
       primaryCTA: 'Envoyer Votre Radiographie',
       secondaryCTA: 'Discuter De Votre Situation',
     },
+
+    journeySection: {
+      eyebrow: 'PARCOURS DE SOINS',
+
+      title: 'Des Expertises Différentes. Un Même Parcours De Traitement.',
+
+      subtitle:
+        'Un traitement réussi est rarement le résultat du travail d’une seule personne. Selon les besoins du patient, différents membres de l’équipe peuvent intervenir dans le diagnostic, la chirurgie, la restauration et le suivi. Ensemble, nous cherchons à offrir une prise en charge coordonnée, personnalisée et orientée vers des résultats durables.',
+    },
+
+    journeyCards: [
+      {
+        number: '01',
+        title: 'Diagnostic & Planification',
+        description:
+          'Comprendre la situation et établir un plan de traitement adapté.',
+      },
+      {
+        number: '02',
+        title: 'Chirurgie & Réhabilitation',
+        description:
+          'Réaliser le traitement selon une approche soigneusement planifiée.',
+      },
+      {
+        number: '03',
+        title: 'Restauration & Suivi',
+        description:
+          'Soutenir la fonction, le confort et les résultats à long terme.',
+      },
+    ],
   },
 
   korean: {
@@ -89,6 +179,36 @@ const doctorsContent = {
       primaryCTA: '엑스레이 보내기',
       secondaryCTA: '상담하기',
     },
+
+    journeySection: {
+      eyebrow: '치료 여정',
+
+      title: '다양한 전문성, 하나의 치료 여정',
+
+      subtitle:
+        '성공적인 치료는 한 사람의 노력만으로 이루어지지 않습니다. 환자의 상태에 따라 진단, 수술, 보철 치료 및 사후 관리에 여러 의료진이 함께 참여할 수 있습니다. EMIS는 협력적인 진료를 통해 체계적이고 개인 맞춤형이며 장기적인 결과를 고려한 치료 경험을 제공합니다.',
+    },
+
+    journeyCards: [
+      {
+        number: '01',
+        title: '진단 및 치료 계획',
+        description:
+          '현재 상태를 정확히 파악하고 치료 방향을 수립합니다.',
+      },
+      {
+        number: '02',
+        title: '수술 및 재건 치료',
+        description:
+          '충분한 계획을 바탕으로 치료를 진행합니다.',
+      },
+      {
+        number: '03',
+        title: '보철 및 사후 관리',
+        description:
+          '기능과 편안함, 그리고 장기적인 결과를 지원합니다.',
+      },
+    ],
   },
 
   simplified: {
@@ -112,6 +232,36 @@ const doctorsContent = {
       primaryCTA: '发送您的 X 光片',
       secondaryCTA: '咨询您的情况',
     },
+
+    journeySection: {
+      eyebrow: '治疗旅程',
+
+      title: '不同专长，同一治疗旅程',
+
+      subtitle:
+        '成功的治疗很少依靠单一医生完成。根据患者情况，团队中的不同成员可能参与诊断、手术、修复以及后续随访。我们希望通过协作，为患者提供连贯、个性化且着眼长期效果的治疗体验。',
+    },
+
+    journeyCards: [
+      {
+        number: '01',
+        title: '诊断与规划',
+        description:
+          '了解患者情况并制定治疗路线图。',
+      },
+      {
+        number: '02',
+        title: '手术与功能重建',
+        description:
+          '按照周密规划的方案实施治疗。',
+      },
+      {
+        number: '03',
+        title: '修复与随访',
+        description:
+          '支持功能恢复、舒适度以及长期效果。',
+      },
+    ],
   },
 
   traditional: {
@@ -135,6 +285,36 @@ const doctorsContent = {
       primaryCTA: '傳送您的 X 光片',
       secondaryCTA: '諮詢您的情況',
     },
+
+    journeySection: {
+      eyebrow: '治療旅程',
+
+      title: '不同專長，同一段治療旅程',
+
+      subtitle:
+        '成功的治療很少由單一醫師獨立完成。根據患者情況，不同團隊成員可能參與診斷、手術、修復以及後續追蹤。透過協作，我們希望提供連貫、個人化且著重長期成果的治療體驗。',
+    },
+
+    journeyCards: [
+      {
+        number: '01',
+        title: '診斷與規劃',
+        description:
+          '了解患者狀況並制定治療方向。',
+      },
+      {
+        number: '02',
+        title: '手術與重建治療',
+        description:
+          '依據完善規劃執行治療。',
+      },
+      {
+        number: '03',
+        title: '修復與追蹤',
+        description:
+          '支持功能、舒適度以及長期成果。',
+      },
+    ],
   },
 };
 

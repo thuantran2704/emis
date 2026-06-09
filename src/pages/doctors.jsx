@@ -94,6 +94,69 @@ const Doctors = () => {
           </div>
         </div>
       </section>
+      {/* JOURNEY SECTION */}
+        <section className="py-24 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+
+            <div className="max-w-4xl mx-auto text-center mb-20">
+
+            <p
+                className="uppercase tracking-[0.25em] text-[#C5AF73] mb-4 text-sm font-semibold"
+                style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+            >
+                {content.journeySection.eyebrow}
+            </p>
+
+            <h2
+                className="text-4xl md:text-5xl text-[#2a3439] mb-6"
+                style={{ fontFamily: "'Playfair Display', serif" }}
+            >
+                {content.journeySection.title}
+            </h2>
+
+            <p
+                className="text-lg md:text-xl text-gray-600 leading-relaxed"
+                style={{ fontFamily: "'Cormorant', serif" }}
+            >
+                {content.journeySection.subtitle}
+            </p>
+
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+
+            {content.journeyCards.map((card, index) => (
+                <div
+                key={index}
+                className="bg-[#f7f2e7] rounded-3xl p-8"
+                >
+                <p
+                    className="text-[#C5AF73] text-sm tracking-[0.2em] mb-6 font-semibold"
+                    style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+                >
+                    {card.number}
+                </p>
+
+                <h3
+                    className="text-2xl text-[#2a3439] mb-4"
+                    style={{ fontFamily: "'Playfair Display', serif" }}
+                >
+                    {card.title}
+                </h3>
+
+                <p
+                    className="text-gray-600 leading-relaxed"
+                    style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+                >
+                    {card.description}
+                </p>
+                </div>
+            ))}
+
+            </div>
+
+        </div>
+        </section>
     </main>
   );
 };
