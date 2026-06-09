@@ -157,6 +157,120 @@ const Doctors = () => {
 
         </div>
         </section>
+        {/* DOCTOR SECTION */}
+    <section className="py-24 bg-[#f7f2e7]">
+    <div className="max-w-7xl mx-auto px-6">
+
+        <div className="max-w-4xl mx-auto text-center mb-20">
+
+        <p
+            className="uppercase tracking-[0.25em] text-[#C5AF73] mb-4 text-sm font-semibold"
+            style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+        >
+            {content.doctorSection.eyebrow}
+        </p>
+
+        <h2
+            className="text-4xl md:text-5xl text-[#2a3439] mb-6"
+            style={{ fontFamily: "'Playfair Display', serif" }}
+        >
+            {content.doctorSection.title}
+        </h2>
+
+        <p
+            className="text-lg md:text-xl text-gray-600 leading-relaxed"
+            style={{ fontFamily: "'Cormorant', serif" }}
+        >
+            {content.doctorSection.subtitle}
+        </p>
+
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-10">
+
+        {content.doctors.map((doctor, index) => (
+            <div
+            key={index}
+            className="bg-white rounded-3xl overflow-hidden shadow-sm flex flex-col"
+            >
+            <img
+                src={doctorImages[index]}
+                alt={doctor.name}
+                className="w-full h-[420px] object-cover"
+            />
+
+            <div className="p-8 flex flex-col flex-grow">
+
+                <h3
+                className="text-3xl text-[#2a3439] mb-2"
+                style={{ fontFamily: "'Playfair Display', serif" }}
+                >
+                {doctor.name}
+                </h3>
+
+                <p
+                className="text-[#C5AF73] font-semibold mb-3"
+                style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+                >
+                {doctor.role}
+                </p>
+
+                <p
+                className="text-sm uppercase tracking-wide text-gray-500 mb-6"
+                style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+                >
+                {doctor.specialties}
+                </p>
+
+                <p
+                className="text-gray-600 leading-relaxed mb-4"
+                style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+                >
+                {doctor.descriptionOne}
+                </p>
+
+                <p
+                className="text-gray-600 leading-relaxed mb-8"
+                style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+                >
+                {doctor.descriptionTwo}
+                </p>
+
+                <div className="space-y-3 mb-8">
+                {doctor.highlights.map((highlight, idx) => (
+                    <div
+                    key={idx}
+                    className="flex items-center gap-3"
+                    >
+                    <span className="text-[#C5AF73]">●</span>
+                    <span
+                        className="text-[#2a3439]"
+                        style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+                    >
+                        {highlight}
+                    </span>
+                    </div>
+                ))}
+                </div>
+
+                <div className="mt-auto">
+                <Link
+                    to="/contact"
+                    className="inline-flex px-6 py-3 rounded-full border border-[#d4af37] text-[#2a3439] hover:bg-[#d4af37] hover:text-white transition"
+                    style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+                >
+                    {doctor.cta}
+                </Link>
+                </div>
+
+            </div>
+            </div>
+        ))}
+
+        </div>
+
+    </div>
+    </section>
     </main>
   );
 };

@@ -50,6 +50,100 @@ const doctorsContent = {
           'Supporting function, comfort, and long-term outcomes.',
       },
     ],
+
+    doctorSection: {
+    eyebrow: 'OUR DOCTORS',
+
+    title: 'The Doctors Behind Your Treatment',
+
+    subtitle:
+        'Every patient is different. Below are the doctors who support patients throughout their treatment journey at EMIS.',
+    },
+
+    doctors: [
+    {
+
+        name: 'Dr. Tran Minh Tu',
+
+        role: 'Oral & Maxillofacial Surgeon',
+
+        specialties:
+        'Implant Surgery • Full-Mouth Rehabilitation • Oral Surgery',
+
+        descriptionOne:
+        'Dr. Tu focuses on implant surgery, full-mouth rehabilitation, oral surgery, and aesthetic dentistry, with a particular interest in complex rehabilitation cases.',
+
+        descriptionTwo:
+        'Having studied and trained in the United States, Hungary, and Vietnam, he combines international training with active clinical practice.',
+
+        highlights: [
+        'Active Hospital Practice',
+        'International Training',
+        'Implant & Full-Mouth Rehabilitation Focus',
+        'Multilingual Communication',
+        ],
+
+        cta: 'View Full Profile',
+    },
+
+    {
+
+        name: 'Dr. Nguyen Thi Bich Van',
+
+        role: 'Specialist In Implant Prosthetics & Restorative Care',
+
+        specialties:
+        'Implant Prosthetics • Functional Rehabilitation • Aesthetic Restoration',
+
+        descriptionOne:
+        'Dr. Van focuses on restoring function, comfort, and aesthetics through implant-supported rehabilitation and restorative treatment.',
+
+        descriptionTwo:
+        'With more than a decade of clinical experience, she is particularly interested in long-term outcomes and natural-looking restorations.',
+
+        highlights: [
+        '10+ Years Clinical Experience',
+        'Specialist-Level Training',
+        'Implant Prosthetics',
+        'Long-Term Functional & Aesthetic Care',
+        ],
+
+        cta: 'View Full Profile',
+    },
+    ],
+
+    decisionSection: {
+    eyebrow: 'TREATMENT DECISIONS',
+
+    title: 'Understanding Your Situation Comes First',
+
+    subtitle:
+        'Before deciding on a treatment, it is important to understand your current condition and available options. If you already have an X-ray or CBCT scan, you are welcome to send it to our team for a preliminary review.',
+
+    stepsTitle: 'What Happens Next?',
+
+    steps: [
+        {
+        number: '01',
+        title: 'Send Your X-ray',
+        },
+        {
+        number: '02',
+        title: 'Receive A Preliminary Assessment',
+        },
+        {
+        number: '03',
+        title: 'Discuss Your Situation',
+        },
+    ],
+
+    primaryCTA: 'Send Your X-ray',
+
+    secondaryCTA: 'Discuss Your Situation',
+
+    note:
+        'Final treatment recommendations require an in-person examination and appropriate diagnostic evaluation.',
+    },
   },
 
   vietnamese: {
@@ -103,6 +197,101 @@ const doctorsContent = {
           'Hướng đến khả năng ăn nhai ổn định và sự thoải mái trong sinh hoạt hằng ngày.',
       },
     ],
+
+
+    doctorSection: {
+    eyebrow: 'ĐỘI NGŨ BÁC SĨ',
+
+    title: 'Đội Ngũ Bác Sĩ Đồng Hành Cùng Bạn',
+
+    subtitle:
+        'Mỗi bác sĩ mang đến một thế mạnh chuyên môn khác nhau. Dưới đây là đội ngũ bác sĩ đang đồng hành cùng bệnh nhân tại EMIS.',
+    },
+
+    doctors: [
+    {
+
+        name: 'BS. CKI Trần Minh Tú',
+
+        role: 'Phẫu Thuật Răng Hàm Mặt',
+
+        specialties:
+        'Implant • Phục Hồi Toàn Hàm • Tiểu Phẫu Răng Hàm Mặt',
+
+        descriptionOne:
+        'Bác sĩ Tú tập trung vào Implant, phục hồi toàn hàm và phẫu thuật Răng Hàm Mặt, đặc biệt với những trường hợp cần phục hồi phức tạp và đòi hỏi kế hoạch điều trị kỹ lưỡng.',
+
+        descriptionTwo:
+        'Nền tảng học tập và đào tạo tại Hoa Kỳ, Hungary và Việt Nam giúp bác sĩ có thêm góc nhìn quốc tế trong quá trình điều trị và chăm sóc bệnh nhân.',
+
+        highlights: [
+        'Đang Công Tác Tại Bệnh Viện Răng Hàm Mặt TP.HCM',
+        'Đào Tạo Tại Nhiều Quốc Gia',
+        'Thành Viên Hội Răng Hàm Mặt TP.HCM',
+        'Giao Tiếp Đa Ngôn Ngữ',
+        ],
+
+        cta: 'Xem Hồ Sơ Chi Tiết',
+    },
+
+    {
+
+        name: 'BS. Nguyễn Thị Bích Vân',
+
+        role: 'Chuyên Gia Phục Hình Implant & Phục Hồi Chức Năng',
+
+        specialties:
+        'Phục Hình Implant • Phục Hồi Chức Năng • Phục Hình Thẩm Mỹ',
+
+        descriptionOne:
+        'Bác sĩ Vân tập trung vào phục hồi chức năng ăn nhai, sự thoải mái và thẩm mỹ thông qua điều trị Implant và phục hình nha khoa.',
+
+        descriptionTwo:
+        'Với hơn 10 năm kinh nghiệm lâm sàng, bác sĩ đặc biệt quan tâm đến kết quả điều trị lâu dài và các phục hình có tính thẩm mỹ tự nhiên.',
+
+        highlights: [
+        'Hơn 10 Năm Kinh Nghiệm Lâm Sàng',
+        'Đào Tạo Chuyên Sâu',
+        'Chuyên Về Phục Hình Implant',
+        'Hướng Đến Chức Năng & Thẩm Mỹ Lâu Dài',
+        ],
+
+        cta: 'Xem Hồ Sơ Chi Tiết',
+    },
+    ],
+
+    decisionSection: {
+    eyebrow: 'HIỂU RÕ TRƯỚC KHI QUYẾT ĐỊNH',
+
+    title: 'Hiểu Rõ Trước Khi Quyết Định',
+
+    subtitle:
+        'Không phải mọi trường hợp mất răng đều cần cùng một giải pháp. Vì vậy, điều quan trọng là hiểu rõ tình trạng hiện tại trước khi lựa chọn hướng điều trị phù hợp. Nếu đã có X-ray hoặc CBCT, bạn có thể gửi trước để đội ngũ EMIS hỗ trợ đánh giá ban đầu.',
+
+    stepsTitle: 'Những Bước Tiếp Theo',
+
+    steps: [
+        {
+        number: '01',
+        title: 'Gửi X-ray Hoặc CBCT',
+        },
+        {
+        number: '02',
+        title: 'Nhận Đánh Giá Ban Đầu',
+        },
+        {
+        number: '03',
+        title: 'Trao Đổi Về Trường Hợp Của Bạn',
+        },
+    ],
+
+    primaryCTA: 'Gửi X-ray Của Bạn',
+
+    secondaryCTA: 'Trao Đổi Về Trường Hợp Của Bạn',
+
+    note:
+        'Đánh giá ban đầu giúp chúng tôi hiểu rõ hơn về trường hợp của bạn. Kế hoạch điều trị cuối cùng sẽ được xác định sau khi thăm khám trực tiếp và thực hiện đầy đủ các chẩn đoán cần thiết.',
+    },
   },
 
   french: {
@@ -156,6 +345,93 @@ const doctorsContent = {
           'Soutenir la fonction, le confort et les résultats à long terme.',
       },
     ],
+    doctorSection: {
+    eyebrow: 'ÉQUIPE MÉDICALE',
+
+    title: 'Les Médecins Qui Vous Accompagnent',
+
+    subtitle:
+    'Chaque patient est différent. Découvrez les praticiens qui accompagnent les patients tout au long de leur parcours de traitement chez EMIS.',
+    },
+
+    doctors: [
+    {
+
+    name: 'Dr. Tran Minh Tu',
+
+    role: 'Chirurgien Oral Et Maxillo-Facial',
+
+    specialties:
+    'Implantologie • Réhabilitation Complète • Chirurgie Orale',
+
+    descriptionOne:
+    'Le Dr Tu se consacre à l’implantologie, à la réhabilitation complète, à la chirurgie orale et à la dentisterie esthétique, avec un intérêt particulier pour les cas complexes.',
+
+    descriptionTwo:
+    'Formé aux États-Unis, en Hongrie et au Vietnam, il associe une formation internationale à une pratique clinique active.',
+
+    highlights: [
+    'Pratique Hospitalière Active',
+    'Formation Internationale',
+    'Expertise En Implantologie Et Réhabilitation Complète',
+    'Communication Multilingue',
+    ],
+
+    cta: 'Voir Le Profil Complet',
+
+    },
+
+    {
+
+    name: 'Dr. Nguyen Thi Bich Van',
+
+    role: 'Spécialiste En Prothèse Implantaire Et Soins Restaurateurs',
+
+    specialties:
+    'Prothèse Implantaire • Réhabilitation Fonctionnelle • Restauration Esthétique',
+
+    descriptionOne:
+    'Le Dr Van se concentre sur la restauration de la fonction, du confort et de l’esthétique grâce aux traitements implantaires et restaurateurs.',
+
+    descriptionTwo:
+    'Avec plus de dix ans d’expérience clinique, elle s’intéresse particulièrement aux résultats durables et aux restaurations naturelles.',
+
+    highlights: [
+    'Plus De 10 Ans D’Expérience Clinique',
+    'Formation De Niveau Spécialiste',
+    'Prothèse Implantaire',
+    'Fonction Et Esthétique À Long Terme',
+    ],
+
+    cta: 'Voir Le Profil Complet',
+
+    },
+    ],
+
+    decisionSection: {
+    eyebrow: 'AVANT DE PRENDRE UNE DÉCISION',
+
+    title: 'Comprendre Votre Situation Avant Tout',
+
+    subtitle:
+    'Avant de choisir un traitement, il est important de comprendre votre situation actuelle et les options disponibles. Si vous disposez déjà d’une radiographie ou d’un CBCT, vous pouvez l’envoyer à notre équipe pour une première évaluation.',
+
+    stepsTitle: 'Les Étapes Suivantes',
+
+    steps: [
+    { number: '01', title: 'Envoyer Votre Radiographie' },
+    { number: '02', title: 'Recevoir Une Première Évaluation' },
+    { number: '03', title: 'Discuter De Votre Situation' },
+    ],
+
+    primaryCTA: 'Envoyer Votre Radiographie',
+
+    secondaryCTA: 'Discuter De Votre Situation',
+
+    note:
+    'Les recommandations définitives nécessitent un examen clinique et une évaluation diagnostique appropriée.',
+    },
+
   },
 
   korean: {
@@ -209,6 +485,93 @@ const doctorsContent = {
           '기능과 편안함, 그리고 장기적인 결과를 지원합니다.',
       },
     ],
+    doctorSection: {
+    eyebrow: '의료진 소개',
+
+    title: '당신의 치료를 함께하는 의료진',
+
+    subtitle:
+    '모든 환자는 서로 다릅니다. 아래는 EMIS에서 환자의 치료 여정을 함께하는 의료진입니다.',
+    },
+
+    doctors: [
+    {
+
+    name: 'Dr. Tran Minh Tu',
+
+    role: '구강악안면외과 전문의',
+
+    specialties:
+    '임플란트 수술 • 전체 구강 재건 • 구강외과',
+
+    descriptionOne:
+    'Tu 원장은 임플란트 수술, 전체 구강 재건, 구강외과 및 심미치과를 중심으로 진료하며 복잡한 재건 치료에 특별한 관심을 가지고 있습니다.',
+
+    descriptionTwo:
+    '미국, 헝가리, 베트남에서 교육과 수련을 받았으며 국제적인 교육 배경과 풍부한 임상 경험을 바탕으로 진료하고 있습니다.',
+
+    highlights: [
+    '병원 임상 진료',
+    '국제 교육 이수',
+    '임플란트 및 전체 구강 재건 집중',
+    '다국어 소통',
+    ],
+
+    cta: '자세히 보기',
+
+    },
+
+    {
+
+    name: 'Dr. Nguyen Thi Bich Van',
+
+    role: '임플란트 보철 및 수복 치료 전문의',
+
+    specialties:
+    '임플란트 보철 • 기능 회복 • 심미 수복',
+
+    descriptionOne:
+    'Van 원장은 임플란트 기반 재건 치료와 수복 치료를 통해 기능, 편안함, 심미성을 회복하는 데 집중하고 있습니다.',
+
+    descriptionTwo:
+    '10년 이상의 임상 경험을 바탕으로 장기적인 치료 결과와 자연스러운 수복에 관심을 가지고 있습니다.',
+
+    highlights: [
+    '10년 이상 임상 경험',
+    '전문의 수준 교육',
+    '임플란트 보철 전문',
+    '장기적인 기능 및 심미 관리',
+    ],
+
+    cta: '자세히 보기',
+
+    },
+    ],
+
+    decisionSection: {
+    eyebrow: '치료 결정 전',
+
+    title: '현재 상태를 이해하는 것이 우선입니다',
+
+    subtitle:
+    '치료를 결정하기 전에 현재 상태와 가능한 치료 옵션을 이해하는 것이 중요합니다. 이미 X-ray 또는 CBCT가 있다면 사전 검토를 위해 보내주실 수 있습니다.',
+
+    stepsTitle: '다음 단계',
+
+    steps: [
+    { number: '01', title: 'X-ray 보내기' },
+    { number: '02', title: '예비 평가 받기' },
+    { number: '03', title: '상담 진행하기' },
+    ],
+
+    primaryCTA: 'X-ray 보내기',
+
+    secondaryCTA: '상담하기',
+
+    note:
+    '최종 치료 계획은 직접 진료 및 적절한 진단 평가 후 결정됩니다.',
+    },
+
   },
 
   simplified: {
@@ -262,6 +625,95 @@ const doctorsContent = {
           '支持功能恢复、舒适度以及长期效果。',
       },
     ],
+    /* SIMPLIFIED CHINESE */
+
+    doctorSection: {
+    eyebrow: '医生团队',
+
+    title: '陪伴您治疗旅程的医生团队',
+
+    subtitle:
+    '每位患者的情况都不同。以下是 EMIS 陪伴患者完成治疗旅程的医生团队。',
+    },
+
+    doctors: [
+    {
+
+    name: 'Dr. Tran Minh Tu',
+
+    role: '口腔颌面外科医生',
+
+    specialties:
+    '种植手术 • 全口重建 • 口腔外科',
+
+    descriptionOne:
+    'Tu 医生专注于种植牙手术、全口重建、口腔外科以及美学牙科，尤其关注复杂重建病例。',
+
+    descriptionTwo:
+    '曾在美国、匈牙利和越南接受教育与培训，将国际化背景与丰富的临床实践相结合。',
+
+    highlights: [
+    '医院临床工作经验',
+    '国际培训背景',
+    '专注种植牙与全口重建',
+    '多语言沟通',
+    ],
+
+    cta: '查看完整资料',
+
+    },
+
+    {
+
+    name: 'Dr. Nguyen Thi Bich Van',
+
+    role: '种植修复与修复治疗专家',
+
+    specialties:
+    '种植修复 • 功能重建 • 美学修复',
+
+    descriptionOne:
+    'Van 医生专注于通过种植修复和修复治疗恢复功能、舒适度与美观效果。',
+
+    descriptionTwo:
+    '拥有十多年临床经验，尤其关注长期治疗效果与自然美观的修复成果。',
+
+    highlights: [
+    '10年以上临床经验',
+    '专家级培训',
+    '种植修复专长',
+    '长期功能与美学维护',
+    ],
+
+    cta: '查看完整资料',
+
+    },
+    ],
+
+    decisionSection: {
+    eyebrow: '治疗决策前',
+
+    title: '先了解您的情况',
+
+    subtitle:
+    '在决定治疗方案之前，了解当前情况及可选方案非常重要。如果您已经有 X 光片或 CBCT，可以发送给团队进行初步评估。',
+
+    stepsTitle: '接下来会发生什么？',
+
+    steps: [
+    { number: '01', title: '发送 X 光片' },
+    { number: '02', title: '获得初步评估' },
+    { number: '03', title: '讨论您的情况' },
+    ],
+
+    primaryCTA: '发送您的 X 光片',
+
+    secondaryCTA: '咨询您的情况',
+
+    note:
+    '最终治疗建议需要经过面诊及必要的诊断评估后确定。',
+    },
+
   },
 
   traditional: {
@@ -315,6 +767,96 @@ const doctorsContent = {
           '支持功能、舒適度以及長期成果。',
       },
     ],
+    
+    /* TRADITIONAL CHINESE */
+
+    doctorSection: {
+    eyebrow: '醫師團隊',
+
+    title: '陪伴您治療旅程的醫師團隊',
+
+    subtitle:
+    '每位患者的情況都不同。以下是 EMIS 陪伴患者完成治療旅程的醫師團隊。',
+    },
+
+    doctors: [
+    {
+
+    name: 'Dr. Tran Minh Tu',
+
+    role: '口腔顎面外科醫師',
+
+    specialties:
+    '植牙手術 • 全口重建 • 口腔外科',
+
+    descriptionOne:
+    'Tu 醫師專注於植牙手術、全口重建、口腔外科及美學牙科，特別關注複雜重建案例。',
+
+    descriptionTwo:
+    '曾於美國、匈牙利及越南接受教育與培訓，結合國際背景與豐富臨床經驗。',
+
+    highlights: [
+    '醫院臨床經驗',
+    '國際培訓背景',
+    '專注植牙與全口重建',
+    '多語言溝通',
+    ],
+
+    cta: '查看完整資料',
+
+    },
+
+    {
+
+    name: 'Dr. Nguyen Thi Bich Van',
+
+    role: '植牙贋復與修復治療專家',
+
+    specialties:
+    '植牙贋復 • 功能重建 • 美學修復',
+
+    descriptionOne:
+    'Van 醫師專注於透過植牙贋復及修復治療恢復功能、舒適度與美觀。',
+
+    descriptionTwo:
+    '擁有十多年臨床經驗，特別重視長期治療成果及自然美觀的修復效果。',
+
+    highlights: [
+    '10年以上臨床經驗',
+    '專家級培訓',
+    '植牙贋復專長',
+    '長期功能與美學照護',
+    ],
+
+    cta: '查看完整資料',
+
+    },
+    ],
+
+    decisionSection: {
+    eyebrow: '治療決策前',
+
+    title: '先了解您的情況',
+
+    subtitle:
+    '在決定治療方案之前，了解目前狀況及可行選項非常重要。如果您已有 X 光片或 CBCT，可先提供給團隊進行初步評估。',
+
+    stepsTitle: '接下來的步驟',
+
+    steps: [
+    { number: '01', title: '傳送 X 光片' },
+    { number: '02', title: '獲得初步評估' },
+    { number: '03', title: '討論您的情況' },
+    ],
+
+    primaryCTA: '傳送您的 X 光片',
+
+    secondaryCTA: '諮詢您的情況',
+
+    note:
+    '最終治療建議仍需經過現場檢查及必要診斷評估後確認。',
+    },
+
   },
 };
 
