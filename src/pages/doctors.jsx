@@ -2,14 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { Helmet } from 'react-helmet';
-
+import drTuPortrait from '../pics/dr-tu-potrait.jpg';
 import doctorsContent from '../Translations/doctorsContent';
 import patient2 from '../pics/patient2.jpg';
 
 const Doctors = () => {
   const language = useSelector((state) => state.language.language);
   const content = doctorsContent[language] || doctorsContent.english;
-
+    const doctorImages = [drTuPortrait, drTuPortrait]; // Replace with actual doctor images when available
   return (
     <main className="bg-[#f7f2e7] pt-20">
       <Helmet>
