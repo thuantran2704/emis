@@ -197,7 +197,7 @@ const Doctors = () => {
             <img
                 src={doctorImages[index]}
                 alt={doctor.name}
-                className="w-full h-[420px] object-cover"
+                className="w-full h-[420px] object-cover object-[center_20%]"
             />
 
             <div className="p-8 flex flex-col flex-grow">
