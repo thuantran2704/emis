@@ -26,67 +26,80 @@ const Doctors = () => {
       {/* HERO */}
       {/* ===================================== */}
 
-      <section className="pt-24 lg:pt-40 pb-20 lg:pb-32">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="max-w-5xl mx-auto text-center">
+<section className="min-h-[80vh] flex items-center py-16">
+        <div className="max-w-7xl mx-auto px-6 w-full">
+          <div className="grid lg:grid-cols-2 gap-14 items-center">
 
-            <p
-              className="uppercase tracking-[0.35em] text-[#C5AF73] text-sm font-semibold mb-8"
-              style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
-            >
-              {content.hero.eyebrow}
-            </p>
+            {/* IMAGE */}
+            <div className="order-1 lg:order-2">
+              <div className="overflow-hidden rounded-3xl shadow-xl">
+                <img
+                  src={patient2}
+                  alt="EMIS Clinical Team"
+                  className="w-full h-[500px] object-cover"
+                />
+              </div>
+            </div>
 
-            <h1
-              className="text-[3rem] md:text-[5rem] lg:text-[6rem] leading-[0.95] text-[#1F2933] mb-10"
-              style={{ fontFamily: "'Playfair Display', serif" }}
-            >
-              {content.hero.title}
-            </h1>
+            {/* CONTENT */}
+            <div className="order-2 lg:order-1">
 
-            <p
-              className="max-w-2xl mx-auto text-lg md:text-2xl text-gray-600 leading-relaxed mb-14"
-              style={{ fontFamily: "'Cormorant', serif" }}
-            >
-              {content.hero.subtitle}
-            </p>
-
-            <div className="flex justify-center mb-20">
-              <Link
-                to="/contact"
-                className="px-10 py-5 rounded-full bg-[#C5AF73] text-white font-medium hover:opacity-90 transition"
+              <p
+                className="uppercase tracking-[0.25em] text-[#C5AF73] mb-4 text-sm font-semibold"
                 style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
               >
-                {content.hero.primaryCTA}
-              </Link>
-            </div>
-          </div>
+                {content.hero.eyebrow}
+              </p>
 
-          <div className="overflow-hidden rounded-[40px] shadow-[0_40px_120px_rgba(0,0,0,0.08)]">
-            <img
-              src={patient2}
-              alt="EMIS Clinical Team"
-              className="w-full h-[420px] md:h-[650px] object-cover"
-            />
-          </div>
+              <h1
+                className="text-4xl md:text-5xl lg:text-6xl text-[#2a3439] leading-tight mb-6"
+                style={{ fontFamily: "'Playfair Display', serif" }}
+              >
+                {content.hero.title}
+              </h1>
 
-          <div className="max-w-4xl mx-auto mt-16">
-            <div className="grid md:grid-cols-3 gap-6">
-              {content.hero.highlights.map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded-[28px] p-8 border border-[#F1ECE2]"
-                >
-                  <div className="w-10 h-px bg-[#C5AF73] mb-6" />
+              <p
+                className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8"
+                style={{ fontFamily: "'Cormorant', serif" }}
+              >
+                {content.hero.subtitle}
+              </p>
 
-                  <p
-                    className="text-[#2a3439] leading-relaxed"
+              <div className="grid gap-3 mb-10">
+                {content.hero.highlights.map((item, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center gap-3"
                     style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                   >
-                    {item}
-                  </p>
-                </div>
-              ))}
+                    <span className="text-[#C5AF73] text-lg">●</span>
+                    <span className="text-[#2a3439] font-medium">
+                      {item}
+                    </span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+
+                <Link
+                  to="/contact"
+                  className="px-8 py-4 rounded-full bg-[#d4af37] text-white font-semibold hover:bg-[#c19d30] transition text-center"
+                  style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+                >
+                  {content.hero.primaryCTA}
+                </Link>
+
+                <Link
+                  to="/contact"
+                  className="px-8 py-4 rounded-full border border-[#d4af37] text-[#2a3439] hover:bg-white transition text-center"
+                  style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+                >
+                  {content.hero.secondaryCTA}
+                </Link>
+
+              </div>
+
             </div>
           </div>
         </div>
