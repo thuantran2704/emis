@@ -23,6 +23,7 @@ import ImplantAd from './pages/implant.jsx';
 import CrownAd from './pages/crown.jsx';
 import GenAd from './pages/genAd.jsx';
 import CanalAd from './pages/canal.jsx';
+import Doctors from './pages/doctors.jsx';
 
 function ExternalRedirect({ to }) {
   useEffect(() => {
@@ -83,6 +84,7 @@ function AppShell() {
           <Route path="/implantAd" element={<ImplantAd/>}/>
           <Route path="/crownAd" element={<CrownAd/>}/>
           <Route path="genAd" element={<GenAd/>}/>
+          <Route path="/doctors" element={<Doctors />} />
           <Route path="/canal" element={<CanalAd />} />
           <Route path="/mail" element={<ExternalRedirect to={zohoMailUrl} />} />
           <Route path="/drive" element={<ExternalRedirect to={zohoDriveUrl} />} />
