@@ -11,7 +11,6 @@ export default function Services() {
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
 
-  // FX
   const [fxRate, setFxRate] = useState(undefined);
   const [fxLastUpdated, setFxLastUpdated] = useState(null);
 
@@ -28,9 +27,6 @@ export default function Services() {
     ],
   };
 
-  /* ================================
-      UI COLUMN LABELS (LANGUAGE)
-  ================================= */
   const columnLabels =
     language === "vietnamese"
       ? {
@@ -40,21 +36,24 @@ export default function Services() {
           priceVND: "Giá chính thức (VND)",
           priceUSD: "Giá tham khảo (USD)",
           search: "Tìm dịch vụ...",
-          title: "Bảng giá dịch vụ nha khoa",
+          title: "Bảng Giá Dịch Vụ Nha Khoa",
+          eyebrow: "Minh bạch & rõ ràng",
+          disclaimer:
+            "Đồng Việt Nam (VND) là đơn vị tiền tệ chính thức cho tất cả dịch vụ. Giá hiển thị bằng ngoại tệ chỉ mang tính tham khảo và không có giá trị ràng buộc. Thanh toán thực hiện bằng VND theo quy định Việt Nam.",
         }
       : {
           category: "Category",
           description: "Description",
           unit: "Unit",
           priceVND: "Official Price (VND)",
-          priceUSD: "Reference Price (USD)",
-          search: "Search service...",
+          priceUSD: "Reference (USD)",
+          search: "Search services…",
           title: "International EMIS Dental Price List",
+          eyebrow: "Transparent Pricing",
+          disclaimer:
+            "Vietnamese Dong (VND) is the official currency for all services. Prices shown in other currencies are for reference only and do not constitute a binding offer. Final billing is conducted exclusively in VND in accordance with Vietnamese regulations.",
         };
 
-  /* ================================
-      CSV FIELD HELPERS
-  ================================= */
   const normalize = (s) =>
     (s || "")
       .toString()
@@ -66,25 +65,18 @@ export default function Services() {
   const pickField = (fields, keywords) => {
     const normFields = fields.map((f) => ({ raw: f, norm: normalize(f) }));
     for (const kw of keywords) {
-      const found = normFields.find((f) =>
-        f.norm.includes(normalize(kw))
-      );
+      const found = normFields.find((f) => f.norm.includes(normalize(kw)));
       if (found) return found.raw;
     }
     return null;
   };
 
-  /* ================================
-      LOAD FX RATE
-  ================================= */
   useEffect(() => {
     let cancelled = false;
-
     (async () => {
       try {
         const res = await getFxRate();
         if (cancelled) return;
-
         if (typeof res === "number") {
           setFxRate(res);
         } else if (res?.rate) {
@@ -98,15 +90,9 @@ export default function Services() {
         if (!cancelled) setFxRate(null);
       }
     })();
-
-    return () => {
-      cancelled = true;
-    };
+    return () => { cancelled = true; };
   }, []);
 
-  /* ================================
-      LOAD CSV AFTER FX ATTEMPT
-  ================================= */
   useEffect(() => {
     let cancelled = false;
     if (fxRate === undefined) return;
@@ -114,7 +100,6 @@ export default function Services() {
     (async () => {
       setLoading(true);
       setServices([]);
-
       let parsed = null;
 
       for (const path of fileCandidates[language]) {
@@ -122,12 +107,7 @@ export default function Services() {
           const res = await fetch(path);
           if (!res.ok) continue;
           const text = await res.text();
-
-          parsed = Papa.parse(text, {
-            header: true,
-            skipEmptyLines: true,
-          });
-
+          parsed = Papa.parse(text, { header: true, skipEmptyLines: true });
           if (parsed?.data?.length) break;
         } catch (err) {
           console.error(`Failed to fetch ${path}`, err);
@@ -139,39 +119,22 @@ export default function Services() {
         return;
       }
 
-      const fields =
-        parsed.meta?.fields || Object.keys(parsed.data[0] || {});
-
-      const categoryField =
-        pickField(fields, ["category", "servicecategory", "danhmuc"]) ||
-        fields[0];
-      const descField =
-        pickField(fields, ["description", "desc", "mota"]) || fields[1];
-      const unitField =
-        pickField(fields, ["unit", "donvi"]) || fields[2];
-      const priceField =
-        pickField(fields, ["price", "gia", "serviceprice"]) || fields[3];
+      const fields = parsed.meta?.fields || Object.keys(parsed.data[0] || {});
+      const categoryField = pickField(fields, ["category", "servicecategory", "danhmuc"]) || fields[0];
+      const descField = pickField(fields, ["description", "desc", "mota"]) || fields[1];
+      const unitField = pickField(fields, ["unit", "donvi"]) || fields[2];
+      const priceField = pickField(fields, ["price", "gia", "serviceprice"]) || fields[3];
 
       const rows = parsed.data
-        .filter((r) =>
-          Object.values(r).some(
-            (v) => v !== null && String(v).trim() !== ""
-          )
-        )
+        .filter((r) => Object.values(r).some((v) => v !== null && String(v).trim() !== ""))
         .map((r) => {
           const rawPrice = (r[priceField] || "").toString().trim();
           const numbers = rawPrice.match(/\d[\d,]*/g);
-
-          let priceUSD = "---";
+          let priceUSD = "—";
 
           if (numbers?.length && typeof fxRate === "number") {
-            const convert = (n) =>
-              (Math.round((n / fxRate) * 2) / 2 - 0.01).toFixed(2);
-
-            const nums = numbers.map((n) =>
-              parseFloat(n.replace(/,/g, ""))
-            );
-
+            const convert = (n) => (Math.round((n / fxRate) * 2) / 2 - 0.01).toFixed(2);
+            const nums = numbers.map((n) => parseFloat(n.replace(/,/g, "")));
             priceUSD =
               nums.length === 1
                 ? `${convert(nums[0])} USD`
@@ -193,14 +156,9 @@ export default function Services() {
       }
     })();
 
-    return () => {
-      cancelled = true;
-    };
+    return () => { cancelled = true; };
   }, [language, fxRate]);
 
-  /* ================================
-      GROUP + FILTER
-  ================================= */
   const grouped = useMemo(() => {
     return services.reduce((acc, r) => {
       const cat = r.category || "Uncategorized";
@@ -216,95 +174,170 @@ export default function Services() {
       Object.entries(grouped).map(([cat, rows]) => [
         cat,
         rows.filter((r) =>
-          `${r.category} ${r.desc} ${r.unit} ${r.priceVND}`
-            .toLowerCase()
-            .includes(q)
+          `${r.category} ${r.desc} ${r.unit} ${r.priceVND}`.toLowerCase().includes(q)
         ),
       ])
     );
   }, [grouped, search]);
 
-  /* ================================
-      LOADING
-  ================================= */
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center text-gray-600 text-lg">
-        Loading services…
+      <div className="min-h-screen bg-[#f7f2e7] flex items-center justify-center">
+        <p
+          className="text-sm text-gray-400 tracking-[0.2em] uppercase"
+          style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+        >
+          Loading…
+        </p>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 py-10 px-4 md:px-12 lg:px-24">
-      <div className="max-w-6xl mx-auto">
-        <h1 className="text-center text-3xl font-semibold mb-4 uppercase">
-          {columnLabels.title}
-        </h1>
+    <main className="min-h-screen bg-[#f7f2e7] pt-20">
 
-        {/* LEGAL DISCLAIMER */}
-        <p className="text-xs text-gray-600 italic mb-6">
-          Vietnamese Dong (VND) is the official currency for all services.
-          Prices shown in other currencies are provided for reference only
-          based on estimated exchange rates and do not constitute a binding
-          offer. Final billing and payment are conducted exclusively in VND
-          in accordance with Vietnamese regulations.
-        </p>
-
-        <input
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          placeholder={columnLabels.search}
-          className="border rounded-xl p-2 w-full mb-4"
-        />
-
-        {fxLastUpdated && (
-          <p className="text-xs text-gray-500 text-right mb-2">
-            FX updated: {new Date(fxLastUpdated).toLocaleString()}
+      {/* PAGE HEADER */}
+      <section className="py-24 bg-white">
+        <div className="max-w-5xl mx-auto px-8 text-center">
+          <p
+            className="uppercase tracking-[0.3em] text-[#C5AF73] mb-5 text-xs font-semibold"
+            style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+          >
+            {columnLabels.eyebrow}
           </p>
-        )}
-
-        <div className="overflow-x-auto">
-          <table className="w-full border-2 border-gray-700 bg-white rounded-xl">
-            <thead className="bg-gray-200 uppercase text-sm">
-              <tr>
-                <th className="border p-3">{columnLabels.category}</th>
-                <th className="border p-3">{columnLabels.description}</th>
-                <th className="border p-3">{columnLabels.unit}</th>
-                <th className="border p-3">{columnLabels.priceVND}</th>
-                <th className="border p-3 text-gray-500">
-                  {columnLabels.priceUSD}
-                </th>
-              </tr>
-            </thead>
-
-            <tbody>
-              {Object.entries(filtered).map(([cat, rows]) =>
-                rows.map((r, i) => (
-                  <tr key={`${cat}-${i}`} className="border-t">
-                    {i === 0 && (
-                      <td
-                        rowSpan={rows.length}
-                        className="border p-3 font-semibold bg-blue-100"
-                      >
-                        {cat}
-                      </td>
-                    )}
-                    <td className="border p-3">{r.desc}</td>
-                    <td className="border p-3 text-center">{r.unit}</td>
-                    <td className="border p-3 text-right font-semibold">
-                      {r.priceVND}
-                    </td>
-                    <td className="border p-3 text-right text-gray-500">
-                      {r.priceUSD}
-                    </td>
-                  </tr>
-                ))
-              )}
-            </tbody>
-          </table>
+          <h1
+            className="text-4xl md:text-5xl text-[#2a3439] mb-6"
+            style={{ fontFamily: "'Playfair Display', serif" }}
+          >
+            {columnLabels.title}
+          </h1>
+          <p
+            className="text-sm text-gray-400 leading-relaxed max-w-2xl mx-auto italic"
+            style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+          >
+            {columnLabels.disclaimer}
+          </p>
         </div>
-      </div>
-    </div>
+      </section>
+
+      {/* TABLE SECTION */}
+      <section className="py-20">
+        <div className="max-w-6xl mx-auto px-8">
+
+          {/* SEARCH + FX ROW */}
+          <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-10">
+            <div className="relative flex-1">
+              <span className="absolute left-4 top-1/2 -translate-y-1/2 text-[#C5AF73] text-sm pointer-events-none">
+                ✦
+              </span>
+              <input
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                placeholder={columnLabels.search}
+                className="w-full pl-10 pr-5 py-3 rounded-full border border-[#d4af37]/40 bg-white text-sm text-[#2a3439] placeholder-gray-300 focus:outline-none focus:border-[#d4af37] transition"
+                style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+              />
+            </div>
+            {fxLastUpdated && (
+              <p
+                className="text-xs text-gray-400 shrink-0"
+                style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+              >
+                FX updated: {new Date(fxLastUpdated).toLocaleString()}
+              </p>
+            )}
+          </div>
+
+          {/* TABLE */}
+          <div className="overflow-x-auto rounded-2xl shadow-sm bg-white">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-gray-100">
+                  <th
+                    className="px-6 py-4 text-left text-xs uppercase tracking-[0.2em] text-[#C5AF73] font-semibold w-44"
+                    style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+                  >
+                    {columnLabels.category}
+                  </th>
+                  <th
+                    className="px-6 py-4 text-left text-xs uppercase tracking-[0.2em] text-[#C5AF73] font-semibold"
+                    style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+                  >
+                    {columnLabels.description}
+                  </th>
+                  <th
+                    className="px-6 py-4 text-center text-xs uppercase tracking-[0.2em] text-[#C5AF73] font-semibold w-24"
+                    style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+                  >
+                    {columnLabels.unit}
+                  </th>
+                  <th
+                    className="px-6 py-4 text-right text-xs uppercase tracking-[0.2em] text-[#C5AF73] font-semibold w-48"
+                    style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+                  >
+                    {columnLabels.priceVND}
+                  </th>
+                  <th
+                    className="px-6 py-4 text-right text-xs uppercase tracking-[0.2em] text-gray-300 font-semibold w-40"
+                    style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+                  >
+                    {columnLabels.priceUSD}
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {Object.entries(filtered).map(([cat, rows]) =>
+                  rows.map((r, i) => (
+                    <tr
+                      key={`${cat}-${i}`}
+                      className="border-t border-gray-50 hover:bg-[#faf7f0] transition-colors"
+                    >
+                      {i === 0 && (
+                        <td
+                          rowSpan={rows.length}
+                          className="px-6 py-4 align-top"
+                          style={{ fontFamily: "'Playfair Display', serif" }}
+                        >
+                          <span className="text-[#2a3439] font-medium text-base leading-snug">
+                            {cat}
+                          </span>
+                        </td>
+                      )}
+                      <td
+                        className="px-6 py-4 text-gray-500"
+                        style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+                      >
+                        {r.desc}
+                      </td>
+                      <td
+                        className="px-6 py-4 text-center text-gray-400"
+                        style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+                      >
+                        {r.unit}
+                      </td>
+                      <td
+                        className="px-6 py-4 text-right font-semibold text-[#2a3439]"
+                        style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+                      >
+                        {r.priceVND}
+                      </td>
+                      <td
+                        className="px-6 py-4 text-right text-gray-300"
+                        style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+                      >
+                        {r.priceUSD}
+                      </td>
+                    </tr>
+                  ))
+                )}
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
   );
 }
