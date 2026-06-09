@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet';
 import drTuPortrait from '../pics/dr-tu-potrait.jpg';
 import doctorsContent from '../Translations/doctorsContent';
 import patient2 from '../pics/patient2.jpg';
+import ContactForm from '../components/ContactForm.jsx';
 import consultationImage from '../pics/dr-x-ray-consultation.jpg';
 const Doctors = () => {
   const language = useSelector((state) => state.language.language);
