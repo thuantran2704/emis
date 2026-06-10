@@ -29,7 +29,7 @@ const Doctors = () => {
             <div className="order-1 lg:order-2">
               <div className="overflow-hidden rounded-2xl shadow-lg">
                 <img
-                  src={patient2}
+                  src={consultationImage}
                   alt="EMIS Clinical Team"
                   className="w-full h-[460px] object-cover"
                 />
@@ -251,7 +251,7 @@ const Doctors = () => {
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
           <div className="absolute inset-y-0 left-0 right-0 lg:right-[42%]">
             <img
-              src={consultationImage}
+              src={patient2}
               alt=""
               className="absolute inset-0 h-full w-full object-cover object-center"
               style={{ opacity: 0.45 }}
