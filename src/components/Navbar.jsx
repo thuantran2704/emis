@@ -111,7 +111,7 @@ export default function Navbar() {
                       >
                         {sub.name}
                       </Link>
-                    ))}
+                    ))}d
                   </div>
                 )}
               </div>
