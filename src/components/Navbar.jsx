@@ -24,6 +24,7 @@ export default function Navbar() {
 
   const aboutDropdownItems = [
     { name: content.drSon, path: '/dr-son' },
+    { name: content.doctors, path: '/doctors' },
     { name: content.veneer, path: '/veneer' },
     { name: content.equipment, path: '/equipment' },
   ];

@@ -78,7 +78,7 @@ const About = () => {
       </section>
 
       {/* OUR APPROACH */}
-      <section className="py-28 bg-white">
+      <section className="py-28 max-md:py-36 bg-white">
         <div className="max-w-6xl mx-auto px-8">
           <div className="grid gap-16 md:grid-cols-2 items-center">
             <div>
@@ -95,7 +95,7 @@ const About = () => {
               <img
                 src={patient2}
                 alt="Patient care consultation"
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-cover object-[center_58%] md:object-center"
               />
             </div>
           </div>
@@ -103,7 +103,7 @@ const About = () => {
       </section>
 
       {/* WHY PLANNING MATTERS */}
-      <section className="py-28 bg-[#f7f2e7]">
+      <section className="py-28 max-md:py-36 bg-[#f7f2e7]">
         <div className="max-w-6xl mx-auto px-8">
           <div className="grid gap-16 md:grid-cols-2 items-center">
             <div className="rounded-2xl overflow-hidden shadow-sm h-[480px]">
@@ -140,7 +140,7 @@ const About = () => {
       </section>
 
       {/* TECHNOLOGY & SAFETY */}
-      <section className="py-28 bg-white">
+      <section className="py-28 max-md:py-36 bg-white">
         <div className="max-w-6xl mx-auto px-8">
           <div className="grid gap-16 md:grid-cols-2 items-center">
             <div className="rounded-2xl overflow-hidden shadow-sm h-[460px]">
@@ -178,7 +178,7 @@ const About = () => {
       </section>
 
       {/* TEAM */}
-      <section className="py-28 bg-[#f7f2e7]">
+      <section className="py-28 max-md:py-36 bg-[#f7f2e7]">
         <div className="max-w-6xl mx-auto px-8">
           <div className="grid gap-16 md:grid-cols-2 items-start">
             <div>
@@ -238,7 +238,7 @@ const About = () => {
       </section>
 
       {/* SUPPORT FOR OVERSEAS */}
-      <section className="py-28 bg-white">
+      <section className="py-28 max-md:py-36 bg-white">
         <div className="max-w-6xl mx-auto px-8">
           <div className="grid gap-16 md:grid-cols-2 items-center">
             <div className="rounded-2xl overflow-hidden shadow-sm h-[420px]">
@@ -275,7 +275,7 @@ const About = () => {
       </section>
 
       {/* TRUST & TRANSPARENCY */}
-      <section className="py-28 bg-[#f7f2e7]">
+      <section className="py-28 max-md:py-36 bg-[#f7f2e7]">
         <div className="max-w-6xl mx-auto px-8">
           <div className="grid gap-16 md:grid-cols-2 items-center">
             <div>
@@ -313,7 +313,7 @@ const About = () => {
       </section>
 
       {/* START STEPS */}
-      <section className="py-28 bg-white">
+      <section className="py-28 max-md:py-36 bg-white">
         <div className="max-w-5xl mx-auto px-8 text-center">
           <SectionLabel>Getting Started</SectionLabel>
           <SectionTitle>{content.startTitle}</SectionTitle>
