@@ -267,10 +267,10 @@ const Doctors = () => {
         </div>
 
         <div className="relative max-w-6xl mx-auto px-8">
-          <div className="grid lg:grid-cols-[1fr_1.1fr] gap-10 lg:gap-20 items-start">
+          <div className="grid lg:grid-cols-[1fr_1.1fr] gap-10 lg:gap-20 items-start justify-items-center lg:justify-items-stretch">
 
             {/* LEFT */}
-            <div className="space-y-5 lg:space-y-6">
+            <div className="w-full max-w-2xl space-y-5 lg:space-y-6 text-center lg:text-left">
               <p
                 className="uppercase tracking-[0.3em] text-[#C5AF73] text-xs font-semibold"
                 style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
@@ -346,7 +346,7 @@ const Doctors = () => {
             </div>
 
             {/* RIGHT — contact form sits on top of everything */}
-            <div className="relative z-10">
+            <div className="relative z-10 w-full max-w-xl mx-auto lg:max-w-none lg:mx-0">
               <ContactForm embedded />
             </div>
 

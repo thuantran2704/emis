@@ -121,7 +121,7 @@ const About = () => {
                   <p className="text-sm text-[#4b5563]">{m.description}</p>
                   {m.cta && (
                     <div className="mt-4">
-                      <Link to={m.cta.href} className="inline-block bg-[#d4af37] text-white px-4 py-2 rounded-full text-sm hover:bg-[#c19d30]">{m.cta.text}</Link>
+                      <Link to="/contact" className="inline-block bg-[#d4af37] text-white px-4 py-2 rounded-full text-sm hover:bg-[#c19d30]">{m.cta}</Link>
                     </div>
                   )}
                 </div>
