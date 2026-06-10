@@ -79,235 +79,223 @@ const About = () => {
 
       {/* OUR APPROACH */}
       <section className="py-28 max-md:py-36 bg-white">
-        <div className="max-w-6xl mx-auto px-8">
-          <div className="grid gap-16 md:grid-cols-2 items-center">
-            <div>
-              <SectionLabel>Our Approach</SectionLabel>
-              <SectionTitle>{content.approachTitle}</SectionTitle>
-              <p
-                className="text-gray-500 leading-relaxed text-lg"
-                style={{ fontFamily: "'Cormorant', serif" }}
-              >
-                {content.approachText}
-              </p>
-            </div>
-            <div className="rounded-2xl overflow-hidden shadow-sm h-[420px]">
-              <img
-                src={patient2}
-                alt="Patient care consultation"
-                className="w-full h-full object-cover object-[center_58%] md:object-center"
-              />
-            </div>
+        <div className="max-w-4xl mx-auto px-8 space-y-10">
+          <div>
+            <SectionLabel>Our Approach</SectionLabel>
+            <SectionTitle>{content.approachTitle}</SectionTitle>
+            <p
+              className="text-gray-500 leading-relaxed text-lg"
+              style={{ fontFamily: "'Cormorant', serif" }}
+            >
+              {content.approachText}
+            </p>
+          </div>
+          <div className="rounded-2xl overflow-hidden shadow-sm h-[420px]">
+            <img
+              src={patient2}
+              alt="Patient care consultation"
+              className="w-full h-full object-cover object-[center_58%] md:object-center"
+            />
           </div>
         </div>
       </section>
 
       {/* WHY PLANNING MATTERS */}
       <section className="py-28 max-md:py-36 bg-[#f7f2e7]">
-        <div className="max-w-6xl mx-auto px-8">
-          <div className="grid gap-16 md:grid-cols-2 items-center">
-            <div className="rounded-2xl overflow-hidden shadow-sm h-[480px]">
-              <img
-                src={patient1}
-                alt="Clinical treatment planning"
-                className="w-full h-full object-cover object-center"
-              />
+        <div className="max-w-4xl mx-auto px-8 space-y-10">
+          <div>
+            <SectionLabel>Planning</SectionLabel>
+            <SectionTitle>{content.planningTitle}</SectionTitle>
+            <div className="space-y-5">
+              {content.planningBullets.map((b, i) => (
+                <div key={i} className="bg-white rounded-2xl p-6 shadow-sm border border-[#eadfc9]/50">
+                  <h3
+                    className="text-lg text-[#2a3439] mb-2"
+                    style={{ fontFamily: "'Playfair Display', serif" }}
+                  >
+                    {b.title}
+                  </h3>
+                  <p
+                    className="text-sm text-gray-500 leading-relaxed"
+                    style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+                  >
+                    {b.text}
+                  </p>
+                </div>
+              ))}
             </div>
-            <div>
-              <SectionLabel>Planning</SectionLabel>
-              <SectionTitle>{content.planningTitle}</SectionTitle>
-              <div className="space-y-5">
-                {content.planningBullets.map((b, i) => (
-                  <div key={i} className="bg-white rounded-2xl p-6 shadow-sm border border-[#eadfc9]/50">
-                    <h3
-                      className="text-lg text-[#2a3439] mb-2"
-                      style={{ fontFamily: "'Playfair Display', serif" }}
-                    >
-                      {b.title}
-                    </h3>
-                    <p
-                      className="text-sm text-gray-500 leading-relaxed"
-                      style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
-                    >
-                      {b.text}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
+          </div>
+          <div className="rounded-2xl overflow-hidden shadow-sm h-[480px]">
+            <img
+              src={patient1}
+              alt="Clinical treatment planning"
+              className="w-full h-full object-cover object-center"
+            />
           </div>
         </div>
       </section>
 
       {/* TECHNOLOGY & SAFETY */}
       <section className="py-28 max-md:py-36 bg-white">
-        <div className="max-w-6xl mx-auto px-8">
-          <div className="grid gap-16 md:grid-cols-2 items-center">
-            <div className="rounded-2xl overflow-hidden shadow-sm h-[460px]">
-              <img
-                src={phongkham}
-                alt={content.technologyImageAlt || 'Clinical treatment room'}
-                className="w-full h-full object-cover object-center"
-              />
+        <div className="max-w-4xl mx-auto px-8 space-y-10">
+          <div>
+            <SectionLabel>Technology</SectionLabel>
+            <SectionTitle>{content.technologyTitle}</SectionTitle>
+            <p
+              className="text-gray-500 leading-relaxed text-lg mb-8"
+              style={{ fontFamily: "'Cormorant', serif" }}
+            >
+              {content.technologyIntro}
+            </p>
+            <div className="space-y-3">
+              {content.technologyBullets.map((t, idx) => (
+                <div key={idx} className="flex items-center gap-3">
+                  <span className="text-[#C5AF73] text-xs">●</span>
+                  <span
+                    className="text-sm text-[#2a3439]"
+                    style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+                  >
+                    {t}
+                  </span>
+                </div>
+              ))}
             </div>
-            <div>
-              <SectionLabel>Technology</SectionLabel>
-              <SectionTitle>{content.technologyTitle}</SectionTitle>
-              <p
-                className="text-gray-500 leading-relaxed text-lg mb-8"
-                style={{ fontFamily: "'Cormorant', serif" }}
-              >
-                {content.technologyIntro}
-              </p>
-              <div className="space-y-3">
-                {content.technologyBullets.map((t, idx) => (
-                  <div key={idx} className="flex items-center gap-3">
-                    <span className="text-[#C5AF73] text-xs">●</span>
-                    <span
-                      className="text-sm text-[#2a3439]"
-                      style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
-                    >
-                      {t}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
+          </div>
+          <div className="rounded-2xl overflow-hidden shadow-sm h-[460px]">
+            <img
+              src={phongkham}
+              alt={content.technologyImageAlt || 'Clinical treatment room'}
+              className="w-full h-full object-cover object-center"
+            />
           </div>
         </div>
       </section>
 
       {/* TEAM */}
       <section className="py-28 max-md:py-36 bg-[#f7f2e7]">
-        <div className="max-w-6xl mx-auto px-8">
-          <div className="grid gap-16 md:grid-cols-2 items-start">
-            <div>
-              <SectionLabel>Our Team</SectionLabel>
-              <SectionTitle>{content.teamTitle}</SectionTitle>
-              <p
-                className="text-gray-500 leading-relaxed mb-10"
-                style={{ fontFamily: "'Cormorant', serif" }}
-              >
-                {content.teamIntro}
-              </p>
-              <div className="space-y-5">
-                {content.teamMembers.map((m, idx) => (
-                  <div key={idx} className="bg-white rounded-2xl p-7 shadow-sm">
-                    <h3
-                      className="text-xl text-[#2a3439] mb-1"
-                      style={{ fontFamily: "'Playfair Display', serif" }}
-                    >
-                      {m.name}
-                    </h3>
-                    <p
-                      className="text-xs text-[#C5AF73] font-semibold mb-3 uppercase tracking-widest"
-                      style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
-                    >
-                      {m.role}
-                    </p>
-                    <p
-                      className="text-sm text-gray-500 leading-relaxed"
-                      style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
-                    >
-                      {m.description}
-                    </p>
-                    {m.cta && (
-                      <div className="mt-5">
-                        <Link
-                          to="/contact"
-                          className="inline-flex px-5 py-2.5 rounded-full border border-[#d4af37] text-[#2a3439] text-sm hover:bg-[#d4af37] hover:text-white transition"
-                          style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
-                        >
-                          {m.cta}
-                        </Link>
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
+        <div className="max-w-4xl mx-auto px-8 space-y-10">
+          <div>
+            <SectionLabel>Our Team</SectionLabel>
+            <SectionTitle>{content.teamTitle}</SectionTitle>
+            <p
+              className="text-gray-500 leading-relaxed mb-10"
+              style={{ fontFamily: "'Cormorant', serif" }}
+            >
+              {content.teamIntro}
+            </p>
+            <div className="space-y-5">
+              {content.teamMembers.map((m, idx) => (
+                <div key={idx} className="bg-white rounded-2xl p-7 shadow-sm">
+                  <h3
+                    className="text-xl text-[#2a3439] mb-1"
+                    style={{ fontFamily: "'Playfair Display', serif" }}
+                  >
+                    {m.name}
+                  </h3>
+                  <p
+                    className="text-xs text-[#C5AF73] font-semibold mb-3 uppercase tracking-widest"
+                    style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+                  >
+                    {m.role}
+                  </p>
+                  <p
+                    className="text-sm text-gray-500 leading-relaxed"
+                    style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+                  >
+                    {m.description}
+                  </p>
+                  {m.cta && (
+                    <div className="mt-5">
+                      <Link
+                        to="/contact"
+                        className="inline-flex px-5 py-2.5 rounded-full border border-[#d4af37] text-[#2a3439] text-sm hover:bg-[#d4af37] hover:text-white transition"
+                        style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+                      >
+                        {m.cta}
+                      </Link>
+                    </div>
+                  )}
+                </div>
+              ))}
             </div>
-            <div className="rounded-2xl overflow-hidden shadow-sm h-[500px] md:sticky md:top-28">
-              <img
-                src={reception}
-                alt="Professional clinic team environment"
-                className="w-full h-full object-cover object-center"
-              />
-            </div>
+          </div>
+          <div className="rounded-2xl overflow-hidden shadow-sm h-[500px]">
+            <img
+              src={reception}
+              alt="Professional clinic team environment"
+              className="w-full h-full object-cover object-center"
+            />
           </div>
         </div>
       </section>
 
       {/* SUPPORT FOR OVERSEAS */}
       <section className="py-28 max-md:py-36 bg-white">
-        <div className="max-w-6xl mx-auto px-8">
-          <div className="grid gap-16 md:grid-cols-2 items-center">
-            <div className="rounded-2xl overflow-hidden shadow-sm h-[420px]">
-              <img
-                src={emishall}
-                alt="EMIS clinic waiting room"
-                className="w-full h-full object-cover object-center"
-              />
+        <div className="max-w-4xl mx-auto px-8 space-y-10">
+          <div>
+            <SectionLabel>International Patients</SectionLabel>
+            <SectionTitle>{content.internationalTitle}</SectionTitle>
+            <p
+              className="text-gray-500 leading-relaxed mb-8"
+              style={{ fontFamily: "'Cormorant', serif" }}
+            >
+              {content.internationalIntro}
+            </p>
+            <div className="space-y-3">
+              {content.internationalBullets.map((b, i) => (
+                <div
+                  key={i}
+                  className="flex items-center gap-3 bg-[#f7f2e7] rounded-xl px-5 py-3.5 border border-[#eadfc9]/50"
+                  style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+                >
+                  <span className="text-[#C5AF73] text-xs">●</span>
+                  <span className="text-sm text-[#2a3439]">{b}</span>
+                </div>
+              ))}
             </div>
-            <div>
-              <SectionLabel>International Patients</SectionLabel>
-              <SectionTitle>{content.internationalTitle}</SectionTitle>
-              <p
-                className="text-gray-500 leading-relaxed mb-8"
-                style={{ fontFamily: "'Cormorant', serif" }}
-              >
-                {content.internationalIntro}
-              </p>
-              <div className="space-y-3">
-                {content.internationalBullets.map((b, i) => (
-                  <div
-                    key={i}
-                    className="flex items-center gap-3 bg-[#f7f2e7] rounded-xl px-5 py-3.5 border border-[#eadfc9]/50"
-                    style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
-                  >
-                    <span className="text-[#C5AF73] text-xs">●</span>
-                    <span className="text-sm text-[#2a3439]">{b}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+          </div>
+          <div className="rounded-2xl overflow-hidden shadow-sm h-[420px]">
+            <img
+              src={emishall}
+              alt="EMIS clinic waiting room"
+              className="w-full h-full object-cover object-center"
+            />
           </div>
         </div>
       </section>
 
       {/* TRUST & TRANSPARENCY */}
       <section className="py-28 max-md:py-36 bg-[#f7f2e7]">
-        <div className="max-w-6xl mx-auto px-8">
-          <div className="grid gap-16 md:grid-cols-2 items-center">
-            <div>
-              <SectionLabel>Trust & Transparency</SectionLabel>
-              <SectionTitle>{content.trustTitle}</SectionTitle>
-              <p
-                className="text-gray-500 leading-relaxed mb-8"
-                style={{ fontFamily: "'Cormorant', serif" }}
-              >
-                {content.trustIntro || 'We believe patients should have access to clear information before making treatment decisions.'}
-              </p>
-              <div className="space-y-3">
-                {content.trustBullets.map((b, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <span className="text-[#C5AF73] mt-0.5">✓</span>
-                    <span
-                      className="text-sm text-[#2a3439] leading-relaxed"
-                      style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
-                    >
-                      {b}
-                    </span>
-                  </div>
-                ))}
-              </div>
+        <div className="max-w-4xl mx-auto px-8 space-y-10">
+          <div>
+            <SectionLabel>Trust & Transparency</SectionLabel>
+            <SectionTitle>{content.trustTitle}</SectionTitle>
+            <p
+              className="text-gray-500 leading-relaxed mb-8"
+              style={{ fontFamily: "'Cormorant', serif" }}
+            >
+              {content.trustIntro || 'We believe patients should have access to clear information before making treatment decisions.'}
+            </p>
+            <div className="space-y-3">
+              {content.trustBullets.map((b, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <span className="text-[#C5AF73] mt-0.5">✓</span>
+                  <span
+                    className="text-sm text-[#2a3439] leading-relaxed"
+                    style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+                  >
+                    {b}
+                  </span>
+                </div>
+              ))}
             </div>
-            <div className="rounded-2xl overflow-hidden shadow-sm h-[420px]">
-              <img
-                src={seal}
-                alt="Clinical sterilization and safety protocols"
-                className="w-full h-full object-cover object-center"
-              />
-            </div>
+          </div>
+          <div className="rounded-2xl overflow-hidden shadow-sm h-[420px]">
+            <img
+              src={seal}
+              alt="Clinical sterilization and safety protocols"
+              className="w-full h-full object-cover object-center"
+            />
           </div>
         </div>
       </section>
