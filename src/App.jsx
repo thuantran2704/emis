@@ -15,7 +15,7 @@ import Equipment from './pages/Equipment';
 import FloatingContactButton from './components/floatingContactButton.jsx';
 import VeneerLanding from './pages/landingPage1.jsx';
 import ImplantInfo from './pages/implantInfo.jsx';
-import SonPage from './pages/bsPage.jsx';
+import SonPage from './pages/drSonPage.jsx';
 import CrownLanding from './pages/bocRang.jsx';
 import DentalVisitorProgram from './pages/flightassist.jsx';
 import WhiteningAd from './pages/whitening.jsx';
