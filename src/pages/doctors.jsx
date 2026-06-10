@@ -21,17 +21,17 @@ const Doctors = () => {
       </Helmet>
 
       {/* HERO SECTION */}
-      <section className="min-h-[85vh] flex items-center py-24">
+      <section className="min-h-[85vh] flex items-center py-16 lg:py-24">
         <div className="max-w-6xl mx-auto px-8 w-full">
-          <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-20 items-center">
+          <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-20 items-center">
 
             {/* IMAGE */}
             <div className="order-1 lg:order-2">
-              <div className="overflow-hidden rounded-2xl shadow-lg">
+              <div className="overflow-hidden rounded-2xl shadow-lg aspect-[16/9] lg:aspect-auto">
                 <img
                   src={consultationImage}
                   alt="EMIS Clinical Team"
-                  className="w-full h-[460px] object-cover"
+                  className="w-full h-full lg:h-[460px] object-cover object-center"
                 />
               </div>
             </div>
@@ -245,10 +245,10 @@ const Doctors = () => {
       </section>
 
       {/* DECISION SECTION */}
-      <section className="relative py-32 overflow-hidden bg-white">
+      <section className="relative py-20 lg:py-32 overflow-hidden bg-white">
 
         {/* Background image: blurred at edges, sharp and visible in the center */}
-        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <div className="absolute inset-0 pointer-events-none hidden lg:block" aria-hidden="true">
           <div className="absolute inset-y-0 left-0 right-0 lg:right-[42%]">
             <img
               src={patient2}
@@ -267,10 +267,10 @@ const Doctors = () => {
         </div>
 
         <div className="relative max-w-6xl mx-auto px-8">
-          <div className="grid lg:grid-cols-[1fr_1.1fr] gap-20 items-start">
+          <div className="grid lg:grid-cols-[1fr_1.1fr] gap-10 lg:gap-20 items-start">
 
             {/* LEFT */}
-            <div className="space-y-6">
+            <div className="space-y-5 lg:space-y-6">
               <p
                 className="uppercase tracking-[0.3em] text-[#C5AF73] text-xs font-semibold"
                 style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
@@ -317,9 +317,9 @@ const Doctors = () => {
                   {content.decisionSection.stepsTitle}
                 </p>
 
-                <div className="grid md:grid-cols-3 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                   {content.decisionSection.steps.map((step, index) => (
-                    <div key={index} className="bg-[#f7f2e7] rounded-2xl p-5">
+                    <div key={index} className="bg-[#f7f2e7] rounded-2xl p-4 sm:p-5">
                       <p
                         className="text-[#C5AF73] text-xs tracking-[0.2em] mb-3 font-semibold"
                         style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
@@ -346,8 +346,8 @@ const Doctors = () => {
             </div>
 
             {/* RIGHT — contact form sits on top of everything */}
-            <div className="relative z-10 bg-white rounded-2xl shadow-xl p-2">
-              <ContactForm />
+            <div className="relative z-10">
+              <ContactForm embedded />
             </div>
 
           </div>

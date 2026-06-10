@@ -3,7 +3,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 import Alert from "./alert";
 import contactContent from "../Translations/contactContent";
 import { useSelector } from 'react-redux';
-export default function ContactForm() {
+export default function ContactForm({ embedded = false }) {
   const language = useSelector((state) => state.language.language);
   const content = contactContent[language] || contactContent.english;
   const [formData, setFormData] = useState({
@@ -101,9 +101,11 @@ export default function ContactForm() {
     }
   };
 
+  const Container = embedded ? 'div' : 'section';
+
   return (
-    <section className="py-16 bg-[#fdfcf8]">
-      <div className="max-w-md mx-auto bg-white rounded-2xl shadow-lg p-6 border border-[#eee]">
+    <Container className={embedded ? 'w-full' : 'py-16 bg-[#fdfcf8]'}>
+      <div className={embedded ? 'w-full bg-white rounded-2xl shadow-lg p-5 sm:p-6 border border-[#eee]' : 'max-w-md mx-auto bg-white rounded-2xl shadow-lg p-6 border border-[#eee]'}>
         {alert.show && (
           <Alert
             message={alert.message}
@@ -167,6 +169,6 @@ export default function ContactForm() {
           </button>
         </form>
       </div>
-    </section>
+    </Container>
   );
 }
