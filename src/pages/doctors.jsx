@@ -149,7 +149,7 @@ const Doctors = () => {
 
       {/* DOCTOR SECTION */}
       <section className="py-32 bg-[#f7f2e7]">
-        <div className="max-w-6xl mx-auto px-8">
+        <div className="max-w-5xl mx-auto px-8">
 
           <div className="max-w-2xl mx-auto text-center mb-24">
             <p
@@ -172,20 +172,20 @@ const Doctors = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-2 gap-6">
             {content.doctors.map((doctor, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl overflow-hidden shadow-sm flex flex-col"
+                className="bg-white rounded-2xl overflow-hidden shadow-sm flex flex-col max-w-xl mx-auto"
               >
                 <img
                   src={doctorImages[index]}
                   alt={doctor.name}
-                  className="w-full h-[380px] object-cover object-[center_20%]"
+                  className="w-full h-[320px] lg:h-[300px] object-cover object-[center_20%]"
                 />
-                <div className="p-9 flex flex-col flex-grow">
+                <div className="p-7 lg:p-8 flex flex-col flex-grow">
                   <h3
-                    className="text-2xl text-[#2a3439] mb-1.5"
+                    className="text-xl lg:text-2xl text-[#2a3439] mb-1.5"
                     style={{ fontFamily: "'Playfair Display', serif" }}
                   >
                     {doctor.name}
@@ -197,7 +197,7 @@ const Doctors = () => {
                     {doctor.role}
                   </p>
                   <p
-                    className="text-xs uppercase tracking-widest text-gray-400 mb-7"
+                    className="text-[10px] lg:text-xs uppercase tracking-widest text-gray-400 mb-5 lg:mb-6"
                     style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                   >
                     {doctor.specialties}
@@ -209,12 +209,12 @@ const Doctors = () => {
                     {doctor.descriptionOne}
                   </p>
                   <p
-                    className="text-sm text-gray-500 leading-relaxed mb-8"
+                    className="text-sm text-gray-500 leading-relaxed mb-6 lg:mb-7"
                     style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                   >
                     {doctor.descriptionTwo}
                   </p>
-                  <div className="space-y-2.5 mb-8">
+                  <div className="space-y-2 mb-6 lg:mb-7">
                     {doctor.highlights.map((highlight, idx) => (
                       <div key={idx} className="flex items-center gap-3">
                         <span className="text-[#C5AF73] text-xs">●</span>
@@ -230,7 +230,7 @@ const Doctors = () => {
                   <div className="mt-auto">
                     <Link
                       to="/contact"
-                      className="inline-flex px-6 py-3 rounded-full border border-[#d4af37] text-[#2a3439] text-sm hover:bg-[#d4af37] hover:text-white transition"
+                      className="inline-flex px-5 py-2.5 rounded-full border border-[#d4af37] text-[#2a3439] text-sm hover:bg-[#d4af37] hover:text-white transition"
                       style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                     >
                       {doctor.cta}
