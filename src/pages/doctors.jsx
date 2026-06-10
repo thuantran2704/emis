@@ -23,7 +23,7 @@ const Doctors = () => {
       {/* HERO SECTION */}
       <section className="min-h-[85vh] flex items-center py-24">
         <div className="max-w-6xl mx-auto px-8 w-full">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
+          <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-20 items-center">
 
             {/* IMAGE */}
             <div className="order-1 lg:order-2">
