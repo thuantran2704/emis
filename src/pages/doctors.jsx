@@ -248,25 +248,22 @@ const Doctors = () => {
       <section className="relative py-32 overflow-hidden bg-white">
 
         {/* Background image: blurred at edges, sharp and visible in the center */}
-        <div
-          className="absolute inset-0 pointer-events-none"
-          aria-hidden="true"
-        >
-          {/* Center-visible image with radial fade */}
-          <img
-            src={consultationImage}
-            alt=""
-            className="absolute inset-0 w-full h-full object-cover"
-            style={{ opacity: 0.45 }}
-          />
-          {/* Radial gradient mask: transparent center, white edges */}
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                'radial-gradient(ellipse 60% 55% at 50% 50%, transparent 0%, transparent 35%, rgba(255,255,255,0.55) 60%, rgba(255,255,255,0.92) 80%, #ffffff 100%)',
-            }}
-          />
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+          <div className="absolute inset-y-0 left-0 right-0 lg:right-[42%]">
+            <img
+              src={consultationImage}
+              alt=""
+              className="absolute inset-0 h-full w-full object-cover object-center"
+              style={{ opacity: 0.45 }}
+            />
+            <div
+              className="absolute inset-0"
+              style={{
+                background:
+                  'radial-gradient(ellipse 62% 58% at 50% 50%, transparent 0%, transparent 34%, rgba(255,255,255,0.52) 62%, rgba(255,255,255,0.9) 82%, #ffffff 100%)',
+              }}
+            />
+          </div>
         </div>
 
         <div className="relative max-w-6xl mx-auto px-8">
