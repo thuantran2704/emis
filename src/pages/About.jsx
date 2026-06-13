@@ -65,14 +65,14 @@ const About = () => {
             className="px-7 py-3.5 rounded-full bg-[#d4af37] text-white text-sm font-semibold hover:bg-[#c19d30] transition"
             style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
           >
-            {content.primaryCTA}
+            {content.heroPrimaryCTA}
           </Link>
           <Link
             to="/dr-son"
             className="px-7 py-3.5 rounded-full border border-[#d4af37] text-[#2a3439] text-sm font-semibold hover:bg-white transition"
             style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
           >
-            {content.secondaryCTA}
+            {content.heroSecondaryCTA}
           </Link>
         </div>
       </section>
@@ -344,14 +344,14 @@ const About = () => {
               className="px-7 py-3.5 rounded-full bg-[#d4af37] text-white text-sm font-semibold hover:bg-[#c19d30] transition"
               style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
             >
-              {content.primaryCTA}
+              {content.startPrimaryCTA}
             </Link>
             <Link
               to="/contact"
               className="px-7 py-3.5 rounded-full border border-[#d4af37] text-[#2a3439] text-sm font-semibold hover:bg-[#f7f2e7] transition"
               style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
             >
-              {content.secondaryContactCTA || 'Talk With Our Team'}
+              {content.startSecondaryCTA || 'Talk With Our Team'}
             </Link>
           </div>
         </div>

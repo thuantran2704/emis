@@ -4,8 +4,8 @@ const aboutContent = {
     heroTitle: 'Advanced Implant & Full-Mouth Rehabilitation Care',
     heroSubtitle:
       'At EMIS, we help patients restore comfort, function, and confidence through carefully planned implant and rehabilitation treatment. Whether you live in Vietnam or overseas, our goal is to help you understand your situation clearly and explore treatment options with greater confidence.',
-    primaryCTA: 'Send Your X-ray',
-    secondaryCTA: 'Meet Our Doctors',
+    heroPrimaryCTA: 'Send Your X-ray',
+    heroSecondaryCTA: 'Meet Our Doctors',
 
     approachTitle: 'Treatment Begins With Understanding',
     approachText:
@@ -78,8 +78,8 @@ const aboutContent = {
       { step: 'Step 3', title: 'Discuss Your Treatment Options', text: 'A detailed discussion to help you choose an appropriate pathway.' },
     ],
     note: 'A preliminary assessment helps us better understand your situation. Final treatment recommendations require an in-person examination and appropriate diagnostic imaging.',
-    primaryCTA: 'Send Your X-ray',
-    secondaryContactCTA: 'Talk With Our Team',
+    startPrimaryCTA: 'Send Your X-ray',
+    startSecondaryCTA: 'Talk With Our Team',
   },
 
   vietnamese: {
@@ -87,8 +87,8 @@ const aboutContent = {
     heroTitle: 'Chuyên Sâu Implant & Phục Hồi Toàn Hàm',
     heroSubtitle:
       'Tại EMIS, chúng tôi tập trung vào Implant và phục hồi toàn hàm nhằm giúp bệnh nhân khôi phục khả năng ăn nhai, sự tự tin và chất lượng cuộc sống lâu dài. Dù bạn đang sinh sống tại Việt Nam hay ở nước ngoài, chúng tôi mong muốn giúp bạn hiểu rõ sức khỏe răng miệng của mình và có đủ thông tin trước khi đưa ra lựa chọn.',
-    primaryCTA: 'Gửi X-ray Của Bạn',
-    secondaryCTA: 'Tìm Hiểu Đội Ngũ Bác Sĩ',
+    heroPrimaryCTA: 'Gửi X-ray Của Bạn',
+    heroSecondaryCTA: 'Tìm Hiểu Đội Ngũ Bác Sĩ',
 
     approachTitle: 'Điều Trị Bắt Đầu Từ Sự Thấu Hiểu',
     approachText:
@@ -127,8 +127,8 @@ const aboutContent = {
       { step: 'Bước 3', title: 'Trao đổi về lựa chọn điều trị', text: 'Cùng trao đổi về những lựa chọn có thể phù hợp với nhu cầu và mong muốn của bạn.' },
     ],
     note: 'Đánh giá ban đầu giúp chúng tôi hiểu rõ hơn về trường hợp bạn. Kế hoạch điều trị cuối cùng sẽ được xác định sau khi thăm khám trực tiếp và thực hiện đầy đủ các chẩn đoán cần thiết.',
-    primaryCTA: 'Gửi X-ray Của Bạn',
-    secondaryContactCTA: 'Trao Đổi Với Đội Ngũ EMIS',
+    startPrimaryCTA: 'Gửi X-ray Của Bạn',
+    startSecondaryCTA: 'Trao Đổi Với Đội Ngũ EMIS',
   },
 };
 
