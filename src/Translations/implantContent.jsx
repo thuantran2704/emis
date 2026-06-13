@@ -31,6 +31,8 @@ export const implantContent = {
       title: "Understanding Implant Treatment",
       intro:
         "A dental implant works like an artificial tooth root placed in the jawbone to support a replacement tooth.\n\nAfter healing, the implant can support a crown, bridge, or other implant-supported restoration.",
+      summaryEyebrow: "Implant Basics",
+      summaryTitle: "A Replacement Tooth Root",
       journey: "Typical Treatment Journey",
       steps: ["Assessment", "Planning", "Implant Placement", "Healing", "Final Restoration"],
     },
@@ -138,6 +140,8 @@ export const implantContent = {
       title: "Trồng Răng Implant Là Gì?",
       intro:
         "Trồng răng Implant là phương pháp đặt một trụ Implant vào xương hàm để thay thế chân răng đã mất và nâng đỡ răng phục hình phía trên.\n\nSau khi lành thương, Implant có thể nâng đỡ mão răng, cầu răng hoặc các phục hình khác tùy theo nhu cầu phục hồi.",
+      summaryEyebrow: "Kiến Thức Cơ Bản Về Implant",
+      summaryTitle: "Một Chân Răng Thay Thế",
       journey: "Các Bước Điều Trị Thường Gặp",
       steps: [
         "Thăm Khám & Chẩn Đoán",

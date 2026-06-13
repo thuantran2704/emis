@@ -185,20 +185,14 @@ const ImplantGuide = () => {
                 className="uppercase tracking-[0.25em] text-[#C5AF73] text-xs font-semibold mb-4"
                 style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
               >
-                IMPLANT BASICS
+                {content.section3.summaryEyebrow}
               </p>
               <h3
                 className="text-2xl text-[#2a3439] mb-4"
                 style={{ fontFamily: "'Playfair Display', serif" }}
               >
-                A Replacement Tooth Root
+                {content.section3.summaryTitle}
               </h3>
-              <p
-                className="text-gray-500 leading-relaxed whitespace-pre-line"
-                style={{ fontFamily: "'Cormorant', serif" }}
-              >
-                A dental implant acts like an artificial root placed in the jawbone to support a crown, bridge, or other restoration after healing.
-              </p>
             </div>
           </div>
         </div>
