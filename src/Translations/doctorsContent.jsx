@@ -88,27 +88,27 @@ const doctorsContent = {
 
     {
 
-        name: 'Dr. Nguyen Thi Bich Van',
+      name: 'Dr. Nguyen The Son',
 
-        role: 'Specialist In Implant Prosthetics & Restorative Care',
+      role: 'Chief Dentist - Implant & Aesthetic Prosthetics',
 
-        specialties:
-        'Implant Prosthetics • Functional Rehabilitation • Aesthetic Restoration',
+      specialties:
+      'Dental Implants • Aesthetic Prosthetics • Sinus Lift & Bone Grafting',
 
-        descriptionOne:
-        'Dr. Van focuses on restoring function, comfort, and aesthetics through implant-supported rehabilitation and restorative treatment.',
+      descriptionOne:
+      'Dr. Son has over 10 years of specialized experience in dental implants, aesthetic prosthetics, and sinus lift - bone grafting procedures.',
 
-        descriptionTwo:
-        'With more than a decade of clinical experience, she is particularly interested in long-term outcomes and natural-looking restorations.',
+      descriptionTwo:
+      'With more than 3,000 implant cases from simple to complex, he focuses on restoring chewing function, natural esthetics, and long-term treatment stability.',
 
-        highlights: [
-        '10+ Years Clinical Experience',
-        'Specialist-Level Training',
-        'Implant Prosthetics',
-        'Long-Term Functional & Aesthetic Care',
-        ],
+      highlights: [
+      'Over 10 Years Of Experience',
+      '3,000+ Implant Cases',
+      'Advanced Bone Grafting & Sinus Lift Training',
+      'Digital Implant Planning & 3D Diagnostics',
+      ],
 
-        cta: 'View Full Profile',
+      cta: 'View Full Profile',
     },
     ],
 
@@ -236,27 +236,27 @@ const doctorsContent = {
 
     {
 
-        name: 'BS. Nguyễn Thị Bích Vân',
+      name: 'BS. Nguyễn Thế Sơn',
 
-        role: 'Chuyên Gia Phục Hình Implant & Phục Hồi Chức Năng',
+      role: 'Bác Sĩ Trưởng - Implant & Phục Hình Thẩm Mỹ',
 
-        specialties:
-        'Phục Hình Implant • Phục Hồi Chức Năng • Phục Hình Thẩm Mỹ',
+      specialties:
+      'Cấy Ghép Implant • Phục Hình Thẩm Mỹ • Nâng Xoang & Ghép Xương',
 
-        descriptionOne:
-        'Bác sĩ Vân tập trung vào phục hồi chức năng ăn nhai, sự thoải mái và thẩm mỹ thông qua điều trị Implant và phục hình nha khoa.',
+      descriptionOne:
+      'Bác sĩ Sơn có hơn 10 năm kinh nghiệm chuyên sâu trong lĩnh vực cấy ghép Implant, phục hình thẩm mỹ và phẫu thuật nâng xoang - ghép xương.',
 
-        descriptionTwo:
-        'Với hơn 10 năm kinh nghiệm lâm sàng, bác sĩ đặc biệt quan tâm đến kết quả điều trị lâu dài và các phục hình có tính thẩm mỹ tự nhiên.',
+      descriptionTwo:
+      'Với hơn 3.000 ca Implant từ đơn giản đến phức tạp, bác sĩ tập trung phục hồi chức năng ăn nhai, thẩm mỹ tự nhiên và sự ổn định lâu dài.',
 
-        highlights: [
-        'Hơn 10 Năm Kinh Nghiệm Lâm Sàng',
-        'Đào Tạo Chuyên Sâu',
-        'Chuyên Về Phục Hình Implant',
-        'Hướng Đến Chức Năng & Thẩm Mỹ Lâu Dài',
-        ],
+      highlights: [
+      'Hơn 10 Năm Kinh Nghiệm',
+      'Hơn 3.000 Ca Implant',
+      'Đào Tạo Chính Quy Tại ĐH Y Dược TP.HCM',
+      'Ứng Dụng Chẩn Đoán 3D Trong Lập Kế Hoạch',
+      ],
 
-        cta: 'Xem Hồ Sơ Chi Tiết',
+      cta: 'Xem Hồ Sơ Chi Tiết',
     },
     ],
 
@@ -383,24 +383,24 @@ const doctorsContent = {
 
     {
 
-    name: 'Dr. Nguyen Thi Bich Van',
+    name: 'Dr. Nguyen The Son',
 
-    role: 'Spécialiste En Prothèse Implantaire Et Soins Restaurateurs',
+    role: 'Dentiste En Chef - Implantologie Et Prothèse Esthétique',
 
     specialties:
-    'Prothèse Implantaire • Réhabilitation Fonctionnelle • Restauration Esthétique',
+    'Implantologie • Prothèse Esthétique • Élévation Sinusienne Et Greffe Osseuse',
 
     descriptionOne:
-    'Le Dr Van se concentre sur la restauration de la fonction, du confort et de l’esthétique grâce aux traitements implantaires et restaurateurs.',
+    'Le Dr Son possède plus de 10 ans d’expérience spécialisée en implantologie, prothèse esthétique et chirurgie de greffe osseuse avec élévation sinusienne.',
 
     descriptionTwo:
-    'Avec plus de dix ans d’expérience clinique, elle s’intéresse particulièrement aux résultats durables et aux restaurations naturelles.',
+    'Avec plus de 3 000 cas d’implants, il se concentre sur la restauration fonctionnelle, l’esthétique naturelle et la stabilité à long terme.',
 
     highlights: [
-    'Plus De 10 Ans D’Expérience Clinique',
-    'Formation De Niveau Spécialiste',
-    'Prothèse Implantaire',
-    'Fonction Et Esthétique À Long Terme',
+    'Plus De 10 Ans D’Expérience',
+    'Plus De 3 000 Cas D’Implants',
+    'Formation Avancée En Greffe Osseuse Et Sinus Lift',
+    'Planification Numérique Et Diagnostic 3D',
     ],
 
     cta: 'Voir Le Profil Complet',
@@ -523,24 +523,24 @@ const doctorsContent = {
 
     {
 
-    name: 'Dr. Nguyen Thi Bich Van',
+    name: 'Dr. Nguyen The Son',
 
-    role: '임플란트 보철 및 수복 치료 전문의',
+    role: '총괄 원장 - 임플란트 및 심미 보철',
 
     specialties:
-    '임플란트 보철 • 기능 회복 • 심미 수복',
+    '임플란트 • 심미 보철 • 상악동 거상술 및 골이식',
 
     descriptionOne:
-    'Van 원장은 임플란트 기반 재건 치료와 수복 치료를 통해 기능, 편안함, 심미성을 회복하는 데 집중하고 있습니다.',
+    'Son 원장은 임플란트, 심미 보철, 상악동 거상술과 골이식 분야에서 10년 이상 전문 임상 경험을 보유하고 있습니다.',
 
     descriptionTwo:
-    '10년 이상의 임상 경험을 바탕으로 장기적인 치료 결과와 자연스러운 수복에 관심을 가지고 있습니다.',
+    '3,000건 이상의 임플란트 케이스 경험을 바탕으로 기능 회복, 자연스러운 심미성, 장기적인 안정성을 중점으로 진료합니다.',
 
     highlights: [
     '10년 이상 임상 경험',
-    '전문의 수준 교육',
-    '임플란트 보철 전문',
-    '장기적인 기능 및 심미 관리',
+    '3,000건 이상 임플란트 케이스',
+    '골이식 및 상악동 거상술 고급 교육',
+    '디지털 임플란트 계획 및 3D 진단',
     ],
 
     cta: '자세히 보기',
@@ -665,24 +665,24 @@ const doctorsContent = {
 
     {
 
-    name: 'Dr. Nguyen Thi Bich Van',
+    name: 'Dr. Nguyen The Son',
 
-    role: '种植修复与修复治疗专家',
+    role: '主任医师 - 种植与美学修复',
 
     specialties:
-    '种植修复 • 功能重建 • 美学修复',
+    '种植牙 • 美学修复 • 上颌窦提升与骨增量',
 
     descriptionOne:
-    'Van 医生专注于通过种植修复和修复治疗恢复功能、舒适度与美观效果。',
+    'Son 医生在种植牙、美学修复及上颌窦提升与骨增量手术方面拥有超过10年的专科经验。',
 
     descriptionTwo:
-    '拥有十多年临床经验，尤其关注长期治疗效果与自然美观的修复成果。',
+    '凭借超过3,000例种植病例经验，他专注于恢复咀嚼功能、自然美观及长期稳定效果。',
 
     highlights: [
     '10年以上临床经验',
-    '专家级培训',
-    '种植修复专长',
-    '长期功能与美学维护',
+    '3,000+ 种植病例',
+    '骨增量与上颌窦提升进阶培训',
+    '数字化种植规划与3D诊断',
     ],
 
     cta: '查看完整资料',
@@ -808,24 +808,24 @@ const doctorsContent = {
 
     {
 
-    name: 'Dr. Nguyen Thi Bich Van',
+    name: 'Dr. Nguyen The Son',
 
-    role: '植牙贋復與修復治療專家',
+    role: '主任醫師 - 植牙與美學修復',
 
     specialties:
-    '植牙贋復 • 功能重建 • 美學修復',
+    '植牙 • 美學修復 • 上顎竇提升與骨增量',
 
     descriptionOne:
-    'Van 醫師專注於透過植牙贋復及修復治療恢復功能、舒適度與美觀。',
+    'Son 醫師在植牙、美學修復，以及上顎竇提升與骨增量手術領域擁有超過10年專科經驗。',
 
     descriptionTwo:
-    '擁有十多年臨床經驗，特別重視長期治療成果及自然美觀的修復效果。',
+    '累積超過3,000例植牙案例，專注於恢復咀嚼功能、自然美觀與長期穩定成果。',
 
     highlights: [
     '10年以上臨床經驗',
-    '專家級培訓',
-    '植牙贋復專長',
-    '長期功能與美學照護',
+    '3,000+ 植牙案例',
+    '骨增量與上顎竇提升進階培訓',
+    '數位植牙規劃與3D診斷',
     ],
 
     cta: '查看完整資料',

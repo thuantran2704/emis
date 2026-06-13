@@ -7,12 +7,12 @@ import doctorsContent from '../Translations/doctorsContent';
 import patient2 from '../pics/patient2.jpg';
 import ContactForm from '../components/ContactForm.jsx';
 import consultationImage from '../pics/dr-x-ray-consultation.jpg';
-import drVanPortrait from '../pics/dr-van-potrait.jpg';
+import drSonPortrait from '../pics/dr-son-potrait.jpg';
 
 const Doctors = () => {
   const language = useSelector((state) => state.language.language);
   const content = doctorsContent[language] || doctorsContent.english;
-  const doctorImages = [drTuPortrait, drVanPortrait];
+  const doctorImages = [drTuPortrait, drSonPortrait];
 
   return (
     <main className="bg-[#f7f2e7] pt-20">
