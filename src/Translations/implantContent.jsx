@@ -1,11 +1,19 @@
 // src/content/implantContent.jsx
+// Design Guide: 9-Section Implant Solutions Page
+// Language support: English (english), Vietnamese (vietnamese)
 
 import implant from "../pics/implant.png";
 import bridge from "../pics/bridge.png";
 import allon4 from "../pics/allon4.png";
 import veneer from "../pics/veneer.png";
+import straumannImg from "../pics/straumann-implant.jpg";
+import hiossenImg from "../pics/hiossen-implant.jpg";
+import osstemImg from "../pics/osstem-implant.jpg";
+import etkImg from "../pics/etk-implant.jpg";
+import biotemImg from "../pics/biotem-implant.jpg";
 
 export const implantContent = {
+  // Home page banner cards (legacy product section)
   english: {
     banner: {
       title: "Affordable Implants from",
