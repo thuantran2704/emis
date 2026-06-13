@@ -1,4 +1,4 @@
-const implantContent = {
+export const implantContent = {
   english: {
     metaTitle: "Implant Solutions | EMIS Dental",
     metaDescription:
