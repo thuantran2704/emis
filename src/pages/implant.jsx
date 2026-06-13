@@ -193,53 +193,12 @@ const ImplantGuide = () => {
               >
                 {content.section3.summaryTitle}
               </h3>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 3B */}
-      <section className="py-28 bg-white">
-        <div className="max-w-5xl mx-auto px-8">
-          <div className="max-w-2xl mx-auto text-center mb-16 lg:mb-20">
-            <p
-              className="uppercase tracking-[0.3em] text-[#C5AF73] mb-5 text-xs font-semibold"
-              style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
-            >
-              TREATMENT JOURNEY
-            </p>
-            <h2
-              className="text-4xl text-[#2a3439] mb-6"
-              style={{ fontFamily: "'Playfair Display', serif" }}
-            >
-              {content.section3.journey}
-            </h2>
-          </div>
-
-          <div className="bg-white rounded-2xl p-8 shadow-sm border border-[#eadfc9]/50 max-w-4xl mx-auto">
-            <div className="flex flex-col lg:flex-row lg:items-stretch gap-4 lg:gap-3 mx-auto">
-              {content.section3.steps.map((step, index) => (
-                <React.Fragment key={index}>
-                  <div className="flex-1 min-w-0 rounded-2xl border border-[#eadfc9]/50 bg-[#f7f2e7] px-5 py-4 text-center">
-                    <div className="flex flex-col items-center gap-3">
-                      <div className="w-11 h-11 rounded-full bg-[#d4af37] text-white flex items-center justify-center text-sm font-semibold shrink-0">
-                        {index + 1}
-                      </div>
-                      <span
-                        className="text-[#2a3439] text-sm font-medium leading-relaxed"
-                        style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
-                      >
-                        {step}
-                      </span>
-                    </div>
-                  </div>
-                  {index < content.section3.steps.length - 1 && (
-                    <div className="flex items-center justify-center lg:self-center text-gray-400 px-2">
-                      <ArrowRight className="w-5 h-5 rotate-90 lg:rotate-0" />
-                    </div>
-                  )}
-                </React.Fragment>
-              ))}
+              <p
+                className="text-gray-500 leading-relaxed whitespace-pre-line"
+                style={{ fontFamily: "'Cormorant', serif" }}
+              >
+                {content.section3.summaryText}
+              </p>
             </div>
           </div>
         </div>
