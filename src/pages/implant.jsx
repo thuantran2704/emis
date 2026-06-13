@@ -172,7 +172,7 @@ const ImplantGuide = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 items-stretch mb-8">
+          <div className="grid lg:grid-cols-2 gap-8 items-stretch">
             <div className="rounded-2xl overflow-hidden shadow-sm h-[460px] bg-white">
               <img
                 src={implantIllustration}
@@ -185,15 +185,35 @@ const ImplantGuide = () => {
                 className="text-2xl text-[#2a3439] mb-4"
                 style={{ fontFamily: "'Playfair Display', serif" }}
               >
-                {content.section3.journey}
+                {content.section3.title}
               </h3>
               <p
-                className="text-gray-500 leading-relaxed"
+                className="text-gray-500 leading-relaxed whitespace-pre-line"
                 style={{ fontFamily: "'Cormorant', serif" }}
               >
                 {content.section3.intro}
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 3B */}
+      <section className="py-28 bg-white">
+        <div className="max-w-5xl mx-auto px-8">
+          <div className="max-w-2xl mx-auto text-center mb-16 lg:mb-20">
+            <p
+              className="uppercase tracking-[0.3em] text-[#C5AF73] mb-5 text-xs font-semibold"
+              style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+            >
+              TREATMENT JOURNEY
+            </p>
+            <h2
+              className="text-4xl text-[#2a3439] mb-6"
+              style={{ fontFamily: "'Playfair Display', serif" }}
+            >
+              {content.section3.journey}
+            </h2>
           </div>
 
           <div className="bg-white rounded-2xl p-8 shadow-sm border border-[#eadfc9]/50 max-w-4xl mx-auto">
