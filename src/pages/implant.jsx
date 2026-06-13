@@ -172,7 +172,7 @@ const ImplantGuide = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-8 items-center">
+          <div className="grid lg:grid-cols-[0.95fr_1.05fr] gap-8 items-center mb-8">
             <div className="rounded-2xl overflow-hidden shadow-sm h-[460px] bg-white">
               <img
                 src={implantIllustration}
@@ -182,35 +182,44 @@ const ImplantGuide = () => {
             </div>
             <div className="bg-white rounded-2xl p-8 shadow-sm border border-[#eadfc9]/50">
               <h3
-                className="text-2xl text-[#2a3439] mb-6"
+                className="text-2xl text-[#2a3439] mb-4"
                 style={{ fontFamily: "'Playfair Display', serif" }}
               >
                 {content.section3.journey}
               </h3>
-              <div className="flex flex-col lg:flex-row lg:items-stretch gap-4 lg:gap-3">
-                {content.section3.steps.map((step, index) => (
-                  <React.Fragment key={index}>
-                    <div className="flex-1 rounded-2xl border border-[#eadfc9]/50 bg-[#f7f2e7] px-5 py-4 text-center lg:text-left">
-                      <div className="flex flex-col lg:flex-row items-center lg:items-start gap-3">
-                        <div className="w-11 h-11 rounded-full bg-[#d4af37] text-white flex items-center justify-center text-sm font-semibold shrink-0">
-                          {index + 1}
-                        </div>
-                        <span
-                          className="text-[#2a3439] text-sm font-medium leading-relaxed"
-                          style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
-                        >
-                          {step}
-                        </span>
+              <p
+                className="text-gray-500 leading-relaxed"
+                style={{ fontFamily: "'Cormorant', serif" }}
+              >
+                {content.section3.intro}
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-2xl p-8 shadow-sm border border-[#eadfc9]/50">
+            <div className="flex flex-col lg:flex-row lg:items-stretch gap-4 lg:gap-3 max-w-6xl mx-auto">
+              {content.section3.steps.map((step, index) => (
+                <React.Fragment key={index}>
+                  <div className="flex-1 min-w-0 rounded-2xl border border-[#eadfc9]/50 bg-[#f7f2e7] px-5 py-4 text-center">
+                    <div className="flex flex-col items-center gap-3">
+                      <div className="w-11 h-11 rounded-full bg-[#d4af37] text-white flex items-center justify-center text-sm font-semibold shrink-0">
+                        {index + 1}
                       </div>
+                      <span
+                        className="text-[#2a3439] text-sm font-medium leading-relaxed"
+                        style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+                      >
+                        {step}
+                      </span>
                     </div>
-                    {index < content.section3.steps.length - 1 && (
-                      <div className="flex items-center justify-center lg:justify-start lg:self-center text-gray-400 px-2">
-                        <ArrowRight className="w-5 h-5 rotate-90 lg:rotate-0" />
-                      </div>
-                    )}
-                  </React.Fragment>
-                ))}
-              </div>
+                  </div>
+                  {index < content.section3.steps.length - 1 && (
+                    <div className="flex items-center justify-center lg:self-center text-gray-400 px-2">
+                      <ArrowRight className="w-5 h-5 rotate-90 lg:rotate-0" />
+                    </div>
+                  )}
+                </React.Fragment>
+              ))}
             </div>
           </div>
         </div>
