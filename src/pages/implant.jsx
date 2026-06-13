@@ -172,7 +172,7 @@ const ImplantGuide = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-[0.95fr_1.05fr] gap-8 items-center mb-8">
+          <div className="grid lg:grid-cols-2 gap-8 items-stretch mb-8">
             <div className="rounded-2xl overflow-hidden shadow-sm h-[460px] bg-white">
               <img
                 src={implantIllustration}
@@ -180,7 +180,7 @@ const ImplantGuide = () => {
                 className="w-full h-full object-cover object-center"
               />
             </div>
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-[#eadfc9]/50">
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-[#eadfc9]/50 h-full flex flex-col justify-center">
               <h3
                 className="text-2xl text-[#2a3439] mb-4"
                 style={{ fontFamily: "'Playfair Display', serif" }}
@@ -196,8 +196,8 @@ const ImplantGuide = () => {
             </div>
           </div>
 
-          <div className="bg-white rounded-2xl p-8 shadow-sm border border-[#eadfc9]/50">
-            <div className="flex flex-col lg:flex-row lg:items-stretch gap-4 lg:gap-3 max-w-6xl mx-auto">
+          <div className="bg-white rounded-2xl p-8 shadow-sm border border-[#eadfc9]/50 max-w-4xl mx-auto">
+            <div className="flex flex-col lg:flex-row lg:items-stretch gap-4 lg:gap-3 mx-auto">
               {content.section3.steps.map((step, index) => (
                 <React.Fragment key={index}>
                   <div className="flex-1 min-w-0 rounded-2xl border border-[#eadfc9]/50 bg-[#f7f2e7] px-5 py-4 text-center">
