@@ -187,24 +187,28 @@ const ImplantGuide = () => {
               >
                 {content.section3.journey}
               </h3>
-              <div className="space-y-5">
+              <div className="flex flex-col lg:flex-row lg:items-stretch gap-4 lg:gap-3">
                 {content.section3.steps.map((step, index) => (
-                  <div key={index} className="flex items-center gap-4">
-                    <div className="w-11 h-11 rounded-full bg-[#d4af37] text-white flex items-center justify-center text-sm font-semibold">
-                      {index + 1}
+                  <React.Fragment key={index}>
+                    <div className="flex-1 rounded-2xl border border-[#eadfc9]/50 bg-[#f7f2e7] px-5 py-4 text-center lg:text-left">
+                      <div className="flex flex-col lg:flex-row items-center lg:items-start gap-3">
+                        <div className="w-11 h-11 rounded-full bg-[#d4af37] text-white flex items-center justify-center text-sm font-semibold shrink-0">
+                          {index + 1}
+                        </div>
+                        <span
+                          className="text-[#2a3439] text-sm font-medium leading-relaxed"
+                          style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+                        >
+                          {step}
+                        </span>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-3">
-                      <span
-                        className="text-[#2a3439] text-sm font-medium"
-                        style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
-                      >
-                        {step}
-                      </span>
-                      {index < content.section3.steps.length - 1 && (
-                        <ArrowRight className="w-5 h-5 text-gray-400" />
-                      )}
-                    </div>
-                  </div>
+                    {index < content.section3.steps.length - 1 && (
+                      <div className="flex items-center justify-center lg:justify-start lg:self-center text-gray-400 px-2">
+                        <ArrowRight className="w-5 h-5 rotate-90 lg:rotate-0" />
+                      </div>
+                    )}
+                  </React.Fragment>
                 ))}
               </div>
             </div>
