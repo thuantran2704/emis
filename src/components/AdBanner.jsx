@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import ad1 from "../pics/ads/ad01-dental-implant-8.9M.png";
+import ad1 from "../pics/ads/ad01-dental-implant-3-popula.png";
 import ad2 from "../pics/ads/ad02-dental-tourist.png";
 import ad3 from "../pics/ads/ad03-starting12k-dental-tourism.png";
 
 const adImages = [
   {
     src: ad1,
-    alt: "Affordable dental implant treatment in Vietnam with travel support",
+    alt: "Implant promo: J Dental Care (Italy) 20M from 40M, Osstem (Korea) 9.9M from 20M, Hiossen (US) 12.5M from 22M",
   },
   {
     src: ad2,

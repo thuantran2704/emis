@@ -13,21 +13,15 @@ export default function CustomerReactionsBanner() {
       videoUrl: "https://youtube.com/embed/Ymwva1sJVuw",
     },
     {
-      name: "BÉ TRƯƠNG BÁ",
+      name: "CHỊ NGỌC TUYỀN",
       service: content.services[1],
       comment: content.comments[1],
-      videoUrl: "https://www.youtube.com/embed/l8EngnXRACI",
-    },
-    {
-      name: "CHỊ NGỌC TUYỀN",
-      service: content.services[2],
-      comment: content.comments[2],
       videoUrl: "https://youtube.com/embed/surWZR9t57k",
     },
     {
       name: "ANH ROMA",
-      service: content.services[3],
-      comment: content.comments[3],
+      service: content.services[2],
+      comment: content.comments[2],
       videoUrl: "https://www.youtube.com/embed/-tyHuTtzWiE",
     },
   ];
