@@ -129,10 +129,27 @@ export default function Services() {
         .filter((r) => Object.values(r).some((v) => v !== null && String(v).trim() !== ""))
         .map((r) => {
           const rawPrice = (r[priceField] || "").toString().trim();
+          const normalizedRawPrice = rawPrice.replace(/\s+/g, " ").trim();
+          const hasVND = /\bvnd\b/i.test(normalizedRawPrice);
+          const hasUSD = /\busd\b/i.test(normalizedRawPrice) || /\$/i.test(normalizedRawPrice);
           const numbers = rawPrice.match(/\d[\d,]*/g);
           let priceUSD = "—";
+          let priceVND = "—";
 
-          if (numbers?.length && typeof fxRate === "number") {
+          if (normalizedRawPrice) {
+            priceVND = hasVND || hasUSD ? normalizedRawPrice : `${normalizedRawPrice} VND`;
+          }
+
+          if (hasUSD && normalizedRawPrice) {
+            const usdBase = normalizedRawPrice
+              .replace(/\$/g, "")
+              .replace(/\busd\b/gi, "")
+              .replace(/\s+/g, " ")
+              .trim();
+            priceUSD = usdBase ? `${usdBase} USD` : "—";
+          }
+
+          if (!hasUSD && numbers?.length && typeof fxRate === "number") {
             const convert = (n) => (Math.round((n / fxRate) * 2) / 2 - 0.01).toFixed(2);
             const nums = numbers.map((n) => parseFloat(n.replace(/,/g, "")));
             priceUSD =
@@ -145,7 +162,7 @@ export default function Services() {
             category: r[categoryField]?.trim(),
             desc: r[descField]?.trim(),
             unit: r[unitField]?.trim(),
-            priceVND: rawPrice ? `${rawPrice} VND` : rawPrice,
+            priceVND,
             priceUSD,
           };
         });

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import ad1 from "../pics/ads/ad01-dental-implant-3-popula.png";
+import ad1 from "../pics/ads/ad01-dental-implant-3-popular.png";
 import ad2 from "../pics/ads/ad02-dental-tourist.png";
 import ad3 from "../pics/ads/ad03-starting12k-dental-tourism.png";
 
