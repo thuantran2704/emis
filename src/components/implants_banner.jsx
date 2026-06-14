@@ -1,5 +1,5 @@
 import { CheckCircle } from "lucide-react";
-import { implantContent } from "../Translations/implantContent";
+import implantContent from "../Translations/implantContent";
 import ImplantQuote from "./implantQuote";
 import { useSelector } from 'react-redux';
 
