@@ -264,7 +264,10 @@ export default function Home() {
         </Link>
       </section>
       {/* Map Section */}
-      <MapSection content={content} />
+      <MapSection
+        locationTitle={content.locationTitle || 'Our Location'}
+        address={content.address || ''}
+      />
 
       <section className="py-8 bg-[#fffaf0]">
         <div className="max-w-6xl mx-auto px-4 text-center">

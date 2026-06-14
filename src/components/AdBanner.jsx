@@ -37,7 +37,7 @@ export default function AdBanner() {
       <div
         className="absolute inset-0 bg-center bg-cover bg-no-repeat scale-105 blur-xl brightness-[0.45] transition-all duration-700"
         style={{
-          backgroundImage: `url(${adImages[current]})`,
+          backgroundImage: `url(${adImages[current].src})`,
         }}
       />
 
