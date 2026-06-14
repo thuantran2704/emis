@@ -36,6 +36,7 @@ export default function Home() {
     'Treatment Timeline',
     'Follow-up Support',
   ];
+  const serviceSupportDescriptions = content.serviceSupportDescriptions || [];
   const serviceSupportTitle = content.serviceSupportTitle || 'Support & Communication';
   const serviceSupportIntro = content.serviceSupportIntro || 'Easy communication and clear guidance throughout your care journey.';
   const serviceSupportNote = content.serviceSupportNote || 'Patients may request communication support in their preferred language whenever possible.';
@@ -77,7 +78,7 @@ export default function Home() {
         <meta property="og:description" content={content.metaDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://emisdental.com" />
-        <meta property="og:image" content="https://emisdental.com/og-image.jpg" />
+        <meta property="og:image" content="https://www.emisdental.com/og-image.jpg" />
         <meta
           property="og:locale"
           content={
@@ -131,7 +132,11 @@ export default function Home() {
               {serviceSupportIntro}
             </p>
           </div>
-          <ServiceSupportList items={serviceSupportItems} note={serviceSupportNote} />
+          <ServiceSupportList
+            items={serviceSupportItems}
+            descriptions={serviceSupportDescriptions}
+            note={serviceSupportNote}
+          />
         </div>
       </section>
       {/* Ad Banner */}

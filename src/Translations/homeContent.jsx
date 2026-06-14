@@ -34,6 +34,14 @@ export const homeContent = {
       "Treatment Timeline",
       "Follow-up Support"
     ],
+    serviceSupportDescriptions: [
+      "Connect with our team quickly for advice and guidance.",
+      "Share your scan digitally for faster assessment.",
+      "Get fast answers and appointment updates through WhatsApp.",
+      "Reach our team for follow-up questions and document sharing.",
+      "Understand the stages, visits, and expected progress of your care.",
+      "Receive friendly assistance before, during, and after your treatment."
+    ],
     serviceSupportNote: "Patients may request communication support in their preferred language whenever possible.",
     bookButton: "Book Consultation",
     findout: "Find Out More",
@@ -148,6 +156,14 @@ export const homeContent = {
       "Hỗ Trợ Email",
       "Lộ Trình Điều Trị",
       "Hỗ Trợ Theo Dõi"
+    ],
+    serviceSupportDescriptions: [
+      "Kết nối nhanh với đội ngũ của chúng tôi để được tư vấn và hướng dẫn.",
+      "Gửi phim chụp của bạn trực tuyến để được đánh giá nhanh hơn.",
+      "Nhận phản hồi nhanh và cập nhật lịch hẹn qua WhatsApp.",
+      "Liên hệ đội ngũ qua email để trao đổi hồ sơ và câu hỏi theo dõi.",
+      "Hiểu rõ các giai đoạn điều trị, số lần hẹn và tiến trình dự kiến.",
+      "Nhận hỗ trợ thân thiện trước, trong và sau quá trình điều trị."
     ],
     serviceSupportNote: "Bệnh nhân có thể yêu cầu hỗ trợ giao tiếp bằng ngôn ngữ ưa thích khi có thể.",
     bookButton: "Đặt Lịch Khám",
@@ -264,6 +280,14 @@ export const homeContent = {
       "治疗时间表",
       "随访支持"
     ],
+    serviceSupportDescriptions: [
+      "快速联系我们的团队，获取建议与指导。",
+      "在线发送影像资料，便于更快评估。",
+      "通过 WhatsApp 获取快速答复与预约更新。",
+      "通过电子邮件联系团队，进行资料与后续沟通。",
+      "清楚了解治疗阶段、复诊次数与预期进展。",
+      "在治疗前、中、后都能获得友善支持。"
+    ],
     serviceSupportNote: "患者如有需要，可尽量以其 preferred language 获取沟通支持。",
     bookButton: "预约咨询",
     findout: "Find Out More",
@@ -377,6 +401,14 @@ export const homeContent = {
       "이메일 지원",
       "치료 일정",
       "추후 관리 지원"
+    ],
+    serviceSupportDescriptions: [
+      "빠르게 팀과 연결해 상담과 안내를 받아보세요.",
+      "X-ray를 온라인으로 보내 더 빠른 평가를 받으세요.",
+      "WhatsApp으로 빠른 답변과 예약 업데이트를 받아보세요.",
+      "이메일로 문의 및 서류 공유, 사후 질문을 진행할 수 있습니다.",
+      "치료 단계, 방문 일정, 예상 진행을 명확히 확인하세요.",
+      "치료 전, 중, 후에 친절한 지원을 받으실 수 있습니다."
     ],
     serviceSupportNote: "환자는 가능한 경우 선호 언어로 의사소통 지원을 요청할 수 있습니다.",
     bookButton: "상담 예약",
@@ -494,6 +526,14 @@ export const homeContent = {
       "治療時間表",
       "追蹤支持"
     ],
+    serviceSupportDescriptions: [
+      "快速聯繫我們的團隊，獲得建議與指導。",
+      "線上傳送影像資料，以便更快完成評估。",
+      "透過 WhatsApp 獲得快速回覆與預約更新。",
+      "透過電子郵件聯繫團隊，進行資料與後續溝通。",
+      "清楚了解治療階段、回診次數與預期進展。",
+      "在治療前、中、後皆可獲得貼心支援。"
+    ],
     serviceSupportNote: "患者如有需要，可盡量以其偏好的語言獲得溝通支援。",
     bookButton: "預約諮詢",
     findout: "Find Out More",
@@ -608,6 +648,14 @@ export const homeContent = {
       "Support par e-mail",
       "Déroulé du traitement",
       "Accompagnement de suivi"
+    ],
+    serviceSupportDescriptions: [
+      "Contactez rapidement notre équipe pour des conseils et une orientation.",
+      "Partagez votre radiographie en ligne pour une évaluation plus rapide.",
+      "Recevez des réponses rapides et des mises à jour de rendez-vous via WhatsApp.",
+      "Échangez avec notre équipe par e-mail pour le suivi et les documents.",
+      "Comprenez les étapes, les visites prévues et la progression attendue de vos soins.",
+      "Bénéficiez d'un accompagnement attentionné avant, pendant et après le traitement."
     ],
     serviceSupportNote: "Les patients peuvent demander un soutien de communication dans leur langue préférée si possible.",
     bookButton: "Prendre Rendez-vous",

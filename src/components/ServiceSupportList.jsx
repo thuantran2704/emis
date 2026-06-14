@@ -1,13 +1,22 @@
 import { CalendarDays, Languages, Mail, MessageCircleMore, Send, ShieldCheck } from 'lucide-react';
 
 const icons = [MessageCircleMore, Send, MessageCircleMore, Mail, CalendarDays, ShieldCheck];
+const fallbackDescriptions = [
+  'Connect with our team quickly for advice and guidance.',
+  'Share your scan digitally for faster assessment.',
+  'Get fast answers and appointment updates through WhatsApp.',
+  'Reach our team for follow-up questions and document sharing.',
+  'Understand the stages, visits, and expected progress of your care.',
+  'Receive friendly assistance before, during, and after your treatment.',
+];
 
-export default function ServiceSupportList({ items = [], note = '' }) {
+export default function ServiceSupportList({ items = [], descriptions = [], note = '' }) {
   return (
     <section className="mt-8 rounded-3xl border border-[#eadfc9] bg-white p-6 shadow-sm md:p-8">
       <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
         {items.map((item, index) => {
           const Icon = icons[index % icons.length];
+          const description = descriptions[index] || fallbackDescriptions[index % fallbackDescriptions.length];
           return (
             <article
               key={item}
@@ -22,12 +31,7 @@ export default function ServiceSupportList({ items = [], note = '' }) {
                 </h3>
               </div>
               <p className="text-sm text-[#4b5563] leading-relaxed" style={{ fontFamily: "'Cormorant', serif" }}>
-                {item === 'Online Consultation' ? 'Connect with our team quickly for advice and guidance.' :
-                 item === 'Send Your X-ray' ? 'Share your scan digitally for faster assessment.' :
-                 item === 'WhatsApp Support' ? 'Get fast answers and appointment updates through WhatsApp.' :
-                 item === 'Email Support' ? 'Reach our team for follow-up questions and document sharing.' :
-                 item === 'Treatment Timeline' ? 'Understand the stages, visits, and expected progress of your care.' :
-                 'Receive friendly assistance before, during, and after your treatment.'}
+                {description}
               </p>
             </article>
           );
