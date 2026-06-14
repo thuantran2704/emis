@@ -5,7 +5,16 @@ import { useSelector } from 'react-redux';
 
   export default function ImplantCards() {
     const language = useSelector((state) => state.language.language);
-    const content = implantContent[language];
+    const content = implantContent[language] || implantContent.english;
+    const implants =
+      content?.implants ||
+      content?.section4?.options?.map((option) => ({
+        name: option.title,
+        producer: "",
+        price: "",
+        points: option.desc ? [option.desc] : [],
+      })) ||
+      [];
 
   return (
     <section className="py-16 bg-[#fdfcf8]">
@@ -13,27 +22,33 @@ import { useSelector } from 'react-redux';
         <ImplantQuote/>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {content.implants.map((implant, i) => (
+            {implants.map((implant, i) => (
             <div
               key={i}
               className="bg-white shadow-md rounded-2xl p-6 flex flex-col items-center text-center hover:shadow-xl transition-all"
             >
-              <img
-                src={implant.icon}
-                alt={implant.name}
-                className="w-20 h-20 mb-4 object-contain"
-              />
+                {implant.icon && (
+                  <img
+                    src={implant.icon}
+                    alt={implant.name}
+                    className="w-20 h-20 mb-4 object-contain"
+                  />
+                )}
               <h3 className="text-lg font-semibold text-[#4b4b8f] mb-1">
                 {implant.name}
               </h3>
-              <p className="text-sm text-[#6b7280] italic mb-3">
-                {implant.producer}
-              </p>
-              <p className="text-2xl font-bold text-[#4b4b8f] mb-4">
-                {implant.price}
-              </p>
+                {implant.producer && (
+                  <p className="text-sm text-[#6b7280] italic mb-3">
+                    {implant.producer}
+                  </p>
+                )}
+                {implant.price && (
+                  <p className="text-2xl font-bold text-[#4b4b8f] mb-4">
+                    {implant.price}
+                  </p>
+                )}
               <ul className="text-left text-[#6b7280] space-y-2">
-                {implant.points.map((pt, idx) => (
+                  {(implant.points || []).map((pt, idx) => (
                   <li key={idx} className="flex items-start gap-2">
                     <CheckCircle size={16} className="text-[#4b4b8f] mt-1" />
                     <span>{pt}</span>
