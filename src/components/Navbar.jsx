@@ -30,7 +30,6 @@ export default function Navbar() {
   ];
 
   const juneDropdownItems = [
-    { name: content.implant, path: '/implantAd' },
     { name: content.crown, path: '/crownAd' },
     { name: content.whitening, path: '/whiteningAd' },
     { name: content.canal, path: '/canal' },

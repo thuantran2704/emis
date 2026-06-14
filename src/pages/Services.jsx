@@ -133,14 +133,20 @@ export default function Services() {
           const hasVND = /\bvnd\b/i.test(normalizedRawPrice);
           const hasUSD = /\busd\b/i.test(normalizedRawPrice) || /\$/i.test(normalizedRawPrice);
           const numbers = rawPrice.match(/\d[\d,]*/g);
+          const hasNumeric = Boolean(numbers?.length);
           let priceUSD = "—";
           let priceVND = "—";
 
           if (normalizedRawPrice) {
-            priceVND = hasVND || hasUSD ? normalizedRawPrice : `${normalizedRawPrice} VND`;
+            if (hasNumeric) {
+              priceVND = hasVND || hasUSD ? normalizedRawPrice : `${normalizedRawPrice} VND`;
+            } else {
+              priceVND = normalizedRawPrice;
+              priceUSD = normalizedRawPrice;
+            }
           }
 
-          if (hasUSD && normalizedRawPrice) {
+          if (hasNumeric && hasUSD && normalizedRawPrice) {
             const usdBase = normalizedRawPrice
               .replace(/\$/g, "")
               .replace(/\busd\b/gi, "")
@@ -149,7 +155,7 @@ export default function Services() {
             priceUSD = usdBase ? `${usdBase} USD` : "—";
           }
 
-          if (!hasUSD && numbers?.length && typeof fxRate === "number") {
+          if (hasNumeric && !hasUSD && numbers?.length && typeof fxRate === "number") {
             const convert = (n) => (Math.round((n / fxRate) * 2) / 2 - 0.01).toFixed(2);
             const nums = numbers.map((n) => parseFloat(n.replace(/,/g, "")));
             priceUSD =
