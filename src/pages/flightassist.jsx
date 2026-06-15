@@ -1,41 +1,34 @@
-import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { ArrowRight, CheckCircle } from "lucide-react";
 
-/* Travel Ad Images */
 import vn1 from "../pics/travel-ads/vn1.jpg";
-import vn2 from "../pics/travel-ads/vn2.jpg";
 import vn3 from "../pics/travel-ads/vn3.jpg";
 import vn4 from "../pics/travel-ads/vn4.jpg";
 import vn5 from "../pics/travel-ads/vn5.jpg";
-import vn6 from "../pics/travel-ads/vn6.jpg";
 import vn7 from "../pics/travel-ads/vn7.jpg";
-import vn8 from "../pics/travel-ads/vn8.jpg";
 import vn9 from "../pics/travel-ads/vn9.jpg";
-import vn10 from "../pics/travel-ads/vn10.jpg";
 import vn11 from "../pics/travel-ads/vn11.jpg";
 import vn12 from "../pics/travel-ads/vn12.jpg";
 import AdBanner from "../components/AdBanner";
 
 export default function DentalVisitorProgram() {
-  const images = [
-    vn1, vn2, vn3, vn4, vn5, vn6,
-    vn7, vn8, vn9, vn10, vn11, vn12
+  const cityGallery = [vn3, vn5, vn7, vn9, vn11, vn12];
+
+  const flightSupport = [
+    "30% support on round-trip Economy airfare",
+    "Maximum support value up to USD 1,200",
+    "Coordination support for suitable flight windows",
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  /* Auto slide every 10 seconds */
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 10000);
-
-    return () => clearInterval(interval);
-  }, [images.length]);
+  const staySupport = [
+    "8 nights of sponsored accommodation in District 3",
+    "Convenient location near Emis Dental and key landmarks",
+    "Comfort-focused stay for treatment and recovery periods",
+  ];
 
   return (
-    <main className="min-h-screen bg-[#f7f2e7] pt-20">
-      {/* SEO */}
+    <main className="bg-[#f7f2e7] pt-20">
       <Helmet>
         <title>Dental Visitor Support Program | Emis Dental</title>
         <meta
@@ -45,103 +38,237 @@ export default function DentalVisitorProgram() {
         <link rel="canonical" href="https://emisdental.com/visitor-program" />
       </Helmet>
 
-      {/* IMAGE SLIDER BANNER */}
-      <section className="relative w-full overflow-hidden bg-black h-[55vh] sm:h-[65vh] lg:h-[70vh]">
-        <div
-          className="flex h-full transition-transform duration-1000 ease-in-out"
-          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-        >
-          {images.map((img, index) => (
-            <div
-              key={index}
-              className="w-full flex-shrink-0 h-full flex items-center justify-center"
-            >
-              {/* Fixed Frame */}
-              <div className="relative w-full h-full">
+      <section className="min-h-[82vh] flex items-center py-16 lg:py-24">
+        <div className="max-w-6xl mx-auto px-8 w-full">
+          <div className="grid lg:grid-cols-[0.95fr_1.05fr] gap-10 lg:gap-20 items-center">
+            <div className="order-1 lg:order-2">
+              <div className="overflow-hidden rounded-2xl shadow-lg aspect-[16/10] lg:aspect-auto">
                 <img
-                  src={img}
-                  alt={`Vietnam destination ${index + 1}`}
-                  className="w-full h-full object-cover object-center"
+                  src={vn1}
+                  alt="Dental travel support in Vietnam"
+                  className="w-full h-full lg:h-[480px] object-cover object-center"
                 />
               </div>
             </div>
-          ))}
-        </div>
 
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/40 flex items-center justify-center px-4">
-          <h1 className="text-3xl sm:text-5xl font-bold text-white text-center max-w-4xl leading-tight">
-            Dental Visitor Support Program with Emis
-          </h1>
+            <div className="order-2 lg:order-1 space-y-6">
+              <p
+                className="uppercase tracking-[0.3em] text-[#C5AF73] text-xs font-semibold"
+                style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+              >
+                TRAVEL ASSIST
+              </p>
+
+              <h1
+                className="text-4xl md:text-5xl text-[#2a3439] leading-tight"
+                style={{ fontFamily: "'Playfair Display', serif" }}
+              >
+                Dental Visitor Support Program
+              </h1>
+
+              <p
+                className="text-lg text-gray-500 leading-relaxed max-w-md"
+                style={{ fontFamily: "'Cormorant', serif" }}
+              >
+                A refined dental travel experience designed for international patients seeking implant and comprehensive treatment in Vietnam.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-3 pt-2">
+                <Link
+                  to="/contact"
+                  className="px-7 py-3.5 rounded-full bg-[#d4af37] text-white text-sm font-semibold hover:bg-[#c19d30] transition text-center"
+                  style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+                >
+                  Plan Your Visit
+                </Link>
+                <a
+                  href="#program-details"
+                  className="px-7 py-3.5 rounded-full border border-[#d4af37] text-[#2a3439] text-sm hover:bg-white transition text-center"
+                  style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+                >
+                  View Program Details
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* CONTENT */}
-      <section className="max-w-6xl mx-auto px-4 py-16">
-        <h2 className="text-3xl font-bold text-[#4b4b8f] mb-6 text-center">
-          A Refined Dental Travel Experience, Thoughtfully Curated for You
-        </h2>
-
-        <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto text-center mb-12">
-          Our Dental Visitor Program is exclusively designed for international
-          patients who travel to Vietnam for advanced implant and comprehensive
-          dental treatments.
-        </p>
-
-        {/* BENEFITS */}
-        <div className="grid gap-10 md:grid-cols-2">
-          {/* Flight Support */}
-          <div className="bg-white rounded-2xl shadow-lg p-8">
-            <h3 className="text-2xl font-semibold text-[#4b4b8f] mb-4">
-              ✈️ Premium Flight Support
-            </h3>
-            <ul className="text-gray-700 space-y-2 leading-relaxed">
-              <li>• 30% support on round-trip Economy airfare</li>
-              <li>• Maximum flight support value of USD 1,200</li>
-            </ul>
-          </div>
-
-          {/* Accommodation */}
-          <div className="bg-white rounded-2xl shadow-lg p-8">
-            <h3 className="text-2xl font-semibold text-[#4b4b8f] mb-4">
-              🏨 Personalized Accommodation Assistance
-            </h3>
-            <p className="text-gray-700 leading-relaxed">
-              8 nights of fully sponsored accommodation in District 3, Ho Chi Minh
-              City, conveniently close to Emis Dental Clinic and major tourist
-              attractions such as Notre-Dame Cathedral and Turtle Lake. Carefully
-              selected to support your comfort, treatment, and recovery.
+      <section id="program-details" className="py-24 bg-white">
+        <div className="max-w-5xl mx-auto px-8">
+          <div className="max-w-2xl mx-auto text-center mb-16 lg:mb-20">
+            <p
+              className="uppercase tracking-[0.3em] text-[#C5AF73] mb-5 text-xs font-semibold"
+              style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+            >
+              PROGRAM BENEFITS
+            </p>
+            <h2
+              className="text-4xl text-[#2a3439] mb-6"
+              style={{ fontFamily: "'Playfair Display', serif" }}
+            >
+              Thoughtfully Curated Support
+            </h2>
+            <p
+              className="text-lg text-gray-500 leading-relaxed"
+              style={{ fontFamily: "'Cormorant', serif" }}
+            >
+              Our visitor program helps simplify treatment travel, from flight planning to accommodation and local support.
             </p>
           </div>
-        </div>
-      <AdBanner />
-        {/* CITY TOUR */}
-        <div className="mt-14 bg-[#fdfcf8] rounded-2xl shadow-md p-8 max-w-4xl mx-auto">
-          <h3 className="text-2xl font-semibold text-[#4b4b8f] mb-4">
-            🗺️ Complimentary 3-Day City Trip (Optional)
-          </h3>
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Patients are entitled to a complimentary 3-day city tour designed
-            specifically for first-time visitors, highlighting the most iconic
-            destinations in Ho Chi Minh City.
-          </p>
-          <p className="text-gray-700 italic">
-            Alternatively, those who do not wish to participate may receive a
-            monetary amount equivalent to the tour’s value.
-          </p>
-        </div>
 
-        {/* DISCLAIMER */}
-        <div className="mt-12 border-l-4 border-[#d4af37] bg-yellow-50 p-6 rounded-xl max-w-4xl mx-auto">
-          <p className="font-semibold text-gray-800 mb-2">
-            ⚠️ Important Notice
-          </p>
-          <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
-            Program benefits are subject to eligibility, treatment plans, and
-            availability. Flight and accommodation support values are
-            non-transferable and cannot be redeemed for cash unless explicitly
-            stated by Emis Dental.
-          </p>
+          <div className="grid lg:grid-cols-2 gap-6">
+            <article className="bg-[#f7f2e7] rounded-2xl p-8 border border-[#eadfc9]/50">
+              <h3
+                className="text-2xl text-[#2a3439] mb-5"
+                style={{ fontFamily: "'Playfair Display', serif" }}
+              >
+                Premium Flight Support
+              </h3>
+              <div className="space-y-3">
+                {flightSupport.map((item) => (
+                  <div key={item} className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-[#C5AF73] mt-1 flex-shrink-0" />
+                    <span className="text-[#2a3439]" style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}>
+                      {item}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </article>
+
+            <article className="bg-white rounded-2xl p-8 shadow-sm border border-[#eadfc9]/50">
+              <h3
+                className="text-2xl text-[#2a3439] mb-5"
+                style={{ fontFamily: "'Playfair Display', serif" }}
+              >
+                Accommodation Assistance
+              </h3>
+              <div className="space-y-3">
+                {staySupport.map((item) => (
+                  <div key={item} className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-[#C5AF73] mt-1 flex-shrink-0" />
+                    <span className="text-[#2a3439]" style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}>
+                      {item}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-[#f7f2e7]">
+        <div className="max-w-5xl mx-auto px-8">
+          <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-8 items-center">
+            <div className="rounded-2xl overflow-hidden shadow-sm h-[460px]">
+              <img
+                src={vn4}
+                alt="Visitor travel and treatment support"
+                className="w-full h-full object-cover object-center"
+              />
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-[#eadfc9]/50">
+              <p
+                className="uppercase tracking-[0.25em] text-[#C5AF73] text-xs font-semibold mb-4"
+                style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+              >
+                OPTIONAL CITY EXPERIENCE
+              </p>
+              <h3
+                className="text-2xl text-[#2a3439] mb-4"
+                style={{ fontFamily: "'Playfair Display', serif" }}
+              >
+                Complimentary 3-Day City Trip
+              </h3>
+              <p
+                className="text-gray-500 leading-relaxed mb-4"
+                style={{ fontFamily: "'Cormorant', serif" }}
+              >
+                Eligible patients can join a 3-day city itinerary designed for first-time visitors, featuring major landmarks and comfortable pacing around treatment schedules.
+              </p>
+              <p
+                className="text-gray-500 leading-relaxed"
+                style={{ fontFamily: "'Cormorant', serif" }}
+              >
+                If you prefer not to join the tour, an equivalent value option may be discussed based on program terms.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <AdBanner />
+
+      <section className="py-24 bg-white">
+        <div className="max-w-5xl mx-auto px-8">
+          <div className="max-w-2xl mx-auto text-center mb-16">
+            <p
+              className="uppercase tracking-[0.3em] text-[#C5AF73] mb-5 text-xs font-semibold"
+              style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+            >
+              VIETNAM HIGHLIGHTS
+            </p>
+            <h2
+              className="text-4xl text-[#2a3439] mb-6"
+              style={{ fontFamily: "'Playfair Display', serif" }}
+            >
+              Explore While You Recover
+            </h2>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {cityGallery.map((img, index) => (
+              <div key={index} className="rounded-2xl overflow-hidden shadow-sm border border-[#eadfc9]/50 bg-[#f7f2e7]">
+                <img
+                  src={img}
+                  alt={`Vietnam travel highlight ${index + 1}`}
+                  className="w-full h-52 object-cover object-center"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-[#f7f2e7]">
+        <div className="max-w-4xl mx-auto px-8">
+          <div className="rounded-2xl border border-[#eadfc9] bg-white p-8 shadow-sm">
+            <p
+              className="uppercase tracking-[0.25em] text-[#C5AF73] text-xs font-semibold mb-4"
+              style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+            >
+              IMPORTANT NOTICE
+            </p>
+            <p
+              className="text-gray-500 leading-relaxed"
+              style={{ fontFamily: "'Cormorant', serif" }}
+            >
+              Program benefits are subject to eligibility, treatment plans, and availability.
+              Flight and accommodation support values are non-transferable and cannot be redeemed
+              for cash unless explicitly stated by Emis Dental.
+            </p>
+
+            <div className="mt-7 flex flex-col sm:flex-row gap-3">
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#d4af37] text-white text-sm font-semibold hover:bg-[#c19d30] transition"
+                style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+              >
+                Request Travel Support
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                to="/implant"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full border border-[#d4af37] text-[#2a3439] text-sm hover:bg-white transition"
+                style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+              >
+                Explore Implant Solutions
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </main>
