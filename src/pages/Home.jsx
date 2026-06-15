@@ -187,7 +187,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* <ContactForm/> */}
+      <ContactForm/>
 
       {/* Implant Section */}
       {/* <ImplantCards/> */}
