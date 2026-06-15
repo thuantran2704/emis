@@ -47,10 +47,8 @@ export default function MachineBanner() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
           {machines.map(({ key, img }) => (
-            <motion.div
+            <div
               key={key}
-              whileHover={{ y: -6, scale: 1.02 }}
-              transition={{ duration: 0.3 }}
               className="relative bg-white border border-[#e5d6a2]/70 rounded-3xl shadow-lg hover:shadow-2xl overflow-hidden transition-all duration-500"
             >
               <div className="absolute top-4 right-4 z-10">
@@ -83,7 +81,7 @@ export default function MachineBanner() {
               </div>
 
               <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#f9e79f] via-[#d4af37] to-[#f9e79f]" />
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

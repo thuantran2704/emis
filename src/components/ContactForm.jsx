@@ -6,6 +6,8 @@ import { useSelector } from 'react-redux';
 export default function ContactForm({ embedded = false }) {
   const language = useSelector((state) => state.language.language);
   const content = contactContent[language] || contactContent.english;
+  const apiBaseUrl = import.meta.env.VITE_API_URL;
+  const recaptchaSiteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -25,6 +27,47 @@ export default function ContactForm({ embedded = false }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!apiBaseUrl) {
+      setAlert({
+        show: true,
+        message:
+          language === "vietnamese"
+            ? "Thiếu cấu hình API. Vui lòng thử lại sau."
+            : language === "french"
+            ? "Configuration API manquante. Veuillez réessayer plus tard."
+            : language === "korean"
+            ? "API 설정이 누락되었습니다. 잠시 후 다시 시도해주세요."
+            : language === "simplified"
+            ? "缺少 API 配置，请稍后重试。"
+            : language === "traditional"
+            ? "缺少 API 設定，請稍後再試。"
+            : "Missing API configuration. Please try again later.",
+        type: "error",
+      });
+      return;
+    }
+
+    if (!recaptchaSiteKey) {
+      setAlert({
+        show: true,
+        message:
+          language === "vietnamese"
+            ? "Thiếu cấu hình reCAPTCHA. Vui lòng thử lại sau."
+            : language === "french"
+            ? "Configuration reCAPTCHA manquante. Veuillez réessayer plus tard."
+            : language === "korean"
+            ? "reCAPTCHA 설정이 누락되었습니다. 잠시 후 다시 시도해주세요."
+            : language === "simplified"
+            ? "缺少 reCAPTCHA 配置，请稍后重试。"
+            : language === "traditional"
+            ? "缺少 reCAPTCHA 設定，請稍後再試。"
+            : "Missing reCAPTCHA configuration. Please try again later.",
+        type: "error",
+      });
+      return;
+    }
+
     if (!recaptchaToken) {
       setAlert({
         show: true,
@@ -48,7 +91,7 @@ export default function ContactForm({ embedded = false }) {
     setIsSubmitting(true);
     try {
       const payload = { ...formData, language, recaptchaToken };
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/appointments`, {
+      const response = await fetch(`${apiBaseUrl}/api/appointments`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -80,7 +123,7 @@ export default function ContactForm({ embedded = false }) {
             : "Message sent successfully! We'll contact you soon.",
         type: "success",
       });
-    } catch (error) {
+    } catch {
       setIsSubmitting(false);
       setAlert({
         show: true,
@@ -153,15 +196,21 @@ export default function ContactForm({ embedded = false }) {
           />
 
           <div className="flex justify-center my-2">
-            <ReCAPTCHA
-              sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-              onChange={handleRecaptchaChange}
-            />
+            {recaptchaSiteKey ? (
+              <ReCAPTCHA
+                sitekey={recaptchaSiteKey}
+                onChange={handleRecaptchaChange}
+              />
+            ) : (
+              <p className="text-sm text-red-600" style={{ fontFamily: "'Cormorant', serif" }}>
+                reCAPTCHA is not configured.
+              </p>
+            )}
           </div>
 
           <button
             type="submit"
-            disabled={isSubmitting}
+            disabled={isSubmitting || !apiBaseUrl || !recaptchaSiteKey}
             className="w-full bg-[#d4af37] hover:bg-[#c19d30] text-white font-medium py-2 rounded-full transition-all shadow-sm hover:shadow-md text-sm"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
