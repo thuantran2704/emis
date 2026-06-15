@@ -16,6 +16,15 @@ export default function Equipment() {
   const language = useSelector((state) => state.language.language);
   const content = equipmentContent[language] || equipmentContent.english;
 
+  const shortenText = (text, maxLength = 150) => {
+    if (!text) return "";
+    if (text.length <= maxLength) return text;
+
+    const trimmed = text.slice(0, maxLength);
+    const lastSpace = trimmed.lastIndexOf(" ");
+    return `${trimmed.slice(0, lastSpace > 0 ? lastSpace : maxLength)}...`;
+  };
+
   const equipmentList = [
     { key: "vatech", image: vatechImg },
     { key: "kehong", image: kehongImg },
@@ -64,7 +73,7 @@ export default function Equipment() {
                 className="text-lg text-gray-500 leading-relaxed max-w-md"
                 style={{ fontFamily: "'Cormorant', serif" }}
               >
-                {content.pageIntro}
+                {shortenText(content.pageIntro, 120)}
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 pt-2">
@@ -108,8 +117,8 @@ export default function Equipment() {
               style={{ fontFamily: "'Cormorant', serif" }}
             >
               {language === "vietnamese"
-                ? "Mỗi thiết bị đều được lựa chọn để hỗ trợ chẩn đoán chính xác, điều trị an toàn và trải nghiệm thoải mái hơn cho bệnh nhân."
-                : "Each system is selected to support accurate diagnosis, safer procedures, and a smoother patient experience."}
+                ? "Thiết bị được chọn để điều trị an toàn, chính xác và thoải mái hơn."
+                : "Each system is chosen for safer, more accurate, and more comfortable care."}
             </p>
           </div>
 
@@ -151,18 +160,18 @@ export default function Equipment() {
                       className="text-[#2a3439] mb-4"
                       style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                     >
-                      {content[key].equipmentIntro}
+                      {shortenText(content[key].equipmentIntro, 95)}
                     </p>
 
                     <p
                       className="text-gray-500 leading-relaxed mb-5"
                       style={{ fontFamily: "'Cormorant', serif" }}
                     >
-                      {content[key].equipmentDescription}
+                      {shortenText(content[key].equipmentDescription, 150)}
                     </p>
 
                     <div className="space-y-2">
-                      {content[key].features.map((feature) => (
+                      {content[key].features.slice(0, 3).map((feature) => (
                         <div key={feature} className="flex items-start gap-3">
                           <CheckCircle className="w-5 h-5 text-[#C5AF73] mt-1 flex-shrink-0" />
                           <span
@@ -202,8 +211,8 @@ export default function Equipment() {
               style={{ fontFamily: "'Cormorant', serif" }}
             >
               {language === "vietnamese"
-                ? "Toàn bộ hệ thống thiết bị được bảo trì định kỳ và vận hành theo quy trình kiểm soát nghiêm ngặt để đảm bảo chất lượng điều trị ổn định."
-                : "All systems are maintained on schedule and operated under strict protocols to ensure consistent treatment quality."}
+                ? "Thiết bị được bảo trì định kỳ theo quy trình kiểm soát nghiêm ngặt."
+                : "All systems are maintained regularly under strict quality protocols."}
             </p>
 
             <Link
