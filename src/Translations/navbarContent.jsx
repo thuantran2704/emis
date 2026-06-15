@@ -11,6 +11,7 @@ const navbarContent = {
     doctors: "Doctors",
     veneer: "Veneers",
     crown: "Crowns",
+    implant: "Implants",
     canal: "Root Canal",
     juneOffer: "June Offers",
     whitening: "Whitening"
@@ -27,6 +28,7 @@ const navbarContent = {
     doctors: "Bác Sĩ",
     veneer: "Mặt Dán Sứ",
     crown: "Răng Sứ",
+    implant: "Cấy Ghép Implant",
     canal: "Điều Trị Tủy",
     juneOffer: "Ưu Đãi Tháng 6",
     whitening: "Tẩy Trắng Răng"
@@ -43,6 +45,7 @@ const navbarContent = {
     doctors: "Docteurs",
     veneer: "Facettes Dentaires",
     crown: "Couronnes",
+    implant: "Implants",
     canal: "Traitement de Canal",
     juneOffer: "Offres de Juin",
     whitening: "Blanchiment"
@@ -58,6 +61,7 @@ const navbarContent = {
     drSon: "医生介绍",
     doctors: "医生团队",
     veneer: "牙贴面",
+    implant: "种植牙",
     crown: "牙冠",
     canal: "根管治疗",
     juneOffer: "六月优惠",
@@ -74,6 +78,7 @@ const navbarContent = {
     drSon: "醫生介紹",
     doctors: "醫生團隊",
     veneer: "牙貼面",
+    implant: "種植牙",
     crown: "牙冠",
     canal: "根管治療",
     juneOffer: "六月優惠",
@@ -90,6 +95,7 @@ const navbarContent = {
     drSon: "의사 소개",
     doctors: "의사들",
     veneer: "베니어",
+    implant: "임플란트",
     crown: "크라운",
     canal: "근관 치료",
     juneOffer: "6월 프로모션",

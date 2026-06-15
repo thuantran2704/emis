@@ -26,6 +26,7 @@ export default function Navbar() {
     { name: content.drSon, path: '/dr-son' },
     { name: content.doctors, path: '/doctors' },
     { name: content.veneer, path: '/veneer' },
+    { name: content.implant, path: '/implant' },
     { name: content.equipment, path: '/equipment' },
   ];
 
