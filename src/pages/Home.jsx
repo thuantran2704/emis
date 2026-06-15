@@ -190,7 +190,7 @@ export default function Home() {
       <ContactForm/>
 
       {/* Implant Section */}
-      {/* <ImplantCards/> */}
+      <ImplantCards/>
       
       <MachineBanner/>
       <section className="py-20 bg-white">
