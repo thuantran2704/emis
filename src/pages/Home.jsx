@@ -187,10 +187,10 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <ContactForm/>
+      {/* <ContactForm/> */}
 
       {/* Implant Section */}
-      <ImplantCards/>
+      {/* <ImplantCards/> */}
       
       <MachineBanner/>
       <section className="py-20 bg-white">
