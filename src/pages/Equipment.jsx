@@ -36,11 +36,11 @@ export default function Equipment() {
         <div className="max-w-6xl mx-auto px-8 w-full">
           <div className="grid lg:grid-cols-[0.95fr_1.05fr] gap-10 lg:gap-20 items-center">
             <div className="order-1 lg:order-2">
-              <div className="overflow-hidden rounded-2xl shadow-lg aspect-[16/10] lg:aspect-auto">
+              <div className="rounded-2xl overflow-hidden shadow-sm h-[320px] lg:h-[360px] bg-white border border-[#eadfc9]/60 p-3">
                 <img
                   src={vatechImg}
                   alt={content.vatech.title}
-                  className="w-full h-full lg:h-[480px] object-cover object-center"
+                  className="w-full h-full object-contain object-center"
                 />
               </div>
             </div>
