@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import equipmentContent from "../Translations/equipmentContent";
 import vatechImg from "../pics/vatech.jpg";
 import kehongImg from "../pics/ghe-ngoi-nha-khoa-kehong.jpg";
