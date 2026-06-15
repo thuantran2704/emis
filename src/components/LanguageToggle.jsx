@@ -56,7 +56,7 @@ export default function LanguageToggle({ variant = 'floating' }) {
       {isNavbar ? (
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="flex items-center gap-1.5 px-3 py-2 rounded-full border border-[#d4af37]/40 text-[#2a3439] text-xs font-semibold hover:border-[#d4af37] hover:text-[#C5AF73] transition-colors"
+          className="flex items-center gap-1.5 px-3 py-2 rounded-full border border-[#d4af37]/40 text-[#f3e2b0] text-xs font-semibold hover:border-[#d4af37] hover:bg-[#d4af37]/20 hover:text-white transition-colors"
           style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
         >
           <span>{currentLabel}</span>

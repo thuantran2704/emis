@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import logo from '../pics/logo.jpg';
 import navbarContent from '../Translations/navbarContent';
 import { useSelector } from 'react-redux';
@@ -7,20 +7,56 @@ import LanguageToggle from './LanguageToggle';
 
 export default function Navbar() {
   const language = useSelector((state) => state.language.language);
+  const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [isJuneOpen, setIsJuneOpen] = useState(false);
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  const toggleAbout = () => setIsAboutOpen(!isAboutOpen);
-  const toggleJune = () => setIsJuneOpen(!isJuneOpen);
+  const closeAllMenus = () => {
+    setIsMenuOpen(false);
+    setIsAboutOpen(false);
+    setIsJuneOpen(false);
+  };
+
+  useEffect(() => {
+    closeAllMenus();
+  }, [location.pathname]);
+
+  const toggleMenu = () => setIsMenuOpen((prev) => !prev);
+  const toggleAbout = () => {
+    setIsAboutOpen((prev) => !prev);
+    setIsJuneOpen(false);
+  };
+  const toggleJune = () => {
+    setIsJuneOpen((prev) => !prev);
+    setIsAboutOpen(false);
+  };
 
   const content = navbarContent[language] || navbarContent.english;
 
-  const submenuFont = {
+  const navFont = {
+    fontFamily: "'Be Vietnam Pro', sans-serif",
+    fontWeight: '600',
+  };
+
+  const dropdownFont = {
     fontFamily: "'Be Vietnam Pro', sans-serif",
     fontWeight: '500',
   };
+
+  const navLinkClass = (path) =>
+    `relative inline-flex h-10 items-center px-3 text-sm tracking-wide transition-colors duration-200 ${
+      location.pathname === path
+        ? 'text-[#fff4d5] after:absolute after:left-3 after:right-3 after:-bottom-0.5 after:h-[2px] after:bg-[#d4af37]'
+        : 'text-[#f3e2b0]/90 hover:text-white'
+    }`;
+
+  const mobileLinkClass = (path) =>
+    `block rounded-xl px-3 py-2.5 text-sm transition ${
+      location.pathname === path
+        ? 'bg-[#f5e9c2] text-[#1f2937]'
+        : 'text-[#2a3439] hover:bg-[#f3ead2]'
+    }`;
 
   const aboutDropdownItems = [
     { name: content.drSon, path: '/dr-son' },
@@ -40,195 +76,171 @@ export default function Navbar() {
     <>
       {isMenuOpen && (
         <div
-          className="inset-0 backdrop-blur-sm bg-white/30 z-40"
-          onClick={toggleMenu}
-        ></div>
+          className="fixed inset-0 bg-[#2a3439]/20 backdrop-blur-sm z-40 md:hidden"
+          onClick={closeAllMenus}
+        />
       )}
 
-      <nav className="bg-gradient-to-r from-[#d4af37] via-[#C5AF73] to-[#d4af37] shadow-xl fixed w-full z-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex justify-between items-center h-20">
-
-            {/* Logo */}
-            <Link to="/" className="flex items-center space-x-3 group">
-              <div className="h-14 w-14 rounded-full overflow-hidden border-2 border-[#1f2937] border-opacity-20 shadow-md">
-                <img src={logo} alt="Nha Khoa Emis" className="h-full w-full object-cover" />
-              </div>
-              <span
-                className="text-2xl font-bold text-[#1f2937] tracking-tight"
-                style={{
-                  fontFamily: "'Be Vietnam Pro', sans-serif",
-                  fontWeight: '800',
-                  textShadow: '1px 1px 2px rgba(0,0,0,0.1)',
-                }}
-              >
-                <span className="text-[#2a3439]">EMIS</span> DENTAL
-              </span>
-            </Link>
-
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-6">
-              <Link
-                to="/"
-                className="relative text-[#2a3439] font-medium px-3 py-2 transition-all duration-300 group"
-                style={{ fontFamily: "'Be Vietnam Pro', sans-serif", fontWeight: '600' }}
-              >
-                {content.home}
-              </Link>
-
-              {/* ABOUT DESKTOP */}
-              <div className="relative flex items-center">
-                <Link
-                  to="/about"
-                  className="text-[#2a3439] font-medium px-3 py-2 transition-all duration-300 group"
-                  style={{ fontFamily: "'Be Vietnam Pro', sans-serif", fontWeight: '600' }}
-                >
-                  {content.about}
-                </Link>
-
-                <button
-                  onClick={toggleAbout}
-                  className="ml-1 text-[#2a3439] hover:text-gray-700"
-                >
-                  <svg
-                    className={`w-4 h-4 transition-transform duration-300 ${isAboutOpen ? 'rotate-180' : ''}`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-
-                {isAboutOpen && (
-                  <div className="absolute top-full left-0 mt-3 w-56 bg-white rounded-md shadow-lg py-2 z-50 border border-gray-200">
-                    {aboutDropdownItems.map((sub) => (
-                      <Link
-                        key={sub.name}
-                        to={sub.path}
-                        className="block px-4 py-2 text-[#2a3439] hover:bg-gray-100 transition"
-                        style={submenuFont}
-                        onClick={() => setIsAboutOpen(false)}
-                      >
-                        {sub.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              {/* SERVICES */}
-              <Link
-                to="/services"
-                className="text-[#2a3439] font-medium px-3 py-2"
-                style={{ fontFamily: "'Be Vietnam Pro', sans-serif", fontWeight: '600' }}
-              >
-                {content.services}
-              </Link>
-
-              {/* JUNE OFFER DROPDOWN */}
-              <div className="relative flex items-center">
-                <Link
-                  to="/genAd"
-                  className="text-[#2a3439] font-medium px-3 py-2 transition-all duration-300 group"
-                  style={{ fontFamily: "'Be Vietnam Pro', sans-serif", fontWeight: '600' }}
-                >
-                  {content.juneOffer}
-                </Link>
-
-                <button
-                  onClick={toggleJune}
-                  className="ml-1 text-[#2a3439] hover:text-gray-700"
-                >
-                  <svg
-                    className={`w-4 h-4 transition-transform duration-300 ${isJuneOpen ? 'rotate-180' : ''}`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-
-                {isJuneOpen && (
-                  <div className="absolute top-full left-0 mt-3 w-56 bg-white rounded-md shadow-lg py-2 z-50 border border-gray-200">
-                    {juneDropdownItems.map((sub) => (
-                      <Link
-                        key={sub.name}
-                        to={sub.path}
-                        className="block px-4 py-2 text-[#2a3439] hover:bg-gray-100 transition"
-                        style={submenuFont}
-                        onClick={() => setIsJuneOpen(false)}
-                      >
-                        {sub.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              {/* GRATITUDE */}
-              <Link
-                to="/visitor-program"
-                className="text-[#2a3439] font-medium px-3 py-2 transition-all duration-300"
-                style={{ fontFamily: "'Be Vietnam Pro', sans-serif", fontWeight: '600' }}
-              >
-                {content.gratitude}
-              </Link>
-
-              {/* CONTACT */}
-              <Link
-                to="/contact"
-                className="ml-4 px-5 py-2 bg-[#2a3439] text-[#C5AF73] rounded-md hover:bg-[#1f2937] transition"
-                style={{ fontFamily: "'Be Vietnam Pro', sans-serif", fontWeight: '600' }}
-              >
-                {content.contact}
-              </Link>
-
-              <div className="ml-2">
-                <LanguageToggle variant="navbar" />
-              </div>
+      <nav className="fixed top-0 z-50 w-full border-b border-[#c8a95f]/45 bg-gradient-to-r from-[#111317]/96 via-[#16352f]/94 to-[#111317]/96 backdrop-blur-md shadow-[0_14px_36px_rgba(6,12,10,0.55)]">
+        <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-4 sm:px-6">
+          <Link to="/" className="group flex items-center gap-3">
+            <div className="h-12 w-12 overflow-hidden rounded-full border-2 border-[#d4af37]/60 shadow-sm transition-transform duration-200 group-hover:scale-[1.02]">
+              <img src={logo} alt="Nha Khoa Emis" className="h-full w-full object-cover" />
             </div>
-
-            {/* Mobile Toggle */}
-            <div className="md:hidden flex items-center gap-2">
-              <div className="hidden sm:block">
-                <LanguageToggle variant="navbar" />
-              </div>
-              <button onClick={toggleMenu} className="text-[#2a3439]">
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  {isMenuOpen ? (
-                    <path strokeLinecap="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                  ) : (
-                    <path strokeLinecap="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-                  )}
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {/* Mobile Menu */}
-        <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
-          <div className="px-2 pt-2 pb-4 space-y-1 bg-gradient-to-b from-[#d4af37] to-[#C5AF73] shadow-lg">
-
-            <Link
-              to="/"
-              className="block px-3 py-2 font-medium text-[#2a3439] hover:bg-[#2a3439] hover:text-[#C5AF73] rounded-md"
-              onClick={toggleMenu}
+            <span
+              className="text-lg font-extrabold leading-none tracking-[0.02em] text-[#f8edcf] sm:text-xl"
+              style={{
+                fontFamily: "'Be Vietnam Pro', sans-serif",
+              }}
             >
+              <span className="text-white">EMIS</span>{' '}
+              <span className="text-[#d4af37]">DENTAL</span>
+            </span>
+          </Link>
+
+          <div className="hidden items-center gap-2 md:flex">
+            <Link to="/" className={navLinkClass('/')} style={navFont}>
               {content.home}
             </Link>
 
-            {/* MOBILE ABOUT */}
+            <div className="relative flex items-center">
+              <Link
+                to="/about"
+                className={navLinkClass('/about')}
+                style={navFont}
+              >
+                {content.about}
+              </Link>
+              <button
+                onClick={toggleAbout}
+                className="ml-0.5 inline-flex h-10 w-8 items-center justify-center rounded-full text-[#f3e2b0] hover:bg-[#d4af37]/20 hover:text-white"
+                aria-label="Toggle about menu"
+              >
+                <svg
+                  className={`h-4 w-4 transition-transform duration-200 ${isAboutOpen ? 'rotate-180' : ''}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              {isAboutOpen && (
+                <div className="absolute left-0 top-full mt-3 w-60 rounded-2xl border border-[#eadfc4] bg-white p-2 shadow-[0_14px_28px_rgba(31,41,55,0.16)]">
+                  {aboutDropdownItems.map((sub) => (
+                    <Link
+                      key={sub.name}
+                      to={sub.path}
+                      className="block rounded-xl px-3 py-2 text-[#2a3439] transition hover:bg-[#f7f2e7]"
+                      style={dropdownFont}
+                    >
+                      {sub.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <Link to="/services" className={navLinkClass('/services')} style={navFont}>
+              {content.services}
+            </Link>
+
+            <div className="relative flex items-center">
+              <Link
+                to="/genAd"
+                className={navLinkClass('/genAd')}
+                style={navFont}
+              >
+                {content.juneOffer}
+              </Link>
+              <button
+                onClick={toggleJune}
+                className="ml-0.5 inline-flex h-10 w-8 items-center justify-center rounded-full text-[#f3e2b0] hover:bg-[#d4af37]/20 hover:text-white"
+                aria-label="Toggle June offers menu"
+              >
+                <svg
+                  className={`h-4 w-4 transition-transform duration-200 ${isJuneOpen ? 'rotate-180' : ''}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              {isJuneOpen && (
+                <div className="absolute left-0 top-full mt-3 w-56 rounded-2xl border border-[#eadfc4] bg-white p-2 shadow-[0_14px_28px_rgba(31,41,55,0.16)]">
+                  {juneDropdownItems.map((sub) => (
+                    <Link
+                      key={sub.name}
+                      to={sub.path}
+                      className="block rounded-xl px-3 py-2 text-[#2a3439] transition hover:bg-[#f7f2e7]"
+                      style={dropdownFont}
+                    >
+                      {sub.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <Link to="/visitor-program" className={navLinkClass('/visitor-program')} style={navFont}>
+              {content.gratitude}
+            </Link>
+
+            <Link
+              to="/contact"
+              className="ml-2 inline-flex h-10 items-center rounded-full bg-[#d4af37] px-5 text-sm font-semibold text-white shadow-sm transition hover:bg-[#c19d30]"
+              style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+            >
+              {content.contact}
+            </Link>
+
+            <div className="ml-1">
+              <LanguageToggle variant="navbar" />
+            </div>
+          </div>
+
+          <div className="flex items-center gap-2 md:hidden">
+            <div className="hidden sm:block">
+              <LanguageToggle variant="navbar" />
+            </div>
+            <button
+              onClick={toggleMenu}
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#d4af37]/40 text-[#f3e2b0] hover:bg-[#d4af37]/20 hover:text-white"
+              aria-label="Toggle mobile menu"
+            >
+              <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {isMenuOpen ? (
+                  <path strokeLinecap="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div
+          className={`md:hidden overflow-hidden border-t border-[#e6d9ba] bg-[#fbf7ed] transition-[max-height] duration-300 ${
+            isMenuOpen ? 'max-h-[85vh]' : 'max-h-0'
+          }`}
+        >
+          <div className="space-y-1 px-3 pb-5 pt-3">
+            <Link to="/" className={mobileLinkClass('/')} onClick={closeAllMenus} style={navFont}>
+              {content.home}
+            </Link>
+
             <div>
-              <div className="flex items-center justify-between px-3 py-2 rounded-md">
+              <div className="flex items-center justify-between rounded-xl px-3 py-2.5">
                 <Link
                   to="/about"
-                  className="font-medium text-[#2a3439] hover:text-[#C5AF73]"
+                  className={mobileLinkClass('/about')}
+                  style={navFont}
                   onClick={() => {
                     setIsAboutOpen(false);
-                    toggleMenu();
+                    setIsMenuOpen(false);
                   }}
                 >
                   {content.about}
@@ -236,10 +248,11 @@ export default function Navbar() {
 
                 <button
                   onClick={toggleAbout}
-                  className="p-1 rounded hover:bg-white/20 text-[#2a3439]"
+                  className="rounded-full p-1 text-[#2a3439] hover:bg-[#efe3c5]"
+                  aria-label="Toggle about submenu"
                 >
                   <svg
-                    className={`w-4 h-4 transition-transform ${isAboutOpen ? 'rotate-180' : ''}`}
+                    className={`h-4 w-4 transition-transform ${isAboutOpen ? 'rotate-180' : ''}`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -250,14 +263,14 @@ export default function Navbar() {
               </div>
 
               {isAboutOpen && (
-                <div className="ml-4 mt-1">
+                <div className="ml-4 mt-1 space-y-1 border-l border-[#e3d4b0] pl-3">
                   {aboutDropdownItems.map((sub) => (
                     <Link
                       key={sub.name}
                       to={sub.path}
-                      className="block px-3 py-2 text-[#2a3439] hover:bg-[#2a3439] hover:text-[#C5AF73] rounded-md"
-                      style={submenuFont}
-                      onClick={toggleMenu}
+                      className="block rounded-lg px-3 py-2 text-[#2a3439] hover:bg-[#f3ead2]"
+                      style={dropdownFont}
+                      onClick={closeAllMenus}
                     >
                       {sub.name}
                     </Link>
@@ -266,24 +279,19 @@ export default function Navbar() {
               )}
             </div>
 
-            {/* SERVICES */}
-            <Link
-              to="/services"
-              className="block px-3 py-2 text-[#2a3439] font-medium rounded-md hover:bg-[#2a3439] hover:text-[#C5AF73]"
-              onClick={toggleMenu}
-            >
+            <Link to="/services" className={mobileLinkClass('/services')} onClick={closeAllMenus} style={navFont}>
               {content.services}
             </Link>
 
-            {/* MOBILE JUNE OFFER */}
             <div>
-              <div className="flex items-center justify-between px-3 py-2 rounded-md">
+              <div className="flex items-center justify-between rounded-xl px-3 py-2.5">
                 <Link
                   to="/genAd"
-                  className="font-medium text-[#2a3439] hover:text-[#C5AF73]"
+                  className={mobileLinkClass('/genAd')}
+                  style={navFont}
                   onClick={() => {
                     setIsJuneOpen(false);
-                    toggleMenu();
+                    setIsMenuOpen(false);
                   }}
                 >
                   {content.juneOffer}
@@ -291,10 +299,11 @@ export default function Navbar() {
 
                 <button
                   onClick={toggleJune}
-                  className="p-1 rounded hover:bg-white/20 text-[#2a3439]"
+                  className="rounded-full p-1 text-[#2a3439] hover:bg-[#efe3c5]"
+                  aria-label="Toggle June submenu"
                 >
                   <svg
-                    className={`w-4 h-4 transition-transform ${isJuneOpen ? 'rotate-180' : ''}`}
+                    className={`h-4 w-4 transition-transform ${isJuneOpen ? 'rotate-180' : ''}`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -305,14 +314,14 @@ export default function Navbar() {
               </div>
 
               {isJuneOpen && (
-                <div className="ml-4 mt-1">
+                <div className="ml-4 mt-1 space-y-1 border-l border-[#e3d4b0] pl-3">
                   {juneDropdownItems.map((sub) => (
                     <Link
                       key={sub.name}
                       to={sub.path}
-                      className="block px-3 py-2 text-[#2a3439] hover:bg-[#2a3439] hover:text-[#C5AF73] rounded-md"
-                      style={submenuFont}
-                      onClick={toggleMenu}
+                      className="block rounded-lg px-3 py-2 text-[#2a3439] hover:bg-[#f3ead2]"
+                      style={dropdownFont}
+                      onClick={closeAllMenus}
                     >
                       {sub.name}
                     </Link>
@@ -321,25 +330,25 @@ export default function Navbar() {
               )}
             </div>
 
-            {/* GRATITUDE */}
             <Link
               to="/visitor-program"
-              className="block px-3 py-2 text-[#2a3439] font-medium rounded-md hover:bg-[#2a3439] hover:text-[#C5AF73]"
-              onClick={toggleMenu}
+              className={mobileLinkClass('/visitor-program')}
+              onClick={closeAllMenus}
+              style={navFont}
             >
               {content.gratitude}
             </Link>
 
-            {/* CONTACT */}
             <Link
               to="/contact"
-              className="block px-3 py-2 text-[#2a3439] font-medium rounded-md hover:bg-[#2a3439] hover:text-[#C5AF73]"
-              onClick={toggleMenu}
+              className="mt-2 block rounded-full bg-[#d4af37] px-4 py-2.5 text-center text-sm font-semibold text-white hover:bg-[#c19d30]"
+              onClick={closeAllMenus}
+              style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
             >
               {content.contact}
             </Link>
 
-            <div className="px-3 py-2 sm:hidden">
+            <div className="px-3 pt-3 sm:hidden">
               <LanguageToggle variant="navbar" />
             </div>
           </div>
