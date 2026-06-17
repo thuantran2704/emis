@@ -46,9 +46,9 @@ const aboutContent = {
         cta: 'Contact Us',
       },
       {
-        name: 'Dr. Nguyen Thi Bich Van',
-        role: 'Implant Prosthetics & Restorative Rehabilitation',
-        description: 'Focused on restorative treatment, implant-supported rehabilitation, and long-term functional outcomes.',
+        name: 'Dr. Nguyen The Son',
+        role: 'Chief Dentist - Implant & Aesthetic Prosthetics',
+        description: 'Dr. Son has over 10 years of specialized experience in dental implants, aesthetic prosthetics, and sinus lift - bone grafting procedures. With more than 3,000 implant cases from simple to complex, he focuses on restoring chewing function, natural esthetics, and long-term treatment stability.',
         cta: 'Contact Us',
       },
     ],
@@ -110,7 +110,7 @@ const aboutContent = {
     teamIntro: 'Một đội ngũ hướng tới một mục tiêu chung: giúp bệnh nhân khôi phục khả năng ăn nhai, tự tin và chất lượng cuộc sống lâu dài.',
     teamMembers: [
       { name: 'BS. CKI Trần Minh Tú', role: 'Phẫu thuật Răng Hàm Mặt', description: 'Implant • Tiểu phẫu Răng Hàm Mặt • Phục hồi toàn hàm. Hiện đang công tác tại Bệnh viện Răng Hàm Mặt TP.HCM và EMIS Premium Dental Clinic.', cta: 'Liên Hệ Chúng Tôi' },
-      { name: 'BS. CKI Nguyễn Thị Bích Vân', role: 'Phục hình Implant & Phục hồi chức năng', description: 'Tập trung vào phục hình Implant, phục hồi chức năng ăn nhai và kết quả lâu dài sau điều trị.', cta: 'Liên Hệ Chúng Tôi' },
+      { name: 'BS. CKI Nguyễn Thế Sơn', role: 'Bác Sĩ Trưởng - Implant & Phục Hình Thẩm Mỹ', description: 'Bác sĩ Sơn có hơn 10 năm kinh nghiệm chuyên sâu trong lĩnh vực cấy ghép Implant, phục hình thẩm mỹ và phẫu thuật nâng xoang - ghép xương. Với hơn 3.000 ca Implant từ đơn giản đến phức tạp, bác sĩ tập trung phục hồi chức năng ăn nhai, thẩm mỹ tự nhiên và sự ổn định lâu dài.', cta: 'Liên Hệ Chúng Tôi' },
     ],
 
     internationalTitle: 'Hỗ Trợ Trước, Trong Và Sau Điều Trị',
