@@ -171,6 +171,14 @@ export const homeContent = {
               "Currently practicing at Ho Chi Minh City Odonto-Maxillofacial Hospital and EMIS Premium Dental Clinic.",
             languages: "Vietnamese • English • Hungarian • Chinese",
           },
+          {
+            name: "Dr. Nguyen The Son",
+            role: "Chief Dentist at Emis Dental",
+            focus: "Dental Implants • Aesthetic Prosthetics • Sinus Lift & Bone Grafting Surgery",
+            summary:
+              "Over 10 years of specialized experience in dental implants and aesthetic prosthetics, with extensive clinical work in advanced implant and restoration cases.",
+            languages: "Vietnamese • English",
+          },
         ],
         philosophyTitle: "Our Treatment Philosophy",
         philosophyText:
@@ -753,6 +761,14 @@ export const homeContent = {
             summary:
               "Hiện đang công tác tại Bệnh viện Răng Hàm Mặt TP.HCM và EMIS Premium Dental Clinic.",
             languages: "Tiếng Việt • English • Hungarian • Chinese",
+          },
+          {
+            name: "BS. Nguyễn Thế Sơn",
+            role: "Bác sĩ trưởng tại Emis Dental",
+            focus: "Implant nha khoa • Phục hình thẩm mỹ • Phẫu thuật nâng xoang và ghép xương",
+            summary:
+              "Hơn 10 năm kinh nghiệm chuyên sâu trong Implant nha khoa và phục hình thẩm mỹ, với nhiều kinh nghiệm lâm sàng ở các ca Implant và phục hồi phức tạp.",
+            languages: "Tiếng Việt • English",
           },
         ],
         philosophyTitle: "Triết Lý Điều Trị",

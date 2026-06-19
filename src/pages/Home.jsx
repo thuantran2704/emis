@@ -9,6 +9,7 @@ import onlineConsultation from '../pics/consulting-team.jpg';
 import explainPlan from '../pics/doctor-explaining-treatment-x-ray-angle-3.jpg';
 import drTuWorking from '../pics/dr-tu-working.jpg';
 import drTuPortrait from '../pics/dr-tu-potrait.jpg';
+import drSonPortrait from '../pics/dr-son-potrait.jpg';
 import lifestyleDinner from '../pics/eating-casually.jpeg';
 import confidentSmile from '../pics/confident-smile-social.jpeg';
 import elderSocializing from '../pics/elder-person-socializing.jpeg';
@@ -35,6 +36,13 @@ export default function Home() {
   const language = useSelector((state) => state.language.language);
   const page = homeContent[language]?.homepageV2 || homeContent.english.homepageV2;
   const sectionLabelClass = "mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-[#C5AF73]";
+  const getDoctorPortrait = (doctorName = '') => {
+    const normalizedName = doctorName.toLowerCase();
+    if (/son|sơn|손/.test(normalizedName)) {
+      return drSonPortrait;
+    }
+    return drTuPortrait;
+  };
   const heroDescription = page.hero.description.length > 95
     ? `${page.hero.description.slice(0, 92).trim()}...`
     : page.hero.description;
@@ -223,11 +231,11 @@ export default function Home() {
 
               <div className="mt-8 space-y-6">
                 {page.doctors.cards.map((doctor) => (
-                  <article key={doctor.name} className="grid gap-4 border-b border-[#dbe4ec] pb-6 last:border-b-0 sm:grid-cols-[152px_1fr] sm:items-start sm:gap-5">
+                  <article key={doctor.name} className="grid gap-4 border-b border-[#dbe4ec] pb-6 last:border-b-0 sm:grid-cols-[minmax(180px,220px)_1fr] sm:items-start sm:gap-5">
                     <img
-                      src={drTuPortrait}
+                      src={getDoctorPortrait(doctor.name)}
                       alt={doctor.name}
-                      className="h-[114px] w-full rounded-2xl border border-[#dbe4ec] object-cover sm:h-[108px] sm:w-[152px]"
+                      className="w-full rounded-2xl border border-[#dbe4ec] bg-white object-contain"
                     />
                     <div>
                       <h3 className="text-xl font-semibold text-[#2a3439]" style={{ fontFamily: "'Playfair Display', serif" }}>{doctor.name}</h3>
