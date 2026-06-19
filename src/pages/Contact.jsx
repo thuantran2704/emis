@@ -136,6 +136,13 @@ export default function Contact() {
 
   const contactItems = [
     {
+      icon: whatsapp,
+      alt: "WhatsApp",
+      label: "WhatsApp",
+      value: "https://wa.me/84909967649",
+      href: "https://wa.me/84909967649"
+    },
+    {
       icon: phoneIcon,
       alt: "Phone",
       label: content.contactInfo.phone,
@@ -155,13 +162,6 @@ export default function Contact() {
       label: "Zalo",
       value: "https://zalo.me/2143697215679541994",
       href: "https://zalo.me/2143697215679541994"
-    },
-    {
-      icon: whatsapp,
-      alt: "WhatsApp",
-      label: "WhatsApp",
-      value: "https://wa.me/84909967649",
-      href: "https://wa.me/84909967649"
     },
     {
       icon: facebook,

@@ -8,8 +8,7 @@ export const contactContent = {
     contactInfo: {
       phone: "Điện Thoại",
       email: "Email",
-      facebook: "Facebook",
-      instagram: "Instagram"
+      facebook: "Facebook"
     },
     formLabels: {
       name: "Họ Và Tên",
@@ -36,8 +35,7 @@ export const contactContent = {
     contactInfo: {
       phone: "Phone",
       email: "Email",
-      facebook: "Facebook",
-      instagram: "Instagram"
+      facebook: "Facebook"
     },
     formLabels: {
       name: "Your Name",
@@ -64,8 +62,7 @@ export const contactContent = {
     contactInfo: {
       phone: "电话",
       email: "电子邮件",
-      facebook: "脸书",
-      instagram: "Instagram"
+      facebook: "脸书"
     },
     formLabels: {
       name: "您的姓名",
@@ -92,8 +89,7 @@ export const contactContent = {
     contactInfo: {
       phone: "電話",
       email: "電子郵件",
-      facebook: "臉書",
-      instagram: "Instagram"
+      facebook: "臉書"
     },
     formLabels: {
       name: "您的姓名",
@@ -120,8 +116,7 @@ export const contactContent = {
     contactInfo: {
       phone: "Téléphone",
       email: "Email",
-      facebook: "Facebook",
-      instagram: "Instagram"
+      facebook: "Facebook"
     },
     formLabels: {
       name: "Votre Nom",
@@ -148,8 +143,7 @@ export const contactContent = {
     contactInfo: {
       phone: "전화번호",
       email: "이메일",
-      facebook: "페이스북",
-      instagram: "인스타그램"
+      facebook: "페이스북"
     },
     formLabels: {
       name: "이름",
