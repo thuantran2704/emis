@@ -116,10 +116,504 @@ export const homeContent = {
         details: "Removes infected pulp to save your natural tooth, often followed by a crown for protection and strength."
       }
     ],
+    homepageV2: {
+      metaTitle: "Advanced Implant & Full-Mouth Rehabilitation Care | EMIS Dental",
+      metaDescription:
+        "Implant-focused and full-mouth rehabilitation care for overseas Vietnamese and international patients. Start with a preliminary X-ray assessment.",
+      hero: {
+        title: "Advanced Implant & Full-Mouth Rehabilitation Care",
+        subtitle:
+          "Helping overseas Vietnamese and international patients restore comfort, function, and confidence through implant and full-mouth rehabilitation care.",
+        description:
+          "Whether you are missing a single tooth, multiple teeth, or facing more complex restorative challenges, our goal is to help you better understand your situation before making treatment decisions.",
+        highlights: [
+          "Implant-Focused Care",
+          "Full-Mouth Rehabilitation",
+          "Personalized Treatment Planning",
+          "International Patient Support",
+        ],
+        primaryCta: "Send Your X-ray",
+        secondaryCta: "Talk With The EMIS Team",
+        trustStatement:
+          "Led by an implant-focused team, including an Odonto-Maxillofacial Surgeon currently practicing at Ho Chi Minh City Odonto-Maxillofacial Hospital.",
+      },
+      confidence: {
+        title: "Why Patients Feel More Confident With EMIS",
+        intro:
+          "Choosing implant treatment is often a significant decision. Many patients spend months researching, comparing options, and looking for reassurance before feeling ready to move forward.",
+        copy:
+          "At EMIS, we believe confidence comes from understanding. Our role is not only to provide treatment, but also to help patients feel informed and supported throughout the journey.",
+        cards: [
+          {
+            title: "Implant-Focused Care",
+            text: "Focused on implant dentistry and full-mouth rehabilitation for patients seeking long-term function, stability, and quality of life.",
+          },
+          {
+            title: "Structured Treatment Planning",
+            text: "Every treatment begins with careful assessment, imaging, and planning to create a clear and personalized treatment pathway.",
+          },
+          {
+            title: "International Patient Support",
+            text: "Dedicated support before arrival, during treatment, and after returning home.",
+          },
+          {
+            title: "Clear Communication",
+            text: "Helping patients understand their options, treatment journey, and expectations with greater clarity and confidence.",
+          },
+        ],
+      },
+      doctors: {
+        title: "Meet Our Doctors",
+        intro:
+          "Successful treatment often involves much more than a single procedure. It is a process that combines diagnosis, planning, surgical care, restorative expertise, and long-term follow-up.",
+        cards: [
+          {
+            name: "Dr. Tran Minh Tu",
+            role: "Odonto-Maxillofacial Surgeon",
+            focus: "Implant Surgery • Oral Surgery • Full-Mouth Rehabilitation",
+            summary:
+              "Currently practicing at Ho Chi Minh City Odonto-Maxillofacial Hospital and EMIS Premium Dental Clinic.",
+            languages: "Vietnamese • English • Hungarian • Chinese",
+          },
+          {
+            name: "Dr. Nguyen Thi Bich Van",
+            role: "Implant Restoration & Prosthetic Rehabilitation",
+            focus: "Implant-Supported Restorations • All-on-4 / All-on-6 • Smile Rehabilitation",
+            summary:
+              "More than a decade of experience in restorative and implant-supported dental care.",
+            languages: "Vietnamese • English",
+          },
+        ],
+        philosophyTitle: "Our Treatment Philosophy",
+        philosophyText:
+          "Successful treatment is not only about replacing missing teeth. It is about restoring comfort, confidence, function, and quality of life through careful planning, clear communication, and long-term care.",
+        cta: "Meet Our Doctors",
+      },
+      situations: {
+        title: "Do You See Yourself Here?",
+        intro:
+          "Many patients spend years adapting to missing teeth, uncomfortable dentures, or ongoing dental problems before seeking treatment. Over time, these challenges can affect much more than oral health. They can influence how you eat, speak, smile, and feel in everyday life. You do not need to decide on treatment immediately. The first step is understanding your situation and exploring your options.",
+        cards: [
+          {
+            title: "Missing One Or More Teeth",
+            text: "You may find yourself avoiding certain foods, chewing on one side, or feeling less confident when smiling.",
+          },
+          {
+            title: "Struggling With Loose Dentures",
+            text: "You may be constantly adjusting your dentures or worrying about them moving unexpectedly.",
+          },
+          {
+            title: "Multiple Failing Teeth",
+            text: "Years of dental problems, broken restorations, or advanced gum disease can make it difficult to know where to begin.",
+          },
+          {
+            title: "Looking For A Long-Term Solution",
+            text: "Many patients simply want to eat comfortably, smile naturally, and stop worrying about their teeth every day.",
+          },
+        ],
+        cta: "Explore Your Treatment Options",
+      },
+      pathways: {
+        title: "Finding The Right Treatment Pathway",
+        intro:
+          "No two patients arrive with exactly the same concerns, goals, or treatment needs. Our role is to understand your situation before recommending a treatment pathway.",
+        cards: [
+          {
+            title: "Restore Missing Teeth",
+            subtitle: "For patients missing one or several teeth",
+            text: "Restore function, preserve surrounding structures, and regain confidence with implant-supported tooth replacement.",
+          },
+          {
+            title: "Fixed Teeth Rehabilitation",
+            subtitle: "For patients seeking a stable alternative to removable dentures",
+            text: "Including All-on-4 and All-on-6 treatment approaches designed to improve comfort, function, and everyday quality of life.",
+          },
+          {
+            title: "Rebuild Function & Quality Of Life",
+            subtitle: "For complex restorative challenges",
+            text: "A comprehensive rehabilitation approach focused on long-term stability, comfort, and quality of life.",
+          },
+        ],
+      },
+      journey: {
+        title: "What Your Journey May Look Like",
+        intro:
+          "Every treatment plan is personalized. However, many patients follow a similar path from consultation to long-term care.",
+        steps: [
+          {
+            step: "Step 1",
+            title: "Before You Arrive",
+            text: "Share your concerns, dental history, and available X-rays for an initial review.",
+          },
+          {
+            step: "Step 2",
+            title: "Assessment & Treatment Planning",
+            text: "Detailed examination, imaging, and treatment planning.",
+          },
+          {
+            step: "Step 3",
+            title: "Treatment In Vietnam",
+            text: "Treatment carried out according to your personalized plan.",
+          },
+          {
+            step: "Step 4",
+            title: "Healing & Follow-Up Support",
+            text: "Guidance and communication throughout recovery.",
+          },
+          {
+            step: "Step 5",
+            title: "Long-Term Maintenance",
+            text: "Supporting long-term treatment outcomes and oral health.",
+          },
+        ],
+        cta: "Send Your X-ray For A Preliminary Assessment",
+      },
+      patientJourneys: {
+        title: "Real Patient Journeys",
+        intro:
+          "Behind every restored smile is a unique story and a different starting point. These featured journeys illustrate how careful planning, treatment, and long-term care come together to help restore comfort, confidence, and quality of life.",
+        featured: {
+          tag: "Featured Journey",
+          title: "Returning Home With Confidence",
+          subtitle: "Full-Mouth Rehabilitation",
+          country: "United States",
+        },
+        supporting: [
+          {
+            title: "Replacing Years Of Denture Frustration",
+            subtitle: "All-on-4 Rehabilitation",
+            country: "Australia",
+          },
+          {
+            title: "Restoring A Missing Tooth Before Returning To Work",
+            subtitle: "Single Implant",
+            country: "China",
+          },
+        ],
+        cta: "Explore Patient Journeys",
+        privacyNote:
+          "Patient journeys are shared with consent and may be anonymized to help protect patient privacy.",
+      },
+      international: {
+        title: "For Overseas Vietnamese & International Patients",
+        intro:
+          "Receiving treatment away from home can feel overwhelming. Our goal is to make the process more organized, predictable, and manageable through personalized planning, clear communication, and ongoing support.",
+        points: [
+          {
+            title: "Before You Travel",
+            text: "Online consultation and preliminary assessment.",
+          },
+          {
+            title: "Personalized Travel & Treatment Planning",
+            text: "Designed around your available time, treatment goals, and clinical requirements.",
+          },
+          {
+            title: "During Treatment",
+            text: "Coordinated scheduling and support throughout your stay.",
+          },
+          {
+            title: "After Returning Home",
+            text: "Follow-up communication and recovery guidance.",
+          },
+          {
+            title: "Language & Communication Support",
+            text: "Patients may request communication support in their preferred language whenever possible.",
+          },
+        ],
+        cta: "Explore International Patient Support",
+      },
+      faq: {
+        title: "Questions Patients Often Ask",
+        items: [
+          {
+            question: "Is implant treatment painful?",
+            answer:
+              "Local anesthesia, treatment planning, and post-treatment guidance are used to help make treatment as comfortable as possible.",
+          },
+          {
+            question: "How long does implant treatment take?",
+            answer:
+              "Treatment timelines vary depending on your situation, treatment goals, and healing requirements.",
+          },
+          {
+            question: "How long should I stay in Vietnam?",
+            answer:
+              "The recommended stay depends on your case complexity, treatment plan, and recovery considerations.",
+          },
+          {
+            question: "Can I begin the process before traveling to Vietnam?",
+            answer:
+              "Yes. Initial consultation and preliminary planning can often begin remotely using your available records and X-rays.",
+          },
+          {
+            question: "What happens after I return home?",
+            answer:
+              "Our team provides ongoing communication and guidance throughout healing and maintenance.",
+          },
+          {
+            question: "What if I do not speak English or Vietnamese?",
+            answer:
+              "Communication support may be available through multilingual staff, interpreters, and translation tools depending on your needs.",
+          },
+        ],
+        cta: "View More FAQs",
+      },
+      finalCta: {
+        title: "Start With Understanding Your Situation",
+        description:
+          "You do not need to make treatment decisions immediately. The first step is understanding your situation and discussing what options may be appropriate for your goals.",
+        primaryCta: "Send Your X-ray",
+        secondaryCta: "Talk With The EMIS Team",
+        supportTitle: "You may also share",
+        supportItems: [
+          "Country of Residence",
+          "Available Treatment Timeframe",
+          "Preferred Communication Method",
+          "Preferred Language",
+        ],
+        importantNote:
+          "A preliminary assessment helps us better understand your situation. A final treatment recommendation requires an in-person examination and diagnostic imaging.",
+      },
+    },
     locationTitle: "Our Location",
     address: "62B Phạm Ngọc Thạch, Xuan Hoa Ward, Ho Chi Minh City",
     metaTitle: "Premium Dental Care in Ho Chi Minh City | General & Cosmetic Dentistry",
-    metaDescription: "Expert dental services including implants, crowns, Invisalign in Ho Chi Minh City. Book your appointment today for quality dental care."
+    metaDescription: "Expert dental services including implants, crowns, Invisalign in Ho Chi Minh City. Book your appointment today for quality dental care.",
+    homepageV2Legacy: {
+      metaTitle: "Advanced Implant & Full-Mouth Rehabilitation Care | EMIS Dental",
+      metaDescription: "Helping overseas Vietnamese and international patients restore comfort, function, and confidence through implant and full-mouth rehabilitation care.",
+      hero: {
+        title: "Advanced Implant & Full-Mouth Rehabilitation Care",
+        subtitle: "Helping overseas Vietnamese and international patients restore comfort, function, and confidence through implant and full-mouth rehabilitation care.",
+        description: "Whether you are missing a single tooth, multiple teeth, or facing more complex restorative challenges, our goal is to help you better understand your situation before making treatment decisions.",
+        highlights: [
+          "Implant-Focused Care",
+          "Full-Mouth Rehabilitation",
+          "Personalized Treatment Planning",
+          "International Patient Support"
+        ],
+        primaryCta: "Send Your X-ray",
+        secondaryCta: "Talk With The EMIS Team",
+        trustStatement: "Led by an implant-focused team, including an Odonto-Maxillofacial Surgeon currently practicing at Ho Chi Minh City Odonto-Maxillofacial Hospital."
+      },
+      confidence: {
+        title: "Why Patients Feel More Confident With EMIS",
+        intro: "Choosing implant treatment is often a significant decision.",
+        copy: "Many patients spend months researching, comparing options, and looking for reassurance before feeling ready to move forward. At EMIS, we believe confidence comes from understanding. Our role is not only to provide treatment, but also to help patients feel informed and supported throughout the journey.",
+        cards: [
+          {
+            title: "Implant-Focused Care",
+            text: "Focused on implant dentistry and full-mouth rehabilitation for patients seeking long-term function, stability, and quality of life."
+          },
+          {
+            title: "Structured Treatment Planning",
+            text: "Every treatment begins with careful assessment, imaging, and planning to create a clear and personalized treatment pathway."
+          },
+          {
+            title: "International Patient Support",
+            text: "Dedicated support before arrival, during treatment, and after returning home."
+          },
+          {
+            title: "Clear Communication",
+            text: "Helping patients understand their options, treatment journey, and expectations with greater clarity and confidence."
+          }
+        ]
+      },
+      doctors: {
+        title: "Meet Our Doctors",
+        intro: "Successful treatment often involves much more than a single procedure. It is a process that combines diagnosis, planning, surgical care, restorative expertise, and long-term follow-up.",
+        cards: [
+          {
+            name: "Dr. Tran Minh Tu",
+            role: "Odonto-Maxillofacial Surgeon",
+            focus: "Implant Surgery • Oral Surgery • Full-Mouth Rehabilitation",
+            summary: "Currently practicing at Ho Chi Minh City Odonto-Maxillofacial Hospital and EMIS Premium Dental Clinic.",
+            languages: "Vietnamese • English • Hungarian • Chinese"
+          },
+          {
+            name: "Dr. Nguyen Thi Bich Van",
+            role: "Implant Restoration & Prosthetic Rehabilitation",
+            focus: "Implant-Supported Restorations • All-on-4 / All-on-6 • Smile Rehabilitation",
+            summary: "More than a decade of experience in restorative and implant-supported dental care.",
+            languages: "Vietnamese • English"
+          }
+        ],
+        philosophyTitle: "Our Treatment Philosophy",
+        philosophyText: "Successful treatment is not only about replacing missing teeth. It is about restoring comfort, confidence, function, and quality of life through careful planning, clear communication, and long-term care.",
+        cta: "Meet Our Doctors"
+      },
+      situations: {
+        title: "Do You See Yourself Here?",
+        intro: "Many patients spend years adapting to missing teeth, uncomfortable dentures, or ongoing dental problems before seeking treatment. Over time, these challenges can affect much more than oral health. They can influence how you eat, speak, smile, and feel in everyday life. You do not need to decide on treatment immediately. The first step is understanding your situation and exploring your options.",
+        cards: [
+          {
+            title: "Missing One Or More Teeth",
+            text: "You may find yourself avoiding certain foods, chewing on one side, or feeling less confident when smiling."
+          },
+          {
+            title: "Struggling With Loose Dentures",
+            text: "You may be constantly adjusting your dentures or worrying about them moving unexpectedly."
+          },
+          {
+            title: "Multiple Failing Teeth",
+            text: "Years of dental problems, broken restorations, or advanced gum disease can make it difficult to know where to begin."
+          },
+          {
+            title: "Looking For A Long-Term Solution",
+            text: "Many patients simply want to eat comfortably, smile naturally, and stop worrying about their teeth every day."
+          }
+        ],
+        cta: "Explore Your Treatment Options"
+      },
+      pathways: {
+        title: "Finding The Right Treatment Pathway",
+        intro: "No two patients arrive with exactly the same concerns, goals, or treatment needs. Our role is to understand your situation before recommending a treatment pathway.",
+        cards: [
+          {
+            title: "Restore Missing Teeth",
+            subtitle: "For patients missing one or several teeth.",
+            text: "Restore function, preserve surrounding structures, and regain confidence with implant-supported tooth replacement."
+          },
+          {
+            title: "Fixed Teeth Rehabilitation",
+            subtitle: "For patients seeking a stable alternative to removable dentures.",
+            text: "Including All-on-4 and All-on-6 treatment approaches designed to improve comfort, function, and everyday quality of life."
+          },
+          {
+            title: "Rebuild Function & Quality Of Life",
+            subtitle: "For patients facing complex restorative challenges.",
+            text: "A comprehensive rehabilitation approach focused on long-term stability, comfort, and quality of life."
+          }
+        ]
+      },
+      journey: {
+        title: "What Your Journey May Look Like",
+        intro: "Every treatment plan is personalized. However, many patients follow a similar path from consultation to long-term care.",
+        steps: [
+          {
+            step: "Step 1",
+            title: "Before You Arrive",
+            text: "Share your concerns, dental history, and available X-rays for an initial review."
+          },
+          {
+            step: "Step 2",
+            title: "Assessment & Treatment Planning",
+            text: "Detailed examination, imaging, and treatment planning."
+          },
+          {
+            step: "Step 3",
+            title: "Treatment In Vietnam",
+            text: "Treatment carried out according to your personalized plan."
+          },
+          {
+            step: "Step 4",
+            title: "Healing & Follow-Up Support",
+            text: "Guidance and communication throughout recovery."
+          },
+          {
+            step: "Step 5",
+            title: "Long-Term Maintenance",
+            text: "Supporting long-term treatment outcomes and oral health."
+          }
+        ],
+        cta: "Send Your X-ray For A Preliminary Assessment"
+      },
+      patientJourneys: {
+        title: "Real Patient Journeys",
+        intro: "Behind every restored smile is a unique story and a different starting point. These featured journeys illustrate how careful planning, treatment, and long-term care come together to help restore comfort, confidence, and quality of life.",
+        featured: {
+          tag: "Featured Journey",
+          title: "Returning Home With Confidence",
+          subtitle: "Full-Mouth Rehabilitation",
+          country: "United States"
+        },
+        supporting: [
+          {
+            title: "Replacing Years Of Denture Frustration",
+            subtitle: "All-on-4 Rehabilitation",
+            country: "Australia"
+          },
+          {
+            title: "Restoring A Missing Tooth Before Returning To Work",
+            subtitle: "Single Implant",
+            country: "China"
+          }
+        ],
+        cta: "Explore Patient Journeys",
+        privacyNote: "Patient journeys are shared with consent and may be anonymized to help protect patient privacy."
+      },
+      international: {
+        title: "For Overseas Vietnamese & International Patients",
+        intro: "Receiving treatment away from home can feel overwhelming. Our goal is to make the process more organized, predictable, and manageable through personalized planning, clear communication, and ongoing support.",
+        points: [
+          {
+            title: "Before You Travel",
+            text: "Online consultation and preliminary assessment."
+          },
+          {
+            title: "Personalized Travel & Treatment Planning",
+            text: "Designed around your available time, treatment goals, and clinical requirements."
+          },
+          {
+            title: "During Treatment",
+            text: "Coordinated scheduling and support throughout your stay."
+          },
+          {
+            title: "After Returning Home",
+            text: "Follow-up communication and recovery guidance."
+          },
+          {
+            title: "Language & Communication Support",
+            text: "Patients may request communication support in their preferred language whenever possible."
+          }
+        ],
+        cta: "Explore International Patient Support"
+      },
+      faq: {
+        title: "Questions Patients Often Ask",
+        items: [
+          {
+            question: "Is implant treatment painful?",
+            answer: "Local anesthesia, treatment planning, and post-treatment guidance are used to help make treatment as comfortable as possible."
+          },
+          {
+            question: "How long does implant treatment take?",
+            answer: "Treatment timelines vary depending on your situation, treatment goals, and healing requirements."
+          },
+          {
+            question: "How long should I stay in Vietnam?",
+            answer: "The recommended stay depends on your case complexity, treatment plan, and recovery considerations."
+          },
+          {
+            question: "Can I begin the process before traveling to Vietnam?",
+            answer: "Yes. Initial consultation and preliminary planning can often begin remotely using your available records and X-rays."
+          },
+          {
+            question: "What happens after I return home?",
+            answer: "Our team provides ongoing communication and guidance throughout healing and maintenance."
+          },
+          {
+            question: "What if I do not speak English or Vietnamese?",
+            answer: "Communication support may be available through multilingual staff, interpreters, and translation tools depending on your needs."
+          }
+        ],
+        cta: "View More FAQs"
+      },
+      finalCta: {
+        title: "Start With Understanding Your Situation",
+        description: "You do not need to make treatment decisions immediately. The first step is understanding your situation and discussing what options may be appropriate for your goals.",
+        primaryCta: "Send Your X-ray",
+        secondaryCta: "Talk With The EMIS Team",
+        supportTitle: "You may also share:",
+        supportItems: [
+          "Country of Residence",
+          "Available Treatment Timeframe",
+          "Preferred Communication Method",
+          "Preferred Language"
+        ],
+        importantNote: "A preliminary assessment helps us better understand your situation. A final treatment recommendation requires an in-person examination and diagnostic imaging."
+      }
+    }
   },
 
   vietnamese: {
@@ -239,10 +733,504 @@ export const homeContent = {
         details: "Lấy tủy viêm nhiễm để bảo tồn răng thật, thường kết hợp bọc mão để bảo vệ lâu dài."
       }
     ],
+    homepageV2: {
+      metaTitle: "Chuyên Sâu Implant & Phục Hồi Toàn Hàm | EMIS Dental",
+      metaDescription:
+        "Giải pháp implant và phục hồi toàn hàm dành cho Việt kiều và bệnh nhân quốc tế. Bắt đầu với đánh giá sơ bộ từ X-ray.",
+      hero: {
+        title: "Chuyên Sâu Implant & Phục Hồi Toàn Hàm",
+        subtitle:
+          "Giúp Việt kiều và bệnh nhân quốc tế khôi phục khả năng ăn nhai, sự tự tin và chất lượng cuộc sống thông qua các giải pháp Implant và phục hồi toàn hàm.",
+        description:
+          "Dù bạn đang mất một răng, nhiều răng hay gặp những vấn đề phức tạp hơn, chúng tôi muốn giúp bạn hiểu rõ tình trạng của mình trước khi đưa ra quyết định điều trị.",
+        highlights: [
+          "Chuyên sâu Implant",
+          "Phục hồi toàn hàm",
+          "Đánh giá và lập kế hoạch điều trị cẩn thận",
+          "Hỗ trợ bệnh nhân quốc tế",
+        ],
+        primaryCta: "Gửi X-ray của bạn",
+        secondaryCta: "Kết nối với đội ngũ EMIS",
+        trustStatement:
+          "Đội ngũ chuyên sâu Implant, trong đó có bác sĩ phẫu thuật Răng Hàm Mặt hiện đang công tác tại Bệnh viện Răng Hàm Mặt TP.HCM.",
+      },
+      confidence: {
+        title: "Vì Sao Nhiều Bệnh Nhân Chọn EMIS?",
+        intro:
+          "Điều trị Implant thường là một quyết định lớn. Nhiều người dành nhiều tháng để tìm hiểu, so sánh và cân nhắc trước khi bắt đầu.",
+        copy:
+          "Tại EMIS, chúng tôi tin rằng sự yên tâm đến từ việc hiểu rõ tình trạng của mình và biết điều gì sẽ diễn ra tiếp theo.",
+        cards: [
+          {
+            title: "Chuyên Sâu Implant & Phục Hồi Toàn Hàm",
+            text: "Tập trung vào các giải pháp giúp khôi phục khả năng ăn nhai, sự ổn định và chất lượng cuộc sống lâu dài.",
+          },
+          {
+            title: "Kế Hoạch Điều Trị Rõ Ràng",
+            text: "Mỗi trường hợp đều được đánh giá kỹ lưỡng trước khi xây dựng kế hoạch điều trị phù hợp.",
+          },
+          {
+            title: "Hỗ Trợ Bệnh Nhân Quốc Tế",
+            text: "Đồng hành từ giai đoạn tư vấn ban đầu cho đến sau khi bệnh nhân trở về nước.",
+          },
+          {
+            title: "Giao Tiếp Minh Bạch",
+            text: "Giúp bệnh nhân hiểu rõ các lựa chọn điều trị và hành trình phía trước.",
+          },
+        ],
+      },
+      doctors: {
+        title: "Đội Ngũ Bác Sĩ EMIS",
+        intro:
+          "Một ca Implant hay phục hồi toàn hàm thành công không chỉ là một thủ thuật đơn lẻ. Đó là cả một quá trình từ chẩn đoán, lập kế hoạch đến theo dõi lâu dài.",
+        cards: [
+          {
+            name: "BS. CKI Trần Minh Tú",
+            role: "Phẫu thuật viên Răng Hàm Mặt",
+            focus: "Phẫu thuật Implant • Tiểu phẫu Răng Hàm Mặt • Phục hồi toàn hàm",
+            summary:
+              "Hiện đang công tác tại Bệnh viện Răng Hàm Mặt TP.HCM và EMIS Premium Dental Clinic.",
+            languages: "Tiếng Việt • English • Hungarian • Chinese",
+          },
+          {
+            name: "BS. CKI Nguyễn Thị Bích Vân",
+            role: "Phục hình Implant • All-on-4 / All-on-6 • Phục hồi thẩm mỹ và chức năng",
+            focus: "",
+            summary:
+              "",
+            languages: "",
+          },
+        ],
+        philosophyTitle: "Triết Lý Điều Trị",
+        philosophyText:
+          "Mục tiêu của chúng tôi rất đơn giản: giúp bệnh nhân ăn nhai thoải mái hơn, tự tin hơn và duy trì kết quả lâu dài.",
+        cta: "Tìm Hiểu Đội Ngũ Bác Sĩ",
+      },
+      situations: {
+        title: "Những Điều Này Có Quen Thuộc Với Bạn?",
+        intro:
+          "Nhiều người đã quen với tình trạng mất răng hoặc hàm giả không còn thoải mái trong nhiều năm. Cho đến khi việc ăn uống, giao tiếp và sinh hoạt hàng ngày bắt đầu trở nên khó khăn hơn. Bạn không cần phải quyết định ngay hôm nay. Điều quan trọng trước tiên là hiểu rõ tình trạng hiện tại của mình.",
+        cards: [
+          {
+            title: "Mất Một Hoặc Nhiều Răng",
+            text: "Có những thay đổi diễn ra dần dần đến mức bạn không còn để ý, như nhai một bên hoặc ít cười hơn trước.",
+          },
+          {
+            title: "Hàm Giả Không Còn Thoải Mái",
+            text: "Bạn có thể luôn phải để ý đến hàm giả mỗi khi ăn uống hoặc trò chuyện.",
+          },
+          {
+            title: "Nhiều Răng Đang Dần Mất Chức Năng",
+            text: "Những vấn đề tích lũy qua nhiều năm có thể khiến bạn không biết nên bắt đầu từ đâu.",
+          },
+          {
+            title: "Mong Muốn Một Giải Pháp Lâu Dài",
+            text: "Ăn uống thoải mái hơn. Cười tự nhiên hơn. Và bớt lo lắng về răng mỗi ngày.",
+          },
+        ],
+        cta: "Khám Phá Các Lựa Chọn Điều Trị",
+      },
+      pathways: {
+        title: "Hướng Đi Điều Trị Phù Hợp Với Bạn",
+        intro:
+          "Không có một hướng điều trị phù hợp cho tất cả mọi người. Mỗi bệnh nhân đều có tình trạng, nhu cầu và mục tiêu khác nhau.",
+        cards: [
+          {
+            title: "Phục Hồi Răng Mất",
+            subtitle: "Dành cho trường hợp mất một hoặc nhiều răng",
+            text: "Khôi phục chức năng ăn nhai, bảo tồn cấu trúc răng xung quanh và lấy lại sự tự tin bằng giải pháp nâng đỡ trên Implant.",
+          },
+          {
+            title: "Phục Hồi Răng Cố Định",
+            subtitle: "Dành cho bệnh nhân muốn thay thế hàm giả tháo lắp",
+            text: "Bao gồm các hướng điều trị như All-on-4 và All-on-6 nhằm cải thiện sự ổn định, thoải mái và chất lượng cuộc sống hằng ngày.",
+          },
+          {
+            title: "Phục Hồi Toàn Diện Chức Năng",
+            subtitle: "Dành cho ca phức tạp",
+            text: "Tiếp cận phục hồi toàn diện cho các trường hợp mất răng nhiều, hư hỏng nặng hoặc sai khớp cắn kéo dài.",
+          },
+        ],
+      },
+      journey: {
+        title: "Hành Trình Điều Trị Thường Diễn Ra Như Thế Nào?",
+        intro:
+          "Mỗi bệnh nhân sẽ có một kế hoạch điều trị riêng. Tuy vậy, phần lớn hành trình điều trị thường bắt đầu từ những bước tương tự.",
+        steps: [
+          {
+            step: "Bước 1",
+            title: "Trước Khi Đến Việt Nam",
+            text: "Gửi thông tin ban đầu, tiền sử răng miệng và X-ray hiện có để được đánh giá sơ bộ.",
+          },
+          {
+            step: "Bước 2",
+            title: "Thăm Khám & Lập Kế Hoạch",
+            text: "Thăm khám chi tiết, chụp phim và xây dựng kế hoạch điều trị cá nhân hóa.",
+          },
+          {
+            step: "Bước 3",
+            title: "Điều Trị Tại Việt Nam",
+            text: "Thực hiện điều trị theo đúng kế hoạch đã thống nhất.",
+          },
+          {
+            step: "Bước 4",
+            title: "Hồi Phục & Theo Dõi",
+            text: "Được hướng dẫn chăm sóc và hỗ trợ trong suốt quá trình hồi phục.",
+          },
+          {
+            step: "Bước 5",
+            title: "Duy Trì Lâu Dài",
+            text: "Đồng hành để duy trì kết quả điều trị và sức khỏe răng miệng lâu dài.",
+          },
+        ],
+        cta: "Gửi X-ray Để Được Đánh Giá Ban Đầu",
+      },
+      patientJourneys: {
+        title: "Những Ca Điều Trị Tiêu Biểu",
+        intro:
+          "Mỗi bệnh nhân đều có một câu chuyện riêng. Những ca điều trị dưới đây cho thấy sự khác biệt mà một kế hoạch điều trị phù hợp có thể mang lại.",
+        featured: {
+          tag: "Ca nổi bật",
+          title: "Trở Về Cuộc Sống Tự Tin",
+          subtitle: "Phục hồi toàn hàm",
+          country: "Hoa Kỳ",
+        },
+        supporting: [
+          {
+            title: "Thoát Khỏi Nỗi Lo Hàm Giả Nhiều Năm",
+            subtitle: "Phục hồi All-on-4",
+            country: "Úc",
+          },
+          {
+            title: "Phục Hồi Răng Mất Trước Khi Quay Lại Công Việc",
+            subtitle: "Implant đơn lẻ",
+            country: "Trung Quốc",
+          },
+        ],
+        cta: "Xem Các Hành Trình Điều Trị",
+        privacyNote:
+          "Các hành trình điều trị được chia sẻ khi có sự đồng ý và có thể ẩn danh để bảo vệ quyền riêng tư.",
+      },
+      international: {
+        title: "Dành Cho Việt Kiều & Bệnh Nhân Quốc Tế",
+        intro:
+          "Điều trị xa nơi sinh sống có thể khiến bạn thấy nhiều băn khoăn. Chúng tôi giúp quy trình trở nên rõ ràng, dễ dự đoán và dễ sắp xếp hơn.",
+        points: [
+          {
+            title: "Trước Khi Di Chuyển",
+            text: "Tư vấn trực tuyến và đánh giá sơ bộ trước chuyến đi.",
+          },
+          {
+            title: "Lập Kế Hoạch Cá Nhân Hóa",
+            text: "Xây dựng theo quỹ thời gian lưu trú, mục tiêu điều trị và yêu cầu lâm sàng.",
+          },
+          {
+            title: "Trong Quá Trình Điều Trị",
+            text: "Sắp xếp lịch hẹn và hỗ trợ xuyên suốt thời gian bạn ở Việt Nam.",
+          },
+          {
+            title: "Sau Khi Trở Về Nước",
+            text: "Theo dõi và hướng dẫn hồi phục từ xa.",
+          },
+          {
+            title: "Hỗ Trợ Giao Tiếp",
+            text: "Bệnh nhân có thể yêu cầu hỗ trợ giao tiếp bằng ngôn ngữ phù hợp khi có thể.",
+          },
+        ],
+        cta: "Tìm Hiểu Về Hỗ Trợ Bệnh Nhân Quốc Tế",
+      },
+      faq: {
+        title: "Những Câu Hỏi Bệnh Nhân Thường Quan Tâm",
+        items: [
+          {
+            question: "Điều trị Implant có đau không?",
+            answer:
+              "Chúng tôi sử dụng gây tê tại chỗ, lập kế hoạch kỹ lưỡng và hướng dẫn sau điều trị để quá trình diễn ra thoải mái nhất có thể.",
+          },
+          {
+            question: "Thời gian điều trị Implant kéo dài bao lâu?",
+            answer:
+              "Thời gian điều trị tùy thuộc vào tình trạng, mục tiêu điều trị và tốc độ hồi phục của từng bệnh nhân.",
+          },
+          {
+            question: "Tôi cần ở Việt Nam bao lâu?",
+            answer:
+              "Thời gian lưu trú phù hợp phụ thuộc vào mức độ phức tạp của ca điều trị và kế hoạch cá nhân hóa của bạn.",
+          },
+          {
+            question: "Tôi có thể bắt đầu khi còn ở nước ngoài không?",
+            answer:
+              "Có. Bạn có thể bắt đầu bằng tư vấn trực tuyến và đánh giá sơ bộ từ hồ sơ, phim X-ray hiện có.",
+          },
+          {
+            question: "Sau khi về nước thì sao?",
+            answer:
+              "Đội ngũ tiếp tục hỗ trợ theo dõi và hướng dẫn trong giai đoạn hồi phục và duy trì lâu dài.",
+          },
+          {
+            question: "Tôi không nói tiếng Anh hoặc tiếng Việt thì sao?",
+            answer:
+              "Chúng tôi có thể hỗ trợ giao tiếp đa ngôn ngữ thông qua nhân sự, phiên dịch hoặc công cụ dịch tùy nhu cầu.",
+          },
+        ],
+        cta: "Xem Thêm Câu Hỏi Thường Gặp",
+      },
+      finalCta: {
+        title: "Bắt Đầu Bằng Việc Hiểu Rõ Tình Trạng Của Mình",
+        description:
+          "Bạn không cần phải quyết định ngay hôm nay. Bước đầu tiên là hiểu rõ tình trạng hiện tại và trao đổi về những hướng điều trị phù hợp.",
+        primaryCta: "Gửi X-ray của bạn",
+        secondaryCta: "Kết nối với đội ngũ EMIS",
+        supportTitle: "Bạn có thể chia sẻ thêm",
+        supportItems: [
+          "Nơi đang sinh sống",
+          "Khung thời gian có thể điều trị",
+          "Kênh liên lạc ưu tiên",
+          "Ngôn ngữ mong muốn",
+        ],
+        importantNote:
+          "Đánh giá sơ bộ giúp chúng tôi hiểu rõ hơn về tình trạng của bạn. Kế hoạch điều trị cuối cùng cần được xác nhận qua thăm khám trực tiếp và chẩn đoán hình ảnh đầy đủ.",
+      },
+    },
     locationTitle: "Vị Trí Của Chúng Tôi",
     address: "62B Phạm Ngọc Thạch, Phường Xuân Hòa, Thành phố Hồ Chí Minh",
     metaTitle: "Dịch Vụ Nha Khoa Chất Lượng Tại TP.HCM | Nha Khoa Tổng Quát & Thẩm Mỹ",
-    metaDescription: "Dịch vụ nha khoa chuyên nghiệp bao gồm cấy ghép implant, mão sứ, Invisalign tại TP.HCM. Đặt lịch hẹn ngay hôm nay."
+    metaDescription: "Dịch vụ nha khoa chuyên nghiệp bao gồm cấy ghép implant, mão sứ, Invisalign tại TP.HCM. Đặt lịch hẹn ngay hôm nay.",
+    homepageV2Legacy: {
+      metaTitle: "Chuyên Sâu Implant & Phục Hồi Toàn Hàm | EMIS Dental",
+      metaDescription: "Giúp Việt kiều và bệnh nhân quốc tế khôi phục khả năng ăn nhai, sự tự tin và chất lượng cuộc sống thông qua implant và phục hồi toàn hàm.",
+      hero: {
+        title: "Chuyên Sâu Implant & Phục Hồi Toàn Hàm",
+        subtitle: "Giúp Việt kiều và bệnh nhân quốc tế khôi phục khả năng ăn nhai, sự tự tin và chất lượng cuộc sống thông qua các giải pháp Implant và phục hồi toàn hàm được xây dựng riêng cho từng bệnh nhân.",
+        description: "Dù bạn đang mất một răng, nhiều răng hay gặp những vấn đề phức tạp hơn, chúng tôi muốn giúp bạn hiểu rõ tình trạng của mình trước khi đưa ra quyết định điều trị.",
+        highlights: [
+          "Chuyên sâu Implant",
+          "Phục hồi toàn hàm",
+          "Đánh giá và lập kế hoạch điều trị cẩn thận",
+          "Hỗ trợ bệnh nhân quốc tế"
+        ],
+        primaryCta: "Gửi X-ray của bạn",
+        secondaryCta: "Kết nối với đội ngũ EMIS",
+        trustStatement: "Đội ngũ chuyên sâu Implant của EMIS có bác sĩ phẫu thuật Răng Hàm Mặt hiện đang công tác tại Bệnh viện Răng Hàm Mặt TP.HCM."
+      },
+      confidence: {
+        title: "Vì Sao Nhiều Bệnh Nhân Chọn EMIS?",
+        intro: "Điều trị Implant thường là một quyết định lớn.",
+        copy: "Nhiều người dành nhiều tháng để tìm hiểu, so sánh và cân nhắc trước khi bắt đầu. Tại EMIS, chúng tôi tin rằng sự yên tâm đến từ việc hiểu rõ tình trạng của mình và biết điều gì sẽ diễn ra tiếp theo.",
+        cards: [
+          {
+            title: "Chuyên Sâu Implant & Phục Hồi Toàn Hàm",
+            text: "Tập trung vào các giải pháp giúp khôi phục khả năng ăn nhai, sự ổn định và chất lượng cuộc sống lâu dài."
+          },
+          {
+            title: "Kế Hoạch Điều Trị Rõ Ràng",
+            text: "Mỗi trường hợp đều được đánh giá kỹ lưỡng trước khi xây dựng kế hoạch điều trị phù hợp."
+          },
+          {
+            title: "Hỗ Trợ Bệnh Nhân Quốc Tế",
+            text: "Đồng hành từ giai đoạn tư vấn ban đầu cho đến sau khi bệnh nhân trở về nước."
+          },
+          {
+            title: "Giao Tiếp Minh Bạch",
+            text: "Giúp bệnh nhân hiểu rõ các lựa chọn điều trị và hành trình phía trước."
+          }
+        ]
+      },
+      doctors: {
+        title: "Đội Ngũ Bác Sĩ EMIS",
+        intro: "Một ca Implant hay phục hồi toàn hàm thành công không chỉ là một thủ thuật đơn lẻ. Đó là cả một quá trình từ chẩn đoán, lập kế hoạch đến theo dõi lâu dài.",
+        cards: [
+          {
+            name: "BS. CKI Trần Minh Tú",
+            role: "Phẫu thuật viên Răng Hàm Mặt",
+            focus: "Phẫu thuật Implant • Tiểu phẫu Răng Hàm Mặt • Phục hồi toàn hàm",
+            summary: "Hiện đang công tác tại Bệnh viện Răng Hàm Mặt TP.HCM và EMIS Premium Dental Clinic.",
+            languages: "Tiếng Việt • English • Hungarian • Chinese"
+          },
+          {
+            name: "BS. CKI Nguyễn Thị Bích Vân",
+            role: "Phục hình Implant & Phục hồi chức năng",
+            focus: "Phục hình Implant • All-on-4 / All-on-6 • Phục hồi thẩm mỹ và chức năng",
+            summary: "Hơn 10 năm kinh nghiệm trong phục hình răng và phục hồi trên Implant.",
+            languages: "Tiếng Việt • English"
+          }
+        ],
+        philosophyTitle: "Triết Lý Điều Trị",
+        philosophyText: "Mục tiêu của chúng tôi rất đơn giản: giúp bệnh nhân ăn nhai thoải mái hơn, tự tin hơn và duy trì kết quả lâu dài.",
+        cta: "Tìm Hiểu Đội Ngũ Bác Sĩ"
+      },
+      situations: {
+        title: "Những Điều Này Có Quen Thuộc Với Bạn?",
+        intro: "Nhiều người đã quen với tình trạng mất răng hoặc hàm giả không còn thoải mái trong nhiều năm. Cho đến khi việc ăn uống, giao tiếp và sinh hoạt hàng ngày bắt đầu trở nên khó khăn hơn. Bạn không cần phải quyết định ngay hôm nay. Điều quan trọng trước tiên là hiểu rõ tình trạng hiện tại của mình.",
+        cards: [
+          {
+            title: "Mất Một Hoặc Nhiều Răng",
+            text: "Có những thay đổi diễn ra dần dần đến mức bạn không còn để ý, như nhai một bên hoặc ít cười hơn trước."
+          },
+          {
+            title: "Hàm Giả Không Còn Thoải Mái",
+            text: "Bạn có thể luôn phải để ý đến hàm giả mỗi khi ăn uống hoặc trò chuyện."
+          },
+          {
+            title: "Nhiều Răng Đang Dần Mất Chức Năng",
+            text: "Những vấn đề tích lũy qua nhiều năm có thể khiến bạn không biết nên bắt đầu từ đâu."
+          },
+          {
+            title: "Mong Muốn Một Giải Pháp Lâu Dài",
+            text: "Ăn uống thoải mái hơn. Cười tự nhiên hơn. Và bớt lo lắng về răng mỗi ngày."
+          }
+        ],
+        cta: "Khám Phá Các Lựa Chọn Điều Trị"
+      },
+      pathways: {
+        title: "Hướng Đi Điều Trị Phù Hợp Với Bạn",
+        intro: "Không có một hướng điều trị phù hợp cho tất cả mọi người. Mỗi bệnh nhân đều có tình trạng, nhu cầu và mục tiêu khác nhau.",
+        cards: [
+          {
+            title: "Phục Hồi Răng Mất",
+            subtitle: "Dành cho trường hợp mất một hoặc nhiều răng.",
+            text: "Khôi phục chức năng ăn nhai, bảo tồn cấu trúc nâng đỡ và lấy lại sự tự tin với giải pháp phục hồi trên Implant."
+          },
+          {
+            title: "Phục Hồi Răng Cố Định",
+            subtitle: "Dành cho bệnh nhân muốn thay thế hàm giả tháo lắp.",
+            text: "Bao gồm các hướng điều trị như All-on-4 và All-on-6 để cải thiện độ ổn định, sự thoải mái và chất lượng sống hằng ngày."
+          },
+          {
+            title: "Phục Hồi Toàn Diện Chức Năng",
+            subtitle: "Dành cho các trường hợp phức tạp.",
+            text: "Hướng phục hồi toàn diện tập trung vào độ ổn định lâu dài, sự thoải mái và chất lượng cuộc sống."
+          }
+        ]
+      },
+      journey: {
+        title: "Hành Trình Điều Trị Có Thể Diễn Ra Như Thế Nào?",
+        intro: "Mỗi bệnh nhân sẽ có một kế hoạch riêng, nhưng phần lớn hành trình thường bắt đầu từ những bước tương tự.",
+        steps: [
+          {
+            step: "Bước 1",
+            title: "Trước Khi Đến Việt Nam",
+            text: "Chia sẻ vấn đề bạn đang gặp, tiền sử điều trị và các phim X-ray hiện có để được đánh giá ban đầu."
+          },
+          {
+            step: "Bước 2",
+            title: "Thăm Khám & Lập Kế Hoạch",
+            text: "Thăm khám chi tiết, chụp phim và xây dựng kế hoạch điều trị phù hợp."
+          },
+          {
+            step: "Bước 3",
+            title: "Điều Trị Tại Việt Nam",
+            text: "Tiến hành điều trị theo kế hoạch đã cá nhân hóa cho bạn."
+          },
+          {
+            step: "Bước 4",
+            title: "Hồi Phục & Theo Dõi",
+            text: "Hướng dẫn chăm sóc và duy trì liên lạc trong suốt giai đoạn hồi phục."
+          },
+          {
+            step: "Bước 5",
+            title: "Duy Trì Kết Quả Lâu Dài",
+            text: "Đồng hành để duy trì kết quả điều trị và sức khỏe răng miệng về lâu dài."
+          }
+        ],
+        cta: "Gửi X-ray Để Được Đánh Giá Ban Đầu"
+      },
+      patientJourneys: {
+        title: "Những Hành Trình Điều Trị Thực Tế",
+        intro: "Đằng sau mỗi nụ cười được phục hồi là một tình trạng ban đầu và một mục tiêu khác nhau. Những hành trình dưới đây cho thấy cách kế hoạch phù hợp và theo dõi lâu dài tạo nên khác biệt.",
+        featured: {
+          tag: "Ca tiêu biểu",
+          title: "Trở Về Cuộc Sống Với Sự Tự Tin",
+          subtitle: "Phục hồi toàn hàm",
+          country: "Hoa Kỳ"
+        },
+        supporting: [
+          {
+            title: "Giải Quyết Nỗi Lo Hàm Giả Kéo Dài",
+            subtitle: "Phục hồi All-on-4",
+            country: "Úc"
+          },
+          {
+            title: "Phục Hồi Răng Mất Trước Khi Trở Lại Công Việc",
+            subtitle: "Implant đơn lẻ",
+            country: "Trung Quốc"
+          }
+        ],
+        cta: "Xem Các Hành Trình Điều Trị",
+        privacyNote: "Các hành trình điều trị được chia sẻ khi có sự đồng thuận và có thể ẩn danh để bảo vệ quyền riêng tư của bệnh nhân."
+      },
+      international: {
+        title: "Dành Cho Việt Kiều & Bệnh Nhân Quốc Tế",
+        intro: "Điều trị xa nơi sinh sống có thể tạo ra nhiều băn khoăn. Chúng tôi cố gắng giúp quá trình này trở nên rõ ràng, dễ theo dõi và chủ động hơn nhờ kế hoạch cá nhân hóa và hỗ trợ liên tục.",
+        points: [
+          {
+            title: "Trước Khi Di Chuyển",
+            text: "Tư vấn trực tuyến và đánh giá sơ bộ hồ sơ."
+          },
+          {
+            title: "Lập Kế Hoạch Theo Thời Gian Lưu Trú",
+            text: "Xây dựng kế hoạch theo quỹ thời gian, mục tiêu điều trị và tình trạng lâm sàng của bạn."
+          },
+          {
+            title: "Trong Quá Trình Điều Trị",
+            text: "Điều phối lịch hẹn và hỗ trợ xuyên suốt thời gian bạn ở Việt Nam."
+          },
+          {
+            title: "Sau Khi Trở Về Nước",
+            text: "Duy trì trao đổi và hướng dẫn phục hồi sau điều trị."
+          },
+          {
+            title: "Hỗ Trợ Giao Tiếp Đa Ngôn Ngữ",
+            text: "Bệnh nhân có thể yêu cầu hỗ trợ giao tiếp bằng ngôn ngữ phù hợp trong khả năng của chúng tôi."
+          }
+        ],
+        cta: "Tìm Hiểu Hỗ Trợ Bệnh Nhân Quốc Tế"
+      },
+      faq: {
+        title: "Những Câu Hỏi Bệnh Nhân Thường Quan Tâm",
+        items: [
+          {
+            question: "Điều trị Implant có đau không?",
+            answer: "Quy trình được xây dựng với gây tê, kế hoạch điều trị rõ ràng và hướng dẫn sau điều trị để giảm khó chịu tối đa."
+          },
+          {
+            question: "Thời gian điều trị Implant kéo dài bao lâu?",
+            answer: "Thời gian điều trị phụ thuộc vào tình trạng răng hàm, mục tiêu phục hồi và đáp ứng lành thương của từng bệnh nhân."
+          },
+          {
+            question: "Tôi cần ở Việt Nam bao lâu?",
+            answer: "Thời gian lưu trú được đề xuất dựa trên mức độ phức tạp của ca điều trị và kế hoạch phục hồi cụ thể."
+          },
+          {
+            question: "Tôi có thể bắt đầu từ khi còn ở nước ngoài không?",
+            answer: "Có. Bạn có thể bắt đầu bằng tư vấn và đánh giá sơ bộ từ xa qua hồ sơ và X-ray hiện có."
+          },
+          {
+            question: "Sau khi về nước thì sao?",
+            answer: "Đội ngũ tiếp tục hỗ trợ theo dõi, hướng dẫn chăm sóc và duy trì liên lạc trong giai đoạn hồi phục."
+          },
+          {
+            question: "Nếu tôi không nói tiếng Việt hoặc tiếng Anh thì sao?",
+            answer: "Chúng tôi có thể hỗ trợ giao tiếp qua nhân sự đa ngôn ngữ, phiên dịch và công cụ dịch trong phạm vi phù hợp."
+          }
+        ],
+        cta: "Xem Thêm Câu Hỏi"
+      },
+      finalCta: {
+        title: "Bắt Đầu Bằng Việc Hiểu Rõ Tình Trạng Của Bạn",
+        description: "Bạn không cần quyết định điều trị ngay hôm nay. Bước đầu tiên là hiểu rõ tình trạng hiện tại và các lựa chọn phù hợp với mục tiêu của bạn.",
+        primaryCta: "Gửi X-ray của bạn",
+        secondaryCta: "Kết nối với đội ngũ EMIS",
+        supportTitle: "Bạn có thể chia sẻ thêm:",
+        supportItems: [
+          "Quốc gia đang sinh sống",
+          "Khoảng thời gian có thể điều trị",
+          "Kênh liên hệ ưu tiên",
+          "Ngôn ngữ ưu tiên"
+        ],
+        importantNote: "Đánh giá sơ bộ giúp chúng tôi hiểu rõ hơn tình trạng của bạn. Kế hoạch điều trị cuối cùng cần được xác định sau khi thăm khám trực tiếp và chẩn đoán đầy đủ."
+      }
+    }
   },
 
   simplified: {
