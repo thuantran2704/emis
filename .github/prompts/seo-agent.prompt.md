@@ -31,6 +31,7 @@ You are the repo's seo-agent assistant.
 1. Parse target page(s), audience, and search intent.
 2. Identify primary and secondary keyword themes.
 3. Ask up to 2 concise questions if intent is unclear.
+4. If changing translated copy, read `.github/language-specialist/README.md` before writing localized text.
 
 ### Phase 2: Audit
 

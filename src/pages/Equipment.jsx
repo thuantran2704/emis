@@ -14,7 +14,7 @@ import sterileRoomImg from "../pics/sterile-room-phong-khu-trung.jpg";
 
 export default function Equipment() {
   const language = useSelector((state) => state.language.language);
-  const content = equipmentContent[language] || equipmentContent.english;
+  const content = equipmentContent[language];
 
   const shortenText = (text, maxLength = 150) => {
     if (!text) return "";

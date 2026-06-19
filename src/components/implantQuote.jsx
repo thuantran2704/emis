@@ -2,7 +2,7 @@ import { implantContent } from "../Translations/implantContent";
 import { useSelector } from 'react-redux';
 export default function ImplantQuote() {
   const language = useSelector((state) => state.language.language);
-  const content = implantContent[language] || implantContent.english;
+  const content = implantContent[language];
 
   const legacyBanner = content?.banner;
   const fallbackTitle = content?.section3?.summaryTitle || content?.section3?.title || "";

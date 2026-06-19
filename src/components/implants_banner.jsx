@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 
   export default function ImplantCards() {
     const language = useSelector((state) => state.language.language);
-    const content = implantContent[language] || implantContent.english;
+      const content = implantContent[language];
     const implants =
       content?.implants ||
       content?.section4?.options?.map((option) => ({

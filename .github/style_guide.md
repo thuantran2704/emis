@@ -122,3 +122,61 @@ Layout:
 - WCAG 2.2: enforce measurable contrast, semantics, focus, and robustness.
 - Google and Microsoft style guidance: clear structure, plain language, global audience.
 - Modern frontend architecture practice: smaller cohesive modules improve scale and maintainability.
+
+## 12) Relevance Heuristic (Use Before Implementing)
+
+Use this heuristic to decide whether a proposed change is relevant to the user request.
+
+Scoring model:
+- Goal match (0-3): does this directly solve the requested outcome?
+- Scope fit (0-2): is it inside requested files/features and current PR scope?
+- Hierarchy fit (0-2): does it follow this guide and task source docs?
+- User signal fit (0-2): does it align with explicit user preferences/feedback?
+- Risk penalty (-2 to 0): subtract points for regression risk, complexity, or speculative work.
+
+Total score = Goal + Scope + Hierarchy + User signal + Risk penalty.
+
+Decision thresholds:
+- 7-9: implement now.
+- 5-6: implement only if low-cost and clearly beneficial.
+- 0-4: do not implement unless explicitly requested.
+
+Tie-breakers:
+- Prefer smaller, reversible changes.
+- Prefer reuse over new abstractions.
+- Prefer clarity and accessibility over visual novelty.
+
+## 13) "I Hate It" Feedback Loop (Doc Update Rule)
+
+When the user says they dislike an output (for example: "I hate this", "this is wrong", "don\'t do this again"), run this triage:
+
+1. Classify the reason:
+- content/tone
+- visual design
+- architecture/splitting
+- accessibility
+- i18n/data safety
+- process/scope discipline
+
+2. Check repeatability:
+- Is this likely to recur across pages/tasks?
+- Is the feedback specific enough to become a reusable rule?
+
+3. Decide doc action:
+- Update style guide if both are true:
+  - repeatability: yes
+  - rule can be stated as a clear, testable directive
+- Keep as task-local preference if one-off or highly contextual.
+
+4. If updating the guide, add all of:
+- rule statement (must/should)
+- rationale (one line)
+- acceptance check (how to verify)
+
+5. Apply and verify in the same change set:
+- update affected code/content
+- run relevant checks
+- confirm the new rule is reflected in future decisions
+
+Quick anti-bloat rule:
+- Do not add a new guide rule for a single subjective preference unless the user explicitly asks to make it permanent.

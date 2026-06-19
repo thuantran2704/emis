@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { useSelector } from 'react-redux';
 import homeContent from '../Translations/homeContent';
-import heroConsultation from '../pics/doctor-reviewing-x-ray-with-patient-explaining-treatment.jpg';
+import heroBackground from '../pics/reception.jpg';
 import planningImplant from '../pics/doctor-analyzing-implant.jpg';
 import cbctReview from '../pics/dr-x-ray-consultation.jpg';
 import onlineConsultation from '../pics/consulting-team.jpg';
@@ -36,9 +36,12 @@ export default function Home() {
   const language = useSelector((state) => state.language.language);
   const page = homeContent[language]?.homepageV2 || homeContent.english.homepageV2;
   const sectionLabelClass = "mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-[#C5AF73]";
+  const heroDescription = page.hero.description.length > 95
+    ? `${page.hero.description.slice(0, 92).trim()}...`
+    : page.hero.description;
 
   return (
-    <main className="min-h-[calc(100vh-4rem)] bg-[#f7fafc] pt-20 text-[#2a3439]">
+    <main className="bg-[#f7fafc] text-[#2a3439]">
       <Helmet>
         <title>{page.metaTitle}</title>
         <meta name="description" content={page.metaDescription} />
@@ -52,39 +55,124 @@ export default function Home() {
         <link rel="canonical" href="https://emisdental.com" />
       </Helmet>
 
-      <section className="bg-[#f7fafc] py-20 md:py-24">
-        <div className="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-2 md:items-center">
-          <div>
-            <p className={sectionLabelClass}>EMIS Dental</p>
-            <h1 className="text-4xl font-bold leading-tight text-[#2a3439] md:text-5xl" style={{ fontFamily: "'Playfair Display', serif" }}>
-              {page.hero.title}
-            </h1>
-            <p className="mt-6 text-lg leading-relaxed text-gray-500" style={{ fontFamily: "'Cormorant', serif" }}>{page.hero.subtitle}</p>
-            <p className="mt-4 text-base leading-relaxed text-gray-500" style={{ fontFamily: "'Cormorant', serif" }}>{page.hero.description}</p>
-
-            <ul className="mt-6 grid gap-2 sm:grid-cols-2">
-              {page.hero.highlights.map((item) => (
-                <li key={item} className="rounded-xl border border-[#dbe4ec] bg-white px-4 py-3 text-sm font-semibold text-[#2a3439] shadow-sm">
-                  ✓ {item}
-                </li>
-              ))}
-            </ul>
-
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Link to="/contact" className="rounded-full bg-[#d4af37] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#c19d30]">
-                {page.hero.primaryCta}
-              </Link>
-              <Link to="/contact" className="rounded-full border border-[#d4af37] bg-white px-6 py-3 text-sm font-semibold text-[#2a3439] transition hover:bg-[#eef3f7]">
-                {page.hero.secondaryCta}
-              </Link>
+      {/* Premium Hero Section with 100vh full-screen background */}
+      <section className="relative mt-[82px] h-[calc(100vh-82px)] w-full overflow-hidden">
+        <img
+          src={heroBackground}
+          alt="EMIS Dental reception hall"
+          className="absolute inset-0 h-full w-full object-cover object-center"
+          style={{ objectPosition: 'center 62%' }}
+        />
+        <div
+          className="absolute inset-0"
+          style={{ background: 'linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.40))' }}
+          aria-hidden="true"
+        />
+        {/* Hero Content - Left Aligned Overlay */}
+        <div className="absolute inset-0 z-10 flex flex-col items-start justify-center px-6 pt-16 sm:px-12 md:px-24 md:pt-0">
+          <div className="max-w-[320px] md:max-w-[420px]">
+            {/* Google Rating */}
+            <div className="mb-4 md:mb-6 flex items-center gap-2">
+              <div className="flex flex-col">
+                <p className="text-xs md:text-sm font-medium text-white">Google Rating – 5.0</p>
+                <div className="mt-1 flex gap-0.5">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="text-base md:text-lg text-[#C89D2D]">★</span>
+                  ))}
+                </div>
+              </div>
             </div>
 
-            <p className="mt-6 border-l-2 border-[#C5AF73] pl-4 text-sm leading-relaxed text-gray-500" style={{ fontFamily: "'Cormorant', serif" }}>{page.hero.trustStatement}</p>
-          </div>
+            {/* Main Heading */}
+            <h1
+              className="text-xl sm:text-2xl md:text-3xl font-bold leading-tight text-white"
+              style={{
+                fontFamily: "'Poppins', sans-serif",
+                lineHeight: '1.12',
+              }}
+            >
+              {page.hero.title}
+            </h1>
 
-          <div className="overflow-hidden rounded-[28px] shadow-[0_20px_55px_rgba(16,43,72,0.2)]">
-            <img src={heroConsultation} alt="Doctor reviewing CBCT and X-ray with a patient" className="h-full w-full object-cover" />
+            {/* Description */}
+            <p
+              className="mt-3 md:mt-4 text-[11px] sm:text-xs md:text-sm font-normal leading-relaxed text-white max-w-full"
+              style={{
+                color: 'rgba(255,255,255,.88)',
+                fontFamily: "'Poppins', sans-serif",
+              }}
+            >
+              {heroDescription}
+            </p>
+
+            {/* CTA Buttons - Responsive Stacking */}
+            <div className="mt-8 md:mt-10 flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4">
+              {/* Primary Button */}
+              <Link
+                to="/contact"
+                className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#C89D2D] px-5 md:px-7 py-2 md:py-3 text-xs md:text-sm font-semibold text-white transition-all duration-200 hover:bg-[#B8892A] hover:shadow-lg w-full sm:w-auto"
+                style={{ height: '44px', minHeight: '44px' }}
+              >
+                {page.hero.primaryCta}
+                <svg className="h-3 w-3 md:h-4 md:w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
+
+              {/* Secondary Button */}
+              <Link
+                to="/services"
+                className="group inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-transparent px-5 md:px-7 py-2 md:py-3 text-xs md:text-sm font-semibold text-white transition-all duration-200 hover:bg-white/10 w-full sm:w-auto"
+                style={{
+                  height: '44px',
+                  minHeight: '44px',
+                  borderColor: 'rgba(255,255,255,.5)',
+                }}
+              >
+                {page.hero.secondaryCta}
+                <svg className="h-3 w-3 md:h-4 md:w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
+            </div>
           </div>
+        </div>
+
+        {/* Floating Contact Widgets - Bottom Right - Responsive */}
+        <div className="absolute bottom-6 right-6 z-10 flex flex-col gap-3 md:bottom-8 md:right-8 md:gap-[14px]">
+          {/* WhatsApp Widget */}
+          <a
+            href="https://wa.me/61234567890"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 md:gap-4 rounded-[16px] md:rounded-[18px] bg-[#25D366] px-3 md:px-[18px] py-3 md:py-[18px] text-white shadow-lg transition-all duration-200 hover:shadow-xl hover:-translate-y-1"
+          >
+            <div className="flex h-10 md:h-12 w-10 md:w-12 flex-shrink-0 items-center justify-center rounded-full bg-white/20">
+              <svg className="h-5 md:h-6 w-5 md:w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.947 1.227l-.356.214-3.71-.973.992 3.605-.235.374a9.861 9.861 0 1513.243-13.241c-.001 0-.001 0-.001 0z" />
+              </svg>
+            </div>
+            <div className="hidden md:flex flex-col gap-0.5">
+              <p className="text-sm font-semibold">Chat via WhatsApp</p>
+              <p className="text-xs font-medium opacity-90">SPEAK WITH EMIS DENTAL</p>
+            </div>
+          </a>
+
+          {/* Phone Widget */}
+          <a
+            href="tel:+61234567890"
+            className="flex items-center gap-2 md:gap-4 rounded-[16px] md:rounded-[18px] bg-[#8B6F47] px-3 md:px-[18px] py-3 md:py-[18px] text-white shadow-lg transition-all duration-200 hover:shadow-xl hover:-translate-y-1"
+          >
+            <div className="flex h-10 md:h-12 w-10 md:w-12 flex-shrink-0 items-center justify-center rounded-full bg-white/20">
+              <svg className="h-5 md:h-6 w-5 md:w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+            </div>
+            <div className="hidden md:flex flex-col gap-0.5">
+              <p className="text-sm font-semibold">Call EMIS Dental</p>
+              <p className="text-xs font-medium opacity-90">AUSTRALIA SUPPORT LINE</p>
+            </div>
+          </a>
         </div>
       </section>
 

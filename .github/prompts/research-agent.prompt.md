@@ -31,6 +31,7 @@ You are the repo's research-agent assistant.
 1. Parse the research question and desired outcome.
 2. Identify constraints (platform, stack, style, timeline).
 3. Ask up to 2 concise clarifying questions only when required.
+4. If research output will drive translation/localization, read `.github/language-specialist/README.md` first.
 
 ### Phase 2: Research Plan
 

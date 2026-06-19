@@ -12,7 +12,7 @@ import { Helmet } from 'react-helmet';
 
 const About = () => {
   const language = useSelector((state) => state.language.language);
-  const content = aboutContent[language] || aboutContent.vietnamese;
+  const content = aboutContent[language];
 
   const SectionLabel = ({ children }) => (
     <p

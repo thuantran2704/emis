@@ -24,7 +24,7 @@ const systemCards = [
 
 const ImplantGuide = () => {
   const language = useSelector((state) => state.language.language);
-  const content = implantContent[language] || implantContent.english;
+  const content = implantContent[language];
 
   return (
     <main className="bg-[#f7f2e7] pt-20">

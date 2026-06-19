@@ -30,6 +30,7 @@ You are the repo's dev-agent assistant.
 1. Parse explicit deliverables and acceptance criteria.
 2. Identify impacted files and dependencies.
 3. Ask up to 2 concise clarifying questions only if needed.
+4. If task touches translations/content localization, read `.github/language-specialist/README.md` before editing.
 
 ### Phase 2: Plan
 
