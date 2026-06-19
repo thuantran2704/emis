@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { useSelector } from 'react-redux';
 import homeContent from '../Translations/homeContent';
-import heroBackground from '../pics/reception.jpg';
+import heroBackground from '../pics/better_emis_hall.jpg';
 import planningImplant from '../pics/doctor-analyzing-implant.jpg';
 import cbctReview from '../pics/dr-x-ray-consultation.jpg';
 import onlineConsultation from '../pics/consulting-team.jpg';
@@ -149,7 +149,7 @@ export default function Home() {
         <div className="absolute bottom-6 right-6 z-10 flex flex-col gap-3 md:bottom-8 md:right-8 md:gap-[14px]">
           {/* WhatsApp Widget */}
           <a
-            href="https://wa.me/61234567890"
+            href="https://wa.me/84909967649"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 md:gap-4 rounded-[16px] md:rounded-[18px] bg-[#25D366] px-3 md:px-[18px] py-3 md:py-[18px] text-white shadow-lg transition-all duration-200 hover:shadow-xl hover:-translate-y-1"
@@ -167,7 +167,7 @@ export default function Home() {
 
           {/* Phone Widget */}
           <a
-            href="tel:+61234567890"
+            href="tel:+84919100021"
             className="flex items-center gap-2 md:gap-4 rounded-[16px] md:rounded-[18px] bg-[#8B6F47] px-3 md:px-[18px] py-3 md:py-[18px] text-white shadow-lg transition-all duration-200 hover:shadow-xl hover:-translate-y-1"
           >
             <div className="flex h-10 md:h-12 w-10 md:w-12 flex-shrink-0 items-center justify-center rounded-full bg-white/20">
@@ -177,7 +177,7 @@ export default function Home() {
             </div>
             <div className="hidden md:flex flex-col gap-0.5">
               <p className="text-sm font-semibold">Call EMIS Dental</p>
-              <p className="text-xs font-medium opacity-90">AUSTRALIA SUPPORT LINE</p>
+              <p className="text-xs font-medium opacity-90">VIETNAM SUPPORT LINE</p>
             </div>
           </a>
         </div>

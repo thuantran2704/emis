@@ -278,7 +278,7 @@ export const homeContent = {
           {
             title: "Replacing Years Of Denture Frustration",
             subtitle: "All-on-4 Rehabilitation",
-            country: "Australia",
+            country: "Canada",
           },
           {
             title: "Restoring A Missing Tooth Before Returning To Work",
@@ -505,7 +505,7 @@ export const homeContent = {
           {
             title: "Replacing Years Of Denture Frustration",
             subtitle: "All-on-4 Rehabilitation",
-            country: "Australia"
+            country: "Canada"
           },
           {
             title: "Restoring A Missing Tooth Before Returning To Work",
@@ -869,7 +869,7 @@ export const homeContent = {
           {
             title: "Thoát Khỏi Nỗi Lo Hàm Giả Nhiều Năm",
             subtitle: "Phục hồi All-on-4",
-            country: "Úc",
+            country: "Canada",
           },
           {
             title: "Phục Hồi Răng Mất Trước Khi Quay Lại Công Việc",
@@ -1096,7 +1096,7 @@ export const homeContent = {
           {
             title: "Giải Quyết Nỗi Lo Hàm Giả Kéo Dài",
             subtitle: "Phục hồi All-on-4",
-            country: "Úc"
+            country: "Canada"
           },
           {
             title: "Phục Hồi Răng Mất Trước Khi Trở Lại Công Việc",
