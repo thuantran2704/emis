@@ -8,21 +8,17 @@ export const homeContent = {
     faqDescription: "Helpful answers about our clinic, treatments, and communication support.",
     faqItems: [
       {
-        question: "How can I contact EMIS Dental?",
-        answer: "You can reach us by phone, email, WhatsApp, Facebook, Zalo, YouTube, or through our contact page."
+        question: "Can I verify the credentials and licenses of my treating dentist?",
+        answer: "Absolutely. Emis Dental believes in complete transparency. Our dentists are licensed practitioners with training from leading institutions in the United States and Vietnam's highest-ranked medical university. Patients may request verification of professional licenses, qualifications, and clinical credentials before proceeding with treatment."
       },
       {
-        question: "What support channels are available?",
-        answer: "We provide WhatsApp support, email support, Facebook updates, and follow-up communication for your treatment journey."
+        question: "Will Emis Dental help organise my treatment trip to Vietnam?",
+        answer: "Absolutely. We understand that travelling overseas for dental treatment can feel overwhelming, which is why Emis Dental offers personalised travel assistance from start to finish. From your initial consultation, our team helps coordinate treatment schedules, travel preparation, airport transfers, accommodation next to our city-centre clinic, daily treatment appointments, meals during recovery, medication guidance, and post-treatment support. You will have a dedicated point of contact throughout your journey, ensuring a smooth and comfortable experience while receiving high-quality dental care in Vietnam."
       },
       {
-        question: "How do I send my X-ray for consultation?",
-        answer: "You can share your X-ray and records through our email or WhatsApp support channels for faster assessment."
+        question: "What should I prepare before visiting Emis Dental?",
+        answer: "To help us plan your treatment efficiently, we recommend providing a recent CBCT scan (if available), recent blood test results, and your medical information including conditions, allergies, current medications, and previous dental treatments or implants. If you do not have these documents, our team can arrange the necessary assessments upon arrival. For international patients, we also recommend booking flights only after treatment dates are confirmed, allowing enough recovery time, bringing your medication list, and having travel insurance where applicable."
       },
-      {
-        question: "Do you provide a treatment timeline?",
-        answer: "Yes, we explain the treatment stages, expected visits, and follow-up care clearly from the beginning."
-      }
     ],
     serviceSupportTitle: "Support & Communication",
     serviceSupportIntro: "Easy communication and clear guidance throughout your treatment journey.",
@@ -326,34 +322,19 @@ export const homeContent = {
         title: "Questions Patients Often Ask",
         items: [
           {
-            question: "Is implant treatment painful?",
+            question: "Can I verify the credentials and licenses of my treating dentist?",
             answer:
-              "Local anesthesia, treatment planning, and post-treatment guidance are used to help make treatment as comfortable as possible.",
+              "Absolutely. Emis Dental believes in complete transparency. Our dentists are licensed practitioners with training from leading institutions in the United States and Vietnam's highest-ranked medical university. Patients may request verification of professional licenses, qualifications, and clinical credentials before proceeding with treatment.",
           },
           {
-            question: "How long does implant treatment take?",
+            question: "Will Emis Dental help organise my treatment trip to Vietnam?",
             answer:
-              "Treatment timelines vary depending on your situation, treatment goals, and healing requirements.",
+              "Absolutely. We understand that travelling overseas for dental treatment can feel overwhelming, which is why Emis Dental offers personalised travel assistance from start to finish. From your initial consultation, our team helps coordinate treatment schedules, travel preparation, airport transfers, accommodation next to our city-centre clinic, daily treatment appointments, meals during recovery, medication guidance, and post-treatment support. You will have a dedicated point of contact throughout your journey, ensuring a smooth and comfortable experience while receiving high-quality dental care in Vietnam. This allows you to enjoy significant savings without sacrificing convenience, safety, or peace of mind.",
           },
           {
-            question: "How long should I stay in Vietnam?",
+            question: "What should I prepare before visiting Emis Dental?",
             answer:
-              "The recommended stay depends on your case complexity, treatment plan, and recovery considerations.",
-          },
-          {
-            question: "Can I begin the process before traveling to Vietnam?",
-            answer:
-              "Yes. Initial consultation and preliminary planning can often begin remotely using your available records and X-rays.",
-          },
-          {
-            question: "What happens after I return home?",
-            answer:
-              "Our team provides ongoing communication and guidance throughout healing and maintenance.",
-          },
-          {
-            question: "What if I do not speak English or Vietnamese?",
-            answer:
-              "Communication support may be available through multilingual staff, interpreters, and translation tools depending on your needs.",
+              "To help us plan your treatment efficiently, we recommend providing a recent CBCT scan (if available), recent blood test results, and your medical information including conditions, allergies, current medications, and previous dental treatments or implants. If you do not have these documents, our team can arrange the necessary assessments upon arrival and guide you through every step. For international patients, we also recommend booking flights only after treatment dates are confirmed, allowing sufficient recovery time before returning home, bringing a list of current medications, and having travel insurance where applicable.",
           },
         ],
         cta: "View More FAQs",
@@ -625,21 +606,17 @@ export const homeContent = {
     faqDescription: "Những câu trả lời hữu ích về phòng khám, dịch vụ điều trị và hỗ trợ giao tiếp.",
     faqItems: [
       {
-        question: "Làm thế nào để liên hệ với EMIS Dental?",
-        answer: "Bạn có thể liên hệ qua điện thoại, email, WhatsApp, Facebook, Zalo, YouTube hoặc qua trang liên hệ của chúng tôi."
+        question: "Tôi có thể xác minh bằng cấp và giấy phép hành nghề của bác sĩ điều trị không?",
+        answer: "Hoàn toàn có. Emis Dental đề cao sự minh bạch. Bác sĩ của chúng tôi có giấy phép hành nghề hợp lệ, được đào tạo từ các cơ sở uy tín tại Hoa Kỳ và trường đại học y khoa hàng đầu Việt Nam. Bệnh nhân có thể yêu cầu xác minh giấy phép hành nghề, bằng cấp chuyên môn và năng lực lâm sàng trước khi điều trị."
       },
       {
-        question: "Có những kênh hỗ trợ nào?",
-        answer: "Chúng tôi có hỗ trợ qua WhatsApp, email, Facebook và các kênh theo dõi để hỗ trợ bạn trong suốt quá trình điều trị."
+        question: "Emis Dental có hỗ trợ sắp xếp chuyến đi điều trị tại Việt Nam không?",
+        answer: "Có. Chúng tôi hiểu điều trị nha khoa ở nước ngoài có thể khiến bạn áp lực, vì vậy Emis Dental cung cấp hỗ trợ cá nhân hóa từ đầu đến cuối. Từ tư vấn ban đầu, đội ngũ sẽ hỗ trợ điều phối lịch điều trị, chuẩn bị chuyến đi, đón sân bay, chỗ ở gần phòng khám trung tâm, lịch hẹn hằng ngày, bữa ăn trong giai đoạn hồi phục, hướng dẫn dùng thuốc và hỗ trợ sau điều trị."
       },
       {
-        question: "Làm thế nào để gửi X-quang để được tư vấn?",
-        answer: "Bạn có thể gửi X-quang và hồ sơ qua email hoặc WhatsApp để được đánh giá nhanh hơn."
+        question: "Tôi cần chuẩn bị gì trước khi đến Emis Dental?",
+        answer: "Để lập kế hoạch điều trị hiệu quả, bạn nên chuẩn bị phim CBCT gần nhất (nếu có), kết quả xét nghiệm máu gần đây và thông tin y khoa gồm bệnh nền, dị ứng, thuốc đang dùng, điều trị nha khoa hoặc implant trước đó. Nếu chưa có hồ sơ, đội ngũ của chúng tôi sẽ hỗ trợ thực hiện các đánh giá cần thiết khi bạn đến. Với bệnh nhân quốc tế, nên đặt vé sau khi xác nhận lịch điều trị, dự trù thời gian hồi phục phù hợp, mang theo danh sách thuốc đang dùng và có bảo hiểm du lịch khi cần."
       },
-      {
-        question: "Bạn có cung cấp lộ trình điều trị không?",
-        answer: "Có, chúng tôi giải thích rõ từng giai đoạn điều trị, số lượt hẹn và hỗ trợ theo dõi từ đầu."
-      }
     ],
     serviceSupportTitle: "Hỗ Trợ & Giao Tiếp",
     serviceSupportIntro: "Giao tiếp dễ dàng và hướng dẫn rõ ràng trong suốt hành trình điều trị của bạn.",
@@ -943,34 +920,19 @@ export const homeContent = {
         title: "Những Câu Hỏi Bệnh Nhân Thường Quan Tâm",
         items: [
           {
-            question: "Điều trị Implant có đau không?",
+            question: "Tôi có thể xác minh bằng cấp và giấy phép hành nghề của bác sĩ điều trị không?",
             answer:
-              "Chúng tôi sử dụng gây tê tại chỗ, lập kế hoạch kỹ lưỡng và hướng dẫn sau điều trị để quá trình diễn ra thoải mái nhất có thể.",
+              "Hoàn toàn có. Emis Dental đề cao sự minh bạch. Bác sĩ của chúng tôi có giấy phép hành nghề hợp lệ, được đào tạo từ các cơ sở uy tín tại Hoa Kỳ và trường đại học y khoa hàng đầu Việt Nam. Bệnh nhân có thể yêu cầu xác minh giấy phép hành nghề, bằng cấp chuyên môn và năng lực lâm sàng trước khi điều trị.",
           },
           {
-            question: "Thời gian điều trị Implant kéo dài bao lâu?",
+            question: "Emis Dental có hỗ trợ sắp xếp chuyến đi điều trị tại Việt Nam không?",
             answer:
-              "Thời gian điều trị tùy thuộc vào tình trạng, mục tiêu điều trị và tốc độ hồi phục của từng bệnh nhân.",
+              "Có. Chúng tôi hiểu việc đi nước ngoài để điều trị có thể khiến bạn áp lực, vì vậy Emis Dental cung cấp hỗ trợ cá nhân hóa từ đầu đến cuối. Từ tư vấn ban đầu, đội ngũ sẽ hỗ trợ điều phối lịch điều trị, chuẩn bị chuyến đi, đón sân bay, chỗ ở gần phòng khám trung tâm, lịch hẹn hằng ngày, bữa ăn trong giai đoạn hồi phục, hướng dẫn dùng thuốc và hỗ trợ sau điều trị. Bạn sẽ có một đầu mối liên hệ xuyên suốt hành trình để đảm bảo trải nghiệm thuận lợi, an tâm và thoải mái.",
           },
           {
-            question: "Tôi cần ở Việt Nam bao lâu?",
+            question: "Tôi cần chuẩn bị gì trước khi đến Emis Dental?",
             answer:
-              "Thời gian lưu trú phù hợp phụ thuộc vào mức độ phức tạp của ca điều trị và kế hoạch cá nhân hóa của bạn.",
-          },
-          {
-            question: "Tôi có thể bắt đầu khi còn ở nước ngoài không?",
-            answer:
-              "Có. Bạn có thể bắt đầu bằng tư vấn trực tuyến và đánh giá sơ bộ từ hồ sơ, phim X-ray hiện có.",
-          },
-          {
-            question: "Sau khi về nước thì sao?",
-            answer:
-              "Đội ngũ tiếp tục hỗ trợ theo dõi và hướng dẫn trong giai đoạn hồi phục và duy trì lâu dài.",
-          },
-          {
-            question: "Tôi không nói tiếng Anh hoặc tiếng Việt thì sao?",
-            answer:
-              "Chúng tôi có thể hỗ trợ giao tiếp đa ngôn ngữ thông qua nhân sự, phiên dịch hoặc công cụ dịch tùy nhu cầu.",
+              "Để lập kế hoạch điều trị hiệu quả, bạn nên chuẩn bị phim CBCT gần nhất (nếu có), kết quả xét nghiệm máu gần đây và thông tin y khoa gồm bệnh nền, dị ứng, thuốc đang dùng, điều trị nha khoa hoặc implant trước đó. Nếu chưa có hồ sơ, đội ngũ của chúng tôi sẽ hỗ trợ thực hiện các đánh giá cần thiết khi bạn đến và hướng dẫn từng bước. Với bệnh nhân quốc tế, nên đặt vé sau khi xác nhận lịch điều trị, dự trù thời gian hồi phục phù hợp, mang theo danh sách thuốc đang dùng và có bảo hiểm du lịch khi cần.",
           },
         ],
         cta: "Xem Thêm Câu Hỏi Thường Gặp",
@@ -1242,20 +1204,16 @@ export const homeContent = {
     faqDescription: "关于诊所、治疗服务和沟通支持的实用解答。",
     faqItems: [
       {
-        question: "我如何联系 EMIS 牙科？",
-        answer: "您可以通过电话、电子邮件、WhatsApp、Facebook、Zalo、YouTube，或联系页面与我们取得联系。"
+        question: "我可以核实主治牙医的执照与资质吗？",
+        answer: "当然可以。Emis Dental 坚持透明沟通。我们的牙医均持有合法执照，并接受过美国知名院校及越南顶尖医科大学的专业培训。患者可在治疗前申请核验执业许可、学历资质与临床资格。"
       },
       {
-        question: "有哪些支持渠道？",
-        answer: "我们提供 WhatsApp 支持、电子邮件支持、Facebook 更新，以及治疗过程中的后续沟通。"
+        question: "Emis Dental 会协助安排我到越南治疗的行程吗？",
+        answer: "会。我们理解赴海外就诊可能让人紧张，因此 Emis Dental 提供从前期到后期的一站式个性化行程支持，包括治疗排期、行前准备、机场接送、临近市中心诊所的住宿、每日就诊安排、恢复期餐食、用药指导及术后支持。"
       },
       {
-        question: "我如何发送 X 光片进行咨询？",
-        answer: "您可以通过电子邮件或 WhatsApp 发送 X 光片和病历，以便更快评估。"
-      },
-      {
-        question: "您是否提供治疗时间表？",
-        answer: "是的，我们会从一开始就清楚说明治疗阶段、预约次数和后续照护。"
+        question: "到访 Emis Dental 前我需要准备什么？",
+        answer: "建议准备近期 CBCT（如有）、近期血液检查报告，以及病史信息（慢性病、过敏史、当前用药、既往牙科治疗或种植史）。若资料暂时不全，我们可在到院后协助完成所需检查。国际患者建议在确认治疗日期后再订机票，预留恢复时间，携带用药清单，并视情况准备旅行保险。"
       }
     ],
     serviceSupportTitle: "支持与沟通",
@@ -1364,20 +1322,16 @@ export const homeContent = {
     faqDescription: "클리닉, 치료 서비스, 소통 지원에 대한 실질적인 답변입니다.",
     faqItems: [
       {
-        question: "EMIS 치과에 어떻게 연락할 수 있나요?",
-        answer: "전화, 이메일, WhatsApp, Facebook, Zalo, YouTube 또는 연락 페이지를 통해 문의하실 수 있습니다."
+        question: "담당 치과의사의 면허와 자격을 확인할 수 있나요?",
+        answer: "물론입니다. Emis Dental은 투명한 진료를 중요하게 생각합니다. 저희 의료진은 정식 면허를 보유하고 있으며 미국의 주요 교육기관과 베트남 최고 수준의 의과대학에서 교육을 받았습니다. 치료 전 면허, 학력, 임상 자격 확인을 요청하실 수 있습니다."
       },
       {
-        question: "어떤 지원 채널이 있나요?",
-        answer: "WhatsApp 지원, 이메일 지원, Facebook 업데이트, 치료 과정의 후속 소통을 제공합니다."
+        question: "Emis Dental이 베트남 치료 여행 일정도 도와주나요?",
+        answer: "네. 해외 치료가 부담스럽게 느껴질 수 있다는 점을 잘 알기 때문에, Emis Dental은 처음부터 끝까지 맞춤형 여행/치료 지원을 제공합니다. 치료 일정 조율, 출국 준비, 공항 이동, 도심 클리닉 인근 숙소, 일일 진료 일정, 회복기 식사, 복약 안내, 치료 후 지원까지 도와드립니다."
       },
       {
-        question: "X-ray를 보내려면 어떻게 해야 하나요?",
-        answer: "이메일이나 WhatsApp를 통해 X-ray와 진료 기록을 보내시면 더 빠르게 평가할 수 있습니다."
-      },
-      {
-        question: "치료 일정도 제공하나요?",
-        answer: "네, 치료 단계, 예상 방문 횟수, 추후 관리까지 처음부터 명확하게 안내해 드립니다."
+        question: "Emis Dental 방문 전에 무엇을 준비해야 하나요?",
+        answer: "가능하다면 최근 CBCT, 최근 혈액검사 결과, 그리고 기저질환, 알레르기, 복용 약물, 과거 치과 치료/임플란트 이력을 준비해 주세요. 자료가 없어도 도착 후 필요한 검사를 도와드립니다. 해외 환자는 치료 일정 확정 후 항공권 예약, 충분한 회복 기간 확보, 복용약 목록 지참, 필요 시 여행자 보험 준비를 권장합니다."
       }
     ],
     serviceSupportTitle: "지원 및 소통",
@@ -1488,20 +1442,16 @@ export const homeContent = {
     faqDescription: "關於診所、治療服務和溝通支援的實用解答。",
     faqItems: [
       {
-        question: "我如何聯絡 EMIS 牙科？",
-        answer: "您可以透過電話、電子郵件、WhatsApp、Facebook、Zalo、YouTube 或聯絡頁面與我們聯繫。"
+        question: "我可以查核主治牙醫的執照與專業資格嗎？",
+        answer: "當然可以。Emis Dental 重視透明溝通。我們的牙醫皆具合法執照，並受訓於美國知名院校與越南頂尖醫學大學。患者可於治療前要求查核執業執照、學歷資格與臨床專業證明。"
       },
       {
-        question: "有哪些支援管道？",
-        answer: "我們提供 WhatsApp 支援、電子郵件支援、Facebook 更新，以及治療過程中的後續溝通。"
+        question: "Emis Dental 會協助安排我前往越南治療的行程嗎？",
+        answer: "會。我們理解跨國就醫可能令人有壓力，因此 Emis Dental 提供從前到後的一站式個人化協助，包含療程排程、行前準備、機場接送、鄰近市中心診所住宿、每日療程安排、恢復期飲食、用藥指引與術後支持。"
       },
       {
-        question: "我如何傳送 X 光片進行諮詢？",
-        answer: "您可以透過電子郵件或 WhatsApp 傳送 X 光片與病歷，以便更快評估。"
-      },
-      {
-        question: "您是否提供治療時間表？",
-        answer: "是的，我們會從一開始就清楚說明治療階段、預計回診次數和後續照護。"
+        question: "前往 Emis Dental 前我應該準備什麼？",
+        answer: "建議準備近期 CBCT（如有）、近期血液檢查報告，以及病史資訊（慢性病、過敏、目前用藥、過往牙科治療或植牙紀錄）。若資料不足，我們可於到院後安排必要檢查。國際患者建議於確認療程日期後再訂機票、預留恢復時間、攜帶用藥清單，並視需要準備旅遊保險。"
       }
     ],
     serviceSupportTitle: "支援與溝通",
@@ -1611,20 +1561,16 @@ export const homeContent = {
     faqDescription: "Des réponses utiles sur notre clinique, nos traitements et notre accompagnement de communication.",
     faqItems: [
       {
-        question: "Comment contacter EMIS Dental ?",
-        answer: "Vous pouvez nous joindre par téléphone, e-mail, WhatsApp, Facebook, Zalo, YouTube ou via notre page de contact."
+        question: "Puis-je vérifier les diplômes et autorisations d'exercice de mon dentiste traitant ?",
+        answer: "Absolument. Emis Dental privilégie la transparence. Nos dentistes sont des praticiens autorisés, formés dans des institutions de référence aux États-Unis et dans l'université de médecine la mieux classée du Vietnam. Les patients peuvent demander la vérification des licences, qualifications et compétences cliniques avant de commencer le traitement."
       },
       {
-        question: "Quels canaux de support sont disponibles ?",
-        answer: "Nous proposons un support WhatsApp, un support par e-mail, des mises à jour Facebook et une communication de suivi tout au long de votre traitement."
+        question: "Emis Dental peut-il m'aider à organiser mon voyage de traitement au Vietnam ?",
+        answer: "Oui. Nous savons qu'un traitement dentaire à l'étranger peut être stressant. Emis Dental propose donc un accompagnement personnalisé de bout en bout: planification des soins, préparation du voyage, transferts aéroport, hébergement proche de la clinique, rendez-vous quotidiens, repas pendant la récupération, conseils médicamenteux et suivi post-traitement."
       },
       {
-        question: "Comment envoyer ma radiographie pour consultation ?",
-        answer: "Vous pouvez partager vos radiographies et dossiers via notre e-mail ou notre support WhatsApp pour une évaluation plus rapide."
-      },
-      {
-        question: "Proposez-vous un déroulé de traitement ?",
-        answer: "Oui, nous expliquons clairement les étapes du traitement, les visites prévues et le suivi dès le début."
+        question: "Que dois-je préparer avant de venir chez Emis Dental ?",
+        answer: "Pour planifier votre traitement efficacement, nous recommandons un CBCT récent (si disponible), des analyses sanguines récentes et vos informations médicales (antécédents, allergies, traitements en cours, soins dentaires ou implants antérieurs). Si vous n'avez pas ces documents, notre équipe peut organiser les examens nécessaires à votre arrivée. Pour les patients internationaux, il est conseillé de réserver les vols après confirmation des dates, de prévoir un temps de récupération suffisant, d'apporter la liste des médicaments et de disposer d'une assurance voyage si nécessaire."
       }
     ],
     serviceSupportTitle: "Support & Communication",
