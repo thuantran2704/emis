@@ -33,7 +33,7 @@ const About = () => {
   );
 
   return (
-    <main className="min-h-[calc(100vh-4rem)] bg-[#f7fafc] dark:bg-[#0f1419] pt-20">
+    <main className="min-h-[calc(100vh-4rem)] bg-[#f7fafc] pt-20">
       <Helmet>
         <title>{content.metaTitle || content.heroTitle}</title>
         <meta name="description" content={content.metaDescription || ''} />
@@ -78,7 +78,7 @@ const About = () => {
       </section>
 
       {/* OUR APPROACH */}
-      <section className="py-28 max-md:py-36 bg-white dark:bg-[#1a2332]">
+      <section className="py-28 max-md:py-36 bg-white">
         <div className="max-w-4xl mx-auto px-8 space-y-10">
           <div>
             <SectionLabel>Our Approach</SectionLabel>
@@ -101,14 +101,14 @@ const About = () => {
       </section>
 
       {/* WHY PLANNING MATTERS */}
-      <section className="py-28 max-md:py-36 bg-[#f1f5f9] dark:bg-[#0f1419]">
+      <section className="py-28 max-md:py-36 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto px-8 space-y-10">
           <div>
             <SectionLabel>Planning</SectionLabel>
             <SectionTitle>{content.planningTitle}</SectionTitle>
             <div className="space-y-5">
               {content.planningBullets.map((b, i) => (
-                <div key={i} className="bg-white dark:bg-[#2d3e52] rounded-2xl p-6 shadow-sm border border-[#dbe4ec] dark:border-[#4a5f7a]">
+                <div key={i} className="bg-white rounded-2xl p-6 shadow-sm border border-[#dbe4ec]">
                   <h3
                     className="text-lg text-[#2a3439] mb-2"
                     style={{ fontFamily: "'Playfair Display', serif" }}
@@ -136,7 +136,7 @@ const About = () => {
       </section>
 
       {/* TECHNOLOGY & SAFETY */}
-      <section className="py-28 max-md:py-36 bg-white dark:bg-[#1a2332]">
+      <section className="py-28 max-md:py-36 bg-white">
         <div className="max-w-4xl mx-auto px-8 space-y-10">
           <div>
             <SectionLabel>Technology</SectionLabel>
@@ -172,7 +172,7 @@ const About = () => {
       </section>
 
       {/* TEAM */}
-      <section className="py-28 max-md:py-36 bg-[#f1f5f9] dark:bg-[#0f1419]">
+      <section className="py-28 max-md:py-36 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto px-8 space-y-10">
           <div>
             <SectionLabel>Our Team</SectionLabel>
@@ -185,7 +185,7 @@ const About = () => {
             </p>
             <div className="space-y-5">
               {content.teamMembers.map((m, idx) => (
-                <div key={idx} className="bg-white dark:bg-[#2d3e52] rounded-2xl p-7 shadow-sm">
+                <div key={idx} className="bg-white rounded-2xl p-7 shadow-sm">
                   <h3
                     className="text-xl text-[#2a3439] mb-1"
                     style={{ fontFamily: "'Playfair Display', serif" }}
@@ -230,7 +230,7 @@ const About = () => {
       </section>
 
       {/* SUPPORT FOR OVERSEAS */}
-      <section className="py-28 max-md:py-36 bg-white dark:bg-[#1a2332]">
+      <section className="py-28 max-md:py-36 bg-white">
         <div className="max-w-4xl mx-auto px-8 space-y-10">
           <div>
             <SectionLabel>International Patients</SectionLabel>
@@ -245,7 +245,7 @@ const About = () => {
               {content.internationalBullets.map((b, i) => (
                 <div
                   key={i}
-                  className="flex items-center gap-3 bg-[#eef3f7] dark:bg-[#2d3e52] rounded-xl px-5 py-3.5 border border-[#dbe4ec] dark:border-[#4a5f7a]"
+                  className="flex items-center gap-3 bg-[#eef3f7] rounded-xl px-5 py-3.5 border border-[#dbe4ec]"
                   style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                 >
                   <span className="text-[#C5AF73] text-xs">●</span>
@@ -265,7 +265,7 @@ const About = () => {
       </section>
 
       {/* TRUST & TRANSPARENCY */}
-      <section className="py-28 max-md:py-36 bg-[#f1f5f9] dark:bg-[#0f1419]">
+      <section className="py-28 max-md:py-36 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto px-8 space-y-10">
           <div>
             <SectionLabel>Trust & Transparency</SectionLabel>
@@ -301,14 +301,14 @@ const About = () => {
       </section>
 
       {/* START STEPS */}
-      <section className="py-28 max-md:py-36 bg-white dark:bg-[#1a2332]">
+      <section className="py-28 max-md:py-36 bg-white">
         <div className="max-w-5xl mx-auto px-8 text-center">
           <SectionLabel>Getting Started</SectionLabel>
           <SectionTitle>{content.startTitle}</SectionTitle>
 
           <div className="mt-14 grid md:grid-cols-3 gap-6">
             {content.steps.map((s, i) => (
-              <div key={i} className="rounded-2xl p-8 bg-[#eef3f7] dark:bg-[#2d3e52] border border-[#dbe4ec] dark:border-[#4a5f7a]">
+              <div key={i} className="rounded-2xl p-8 bg-[#eef3f7] border border-[#dbe4ec]">
                 <p
                   className="text-[#C5AF73] text-xs tracking-[0.25em] mb-4 font-semibold"
                   style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
@@ -348,7 +348,7 @@ const About = () => {
             </Link>
             <Link
               to="/contact"
-              className="px-7 py-3.5 rounded-full border border-[#d4af37] text-[#2a3439] dark:text-white text-sm font-semibold hover:bg-[#eef3f7] dark:hover:bg-[#2d3e52] transition"
+              className="px-7 py-3.5 rounded-full border border-[#d4af37] text-[#2a3439] text-sm font-semibold hover:bg-[#eef3f7] transition"
               style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
             >
               {content.startSecondaryCTA || 'Talk With Our Team'}
