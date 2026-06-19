@@ -5,9 +5,7 @@ import phoneIcon from '../pics/phone.jpg';
 import facebook from '../pics/facebook.jpg';
 import zaloIcon from '../pics/zalo.jpg';
 import youtubeLogo from '../pics/youtube-logo.png';
-import linkedinLogo from '../pics/linkedin-logo.png';
 import whatsapp from '../pics/whatsapp-logo.png';
-import tiktokLogo from '../pics/tiktok-logo.png';
 import Alert from '../components/alert';
 import contactContent from '../Translations/contactContent';
 import ReCAPTCHA from "react-google-recaptcha"; // Add this import
@@ -145,13 +143,6 @@ export default function Contact() {
       href: "tel:+84919100021"
     },
     {
-      icon: phoneIcon,
-      alt: "Phone",
-      label: content.contactInfo.phone,
-      value: "+84 909 967 649",
-      href: "tel:+84909967649"
-    },
-    {
       icon: mailIcon,
       alt: "Email",
       label: content.contactInfo.email,
@@ -166,40 +157,25 @@ export default function Contact() {
       href: "https://zalo.me/2143697215679541994"
     },
     {
-      icon: facebook,
-      alt: "Facebook",
-      label: content.contactInfo.facebook,
-      value: "https://www.facebook.com/nhakhoaquocteemis",
-      href: "https://www.facebook.com/nhakhoaquocteemis"
-    },
-    {
       icon: whatsapp,
       alt: "WhatsApp",
       label: "WhatsApp",
       value: "https://wa.me/84909967649",
       href: "https://wa.me/84909967649"
     },
-
+    {
+      icon: facebook,
+      alt: "Facebook",
+      label: content.contactInfo.facebook,
+      value: "https://www.facebook.com/emisinternationaldental/",
+      href: "https://www.facebook.com/emisinternationaldental/"
+    },
     {
       icon: youtubeLogo,
       alt: "YouTube",
       label: "YouTube",
       value: "https://www.youtube.com/@NhaKhoaEmis",
       href: "https://www.youtube.com/@NhaKhoaEmis"
-    },
-    {
-      icon: linkedinLogo,
-      alt: "LinkedIn",
-      label: "LinkedIn",
-      value: "http://linkedin.com/company/emis-dental/",
-      href: "http://linkedin.com/company/emis-dental/"
-    },
-    {
-      icon: tiktokLogo,
-      alt: "TikTok",
-      label: "TikTok",
-      value: "https://www.tiktok.com/@emisdentalclinic",
-      href: "https://www.tiktok.com/@emisdentalclinic"
     },
     {
       icon: googleMaplogo,

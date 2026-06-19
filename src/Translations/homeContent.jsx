@@ -9,7 +9,7 @@ export const homeContent = {
     faqItems: [
       {
         question: "How can I contact EMIS Dental?",
-        answer: "You can reach us by phone, email, WhatsApp, Facebook, Zalo, YouTube, LinkedIn, TikTok, or through our contact page."
+        answer: "You can reach us by phone, email, WhatsApp, Facebook, Zalo, YouTube, or through our contact page."
       },
       {
         question: "What support channels are available?",
@@ -626,7 +626,7 @@ export const homeContent = {
     faqItems: [
       {
         question: "Làm thế nào để liên hệ với EMIS Dental?",
-        answer: "Bạn có thể liên hệ qua điện thoại, email, WhatsApp, Facebook, Zalo, YouTube, LinkedIn, TikTok hoặc qua trang liên hệ của chúng tôi."
+        answer: "Bạn có thể liên hệ qua điện thoại, email, WhatsApp, Facebook, Zalo, YouTube hoặc qua trang liên hệ của chúng tôi."
       },
       {
         question: "Có những kênh hỗ trợ nào?",
@@ -1243,7 +1243,7 @@ export const homeContent = {
     faqItems: [
       {
         question: "我如何联系 EMIS 牙科？",
-        answer: "您可以通过电话、电子邮件、WhatsApp、Facebook、Zalo、YouTube、LinkedIn、TikTok，或联系页面与我们取得联系。"
+        answer: "您可以通过电话、电子邮件、WhatsApp、Facebook、Zalo、YouTube，或联系页面与我们取得联系。"
       },
       {
         question: "有哪些支持渠道？",
@@ -1365,7 +1365,7 @@ export const homeContent = {
     faqItems: [
       {
         question: "EMIS 치과에 어떻게 연락할 수 있나요?",
-        answer: "전화, 이메일, WhatsApp, Facebook, Zalo, YouTube, LinkedIn, TikTok 또는 연락 페이지를 통해 문의하실 수 있습니다."
+        answer: "전화, 이메일, WhatsApp, Facebook, Zalo, YouTube 또는 연락 페이지를 통해 문의하실 수 있습니다."
       },
       {
         question: "어떤 지원 채널이 있나요?",
@@ -1489,7 +1489,7 @@ export const homeContent = {
     faqItems: [
       {
         question: "我如何聯絡 EMIS 牙科？",
-        answer: "您可以透過電話、電子郵件、WhatsApp、Facebook、Zalo、YouTube、LinkedIn、TikTok 或聯絡頁面與我們聯繫。"
+        answer: "您可以透過電話、電子郵件、WhatsApp、Facebook、Zalo、YouTube 或聯絡頁面與我們聯繫。"
       },
       {
         question: "有哪些支援管道？",
@@ -1612,7 +1612,7 @@ export const homeContent = {
     faqItems: [
       {
         question: "Comment contacter EMIS Dental ?",
-        answer: "Vous pouvez nous joindre par téléphone, e-mail, WhatsApp, Facebook, Zalo, YouTube, LinkedIn, TikTok ou via notre page de contact."
+        answer: "Vous pouvez nous joindre par téléphone, e-mail, WhatsApp, Facebook, Zalo, YouTube ou via notre page de contact."
       },
       {
         question: "Quels canaux de support sont disponibles ?",

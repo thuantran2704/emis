@@ -546,13 +546,6 @@ const CrownAd = () => {
                 <Phone className="w-5 h-5 mr-2" />
                 +84 919 100 021
               </a>
-              <a
-                href="tel:+84909967649"
-                className="inline-flex items-center justify-center bg-rose-800 text-white font-bold text-lg py-4 px-8 rounded-full shadow-lg hover:bg-rose-900 transition-all duration-300"
-              >
-                <Phone className="w-5 h-5 mr-2" />
-                +84 909 967 649
-              </a>
             </div>
             <p className="text-pink-200 text-sm font-semibold">{content.cta.subtext}</p>
           </section>

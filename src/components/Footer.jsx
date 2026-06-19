@@ -1,14 +1,11 @@
 import { FacebookIcon, Phone, Mail, MapPin } from "lucide-react";
 import zaloIcon from "../pics/zalo.jpg";
 import youtubeLogo from "../pics/youtube-logo.png";
-import linkedinLogo from "../pics/linkedin-logo.png";
-import tiktokLogo from "../pics/tiktok-logo.png";
 import footerContent from "../Translations/footerContent";
 import { useSelector } from 'react-redux';
 export default function Footer() {
   const language = useSelector((state) => state.language.language);
   const content = footerContent[language];
-  const secondaryPhone = content.phone2 || null;
   const socialHeading = content.socialTitle || content.connectTitle;
 
   return (
@@ -42,24 +39,14 @@ export default function Footer() {
             className="space-y-3 text-sm"
             style={{ fontFamily: "'Cormorant', serif" }}
           >
-            <li className="flex items-start gap-3">
+            <li className="flex items-center gap-3">
               <Phone className="text-[#d4af37]" size={18} />
-              <div className="flex flex-col gap-1">
-                <a
-                  href={`tel:${content.phone.replace(/\s/g, "")}`}
-                  className="hover:text-[#c19d30] transition"
-                >
-                  {content.phone}
-                </a>
-                {secondaryPhone && (
-                  <a
-                    href={`tel:${secondaryPhone.replace(/\s/g, "")}`}
-                    className="hover:text-[#c19d30] transition"
-                  >
-                    {secondaryPhone}
-                  </a>
-                )}
-              </div>
+              <a
+                href={`tel:${content.phone.replace(/\s/g, "")}`}
+                className="hover:text-[#c19d30] transition"
+              >
+                {content.phone}
+              </a>
             </li>
             <li className="flex items-center gap-3">
               <Mail className="text-[#d4af37]" size={18} />
@@ -87,7 +74,17 @@ export default function Footer() {
           </h3>
           <div className="flex items-center gap-4 mb-6">
             <a
-              href="https://www.facebook.com/nhakhoaquocteemis"
+              href="https://wa.me/84909967649"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 bg-white rounded-full shadow hover:shadow-md transition"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 text-green-600">
+                <path d="M12.04 2A10 10 0 0 0 2.02 12c0 1.76.46 3.45 1.33 4.94L2 22l5.2-1.36A10 10 0 1 0 12.04 2Zm5.11 14.25c-.22.63-1.27 1.16-1.93 1.31-.52.09-1.18.16-3.41-.73-2.88-1.16-4.73-4.03-4.87-4.21-.14-.18-1.16-1.55-1.16-2.95 0-1.4.73-2.08.99-2.36.26-.28.56-.35.74-.35h.54c.17 0 .4.01.61.47.22.47.75 1.63.82 1.75.07.12.12.26.02.42-.1.16-.15.26-.31.4-.16.14-.33.32-.47.54-.16.21-.33.44-.14.87.19.43.84 1.39 1.81 2.25 1.24 1.11 2.29 1.46 2.72 1.62.43.16.69.14.94-.08.25-.22.99-.91 1.26-1.22.27-.31.54-.26.91-.16.37.11 2.35 1.11 2.75 1.31.4.2.66.29.76.45.1.16.1.91-.12 1.54Z"/>
+              </svg>
+            </a>
+            <a
+              href="https://www.facebook.com/emisinternationaldental/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 bg-white rounded-full shadow hover:shadow-md transition"
@@ -118,41 +115,6 @@ export default function Footer() {
                 className="h-5 w-5 object-contain"
               />
             </a>
-            <a
-              href="http://linkedin.com/company/emis-dental/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 bg-white rounded-full shadow hover:shadow-md transition"
-            >
-              <img
-                src={linkedinLogo}
-                alt="LinkedIn"
-                className="h-5 w-5 object-contain"
-              />
-            </a>
-            <a
-              href="https://www.tiktok.com/@emisdentalclinic"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 bg-white rounded-full shadow hover:shadow-md transition"
-            >
-              <img
-                src={tiktokLogo}
-                alt="TikTok"
-                className="h-5 w-5 object-contain"
-              />
-            </a>
-            <a
-              href="https://wa.me/84909967649"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 bg-white rounded-full shadow hover:shadow-md transition"
-            >
-              <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 text-green-600">
-                <path d="M12.04 2A10 10 0 0 0 2.02 12c0 1.76.46 3.45 1.33 4.94L2 22l5.2-1.36A10 10 0 1 0 12.04 2Zm5.11 14.25c-.22.63-1.27 1.16-1.93 1.31-.52.09-1.18.16-3.41-.73-2.88-1.16-4.73-4.03-4.87-4.21-.14-.18-1.16-1.55-1.16-2.95 0-1.4.73-2.08.99-2.36.26-.28.56-.35.74-.35h.54c.17 0 .4.01.61.47.22.47.75 1.63.82 1.75.07.12.12.26.02.42-.1.16-.15.26-.31.4-.16.14-.33.32-.47.54-.16.21-.33.44-.14.87.19.43.84 1.39 1.81 2.25 1.24 1.11 2.29 1.46 2.72 1.62.43.16.69.14.94-.08.25-.22.99-.91 1.26-1.22.27-.31.54-.26.91-.16.37.11 2.35 1.11 2.75 1.31.4.2.66.29.76.45.1.16.1.91-.12 1.54Z"/>
-              </svg>
-            </a>
-      
           </div>
 
           <div>

@@ -6,13 +6,13 @@ export default function FloatingContactButton() {
 
   const items = [
     {
-      label: "Phone",
-      href: "tel:+84919100021",
-      icon: <Phone className="h-5 w-5" />,
+      label: "WhatsApp",
+      href: "https://wa.me/84909967649",
+      icon: <MessageCircle className="h-5 w-5" />,
     },
     {
-      label: "Phone 2",
-      href: "tel:+84909967649",
+      label: "Phone",
+      href: "tel:+84919100021",
       icon: <Phone className="h-5 w-5" />,
     },
     {
@@ -27,7 +27,7 @@ export default function FloatingContactButton() {
     },
     {
       label: "Facebook",
-      href: "https://www.facebook.com/nhakhoaquocteemis",
+      href: "https://www.facebook.com/emisinternationaldental/",
       icon: <Facebook className="h-5 w-5" />,
     },
   ];

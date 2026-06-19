@@ -39,8 +39,7 @@ export const schemaMarkup = JSON.stringify([
     ],
     "areaServed": "Ho Chi Minh City, Vietnam",
     "sameAs": [
-      "https://www.facebook.com/emisinternationaldental",
-      "https://www.facebook.com/nhakhoaquocteemis"
+      "https://www.facebook.com/emisinternationaldental/"
     ],
     "medicalSpecialty": [
       "DentalImplants",
