@@ -23,6 +23,7 @@ import CrownAd from './pages/crown.jsx';
 import GenAd from './pages/genAd.jsx';
 import CanalAd from './pages/canal.jsx';
 import Doctors from './pages/doctors.jsx';
+import DrTuPage from './pages/drTuPage.jsx';
 
 function ExternalRedirect({ to }) {
   useEffect(() => {
@@ -78,6 +79,7 @@ function AppShell() {
           <Route path="/implant" element={<Implant />}/>
           <Route path="/crown" element={<CrownLanding/>}/>
           <Route path="dr-son" element={<SonPage />}/>
+          <Route path="/dr-tu" element={<DrTuPage />} />
           <Route path="/visitor-program" element={<DentalVisitorProgram />} />
           <Route path="/whiteningAd" element={<WhiteningAd/>}/>
           <Route path="/crownAd" element={<CrownAd/>}/>

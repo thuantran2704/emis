@@ -9,7 +9,6 @@ import onlineConsultation from '../pics/consulting-team.jpg';
 import explainPlan from '../pics/doctor-explaining-treatment-x-ray-angle-3.jpg';
 import drTuWorking from '../pics/dr-tu-working.jpg';
 import drTuPortrait from '../pics/dr-tu-potrait.jpg';
-import drVanPortrait from '../pics/doctor-phat.jpg';
 import lifestyleDinner from '../pics/eating-casually.jpeg';
 import confidentSmile from '../pics/confident-smile-social.jpeg';
 import elderSocializing from '../pics/elder-person-socializing.jpeg';
@@ -223,10 +222,10 @@ export default function Home() {
               <p className="text-lg leading-relaxed text-gray-500" style={{ fontFamily: "'Cormorant', serif" }}>{page.doctors.intro}</p>
 
               <div className="mt-8 space-y-6">
-                {page.doctors.cards.map((doctor, index) => (
+                {page.doctors.cards.map((doctor) => (
                   <article key={doctor.name} className="grid gap-4 border-b border-[#dbe4ec] pb-6 last:border-b-0 sm:grid-cols-[152px_1fr] sm:items-start sm:gap-5">
                     <img
-                      src={index === 0 ? drTuPortrait : drVanPortrait}
+                      src={drTuPortrait}
                       alt={doctor.name}
                       className="h-[114px] w-full rounded-2xl border border-[#dbe4ec] object-cover sm:h-[108px] sm:w-[152px]"
                     />

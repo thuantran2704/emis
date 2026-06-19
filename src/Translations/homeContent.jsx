@@ -171,14 +171,6 @@ export const homeContent = {
               "Currently practicing at Ho Chi Minh City Odonto-Maxillofacial Hospital and EMIS Premium Dental Clinic.",
             languages: "Vietnamese • English • Hungarian • Chinese",
           },
-          {
-            name: "Dr. Nguyen Thi Bich Van",
-            role: "Implant Restoration & Prosthetic Rehabilitation",
-            focus: "Implant-Supported Restorations • All-on-4 / All-on-6 • Smile Rehabilitation",
-            summary:
-              "More than a decade of experience in restorative and implant-supported dental care.",
-            languages: "Vietnamese • English",
-          },
         ],
         philosophyTitle: "Our Treatment Philosophy",
         philosophyText:
@@ -410,13 +402,6 @@ export const homeContent = {
             focus: "Implant Surgery • Oral Surgery • Full-Mouth Rehabilitation",
             summary: "Currently practicing at Ho Chi Minh City Odonto-Maxillofacial Hospital and EMIS Premium Dental Clinic.",
             languages: "Vietnamese • English • Hungarian • Chinese"
-          },
-          {
-            name: "Dr. Nguyen Thi Bich Van",
-            role: "Implant Restoration & Prosthetic Rehabilitation",
-            focus: "Implant-Supported Restorations • All-on-4 / All-on-6 • Smile Rehabilitation",
-            summary: "More than a decade of experience in restorative and implant-supported dental care.",
-            languages: "Vietnamese • English"
           }
         ],
         philosophyTitle: "Our Treatment Philosophy",
@@ -769,14 +754,6 @@ export const homeContent = {
               "Hiện đang công tác tại Bệnh viện Răng Hàm Mặt TP.HCM và EMIS Premium Dental Clinic.",
             languages: "Tiếng Việt • English • Hungarian • Chinese",
           },
-          {
-            name: "BS. CKI Nguyễn Thị Bích Vân",
-            role: "Phục hình Implant • All-on-4 / All-on-6 • Phục hồi thẩm mỹ và chức năng",
-            focus: "",
-            summary:
-              "",
-            languages: "",
-          },
         ],
         philosophyTitle: "Triết Lý Điều Trị",
         philosophyText:
@@ -1008,13 +985,6 @@ export const homeContent = {
             focus: "Phẫu thuật Implant • Tiểu phẫu Răng Hàm Mặt • Phục hồi toàn hàm",
             summary: "Hiện đang công tác tại Bệnh viện Răng Hàm Mặt TP.HCM và EMIS Premium Dental Clinic.",
             languages: "Tiếng Việt • English • Hungarian • Chinese"
-          },
-          {
-            name: "BS. CKI Nguyễn Thị Bích Vân",
-            role: "Phục hình Implant & Phục hồi chức năng",
-            focus: "Phục hình Implant • All-on-4 / All-on-6 • Phục hồi thẩm mỹ và chức năng",
-            summary: "Hơn 10 năm kinh nghiệm trong phục hình răng và phục hồi trên Implant.",
-            languages: "Tiếng Việt • English"
           }
         ],
         philosophyTitle: "Triết Lý Điều Trị",
