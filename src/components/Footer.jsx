@@ -8,6 +8,8 @@ import { useSelector } from 'react-redux';
 export default function Footer() {
   const language = useSelector((state) => state.language.language);
   const content = footerContent[language];
+  const secondaryPhone = content.phone2 || null;
+  const socialHeading = content.socialTitle || content.connectTitle;
 
   return (
     <footer className="bg-[#f7f2e7] border-t border-[#e0d8c3] text-[#1f2937]">
@@ -79,7 +81,7 @@ export default function Footer() {
             className="text-2xl font-bold text-[#d4af37] mb-4"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            {content.socialTitle}
+            {socialHeading}
           </h3>
           <div className="flex items-center gap-4 mb-6">
             <a
@@ -157,12 +159,14 @@ export default function Footer() {
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
               {content.workingHoursTitle}
-            </h4>
-            <p className="text-sm" style={{ fontFamily: "'Cormorant', serif" }}>
-              {content.workingHours.split("\n").map((line, i) => (
-                <span key={i}>
-                  {line}
-                  <br />
+                {secondaryPhone && (
+                  <a
+                    href={`tel:${secondaryPhone.replace(/\s/g, "")}`}
+                    className="hover:text-[#c19d30] transition"
+                  >
+                    {secondaryPhone}
+                  </a>
+                )}
                 </span>
               ))}
             </p>

@@ -40,6 +40,7 @@ const footerContent = {
     address:
       "越南胡志明市第三郡武氏六坊范玉石街62B号，邮编700000",
     phone: "+84 919 100 021",
+    phone2: "+84 909 967 649",
     email: "Emisdentalclinic@gmail.com",
     connectTitle: "关注我们",
     workingHoursTitle: "营业时间",
