@@ -51,12 +51,14 @@ export default function Footer() {
                 >
                   {content.phone}
                 </a>
-                <a
-                  href={`tel:${content.phone2.replace(/\s/g, "")}`}
-                  className="hover:text-[#c19d30] transition"
-                >
-                  {content.phone2}
-                </a>
+                {secondaryPhone && (
+                  <a
+                    href={`tel:${secondaryPhone.replace(/\s/g, "")}`}
+                    className="hover:text-[#c19d30] transition"
+                  >
+                    {secondaryPhone}
+                  </a>
+                )}
               </div>
             </li>
             <li className="flex items-center gap-3">
@@ -159,14 +161,12 @@ export default function Footer() {
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
               {content.workingHoursTitle}
-                {secondaryPhone && (
-                  <a
-                    href={`tel:${secondaryPhone.replace(/\s/g, "")}`}
-                    className="hover:text-[#c19d30] transition"
-                  >
-                    {secondaryPhone}
-                  </a>
-                )}
+            </h4>
+            <p className="text-sm" style={{ fontFamily: "'Cormorant', serif" }}>
+              {content.workingHours.split("\n").map((line, i) => (
+                <span key={i}>
+                  {line}
+                  <br />
                 </span>
               ))}
             </p>
