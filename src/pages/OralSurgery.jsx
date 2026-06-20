@@ -4,16 +4,21 @@ import { useSelector } from 'react-redux';
 import { Helmet } from 'react-helmet';
 import { CheckCircle, ArrowRight } from 'lucide-react';
 import { oralSurgeryContent } from '../Translations/oralSurgeryContent';
-import xrayImg from '../pics/anh_chup_xquang_implant.jpg';
+import oralSurgeryHeroImg from '../pics/dr-at-work-surgery.jpg';
+import wisdomTeethImg from '../pics/wisdom-teeth.jpg';
+import evaluationProcessImg from '../pics/doctor-reviewing-x-ray-with-patient-explaining-treatment.jpg';
 
 const OralSurgery = () => {
   const language = useSelector((state) => state.language.language);
   const content = oralSurgeryContent[language] || oralSurgeryContent.english;
 
-  const sectionLabelClass = "uppercase tracking-[0.3em] text-[#C5AF73] text-xs font-semibold";
-  const titleClass = "text-4xl md:text-5xl text-[#2a3439] leading-tight";
-  const bodyClass = "text-lg text-gray-600 leading-relaxed";
-  const checklistItemClass = "flex gap-3 items-start";
+  const sectionLabelClass = 'uppercase tracking-[0.3em] text-[#C5AF73] text-xs font-semibold';
+  const titleClass = 'text-4xl md:text-5xl text-[#2a3439] leading-tight';
+  const bodyClass = 'text-lg text-gray-600 leading-relaxed';
+  const checklistItemClass = 'flex gap-3 items-start';
+  const showSection2Eyebrow =
+    (content.section2?.eyebrow || '').trim().toLowerCase() !==
+    (content.section2?.title || '').trim().toLowerCase();
 
   return (
     <main className="bg-[#f7fafc] text-[#2a3439]">
@@ -31,8 +36,8 @@ const OralSurgery = () => {
             <div className="order-1 lg:order-2">
               <div className="overflow-hidden rounded-2xl shadow-lg aspect-[16/9] lg:aspect-auto">
                 <img
-                  src={xrayImg}
-                  alt="Dental X-ray and CBCT imaging for oral surgery assessment and treatment planning"
+                  src={oralSurgeryHeroImg}
+                  alt="Dentist performing oral surgery procedure in treatment room"
                   className="w-full h-full lg:h-[460px] object-cover object-center"
                 />
               </div>
@@ -40,7 +45,7 @@ const OralSurgery = () => {
 
             <div className="order-2 lg:order-1 space-y-6">
               <p className={sectionLabelClass} style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}>
-                {content.section1.eyebrow || "ORAL SURGERY"}
+                {content.section1.eyebrow || 'ORAL SURGERY'}
               </p>
 
               <h1 className={titleClass} style={{ fontFamily: "'Playfair Display', serif" }}>
@@ -76,9 +81,11 @@ const OralSurgery = () => {
       <section className="py-20 lg:py-32 bg-white">
         <div className="max-w-5xl mx-auto px-8">
           <div className="max-w-2xl mx-auto text-center mb-16 lg:mb-20">
-            <p className={sectionLabelClass} style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}>
-              {content.section2.eyebrow}
-            </p>
+            {showSection2Eyebrow && (
+              <p className={sectionLabelClass} style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}>
+                {content.section2.eyebrow}
+              </p>
+            )}
             <h2 className={titleClass} style={{ fontFamily: "'Playfair Display', serif" }}>
               {content.section2.title}
             </h2>
@@ -87,7 +94,7 @@ const OralSurgery = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto items-stretch">
             <div className="bg-[#f7fafc] rounded-xl p-8">
               <div className="space-y-4">
                 {content.section2.checklist.map((item, i) => (
@@ -97,6 +104,14 @@ const OralSurgery = () => {
                   </div>
                 ))}
               </div>
+            </div>
+            <div className="rounded-xl overflow-hidden shadow-sm border border-[#dfe7ef] bg-white min-h-[320px]">
+              <img
+                src={wisdomTeethImg}
+                alt="Wisdom teeth X-ray style visual for oral surgery candidacy"
+                className="w-full h-full object-cover object-center"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
@@ -117,7 +132,7 @@ const OralSurgery = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto items-stretch">
             <div className="bg-white rounded-xl p-8">
               <div className="space-y-4">
                 {content.section3.checklist.map((item, i) => (
@@ -127,6 +142,14 @@ const OralSurgery = () => {
                   </div>
                 ))}
               </div>
+            </div>
+            <div className="rounded-xl overflow-hidden shadow-sm border border-[#dfe7ef] bg-white min-h-[320px]">
+              <img
+                src={evaluationProcessImg}
+                alt="Doctor evaluating X-ray and CBCT information with patient"
+                className="w-full h-full object-cover object-center"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
@@ -178,7 +201,7 @@ const OralSurgery = () => {
             <p className={sectionLabelClass} style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}>
               {content.section5.eyebrow}
             </p>
-            <h2 className={titleClass + " mb-6"} style={{ fontFamily: "'Playfair Display', serif" }}>
+            <h2 className={titleClass + ' mb-6'} style={{ fontFamily: "'Playfair Display', serif" }}>
               {content.section5.title}
             </h2>
             <div className="space-y-4 mb-8">
@@ -211,10 +234,10 @@ const OralSurgery = () => {
             <p className={sectionLabelClass} style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}>
               {content.section6.eyebrow}
             </p>
-            <h2 className={titleClass + " mb-6"} style={{ fontFamily: "'Playfair Display', serif" }}>
+            <h2 className={titleClass + ' mb-6'} style={{ fontFamily: "'Playfair Display', serif" }}>
               {content.section6.title}
             </h2>
-            <p className={bodyClass + " mb-8"} style={{ fontFamily: "'Cormorant', serif" }}>
+            <p className={bodyClass + ' mb-8'} style={{ fontFamily: "'Cormorant', serif" }}>
               {content.section6.intro}
             </p>
             <Link
@@ -233,10 +256,10 @@ const OralSurgery = () => {
       <section className="py-20 lg:py-32 bg-[#f7fafc]">
         <div className="max-w-5xl mx-auto px-8">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className={titleClass + " mb-6"} style={{ fontFamily: "'Playfair Display', serif" }}>
+            <h2 className={titleClass + ' mb-6'} style={{ fontFamily: "'Playfair Display', serif" }}>
               {content.section7.title}
             </h2>
-            <p className={bodyClass + " mb-8"} style={{ fontFamily: "'Cormorant', serif" }}>
+            <p className={bodyClass + ' mb-8'} style={{ fontFamily: "'Cormorant', serif" }}>
               {content.section7.intro}
             </p>
 

@@ -30,6 +30,7 @@ Required:
 Optional:
 - Target translation file(s) if content should be localized.
 - Preferred route or navbar link target.
+- Preferred section image mapping if specific pictures are required.
 
 ## Workflow
 
@@ -39,6 +40,7 @@ Optional:
 2. Confirm target page file path and route destination.
 3. Load `.github/style_guide.md` and relevant existing page patterns.
 4. Load `home_content` to identify reusable content schema and section structure.
+5. Scan `src/pics/` for section-appropriate images before page composition.
 
 Decision points:
 - If `.github/content.md` is missing, ask for the exact content filename.
@@ -49,10 +51,12 @@ Decision points:
 1. Parse content into section blocks (hero, body, CTA, FAQ, etc. as available).
 2. Map each block to existing page/component patterns in the repo.
 3. Reorder sections when needed for usability and visual hierarchy.
+4. Map each section to candidate assets from `src/pics/` and define fallback layout when no image exists.
 
 Decision points:
 - Content does not need strict sequential rendering; prioritize clarity and user flow.
 - If a section is unclear, preserve source wording and place in the most semantically correct section.
+- If no suitable image exists for a section, render a centered symmetric text layout with no reserved media column/empty gap.
 
 ### Phase 3: Implementation via Dev Agent
 
@@ -61,6 +65,7 @@ Decision points:
 3. Reuse existing components before creating new ones.
 4. Apply style-guide constraints for typography, color, spacing, accessibility, and size guardrails.
 5. Add translation-safe optional rendering and fallback patterns where needed.
+6. Source visuals from `src/pics/` first; use conditional media rendering so sections remain balanced when an image is absent.
 
 Decision points:
 - If page/component size exceeds soft limits, split into section components.
@@ -83,6 +88,8 @@ Decision points:
 
 - New page is created and styled according to `.github/style_guide.md`.
 - Content is populated from the `.github` source and `home_content` patterns.
+- Section images are selected from `src/pics/` when available.
+- Sections without images remain visually symmetric (no empty image placeholders or blank grid columns).
 - Implementation and validation are completed by `dev-agent`.
 - SEO refinement is completed by `seo-agent`.
 - Edited scope has no unresolved errors.

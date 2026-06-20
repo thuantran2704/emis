@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setLanguage } from '../slices/languageSlice';
 
-export default function LanguageToggle({ variant = 'floating' }) {
+export default function LanguageToggle({ variant = 'floating', compact = false }) {
   const [isOpen, setIsOpen] = useState(false);
   const dispatch = useDispatch();
   const isNavbar = variant === 'navbar';
@@ -56,7 +56,11 @@ export default function LanguageToggle({ variant = 'floating' }) {
       {isNavbar ? (
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="flex items-center gap-1.5 px-3 py-2 rounded-full border border-[#d4af37]/40 text-[#f3e2b0] text-xs font-semibold hover:border-[#d4af37] hover:bg-[#d4af37]/20 hover:text-white transition-colors"
+          className={`flex items-center rounded-full border border-[#d4af37]/40 text-[#f3e2b0] font-semibold hover:border-[#d4af37] hover:bg-[#d4af37]/20 hover:text-white transition-colors ${
+            compact
+              ? 'h-9 min-w-[52px] justify-center gap-1 px-2 text-[11px] leading-none'
+              : 'gap-1.5 px-3 py-2 text-xs'
+          }`}
           style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
         >
           <span>{currentLabel}</span>

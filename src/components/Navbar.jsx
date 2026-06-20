@@ -11,6 +11,11 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [isJuneOpen, setIsJuneOpen] = useState(false);
+  const [isLandscape, setIsLandscape] = useState(() =>
+    typeof window !== 'undefined'
+      ? window.matchMedia('(orientation: landscape)').matches
+      : true
+  );
 
   const closeAllMenus = () => {
     setIsMenuOpen(false);
@@ -21,6 +26,21 @@ export default function Navbar() {
   useEffect(() => {
     closeAllMenus();
   }, [location.pathname]);
+
+  useEffect(() => {
+    const media = window.matchMedia('(orientation: landscape)');
+
+    const applyOrientation = () => {
+      setIsLandscape(media.matches);
+    };
+
+    applyOrientation();
+    media.addEventListener('change', applyOrientation);
+
+    return () => {
+      media.removeEventListener('change', applyOrientation);
+    };
+  }, []);
 
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
   const toggleAbout = () => {
@@ -62,22 +82,24 @@ export default function Navbar() {
     { name: content.drSon, path: '/dr-son' },
     { name: content.drTu, path: '/dr-tu' },
     { name: content.doctors, path: '/doctors' },
-    { name: content.veneer, path: '/veneer' },
-    { name: content.implant, path: '/implant' },
     { name: content.equipment, path: '/equipment' },
   ];
 
-  const juneDropdownItems = [
-    { name: content.crown, path: '/crownAd' },
-    { name: content.whitening, path: '/whiteningAd' },
-    { name: content.canal, path: '/canal' },
+  const treatmentDropdownItems = [
+    { name: content.oralSurgery, path: '/oral-surgery' },
+    { name: content.implant, path: '/implant' },
+    { name: content.veneer, path: '/veneer' },
+    { name: content.crown, path: '/crown' },
+    { name: content.services, path: '/services' },
   ];
 
   return (
     <>
       {isMenuOpen && (
         <div
-          className="fixed inset-0 bg-[#2a3439]/20 backdrop-blur-sm z-40 md:hidden"
+          className={`fixed inset-0 bg-[#2a3439]/20 backdrop-blur-sm z-40 ${
+            isLandscape ? 'xl:hidden' : ''
+          }`}
           onClick={closeAllMenus}
         />
       )}
@@ -99,7 +121,7 @@ export default function Navbar() {
             </span>
           </Link>
 
-          <div className="hidden items-center gap-2 md:flex">
+          <div className={`${isLandscape ? 'hidden xl:flex' : 'hidden'} items-center gap-2`}>
             <Link to="/" className={navLinkClass('/')} style={navFont}>
               {content.home}
             </Link>
@@ -143,22 +165,22 @@ export default function Navbar() {
               )}
             </div>
 
-            <Link to="/services" className={navLinkClass('/services')} style={navFont}>
-              {content.services}
+            <Link to="/international-patients" className={navLinkClass('/international-patients')} style={navFont}>
+              {content.internationalPatients}
             </Link>
 
             <div className="relative flex items-center">
               <Link
-                to="/genAd"
-                className={navLinkClass('/genAd')}
+                to="/services"
+                className={navLinkClass('/services')}
                 style={navFont}
               >
-                {content.juneOffer}
+                {content.treatments}
               </Link>
               <button
                 onClick={toggleJune}
                 className="ml-0.5 inline-flex h-10 w-8 items-center justify-center rounded-full text-[#f3e2b0] hover:bg-[#d4af37]/20 hover:text-white"
-                aria-label="Toggle June offers menu"
+                aria-label="Toggle treatments menu"
               >
                 <svg
                   className={`h-4 w-4 transition-transform duration-200 ${isJuneOpen ? 'rotate-180' : ''}`}
@@ -172,7 +194,7 @@ export default function Navbar() {
 
               {isJuneOpen && (
                 <div className="absolute left-0 top-full mt-3 w-56 rounded-2xl border border-[#eadfc4] bg-white p-2 shadow-[0_14px_28px_rgba(31,41,55,0.16)]">
-                  {juneDropdownItems.map((sub) => (
+                  {treatmentDropdownItems.map((sub) => (
                     <Link
                       key={sub.name}
                       to={sub.path}
@@ -190,6 +212,10 @@ export default function Navbar() {
               {content.gratitude}
             </Link>
 
+            <Link to="/genAd" className={navLinkClass('/genAd')} style={navFont}>
+              {content.juneOffer}
+            </Link>
+
             <Link
               to="/contact"
               className="ml-2 inline-flex h-10 items-center rounded-full bg-[#d4af37] px-5 text-sm font-semibold text-white shadow-sm transition hover:bg-[#c19d30]"
@@ -203,13 +229,13 @@ export default function Navbar() {
             </div>
           </div>
 
-          <div className="flex items-center gap-2 md:hidden">
-            <div className="hidden sm:block">
-              <LanguageToggle variant="navbar" />
+          <div className={`${isLandscape ? 'flex xl:hidden' : 'flex'} items-center gap-2 shrink-0`}>
+            <div className="shrink-0">
+              <LanguageToggle variant="navbar" compact />
             </div>
             <button
               onClick={toggleMenu}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#d4af37]/40 text-[#f3e2b0] hover:bg-[#d4af37]/20 hover:text-white"
+              className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#d4af37]/40 text-[#f3e2b0] hover:bg-[#d4af37]/20 hover:text-white"
               aria-label="Toggle mobile menu"
             >
               <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -224,7 +250,7 @@ export default function Navbar() {
         </div>
 
         <div
-          className={`md:hidden overflow-hidden border-t border-[#e6d9ba] bg-[#fbf7ed] transition-[max-height] duration-300 ${
+          className={`${isLandscape ? 'xl:hidden' : ''} overflow-hidden border-t border-[#e6d9ba] bg-[#fbf7ed] transition-[max-height] duration-300 ${
             isMenuOpen ? 'max-h-[85vh]' : 'max-h-0'
           }`}
         >
@@ -280,28 +306,33 @@ export default function Navbar() {
               )}
             </div>
 
-            <Link to="/services" className={mobileLinkClass('/services')} onClick={closeAllMenus} style={navFont}>
-              {content.services}
+            <Link
+              to="/international-patients"
+              className={mobileLinkClass('/international-patients')}
+              onClick={closeAllMenus}
+              style={navFont}
+            >
+              {content.internationalPatients}
             </Link>
 
             <div>
               <div className="flex items-center justify-between rounded-xl px-3 py-2.5">
                 <Link
-                  to="/genAd"
-                  className={mobileLinkClass('/genAd')}
+                  to="/services"
+                  className={mobileLinkClass('/services')}
                   style={navFont}
                   onClick={() => {
                     setIsJuneOpen(false);
                     setIsMenuOpen(false);
                   }}
                 >
-                  {content.juneOffer}
+                  {content.treatments}
                 </Link>
 
                 <button
                   onClick={toggleJune}
                   className="rounded-full p-1 text-[#2a3439] hover:bg-[#efe3c5]"
-                  aria-label="Toggle June submenu"
+                  aria-label="Toggle treatments submenu"
                 >
                   <svg
                     className={`h-4 w-4 transition-transform ${isJuneOpen ? 'rotate-180' : ''}`}
@@ -316,7 +347,7 @@ export default function Navbar() {
 
               {isJuneOpen && (
                 <div className="ml-4 mt-1 space-y-1 border-l border-[#e3d4b0] pl-3">
-                  {juneDropdownItems.map((sub) => (
+                  {treatmentDropdownItems.map((sub) => (
                     <Link
                       key={sub.name}
                       to={sub.path}
@@ -330,6 +361,10 @@ export default function Navbar() {
                 </div>
               )}
             </div>
+
+            <Link to="/genAd" className={mobileLinkClass('/genAd')} onClick={closeAllMenus} style={navFont}>
+              {content.juneOffer}
+            </Link>
 
             <Link
               to="/visitor-program"
@@ -349,9 +384,6 @@ export default function Navbar() {
               {content.contact}
             </Link>
 
-            <div className="px-3 pt-3 sm:hidden">
-              <LanguageToggle variant="navbar" />
-            </div>
           </div>
         </div>
       </nav>
