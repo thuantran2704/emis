@@ -40,6 +40,8 @@ function ExternalRedirect({ to }) {
 function AppShell() {
   const location = useLocation();
   const isRedirectRoute = ['/mail', '/drive'].includes(location.pathname);
+  const siteUrl = (import.meta.env.VITE_SITE_URL || 'https://emisdental.com').replace(/\/$/, '');
+  const canonicalUrl = `${siteUrl}${location.pathname}`;
   const zohoMailUrl = import.meta.env.VITE_ZOHO_MAIL_URL || 'https://mail.zoho.com';
   const zohoDriveUrl = import.meta.env.VITE_ZOHO_DRIVE_URL || 'https://workdrive.zoho.com';
   const language = useSelector((state) => state.language.language);
@@ -69,6 +71,11 @@ function AppShell() {
   return (
     <>
       <Helmet>
+        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="robots" content={isRedirectRoute ? 'noindex, nofollow' : 'index, follow'} />
         <script type="application/ld+json">
           {schemaMarkup}
         </script>
