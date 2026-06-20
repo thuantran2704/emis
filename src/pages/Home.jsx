@@ -23,6 +23,12 @@ import supportJourney2 from '../pics/implant_irl.jpg';
 import internationalSupport from '../pics/doctor-discussing-treatment-other-pic-ad-in-the-back.jpg';
 import ctaBackground from '../pics/doctor-explaining-procedure-to-patient.jpg';
 import ContactForm from '../components/ContactForm';
+import ImplantPlannerBanner from '../components/implants_banner';
+import ServiceCard from '../components/ServiceCard';
+import serviceGeneral from '../pics/doctor-explaining-procedure-to-patient.jpg';
+import serviceImplant from '../pics/implant_irl.jpg';
+import serviceCrown from '../pics/crown.jpg';
+import serviceInvisalign from '../pics/invisalign.jpg';
 
 const locales = {
   vietnamese: 'vi_VN',
@@ -34,7 +40,10 @@ const locales = {
 
 export default function Home() {
   const language = useSelector((state) => state.language.language);
-  const page = homeContent[language]?.homepageV2 || homeContent.english.homepageV2;
+  const localizedHome = homeContent[language] || homeContent.english;
+  const page = localizedHome.homepageV2 || homeContent.english.homepageV2;
+  const serviceCards = (localizedHome.services || homeContent.english.services || []).slice(0, 4);
+  const serviceImages = [serviceGeneral, serviceImplant, serviceCrown, serviceInvisalign];
   const sectionLabelClass = "mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-[#C5AF73]";
   const getDoctorPortrait = (doctorName = '') => {
     const normalizedName = doctorName.toLowerCase();
@@ -211,6 +220,30 @@ export default function Home() {
 
       <section className="bg-[#f1f5f9] py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-6">
+          <p className={sectionLabelClass}>{localizedHome.servicesTitle || 'Oral Health Services'}</p>
+          <h2 className="text-3xl font-bold text-[#16324a] md:text-4xl" style={{ fontFamily: "'Playfair Display', serif" }}>
+            {page.pathways.title}
+          </h2>
+          <p className="mt-4 max-w-4xl text-lg leading-relaxed text-[#516b83]">{page.pathways.intro}</p>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            {serviceCards.map((service, index) => (
+              <ServiceCard
+                key={service.name}
+                service={service}
+                image={serviceImages[index % serviceImages.length]}
+                altText={service.name}
+                bookNowText={localizedHome.bookButton || 'Book Consultation'}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <ImplantPlannerBanner />
+
+      <section className="bg-[#f1f5f9] py-16 md:py-20">
+        <div className="mx-auto max-w-7xl px-6">
           <p className={sectionLabelClass}>Our Team</p>
           <h2 className="text-3xl font-bold text-[#2a3439] md:text-4xl" style={{ fontFamily: "'Playfair Display', serif" }}>{page.doctors.title}</h2>
 
@@ -330,35 +363,43 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#f1f5f9] py-16 md:py-20">
+      <section className="hidden bg-[#f1f5f9] py-16 md:block md:py-20">
         <div className="mx-auto max-w-7xl px-6">
           <h2 className="text-3xl font-bold text-[#16324a] md:text-4xl" style={{ fontFamily: "'Playfair Display', serif" }}>{page.patientJourneys.title}</h2>
           <p className="mt-4 max-w-4xl text-lg leading-relaxed text-[#516b83]">{page.patientJourneys.intro}</p>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-[1.3fr_1fr_1fr]">
-            <article className="overflow-hidden rounded-2xl border border-[#d9e4ed] bg-white shadow-sm">
-              <img src={flagshipJourney} alt={page.patientJourneys.featured.title} className="h-60 w-full object-cover" />
-              <div className="p-6">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7b95ab]">{page.patientJourneys.featured.tag}</p>
-                <h3 className="mt-2 text-xl font-semibold text-[#1d3953]" style={{ fontFamily: "'Playfair Display', serif" }}>{page.patientJourneys.featured.title}</h3>
-                <p className="mt-2 text-sm text-[#5d7388]">{page.patientJourneys.featured.subtitle}</p>
-                <p className="mt-1 text-sm text-[#6f8da6]">{page.patientJourneys.featured.country}</p>
-              </div>
-            </article>
-
-            {[supportJourney1, supportJourney2].map((image, index) => {
-              const journey = page.patientJourneys.supporting[index];
-              return (
-                <article key={journey.title} className="overflow-hidden rounded-2xl border border-[#d9e4ed] bg-white shadow-sm">
-                  <img src={image} alt={journey.title} className="h-40 w-full object-cover" />
-                  <div className="p-5">
-                    <h3 className="text-lg font-semibold text-[#1d3953]" style={{ fontFamily: "'Playfair Display', serif" }}>{journey.title}</h3>
-                    <p className="mt-2 text-sm text-[#5d7388]">{journey.subtitle}</p>
-                    <p className="mt-1 text-sm text-[#6f8da6]">{journey.country}</p>
-                  </div>
-                </article>
-              );
-            })}
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {[
+              {
+                image: flagshipJourney,
+                title: page.patientJourneys.featured.title,
+                subtitle: page.patientJourneys.featured.subtitle,
+                country: page.patientJourneys.featured.country,
+                tag: page.patientJourneys.featured.tag,
+              },
+              {
+                image: supportJourney1,
+                title: page.patientJourneys.supporting[0].title,
+                subtitle: page.patientJourneys.supporting[0].subtitle,
+                country: page.patientJourneys.supporting[0].country,
+              },
+              {
+                image: supportJourney2,
+                title: page.patientJourneys.supporting[1].title,
+                subtitle: page.patientJourneys.supporting[1].subtitle,
+                country: page.patientJourneys.supporting[1].country,
+              },
+            ].map((journey) => (
+              <article key={journey.title} className="overflow-hidden rounded-2xl border border-[#d9e4ed] bg-white shadow-sm">
+                <img src={journey.image} alt={journey.title} className="aspect-[16/10] w-full object-cover object-center" />
+                <div className="p-5">
+                  {journey.tag && <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7b95ab]">{journey.tag}</p>}
+                  <h3 className="mt-2 text-lg font-semibold text-[#1d3953]" style={{ fontFamily: "'Playfair Display', serif" }}>{journey.title}</h3>
+                  <p className="mt-2 text-sm text-[#5d7388]">{journey.subtitle}</p>
+                  <p className="mt-1 text-sm text-[#6f8da6]">{journey.country}</p>
+                </div>
+              </article>
+            ))}
           </div>
 
           <div className="mt-8 flex flex-wrap items-center justify-between gap-4">
