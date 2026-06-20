@@ -40,15 +40,15 @@ const aboutContent = {
     teamIntro: 'A team working toward one goal: helping patients regain comfort, function, confidence, and long-term quality of life.',
     teamMembers: [
       {
-        name: 'Dr. Tran Minh Tu',
-        role: 'Odonto-Maxillofacial Surgeon',
-        description: 'Implant Surgery • Oral Surgery • Full-Mouth Rehabilitation. Currently practicing at Ho Chi Minh City Odonto-Maxillofacial Hospital and EMIS Premium Dental Clinic.',
-        cta: 'Contact Us',
-      },
-      {
         name: 'Dr. Nguyen The Son',
         role: 'Chief Dentist - Implant & Aesthetic Prosthetics',
         description: 'Dr. Son has over 10 years of specialized experience in dental implants, aesthetic prosthetics, and sinus lift - bone grafting procedures. With more than 3,000 implant cases from simple to complex, he focuses on restoring chewing function, natural esthetics, and long-term treatment stability.',
+        cta: 'Contact Us',
+      },
+      {
+        name: 'Dr. Tran Minh Tu',
+        role: 'Odonto-Maxillofacial Surgeon',
+        description: 'Implant Surgery • Oral Surgery • Full-Mouth Rehabilitation. Currently practicing at Ho Chi Minh City Odonto-Maxillofacial Hospital and EMIS Premium Dental Clinic.',
         cta: 'Contact Us',
       },
     ],
@@ -109,8 +109,8 @@ const aboutContent = {
     teamTitle: 'Đội Ngũ Đồng Hành Cùng Bạn',
     teamIntro: 'Một đội ngũ hướng tới một mục tiêu chung: giúp bệnh nhân khôi phục khả năng ăn nhai, tự tin và chất lượng cuộc sống lâu dài.',
     teamMembers: [
-      { name: 'BS. CKI Trần Minh Tú', role: 'Phẫu thuật Răng Hàm Mặt', description: 'Implant • Tiểu phẫu Răng Hàm Mặt • Phục hồi toàn hàm. Hiện đang công tác tại Bệnh viện Răng Hàm Mặt TP.HCM và EMIS Premium Dental Clinic.', cta: 'Liên Hệ Chúng Tôi' },
       { name: 'BS. CKI Nguyễn Thế Sơn', role: 'Bác Sĩ Trưởng - Implant & Phục Hình Thẩm Mỹ', description: 'Bác sĩ Sơn có hơn 10 năm kinh nghiệm chuyên sâu trong lĩnh vực cấy ghép Implant, phục hình thẩm mỹ và phẫu thuật nâng xoang - ghép xương. Với hơn 3.000 ca Implant từ đơn giản đến phức tạp, bác sĩ tập trung phục hồi chức năng ăn nhai, thẩm mỹ tự nhiên và sự ổn định lâu dài.', cta: 'Liên Hệ Chúng Tôi' },
+      { name: 'BS. CKI Trần Minh Tú', role: 'Phẫu thuật Răng Hàm Mặt', description: 'Implant • Tiểu phẫu Răng Hàm Mặt • Phục hồi toàn hàm. Hiện đang công tác tại Bệnh viện Răng Hàm Mặt TP.HCM và EMIS Premium Dental Clinic.', cta: 'Liên Hệ Chúng Tôi' },
     ],
 
     internationalTitle: 'Hỗ Trợ Trước, Trong Và Sau Điều Trị',
@@ -172,15 +172,15 @@ const aboutContent = {
     teamIntro: 'Une équipe tournée vers un objectif: aider les patients à retrouver confort, fonction, confiance et qualité de vie à long terme.',
     teamMembers: [
       {
-        name: 'Dr Tran Minh Tu',
-        role: 'Chirurgien Maxillo-Facial',
-        description: 'Chirurgie implantaire • Chirurgie orale • Réhabilitation complète. Exerce actuellement à l\'Hôpital Odonto-Maxillo-Facial de Ho Chi Minh-Ville et à EMIS Premium Dental Clinic.',
-        cta: 'Contactez-Nous',
-      },
-      {
         name: 'Dr Nguyen The Son',
         role: 'Dentiste Principal - Implantologie & Prothèse Esthétique',
         description: 'Le Dr Son possède plus de 10 ans d\'expérience spécialisée en implants dentaires, prothèses esthétiques et chirurgie de comblement osseux avec élévation sinusienne. Avec plus de 3 000 cas d\'implantologie, il se concentre sur la restauration de la fonction masticatoire, de l\'esthétique naturelle et de la stabilité à long terme.',
+        cta: 'Contactez-Nous',
+      },
+      {
+        name: 'Dr Tran Minh Tu',
+        role: 'Chirurgien Maxillo-Facial',
+        description: 'Chirurgie implantaire • Chirurgie orale • Réhabilitation complète. Exerce actuellement à l\'Hôpital Odonto-Maxillo-Facial de Ho Chi Minh-Ville et à EMIS Premium Dental Clinic.',
         cta: 'Contactez-Nous',
       },
     ],
@@ -255,15 +255,15 @@ const aboutContent = {
     teamIntro: '一个共同目标明确的团队：帮助患者恢复舒适、功能、自信与长期生活质量。',
     teamMembers: [
       {
-        name: 'Dr. Tran Minh Tu',
-        role: '口腔颌面外科医生',
-        description: '种植手术 • 口腔外科 • 全口重建。现就职于胡志明市口腔颌面医院及 EMIS Premium Dental Clinic。',
-        cta: '联系我们',
-      },
-      {
         name: 'Dr. Nguyen The Son',
         role: '首席牙医 - 种植与美学修复',
         description: 'Son 医生在牙科种植、美学修复及上颌窦提升与骨移植方面有超过 10 年经验，完成 3,000+ 例从简单到复杂的种植病例，重点关注咀嚼功能恢复、自然美学与长期稳定性。',
+        cta: '联系我们',
+      },
+      {
+        name: 'Dr. Tran Minh Tu',
+        role: '口腔颌面外科医生',
+        description: '种植手术 • 口腔外科 • 全口重建。现就职于胡志明市口腔颌面医院及 EMIS Premium Dental Clinic。',
         cta: '联系我们',
       },
     ],
@@ -338,15 +338,15 @@ const aboutContent = {
     teamIntro: '一個共同目標明確的團隊：協助患者恢復舒適、功能、自信與長期生活品質。',
     teamMembers: [
       {
-        name: 'Dr. Tran Minh Tu',
-        role: '口腔顎面外科醫師',
-        description: '植牙手術 • 口腔外科 • 全口重建。現任職於胡志明市口腔顎面醫院與 EMIS Premium Dental Clinic。',
-        cta: '聯絡我們',
-      },
-      {
         name: 'Dr. Nguyen The Son',
         role: '主治醫師 - 植牙與美學贋復',
         description: 'Son 醫師在牙科植牙、美學贋復及上顎竇提升與補骨手術方面有超過 10 年經驗，完成 3,000+ 例植牙病例，重點在恢復咀嚼功能、自然美觀與長期穩定性。',
+        cta: '聯絡我們',
+      },
+      {
+        name: 'Dr. Tran Minh Tu',
+        role: '口腔顎面外科醫師',
+        description: '植牙手術 • 口腔外科 • 全口重建。現任職於胡志明市口腔顎面醫院與 EMIS Premium Dental Clinic。',
         cta: '聯絡我們',
       },
     ],
@@ -421,15 +421,15 @@ const aboutContent = {
     teamIntro: '하나의 목표를 향한 팀: 환자의 편안함, 기능, 자신감, 장기적 삶의 질 회복.',
     teamMembers: [
       {
-        name: 'Dr. Tran Minh Tu',
-        role: '구강악안면외과 전문의',
-        description: '임플란트 수술 • 구강외과 • 전악 재건. 현재 호치민시 구강악안면병원 및 EMIS Premium Dental Clinic에서 진료 중입니다.',
-        cta: '문의하기',
-      },
-      {
         name: 'Dr. Nguyen The Son',
         role: '총괄 치과의사 - 임플란트 & 심미 보철',
         description: 'Son 원장은 임플란트, 심미 보철, 상악동 거상 및 골이식 분야에서 10년 이상의 전문 경력을 보유하고 있으며, 3,000건 이상의 임플란트 케이스를 통해 저작 기능, 자연스러운 심미성, 장기 안정성 회복에 집중합니다.',
+        cta: '문의하기',
+      },
+      {
+        name: 'Dr. Tran Minh Tu',
+        role: '구강악안면외과 전문의',
+        description: '임플란트 수술 • 구강외과 • 전악 재건. 현재 호치민시 구강악안면병원 및 EMIS Premium Dental Clinic에서 진료 중입니다.',
         cta: '문의하기',
       },
     ],

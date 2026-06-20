@@ -195,7 +195,7 @@ export default function Home() {
               const card = page.confidence.cards[index];
               return (
                 <article key={card.title} className="grid gap-5 py-6 md:grid-cols-[220px_1fr] md:items-center md:gap-8">
-                  <div className="overflow-hidden rounded-2xl border border-[#dbe4ec] bg-white shadow-sm">
+                  <div className="hidden overflow-hidden rounded-2xl border border-[#dbe4ec] bg-white shadow-sm md:block">
                     <img src={image} alt={card.title} className="aspect-[4/3] w-full object-cover" />
                   </div>
                   <div>
@@ -258,7 +258,7 @@ export default function Home() {
 
       <section className="bg-white py-16 md:py-20">
         <div className="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-[1.1fr_1fr] md:items-center">
-          <div className="overflow-hidden rounded-3xl shadow-lg">
+          <div className="hidden overflow-hidden rounded-3xl shadow-lg md:block">
             <img src={lifestyleDinner} alt="Patient enjoying daily life confidently" className="h-full w-full object-cover" />
           </div>
 
@@ -292,7 +292,7 @@ export default function Home() {
               const card = page.pathways.cards[index];
               return (
                 <article key={card.title} className="overflow-hidden rounded-2xl border border-[#d9e4ed] bg-white shadow-sm">
-                  <img src={image} alt={card.title} className="h-44 w-full object-cover" />
+                  <img src={image} alt={card.title} className="hidden h-44 w-full object-cover md:block" />
                   <div className="p-6">
                     <h3 className="text-xl font-semibold text-[#1d3953]" style={{ fontFamily: "'Playfair Display', serif" }}>{card.title}</h3>
                     <p className="mt-2 text-sm font-medium text-[#6f8da6]">{card.subtitle}</p>
@@ -315,7 +315,7 @@ export default function Home() {
               const step = page.journey.steps[index];
               return (
                 <article key={step.title} className="rounded-2xl border border-[#dbe6ef] bg-[#f9fcff] p-3">
-                  <img src={image} alt={step.title} className="h-28 w-full rounded-xl object-cover" />
+                  <img src={image} alt={step.title} className="hidden h-28 w-full rounded-xl object-cover md:block" />
                   <p className="mt-3 text-xs font-semibold uppercase tracking-[0.2em] text-[#7b95ab]">{step.step}</p>
                   <h3 className="mt-1 text-base font-semibold text-[#1d3953]" style={{ fontFamily: "'Playfair Display', serif" }}>{step.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-[#5d7388]">{step.text}</p>

@@ -164,20 +164,20 @@ export const homeContent = {
           "Successful treatment often involves much more than a single procedure. It is a process that combines diagnosis, planning, surgical care, restorative expertise, and long-term follow-up.",
         cards: [
           {
-            name: "Dr. Tran Minh Tu",
-            role: "Odonto-Maxillofacial Surgeon",
-            focus: "Implant Surgery • Oral Surgery • Full-Mouth Rehabilitation",
-            summary:
-              "Currently practicing at Ho Chi Minh City Odonto-Maxillofacial Hospital and EMIS Premium Dental Clinic.",
-            languages: "Vietnamese • English • Hungarian • Chinese",
-          },
-          {
             name: "Dr. Nguyen The Son",
             role: "Chief Dentist at Emis Dental",
             focus: "Dental Implants • Aesthetic Prosthetics • Sinus Lift & Bone Grafting Surgery",
             summary:
               "Over 10 years of specialized experience in dental implants and aesthetic prosthetics, with extensive clinical work in advanced implant and restoration cases.",
             languages: "Vietnamese • English",
+          },
+          {
+            name: "Dr. Tran Minh Tu",
+            role: "Odonto-Maxillofacial Surgeon",
+            focus: "Implant Surgery • Oral Surgery • Full-Mouth Rehabilitation",
+            summary:
+              "Currently practicing at Ho Chi Minh City Odonto-Maxillofacial Hospital and EMIS Premium Dental Clinic.",
+            languages: "Vietnamese • English • Hungarian • Chinese",
           },
         ],
         philosophyTitle: "Our Treatment Philosophy",
@@ -755,20 +755,20 @@ export const homeContent = {
           "Một ca Implant hay phục hồi toàn hàm thành công không chỉ là một thủ thuật đơn lẻ. Đó là cả một quá trình từ chẩn đoán, lập kế hoạch đến theo dõi lâu dài.",
         cards: [
           {
-            name: "BS. CKI Trần Minh Tú",
-            role: "Phẫu thuật viên Răng Hàm Mặt",
-            focus: "Phẫu thuật Implant • Tiểu phẫu Răng Hàm Mặt • Phục hồi toàn hàm",
-            summary:
-              "Hiện đang công tác tại Bệnh viện Răng Hàm Mặt TP.HCM và EMIS Premium Dental Clinic.",
-            languages: "Tiếng Việt • English • Hungarian • Chinese",
-          },
-          {
             name: "BS. Nguyễn Thế Sơn",
             role: "Bác sĩ trưởng tại Emis Dental",
             focus: "Implant nha khoa • Phục hình thẩm mỹ • Phẫu thuật nâng xoang và ghép xương",
             summary:
               "Hơn 10 năm kinh nghiệm chuyên sâu trong Implant nha khoa và phục hình thẩm mỹ, với nhiều kinh nghiệm lâm sàng ở các ca Implant và phục hồi phức tạp.",
             languages: "Tiếng Việt • English",
+          },
+          {
+            name: "BS. CKI Trần Minh Tú",
+            role: "Phẫu thuật viên Răng Hàm Mặt",
+            focus: "Phẫu thuật Implant • Tiểu phẫu Răng Hàm Mặt • Phục hồi toàn hàm",
+            summary:
+              "Hiện đang công tác tại Bệnh viện Răng Hàm Mặt TP.HCM và EMIS Premium Dental Clinic.",
+            languages: "Tiếng Việt • English • Hungarian • Chinese",
           },
         ],
         philosophyTitle: "Triết Lý Điều Trị",

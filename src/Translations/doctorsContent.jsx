@@ -63,31 +63,6 @@ const doctorsContent = {
     doctors: [
     {
 
-        name: 'Dr. Tran Minh Tu',
-
-        role: 'Oral & Maxillofacial Surgeon',
-
-        specialties:
-        'Implant Surgery • Full-Mouth Rehabilitation • Oral Surgery',
-
-        descriptionOne:
-        'Dr. Tu focuses on implant surgery, full-mouth rehabilitation, oral surgery, and aesthetic dentistry, with a particular interest in complex rehabilitation cases.',
-
-        descriptionTwo:
-        'Having studied and trained in the United States, Hungary, and Vietnam, he combines international training with active clinical practice.',
-
-        highlights: [
-        'Active Hospital Practice',
-        'International Training',
-        'Implant & Full-Mouth Rehabilitation Focus',
-        'Multilingual Communication',
-        ],
-
-        cta: 'View Full Profile',
-    },
-
-    {
-
       name: 'Dr. Nguyen The Son',
 
       role: 'Chief Dentist - Implant & Aesthetic Prosthetics',
@@ -109,6 +84,31 @@ const doctorsContent = {
       ],
 
       cta: 'View Full Profile',
+    },
+
+    {
+
+        name: 'Dr. Tran Minh Tu',
+
+        role: 'Oral & Maxillofacial Surgeon',
+
+        specialties:
+        'Implant Surgery • Full-Mouth Rehabilitation • Oral Surgery',
+
+        descriptionOne:
+        'Dr. Tu focuses on implant surgery, full-mouth rehabilitation, oral surgery, and aesthetic dentistry, with a particular interest in complex rehabilitation cases.',
+
+        descriptionTwo:
+        'Having studied and trained in the United States, Hungary, and Vietnam, he combines international training with active clinical practice.',
+
+        highlights: [
+        'Active Hospital Practice',
+        'International Training',
+        'Implant & Full-Mouth Rehabilitation Focus',
+        'Multilingual Communication',
+        ],
+
+        cta: 'View Full Profile',
     },
     ],
 
@@ -211,31 +211,6 @@ const doctorsContent = {
     doctors: [
     {
 
-        name: 'BS. CKI Trần Minh Tú',
-
-        role: 'Phẫu Thuật Răng Hàm Mặt',
-
-        specialties:
-        'Implant • Phục Hồi Toàn Hàm • Tiểu Phẫu Răng Hàm Mặt',
-
-        descriptionOne:
-        'Bác sĩ Tú tập trung vào Implant, phục hồi toàn hàm và phẫu thuật Răng Hàm Mặt, đặc biệt với những trường hợp cần phục hồi phức tạp và đòi hỏi kế hoạch điều trị kỹ lưỡng.',
-
-        descriptionTwo:
-        'Nền tảng học tập và đào tạo tại Hoa Kỳ, Hungary và Việt Nam giúp bác sĩ có thêm góc nhìn quốc tế trong quá trình điều trị và chăm sóc bệnh nhân.',
-
-        highlights: [
-        'Đang Công Tác Tại Bệnh Viện Răng Hàm Mặt TP.HCM',
-        'Đào Tạo Tại Nhiều Quốc Gia',
-        'Thành Viên Hội Răng Hàm Mặt TP.HCM',
-        'Giao Tiếp Đa Ngôn Ngữ',
-        ],
-
-        cta: 'Xem Hồ Sơ Chi Tiết',
-    },
-
-    {
-
       name: 'BS. Nguyễn Thế Sơn',
 
       role: 'Bác Sĩ Trưởng - Implant & Phục Hình Thẩm Mỹ',
@@ -257,6 +232,31 @@ const doctorsContent = {
       ],
 
       cta: 'Xem Hồ Sơ Chi Tiết',
+    },
+
+    {
+
+        name: 'BS. CKI Trần Minh Tú',
+
+        role: 'Phẫu Thuật Răng Hàm Mặt',
+
+        specialties:
+        'Implant • Phục Hồi Toàn Hàm • Tiểu Phẫu Răng Hàm Mặt',
+
+        descriptionOne:
+        'Bác sĩ Tú tập trung vào Implant, phục hồi toàn hàm và phẫu thuật Răng Hàm Mặt, đặc biệt với những trường hợp cần phục hồi phức tạp và đòi hỏi kế hoạch điều trị kỹ lưỡng.',
+
+        descriptionTwo:
+        'Nền tảng học tập và đào tạo tại Hoa Kỳ, Hungary và Việt Nam giúp bác sĩ có thêm góc nhìn quốc tế trong quá trình điều trị và chăm sóc bệnh nhân.',
+
+        highlights: [
+        'Đang Công Tác Tại Bệnh Viện Răng Hàm Mặt TP.HCM',
+        'Đào Tạo Tại Nhiều Quốc Gia',
+        'Thành Viên Hội Răng Hàm Mặt TP.HCM',
+        'Giao Tiếp Đa Ngôn Ngữ',
+        ],
+
+        cta: 'Xem Hồ Sơ Chi Tiết',
     },
     ],
 
@@ -357,32 +357,6 @@ const doctorsContent = {
     doctors: [
     {
 
-    name: 'Dr. Tran Minh Tu',
-
-    role: 'Chirurgien Oral Et Maxillo-Facial',
-
-    specialties:
-    'Implantologie • Réhabilitation Complète • Chirurgie Orale',
-
-    descriptionOne:
-    'Le Dr Tu se consacre à l’implantologie, à la réhabilitation complète, à la chirurgie orale et à la dentisterie esthétique, avec un intérêt particulier pour les cas complexes.',
-
-    descriptionTwo:
-    'Formé aux États-Unis, en Hongrie et au Vietnam, il associe une formation internationale à une pratique clinique active.',
-
-    highlights: [
-    'Pratique Hospitalière Active',
-    'Formation Internationale',
-    'Expertise En Implantologie Et Réhabilitation Complète',
-    'Communication Multilingue',
-    ],
-
-    cta: 'Voir Le Profil Complet',
-
-    },
-
-    {
-
     name: 'Dr. Nguyen The Son',
 
     role: 'Dentiste En Chef - Implantologie Et Prothèse Esthétique',
@@ -401,6 +375,32 @@ const doctorsContent = {
     'Plus De 3 000 Cas D’Implants',
     'Formation Avancée En Greffe Osseuse Et Sinus Lift',
     'Planification Numérique Et Diagnostic 3D',
+    ],
+
+    cta: 'Voir Le Profil Complet',
+
+    },
+
+    {
+
+    name: 'Dr. Tran Minh Tu',
+
+    role: 'Chirurgien Oral Et Maxillo-Facial',
+
+    specialties:
+    'Implantologie • Réhabilitation Complète • Chirurgie Orale',
+
+    descriptionOne:
+    'Le Dr Tu se consacre à l’implantologie, à la réhabilitation complète, à la chirurgie orale et à la dentisterie esthétique, avec un intérêt particulier pour les cas complexes.',
+
+    descriptionTwo:
+    'Formé aux États-Unis, en Hongrie et au Vietnam, il associe une formation internationale à une pratique clinique active.',
+
+    highlights: [
+    'Pratique Hospitalière Active',
+    'Formation Internationale',
+    'Expertise En Implantologie Et Réhabilitation Complète',
+    'Communication Multilingue',
     ],
 
     cta: 'Voir Le Profil Complet',
@@ -497,32 +497,6 @@ const doctorsContent = {
     doctors: [
     {
 
-    name: 'Dr. Tran Minh Tu',
-
-    role: '구강악안면외과 전문의',
-
-    specialties:
-    '임플란트 수술 • 전체 구강 재건 • 구강외과',
-
-    descriptionOne:
-    'Tu 원장은 임플란트 수술, 전체 구강 재건, 구강외과 및 심미치과를 중심으로 진료하며 복잡한 재건 치료에 특별한 관심을 가지고 있습니다.',
-
-    descriptionTwo:
-    '미국, 헝가리, 베트남에서 교육과 수련을 받았으며 국제적인 교육 배경과 풍부한 임상 경험을 바탕으로 진료하고 있습니다.',
-
-    highlights: [
-    '병원 임상 진료',
-    '국제 교육 이수',
-    '임플란트 및 전체 구강 재건 집중',
-    '다국어 소통',
-    ],
-
-    cta: '자세히 보기',
-
-    },
-
-    {
-
     name: 'Dr. Nguyen The Son',
 
     role: '총괄 원장 - 임플란트 및 심미 보철',
@@ -541,6 +515,32 @@ const doctorsContent = {
     '3,000건 이상 임플란트 케이스',
     '골이식 및 상악동 거상술 고급 교육',
     '디지털 임플란트 계획 및 3D 진단',
+    ],
+
+    cta: '자세히 보기',
+
+    },
+
+    {
+
+    name: 'Dr. Tran Minh Tu',
+
+    role: '구강악안면외과 전문의',
+
+    specialties:
+    '임플란트 수술 • 전체 구강 재건 • 구강외과',
+
+    descriptionOne:
+    'Tu 원장은 임플란트 수술, 전체 구강 재건, 구강외과 및 심미치과를 중심으로 진료하며 복잡한 재건 치료에 특별한 관심을 가지고 있습니다.',
+
+    descriptionTwo:
+    '미국, 헝가리, 베트남에서 교육과 수련을 받았으며 국제적인 교육 배경과 풍부한 임상 경험을 바탕으로 진료하고 있습니다.',
+
+    highlights: [
+    '병원 임상 진료',
+    '국제 교육 이수',
+    '임플란트 및 전체 구강 재건 집중',
+    '다국어 소통',
     ],
 
     cta: '자세히 보기',
@@ -639,32 +639,6 @@ const doctorsContent = {
     doctors: [
     {
 
-    name: 'Dr. Tran Minh Tu',
-
-    role: '口腔颌面外科医生',
-
-    specialties:
-    '种植手术 • 全口重建 • 口腔外科',
-
-    descriptionOne:
-    'Tu 医生专注于种植牙手术、全口重建、口腔外科以及美学牙科，尤其关注复杂重建病例。',
-
-    descriptionTwo:
-    '曾在美国、匈牙利和越南接受教育与培训，将国际化背景与丰富的临床实践相结合。',
-
-    highlights: [
-    '医院临床工作经验',
-    '国际培训背景',
-    '专注种植牙与全口重建',
-    '多语言沟通',
-    ],
-
-    cta: '查看完整资料',
-
-    },
-
-    {
-
     name: 'Dr. Nguyen The Son',
 
     role: '主任医师 - 种植与美学修复',
@@ -683,6 +657,32 @@ const doctorsContent = {
     '3,000+ 种植病例',
     '骨增量与上颌窦提升进阶培训',
     '数字化种植规划与3D诊断',
+    ],
+
+    cta: '查看完整资料',
+
+    },
+
+    {
+
+    name: 'Dr. Tran Minh Tu',
+
+    role: '口腔颌面外科医生',
+
+    specialties:
+    '种植手术 • 全口重建 • 口腔外科',
+
+    descriptionOne:
+    'Tu 医生专注于种植牙手术、全口重建、口腔外科以及美学牙科，尤其关注复杂重建病例。',
+
+    descriptionTwo:
+    '曾在美国、匈牙利和越南接受教育与培训，将国际化背景与丰富的临床实践相结合。',
+
+    highlights: [
+    '医院临床工作经验',
+    '国际培训背景',
+    '专注种植牙与全口重建',
+    '多语言沟通',
     ],
 
     cta: '查看完整资料',
@@ -782,32 +782,6 @@ const doctorsContent = {
     doctors: [
     {
 
-    name: 'Dr. Tran Minh Tu',
-
-    role: '口腔顎面外科醫師',
-
-    specialties:
-    '植牙手術 • 全口重建 • 口腔外科',
-
-    descriptionOne:
-    'Tu 醫師專注於植牙手術、全口重建、口腔外科及美學牙科，特別關注複雜重建案例。',
-
-    descriptionTwo:
-    '曾於美國、匈牙利及越南接受教育與培訓，結合國際背景與豐富臨床經驗。',
-
-    highlights: [
-    '醫院臨床經驗',
-    '國際培訓背景',
-    '專注植牙與全口重建',
-    '多語言溝通',
-    ],
-
-    cta: '查看完整資料',
-
-    },
-
-    {
-
     name: 'Dr. Nguyen The Son',
 
     role: '主任醫師 - 植牙與美學修復',
@@ -826,6 +800,32 @@ const doctorsContent = {
     '3,000+ 植牙案例',
     '骨增量與上顎竇提升進階培訓',
     '數位植牙規劃與3D診斷',
+    ],
+
+    cta: '查看完整資料',
+
+    },
+
+    {
+
+    name: 'Dr. Tran Minh Tu',
+
+    role: '口腔顎面外科醫師',
+
+    specialties:
+    '植牙手術 • 全口重建 • 口腔外科',
+
+    descriptionOne:
+    'Tu 醫師專注於植牙手術、全口重建、口腔外科及美學牙科，特別關注複雜重建案例。',
+
+    descriptionTwo:
+    '曾於美國、匈牙利及越南接受教育與培訓，結合國際背景與豐富臨床經驗。',
+
+    highlights: [
+    '醫院臨床經驗',
+    '國際培訓背景',
+    '專注植牙與全口重建',
+    '多語言溝通',
     ],
 
     cta: '查看完整資料',
