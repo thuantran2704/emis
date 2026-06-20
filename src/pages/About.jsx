@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import aboutContent from '../Translations/aboutContent';
-import emishall from '../pics/Phong-cho-waiting-room-Emis.jpg';
-import patient1 from '../pics/patient1.jpg';
-import patient2 from '../pics/patient2.jpg';
-import seal from '../pics/sealer.jpg';
-import phongkham from '../pics/phong-kham.jpg';
-import reception from '../pics/reception.jpg';
+import consultationImage from '../pics/doctor-explaining-procedure-to-patient.jpg';
+import planningImage from '../pics/doctor-reviewing-x-ray-with-patient-explaining-treatment.jpg';
+import technologyImage from '../pics/x-ray-cbct-panoramic-machine.jpg';
+import teamImage from '../pics/healthcare-team.jpg';
+import internationalImage from '../pics/better_emis_hall.jpg';
+import safetyImage from '../pics/sterile-room-phong-khu-trung.jpg';
 import { useSelector } from 'react-redux';
 import { Helmet } from 'react-helmet';
 
@@ -16,7 +16,7 @@ const About = () => {
 
   const SectionLabel = ({ children }) => (
     <p
-      className="uppercase tracking-[0.3em] text-[#C5AF73] mb-5 text-xs font-semibold"
+      className="uppercase tracking-[0.3em] text-[#C5AF73] mb-6 text-[10px] font-semibold"
       style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
     >
       {children}
@@ -25,7 +25,7 @@ const About = () => {
 
   const SectionTitle = ({ children }) => (
     <h2
-      className="text-3xl md:text-4xl text-[#2a3439] mb-6"
+      className="text-[1.75rem] md:text-[2.1rem] text-[#2a3439] mb-8"
       style={{ fontFamily: "'Playfair Display', serif" }}
     >
       {children}
@@ -40,21 +40,21 @@ const About = () => {
       </Helmet>
 
       {/* HERO */}
-      <section className="py-32 px-8 max-w-4xl mx-auto text-center">
+      <section className="py-36 px-8 max-w-4xl mx-auto text-center">
         <p
-          className="uppercase tracking-[0.3em] text-[#C5AF73] mb-6 text-xs font-semibold"
+          className="uppercase tracking-[0.3em] text-[#C5AF73] mb-7 text-[10px] font-semibold"
           style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
         >
           Who We Are
         </p>
         <h1
-          className="text-4xl md:text-5xl text-[#2a3439] mb-8 leading-tight"
+          className="text-3xl md:text-4xl text-[#2a3439] mb-10 leading-tight"
           style={{ fontFamily: "'Playfair Display', serif" }}
         >
           {content.heroTitle}
         </h1>
         <p
-          className="text-lg md:text-xl text-gray-500 mb-12 max-w-2xl mx-auto leading-relaxed"
+          className="text-[15px] md:text-[17px] text-gray-500 mb-14 max-w-2xl mx-auto leading-relaxed"
           style={{ fontFamily: "'Cormorant', serif" }}
         >
           {content.heroSubtitle}
@@ -78,13 +78,13 @@ const About = () => {
       </section>
 
       {/* OUR APPROACH */}
-      <section className="py-28 max-md:py-36 bg-white">
-        <div className="max-w-4xl mx-auto px-8 space-y-10">
+      <section className="py-32 max-md:py-36 bg-white">
+        <div className="max-w-4xl mx-auto px-8 space-y-12">
           <div>
             <SectionLabel>Our Approach</SectionLabel>
             <SectionTitle>{content.approachTitle}</SectionTitle>
             <p
-              className="text-gray-500 leading-relaxed text-lg"
+              className="text-gray-500 leading-relaxed text-[15px]"
               style={{ fontFamily: "'Cormorant', serif" }}
             >
               {content.approachText}
@@ -92,7 +92,7 @@ const About = () => {
           </div>
           <div className="rounded-2xl overflow-hidden shadow-sm h-[420px]">
             <img
-              src={patient2}
+              src={consultationImage}
               alt="Patient care consultation"
               className="w-full h-full object-cover object-[center_58%] md:object-center"
             />
@@ -101,22 +101,22 @@ const About = () => {
       </section>
 
       {/* WHY PLANNING MATTERS */}
-      <section className="py-28 max-md:py-36 bg-[#f1f5f9]">
-        <div className="max-w-4xl mx-auto px-8 space-y-10">
+      <section className="py-32 max-md:py-36 bg-[#f1f5f9]">
+        <div className="max-w-4xl mx-auto px-8 space-y-12">
           <div>
             <SectionLabel>Planning</SectionLabel>
             <SectionTitle>{content.planningTitle}</SectionTitle>
             <div className="space-y-5">
               {content.planningBullets.map((b, i) => (
-                <div key={i} className="bg-white rounded-2xl p-6 shadow-sm border border-[#dbe4ec]">
+                <div key={i} className="bg-white rounded-2xl p-7 shadow-sm border border-[#dbe4ec]">
                   <h3
-                    className="text-lg text-[#2a3439] mb-2"
+                    className="text-[1.05rem] text-[#2a3439] mb-2.5"
                     style={{ fontFamily: "'Playfair Display', serif" }}
                   >
                     {b.title}
                   </h3>
                   <p
-                    className="text-sm text-gray-500 leading-relaxed"
+                    className="text-[13px] text-gray-500 leading-relaxed"
                     style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                   >
                     {b.text}
@@ -127,7 +127,7 @@ const About = () => {
           </div>
           <div className="rounded-2xl overflow-hidden shadow-sm h-[480px]">
             <img
-              src={patient1}
+              src={planningImage}
               alt="Clinical treatment planning"
               className="w-full h-full object-cover object-center"
             />
@@ -136,23 +136,23 @@ const About = () => {
       </section>
 
       {/* TECHNOLOGY & SAFETY */}
-      <section className="py-28 max-md:py-36 bg-white">
-        <div className="max-w-4xl mx-auto px-8 space-y-10">
+      <section className="py-32 max-md:py-36 bg-white">
+        <div className="max-w-4xl mx-auto px-8 space-y-12">
           <div>
             <SectionLabel>Technology</SectionLabel>
             <SectionTitle>{content.technologyTitle}</SectionTitle>
             <p
-              className="text-gray-500 leading-relaxed text-lg mb-8"
+              className="text-gray-500 leading-relaxed text-[15px] mb-10"
               style={{ fontFamily: "'Cormorant', serif" }}
             >
               {content.technologyIntro}
             </p>
-            <div className="space-y-3">
+            <div className="space-y-4">
               {content.technologyBullets.map((t, idx) => (
-                <div key={idx} className="flex items-center gap-3">
+                <div key={idx} className="flex items-center gap-3.5">
                   <span className="text-[#C5AF73] text-xs">●</span>
                   <span
-                    className="text-sm text-[#2a3439]"
+                    className="text-[13px] text-[#2a3439]"
                     style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                   >
                     {t}
@@ -163,7 +163,7 @@ const About = () => {
           </div>
           <div className="rounded-2xl overflow-hidden shadow-sm h-[460px]">
             <img
-              src={phongkham}
+              src={technologyImage}
               alt={content.technologyImageAlt || 'Clinical treatment room'}
               className="w-full h-full object-cover object-center"
             />
@@ -172,22 +172,22 @@ const About = () => {
       </section>
 
       {/* TEAM */}
-      <section className="py-28 max-md:py-36 bg-[#f1f5f9]">
-        <div className="max-w-4xl mx-auto px-8 space-y-10">
+      <section className="py-32 max-md:py-36 bg-[#f1f5f9]">
+        <div className="max-w-4xl mx-auto px-8 space-y-12">
           <div>
             <SectionLabel>Our Team</SectionLabel>
             <SectionTitle>{content.teamTitle}</SectionTitle>
             <p
-              className="text-gray-500 leading-relaxed mb-10"
+              className="text-gray-500 leading-relaxed text-[15px] mb-12"
               style={{ fontFamily: "'Cormorant', serif" }}
             >
               {content.teamIntro}
             </p>
-            <div className="space-y-5">
+            <div className="space-y-6">
               {content.teamMembers.map((m, idx) => (
-                <div key={idx} className="bg-white rounded-2xl p-7 shadow-sm">
+                <div key={idx} className="bg-white rounded-2xl p-8 shadow-sm">
                   <h3
-                    className="text-xl text-[#2a3439] mb-1"
+                    className="text-[1.2rem] text-[#2a3439] mb-1.5"
                     style={{ fontFamily: "'Playfair Display', serif" }}
                   >
                     {m.name}
@@ -199,7 +199,7 @@ const About = () => {
                     {m.role}
                   </p>
                   <p
-                    className="text-sm text-gray-500 leading-relaxed"
+                    className="text-[13px] text-gray-500 leading-relaxed"
                     style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                   >
                     {m.description}
@@ -221,7 +221,7 @@ const About = () => {
           </div>
           <div className="rounded-2xl overflow-hidden shadow-sm h-[500px]">
             <img
-              src={reception}
+              src={teamImage}
               alt="Professional clinic team environment"
               className="w-full h-full object-cover object-center"
             />
@@ -230,33 +230,33 @@ const About = () => {
       </section>
 
       {/* SUPPORT FOR OVERSEAS */}
-      <section className="py-28 max-md:py-36 bg-white">
-        <div className="max-w-4xl mx-auto px-8 space-y-10">
+      <section className="py-32 max-md:py-36 bg-white">
+        <div className="max-w-4xl mx-auto px-8 space-y-12">
           <div>
             <SectionLabel>International Patients</SectionLabel>
             <SectionTitle>{content.internationalTitle}</SectionTitle>
             <p
-              className="text-gray-500 leading-relaxed mb-8"
+              className="text-gray-500 leading-relaxed text-[15px] mb-10"
               style={{ fontFamily: "'Cormorant', serif" }}
             >
               {content.internationalIntro}
             </p>
-            <div className="space-y-3">
+            <div className="space-y-4">
               {content.internationalBullets.map((b, i) => (
                 <div
                   key={i}
-                  className="flex items-center gap-3 bg-[#eef3f7] rounded-xl px-5 py-3.5 border border-[#dbe4ec]"
+                  className="flex items-center gap-3 bg-[#eef3f7] rounded-xl px-5 py-4 border border-[#dbe4ec]"
                   style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                 >
                   <span className="text-[#C5AF73] text-xs">●</span>
-                  <span className="text-sm text-[#2a3439]">{b}</span>
+                  <span className="text-[13px] text-[#2a3439]">{b}</span>
                 </div>
               ))}
             </div>
           </div>
           <div className="rounded-2xl overflow-hidden shadow-sm h-[420px]">
             <img
-              src={emishall}
+              src={internationalImage}
               alt="EMIS clinic waiting room"
               className="w-full h-full object-cover object-center"
             />
@@ -265,23 +265,23 @@ const About = () => {
       </section>
 
       {/* TRUST & TRANSPARENCY */}
-      <section className="py-28 max-md:py-36 bg-[#f1f5f9]">
-        <div className="max-w-4xl mx-auto px-8 space-y-10">
+      <section className="py-32 max-md:py-36 bg-[#f1f5f9]">
+        <div className="max-w-4xl mx-auto px-8 space-y-12">
           <div>
             <SectionLabel>Trust & Transparency</SectionLabel>
             <SectionTitle>{content.trustTitle}</SectionTitle>
             <p
-              className="text-gray-500 leading-relaxed mb-8"
+              className="text-gray-500 leading-relaxed text-[15px] mb-10"
               style={{ fontFamily: "'Cormorant', serif" }}
             >
               {content.trustIntro || 'We believe patients should have access to clear information before making treatment decisions.'}
             </p>
-            <div className="space-y-3">
+            <div className="space-y-4">
               {content.trustBullets.map((b, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <span className="text-[#C5AF73] mt-0.5">✓</span>
                   <span
-                    className="text-sm text-[#2a3439] leading-relaxed"
+                    className="text-[13px] text-[#2a3439] leading-relaxed"
                     style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                   >
                     {b}
@@ -292,7 +292,7 @@ const About = () => {
           </div>
           <div className="rounded-2xl overflow-hidden shadow-sm h-[420px]">
             <img
-              src={seal}
+              src={safetyImage}
               alt="Clinical sterilization and safety protocols"
               className="w-full h-full object-cover object-center"
             />
@@ -301,14 +301,14 @@ const About = () => {
       </section>
 
       {/* START STEPS */}
-      <section className="py-28 max-md:py-36 bg-white">
+      <section className="py-32 max-md:py-36 bg-white">
         <div className="max-w-5xl mx-auto px-8 text-center">
           <SectionLabel>Getting Started</SectionLabel>
           <SectionTitle>{content.startTitle}</SectionTitle>
 
-          <div className="mt-14 grid md:grid-cols-3 gap-6">
+          <div className="mt-16 grid md:grid-cols-3 gap-7">
             {content.steps.map((s, i) => (
-              <div key={i} className="rounded-2xl p-8 bg-[#eef3f7] border border-[#dbe4ec]">
+              <div key={i} className="rounded-2xl p-9 bg-[#eef3f7] border border-[#dbe4ec]">
                 <p
                   className="text-[#C5AF73] text-xs tracking-[0.25em] mb-4 font-semibold"
                   style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
@@ -316,13 +316,13 @@ const About = () => {
                   {s.step}
                 </p>
                 <h3
-                  className="text-xl text-[#2a3439] mb-3"
+                  className="text-[1.2rem] text-[#2a3439] mb-3.5"
                   style={{ fontFamily: "'Playfair Display', serif" }}
                 >
                   {s.title}
                 </h3>
                 <p
-                  className="text-sm text-gray-500 leading-relaxed"
+                  className="text-[13px] text-gray-500 leading-relaxed"
                   style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                 >
                   {s.text}
@@ -332,7 +332,7 @@ const About = () => {
           </div>
 
           <p
-            className="mt-8 text-sm text-gray-400"
+            className="mt-10 text-[13px] text-gray-400"
             style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
           >
             {content.note}

@@ -24,6 +24,7 @@ import GenAd from './pages/genAd.jsx';
 import CanalAd from './pages/canal.jsx';
 import Doctors from './pages/doctors.jsx';
 import DrTuPage from './pages/drTuPage.jsx';
+import InternationalPatients from './pages/InternationalPatients.jsx';
 
 function ExternalRedirect({ to }) {
   useEffect(() => {
@@ -50,10 +51,12 @@ function AppShell() {
     }
   }, [dispatch]);
 
-  const handleLanguageChange = (selectedLanguage) => {
-    dispatch(setLanguage(selectedLanguage));
-  };
-  
+  useEffect(() => {
+    if (!isRedirectRoute) {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    }
+  }, [location.pathname, isRedirectRoute]);
+
     // guide add new promos:
     // add new pics in ./pics/ads/
     // then add a new entry in AdBanner (just the pic)
@@ -73,6 +76,7 @@ function AppShell() {
           <Route path="/" element={<Home  />} />
           <Route path="/contact" element={<Contact  />} />
           <Route path="/about" element={<About  />} />
+          <Route path="/international-patients" element={<InternationalPatients  />} />
           <Route path="/services" element={<Services  />} />
           <Route path="/equipment" element={<Equipment  />} />
           <Route path="/veneer" element={<VeneerLanding />} />

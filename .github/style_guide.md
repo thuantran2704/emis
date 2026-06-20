@@ -63,6 +63,8 @@ Typography roles:
 - Headings: Playfair Display.
 - UI labels/buttons: Be Vietnam Pro.
 - Narrative body: Cormorant.
+- For premium editorial pages, prefer slightly smaller type with more line-height and whitespace rather than larger display copy.
+- Let small labels and CTAs rely on tracking and spacing for emphasis before increasing font size.
 
 Color system:
 - Primary gold: #d4af37 (hover #c19d30).
@@ -75,6 +77,7 @@ Layout:
 - Keep section rhythm generous and consistent.
 - Prefer editorial rows/lists over dense card walls for long-form content.
 - Avoid muddy yellow section backgrounds.
+- On luxury-oriented pages, keep text blocks narrower and let whitespace carry hierarchy.
 
 ## 7) Accessibility Baseline (WCAG-Oriented)
 
