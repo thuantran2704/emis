@@ -70,6 +70,13 @@
     {"id": "contraindication", "domain": "clinical", "english": "Contraindication", "vietnamese": "Chống chỉ định", "french": "Contre-indication", "korean": "금기", "simplified": "禁忌症", "traditional": "禁忌症"},
     {"id": "complication", "domain": "clinical", "english": "Complication", "vietnamese": "Biến chứng", "french": "Complication", "korean": "합병증", "simplified": "并发症", "traditional": "併發症"},
     {"id": "treatment_outcome", "domain": "clinical", "english": "Treatment Outcome", "vietnamese": "Kết quả điều trị", "french": "Résultat du traitement", "korean": "치료 결과", "simplified": "治疗结果", "traditional": "治療結果"},
-    {"id": "warranty", "domain": "operations", "english": "Treatment Warranty", "vietnamese": "Bảo hành điều trị", "french": "Garantie de traitement", "korean": "치료 보증", "simplified": "治疗保修", "traditional": "治療保固"}
+    {"id": "warranty", "domain": "operations", "english": "Treatment Warranty", "vietnamese": "Bảo hành điều trị", "french": "Garantie de traitement", "korean": "치료 보증", "simplified": "治疗保修", "traditional": "治療保固"},
+    {"id": "impacted_teeth", "domain": "oral_surgery", "english": "Impacted Teeth", "vietnamese": "Răng mọc lệch/mọc ngầm", "french": "Dents incluses", "korean": "매복치", "simplified": "阻生牙", "traditional": "阻生牙"},
+    {"id": "oral_lesion", "domain": "oral_surgery", "english": "Oral Lesion", "vietnamese": "Tổn thương vùng hàm mặt", "french": "Lésion buccale", "korean": "구강 병변", "simplified": "口腔病变", "traditional": "口腔病變"},
+    {"id": "cyst", "domain": "oral_surgery", "english": "Jaw Cyst", "vietnamese": "Nang xương", "french": "Kyste mâchoire", "korean": "턱낭종", "simplified": "颌骨囊肿", "traditional": "頜骨囊腫"},
+    {"id": "assessment", "domain": "clinical", "english": "Assessment", "vietnamese": "Đánh giá", "french": "Évaluation", "korean": "평가", "simplified": "评估", "traditional": "評估"},
+    {"id": "preliminary_review", "domain": "diagnostics", "english": "Preliminary Review", "vietnamese": "Đánh giá sơ bộ", "french": "Examen préliminaire", "korean": "초기 검토", "simplified": "初步审查", "traditional": "初步審查"},
+    {"id": "clinical_exam", "domain": "diagnostics", "english": "Clinical Examination", "vietnamese": "Khám lâm sàng", "french": "Examen clinique", "korean": "임상 검사", "simplified": "临床检查", "traditional": "臨床檢查"},
+    {"id": "post_op_recovery", "domain": "care", "english": "Recovery & Follow-up", "vietnamese": "Hồi phục & Tái khám", "french": "Récupération et suivi", "korean": "회복 및 추적", "simplified": "恢复和随访", "traditional": "恢復和隨訪"}
   ]
 }
