@@ -171,7 +171,9 @@ export default function SmileAesthetics() {
 
       <section className="bg-white py-16 lg:py-28">
         <div className="mx-auto max-w-6xl px-6 lg:px-12">
-          <SectionTitle>{content.options?.title}</SectionTitle>
+          <div className="mb-8 lg:mb-10">
+            <SectionTitle>{content.options?.title}</SectionTitle>
+          </div>
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
             {options.map((option, index) => (
               <article key={option.name} className="rounded-xl border border-[#dbe4ec] bg-[#f7fafc] p-5">
@@ -179,7 +181,7 @@ export default function SmileAesthetics() {
                   <img
                     src={optionImages[index % optionImages.length]}
                     alt={option.name}
-                    className="h-36 w-full object-cover lg:h-40"
+                    className="h-48 w-full object-cover md:h-52 lg:h-56"
                     loading="lazy"
                   />
                 </div>
