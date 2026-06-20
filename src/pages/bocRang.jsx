@@ -1,315 +1,325 @@
-import React, { useState, useEffect } from "react";
-import { useSelector } from "react-redux";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { Helmet } from 'react-helmet';
 
-// --- Section 5 Images (Forms / Smile Design) ---
-import form1Eng from "../pics/WEB/forms/eng/01-baby-style.png";
-import form2Eng from "../pics/WEB/forms/eng/02-aggressive-style.png";
-import form3Eng from "../pics/WEB/forms/eng/03-vigorous-style.png";
-import form4Eng from "../pics/WEB/forms/eng/04-softened-style.png";
-import form5Eng from "../pics/WEB/forms/eng/05-ovan-style.png";
-import form6Eng from "../pics/WEB/forms/eng/06-youthful-style.png";
-import form7Eng from "../pics/WEB/forms/eng/07-enhanced-style.png";
-import form8Eng from "../pics/WEB/forms/eng/08-functional-style.png";
+import crownHeroImage from '../pics/crown.jpg';
+import planningImage from '../pics/doctor-discussing-treatment-other-pic-ad-in-the-back.jpg';
+import labImage from '../pics/doctor-discussing-case-with-each-other-at-work-desk.jpg';
 
-import form1Vie from "../pics/WEB/forms/vie/01-rang-tre-trung.png";
-import form2Vie from "../pics/WEB/forms/vie/02-rang-ca-tinh.png";
-import form3Vie from "../pics/WEB/forms/vie/03-rang-dang-manh-me.png";
-import form4Vie from "../pics/WEB/forms/vie/04-rang-de-thuong.png";
-import form5Vie from "../pics/WEB/forms/vie/05-rang-ovan.png";
-import form6Vie from "../pics/WEB/forms/vie/06-rang-tho.png";
-import form7Vie from "../pics/WEB/forms/vie/07-dang-rang-khenh.png";
-import form8Vie from "../pics/WEB/forms/vie/08-dang-rang-nanh.png";
+import form1Eng from '../pics/WEB/forms/eng/01-baby-style.png';
+import form2Eng from '../pics/WEB/forms/eng/02-aggressive-style.png';
+import form3Eng from '../pics/WEB/forms/eng/03-vigorous-style.png';
+import form4Eng from '../pics/WEB/forms/eng/04-softened-style.png';
+import form5Eng from '../pics/WEB/forms/eng/05-ovan-style.png';
+import form6Eng from '../pics/WEB/forms/eng/06-youthful-style.png';
+import form7Eng from '../pics/WEB/forms/eng/07-enhanced-style.png';
+import form8Eng from '../pics/WEB/forms/eng/08-functional-style.png';
 
-// --- Section 7 Images (Crown / Răng Sứ Types) ---
-import crown1Eng from "../pics/WEB/veneer/eng/01-porcelain-DB-BIO-Crowns-Germany.png";
-import crown2Eng from "../pics/WEB/veneer/eng/02-zirconia-porcelain-crown.png";
-import crown3Eng from "../pics/WEB/veneer/eng/03-cercon-ht-porcelain-crowns-germany.png";
-import crown4Eng from "../pics/WEB/veneer/eng/04-lava-plus-porcelain-crowns-usa.png";
-import crown5Eng from "../pics/WEB/veneer/eng/05-full-nt200-porcelain-crowns-england.png";
-import crown6Eng from "../pics/WEB/veneer/eng/06-ordent-porcelain-crowns-italy.png";
-import crown7Eng from "../pics/WEB/veneer/eng/07-zico-centonia-porcelain-crowns-korea.png";
-import crown8Eng from "../pics/WEB/veneer/eng/08-emax-porcelain-veneer-germany.png";
+import form1Vie from '../pics/WEB/forms/vie/01-rang-tre-trung.png';
+import form2Vie from '../pics/WEB/forms/vie/02-rang-ca-tinh.png';
+import form3Vie from '../pics/WEB/forms/vie/03-rang-dang-manh-me.png';
+import form4Vie from '../pics/WEB/forms/vie/04-rang-de-thuong.png';
+import form5Vie from '../pics/WEB/forms/vie/05-rang-ovan.png';
+import form6Vie from '../pics/WEB/forms/vie/06-rang-tho.png';
+import form7Vie from '../pics/WEB/forms/vie/07-dang-rang-khenh.png';
+import form8Vie from '../pics/WEB/forms/vie/08-dang-rang-nanh.png';
 
-import crown1Vie from "../pics/WEB/veneer/vie/01-rang-su-dd-bio-duc.png";
-import crown2Vie from "../pics/WEB/veneer/vie/02-rang-su-zirconia-my.png";
-import crown3Vie from "../pics/WEB/veneer/vie/03-rang-su-cercon-ht-duc.png";
-import crown4Vie from "../pics/WEB/veneer/vie/04-rang-su-lava-plus.png";
-import crown5Vie from "../pics/WEB/veneer/vie/05-mat-dan-su-veneer-duc.png";
-import crown6Vie from "../pics/WEB/veneer/vie/06-rang-su-full-ordent-y.png";
-import crown7Vie from "../pics/WEB/veneer/vie/07-rang-su-full-nt200-anh.png";
-import crown8Vie from "../pics/WEB/veneer/vie/08-rang-su-zico-centonia-han-quoc.png";
+import crown1Eng from '../pics/WEB/veneer/eng/01-porcelain-DB-BIO-Crowns-Germany.png';
+import crown2Eng from '../pics/WEB/veneer/eng/02-zirconia-porcelain-crown.png';
+import crown3Eng from '../pics/WEB/veneer/eng/03-cercon-ht-porcelain-crowns-germany.png';
+import crown4Eng from '../pics/WEB/veneer/eng/04-lava-plus-porcelain-crowns-usa.png';
+import crown5Eng from '../pics/WEB/veneer/eng/05-full-nt200-porcelain-crowns-england.png';
+import crown6Eng from '../pics/WEB/veneer/eng/06-ordent-porcelain-crowns-italy.png';
+import crown7Eng from '../pics/WEB/veneer/eng/07-zico-centonia-porcelain-crowns-korea.png';
+import crown8Eng from '../pics/WEB/veneer/eng/08-emax-porcelain-veneer-germany.png';
+
+import crown1Vie from '../pics/WEB/veneer/vie/01-rang-su-dd-bio-duc.png';
+import crown2Vie from '../pics/WEB/veneer/vie/02-rang-su-zirconia-my.png';
+import crown3Vie from '../pics/WEB/veneer/vie/03-rang-su-cercon-ht-duc.png';
+import crown4Vie from '../pics/WEB/veneer/vie/04-rang-su-lava-plus.png';
+import crown5Vie from '../pics/WEB/veneer/vie/05-mat-dan-su-veneer-duc.png';
+import crown6Vie from '../pics/WEB/veneer/vie/06-rang-su-full-ordent-y.png';
+import crown7Vie from '../pics/WEB/veneer/vie/07-rang-su-full-nt200-anh.png';
+import crown8Vie from '../pics/WEB/veneer/vie/08-rang-su-zico-centonia-han-quoc.png';
 
 export default function CrownLanding() {
   const language = useSelector((state) => state.language.language);
+  const isVie = language === 'vietnamese';
 
-  // --- Sections Content (Bilingual) ---
-  const sections = [
-    {
-      title: {
-        vietnamese: "1. Bọc Răng Sứ là Gì?",
-        english: "1. What is a Dental Crown?"
-      },
-      content: {
-        vietnamese: `Bọc răng sứ (hay Răng sứ thẩm mỹ) là phương pháp phục hình răng giả cố định, sử dụng một "mão sứ" rỗng ruột được chế tác tinh xảo để bọc chụp toàn bộ chiếc răng thật đã được mài nhỏ. Kỹ thuật này giúp khắc phục hiệu quả tình trạng răng thưa, hô, sứt mẻ hay xỉn màu, mang lại hàm răng trắng sáng, đều đẹp và bền chắc.`,
-        english: `A dental crown (or cosmetic crown) is a fixed prosthetic method using a hollow, finely crafted "crown" to cover a natural tooth that has been shaped down. This technique effectively corrects issues such as gaps, misalignment, chipped or discolored teeth, providing a bright, even, and durable smile.`
-      }
-    },
-    {
-      title: {
-        vietnamese: "2. Trường Hợp Nào Nên Bọc Răng Sứ?",
-        english: "2. When Should You Get a Dental Crown?"
-      },
-      content: {
-        vietnamese: `Bọc răng sứ là giải pháp lý tưởng cho những trường hợp sau:
-- Răng bị nhiễm màu kháng sinh nặng (răng nhiễm tetracycline), tẩy trắng không hiệu quả.
-- Răng bị sứt mẻ, vỡ lớn do chấn thương.
-- Răng lệch lạc, hô móm nhẹ, răng thưa muốn cải thiện nhanh chóng.
-- Răng sâu vỡ lớn, răng chết tủy hoặc đã điều trị tủy cần được bảo vệ.
-- Phục hình sau khi làm cầu răng sứ hoặc cấy ghép Implant.`,
-        english: `Dental crowns are ideal for the following cases:
-- Teeth heavily stained by antibiotics (tetracycline), not responding to whitening.
-- Teeth chipped or severely broken due to trauma.
-- Misaligned, slightly protruding or spaced teeth needing fast improvement.
-- Large cavities, dead teeth, or teeth that have had root canal treatment needing protection.
-- Restoration after a dental bridge or implant.`
-      }
-    },
-    {
-      title: {
-        vietnamese: "3. Các Loại Răng Sứ Cao Cấp Tại Emis Dental",
-        english: "3. Premium Dental Crowns at Emis Dental"
-      },
-      content: {
-        vietnamese: `Tại Emis Dental, chúng tôi cam kết sử dụng các dòng sứ chính hãng, có bảo hành minh bạch theo thời gian hãng quy định. Minh bạch về xuất xứ từ các thương hiệu hàng đầu thế giới:
-- Sứ Kim Loại Titan: Răng sứ Titan Nhật (Bảo hành 2 năm).
-- Sứ Toàn Sứ EMIS: Răng sứ EMIS Zico Centonia (Bảo hành 5 năm).
-- Sứ Toàn Sứ Zirconia (Đức & Mỹ):
-  + Răng sứ Zirconia Mỹ (Bảo hành 10 năm).
-  + Răng sứ DD Bio Đức (Bảo hành 10 năm).
-  + Răng sứ Cercon HT Đức (Bảo hành 10 năm).
-- Sứ Cao Cấp Lava (Mỹ): Răng sứ Lava MỸ, Lava Plus Mỹ, Lava Esthetics MỸ (Bảo hành 12–20 năm).
-- Sứ Thẩm Mỹ Đỉnh Cao: Răng sứ Orodent ITALY (Bảo hành TRỌN ĐỜI).
-- Dán Sứ Veneer: Dán sứ Emax (Bảo hành 10 năm), giúp bảo tồn răng thật tối đa.`,
-        english: `At Emis Dental, we are committed to using genuine, premium crowns with transparent warranties as per manufacturer guidelines:
-- Titanium Metal Crowns: Japanese Titan Crowns (2-year warranty)
-- Full Ceramic EMIS Crowns: EMIS Zico Centonia (5-year warranty)
-- Full Zirconia Crowns (Germany & USA):
-  + US Zirconia (10-year warranty)
-  + DD Bio Germany (10-year warranty)
-  + Cercon HT Germany (10-year warranty)
-- Premium Lava Crowns (USA): Lava, Lava Plus, Lava Esthetics (12–20 years)
-- High-End Cosmetic Crowns: Orodent ITALY (Lifetime warranty)
-- Veneers: Emax Veneers (10-year warranty), preserving natural teeth as much as possible.`
-      }
-    },
-    {
-      title: {
-        vietnamese: "4. Ưu Điểm Vượt Trội Của Bọc Răng Sứ Thẩm Mỹ",
-        english: "4. Advantages of Cosmetic Dental Crowns"
-      },
-      content: {
-        vietnamese: `Bọc răng sứ được ưa chuộng nhờ những ưu điểm nổi bật:
-- Cải Thiện Thẩm Mỹ Tinh Tế: Giúp phục hồi hình dáng, màu sắc răng về màu tự nhiên, hài hòa với khuôn mặt.
-- Đảm Bảo Ăn Nhai Bền Vững: Răng sứ có thể bảo vệ mô răng tự nhiên khỏi tổn thương và khôi phục chức năng ăn nhai thoải mái như răng thật, bền đến 30 năm.
-- Bảo tồn răng thật: Mão sứ bao bọc, bảo vệ răng thật khỏi tác động của vi khuẩn, hóa chất, nhiệt độ.
-- Bảo vệ răng đã chữa tủy: Răng dễ vỡ sau khi chữa tủy, bọc sứ giúp bảo vệ hiệu quả.`,
-        english: `Dental crowns are popular due to their outstanding benefits:
-- Enhance Aesthetics: Restore natural shape and color, harmonizing with the face.
-- Durable Functionality: Protect natural teeth from damage and restore chewing comfort, lasting up to 30 years.
-- Preserve Natural Teeth: Crowns cover and protect teeth from bacteria, chemicals, and temperature.
-- Protect Treated Teeth: Crowns reinforce teeth after root canal therapy, preventing breakage.`
-      }
-    },
-    {
-      title: {
-        vietnamese: "5. Các Dáng Răng Sứ Nào Được Ưa Chuộng Trên Thị Trường?",
-        english: "5. Popular Crown Shapes on the Market"
-      },
-      content: {
-        vietnamese: `Tùy vào mong muốn và khuôn mặt, các dáng răng sứ thường được khách hàng lựa chọn. (File hình chị gửi DÁNG RĂNG)`,
-        english: `Depending on personal preference and facial features, various crown shapes are popular among clients. (Images for reference)`
-      }
-    },
-    {
-      title: {
-        vietnamese: "6. Quy Trình Bọc Răng Sứ Chuẩn Y Khoa tại Emis Dental",
-        english: "6. Step-by-Step Dental Crown Procedure at Emis Dental"
-      },
-      content: {
-        vietnamese: `Bước 1: Thăm khám & Tư vấn: Bác sĩ kiểm tra tổng quát, chụp phim X-quang.
-Bước 2: Lập kế hoạch điều trị: Lấy dấu răng, thiết kế nụ cười và chọn dáng răng, màu răng phù hợp.
-Bước 3: Mài Cùi Răng (tối thiểu): Mài cùi răng theo tỉ lệ chuẩn, hạn chế xâm lấn răng thật, lấy dấu hàm gửi Labo chế tác sứ.
-Bước 4: Gắn răng tạm: Làm bộ răng tạm để ăn nhai trong quá trình chờ răng sứ.
-Bước 5: Thử sứ: Kiểm tra độ khít sát, màu sắc, hình dáng, khớp cắn và cảm giác ăn nhai.
-Bước 6: Gắn Sứ Chính Thức: Kiểm tra và gắn sứ cố định vĩnh viễn.`,
-        english: `Step 1: Consultation & Examination: Comprehensive check-up and X-rays.
-Step 2: Treatment Planning: Take dental impressions, design smile, choose crown shape and color.
-Step 3: Tooth Preparation: Minimize tooth reduction, take impressions, send to lab for crown fabrication.
-Step 4: Temporary Crowns: Place temporary crowns for chewing during fabrication.
-Step 5: Crown Try-In: Check fit, color, shape, bite, and comfort.
-Step 6: Final Crown Placement: Place permanent crowns after final checks.`
-      }
-    },
-    {
-      title: {
-        vietnamese: "7. Các Loại Răng Sứ tại Emis Dental",
-        english: "7. Types of Dental Crowns at Emis Dental"
-      },
-      content: {
-        vietnamese: `Răng sứ có 2 dòng: răng sứ kim loại và răng sứ toàn sứ, chia thành nhiều loại: kim loại thường, Titan, Chrom-Cobalt, kim loại quý và toàn sứ. Mỗi loại phù hợp với nhu cầu bọc răng sứ thẩm mỹ khác nhau. (Folder chị gửi LOẠI RĂNG)`,
-        english: `There are two main types of crowns: metal and full-ceramic, including various subtypes such as regular metal, Titanium, Chrome-Cobalt, precious metals, and full ceramic. Each type suits different aesthetic dental crown needs. (Folder reference for crown types)`
-      }
-    },
-    {
-      title: {
-        vietnamese: "8. Vì Sao Bạn Nên Chọn Làm Răng Sứ tại Emis Dental?",
-        english: "8. Why Choose Emis Dental for Your Crowns?"
-      },
-      content: {
-        vietnamese: `- Nha khoa uy tín: Niềm tin của khách hàng là tài sản quý giá.
-- Vật Liệu Chính Hãng: 100% sứ cao cấp chính hãng, có thẻ bảo hành uy tín.
-- Quy Trình Chuẩn Y Khoa: Vô trùng, an toàn, bảo tồn răng thật tối đa.
-- Đội Ngũ Bác Sĩ Chuyên Môn Cao: Kinh nghiệm, chuyên sâu trong thiết kế nụ cười và phục hình thẩm mỹ.`,
-        english: `- Reputable Clinic: Customers’ trust is a valuable asset.
-- Genuine Materials: 100% premium, certified materials with valid warranties.
-- Standard Medical Procedure: Sterile, safe, preserving natural teeth.
-- Highly Skilled Dentists: Experienced in smile design and aesthetic restorations.`
-      }
-    }
-  ];
+  const shapeImages = isVie
+    ? [form1Vie, form2Vie, form3Vie, form4Vie, form5Vie, form6Vie, form7Vie, form8Vie]
+    : [form1Eng, form2Eng, form3Eng, form4Eng, form5Eng, form6Eng, form7Eng, form8Eng];
 
-  // --- Section 5 / Smile Design Slider Images ---
-  const formImages = language === "vietnamese"
-    ? [
-        { src: form1Vie, alt: "Baby-style smile design sample for cosmetic crown planning" },
-        { src: form2Vie, alt: "Aggressive smile design sample for bold dental contours" },
-        { src: form3Vie, alt: "Vigorous smile design example with strong tooth shapes" },
-        { src: form4Vie, alt: "Softened smile design for a gentle dental appearance" },
-        { src: form5Vie, alt: "Oval smile design sample for natural-looking teeth" },
-        { src: form6Vie, alt: "Youthful smile design option for dental aesthetics" },
-        { src: form7Vie, alt: "Enhanced smile design sample with polished tooth shape" },
-        { src: form8Vie, alt: "Functional smile design for balanced dental function" },
-      ]
-    : [
-        { src: form1Eng, alt: "Baby-style smile design sample for cosmetic crown planning" },
-        { src: form2Eng, alt: "Aggressive smile design sample for bold dental contours" },
-        { src: form3Eng, alt: "Vigorous smile design example with strong tooth shapes" },
-        { src: form4Eng, alt: "Softened smile design for a gentle dental appearance" },
-        { src: form5Eng, alt: "Oval smile design sample for natural-looking teeth" },
-        { src: form6Eng, alt: "Youthful smile design option for dental aesthetics" },
-        { src: form7Eng, alt: "Enhanced smile design sample with polished tooth shape" },
-        { src: form8Eng, alt: "Functional smile design for balanced dental function" },
-      ];
+  const crownTypes = isVie
+    ? [crown1Vie, crown2Vie, crown3Vie, crown4Vie, crown5Vie, crown6Vie, crown7Vie, crown8Vie]
+    : [crown1Eng, crown2Eng, crown3Eng, crown4Eng, crown5Eng, crown6Eng, crown7Eng, crown8Eng];
 
-  // --- Section 7 / Crown Gallery Images ---
-  const crownImages = language === "vietnamese"
-    ? [
-        { src: crown1Vie, alt: "German DD Bio porcelain dental crown example" },
-        { src: crown2Vie, alt: "American zirconia porcelain crown sample" },
-        { src: crown3Vie, alt: "German Cercon HT porcelain crown product" },
-        { src: crown4Vie, alt: "US Lava Plus porcelain crown example" },
-        { src: crown5Vie, alt: "English NT200 full porcelain crown sample" },
-        { src: crown6Vie, alt: "Italian Ordent full porcelain crown example" },
-        { src: crown7Vie, alt: "Korean Zico Centonia porcelain crown sample" },
-        { src: crown8Vie, alt: "German Emax porcelain veneer crown example" },
-      ]
-    : [
-        { src: crown1Eng, alt: "German DD Bio porcelain dental crown example" },
-        { src: crown2Eng, alt: "American zirconia porcelain crown sample" },
-        { src: crown3Eng, alt: "German Cercon HT porcelain crown product" },
-        { src: crown4Eng, alt: "US Lava Plus porcelain crown example" },
-        { src: crown5Eng, alt: "English NT200 full porcelain crown sample" },
-        { src: crown6Eng, alt: "Italian Ordent full porcelain crown example" },
-        { src: crown7Eng, alt: "Korean Zico Centonia porcelain crown sample" },
-        { src: crown8Eng, alt: "German Emax porcelain veneer crown example" },
-      ];
-
-  // --- Responsive Slider Component ---
-  const ImageSlider = ({ images }) => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [visibleSlides, setVisibleSlides] = useState(4);
-
-    useEffect(() => {
-      const handleResize = () => {
-        if (window.innerWidth >= 1024) setVisibleSlides(4);
-        else if (window.innerWidth >= 640) setVisibleSlides(2);
-        else setVisibleSlides(1);
+  const copy = isVie
+    ? {
+        metaTitle: 'Bọc Răng Sứ Thẩm Mỹ | Emis Dental',
+        metaDescription:
+          'Bọc răng sứ tại Emis Dental giúp cải thiện màu sắc, hình thể và chức năng ăn nhai với vật liệu chính hãng và quy trình chuẩn.',
+        label: 'Phục Hình Thẩm Mỹ',
+        heroTitle: 'Bọc Răng Sứ Thẩm Mỹ',
+        heroIntro:
+          'Giải pháp phục hình cố định giúp tái tạo hình thể răng, cải thiện nụ cười và duy trì chức năng ăn nhai ổn định.',
+        heroPrimary: 'Đặt Lịch Tư Vấn',
+        heroSecondary: 'Nhận Báo Giá Phù Hợp',
+        suitableTitle: 'Trường Hợp Nên Bọc Răng Sứ',
+        suitableItems: [
+          'Răng xỉn màu nặng, nhiễm màu không đáp ứng tẩy trắng.',
+          'Răng mẻ lớn, hình thể răng mất cân đối hoặc mòn nhiều.',
+          'Răng thưa, lệch nhẹ cần cải thiện nhanh về thẩm mỹ.',
+          'Răng sau điều trị tủy cần được bảo vệ lâu dài.',
+        ],
+        advantagesTitle: 'Ưu Điểm Nổi Bật',
+        advantages: [
+          {
+            title: 'Thẩm Mỹ Tự Nhiên',
+            desc: 'Điều chỉnh màu sắc và form răng hài hòa với khuôn mặt.',
+          },
+          {
+            title: 'Ăn Nhai Ổn Định',
+            desc: 'Phục hồi chức năng và bảo vệ mô răng bên dưới hiệu quả.',
+          },
+          {
+            title: 'Vật Liệu Rõ Nguồn Gốc',
+            desc: 'Sử dụng các dòng răng sứ chính hãng, thông tin minh bạch.',
+          },
+          {
+            title: 'Quy Trình Kiểm Soát',
+            desc: 'Theo dõi độ khít, khớp cắn và cảm giác sử dụng trước khi hoàn tất.',
+          },
+        ],
+        processTitle: 'Quy Trình Bọc Răng Sứ',
+        processSteps: [
+          'Thăm khám tổng quát, chụp phim và đánh giá nền răng.',
+          'Lập thiết kế nụ cười, chọn màu sắc và dáng răng phù hợp.',
+          'Chuẩn bị răng theo tỉ lệ bảo tồn và lấy dấu phục hình.',
+          'Gắn răng tạm trong thời gian labo hoàn thiện răng sứ.',
+          'Thử sứ, điều chỉnh khớp cắn và gắn hoàn tất.',
+        ],
+        shapeTitle: 'Dáng Răng Thẩm Mỹ Tham Khảo',
+        crownTypeTitle: 'Các Dòng Răng Sứ Tại Emis Dental',
+        ctaTitle: 'Sẵn Sàng Cải Thiện Nụ Cười?',
+        ctaText:
+          'Đặt lịch để được bác sĩ đánh giá trực tiếp tình trạng răng và đề xuất kế hoạch phục hình phù hợp với mục tiêu thẩm mỹ của bạn.',
+        ctaButton: 'Liên Hệ Tư Vấn Ngay',
+      }
+    : {
+        metaTitle: 'Cosmetic Dental Crowns | Emis Dental',
+        metaDescription:
+          'Cosmetic crowns at Emis Dental improve tooth color, shape, and chewing stability with genuine materials and a controlled treatment workflow.',
+        label: 'Aesthetic Restoration',
+        heroTitle: 'Cosmetic Dental Crowns',
+        heroIntro:
+          'A fixed restorative solution to rebuild tooth shape, improve smile aesthetics, and maintain stable chewing performance.',
+        heroPrimary: 'Book Consultation',
+        heroSecondary: 'Get Personalized Quote',
+        suitableTitle: 'When Crowns Are Suitable',
+        suitableItems: [
+          'Severe discoloration not responsive to whitening.',
+          'Large chips, shape loss, or advanced tooth wear.',
+          'Mild spacing or alignment concerns needing faster cosmetic correction.',
+          'Root-canal-treated teeth requiring long-term protection.',
+        ],
+        advantagesTitle: 'Key Advantages',
+        advantages: [
+          {
+            title: 'Natural Aesthetic Outcome',
+            desc: 'Color and tooth shape are calibrated to your facial profile.',
+          },
+          {
+            title: 'Functional Stability',
+            desc: 'Restores chewing while protecting underlying tooth structure.',
+          },
+          {
+            title: 'Traceable Materials',
+            desc: 'Genuine crown lines with clear sourcing and clinical indication.',
+          },
+          {
+            title: 'Controlled Protocol',
+            desc: 'Fit, bite, and comfort are validated before final placement.',
+          },
+        ],
+        processTitle: 'Crown Treatment Workflow',
+        processSteps: [
+          'Comprehensive exam, imaging, and baseline dental assessment.',
+          'Smile planning with matched shade and shape selection.',
+          'Conservative tooth preparation and precision impression.',
+          'Temporary crowns during laboratory fabrication.',
+          'Try-in, bite refinement, and final cementation.',
+        ],
+        shapeTitle: 'Reference Smile Shapes',
+        crownTypeTitle: 'Crown Lines at Emis Dental',
+        ctaTitle: 'Ready To Upgrade Your Smile?',
+        ctaText:
+          'Book a direct consultation for clinical assessment and a crown plan aligned with your aesthetic and functional goals.',
+        ctaButton: 'Contact For Consultation',
       };
-      handleResize();
-      window.addEventListener("resize", handleResize);
-      return () => window.removeEventListener("resize", handleResize);
-    }, []);
 
-    useEffect(() => {
-      setCurrentIndex(0);
-    }, [language]);
-
-    const nextSlide = () => setCurrentIndex((prev) => (prev + 1) % images.length);
-    const prevSlide = () => setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
-
-    const getTransformValue = () => {
-      const width = 100 / visibleSlides;
-      return -currentIndex * width;
-    };
-
-    return (
-      <div className="relative w-full overflow-hidden my-10">
-        <button
-          onClick={prevSlide}
-          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#d4af37] text-white p-2 rounded-full"
-        >
-          &#8249;
-        </button>
-        <button
-          onClick={nextSlide}
-          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#d4af37] text-white p-2 rounded-full"
-        >
-          &#8250;
-        </button>
-
-        <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(${getTransformValue()}%)` }}>
-          {images.map((img, idx) => (
-            <div key={idx} className="px-2 flex-shrink-0" style={{ width: `${100 / visibleSlides}%` }}>
-              <img src={img.src} alt={img.alt} className="rounded-lg shadow-md w-full object-cover" />
-            </div>
-          ))}
-        </div>
-      </div>
-    );
-  };
+  const sectionLabelClass = 'uppercase tracking-[0.28em] text-[#C5AF73] text-[10px] font-semibold';
+  const titleClass = 'text-[1.85rem] md:text-[2.2rem] text-[#2a3439]';
+  const bodyClass = 'text-[15px] md:text-[17px] text-gray-600 leading-relaxed';
 
   return (
-    <div className="w-full flex justify-center pt-20 px-4">
-      <div className="max-w-5xl w-full bg-white shadow-xl rounded-2xl p-8 md:p-12">
-        <h1 className="text-4xl font-bold text-gray-900 text-center mb-10">
-          {language === "vietnamese" ? "Bọc Răng Sứ Thẩm Mỹ" : "Cosmetic Dental Crowns"}
-        </h1>
+    <main className="min-h-screen bg-[#f7fafc] pt-20">
+      <Helmet>
+        <title>{copy.metaTitle}</title>
+        <meta name="description" content={copy.metaDescription} />
+      </Helmet>
 
-        <div className="space-y-16 text-gray-800 text-[17px] leading-relaxed">
-          {sections.map((sec, i) => (
-            <div key={i}>
-              <h2 className="text-2xl font-bold text-gray-900 mb-3">
-                {language === "vietnamese" ? sec.title.vietnamese : sec.title.english}
-              </h2>
-              <p className="whitespace-pre-line mb-6">
-                {language === "vietnamese" ? sec.content.vietnamese : sec.content.english}
-              </p>
-
-              {/* Section 5 Slider */}
-              {i === 4 && <ImageSlider images={formImages}/>}
-
-              {/* Section 7 Gallery */}
-              {i === 6 && (
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-6">
-                  {crownImages.map((img, idx) => (
-                    <img key={idx} src={img.src} alt={img.alt} className="rounded-lg shadow-md w-full object-cover" />
-                  ))}
-                </div>
-              )}
+      <section className="py-24 bg-white">
+        <div className="max-w-6xl mx-auto px-8 grid lg:grid-cols-[1.2fr_0.8fr] gap-10 lg:gap-14 items-center">
+          <div className="space-y-6">
+            <p className={sectionLabelClass} style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}>
+              {copy.label}
+            </p>
+            <h1 className={titleClass} style={{ fontFamily: "'Playfair Display', serif" }}>
+              {copy.heroTitle}
+            </h1>
+            <p className={bodyClass} style={{ fontFamily: "'Cormorant', serif" }}>
+              {copy.heroIntro}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 pt-2">
+              <Link
+                to="/contact"
+                className="px-7 py-3.5 rounded-full bg-[#d4af37] text-white text-sm font-semibold hover:bg-[#c19d30] transition text-center"
+                style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+              >
+                {copy.heroPrimary}
+              </Link>
+              <Link
+                to="/contact"
+                className="px-7 py-3.5 rounded-full border border-[#d4af37] text-[#2a3439] text-sm hover:bg-[#f1f5f9] transition text-center"
+                style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+              >
+                {copy.heroSecondary}
+              </Link>
             </div>
-          ))}
+          </div>
+          <div className="rounded-2xl overflow-hidden shadow-sm border border-[#dbe4ec] bg-[#f7fafc] max-w-sm lg:max-w-md lg:ml-auto">
+            <img src={crownHeroImage} alt="Cosmetic crown treatment visual" className="w-full h-[260px] md:h-[300px] object-cover" />
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
+
+      <section className="py-24 bg-[#f7fafc]">
+        <div className="max-w-6xl mx-auto px-8 grid lg:grid-cols-2 gap-10 items-start">
+          <div>
+            <h2 className={titleClass} style={{ fontFamily: "'Playfair Display', serif" }}>
+              {copy.suitableTitle}
+            </h2>
+            <div className="mt-6 space-y-3">
+              {copy.suitableItems.map((item) => (
+                <div key={item} className="flex gap-3 items-start text-[#2a3439]">
+                  <span className="mt-1.5 w-2 h-2 rounded-full bg-[#d4af37]" />
+                  <p className={bodyClass} style={{ fontFamily: "'Cormorant', serif" }}>
+                    {item}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="rounded-2xl overflow-hidden shadow-sm border border-[#dbe4ec] bg-white">
+            <img src={planningImage} alt="Doctor discussing crown treatment options with patient" className="w-full h-full object-cover" />
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-white">
+        <div className="max-w-6xl mx-auto px-8">
+          <h2 className={titleClass + ' mb-8 text-center'} style={{ fontFamily: "'Playfair Display', serif" }}>
+            {copy.advantagesTitle}
+          </h2>
+          <div className="grid md:grid-cols-2 gap-5">
+            {copy.advantages.map((item) => (
+              <article key={item.title} className="rounded-2xl border border-[#dbe4ec] bg-[#f7fafc] p-6">
+                <h3 className="text-[1.1rem] text-[#2a3439] mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  {item.title}
+                </h3>
+                <p className="text-[14px] text-gray-600 leading-relaxed" style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}>
+                  {item.desc}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-[#f1f5f9]">
+        <div className="max-w-6xl mx-auto px-8 grid lg:grid-cols-2 gap-10 items-start">
+          <div>
+            <h2 className={titleClass + ' mb-8'} style={{ fontFamily: "'Playfair Display', serif" }}>
+              {copy.processTitle}
+            </h2>
+            <div className="space-y-4">
+              {copy.processSteps.map((step, idx) => (
+                <div key={step} className="rounded-xl bg-white border border-[#dbe4ec] px-5 py-4">
+                  <p className="text-[11px] uppercase tracking-[0.2em] text-[#C5AF73] mb-2" style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}>
+                    Step {idx + 1}
+                  </p>
+                  <p className="text-[15px] text-[#2a3439]" style={{ fontFamily: "'Cormorant', serif" }}>
+                    {step}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="rounded-2xl overflow-hidden shadow-sm border border-[#dbe4ec] bg-white">
+            <img src={labImage} alt="Clinical team discussing crown case planning" className="w-full h-full object-cover" />
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-white">
+        <div className="max-w-6xl mx-auto px-8">
+          <h2 className={titleClass + ' mb-8 text-center'} style={{ fontFamily: "'Playfair Display', serif" }}>
+            {copy.shapeTitle}
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {shapeImages.map((img, idx) => (
+              <div key={`${img}-${idx}`} className="rounded-xl overflow-hidden border border-[#dbe4ec] bg-[#f7fafc]">
+                <img src={img} alt={`Smile shape sample ${idx + 1}`} className="w-full h-40 object-cover" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-[#f7fafc]">
+        <div className="max-w-6xl mx-auto px-8">
+          <h2 className={titleClass + ' mb-8 text-center'} style={{ fontFamily: "'Playfair Display', serif" }}>
+            {copy.crownTypeTitle}
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {crownTypes.map((img, idx) => (
+              <div key={`${img}-${idx}`} className="rounded-xl overflow-hidden border border-[#dbe4ec] bg-white">
+                <img src={img} alt={`Crown type sample ${idx + 1}`} className="w-full h-40 object-cover" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-8 text-center">
+          <h2 className={titleClass + ' mb-5'} style={{ fontFamily: "'Playfair Display', serif" }}>
+            {copy.ctaTitle}
+          </h2>
+          <p className={bodyClass + ' mb-8'} style={{ fontFamily: "'Cormorant', serif" }}>
+            {copy.ctaText}
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex px-8 py-3.5 rounded-full bg-[#d4af37] text-white text-sm font-semibold hover:bg-[#c19d30] transition"
+            style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+          >
+            {copy.ctaButton}
+          </Link>
+        </div>
+      </section>
+    </main>
   );
 }

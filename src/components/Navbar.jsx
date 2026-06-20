@@ -78,6 +78,13 @@ export default function Navbar() {
         : 'text-[#2a3439] hover:bg-[#f3ead2]'
     }`;
 
+  const mobileParentRowClass = (path) =>
+    `flex items-center justify-between rounded-xl px-3 py-2.5 text-sm transition ${
+      location.pathname === path
+        ? 'bg-[#f5e9c2] text-[#1f2937]'
+        : 'text-[#2a3439] hover:bg-[#f3ead2]'
+    }`;
+
   const aboutDropdownItems = [
     { name: content.drSon, path: '/dr-son' },
     { name: content.drTu, path: '/dr-tu' },
@@ -260,10 +267,10 @@ export default function Navbar() {
             </Link>
 
             <div>
-              <div className="flex items-center justify-between rounded-xl px-3 py-2.5">
+              <div className={mobileParentRowClass('/about')}>
                 <Link
                   to="/about"
-                  className={mobileLinkClass('/about')}
+                  className="flex-1"
                   style={navFont}
                   onClick={() => {
                     setIsAboutOpen(false);
@@ -290,13 +297,13 @@ export default function Navbar() {
               </div>
 
               {isAboutOpen && (
-                <div className="ml-4 mt-1 space-y-1 border-l border-[#e3d4b0] pl-3">
+                <div className="mt-2 ml-2 rounded-xl bg-[#f5ecd3]/70 p-2 space-y-1">
                   {aboutDropdownItems.map((sub) => (
                     <Link
                       key={sub.name}
                       to={sub.path}
-                      className="block rounded-lg px-3 py-2 text-[#2a3439] hover:bg-[#f3ead2]"
-                      style={dropdownFont}
+                      className="block rounded-lg px-3 py-2 text-sm text-[#2a3439] hover:bg-[#f3ead2] transition"
+                      style={navFont}
                       onClick={closeAllMenus}
                     >
                       {sub.name}
@@ -316,10 +323,10 @@ export default function Navbar() {
             </Link>
 
             <div>
-              <div className="flex items-center justify-between rounded-xl px-3 py-2.5">
+              <div className={mobileParentRowClass('/services')}>
                 <Link
                   to="/services"
-                  className={mobileLinkClass('/services')}
+                  className="flex-1"
                   style={navFont}
                   onClick={() => {
                     setIsJuneOpen(false);
@@ -346,13 +353,13 @@ export default function Navbar() {
               </div>
 
               {isJuneOpen && (
-                <div className="ml-4 mt-1 space-y-1 border-l border-[#e3d4b0] pl-3">
+                <div className="mt-2 ml-2 rounded-xl bg-[#f5ecd3]/70 p-2 space-y-1">
                   {treatmentDropdownItems.map((sub) => (
                     <Link
                       key={sub.name}
                       to={sub.path}
-                      className="block rounded-lg px-3 py-2 text-[#2a3439] hover:bg-[#f3ead2]"
-                      style={dropdownFont}
+                      className="block rounded-lg px-3 py-2 text-sm text-[#2a3439] hover:bg-[#f3ead2] transition"
+                      style={navFont}
                       onClick={closeAllMenus}
                     >
                       {sub.name}
