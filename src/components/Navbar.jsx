@@ -177,6 +177,10 @@ export default function Navbar() {
               {content.internationalPatients}
             </Link>
 
+            <Link to="/smile-aesthetics" className={navLinkClass('/smile-aesthetics')} style={navFont}>
+              {content.smileAesthetics}
+            </Link>
+
             <div className="relative flex items-center">
               <Link
                 to="/services"
@@ -321,6 +325,15 @@ export default function Navbar() {
               style={navFont}
             >
               {content.internationalPatients}
+            </Link>
+
+            <Link
+              to="/smile-aesthetics"
+              className={mobileLinkClass('/smile-aesthetics')}
+              onClick={closeAllMenus}
+              style={navFont}
+            >
+              {content.smileAesthetics}
             </Link>
 
             <div>

@@ -1,109 +1,165 @@
 ---
 name: content-to-page-pipeline
 user-invocable: true
-description: "Use when: building a new page from .github/content.md, applying .github/style_guide.md, populating with home_content data, then running dev-agent and seo-agent in sequence."
+description: "Build a new page from source content with style-guide compliance, implementation verification, and a post-stability SEO pass."
 ---
 
 # Content To Page Pipeline
 
 ## Purpose
+Create page implementations from repository content sources using a deterministic flow: intake, mapping, implementation, verification, and optional SEO refinement after functional stability.
 
-Create a new website page from a content source file with a repeatable implementation workflow:
-1. Read content from `.github/content.md` (or user-provided content file in `.github`).
-2. Build the page using repository standards from `.github/style_guide.md`.
-3. Populate and map page copy using `home_content` data patterns.
-4. Use `dev-agent` for implementation and verification.
-5. Use `seo-agent` for SEO refinement after the page is functionally complete.
+## Trigger Criteria
 
-## When To Use
+### Use when
+- A new page must be created from a markdown source in .github.
+- Existing page content must be remapped to a new layout pattern.
+- Route and page creation are requested together.
 
-- You need a new page generated from a markdown content source.
-- You want style-guide-compliant layout and copy integration.
-- You want implementation first, then SEO pass.
+### Do not use when
+- The task is a small single-component bug fix.
+- The task is translation-only with no page creation.
+- The task is project scaffolding from scratch.
+
+### Router hints
+- build page from content file
+- create landing page from markdown
+- map content doc into src/pages
+- add new route and page from .github doc
+- run implementation first then seo
 
 ## Inputs
 
 Required:
-- Content source markdown file in `.github` (default: `.github/content.md`).
-- Target page path (for example `src/pages/NewPage.jsx`).
+- Content source path in .github.
+- Target page path.
 
 Optional:
-- Target translation file(s) if content should be localized.
-- Preferred route or navbar link target.
-- Preferred section image mapping if specific pictures are required.
+- Route path to wire in app router.
+- Target translation file(s).
+- Preferred image mapping per section.
+- Constraints such as minimal diff or no new components.
+
+Missing input behavior:
+- Ask at most 2 concise clarification questions.
+- If route is missing, implement page and report route wiring as pending.
+
+## Allowed Tools
+
+Allowed:
+- workspace discovery and read tools
+- local file edit tools
+- scoped verification tools
+- delegated specialist agents for implementation and SEO
+
+Forbidden:
+- destructive git operations unless explicitly requested
+- external side-effect operations unrelated to page implementation
+
+Preconditions:
+- Load style guide and relevant existing page patterns before editing.
+- Confirm source file exists before modeling.
 
 ## Workflow
 
-### Phase 1: Intake and Source Discovery
+### Phase 1: Intake
+Entry criteria:
+- source file and target page path are known
 
-1. Confirm content source file path in `.github`.
-2. Confirm target page file path and route destination.
-3. Load `.github/style_guide.md` and relevant existing page patterns.
-4. Load `home_content` to identify reusable content schema and section structure.
-5. Scan `src/pics/` for section-appropriate images before page composition.
+Actions:
+1. Confirm source and target paths.
+2. Load style guide and relevant existing page patterns.
+3. Identify whether route wiring is required.
 
-Decision points:
-- If `.github/content.md` is missing, ask for the exact content filename.
-- If route target is missing, implement page file first and report pending route wiring.
+Exit criteria:
+- clear implementation scope and missing inputs list
+
+Failure fallback:
+- request missing critical input with concise question
 
 ### Phase 2: Content Modeling
+Entry criteria:
+- source content is loaded
 
-1. Parse content into section blocks (hero, body, CTA, FAQ, etc. as available).
-2. Map each block to existing page/component patterns in the repo.
-3. Reorder sections when needed for usability and visual hierarchy.
-4. Map each section to candidate assets from `src/pics/` and define fallback layout when no image exists.
+Actions:
+1. Parse source into section blocks.
+2. Map sections to existing reusable patterns.
+3. Select images from src/pics where available.
+4. Apply no-image symmetric fallback layout.
 
-Decision points:
-- Content does not need strict sequential rendering; prioritize clarity and user flow.
-- If a section is unclear, preserve source wording and place in the most semantically correct section.
-- If no suitable image exists for a section, render a centered symmetric text layout with no reserved media column/empty gap.
+Exit criteria:
+- section map and asset map are finalized
 
-### Phase 3: Implementation via Dev Agent
+Failure fallback:
+- keep source wording and use text-first section fallback
 
-1. Hand off implementation to `dev-agent`.
-2. Create or update page component(s) with smallest viable structure first.
-3. Reuse existing components before creating new ones.
-4. Apply style-guide constraints for typography, color, spacing, accessibility, and size guardrails.
-5. Add translation-safe optional rendering and fallback patterns where needed.
-6. Source visuals from `src/pics/` first; use conditional media rendering so sections remain balanced when an image is absent.
+### Phase 3: Implement
+Entry criteria:
+- section model approved by scope
 
-Decision points:
-- If page/component size exceeds soft limits, split into section components.
-- If hard limits are reached, split is mandatory before finalization.
+Actions:
+1. Implement page with smallest viable structure.
+2. Reuse existing components before new abstractions.
+3. Add route wiring if requested.
+4. Preserve translation-safe optional rendering patterns.
 
-### Phase 4: Verification via Dev Agent
+Exit criteria:
+- page builds and scope changes are complete
 
-1. Run relevant checks for touched files.
-2. Validate no compile/lint/type errors in edited scope.
-3. Validate no broken optional-field rendering or translation regressions.
+Failure fallback:
+- split large changes into smaller reviewable batches
 
-### Phase 5: SEO Pass via SEO Agent
+### Phase 4: Validate
+Entry criteria:
+- all intended edits applied
 
-1. Hand off finalized page to `seo-agent`.
-2. Optimize title/meta/heading hierarchy and intent alignment.
-3. Improve scanability without changing factual meaning.
-4. Validate semantic structure and avoid spammy tactics.
+Actions:
+1. Run scoped checks on touched files.
+2. Confirm no introduced compile/lint/type errors.
+3. Confirm no broken optional rendering in touched sections.
 
-## Completion Criteria
+Exit criteria:
+- verification status captured
 
-- New page is created and styled according to `.github/style_guide.md`.
-- Content is populated from the `.github` source and `home_content` patterns.
-- Section images are selected from `src/pics/` when available.
-- Sections without images remain visually symmetric (no empty image placeholders or blank grid columns).
-- Implementation and validation are completed by `dev-agent`.
-- SEO refinement is completed by `seo-agent`.
-- Edited scope has no unresolved errors.
+Failure fallback:
+- fix errors in touched scope before reporting done
 
-## Output Format
+### Phase 5: SEO Pass
+Entry criteria:
+- functional and content stability confirmed
 
-Return:
-1. Files created/updated.
-2. Route wiring status.
-3. Verification status from `dev-agent`.
-4. SEO changes summary from `seo-agent`.
-5. Assumptions or pending inputs.
+Actions:
+1. Hand off to seo-agent for metadata and hierarchy refinement.
+2. Keep SEO changes factual and non-spammy.
 
-## Prompt Examples
+Exit criteria:
+- SEO summary returned with no structural regression
 
-- "Use content-to-page-pipeline with `.github/content.md` to create `src/pages/landingPage2.jsx`, then route it under `/landing-2`."
-- "Run content-to-page-pipeline for `.github/new_implant_page.md`, reuse existing Home/About style patterns, then run dev-agent and seo-agent."
+Failure fallback:
+- defer SEO and report exact blocker
+
+## Output Schema
+
+Required fields:
+- files_changed
+- route_wiring_status
+- verification_summary
+- seo_summary_or_deferred_reason
+- assumptions
+
+Optional fields:
+- unresolved_inputs
+- follow_up_actions
+
+## Guardrails
+- Do not rewrite unrelated architecture during page creation.
+- Do not reserve empty media columns when no suitable image exists.
+- Do not run SEO before functional stability.
+- Do not report completion without scoped verification.
+
+## Acceptance Criteria
+- Trigger precision: at least 90% correct routing on internal prompt samples.
+- Output schema completeness: 100% required fields present.
+- Validation coverage: all touched files checked.
+- Structural regressions introduced: 0.
+- Unnecessary delegation count: 0 for simple single-file tasks.

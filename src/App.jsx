@@ -27,6 +27,7 @@ import DrTuPage from './pages/drTuPage.jsx';
 import InternationalPatients from './pages/InternationalPatients.jsx';
 import OralSurgery from './pages/OralSurgery.jsx';
 import Solutions from './pages/solutions.jsx';
+import SmileAesthetics from './pages/SmileAesthetics.jsx';
 
 function ExternalRedirect({ to }) {
   useEffect(() => {
@@ -79,6 +80,7 @@ function AppShell() {
           <Route path="/contact" element={<Contact  />} />
           <Route path="/about" element={<About  />} />
           <Route path="/international-patients" element={<InternationalPatients  />} />
+          <Route path="/smile-aesthetics" element={<SmileAesthetics />} />
           <Route path="/services" element={<Services  />} />
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/oral-surgery" element={<OralSurgery />} />
