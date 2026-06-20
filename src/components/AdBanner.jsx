@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 import ad1 from "../pics/ads/ad01-dental-implant-3-popular.png";
 import ad2 from "../pics/ads/ad02-dental-tourist.png";
 import ad3 from "../pics/ads/ad03-starting12k-dental-tourism.png";
@@ -22,7 +21,6 @@ const adImages = [
 
 export default function AdBanner() {
   const [current, setCurrent] = useState(0);
-  const navigate = useNavigate();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -32,51 +30,59 @@ export default function AdBanner() {
   }, []);
 
   return (
-    <section className="relative w-full overflow-hidden flex justify-center items-center">
-      {/* Background: blurred + darkened version of current ad */}
+    <section className="mx-auto max-w-7xl px-6 py-12">
       <div
-        className="absolute inset-0 bg-center bg-cover bg-no-repeat scale-105 blur-xl brightness-[0.45] transition-all duration-700"
-        style={{
-          backgroundImage: `url(${adImages[current].src})`,
-        }}
-      />
-
-      {/* Foreground content */}
-      <div
-        className="relative w-full flex justify-center items-center cursor-pointer
-                   h-[38vh] sm:h-[44vh] md:h-[50vh] lg:h-[56vh] xl:h-[60vh]
-                   max-w-[1400px] mx-auto px-4"
-        onClick={() => navigate("/contact")}
+        className="group relative overflow-hidden rounded-3xl border border-[#dbe6ef] bg-gradient-to-br from-[#f9fcff] to-[#eef4f9] shadow-sm transition-all duration-300 hover:shadow-md cursor-pointer"
+        onClick={() => setCurrent((prev) => (prev + 1) % adImages.length)}
+        style={{ aspectRatio: 'auto' }}
       >
-        <AnimatePresence mode="wait">
-          <motion.img
-            key={current}
-            src={adImages[current].src}
-            alt={adImages[current].alt}
-            className="max-h-full max-w-full object-contain drop-shadow-[0_8px_20px_rgba(0,0,0,0.35)]
-                       w-[85%] sm:w-[80%] md:w-[70%] lg:w-[65%] xl:w-[60%]
-                       transition-all duration-700"
-            initial={{ opacity: 0, scale: 1.03 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.97 }}
-            transition={{ duration: 0.7, ease: 'easeInOut' }}
-          />
-        </AnimatePresence>
-      </div>
+        {/* Background blur */}
+        <div
+          className="absolute inset-0 bg-center bg-cover bg-no-repeat scale-105 blur-lg opacity-20 transition-all duration-700"
+          style={{
+            backgroundImage: `url(${adImages[current].src})`,
+          }}
+        />
 
-      {/* Navigation dots */}
-      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-3 z-10">
-        {adImages.map((_, idx) => (
-          <div
-            key={idx}
-            onClick={() => setCurrent(idx)}
-            className={`w-3.5 h-3.5 rounded-full transition-all duration-300 cursor-pointer ${
-              idx === current
-                ? "bg-[#d4af37] shadow-[0_0_8px_rgba(212,175,55,0.6)] scale-110"
-                : "bg-white/40"
-            }`}
-          />
-        ))}
+        {/* Content container */}
+        <div className="relative h-[45vh] sm:h-[50vh] md:h-[48vh] lg:h-[56vh] xl:h-[60vh] w-full flex items-center justify-center p-6 md:p-10">
+          <AnimatePresence mode="wait">
+            <div
+              key={current}
+              className="flex h-full w-full items-center justify-center"
+            >
+              <img
+                src={adImages[current].src}
+                alt={adImages[current].alt}
+                className="max-h-full max-w-full object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.2)]"
+              />
+            </div>
+          </AnimatePresence>
+        </div>
+
+        {/* Navigation dots */}
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2.5 z-10">
+          {adImages.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={(e) => {
+                e.stopPropagation();
+                setCurrent(idx);
+              }}
+              className={`transition-all duration-300 rounded-full ${
+                idx === current
+                  ? "w-8 h-2 bg-[#d4af37] shadow-[0_0_6px_rgba(212,175,55,0.5)]"
+                  : "w-2 h-2 bg-white/60 hover:bg-white/80"
+              }`}
+              aria-label={`Show ad ${idx + 1}`}
+            />
+          ))}
+        </div>
+
+        {/* Hint text */}
+        <div className="absolute top-4 right-6 text-xs font-medium text-[#8aa0b5] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+          Click to see more
+        </div>
       </div>
     </section>
   );
