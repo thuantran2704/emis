@@ -78,6 +78,8 @@ Layout:
 - Prefer editorial rows/lists over dense card walls for long-form content.
 - Avoid muddy yellow section backgrounds.
 - On luxury-oriented pages, keep text blocks narrower and let whitespace carry hierarchy.
+- For informative photos/graphics (machines, labeled visuals, documentation-like images), avoid destructive crop. Prefer contained framing (`object-contain`) with a neutral background and padding so the full image remains visible.
+- For multi-card sections and paired columns, enforce visual symmetry: consistent card heights, consistent paddings/radii/border weights, and aligned media blocks so rows and columns finish on the same baseline.
 
 ## 7) Accessibility Baseline (WCAG-Oriented)
 
