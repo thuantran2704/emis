@@ -2,7 +2,7 @@
   "metadata": {
     "name": "EMIS Multilingual Dental Glossary",
     "version": "1.0.0",
-    "updated": "2026-06-19",
+    "updated": "2026-06-20",
     "baseLanguage": "english",
     "languages": [
       "english",
@@ -77,6 +77,12 @@
     {"id": "assessment", "domain": "clinical", "english": "Assessment", "vietnamese": "Đánh giá", "french": "Évaluation", "korean": "평가", "simplified": "评估", "traditional": "評估"},
     {"id": "preliminary_review", "domain": "diagnostics", "english": "Preliminary Review", "vietnamese": "Đánh giá sơ bộ", "french": "Examen préliminaire", "korean": "초기 검토", "simplified": "初步审查", "traditional": "初步審查"},
     {"id": "clinical_exam", "domain": "diagnostics", "english": "Clinical Examination", "vietnamese": "Khám lâm sàng", "french": "Examen clinique", "korean": "임상 검사", "simplified": "临床检查", "traditional": "臨床檢查"},
-    {"id": "post_op_recovery", "domain": "care", "english": "Recovery & Follow-up", "vietnamese": "Hồi phục & Tái khám", "french": "Récupération et suivi", "korean": "회복 및 추적", "simplified": "恢复和随访", "traditional": "恢復和隨訪"}
+    {"id": "post_op_recovery", "domain": "care", "english": "Recovery & Follow-up", "vietnamese": "Hồi phục & Tái khám", "french": "Récupération et suivi", "korean": "회복 및 추적", "simplified": "恢复和随访", "traditional": "恢復和隨訪"},
+    {"id": "treatment_pathway", "domain": "clinical", "english": "Treatment Pathway", "vietnamese": "Hướng điều trị", "french": "Parcours de traitement", "korean": "치료 경로", "simplified": "治疗路径", "traditional": "治療路徑"},
+    {"id": "fixed_teeth_rehabilitation", "domain": "restorative", "english": "Fixed Teeth Rehabilitation", "vietnamese": "Phục hồi răng cố định", "french": "Réhabilitation dentaire fixe", "korean": "고정성 치아 재건", "simplified": "固定牙修复", "traditional": "固定牙重建"},
+    {"id": "full_mouth_rehabilitation", "domain": "restorative", "english": "Full-Mouth Rehabilitation", "vietnamese": "Phục hồi toàn hàm", "french": "Réhabilitation complète", "korean": "전악 재건", "simplified": "全口重建", "traditional": "全口重建"},
+    {"id": "restorative_dentistry", "domain": "restorative", "english": "Restorative Dentistry", "vietnamese": "Nha khoa phục hồi", "french": "Dentisterie restauratrice", "korean": "수복 치과", "simplified": "修复牙科", "traditional": "修復牙科"},
+    {"id": "aesthetic_dentistry", "domain": "cosmetic", "english": "Aesthetic Dentistry", "vietnamese": "Nha khoa thẩm mỹ", "french": "Dentisterie esthétique", "korean": "심미 치과", "simplified": "美学牙科", "traditional": "美學牙科"},
+    {"id": "functional_goal", "domain": "clinical", "english": "Functional Goal", "vietnamese": "Mục tiêu chức năng", "french": "Objectif fonctionnel", "korean": "기능적 목표", "simplified": "功能目标", "traditional": "功能目標"}
   ]
 }
