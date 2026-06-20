@@ -2,69 +2,24 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { useSelector } from 'react-redux';
 import smileAestheticsContent from '../Translations/smileAestheticsContent';
-import heroImage from '../pics/confident-smile-social.jpeg';
-import sectionThreeImage from '../pics/doctor-explaining-procedure-to-patient.jpg';
-import orthoImage from '../pics/invisalign.jpg';
-import whiteningCase from '../pics/teeth-whitening.jpg';
-import veneerCase from '../pics/veneer.png';
-import orthoCase from '../pics/invisalign.jpg';
-
-const IconCircle = ({ children }) => (
-  <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#dbe4ec] bg-white text-[#2a3439]">
-    {children}
-  </span>
-);
-
-const ImproveIcon = ({ index }) => {
-  const icons = [
-    (
-      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
-        <path d="M4 12c2.6-4.4 5-6 8-6s5.4 1.6 8 6c-2.6 4.4-5 6-8 6s-5.4-1.6-8-6z" />
-        <circle cx="12" cy="12" r="2.3" />
-      </svg>
-    ),
-    (
-      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
-        <path d="M4.5 11.5c0-3.8 3.1-7 7-7h1c3.9 0 7 3.2 7 7v1c0 3.8-3.1 7-7 7h-1c-3.9 0-7-3.2-7-7z" />
-      </svg>
-    ),
-    (
-      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
-        <path d="M4 13.5h6l2-3 2 3h6" />
-        <path d="M7 9.5l2 2m8-2l-2 2" />
-      </svg>
-    ),
-    (
-      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
-        <path d="M7.5 6v12m9-12v12" />
-        <path d="M7.5 12h9" />
-      </svg>
-    ),
-    (
-      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
-        <path d="M5 8.5l5 6m9-6l-5 6" />
-      </svg>
-    ),
-    (
-      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
-        <path d="M12 4v16" />
-        <path d="M4 12h16" />
-        <circle cx="12" cy="12" r="8" />
-      </svg>
-    ),
-  ];
-
-  return <IconCircle>{icons[index % icons.length]}</IconCircle>;
-};
-
-const OptionIcon = ({ index }) => {
-  const icons = ['✦', '◈', '◍', '⬡', '◐', '◇'];
-  return (
-    <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#f7fafc] text-sm text-[#2a3439]" aria-hidden="true">
-      {icons[index % icons.length]}
-    </span>
-  );
-};
+import heroImage from '../pics/khach_cuoi_chup_hinh_voi_bs.jpg';
+import sectionThreeImage from '../pics/confident-smile-social.jpeg';
+import orthoImage from '../pics/elder-person-socializing.jpeg';
+import whiteningCase from '../pics/eating-casually.jpeg';
+import veneerCase from '../pics/measuring-result-cbct-x-ray-patient-smiling.jpg';
+import orthoCase from '../pics/doctor-explaining-procedure-to-patient.jpg';
+import improveCardImage1 from '../pics/foreign-patient-2.jpg';
+import improveCardImage2 from '../pics/doctor-explaining-treatment-x-ray-angle-3.jpg';
+import improveCardImage3 from '../pics/doctor-reviewing-x-ray-with-patient-explaining-treatment.jpg';
+import improveCardImage4 from '../pics/missing-teeth-and-braces.jpeg';
+import improveCardImage5 from '../pics/taking-cbct-x-ray.jpg';
+import improveCardImage6 from '../pics/all-on-4-implant.jpg';
+import optionCardImage1 from '../pics/teeth-whitening.jpg';
+import optionCardImage2 from '../pics/foreign-patient-1-with-dr-tu-smiling.jpg';
+import optionCardImage3 from '../pics/doctor-explaining-treatment-x-ray-dif-angle.jpg';
+import optionCardImage4 from '../pics/invisalign.jpg';
+import optionCardImage5 from '../pics/crown.jpg';
+import optionCardImage6 from '../pics/denture.jpeg';
 
 const SectionLabel = ({ children }) => (
   <p
@@ -96,6 +51,22 @@ export default function SmileAesthetics() {
   const caseCards = content.cases?.cards || [];
 
   const caseImages = [whiteningCase, veneerCase, orthoCase];
+  const improveImages = [
+    improveCardImage1,
+    improveCardImage2,
+    improveCardImage3,
+    improveCardImage4,
+    improveCardImage5,
+    improveCardImage6,
+  ];
+  const optionImages = [
+    optionCardImage1,
+    optionCardImage2,
+    optionCardImage3,
+    optionCardImage4,
+    optionCardImage5,
+    optionCardImage6,
+  ];
 
   return (
     <main className="min-h-[calc(100vh-4rem)] bg-[#f7fafc] pt-20 text-[#2a3439]">
@@ -155,7 +126,14 @@ export default function SmileAesthetics() {
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {improveItems.map((item, index) => (
               <article key={item} className="rounded-xl border border-[#dbe4ec] bg-[#f7fafc] p-5">
-                <ImproveIcon index={index} />
+                <div className="overflow-hidden rounded-lg border border-[#dbe4ec] bg-white">
+                  <img
+                    src={improveImages[index % improveImages.length]}
+                    alt={item}
+                    className="h-28 w-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
                 <p className="mt-4 text-[13px] font-medium uppercase tracking-[0.05em] text-[#2a3439] lg:text-[14px]">{item}</p>
               </article>
             ))}
@@ -197,7 +175,14 @@ export default function SmileAesthetics() {
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
             {options.map((option, index) => (
               <article key={option.name} className="rounded-xl border border-[#dbe4ec] bg-[#f7fafc] p-5">
-                <OptionIcon index={index} />
+                <div className="overflow-hidden rounded-lg border border-[#dbe4ec] bg-white">
+                  <img
+                    src={optionImages[index % optionImages.length]}
+                    alt={option.name}
+                    className="h-36 w-full object-cover lg:h-40"
+                    loading="lazy"
+                  />
+                </div>
                 <h3 className="mt-4 text-[1.02rem] text-[#2a3439]" style={{ fontFamily: "'Playfair Display', serif" }}>
                   {option.name}
                 </h3>
@@ -213,13 +198,15 @@ export default function SmileAesthetics() {
         <div className="rounded-2xl border border-[#dbe4ec] bg-white px-5 py-7 lg:px-8 lg:py-10">
           <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between md:gap-4">
             {processSteps.map((step, index) => (
-              <div key={step} className="flex items-center gap-3 md:flex-1 md:justify-center">
-                <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#f7fafc] text-xs font-semibold text-[#2a3439]">
-                  {index + 1}
-                </span>
-                <p className="text-[12px] font-semibold uppercase tracking-[0.08em] text-[#2a3439] lg:text-[13px]">{step}</p>
+              <div key={step} className="flex flex-col items-center gap-2 md:flex-1 md:flex-row md:justify-center md:gap-3">
+                <div className="flex items-center gap-3">
+                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#f7fafc] text-xs font-semibold text-[#2a3439]">
+                    {index + 1}
+                  </span>
+                  <p className="text-[12px] font-semibold uppercase tracking-[0.08em] text-[#2a3439] lg:text-[13px]">{step}</p>
+                </div>
                 {index < processSteps.length - 1 ? (
-                  <span className="ml-auto text-[#c5af73] md:ml-2" aria-hidden="true">
+                  <span className="text-[#c5af73] leading-none md:ml-2" aria-hidden="true">
                     <span className="md:hidden">↓</span>
                     <span className="hidden md:inline">→</span>
                   </span>
