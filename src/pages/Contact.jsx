@@ -274,80 +274,83 @@ export default function Contact() {
           </div>
 
           {/* Appointment Form */}
-          <div className="bg-[#fffaf0] p-8 rounded-xl shadow-lg max-w-4xl mx-auto">
+          <div className="bg-[#fffaf0] p-6 sm:p-7 rounded-xl shadow-lg max-w-3xl mx-auto w-full">
             <h2
-              className="text-2xl font-bold text-[#d4af37] mb-6 text-center"
+              className="text-2xl font-bold text-[#d4af37] mb-5 text-center"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
               {content.bookAppointment}
             </h2>
 
             <form onSubmit={handleSubmit} className="space-y-4">
-              {["name", "email", "phone", "date"].map((field) => (
-                <div key={field}>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {["name", "email", "phone", "date"].map((field) => (
+                  <div key={field}>
+                    <label
+                      htmlFor={field}
+                      className="block text-[#1f2937] mb-1"
+                      style={{ fontFamily: "'Cormorant', serif" }}
+                    >
+                      {content.formLabels[field]}
+                    </label>
+                    <input
+                      type={field === "date" ? "date" : field === "email" ? "email" : "text"}
+                      id={field}
+                      name={field}
+                      value={formData[field]}
+                      onChange={handleChange}
+                      className="w-full p-2.5 border border-[#6b7280] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
+                      style={{ fontFamily: "'Cormorant', serif" }}
+                      required
+                    />
+                  </div>
+                ))}
+
+                <div className="sm:col-span-2">
                   <label
-                    htmlFor={field}
+                    htmlFor="service"
                     className="block text-[#1f2937] mb-1"
                     style={{ fontFamily: "'Cormorant', serif" }}
                   >
-                    {content.formLabels[field]}
+                    {content.formLabels.service}
                   </label>
-                  <input
-                    type={field === "date" ? "date" : field === "email" ? "email" : "text"}
-                    id={field}
-                    name={field}
-                    value={formData[field]}
+                  <select
+                    id="service"
+                    name="service"
+                    value={formData.service}
                     onChange={handleChange}
-                    className="w-full p-3 border border-[#6b7280] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
+                    className="w-full p-2.5 border border-[#6b7280] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
                     style={{ fontFamily: "'Cormorant', serif" }}
                     required
-                  />
+                  >
+                    <option value="">{content.formLabels.service}</option>
+                    {content.services.map((service, index) => (
+                      <option key={index} value={service}>{service}</option>
+                    ))}
+                  </select>
                 </div>
-              ))}
 
-              <div>
-                <label
-                  htmlFor="service"
-                  className="block text-[#1f2937] mb-1"
-                  style={{ fontFamily: "'Cormorant', serif" }}
-                >
-                  {content.formLabels.service}
-                </label>
-                <select
-                  id="service"
-                  name="service"
-                  value={formData.service}
-                  onChange={handleChange}
-                  className="w-full p-3 border border-[#6b7280] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
-                  style={{ fontFamily: "'Cormorant', serif" }}
-                  required
-                >
-                  <option value="">{content.formLabels.service}</option>
-                  {content.services.map((service, index) => (
-                    <option key={index} value={service}>{service}</option>
-                  ))}
-                </select>
+                <div className="sm:col-span-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-[#1f2937] mb-1"
+                    style={{ fontFamily: "'Cormorant', serif" }}
+                  >
+                    {content.formLabels.message}
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="3"
+                    value={formData.message}
+                    onChange={handleChange}
+                    className="w-full p-2.5 border border-[#6b7280] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
+                    style={{ fontFamily: "'Cormorant', serif" }}
+                  ></textarea>
+                </div>
               </div>
 
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-[#1f2937] mb-1"
-                  style={{ fontFamily: "'Cormorant', serif" }}
-                >
-                  {content.formLabels.message}
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="4"
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="w-full p-3 border border-[#6b7280] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
-                  style={{ fontFamily: "'Cormorant', serif" }}
-                ></textarea>
-              </div>
-              <div className="my-4">
+              <div className="my-3 overflow-x-auto">
                 <ReCAPTCHA
                   sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
                   onChange={handleRecaptchaChange}
@@ -355,7 +358,7 @@ export default function Contact() {
               </div>
               <button
                 type="submit"
-                className="w-full bg-[#d4af37] hover:bg-[#c19d30] text-white font-bold py-3 px-6 rounded-full transition-all text-lg shadow-md hover:shadow-lg mt-4"
+                className="w-full bg-[#d4af37] hover:bg-[#c19d30] text-white font-bold py-2.5 px-6 rounded-full transition-all text-base shadow-md hover:shadow-lg mt-2"
                 style={{ fontFamily: "'Playfair Display', serif" }}
               >
                 {content.formLabels.submit}

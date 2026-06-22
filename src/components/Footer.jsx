@@ -13,58 +13,64 @@ export default function Footer() {
 
   return (
     <footer className="bg-[#f7f2e7] border-t border-[#e0d8c3] text-[#1f2937]">
-      <div className="max-w-6xl mx-auto px-6 py-12 grid lg:grid-cols-[1fr,1.2fr] gap-10">
-        <div>
-          <h3
-            className="text-2xl font-bold text-[#d4af37] mb-4"
-            style={{ fontFamily: "'Playfair Display', serif" }}
-          >
-            {content.clinicName}
-          </h3>
-          <p
-            className="text-sm leading-relaxed mb-5"
-            style={{ fontFamily: "'Cormorant', serif" }}
-          >
-            {content.description}
-          </p>
+      <div className="max-w-6xl mx-auto px-6 py-12 grid grid-cols-[1fr_1.2fr] gap-10 items-stretch">
+        <section className="h-full" aria-labelledby="footer-clinic-name">
+          <div className="h-full rounded-2xl border border-[#e0d8c3] bg-white shadow-md p-6">
+            <h3
+              id="footer-clinic-name"
+              className="text-2xl font-bold text-[#d4af37] mb-4"
+              style={{ fontFamily: "'Playfair Display', serif" }}
+            >
+              {content.clinicName}
+            </h3>
+            <p
+              className="text-sm leading-relaxed mb-5"
+              style={{ fontFamily: "'Cormorant', serif" }}
+            >
+              {content.description}
+            </p>
 
-          <h4
-            className="text-xl font-semibold text-[#d4af37] mb-4"
-            style={{ fontFamily: "'Playfair Display', serif" }}
-          >
-            {content.contactTitle}
-          </h4>
+            <section aria-labelledby="footer-contact-title">
+              <h4
+                id="footer-contact-title"
+                className="text-xl font-semibold text-[#d4af37] mb-4"
+                style={{ fontFamily: "'Playfair Display', serif" }}
+              >
+                {content.contactTitle}
+              </h4>
 
-          <ul className="space-y-4 text-sm" style={{ fontFamily: "'Cormorant', serif" }}>
-            <li className="flex items-start gap-4">
-              <MapPin className="text-[#d4af37] mt-1" size={20} />
-              <span>{content.address}</span>
-            </li>
-            <li className="flex items-start gap-4">
-              <Phone className="text-[#d4af37] mt-1" size={20} />
-              <a href={`tel:${content.phone.replace(/\s/g, "")}`} className="hover:text-[#c19d30] transition-colors">
-                {content.phone}
-              </a>
-            </li>
-            <li className="flex items-start gap-4">
-              <Mail className="text-[#d4af37] mt-1" size={20} />
-              <a href={`mailto:${content.email}`} className="hover:text-[#c19d30] transition-colors break-all">
-                {content.email}
-              </a>
-            </li>
-            <li className="flex items-start gap-4">
-              <Clock3 className="text-[#d4af37] mt-1" size={20} />
-              <span>
-                {content.workingHours.split("\n").map((line, index) => (
-                  <span key={index} className="block">{line}</span>
-                ))}
-              </span>
-            </li>
-          </ul>
-        </div>
+              <ul className="space-y-4 text-sm" style={{ fontFamily: "'Cormorant', serif" }}>
+                <li className="flex items-start gap-4">
+                  <MapPin className="text-[#d4af37] mt-1" size={20} />
+                  <span>{content.address}</span>
+                </li>
+                <li className="flex items-start gap-4">
+                  <Phone className="text-[#d4af37] mt-1" size={20} />
+                  <a href={`tel:${content.phone.replace(/\s/g, "")}`} className="hover:text-[#c19d30] transition-colors">
+                    {content.phone}
+                  </a>
+                </li>
+                <li className="flex items-start gap-4">
+                  <Mail className="text-[#d4af37] mt-1" size={20} />
+                  <a href={`mailto:${content.email}`} className="hover:text-[#c19d30] transition-colors break-all">
+                    {content.email}
+                  </a>
+                </li>
+                <li className="flex items-start gap-4">
+                  <Clock3 className="text-[#d4af37] mt-1" size={20} />
+                  <span>
+                    {content.workingHours.split("\n").map((line, index) => (
+                      <span key={index} className="block">{line}</span>
+                    ))}
+                  </span>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </section>
 
-        <div>
-          <div className="relative overflow-hidden rounded-2xl border border-[#e0d8c3] shadow-md bg-white">
+        <section className="h-full self-stretch flex flex-col gap-4" aria-label="Clinic location and social channels">
+          <div className="relative overflow-hidden rounded-2xl border border-[#e0d8c3] shadow-md bg-white h-[320px] md:flex-1 md:min-h-[320px]">
             <a
               href={mapOpenUrl}
               target="_blank"
@@ -74,28 +80,29 @@ export default function Footer() {
             >
               Open in Maps <ExternalLink size={14} />
             </a>
-
-            <div className="relative h-0 pb-[60%]">
-              <iframe
-                src={mapEmbedUrl}
-                className="absolute left-0 top-0 h-full w-full"
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Emis Dental map"
-              ></iframe>
-            </div>
+            <iframe
+              src={mapEmbedUrl}
+              className="absolute left-0 top-0 h-full w-full"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Emis Dental map"
+            ></iframe>
           </div>
 
-          <div className="mt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <section
+            className="rounded-2xl border border-[#e0d8c3] bg-white shadow-md px-5 py-4"
+            aria-labelledby="footer-social-title"
+          >
             <h4
-              className="text-2xl font-bold text-[#d4af37]"
+              id="footer-social-title"
+              className="text-2xl font-bold text-[#d4af37] mb-3"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
               {socialHeading}
             </h4>
 
-            <div className="flex items-center gap-3">
+            <nav className="flex items-center gap-3" aria-label={socialHeading}>
               <a
                 href="https://wa.me/84909967649"
                 target="_blank"
@@ -134,19 +141,19 @@ export default function Footer() {
               >
                 <img src={zaloIcon} alt="Zalo" className="h-5 w-5 object-contain" />
               </a>
-            </div>
-          </div>
-        </div>
+            </nav>
+          </section>
+        </section>
       </div>
 
-      <div
+      <section
         className="bg-[#fffaf0] border-t border-[#e0d8c3] text-center py-4 text-sm text-[#6b7280]"
         style={{ fontFamily: "'Cormorant', serif" }}
       >
         <p>Copyright © EMIS Dental</p>
         <p>All Rights Reserved</p>
         <p className="mt-1">© {new Date().getFullYear()} {content.clinicName}. {content.rights}</p>
-      </div>
+      </section>
     </footer>
   );
 }
