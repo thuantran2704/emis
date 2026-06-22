@@ -56,7 +56,7 @@ export default function LanguageToggle({ variant = 'floating', compact = false }
       {isNavbar ? (
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className={`flex items-center rounded-full border border-[#d4af37]/40 text-[#f3e2b0] font-semibold hover:border-[#d4af37] hover:bg-[#d4af37]/20 hover:text-white transition-colors ${
+          className={`flex items-center rounded-full border border-[#d4af37]/40 text-[#2a3439] font-semibold hover:border-[#d4af37] hover:bg-[#d4af37]/15 hover:text-[#111317] transition-colors ${
             compact
               ? 'h-9 min-w-[52px] justify-center gap-1 px-2 text-[11px] leading-none'
               : 'gap-1.5 px-3 py-2 text-xs'

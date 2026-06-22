@@ -68,7 +68,7 @@ export default function Home() {
       </Helmet>
 
       {/* Premium Hero Section with 100vh full-screen background */}
-      <section className="relative mt-[82px] h-[calc(100vh-82px)] w-full overflow-hidden">
+      <section className="relative mt-[72px] h-[calc(100vh-72px)] w-full overflow-hidden">
         <img
           src={heroBackground}
           alt="EMIS Dental reception hall"

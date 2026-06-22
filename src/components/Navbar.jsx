@@ -67,8 +67,8 @@ export default function Navbar() {
   const navLinkClass = (path) =>
     `relative inline-flex h-10 items-center px-3 text-sm tracking-wide transition-colors duration-200 ${
       location.pathname === path
-        ? 'text-[#fff4d5] after:absolute after:left-3 after:right-3 after:-bottom-0.5 after:h-[2px] after:bg-[#d4af37]'
-        : 'text-[#f3e2b0]/90 hover:text-white'
+        ? 'text-[#1f2937] after:absolute after:left-3 after:right-3 after:-bottom-0.5 after:h-[2px] after:bg-[#d4af37]'
+        : 'text-[#2a3439]/80 hover:text-[#111317]'
     }`;
 
   const mobileLinkClass = (path) =>
@@ -112,19 +112,19 @@ export default function Navbar() {
         />
       )}
 
-      <nav className="fixed top-0 z-50 w-full border-b border-[#c8a95f]/45 bg-gradient-to-r from-[#111317]/96 via-[#16352f]/94 to-[#111317]/96 backdrop-blur-md shadow-[0_14px_36px_rgba(6,12,10,0.55)]">
+      <nav className="fixed top-0 z-50 w-full border-b-2 border-[#d4af37]/60 bg-white/90 backdrop-blur-md shadow-[0_10px_30px_rgba(31,41,55,0.10)]">
         <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-4 sm:px-6">
           <Link to="/" className="group flex items-center gap-3">
             <div className="h-12 w-12 overflow-hidden rounded-full border-2 border-[#d4af37]/60 shadow-sm transition-transform duration-200 group-hover:scale-[1.02]">
               <img src={logo} alt="Nha Khoa Emis" className="h-full w-full object-cover" />
             </div>
             <span
-              className="text-lg font-extrabold leading-none tracking-[0.02em] text-[#f8edcf] sm:text-xl"
+              className="text-lg font-extrabold leading-none tracking-[0.02em] text-[#2a3439] sm:text-xl"
               style={{
                 fontFamily: "'Be Vietnam Pro', sans-serif",
               }}
             >
-              <span className="text-white">EMIS</span>{' '}
+              <span className="text-[#2a3439]">EMIS</span>{' '}
               <span className="text-[#d4af37]">DENTAL</span>
             </span>
           </Link>
@@ -144,7 +144,7 @@ export default function Navbar() {
               </Link>
               <button
                 onClick={toggleAbout}
-                className="ml-0.5 inline-flex h-10 w-8 items-center justify-center rounded-full text-[#f3e2b0] hover:bg-[#d4af37]/20 hover:text-white"
+                className="ml-0.5 inline-flex h-10 w-8 items-center justify-center rounded-full text-[#2a3439] hover:bg-[#d4af37]/15 hover:text-[#111317]"
                 aria-label="Toggle about menu"
               >
                 <svg
@@ -191,7 +191,7 @@ export default function Navbar() {
               </Link>
               <button
                 onClick={toggleJune}
-                className="ml-0.5 inline-flex h-10 w-8 items-center justify-center rounded-full text-[#f3e2b0] hover:bg-[#d4af37]/20 hover:text-white"
+                className="ml-0.5 inline-flex h-10 w-8 items-center justify-center rounded-full text-[#2a3439] hover:bg-[#d4af37]/15 hover:text-[#111317]"
                 aria-label="Toggle treatments menu"
               >
                 <svg
@@ -247,7 +247,7 @@ export default function Navbar() {
             </div>
             <button
               onClick={toggleMenu}
-              className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#d4af37]/40 text-[#f3e2b0] hover:bg-[#d4af37]/20 hover:text-white"
+              className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#d4af37]/40 text-[#2a3439] hover:bg-[#d4af37]/15 hover:text-[#111317]"
               aria-label="Toggle mobile menu"
             >
               <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
