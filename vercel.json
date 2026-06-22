@@ -1,6 +1,6 @@
 {
     "rewrites": [
-      { "source": "/(?!sitemap\\.xml|robots\\.txt|BingSiteAuth\\.xml|.*\\.(?:js|css|json|webmanifest|jpg|jpeg|png|gif|webp|svg|ico|csv)).*", "destination": "/" }
+      { "source": "/(.*)", "destination": "/" }
     ]
   }
   
