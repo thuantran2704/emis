@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 const ServiceCard = ({ service, image, altText, bookNowText }) => {
   return (
     <article
-      className="group overflow-hidden rounded-2xl border border-[#d9e4ed] bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+      className="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#d9e4ed] bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
       itemScope
       itemType="https://schema.org/MedicalProcedure"
     >
-      <div className="overflow-hidden border-b border-[#e4edf4]">
+      <div className="hidden overflow-hidden border-b border-[#e4edf4] md:block">
         <img
           src={image}
           alt={altText || `${service.name} service`}
@@ -18,7 +18,7 @@ const ServiceCard = ({ service, image, altText, bookNowText }) => {
         />
       </div>
 
-      <div className="p-5">
+      <div className="flex flex-1 flex-col p-5">
         <h3
           className="text-xl font-semibold text-[#1d3953]"
           style={{ fontFamily: "'Playfair Display', serif" }}
@@ -33,13 +33,15 @@ const ServiceCard = ({ service, image, altText, bookNowText }) => {
           {service.brief || service.details}
         </p>
 
-        <Link
-          to="/contact"
-          className="mt-5 inline-flex rounded-full border border-[#9ab1c5] bg-white px-4 py-2 text-sm font-semibold text-[#1f3b57] transition hover:bg-[#f2f7fb]"
-          aria-label={`Book ${service.name} appointment`}
-        >
-          {bookNowText}
-        </Link>
+        <div className="mt-auto pt-5">
+          <Link
+            to="/contact"
+            className="inline-flex w-fit rounded-full border border-[#9ab1c5] bg-white px-4 py-2 text-sm font-semibold text-[#1f3b57] transition hover:bg-[#f2f7fb]"
+            aria-label={`Book ${service.name} appointment`}
+          >
+            {bookNowText}
+          </Link>
+        </div>
       </div>
     </article>
   );

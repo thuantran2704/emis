@@ -158,10 +158,10 @@ export default function SmileAesthetics() {
               </div>
             ) : null}
           </div>
-          <div className="space-y-3">
+          <div className="flex h-full flex-col gap-3">
             {factors.map((factor) => (
-              <div key={factor} className="flex items-start gap-3 rounded-xl border border-[#dbe4ec] bg-white p-4">
-                <span className="mt-0.5 text-[#d4af37]">✓</span>
+              <div key={factor} className="flex flex-1 items-center gap-3 rounded-xl border border-[#dbe4ec] bg-white p-4">
+                <span className="text-[#d4af37]">✓</span>
                 <p className="text-[13px] leading-6 text-[#2a3439] lg:text-[14px]">{factor}</p>
               </div>
             ))}

@@ -329,7 +329,7 @@ const CanalAd = () => {
 
           {/* Crown Role + Symptoms side by side */}
           <div className="grid md:grid-cols-2 gap-6">
-            <section className="bg-white rounded-3xl shadow-xl p-8 border border-sky-100">
+            <section className="h-full bg-white rounded-3xl shadow-xl p-8 border border-sky-100">
               <h2 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
                 <div className="w-8 h-8 bg-gradient-to-br from-cyan-600 to-teal-600 rounded-lg flex items-center justify-center mr-3 text-white">
                   <Crown className="w-4 h-4" />
@@ -347,7 +347,7 @@ const CanalAd = () => {
               </ul>
             </section>
 
-            <section className="bg-white rounded-3xl shadow-xl p-8 border border-sky-100">
+            <section className="h-full bg-white rounded-3xl shadow-xl p-8 border border-sky-100">
               <h2 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
                 <div className="w-8 h-8 bg-gradient-to-br from-cyan-600 to-teal-600 rounded-lg flex items-center justify-center mr-3 text-white">
                   <Clock className="w-4 h-4" />

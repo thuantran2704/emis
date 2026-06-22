@@ -372,7 +372,7 @@ const CrownAd = () => {
 
           {/* Suitable For + Guarantees */}
           <div className="grid md:grid-cols-2 gap-6">
-            <section className="bg-white rounded-3xl shadow-xl p-8 border border-pink-100">
+            <section className="h-full bg-white rounded-3xl shadow-xl p-8 border border-pink-100">
               <h2 className="text-xl font-bold text-gray-800 mb-6 flex items-center">
                 <div className="w-8 h-8 bg-gradient-to-br from-rose-500 to-fuchsia-500 rounded-lg flex items-center justify-center mr-3 text-white">
                   <Smile className="w-4 h-4" />
@@ -389,7 +389,7 @@ const CrownAd = () => {
               </ul>
             </section>
 
-            <section className="bg-white rounded-3xl shadow-xl p-8 border border-pink-100">
+            <section className="h-full bg-white rounded-3xl shadow-xl p-8 border border-pink-100">
               <h2 className="text-xl font-bold text-gray-800 mb-6 flex items-center">
                 <div className="w-8 h-8 bg-gradient-to-br from-rose-500 to-fuchsia-500 rounded-lg flex items-center justify-center mr-3 text-white">
                   <Shield className="w-4 h-4" />

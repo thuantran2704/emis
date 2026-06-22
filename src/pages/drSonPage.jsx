@@ -118,7 +118,7 @@ export default function SonPage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-2xl p-8 shadow-sm">
+            <div className="h-full bg-white rounded-2xl p-8 shadow-sm">
               <h3
                 className="text-lg text-[#2a3439] mb-5"
                 style={{ fontFamily: "'Playfair Display', serif" }}
@@ -133,7 +133,7 @@ export default function SonPage() {
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-sm">
+            <div className="h-full bg-white rounded-2xl p-8 shadow-sm">
               <h3
                 className="text-lg text-[#2a3439] mb-5"
                 style={{ fontFamily: "'Playfair Display', serif" }}

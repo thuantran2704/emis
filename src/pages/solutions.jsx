@@ -224,7 +224,7 @@ const Solutions = () => {
 
       <section className="py-20 lg:py-28 bg-[#f7fafc]">
         <div className="max-w-6xl mx-auto px-8">
-          <div className={teamImage ? 'grid md:grid-cols-[0.9fr_1.1fr] gap-8 items-stretch' : 'max-w-4xl mx-auto text-center'}>
+          <div className={teamImage ? 'grid md:grid-cols-[0.8fr_1.2fr] gap-8 items-stretch' : 'max-w-4xl mx-auto text-center'}>
             <div className="rounded-2xl border border-[#dbe4ec] bg-white p-7 lg:p-8">
               <p className={sectionLabelClass} style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}>
                 {content.team.eyebrow}
@@ -260,11 +260,11 @@ const Solutions = () => {
             </div>
 
             {teamImage && (
-              <div className="rounded-2xl overflow-hidden bg-transparent flex items-center justify-center">
+              <div className="rounded-2xl overflow-hidden bg-[#f7fafc] flex">
                 <img
                   src={teamImage}
                   alt="Multidisciplinary dental team coordinating patient care"
-                  className="w-full max-w-[680px] h-[320px] md:h-[520px] lg:h-[640px] object-contain bg-[#f7fafc] rounded-xl mx-auto"
+                  className="w-full h-full object-cover object-center rounded-xl"
                   loading="lazy"
                 />
               </div>

@@ -118,7 +118,7 @@ export default function DentalVisitorProgram() {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-6">
-            <article className="bg-[#f7f2e7] rounded-2xl p-8 border border-[#eadfc9]/50">
+            <article className="h-full bg-[#f7f2e7] rounded-2xl p-8 border border-[#eadfc9]/50">
               <h3
                 className="text-2xl text-[#2a3439] mb-5"
                 style={{ fontFamily: "'Playfair Display', serif" }}
@@ -137,7 +137,7 @@ export default function DentalVisitorProgram() {
               </div>
             </article>
 
-            <article className="bg-white rounded-2xl p-8 shadow-sm border border-[#eadfc9]/50">
+            <article className="h-full bg-white rounded-2xl p-8 shadow-sm border border-[#eadfc9]/50">
               <h3
                 className="text-2xl text-[#2a3439] mb-5"
                 style={{ fontFamily: "'Playfair Display', serif" }}

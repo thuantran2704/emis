@@ -12,7 +12,7 @@ import drSonPortrait from '../pics/dr-son-potrait.jpg';
 const Doctors = () => {
   const language = useSelector((state) => state.language.language);
   const content = doctorsContent[language] || doctorsContent.english;
-  const doctorImages = [drTuPortrait, drSonPortrait];
+  const doctorImages = [drSonPortrait, drTuPortrait];
 
   return (
     <main className="bg-[#f7f2e7] pt-20">
@@ -176,7 +176,7 @@ const Doctors = () => {
             {content.doctors.map((doctor, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl overflow-hidden shadow-sm flex flex-col max-w-xl mx-auto"
+                className="h-full bg-white rounded-2xl overflow-hidden shadow-sm flex flex-col max-w-xl mx-auto"
               >
                 <img
                   src={doctorImages[index]}

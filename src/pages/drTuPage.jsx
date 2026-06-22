@@ -197,7 +197,7 @@ export default function DrTuPage() {
 
           <div className="grid md:grid-cols-2 gap-6 mb-10">
             {content.practice.locations.map((loc, idx) => (
-              <div key={idx} className="rounded-2xl p-7 bg-[#f1f5f9] border border-[#dbe4ec]">
+              <div key={idx} className="h-full rounded-2xl p-7 bg-[#f1f5f9] border border-[#dbe4ec]">
                 <h3
                   className="text-xl text-[#2a3439] mb-3"
                   style={{ fontFamily: "'Playfair Display', serif" }}

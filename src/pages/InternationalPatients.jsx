@@ -138,7 +138,7 @@ export default function InternationalPatients() {
           {content.communicationIntro} Our team is experienced in supporting international patients and can coordinate treatment planning, logistics, and follow-up care.
         </p>
         <div className="grid gap-5 lg:grid-cols-2 lg:gap-8">
-          <div className="group rounded-2xl border border-[#d8e2eb] bg-gradient-to-br from-[#ffffff] to-[#eef4f8] p-5 shadow-sm transition hover:shadow-md lg:p-9">
+          <div className="group h-full rounded-2xl border border-[#d8e2eb] bg-gradient-to-br from-[#ffffff] to-[#eef4f8] p-5 shadow-sm transition hover:shadow-md lg:p-9">
             <div className="mb-5 flex items-center gap-3 lg:mb-7">
               <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#d4af37] text-[14px] text-white lg:h-10 lg:w-10 lg:text-[15px]">✦</div>
               <h3 className="text-[1.05rem] font-semibold text-[#1f2e35] lg:text-[1.35rem]" style={{ fontFamily: "'Playfair Display', serif" }}>
@@ -153,7 +153,7 @@ export default function InternationalPatients() {
               ))}
             </ul>
           </div>
-          <div className="group rounded-2xl border border-[#d8e2eb] bg-gradient-to-br from-[#ffffff] to-[#eef4f8] p-5 shadow-sm transition hover:shadow-md lg:p-9">
+          <div className="group h-full rounded-2xl border border-[#d8e2eb] bg-gradient-to-br from-[#ffffff] to-[#eef4f8] p-5 shadow-sm transition hover:shadow-md lg:p-9">
             <div className="mb-5 flex items-center gap-3 lg:mb-7">
               <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#2a3439] text-[14px] text-white lg:h-10 lg:w-10 lg:text-[15px]">✈</div>
               <h3 className="text-[1.05rem] font-semibold text-[#1f2e35] lg:text-[1.35rem]" style={{ fontFamily: "'Playfair Display', serif" }}>
@@ -182,7 +182,6 @@ export default function InternationalPatients() {
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-4 lg:gap-6">
             {content.afterCards.map((card, i) => (
               <div key={i} className="rounded-lg border border-[#dbe4ec] bg-[#f7fafc] p-4 text-center lg:p-7">
-                <div className="mb-2 text-2xl lg:mb-3 lg:text-3xl">{card.icon}</div>
                 <p className="text-[11px] font-medium uppercase tracking-[0.06em] text-[#2a3439] lg:text-[13px] lg:tracking-[0.08em]">{card.title}</p>
               </div>
             ))}
