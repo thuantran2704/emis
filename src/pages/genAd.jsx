@@ -83,7 +83,7 @@ const GenAd = () => {
       },
       {
         title: "TRỒNG RĂNG IMPLANT OSSTEM",
-        discount: "CHỈ CÒN 7.900.000Đ",
+        discount: "GIẢM 20%",
         originalPrice: "Giá gốc: 9.900.000đ",
         finalPrice: "7.900.000đ / trụ",
         description:
@@ -232,7 +232,7 @@ const GenAd = () => {
       },
       {
         title: "OSSTEM DENTAL IMPLANT",
-        discount: "ONLY 7,900,000Đ",
+        discount: "20% OFF",
         originalPrice: "Original: 9,900,000đ",
         finalPrice: "7,900,000đ / implant",
         description:

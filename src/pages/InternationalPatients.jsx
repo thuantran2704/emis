@@ -179,10 +179,13 @@ export default function InternationalPatients() {
           <p className="mb-8 max-w-2xl text-[14px] leading-6 text-gray-600 lg:mb-14 lg:text-[1rem] lg:leading-8" style={{ fontFamily: "'Cormorant', serif" }}>
             {content.afterIntro}
           </p>
-          <div className="grid grid-cols-1 gap-4 lg:grid-cols-4 lg:gap-6">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
             {content.afterCards.map((card, i) => (
-              <div key={i} className="rounded-lg border border-[#dbe4ec] bg-[#f7fafc] p-4 text-center lg:p-7">
-                <p className="text-[11px] font-medium uppercase tracking-[0.06em] text-[#2a3439] lg:text-[13px] lg:tracking-[0.08em]">{card.title}</p>
+              <div key={i} className="flex items-center gap-3 rounded-lg border border-[#dbe4ec] bg-[#f7fafc] p-4 lg:gap-4 lg:p-6">
+                <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-[#d4af37] text-[11px] font-semibold text-white lg:h-9 lg:w-9 lg:text-[12px]">
+                  {i + 1}
+                </div>
+                <p className="text-[12px] font-semibold uppercase tracking-[0.04em] text-[#2a3439] lg:text-[13px] lg:tracking-[0.05em]">{card.title}</p>
               </div>
             ))}
           </div>

@@ -206,12 +206,12 @@ export default function CrownLanding() {
       </section>
 
       <section className="py-24 bg-[#f7fafc]">
-        <div className="max-w-6xl mx-auto px-8 grid lg:grid-cols-2 gap-10 items-start">
-          <div>
+        <div className="max-w-6xl mx-auto px-8 grid lg:grid-cols-2 gap-10 items-stretch">
+          <div className="flex flex-col">
             <h2 className={titleClass} style={{ fontFamily: "'Playfair Display', serif" }}>
               {copy.suitableTitle}
             </h2>
-            <div className="mt-6 space-y-3">
+            <div className="mt-6 flex flex-1 flex-col justify-between gap-3">
               {copy.suitableItems.map((item) => (
                 <div key={item} className="flex gap-3 items-start text-[#2a3439]">
                   <span className="mt-1.5 w-2 h-2 rounded-full bg-[#d4af37]" />
@@ -249,12 +249,12 @@ export default function CrownLanding() {
       </section>
 
       <section className="py-24 bg-[#f1f5f9]">
-        <div className="max-w-6xl mx-auto px-8 grid lg:grid-cols-2 gap-10 items-start">
-          <div>
+        <div className="max-w-6xl mx-auto px-8 grid lg:grid-cols-2 gap-10 items-stretch">
+          <div className="flex flex-col">
             <h2 className={titleClass + ' mb-8'} style={{ fontFamily: "'Playfair Display', serif" }}>
               {copy.processTitle}
             </h2>
-            <div className="space-y-4">
+            <div className="flex flex-1 flex-col justify-between gap-4">
               {copy.processSteps.map((step, idx) => (
                 <div key={step} className="rounded-xl bg-white border border-[#dbe4ec] px-5 py-4">
                   <p className="text-[11px] uppercase tracking-[0.2em] text-[#C5AF73] mb-2" style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}>

@@ -161,7 +161,7 @@ export default function DentalVisitorProgram() {
 
       <section className="py-24 bg-[#f7f2e7]">
         <div className="max-w-5xl mx-auto px-8">
-          <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-8 items-center">
+          <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-8 items-stretch">
             <div className="rounded-2xl overflow-hidden shadow-sm h-[460px]">
               <img
                 src={vn4}
@@ -170,25 +170,29 @@ export default function DentalVisitorProgram() {
               />
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-[#eadfc9]/50">
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-[#eadfc9]/50 flex flex-col justify-between">
+              <div>
+                <p
+                  className="uppercase tracking-[0.25em] text-[#C5AF73] text-xs font-semibold mb-4"
+                  style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+                >
+                  OPTIONAL CITY EXPERIENCE
+                </p>
+                <h3
+                  className="text-2xl text-[#2a3439]"
+                  style={{ fontFamily: "'Playfair Display', serif" }}
+                >
+                  Complimentary 3-Day City Trip
+                </h3>
+              </div>
+
               <p
-                className="uppercase tracking-[0.25em] text-[#C5AF73] text-xs font-semibold mb-4"
-                style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
-              >
-                OPTIONAL CITY EXPERIENCE
-              </p>
-              <h3
-                className="text-2xl text-[#2a3439] mb-4"
-                style={{ fontFamily: "'Playfair Display', serif" }}
-              >
-                Complimentary 3-Day City Trip
-              </h3>
-              <p
-                className="text-gray-500 leading-relaxed mb-4"
+                className="text-gray-500 leading-relaxed border-y border-[#eadfc9]/60 py-6 my-2"
                 style={{ fontFamily: "'Cormorant', serif" }}
               >
                 Eligible patients can join a 3-day city itinerary designed for first-time visitors, featuring major landmarks and comfortable pacing around treatment schedules.
               </p>
+
               <p
                 className="text-gray-500 leading-relaxed"
                 style={{ fontFamily: "'Cormorant', serif" }}
