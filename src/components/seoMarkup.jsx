@@ -1,6 +1,76 @@
 export const schemaMarkup = JSON.stringify([
   {
     "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://emisdental.com/#website",
+    "name": "EMIS Dental",
+    "alternateName": "EMIS International Dental",
+    "url": "https://emisdental.com",
+    "publisher": {
+      "@id": "https://emisdental.com"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://emisdental.com/services?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "@id": "https://emisdental.com/#primary-navigation",
+    "name": "EMIS Dental main navigation",
+    "itemListOrder": "https://schema.org/ItemListOrderAscending",
+    "itemListElement": [
+      {
+        "@type": "SiteNavigationElement",
+        "position": 1,
+        "name": "International Patients",
+        "description": "Multilingual support, remote consultation, and treatment planning for patients traveling to EMIS Dental.",
+        "url": "https://emisdental.com/international-patients"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 2,
+        "name": "Dental Implants",
+        "description": "Single and full-arch dental implant treatment at EMIS Dental.",
+        "url": "https://emisdental.com/implant"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 3,
+        "name": "Smile Aesthetics",
+        "description": "Cosmetic dentistry, veneers, and smile design services.",
+        "url": "https://emisdental.com/smile-aesthetics"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 4,
+        "name": "Treatments & Services",
+        "description": "Full range of dental treatments offered at EMIS Dental.",
+        "url": "https://emisdental.com/services"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 5,
+        "name": "About EMIS Dental",
+        "description": "Our clinic, doctors, and equipment.",
+        "url": "https://emisdental.com/about"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 6,
+        "name": "Contact",
+        "description": "Book an appointment or reach the EMIS Dental team.",
+        "url": "https://emisdental.com/contact"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
     "@type": ["Organization", "LocalBusiness", "Dentist"],
     "name": "EMIS Dental",
     "alternateName": "EMIS Dental Clinic",
