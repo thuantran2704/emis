@@ -114,7 +114,7 @@ export default function Contact() {
         type: 'success'
       });
 
-    } catch (error) {
+    } catch {
       setIsSubmitting(false);
       setAlert({
         show: true,
@@ -139,52 +139,48 @@ export default function Contact() {
       icon: whatsapp,
       alt: "WhatsApp",
       label: "WhatsApp",
-      value: "https://wa.me/84909967649",
       href: "https://wa.me/84909967649"
     },
     {
       icon: phoneIcon,
       alt: "Phone",
-      label: content.contactInfo.phone,
-      value: "+84 919 100 021",
+      label: "Phone",
       href: "tel:+84919100021"
     },
     {
       icon: mailIcon,
       alt: "Email",
-      label: content.contactInfo.email,
-      value: "Emisdentalclinic@gmail.com",
+      label: "Email",
       href: "mailto:Emisdentalclinic@gmail.com"
     },
     {
       icon: zaloIcon,
       alt: "Zalo",
       label: "Zalo",
-      value: "https://zalo.me/2143697215679541994",
       href: "https://zalo.me/2143697215679541994"
     },
     {
       icon: facebook,
       alt: "Facebook",
-      label: content.contactInfo.facebook,
-      value: "https://www.facebook.com/emisinternationaldental/",
+      label: "Facebook",
       href: "https://www.facebook.com/emisinternationaldental/"
     },
     {
       icon: youtubeLogo,
       alt: "YouTube",
       label: "YouTube",
-      value: "https://www.youtube.com/@NhaKhoaEmis",
       href: "https://www.youtube.com/@NhaKhoaEmis"
     },
     {
       icon: googleMaplogo,
       alt: "Google Reviews",
       label: "Google Reviews",
-      value: "Google Business",
       href: "https://maps.app.goo.gl/8T1cPtEKUBe6wLFz9"
     },
   ];
+
+  const primaryContactItems = contactItems.slice(0, 4);
+  const socialContactItems = contactItems.slice(4);
 
   return (
     <main className="min-h-[calc(100vh-4rem)] bg-[#f7f2e7]">
@@ -214,56 +210,73 @@ export default function Contact() {
           <div className="w-24 h-1 bg-[#d4af37] mx-auto"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
-          {/* Contact Info */}
-          <div className="bg-[#fffaf0] p-8 rounded-xl shadow-lg">
+        <div className="space-y-8">
+          {/* Contact Actions */}
+          <div className="max-w-4xl mx-auto">
             <h2
-              className="text-2xl font-bold text-[#d4af37] mb-6"
+              className="text-2xl font-bold text-[#d4af37] mb-6 text-center"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
               {content.getInTouch}
             </h2>
 
-            <ul className="space-y-6 text-[#1f2937]">
-              {contactItems.map((item, index) => {
+            <ul className="flex flex-wrap justify-center gap-3 sm:gap-4 text-[#1f2937]">
+              {primaryContactItems.map((item, index) => {
                 const Icon = item.icon;
+                const isExternalLink = item.href.startsWith('http');
                 return (
-                <li key={index} className="flex items-start gap-4">
-                  <div className="bg-white p-2 rounded-full flex items-center justify-center">
-                    {typeof Icon === 'string' ? (
-                      <img src={Icon} alt={item.alt} className="h-6 w-6 object-contain" />
-                    ) : (
-                      <Icon className="h-6 w-6 text-[#d4af37]" />
-                    )}
-                  </div>
-                  <div>
-                    <h3
-                      className="font-semibold"
-                      style={{ fontFamily: "'Cormorant', serif" }}
+                  <li key={index} className="flex items-center justify-center">
+                    <a
+                      href={item.href}
+                      target={isExternalLink ? '_blank' : undefined}
+                      rel={isExternalLink ? 'noopener noreferrer' : undefined}
+                      aria-label={item.label}
+                      title={item.label}
+                      className="h-12 w-12 sm:h-14 sm:w-14 bg-white rounded-full flex items-center justify-center shadow hover:shadow-md transition hover:-translate-y-0.5 border border-[#efe4ca]"
                     >
-                      {item.label}
-                    </h3>
-                    <p style={{ fontFamily: "'Cormorant', serif" }}>
-                      <a
-                        href={item.href}
-                        className="text-blue-600 hover:underline break-all"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {item.value}
-                      </a>
-                    </p>
-                  </div>
-                </li>
+                      {typeof Icon === 'string' ? (
+                        <img src={Icon} alt={item.alt} className="h-6 w-6 sm:h-7 sm:w-7 object-contain" />
+                      ) : (
+                        <Icon className="h-6 w-6 sm:h-7 sm:w-7 text-[#d4af37]" />
+                      )}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+
+            <div className="w-20 h-px bg-[#d4af37]/40 mx-auto my-4" aria-hidden="true"></div>
+
+            <ul className="flex flex-wrap justify-center gap-3 sm:gap-4 text-[#1f2937]">
+              {socialContactItems.map((item, index) => {
+                const Icon = item.icon;
+                const isExternalLink = item.href.startsWith('http');
+                return (
+                  <li key={index} className="flex items-center justify-center">
+                    <a
+                      href={item.href}
+                      target={isExternalLink ? '_blank' : undefined}
+                      rel={isExternalLink ? 'noopener noreferrer' : undefined}
+                      aria-label={item.label}
+                      title={item.label}
+                      className="h-12 w-12 sm:h-14 sm:w-14 bg-white rounded-full flex items-center justify-center shadow hover:shadow-md transition hover:-translate-y-0.5 border border-[#efe4ca]"
+                    >
+                      {typeof Icon === 'string' ? (
+                        <img src={Icon} alt={item.alt} className="h-6 w-6 sm:h-7 sm:w-7 object-contain" />
+                      ) : (
+                        <Icon className="h-6 w-6 sm:h-7 sm:w-7 text-[#d4af37]" />
+                      )}
+                    </a>
+                  </li>
                 );
               })}
             </ul>
           </div>
 
           {/* Appointment Form */}
-          <div className="bg-[#fffaf0] p-8 rounded-xl shadow-lg">
+          <div className="bg-[#fffaf0] p-8 rounded-xl shadow-lg max-w-4xl mx-auto">
             <h2
-              className="text-2xl font-bold text-[#d4af37] mb-6"
+              className="text-2xl font-bold text-[#d4af37] mb-6 text-center"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
               {content.bookAppointment}

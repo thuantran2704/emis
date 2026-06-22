@@ -5,11 +5,6 @@ export const contactContent = {
     highlight: "Chúng Tôi",
     getInTouch: "Thông Tin Liên Hệ",
     bookAppointment: "Đặt Lịch Hẹn",
-    contactInfo: {
-      phone: "Điện Thoại",
-      email: "Email",
-      facebook: "Facebook"
-    },
     formLabels: {
       name: "Họ Và Tên",
       email: "Email",
@@ -32,11 +27,6 @@ export const contactContent = {
     highlight: "Us",
     getInTouch: "Get in Touch",
     bookAppointment: "Book an Appointment",
-    contactInfo: {
-      phone: "Phone",
-      email: "Email",
-      facebook: "Facebook"
-    },
     formLabels: {
       name: "Your Name",
       email: "Email",
@@ -59,11 +49,6 @@ export const contactContent = {
     highlight: "我们",
     getInTouch: "联系方式",
     bookAppointment: "预约就诊",
-    contactInfo: {
-      phone: "电话",
-      email: "电子邮件",
-      facebook: "脸书"
-    },
     formLabels: {
       name: "您的姓名",
       email: "电子邮件",
@@ -86,11 +71,6 @@ export const contactContent = {
     highlight: "我們",
     getInTouch: "聯繫方式",
     bookAppointment: "預約就診",
-    contactInfo: {
-      phone: "電話",
-      email: "電子郵件",
-      facebook: "臉書"
-    },
     formLabels: {
       name: "您的姓名",
       email: "電子郵件",
@@ -113,11 +93,6 @@ export const contactContent = {
     highlight: "Nous",
     getInTouch: "Nous Contacter",
     bookAppointment: "Prendre Rendez-vous",
-    contactInfo: {
-      phone: "Téléphone",
-      email: "Email",
-      facebook: "Facebook"
-    },
     formLabels: {
       name: "Votre Nom",
       email: "Email",
@@ -140,11 +115,6 @@ export const contactContent = {
     highlight: "하기",
     getInTouch: "연락처 정보",
     bookAppointment: "예약하기",
-    contactInfo: {
-      phone: "전화번호",
-      email: "이메일",
-      facebook: "페이스북"
-    },
     formLabels: {
       name: "이름",
       email: "이메일",

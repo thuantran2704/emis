@@ -5,7 +5,7 @@ const footerContent = {
       "Providing professional and gentle dental care with modern equipment and experienced specialists. Your smile, our passion.",
     contactTitle: "Contact Us",
     address:
-      "62B Phạm Ngọc Thạch, Vo Thi Sau Ward, District 3, Ho Chi Minh City, 700000",
+      "62B Phạm Ngọc Thạch, Xuân Hòa ward, District 3, Ho Chi Minh City, 700000",
     phone: "+84 919 100 021",
     email: "Emisdentalclinic@gmail.com",
     connectTitle: "Connect with Us",
@@ -20,7 +20,7 @@ const footerContent = {
       "Cung cấp dịch vụ nha khoa chuyên nghiệp và nhẹ nhàng với trang thiết bị hiện đại và đội ngũ bác sĩ giàu kinh nghiệm. Nụ cười của bạn là niềm đam mê của chúng tôi.",
     contactTitle: "Liên hệ",
     address:
-      "62B Phạm Ngọc Thạch, Phường Võ Thị Sáu, Quận 3, Thành phố Hồ Chí Minh, 700000",
+      "62B Phạm Ngọc Thạch, Phường Xuân Hòa, Quận 3, Thành phố Hồ Chí Minh, 700000",
     phone: "+84 919 100 021",
 
     email: "Emisdentalclinic@gmail.com",
@@ -36,7 +36,7 @@ const footerContent = {
       "配备现代化设备和经验丰富的专家，为您提供专业而温和的牙科护理。您的微笑是我们的热情所在。",
     contactTitle: "联系我们",
     address:
-      "62B Phạm Ngọc Thạch, Vo Thi Sau Ward, District 3, Ho Chi Minh City, 700000",
+      "62B Phạm Ngọc Thạch, Xuân Hòa ward, District 3, Ho Chi Minh City, 700000",
     phone: "+84 919 100 021",
     email: "Emisdentalclinic@gmail.com",
     connectTitle: "关注我们",
@@ -51,7 +51,7 @@ const footerContent = {
       "配備現代化設備和經驗豐富的專家，為您提供專業而溫和的牙科護理。您的笑容是我們的熱情所在。",
     contactTitle: "聯絡我們",
     address:
-      "62B Phạm Ngọc Thạch, Vo Thi Sau Ward, District 3, Ho Chi Minh City, 700000",
+      "62B Phạm Ngọc Thạch, Xuân Hòa ward, District 3, Ho Chi Minh City, 700000",
     phone: "+84 919 100 021",
 
     email: "Emisdentalclinic@gmail.com",
@@ -67,7 +67,7 @@ const footerContent = {
       "Des soins dentaires professionnels et doux avec un équipement moderne et des spécialistes expérimentés. Votre sourire, notre passion.",
     contactTitle: "Contactez-nous",
     address:
-      "62B Phạm Ngọc Thạch, Vo Thi Sau Ward, District 3, Ho Chi Minh City, 700000",
+      "62B Phạm Ngọc Thạch, Xuân Hòa ward, District 3, Ho Chi Minh City, 700000",
     phone: "+84 919 100 021",
 
     email: "Emisdentalclinic@gmail.com",
@@ -83,7 +83,7 @@ const footerContent = {
       "최신 장비와 숙련된 전문가들이 전문적이고 부드러운 치과 진료를 제공합니다. 당신의 미소는 우리의 열정입니다.",
     contactTitle: "문의하기",
     address:
-      "62B Phạm Ngọc Thạch, Vo Thi Sau Ward, District 3, Ho Chi Minh City, 700000",
+      "62B Phạm Ngọc Thạch, Xuân Hòa ward, District 3, Ho Chi Minh City, 700000",
     phone: "+84 919 100 021",
     email: "Emisdentalclinic@gmail.com",
     connectTitle: "소셜 미디어",

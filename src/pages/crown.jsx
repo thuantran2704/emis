@@ -569,7 +569,7 @@ const CrownAd = () => {
               <h3 className="font-bold text-gray-800 mb-1">{isVI ? "Địa chỉ" : "Address"}</h3>
               <p className="text-gray-600 text-sm">62B Phạm Ngọc Thạch</p>
               <p className="text-gray-600 text-sm">
-                {isVI ? "P. Xuân Hòa, TP.HCM" : "Vo Thi Sau Ward, District 3, HCMC"}
+                {isVI ? "P. Xuân Hòa, TP.HCM" : "Xuân Hòa ward, District 3, HCMC"}
               </p>
             </div>
 

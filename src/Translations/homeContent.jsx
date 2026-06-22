@@ -357,7 +357,7 @@ export const homeContent = {
       },
     },
     locationTitle: "Our Location",
-    address: "62B Phạm Ngọc Thạch, Xuan Hoa Ward, Ho Chi Minh City",
+    address: "62B Phạm Ngọc Thạch, Xuân Hòa ward, Ho Chi Minh City",
     metaTitle: "Premium Dental Care in Ho Chi Minh City | General & Cosmetic Dentistry",
     metaDescription: "Expert dental services including implants, crowns, Invisalign in Ho Chi Minh City. Book your appointment today for quality dental care.",
     homepageV2Legacy: {
