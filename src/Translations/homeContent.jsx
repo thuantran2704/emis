@@ -138,25 +138,11 @@ export const homeContent = {
         title: "A Core Implant Specialty, Backed By Experience",
         intro:
           "At Emis Dental, dental implants are one of our core specialties, alongside a full range of advanced dental treatments. Our team of certified dentists, each with over 10 years of experience, has successfully treated thousands of implant cases, from single implants to full-mouth restorations.",
-        principlesIntro:
-          "We understand that choosing implant treatment is a significant decision. For that reason we aim to follow our main principles:",
         principles: [
-          {
-            title: "Strict Medical Protocols",
-            text: "Strict medical protocols are followed at every stage of treatment to ensure patient safety and predictable outcomes.",
-          },
-          {
-            title: "Transparent Plans & Pricing",
-            text: "Transparent treatment plans and pricing. Patients receive a clear breakdown of costs before treatment begins, with no hidden fees.",
-          },
-          {
-            title: "Licensed & Certified Dentists",
-            text: "All dentists are fully licensed and certified. Patients are welcome to request and review professional qualifications and certifications for complete peace of mind.",
-          },
-          {
-            title: "International Patient Support",
-            text: "Dedicated support for international patients, from consultation through treatment and aftercare.",
-          },
+          { title: "Strict Medical Protocols" },
+          { title: "Transparent Plans & Pricing" },
+          { title: "Licensed & Certified Dentists" },
+          { title: "International Patient Support" },
         ],
       },
       confidence: {
@@ -745,25 +731,11 @@ export const homeContent = {
         title: "Chuyên Sâu Implant, Vững Vàng Bằng Kinh Nghiệm",
         intro:
           "Tại Emis Dental, cấy ghép Implant là một trong những chuyên môn cốt lõi của chúng tôi, bên cạnh đầy đủ các dịch vụ nha khoa chuyên sâu khác. Đội ngũ bác sĩ được chứng nhận, mỗi người có hơn 10 năm kinh nghiệm, đã điều trị thành công hàng nghìn ca Implant, từ cấy ghép đơn lẻ đến phục hồi toàn hàm.",
-        principlesIntro:
-          "Chúng tôi hiểu rằng lựa chọn điều trị Implant là một quyết định quan trọng. Vì vậy, chúng tôi luôn tuân thủ những nguyên tắc cốt lõi sau:",
         principles: [
-          {
-            title: "Quy Trình Y Khoa Nghiêm Ngặt",
-            text: "Quy trình y khoa nghiêm ngặt được tuân thủ ở mọi giai đoạn điều trị nhằm đảm bảo an toàn cho bệnh nhân và kết quả đáng tin cậy.",
-          },
-          {
-            title: "Kế Hoạch & Chi Phí Minh Bạch",
-            text: "Kế hoạch điều trị và chi phí minh bạch. Bệnh nhân nhận được bảng chi tiết chi phí rõ ràng trước khi bắt đầu điều trị, không có chi phí ẩn.",
-          },
-          {
-            title: "Bác Sĩ Được Cấp Phép & Chứng Nhận",
-            text: "Tất cả bác sĩ đều được cấp phép và chứng nhận đầy đủ. Bệnh nhân có thể yêu cầu xem các bằng cấp và chứng chỉ chuyên môn để hoàn toàn yên tâm.",
-          },
-          {
-            title: "Hỗ Trợ Bệnh Nhân Quốc Tế",
-            text: "Hỗ trợ tận tình cho bệnh nhân quốc tế, từ tư vấn đến điều trị và chăm sóc sau điều trị.",
-          },
+          { title: "Quy Trình Y Khoa Nghiêm Ngặt" },
+          { title: "Kế Hoạch & Chi Phí Minh Bạch" },
+          { title: "Bác Sĩ Được Cấp Phép & Chứng Nhận" },
+          { title: "Hỗ Trợ Bệnh Nhân Quốc Tế" },
         ],
       },
       confidence: {
@@ -1222,25 +1194,11 @@ export const homeContent = {
       title: "种植牙是我们的核心专长，以经验为后盾",
       intro:
         "在 Emis Dental，种植牙是我们的核心专长之一，同时我们还提供全面的高级牙科治疗。我们的持证牙医团队，每位均拥有超过 10 年的临床经验，已成功完成数千例种植病例，从单颗种植到全口重建。",
-      principlesIntro:
-        "我们理解选择种植治疗是一个重要的决定。因此，我们始终遵循以下核心原则：",
       principles: [
-        {
-          title: "严格的医疗规范",
-          text: "在治疗的每个阶段都遵循严格的医疗规范，以确保患者安全和可预期的治疗结果。",
-        },
-        {
-          title: "透明的方案与价格",
-          text: "透明的治疗方案与价格。患者在治疗开始前会收到清晰的费用明细，绝无隐藏费用。",
-        },
-        {
-          title: "持证合规的牙医",
-          text: "所有牙医均持有合法执照与专业认证。患者可随时申请查阅专业资质与认证证书，安心无忧。",
-        },
-        {
-          title: "国际患者支持",
-          text: "为国际患者提供从咨询、治疗到术后护理的全程专属支持。",
-        },
+        { title: "严格的医疗规范" },
+        { title: "透明的方案与价格" },
+        { title: "持证合规的牙医" },
+        { title: "国际患者支持" },
       ],
     },
     servicesTitle: "口腔健康服务",
@@ -1366,25 +1324,11 @@ export const homeContent = {
       title: "경험으로 덻받침되는 핵심 임플란트 전문성",
       intro:
         "Emis Dental에서 치과 임플란트는 다양한 첨단 치과 치료와 더불어 저희의 핵심 전문 분야 중 하나입니다. 각각 10년 이상의 경력을 갖춘 인증 치과의사 팀이 단일 임플란트부터 전악 재건까지 수천 건의 임플란트 사례를 성공적으로 치료해 왔습니다.",
-      principlesIntro:
-        "임플란트 치료를 선택하는 것이 중요한 결정임을 잘 알고 있습니다. 그래서 저희는 다음의 핵심 원칙을 따르고자 합니다:",
       principles: [
-        {
-          title: "엄격한 의료 프로토콜",
-          text: "환자 안전과 예측 가능한 치료 결과를 위해 치료의 모든 단계에서 엄격한 의료 프로토콜을 준수합니다.",
-        },
-        {
-          title: "투명한 치료 계획과 비용",
-          text: "투명한 치료 계획과 비용. 환자는 치료 시작 전에 명확한 비용 내역을 받으며 숨겨진 비용이 없습니다.",
-        },
-        {
-          title: "정식 면허 및 인증 치과의사",
-          text: "모든 치과의사는 정식 면허와 인증을 보유하고 있습니다. 환자는 완전한 안심을 위해 전문 자격과 인증서를 요청하고 확인할 수 있습니다.",
-        },
-        {
-          title: "국제 환자 지원",
-          text: "상담부터 치료, 사후 관리까지 국제 환자를 위한 전담 지원을 제공합니다.",
-        },
+        { title: "엄격한 의료 프로토콜" },
+        { title: "투명한 치료 계획과 비용" },
+        { title: "정식 면허 및 인증 치과의사" },
+        { title: "국제 환자 지원" },
       ],
     },
     servicesTitle: "구강 건강 서비스",
@@ -1512,25 +1456,11 @@ export const homeContent = {
       title: "植牙是我們的核心專長，以經驗為後盾",
       intro:
         "在 Emis Dental，植牙是我們的核心專長之一，同時我們也提供全面的進階牙科治療。我們的持證牙醫團隊，每位皆擁有超過 10 年的臨床經驗，已成功完成數千例植牙病例，從單顆植牙到全口重建。",
-      principlesIntro:
-        "我們理解選擇植牙治療是一個重要的決定。因此，我們始終遵循以下核心原則：",
       principles: [
-        {
-          title: "嚴格的醫療規範",
-          text: "在治療的每個階段都遵循嚴格的醫療規範，以確保患者安全與可預期的治療結果。",
-        },
-        {
-          title: "透明的方案與價格",
-          text: "透明的治療方案與價格。患者在治療開始前會收到清晰的費用明細，絕無隱藏費用。",
-        },
-        {
-          title: "持證合規的牙醫",
-          text: "所有牙醫皆持有合法執照與專業認證。患者可隨時申請查閱專業資格與認證證書，安心無虞。",
-        },
-        {
-          title: "國際患者支援",
-          text: "為國際患者提供從論詢、治療到術後照護的全程專屬支援。",
-        },
+        { title: "嚴格的醫療規範" },
+        { title: "透明的方案與價格" },
+        { title: "持證合規的牙醫" },
+        { title: "國際患者支援" },
       ],
     },
     servicesTitle: "口腔健康服務",
@@ -1657,25 +1587,11 @@ export const homeContent = {
       title: "Une spécialité implantaire centrale, fondée sur l'expérience",
       intro:
         "Chez Emis Dental, les implants dentaires constituent l'une de nos spécialités centrales, aux côtés d'une gamme complète de traitements dentaires avancés. Notre équipe de dentistes certifiés, chacun comptant plus de 10 ans d'expérience, a traité avec succès des milliers de cas d'implants, de l'implant unitaire à la réhabilitation complète.",
-      principlesIntro:
-        "Nous comprenons que choisir un traitement implantaire est une décision importante. C'est pourquoi nous nous efforçons de suivre nos principes fondamentaux :",
       principles: [
-        {
-          title: "Protocoles médicaux stricts",
-          text: "Des protocoles médicaux stricts sont suivis à chaque étape du traitement afin de garantir la sécurité du patient et des résultats prévisibles.",
-        },
-        {
-          title: "Plans et tarifs transparents",
-          text: "Des plans de traitement et des tarifs transparents. Les patients reçoivent un détail clair des coûts avant le début du traitement, sans frais cachés.",
-        },
-        {
-          title: "Dentistes licenciés et certifiés",
-          text: "Tous les dentistes sont pleinement licenciés et certifiés. Les patients peuvent demander et consulter les qualifications et certifications professionnelles en toute tranquillité.",
-        },
-        {
-          title: "Soutien aux patients internationaux",
-          text: "Un soutien dédié aux patients internationaux, de la consultation au traitement et aux soins post-opératoires.",
-        },
+        { title: "Protocoles médicaux stricts" },
+        { title: "Plans et tarifs transparents" },
+        { title: "Dentistes licenciés et certifiés" },
+        { title: "Soutien aux patients internationaux" },
       ],
     },
     servicesTitle: "SERVICES DE SANTÉ BUCCO-DENTAIRE",

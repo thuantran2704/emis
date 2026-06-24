@@ -205,20 +205,19 @@ export default function Home() {
             <p className={sectionLabelClass}>{implantIntro.label}</p>
             <h2 className="text-2xl font-bold text-[#2a3439] md:text-3xl" style={{ fontFamily: "'Playfair Display', serif" }}>{implantIntro.title}</h2>
             <p className="mt-4 text-base leading-relaxed text-gray-500" style={{ fontFamily: "'Cormorant', serif" }}>{implantIntro.intro}</p>
-            <p className="mt-4 text-sm leading-relaxed text-[#2a3439]">{implantIntro.principlesIntro}</p>
 
-            <div className="mt-6 space-y-4 border-l-2 border-[#C5AF73] pl-5">
+            <ul className="mt-6 grid gap-2.5 sm:grid-cols-2">
               {implantIntro.principles.map((item) => (
-                <div key={item.title}>
-                  <h3 className="text-sm font-semibold text-[#2a3439]" style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>
-                  <p className="mt-1 text-xs leading-relaxed text-gray-500">{item.text}</p>
-                </div>
+                <li key={item.title} className="flex items-center gap-2.5 text-sm text-[#2a3439]">
+                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#C5AF73]" />
+                  {item.title}
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
 
           <div className="relative hidden min-h-[320px] overflow-hidden rounded-3xl shadow-sm lg:block">
-            <img src={implantIntroImage} alt={implantIntro.title} className="absolute inset-0 h-full w-full object-cover object-center" />
+            <img src={implantIntroImage} alt={implantIntro.title} className="absolute inset-0 h-full w-full object-cover object-bottom" />
           </div>
         </div>
       </section>
