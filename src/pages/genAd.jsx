@@ -61,7 +61,7 @@ const GenAd = () => {
         ],
         icon: <Gem className="w-8 h-8" />,
         link: "/crownAd",
-        color: "from-rose-500 to-pink-500",
+        color: "from-[#16324a] to-[#24405a]",
         highlight: true,
       },
       {
@@ -78,7 +78,7 @@ const GenAd = () => {
         ],
         icon: <Sun className="w-8 h-8" />,
         link: "/whiteningAd",
-        color: "from-fuchsia-500 to-violet-500",
+        color: "from-[#1f3b57] to-[#2a3439]",
         highlight: true,
       },
       {
@@ -95,7 +95,7 @@ const GenAd = () => {
         ],
         icon: <Shield className="w-8 h-8" />,
         link: "/implantAd",
-        color: "from-pink-600 to-rose-400",
+        color: "from-[#2a3439] to-[#16324a]",
         highlight: true,
       },
     ],
@@ -210,7 +210,7 @@ const GenAd = () => {
         ],
         icon: <Gem className="w-8 h-8" />,
         link: "/crownAd",
-        color: "from-rose-500 to-pink-500",
+        color: "from-[#16324a] to-[#24405a]",
         highlight: true,
       },
       {
@@ -227,7 +227,7 @@ const GenAd = () => {
         ],
         icon: <Sun className="w-8 h-8" />,
         link: "/whiteningAd",
-        color: "from-fuchsia-500 to-violet-500",
+        color: "from-[#1f3b57] to-[#2a3439]",
         highlight: true,
       },
       {
@@ -244,7 +244,7 @@ const GenAd = () => {
         ],
         icon: <Shield className="w-8 h-8" />,
         link: "/implantAd",
-        color: "from-pink-600 to-rose-400",
+        color: "from-[#2a3439] to-[#16324a]",
         highlight: true,
       },
     ],
@@ -333,14 +333,14 @@ const GenAd = () => {
   const content = isVI ? viContent : enContent;
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-pink-50 to-rose-50">
+    <main className="min-h-screen bg-[#f7fafc] text-[#2a3439]">
       <Helmet>
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaDescription} />
       </Helmet>
 
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-rose-600 via-pink-500 to-fuchsia-600 pt-24 pb-12 overflow-hidden">
+      <div className="relative bg-gradient-to-r from-[#16324a] via-[#1d3953] to-[#2a3439] pt-24 pb-12 overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div
@@ -357,34 +357,34 @@ const GenAd = () => {
             {/* Content */}
             <div className="text-white">
               {/* Badge */}
-              <div className="inline-flex items-center bg-gradient-to-r from-yellow-200 to-orange-200 text-orange-800 px-6 py-2 rounded-full font-bold mb-6 animate-pulse">
-                <Flag className="w-5 h-5 mr-2 fill-orange-600 text-orange-600" />
+              <div className="inline-flex items-center bg-[#C5AF73] text-[#16324a] px-6 py-2 rounded-full font-semibold mb-6 text-xs uppercase tracking-[0.2em]">
+                <Flag className="w-4 h-4 mr-2" />
                 {isVI ? "CHƯƠNG TRÌNH ƯU ĐÃI THÁNG 6" : "JUNE SPECIAL DISCOUNT"}
               </div>
 
               {/* Main Title */}
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
                 {content.heroTitle}
               </h1>
 
               {/* Description */}
               <div className="space-y-4 mb-6">
-                <p className="text-lg text-pink-100">{content.heroDescription}</p>
-                <p className="text-lg text-pink-100 font-semibold">{content.intro}</p>
+                <p className="text-lg text-[#d6e2ed]" style={{ fontFamily: "'Cormorant', serif" }}>{content.heroDescription}</p>
+                <p className="text-lg text-white font-semibold" style={{ fontFamily: "'Cormorant', serif" }}>{content.intro}</p>
               </div>
 
               {/* Quick Stats */}
               <div className="flex flex-wrap gap-4 mt-8">
-                <div className="bg-white/20 px-4 py-2 rounded-lg">
-                  <div className="text-2xl font-bold">3</div>
+                <div className="bg-white/10 border border-white/20 px-4 py-2 rounded-lg">
+                  <div className="text-2xl font-bold text-[#d4af37]">3</div>
                   <div className="text-sm">{isVI ? "Dịch vụ" : "Services"}</div>
                 </div>
-                <div className="bg-white/20 px-4 py-2 rounded-lg">
-                  <div className="text-2xl font-bold">60%</div>
+                <div className="bg-white/10 border border-white/20 px-4 py-2 rounded-lg">
+                  <div className="text-2xl font-bold text-[#d4af37]">60%</div>
                   <div className="text-sm">{isVI ? "Giảm tối đa" : "Max discount"}</div>
                 </div>
-                <div className="bg-white/20 px-4 py-2 rounded-lg">
-                  <div className="text-2xl font-bold">JUNE</div>
+                <div className="bg-white/10 border border-white/20 px-4 py-2 rounded-lg">
+                  <div className="text-2xl font-bold text-[#d4af37]">JUNE</div>
                   <div className="text-sm">{isVI ? "Tháng 6" : "June"}</div>
                 </div>
               </div>
@@ -392,47 +392,47 @@ const GenAd = () => {
 
             {/* Decorative Offer Cards */}
             <div className="relative grid grid-cols-2 gap-4">
-              <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-5 text-center border border-white/30">
-                <Gem className="w-10 h-10 text-yellow-300 mx-auto mb-2" />
-                <div className="text-yellow-300 font-bold text-xl">60%</div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-5 text-center border border-white/20">
+                <Gem className="w-10 h-10 text-[#d4af37] mx-auto mb-2" />
+                <div className="text-[#d4af37] font-bold text-xl">60%</div>
                 <div className="text-white text-sm font-semibold">{isVI ? "Răng Sứ" : "Crowns"}</div>
-                <div className="text-pink-100 text-xs mt-1">{isVI ? "Giảm đến" : "Up to off"}</div>
+                <div className="text-[#c2d2df] text-xs mt-1">{isVI ? "Giảm đến" : "Up to off"}</div>
               </div>
-              <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-5 text-center border border-white/30 mt-6">
-                <Sun className="w-10 h-10 text-yellow-300 mx-auto mb-2" />
-                <div className="text-yellow-300 font-bold text-xl">{isVI ? "Giảm 50%" : "50% off"}</div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-5 text-center border border-white/20 mt-6">
+                <Sun className="w-10 h-10 text-[#d4af37] mx-auto mb-2" />
+                <div className="text-[#d4af37] font-bold text-xl">{isVI ? "Giảm 50%" : "50% off"}</div>
                 <div className="text-white text-sm font-semibold">{isVI ? "Tẩy Trắng" : "Whitening"}</div>
-                <div className="text-pink-100 text-xs mt-1">1.500.000đ</div>
+                <div className="text-[#c2d2df] text-xs mt-1">1.500.000đ</div>
               </div>
-              <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-5 text-center border border-white/30 col-span-2">
-                <Shield className="w-10 h-10 text-yellow-300 mx-auto mb-2" />
-                <div className="text-yellow-300 font-bold text-xl">7.900.000đ</div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-5 text-center border border-white/20 col-span-2">
+                <Shield className="w-10 h-10 text-[#d4af37] mx-auto mb-2" />
+                <div className="text-[#d4af37] font-bold text-xl">7.900.000đ</div>
                 <div className="text-white text-sm font-semibold">Implant Osstem</div>
-                <div className="text-pink-100 text-xs mt-1">{isVI ? "Giá / trụ" : "Per implant"}</div>
+                <div className="text-[#c2d2df] text-xs mt-1">{isVI ? "Giá / trụ" : "Per implant"}</div>
               </div>
               {/* Decorative blobs */}
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-white/10 rounded-full"></div>
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-white/10 rounded-full"></div>
+              <div className="absolute -top-4 -right-4 w-20 h-20 bg-white/5 rounded-full"></div>
+              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-white/5 rounded-full"></div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Quick Info Banner */}
-      <div className="bg-gradient-to-r from-orange-500 to-rose-500 py-3">
+      <div className="bg-[#16324a] py-3 border-y border-[#C5AF73]/30">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-3">
             <div className="flex items-center text-white">
-              <Calendar className="w-4 h-4 mr-2" />
+              <Calendar className="w-4 h-4 mr-2 text-[#d4af37]" />
               <span className="font-semibold">{content.promoSubtitle}</span>
             </div>
             <div className="flex items-center text-white">
-              <Flag className="w-4 h-4 mr-2" />
+              <Flag className="w-4 h-4 mr-2 text-[#d4af37]" />
               <span className="font-semibold">{content.promoNote}</span>
             </div>
             <Link
               to="/contact"
-              className="bg-white text-orange-700 font-bold py-2 px-6 rounded-full hover:shadow-lg transition-all hover:-translate-y-0.5"
+              className="bg-[#C5AF73] text-[#16324a] font-semibold py-2 px-6 rounded-full hover:bg-[#d4af37] transition-all hover:-translate-y-0.5"
             >
               {isVI ? "ĐĂNG KÝ NGAY" : "REGISTER NOW"}
             </Link>
@@ -445,11 +445,14 @@ const GenAd = () => {
         {/* Main Offers Grid */}
         <div className="mb-16">
           <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-[#C5AF73]">
+              {isVI ? "ƯU ĐÃI THÁNG 6" : "JUNE OFFERS"}
+            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#16324a] mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>
               {content.promoTitle}
             </h2>
-            <div className="w-32 h-1 bg-gradient-to-r from-rose-500 to-fuchsia-500 rounded-full mx-auto mb-4"></div>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <div className="w-24 h-1 bg-gradient-to-r from-[#C5AF73] to-[#d4af37] rounded-full mx-auto mb-4"></div>
+            <p className="text-gray-500 max-w-2xl mx-auto" style={{ fontFamily: "'Cormorant', serif" }}>
               {isVI
                 ? "3 dịch vụ chính với ưu đãi đặc biệt trong tháng 6"
                 : "3 main services with special discounts throughout June"}
@@ -460,7 +463,7 @@ const GenAd = () => {
             {content.offers.map((offer, idx) => (
               <div
                 key={idx}
-                className={`bg-gradient-to-br ${offer.color} rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1`}
+                className={`bg-gradient-to-br ${offer.color} rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1`}
               >
                 <div className="p-6 text-white">
                   <div className="flex items-center mb-4">
@@ -474,8 +477,8 @@ const GenAd = () => {
                   </div>
 
                   {/* Discount highlight */}
-                  <div className="bg-white/20 rounded-xl p-3 mb-4 text-center">
-                    <div className="text-2xl font-bold text-yellow-300">{offer.discount}</div>
+                  <div className="bg-white/10 border border-white/15 rounded-xl p-3 mb-4 text-center">
+                    <div className="text-2xl font-bold text-[#d4af37]">{offer.discount}</div>
                     {offer.originalPrice && (
                       <div className="text-sm opacity-80 line-through">{offer.originalPrice}</div>
                     )}
@@ -488,7 +491,7 @@ const GenAd = () => {
                   <div className="mb-5">
                     {offer.features.map((feature, fIdx) => (
                       <div key={fIdx} className="flex items-center mb-2 last:mb-0">
-                        <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0 text-[#d4af37]" />
                         <span className="text-sm">{feature}</span>
                       </div>
                     ))}
@@ -497,7 +500,7 @@ const GenAd = () => {
                   {/* Button */}
                   <Link
                     to={offer.link}
-                    className="block w-full bg-white/20 hover:bg-white/30 text-white font-bold py-3 rounded-lg text-center transition-colors flex items-center justify-center"
+                    className="block w-full bg-[#C5AF73] hover:bg-[#d4af37] text-[#16324a] font-semibold py-3 rounded-lg text-center transition-colors flex items-center justify-center"
                   >
                     {isVI ? "XEM CHI TIẾT ƯU ĐÃI" : "VIEW OFFER DETAILS"}
                     <ChevronRight className="w-4 h-4 ml-2" />
@@ -509,28 +512,28 @@ const GenAd = () => {
         </div>
 
         {/* Highlights Section */}
-        <div className="bg-white rounded-3xl shadow-xl p-8 mb-16 border-2 border-pink-100">
+        <div className="bg-white rounded-3xl shadow-sm p-8 mb-16 border border-[#e6ddc8]">
           <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#16324a] mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
               {content.highlights.title}
             </h2>
-            <div className="w-32 h-1 bg-gradient-to-r from-rose-500 to-fuchsia-500 rounded-full mx-auto"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#C5AF73] to-[#d4af37] rounded-full mx-auto"></div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {content.highlights.services.map((service, idx) => (
               <div
                 key={idx}
-                className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-xl border border-pink-100 hover:border-pink-300 transition-colors p-6"
+                className="bg-[#f7fafc] rounded-xl border border-[#dbe4ec] hover:border-[#C5AF73] transition-colors p-6"
               >
-                <h3 className="font-bold text-gray-800 text-lg mb-4 text-center">
+                <h3 className="font-bold text-[#16324a] text-lg mb-4 text-center" style={{ fontFamily: "'Playfair Display', serif" }}>
                   {service.name}
                 </h3>
                 <ul className="space-y-3">
                   {service.points.map((point, pIdx) => (
                     <li key={pIdx} className="flex items-start">
-                      <div className="w-2 h-2 bg-rose-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      <span className="text-gray-700 text-sm">{point}</span>
+                      <div className="w-2 h-2 bg-[#C5AF73] rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-600 text-sm">{point}</span>
                     </li>
                   ))}
                 </ul>
@@ -540,27 +543,27 @@ const GenAd = () => {
         </div>
 
         {/* Why Choose Us */}
-        <div className="bg-gradient-to-r from-rose-50 to-pink-50 rounded-3xl p-8 mb-16 border-2 border-pink-200">
+        <div className="bg-[#f1f5f9] rounded-3xl p-8 mb-16 border border-[#dbe4ec]">
           <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#16324a] mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
               {content.whyChoose.title}
             </h2>
-            <div className="w-32 h-1 bg-gradient-to-r from-rose-500 to-fuchsia-500 rounded-full mx-auto"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#C5AF73] to-[#d4af37] rounded-full mx-auto"></div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {content.whyChoose.points.map((point, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-xl p-6 text-center border border-pink-100 hover:shadow-lg transition-shadow"
+                className="bg-white rounded-xl p-6 text-center border border-[#dbe4ec] hover:shadow-md transition-shadow"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-rose-500 to-fuchsia-500 rounded-full flex items-center justify-center mx-auto mb-2">
-                  <div className="text-white text-sm font-bold px-1">{point.stat}</div>
+                <div className="w-16 h-16 bg-gradient-to-br from-[#16324a] to-[#2a3439] rounded-full flex items-center justify-center mx-auto mb-2">
+                  <div className="text-[#d4af37] text-sm font-bold px-1">{point.stat}</div>
                 </div>
-                <div className="w-10 h-10 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-3 -mt-6 relative z-10 text-rose-600">
+                <div className="w-10 h-10 bg-[#f1e9d4] rounded-full flex items-center justify-center mx-auto mb-3 -mt-6 relative z-10 text-[#16324a]">
                   {point.icon}
                 </div>
-                <h3 className="font-bold text-gray-800 text-lg mb-2">{point.title}</h3>
+                <h3 className="font-bold text-[#16324a] text-lg mb-2">{point.title}</h3>
                 <p className="text-gray-600 text-sm">{point.description}</p>
               </div>
             ))}
@@ -568,28 +571,28 @@ const GenAd = () => {
         </div>
 
         {/* Process Section */}
-        <div className="bg-gradient-to-r from-pink-50 to-fuchsia-50 rounded-3xl p-8 mb-16 border-2 border-pink-200">
+        <div className="bg-[#f1f5f9] rounded-3xl p-8 mb-16 border border-[#dbe4ec]">
           <div className="text-center mb-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-2">
+            <h2 className="text-2xl font-bold text-[#16324a] mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
               {content.process.title}
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-rose-500 to-fuchsia-500 rounded-full mx-auto"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#C5AF73] to-[#d4af37] rounded-full mx-auto"></div>
           </div>
 
           <div className="flex flex-col md:flex-row gap-4 items-stretch md:items-center">
             {content.process.steps.map((step, idx) => (
               <Fragment key={idx}>
                 <div className="flex flex-1 min-w-0 items-center md:flex-col md:items-center text-left md:text-center">
-                  <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-rose-500 to-fuchsia-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-4 md:mr-0 md:mb-3">
+                  <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-[#16324a] to-[#2a3439] rounded-full flex items-center justify-center text-[#d4af37] font-bold text-sm mr-4 md:mr-0 md:mb-3">
                     {step.number}
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-800 text-sm">{step.title}</h3>
+                    <h3 className="font-bold text-[#16324a] text-sm">{step.title}</h3>
                     <p className="text-gray-600 text-xs">{step.description}</p>
                   </div>
                 </div>
                 {idx < content.process.steps.length - 1 && (
-                  <ArrowRight className="hidden md:block text-pink-300 flex-shrink-0" />
+                  <ArrowRight className="hidden md:block text-[#C5AF73] flex-shrink-0" />
                 )}
               </Fragment>
             ))}
@@ -598,19 +601,19 @@ const GenAd = () => {
 
         {/* Final CTA */}
         <div className="text-center mb-12">
-          <div className="bg-gradient-to-r from-orange-400 via-rose-500 to-fuchsia-500 rounded-3xl p-8 md:p-10 shadow-xl">
-            <Flag className="w-16 h-16 text-white mx-auto mb-6" />
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+          <div className="bg-gradient-to-r from-[#16324a] via-[#1d3953] to-[#2a3439] rounded-3xl p-8 md:p-10 shadow-lg">
+            <Flag className="w-14 h-14 text-[#d4af37] mx-auto mb-6" />
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
               {content.cta.title}
             </h3>
-            <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
+            <p className="text-[#d6e2ed] text-lg mb-8 max-w-2xl mx-auto" style={{ fontFamily: "'Cormorant', serif" }}>
               {content.cta.description}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center bg-white text-rose-600 font-bold text-lg py-4 px-8 rounded-full shadow-2xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                className="inline-flex items-center justify-center bg-[#C5AF73] text-[#16324a] font-semibold text-lg py-4 px-8 rounded-full shadow-lg hover:bg-[#d4af37] hover:-translate-y-1 transition-all duration-300"
               >
                 {content.cta.button}
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -618,9 +621,9 @@ const GenAd = () => {
 
               <a
                 href={`tel:${content.cta.hotline}`}
-                className="inline-flex items-center justify-center bg-rose-700 text-white font-bold text-lg py-4 px-8 rounded-full shadow-lg hover:shadow-xl hover:bg-rose-800 transition-all duration-300"
+                className="inline-flex items-center justify-center bg-white/10 border border-white/25 text-white font-semibold text-lg py-4 px-8 rounded-full hover:bg-white/15 transition-all duration-300"
               >
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="w-5 h-5 mr-2 text-[#d4af37]" />
                 {content.cta.hotline}
               </a>
             </div>
@@ -630,60 +633,58 @@ const GenAd = () => {
         </div>
 
         {/* Contact & Service Links */}
-        <div className="bg-white rounded-3xl shadow-xl p-8 border-2 border-pink-100">
+        <div className="bg-white rounded-3xl shadow-sm p-8 border border-[#e6ddc8]">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">
-              <span className="text-rose-600">
-                {isVI ? "NHA KHOA QUỐC TẾ EMIS DENTAL" : "EMIS INTERNATIONAL DENTAL CLINIC"}
-              </span>
+            <h2 className="text-3xl font-bold text-[#16324a] mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+              {isVI ? "NHA KHOA QUỐC TẾ EMIS DENTAL" : "EMIS INTERNATIONAL DENTAL CLINIC"}
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-rose-500 to-fuchsia-500 rounded-full mx-auto" />
+            <div className="w-24 h-1 bg-gradient-to-r from-[#C5AF73] to-[#d4af37] rounded-full mx-auto" />
           </div>
 
           {/* Service Links */}
           <div className="mb-10">
-            <h3 className="text-center font-bold text-gray-800 mb-6 text-lg">
+            <h3 className="text-center font-bold text-[#16324a] mb-6 text-lg">
               {isVI ? "3 DỊCH VỤ ĐANG ƯU ĐÃI" : "3 SERVICES ON PROMOTION"}
             </h3>
             <div className="grid grid-cols-3 gap-4">
               <Link
                 to="/crownAd"
-                className="text-center p-4 bg-gradient-to-r from-rose-50 to-pink-50 rounded-lg transition-all hover:shadow-md border border-rose-200"
+                className="text-center p-4 bg-[#f7fafc] rounded-lg transition-all hover:shadow-md border border-[#dbe4ec] hover:border-[#C5AF73]"
               >
-                <Gem className="w-8 h-8 text-rose-600 mx-auto mb-2" />
-                <div className="font-bold text-rose-700">
+                <Gem className="w-8 h-8 text-[#C5AF73] mx-auto mb-2" />
+                <div className="font-bold text-[#16324a]">
                   {isVI ? "Răng Sứ" : "Crowns"}
                 </div>
-                <div className="text-sm text-rose-600">60% {isVI ? "giảm" : "off"}</div>
+                <div className="text-sm text-[#9a8649]">60% {isVI ? "giảm" : "off"}</div>
               </Link>
               <Link
                 to="/whiteningAd"
-                className="text-center p-4 bg-gradient-to-r from-fuchsia-50 to-violet-50 rounded-lg transition-all hover:shadow-md border border-fuchsia-200"
+                className="text-center p-4 bg-[#f7fafc] rounded-lg transition-all hover:shadow-md border border-[#dbe4ec] hover:border-[#C5AF73]"
               >
-                <Sun className="w-8 h-8 text-fuchsia-600 mx-auto mb-2" />
-                <div className="font-bold text-fuchsia-700">
+                <Sun className="w-8 h-8 text-[#C5AF73] mx-auto mb-2" />
+                <div className="font-bold text-[#16324a]">
                   {isVI ? "Tẩy Trắng" : "Whitening"}
                 </div>
-                <div className="text-sm text-fuchsia-600">{isVI ? "Giảm 50%" : "50% off"}</div>
+                <div className="text-sm text-[#9a8649]">{isVI ? "Giảm 50%" : "50% off"}</div>
               </Link>
               <Link
                 to="/implantAd"
-                className="text-center p-4 bg-gradient-to-r from-pink-50 to-rose-50 rounded-lg transition-all hover:shadow-md border border-pink-200"
+                className="text-center p-4 bg-[#f7fafc] rounded-lg transition-all hover:shadow-md border border-[#dbe4ec] hover:border-[#C5AF73]"
               >
-                <Shield className="w-8 h-8 text-pink-600 mx-auto mb-2" />
-                <div className="font-bold text-pink-700">Implant</div>
-                <div className="text-sm text-pink-600">{isVI ? "7.9M/trụ" : "7.9M/implant"}</div>
+                <Shield className="w-8 h-8 text-[#C5AF73] mx-auto mb-2" />
+                <div className="font-bold text-[#16324a]">Implant</div>
+                <div className="text-sm text-[#9a8649]">{isVI ? "7.9M/trụ" : "7.9M/implant"}</div>
               </Link>
             </div>
           </div>
 
           {/* Contact Info */}
-          <div className="grid md:grid-cols-3 gap-6 border-t border-gray-200 pt-8">
+          <div className="grid md:grid-cols-3 gap-6 border-t border-[#e6ddc8] pt-8">
             <div className="text-center p-4">
-              <div className="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Sparkles className="w-6 h-6 text-rose-600" />
+              <div className="w-12 h-12 bg-[#f1e9d4] rounded-full flex items-center justify-center mx-auto mb-3">
+                <Sparkles className="w-6 h-6 text-[#C5AF73]" />
               </div>
-              <h3 className="font-bold text-gray-800 mb-1">
+              <h3 className="font-bold text-[#16324a] mb-1">
                 {isVI ? "Giờ làm việc" : "Working Hours"}
               </h3>
               <p className="text-gray-600 text-sm">
@@ -695,19 +696,19 @@ const GenAd = () => {
             </div>
 
             <div className="text-center p-4">
-              <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Phone className="w-6 h-6 text-pink-600" />
+              <div className="w-12 h-12 bg-[#f1e9d4] rounded-full flex items-center justify-center mx-auto mb-3">
+                <Phone className="w-6 h-6 text-[#C5AF73]" />
               </div>
-              <h3 className="font-bold text-gray-800 mb-1">Hotline</h3>
-              <p className="text-lg font-bold text-rose-600">+84 919 100 021</p>
-              <p className="text-lg font-bold text-rose-600">+84 768 117 068</p>
+              <h3 className="font-bold text-[#16324a] mb-1">Hotline</h3>
+              <p className="text-lg font-bold text-[#16324a]">+84 919 100 021</p>
+              <p className="text-lg font-bold text-[#16324a]">+84 768 117 068</p>
             </div>
 
             <div className="text-center p-4">
-              <div className="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Shield className="w-6 h-6 text-rose-600" />
+              <div className="w-12 h-12 bg-[#f1e9d4] rounded-full flex items-center justify-center mx-auto mb-3">
+                <Shield className="w-6 h-6 text-[#C5AF73]" />
               </div>
-              <h3 className="font-bold text-gray-800 mb-1">
+              <h3 className="font-bold text-[#16324a] mb-1">
                 {isVI ? "Địa chỉ" : "Address"}
               </h3>
               <p className="text-gray-600 text-sm">62B Phạm Ngọc Thạch</p>
