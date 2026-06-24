@@ -3,10 +3,10 @@ import { Helmet } from 'react-helmet';
 import { useSelector } from 'react-redux';
 import homeContent from '../Translations/homeContent';
 import heroBackground from '../pics/better_emis_hall.jpg';
-import planningImplant from '../pics/doctor-analyzing-implant.jpg';
+import confidencePortrait from '../pics/foreign-patient-1-with-dr-tu-smiling.jpg';
+import implantIntroImage from '../pics/doctor-smiling-with-patient.jpg';
 import cbctReview from '../pics/dr-x-ray-consultation.jpg';
 import onlineConsultation from '../pics/consulting-team.jpg';
-import explainPlan from '../pics/doctor-explaining-treatment-x-ray-angle-3.jpg';
 import drTuPortrait from '../pics/dr-tu-potrait.jpg';
 import drSonPortrait from '../pics/dr-son-potrait.jpg';
 import lifestyleDinner from '../pics/eating-casually.jpeg';
@@ -38,6 +38,7 @@ export default function Home() {
   const language = useSelector((state) => state.language.language);
   const localizedHome = homeContent[language] || homeContent.english;
   const page = localizedHome.homepageV2 || homeContent.english.homepageV2;
+  const implantIntro = localizedHome.implantIntro || page.implantIntro;
   const baseServices = (localizedHome.services || homeContent.english.services || []).slice(0, 4);
   const serviceCards = baseServices.length > 1
     ? [baseServices[1], baseServices[0], ...baseServices.slice(2)]
@@ -198,39 +199,68 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="bg-[#f7fafc] py-16 md:py-20">
+        <div className="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-2 lg:items-stretch">
+          <div>
+            <p className={sectionLabelClass}>{implantIntro.label}</p>
+            <h2 className="text-2xl font-bold text-[#2a3439] md:text-3xl" style={{ fontFamily: "'Playfair Display', serif" }}>{implantIntro.title}</h2>
+            <p className="mt-4 text-base leading-relaxed text-gray-500" style={{ fontFamily: "'Cormorant', serif" }}>{implantIntro.intro}</p>
+            <p className="mt-4 text-sm leading-relaxed text-[#2a3439]">{implantIntro.principlesIntro}</p>
+
+            <div className="mt-6 space-y-4 border-l-2 border-[#C5AF73] pl-5">
+              {implantIntro.principles.map((item) => (
+                <div key={item.title}>
+                  <h3 className="text-sm font-semibold text-[#2a3439]" style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>
+                  <p className="mt-1 text-xs leading-relaxed text-gray-500">{item.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="relative hidden min-h-[320px] overflow-hidden rounded-3xl shadow-sm lg:block">
+            <img src={implantIntroImage} alt={implantIntro.title} className="absolute inset-0 h-full w-full object-cover object-center" />
+          </div>
+        </div>
+      </section>
+
       <section className="bg-[#ffffff] py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-6">
-          <p className={sectionLabelClass}>Why EMIS</p>
-          <h2 className="text-2xl font-bold text-[#2a3439] md:text-3xl" style={{ fontFamily: "'Playfair Display', serif" }}>{page.confidence.title}</h2>
-          <p className="mt-4 max-w-4xl text-base leading-relaxed text-gray-500" style={{ fontFamily: "'Cormorant', serif" }}>{page.confidence.intro}</p>
-          <p className="mt-3 max-w-4xl text-sm leading-relaxed text-gray-500" style={{ fontFamily: "'Cormorant', serif" }}>{page.confidence.copy}</p>
+          <div className="mx-auto max-w-3xl text-center">
+            <p className={sectionLabelClass}>Why EMIS</p>
+            <h2 className="text-2xl font-bold text-[#2a3439] md:text-3xl" style={{ fontFamily: "'Playfair Display', serif" }}>{page.confidence.title}</h2>
+            <p className="mt-4 text-base leading-relaxed text-gray-500" style={{ fontFamily: "'Cormorant', serif" }}>{page.confidence.intro}</p>
+          </div>
 
-          <div className="mt-10 divide-y divide-[#dbe4ec] border-y border-[#dbe4ec]">
-            {[planningImplant, cbctReview, onlineConsultation, explainPlan].map((image, index) => {
-              const card = page.confidence.cards[index];
-              return (
-                <article key={card.title} className="grid gap-5 py-6 md:grid-cols-[220px_1fr] md:items-center md:gap-8">
-                  <div className="hidden overflow-hidden rounded-2xl border border-[#dbe4ec] bg-white shadow-sm md:block">
-                    <img src={image} alt={card.title} className="aspect-[4/3] w-full object-cover" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-[#2a3439]" style={{ fontFamily: "'Playfair Display', serif" }}>{card.title}</h3>
-                    <p className="mt-3 text-xs leading-relaxed text-gray-500">{card.text}</p>
-                  </div>
+          <div className="mt-10 grid gap-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-stretch">
+            <div className="grid gap-3 sm:grid-cols-2 sm:auto-rows-fr">
+              {page.confidence.cards.map((card) => (
+                <article
+                  key={card.title}
+                  className="group flex flex-col rounded-2xl border border-[#e4ebf1] bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-[#C5AF73] hover:shadow-md"
+                >
+                  <span className="block h-1 w-8 rounded-full bg-[#C5AF73] transition-all group-hover:w-12" />
+                  <h3 className="mt-4 text-base font-semibold text-[#2a3439]" style={{ fontFamily: "'Playfair Display', serif" }}>{card.title}</h3>
+                  <p className="mt-2 text-xs leading-relaxed text-gray-500">{card.text}</p>
                 </article>
-              );
-            })}
+              ))}
+            </div>
+
+            <div className="relative hidden overflow-hidden rounded-2xl shadow-sm lg:block">
+              <img src={confidencePortrait} alt={page.confidence.title} className="absolute inset-0 h-full w-full object-cover object-center" />
+            </div>
           </div>
         </div>
       </section>
 
       <section className="bg-[#f1f5f9] py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-6">
-          <p className={sectionLabelClass}>{localizedHome.servicesTitle || 'Oral Health Services'}</p>
-          <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl" style={{ fontFamily: "'Playfair Display', serif" }}>
-            {page.pathways.title}
-          </h2>
-          <p className="mt-4 max-w-4xl text-base leading-relaxed text-[#516b83]">{page.pathways.intro}</p>
+          <div className="mx-auto max-w-3xl text-center">
+            <p className={sectionLabelClass}>{localizedHome.servicesTitle || 'Oral Health Services'}</p>
+            <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl" style={{ fontFamily: "'Playfair Display', serif" }}>
+              {page.pathways.title}
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-gray-500" style={{ fontFamily: "'Cormorant', serif" }}>{page.pathways.intro}</p>
+          </div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {serviceCards.map((service, index) => (
@@ -289,7 +319,7 @@ export default function Home() {
 
           <div>
             <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl" style={{ fontFamily: "'Playfair Display', serif" }}>{page.situations.title}</h2>
-            <p className="mt-4 text-sm leading-relaxed text-[#5d7388]">{page.situations.intro}</p>
+            <p className="mt-4 text-base leading-relaxed text-gray-500" style={{ fontFamily: "'Cormorant', serif" }}>{page.situations.intro}</p>
 
             <div className="mt-6 space-y-5 border-l-2 border-[#e5d6b0] pl-5">
               {page.situations.cards.map((item) => (
@@ -309,8 +339,10 @@ export default function Home() {
 
       <section className="bg-[#f1f5f9] py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-6">
-          <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl" style={{ fontFamily: "'Playfair Display', serif" }}>{page.pathways.title}</h2>
-          <p className="mt-4 max-w-4xl text-base leading-relaxed text-[#516b83]">{page.pathways.intro}</p>
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl" style={{ fontFamily: "'Playfair Display', serif" }}>{page.pathways.title}</h2>
+            <p className="mt-4 text-base leading-relaxed text-gray-500" style={{ fontFamily: "'Cormorant', serif" }}>{page.pathways.intro}</p>
+          </div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {[confidentSmile, elderSocializing, pathwayConsult].map((image, index) => {
@@ -332,8 +364,10 @@ export default function Home() {
 
       <section className="bg-white py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-6">
-          <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl" style={{ fontFamily: "'Playfair Display', serif" }}>{page.journey.title}</h2>
-          <p className="mt-4 max-w-4xl text-base leading-relaxed text-[#516b83]">{page.journey.intro}</p>
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl" style={{ fontFamily: "'Playfair Display', serif" }}>{page.journey.title}</h2>
+            <p className="mt-4 text-base leading-relaxed text-gray-500" style={{ fontFamily: "'Cormorant', serif" }}>{page.journey.intro}</p>
+          </div>
 
           <div className="mt-10 grid gap-5 md:grid-cols-5">
             {[onlineConsultation, cbctReview, treatmentImage, followupImage, longTermCare].map((image, index) => {
@@ -359,7 +393,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-2 md:items-stretch">
           <div>
             <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl" style={{ fontFamily: "'Playfair Display', serif" }}>{page.international.title}</h2>
-            <p className="mt-4 text-base leading-relaxed text-[#516b83]">{page.international.intro}</p>
+            <p className="mt-4 text-base leading-relaxed text-gray-500" style={{ fontFamily: "'Cormorant', serif" }}>{page.international.intro}</p>
             <ul className="mt-6 space-y-3">
               {page.international.points.map((item) => (
                 <li key={item.title} className="rounded-xl border border-[#dde7ef] bg-[#f9fcff] p-4">
@@ -381,7 +415,7 @@ export default function Home() {
 
       <section className="bg-[#f1f5f9] py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-6">
-          <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl" style={{ fontFamily: "'Playfair Display', serif" }}>{page.faq.title}</h2>
+          <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl text-center" style={{ fontFamily: "'Playfair Display', serif" }}>{page.faq.title}</h2>
           <div className="mt-8 space-y-4">
             {page.faq.items.map((item) => (
               <details key={item.question} className="rounded-2xl border border-[#dbe6ef] bg-white p-5 shadow-sm">

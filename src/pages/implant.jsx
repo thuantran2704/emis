@@ -444,7 +444,7 @@ const ImplantGuide = () => {
             </div>
             <div className="rounded-2xl overflow-hidden shadow-sm h-[360px]">
               <img
-                src={implantIllustration}
+                src={patient2}
                 alt="Implant case illustration"
                 className="w-full h-full object-cover object-center"
               />
