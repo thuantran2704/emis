@@ -93,11 +93,11 @@ export default function Navbar() {
   ];
 
   const treatmentDropdownItems = [
-    { name: content.solutions, path: '/solutions' },
-    { name: content.oralSurgery, path: '/oral-surgery' },
-    { name: content.implant, path: '/implant' },
     { name: content.veneer, path: '/veneer' },
+    { name: content.implant, path: '/implant' },
+    { name: content.oralSurgery, path: '/oral-surgery' },
     { name: content.crown, path: '/crown' },
+    { name: content.solutions, path: '/solutions' },
     { name: content.services, path: '/services' },
   ];
 
