@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { useSelector } from 'react-redux';
+import { Sparkles, Layers, Brush, Smile, Wrench, Plus, ArrowRight } from 'lucide-react';
 import smileAestheticsContent from '../Translations/smileAestheticsContent';
 import heroImage from '../pics/khach_cuoi_chup_hinh_voi_bs.jpg';
 import sectionThreeImage from '../pics/confident-smile-social.jpeg';
@@ -8,18 +9,6 @@ import orthoImage from '../pics/elder-person-socializing.jpeg';
 import whiteningCase from '../pics/eating-casually.jpeg';
 import veneerCase from '../pics/measuring-result-cbct-x-ray-patient-smiling.jpg';
 import orthoCase from '../pics/doctor-explaining-procedure-to-patient.jpg';
-import improveCardImage1 from '../pics/foreign-patient-2.jpg';
-import improveCardImage2 from '../pics/doctor-explaining-treatment-x-ray-angle-3.jpg';
-import improveCardImage3 from '../pics/doctor-reviewing-x-ray-with-patient-explaining-treatment.jpg';
-import improveCardImage4 from '../pics/missing-teeth-and-braces.jpeg';
-import improveCardImage5 from '../pics/taking-cbct-x-ray.jpg';
-import improveCardImage6 from '../pics/all-on-4-implant.jpg';
-import optionCardImage1 from '../pics/teeth-whitening.jpg';
-import optionCardImage2 from '../pics/foreign-patient-1-with-dr-tu-smiling.jpg';
-import optionCardImage3 from '../pics/doctor-explaining-treatment-x-ray-dif-angle.jpg';
-import optionCardImage4 from '../pics/invisalign.jpg';
-import optionCardImage5 from '../pics/crown.jpg';
-import optionCardImage6 from '../pics/denture.jpeg';
 
 const SectionLabel = ({ children }) => (
   <p
@@ -51,22 +40,7 @@ export default function SmileAesthetics() {
   const caseCards = content.cases?.cards || [];
 
   const caseImages = [whiteningCase, veneerCase, orthoCase];
-  const improveImages = [
-    improveCardImage1,
-    improveCardImage2,
-    improveCardImage3,
-    improveCardImage4,
-    improveCardImage5,
-    improveCardImage6,
-  ];
-  const optionImages = [
-    optionCardImage1,
-    optionCardImage2,
-    optionCardImage3,
-    optionCardImage4,
-    optionCardImage5,
-    optionCardImage6,
-  ];
+  const optionIcons = [Sparkles, Layers, Brush, Smile, Wrench, Plus];
 
   return (
     <main className="min-h-[calc(100vh-4rem)] bg-[#f7fafc] pt-20 text-[#2a3439]">
@@ -113,31 +87,43 @@ export default function SmileAesthetics() {
               <img
                 src={heroImage}
                 alt={content.hero?.imageAlt || 'Smile aesthetics consultation'}
-                className="h-full w-full object-cover"
+                className="h-full w-full scale-125 object-cover"
               />
             </div>
           ) : null}
         </div>
       </section>
 
-      <section className="bg-white py-16 lg:py-28">
-        <div className="mx-auto max-w-6xl px-6 lg:px-12">
-          <SectionTitle>{content.improve?.title}</SectionTitle>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <section className="relative overflow-hidden bg-[#0f1f2e] py-16 lg:py-28">
+        <div className="pointer-events-none absolute inset-0 opacity-[0.07]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, #d4af37 1px, transparent 0)', backgroundSize: '28px 28px' }} />
+        <div className="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full bg-[#d4af37]/20 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-[#1d3953]/40 blur-3xl" />
+        <div className="relative mx-auto max-w-5xl px-6 lg:px-12">
+          <h2 className="mb-8 text-[1.45rem] leading-[1.1] text-white lg:mb-12 lg:text-[2.1rem]" style={{ fontFamily: "'Playfair Display', serif" }}>
+            {content.improve?.title}
+          </h2>
+          <ol className="flex flex-col">
             {improveItems.map((item, index) => (
-              <article key={item} className="rounded-xl border border-[#dbe4ec] bg-[#f7fafc] p-5">
-                <div className="overflow-hidden rounded-lg border border-[#dbe4ec] bg-white">
-                  <img
-                    src={improveImages[index % improveImages.length]}
-                    alt={item}
-                    className="h-28 w-full object-cover"
-                    loading="lazy"
-                  />
-                </div>
-                <p className="mt-4 text-[13px] font-medium uppercase tracking-[0.05em] text-[#2a3439] lg:text-[14px]">{item}</p>
-              </article>
+              <li
+                key={item}
+                className="group flex items-center gap-5 border-b border-white/10 py-5 transition-colors hover:bg-white/[0.03] lg:gap-8 lg:py-6"
+              >
+                <span
+                  className="text-[1.1rem] font-semibold tabular-nums text-[#d4af37]/60 transition-colors group-hover:text-[#d4af37] lg:text-[1.35rem]"
+                  style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
+                >
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <span className="h-2 w-2 flex-shrink-0 rounded-full bg-[#d4af37]/40 transition-all duration-300 group-hover:scale-125 group-hover:bg-[#d4af37] group-hover:shadow-[0_0_12px_2px_rgba(212,175,55,0.5)]" />
+                <p className="flex-1 text-[14px] font-medium uppercase tracking-[0.12em] text-white/85 transition-colors group-hover:text-white lg:text-[16px]">
+                  {item}
+                </p>
+                <span className="translate-x-[-6px] text-[#d4af37] opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
+                  <ArrowRight className="h-5 w-5" strokeWidth={1.6} />
+                </span>
+              </li>
             ))}
-          </div>
+          </ol>
         </div>
       </section>
 
@@ -175,22 +161,22 @@ export default function SmileAesthetics() {
             <SectionTitle>{content.options?.title}</SectionTitle>
           </div>
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {options.map((option, index) => (
-              <article key={option.name} className="rounded-xl border border-[#dbe4ec] bg-[#f7fafc] p-5">
-                <div className="overflow-hidden rounded-lg border border-[#dbe4ec] bg-white">
-                  <img
-                    src={optionImages[index % optionImages.length]}
-                    alt={option.name}
-                    className="h-48 w-full object-cover md:h-52 lg:h-56"
-                    loading="lazy"
-                  />
-                </div>
-                <h3 className="mt-4 text-[1.02rem] text-[#2a3439]" style={{ fontFamily: "'Playfair Display', serif" }}>
-                  {option.name}
-                </h3>
-                <p className="mt-2 text-[13px] leading-6 text-gray-600 lg:text-[14px]">{option.description}</p>
-              </article>
-            ))}
+            {options.map((option, index) => {
+              const Icon = optionIcons[index % optionIcons.length];
+              return (
+                <article key={option.name} className="flex gap-4 rounded-xl border border-[#dbe4ec] bg-[#f7fafc] p-5">
+                  <span className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl border border-[#eadfc9] bg-white text-[#d4af37]">
+                    <Icon className="h-6 w-6" strokeWidth={1.6} />
+                  </span>
+                  <div>
+                    <h3 className="text-[1.02rem] text-[#2a3439]" style={{ fontFamily: "'Playfair Display', serif" }}>
+                      {option.name}
+                    </h3>
+                    <p className="mt-1.5 text-[13px] leading-6 text-gray-600 lg:text-[14px]">{option.description}</p>
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>

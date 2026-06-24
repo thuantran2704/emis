@@ -74,7 +74,7 @@ export default function Navbar() {
   };
 
   const navLinkClass = (path) =>
-    `relative inline-flex h-10 items-center px-3 text-sm tracking-wide transition-colors duration-200 ${
+    `relative inline-flex h-10 items-center whitespace-nowrap px-3 text-sm tracking-wide transition-colors duration-200 ${
       location.pathname === path
         ? 'text-[#1f2937] after:absolute after:left-3 after:right-3 after:-bottom-0.5 after:h-[2px] after:bg-[#d4af37]'
         : 'text-[#2a3439]/80 hover:text-[#111317]'
@@ -145,7 +145,7 @@ export default function Navbar() {
             </span>
           </Link>
 
-          <div className={`${isLandscape ? 'hidden xl:flex' : 'hidden'} items-center gap-2`}>
+          <div className={`${isLandscape ? 'hidden xl:flex' : 'hidden'} flex-nowrap items-center gap-2`}>
             <Link to="/" className={navLinkClass('/')} style={navFont}>
               {content.home}
             </Link>

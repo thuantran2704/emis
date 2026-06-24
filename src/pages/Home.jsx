@@ -83,7 +83,7 @@ export default function Home() {
         <img
           src={heroBackground}
           alt="EMIS Dental reception hall"
-          className="absolute inset-0 h-full w-full object-cover object-center"
+          className="absolute inset-0 h-full w-full scale-125 object-cover object-center"
           style={{ objectPosition: 'center 62%' }}
         />
         <div
