@@ -15,7 +15,7 @@ export default function Footer() {
     <footer className="bg-[#f7f2e7] border-t border-[#e0d8c3] text-[#1f2937]">
       <div className="max-w-6xl mx-auto px-6 py-12 grid grid-cols-[1fr_1.2fr] gap-10 items-stretch">
         <section className="h-full" aria-labelledby="footer-clinic-name">
-          <div className="h-full rounded-2xl border border-[#e0d8c3] bg-white shadow-md p-6">
+          <div className="h-full p-1">
             <h3
               id="footer-clinic-name"
               className="text-2xl font-bold text-[#d4af37] mb-4"
@@ -91,7 +91,7 @@ export default function Footer() {
           </div>
 
           <section
-            className="rounded-2xl border border-[#e0d8c3] bg-white shadow-md px-5 py-4"
+            className="px-1 py-2"
             aria-labelledby="footer-social-title"
           >
             <h4
@@ -108,7 +108,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
-                className="h-11 w-11 rounded-full bg-white text-[#1f2937] flex items-center justify-center shadow hover:shadow-md transition"
+                className="h-11 w-11 rounded-full bg-white/70 text-[#1f2937] flex items-center justify-center border border-[#e0d8c3] hover:bg-white transition"
               >
                 <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 text-green-600">
                   <path d="M12.04 2A10 10 0 0 0 2.02 12c0 1.76.46 3.45 1.33 4.94L2 22l5.2-1.36A10 10 0 1 0 12.04 2Zm5.11 14.25c-.22.63-1.27 1.16-1.93 1.31-.52.09-1.18.16-3.41-.73-2.88-1.16-4.73-4.03-4.87-4.21-.14-.18-1.16-1.55-1.16-2.95 0-1.4.73-2.08.99-2.36.26-.28.56-.35.74-.35h.54c.17 0 .4.01.61.47.22.47.75 1.63.82 1.75.07.12.12.26.02.42-.1.16-.15.26-.31.4-.16.14-.33.32-.47.54-.16.21-.33.44-.14.87.19.43.84 1.39 1.81 2.25 1.24 1.11 2.29 1.46 2.72 1.62.43.16.69.14.94-.08.25-.22.99-.91 1.26-1.22.27-.31.54-.26.91-.16.37.11 2.35 1.11 2.75 1.31.4.2.66.29.76.45.1.16.1.91-.12 1.54Z"/>
@@ -119,7 +119,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-                className="h-11 w-11 rounded-full bg-white text-[#1f2937] flex items-center justify-center shadow hover:shadow-md transition"
+                className="h-11 w-11 rounded-full bg-white/70 text-[#1f2937] flex items-center justify-center border border-[#e0d8c3] hover:bg-white transition"
               >
                 <FacebookIcon size={22} />
               </a>
@@ -128,7 +128,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="YouTube"
-                className="h-11 w-11 rounded-full bg-white text-[#1f2937] flex items-center justify-center shadow hover:shadow-md transition"
+                className="h-11 w-11 rounded-full bg-white/70 text-[#1f2937] flex items-center justify-center border border-[#e0d8c3] hover:bg-white transition"
               >
                 <img src={youtubeLogo} alt="YouTube" className="h-5 w-5 object-contain" />
               </a>
@@ -137,7 +137,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Zalo"
-                className="h-11 w-11 rounded-full bg-white text-[#1f2937] flex items-center justify-center shadow hover:shadow-md transition"
+                className="h-11 w-11 rounded-full bg-white/70 text-[#1f2937] flex items-center justify-center border border-[#e0d8c3] hover:bg-white transition"
               >
                 <img src={zaloIcon} alt="Zalo" className="h-5 w-5 object-contain" />
               </a>
