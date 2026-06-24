@@ -38,8 +38,11 @@ export default function Home() {
   const language = useSelector((state) => state.language.language);
   const localizedHome = homeContent[language] || homeContent.english;
   const page = localizedHome.homepageV2 || homeContent.english.homepageV2;
-  const serviceCards = (localizedHome.services || homeContent.english.services || []).slice(0, 4);
-  const serviceImages = [serviceGeneral, serviceImplant, serviceCrown, serviceInvisalign];
+  const baseServices = (localizedHome.services || homeContent.english.services || []).slice(0, 4);
+  const serviceCards = baseServices.length > 1
+    ? [baseServices[1], baseServices[0], ...baseServices.slice(2)]
+    : baseServices;
+  const serviceImages = [serviceImplant, serviceGeneral, serviceCrown, serviceInvisalign];
   const sectionLabelClass = "mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-[#C5AF73]";
   const getDoctorPortrait = (doctorName = '') => {
     const normalizedName = doctorName.toLowerCase();
@@ -47,6 +50,13 @@ export default function Home() {
       return drSonPortrait;
     }
     return drTuPortrait;
+  };
+  const getDoctorPath = (doctorName = '') => {
+    const normalizedName = doctorName.toLowerCase();
+    if (/son|sơn|손/.test(normalizedName)) {
+      return '/dr-son';
+    }
+    return '/dr-tu';
   };
   const heroDescription = page.hero.description.length > 95
     ? `${page.hero.description.slice(0, 92).trim()}...`
@@ -240,39 +250,33 @@ export default function Home() {
 
       <section className="bg-[#f1f5f9] py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-6">
-          <p className={sectionLabelClass}>Our Team</p>
-          <h2 className="text-xl font-bold text-[#2a3439] md:text-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>{page.doctors.title}</h2>
+          <div className="mx-auto max-w-3xl text-center">
+            <p className={sectionLabelClass}>Our Team</p>
+            <h2 className="text-xl font-bold text-[#2a3439] md:text-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>{page.doctors.title}</h2>
+            <p className="mt-4 text-base leading-relaxed text-gray-500" style={{ fontFamily: "'Cormorant', serif" }}>{page.doctors.intro}</p>
+          </div>
 
-          <div className="mt-6 grid gap-6 md:grid-cols-2 md:items-stretch">
-            <div className="flex h-full flex-col justify-center rounded-3xl border border-[#dbe4ec] bg-white p-5 shadow-sm md:p-6">
-              <p className="text-sm leading-relaxed text-gray-500" style={{ fontFamily: "'Cormorant', serif" }}>{page.doctors.intro}</p>
-              <div className="mt-5 border-l-2 border-[#C5AF73] pl-4">
-                <h3 className="text-sm font-semibold text-[#2a3439]" style={{ fontFamily: "'Playfair Display', serif" }}>{page.doctors.philosophyTitle}</h3>
-                <p className="mt-2 text-[11px] leading-relaxed text-gray-500">{page.doctors.philosophyText}</p>
-              </div>
-              <Link to="/doctors" className="mt-6 inline-block self-start rounded-full bg-[#d4af37] px-5 py-2.5 text-xs font-semibold text-white transition hover:bg-[#c19d30]">
-                {page.doctors.cta}
+          <div className="mt-10 grid gap-5 md:grid-cols-2">
+            {page.doctors.cards.map((doctor) => (
+              <Link
+                key={doctor.name}
+                to={getDoctorPath(doctor.name)}
+                className="group grid gap-3 rounded-3xl border border-[#dbe4ec] bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-[#C5AF73] hover:shadow-md sm:grid-cols-[minmax(110px,140px)_1fr] sm:items-start sm:gap-4 md:p-6"
+              >
+                <img
+                  src={getDoctorPortrait(doctor.name)}
+                  alt={doctor.name}
+                  className="w-full max-w-full rounded-2xl border border-[#dbe4ec] bg-white object-contain"
+                />
+                <div>
+                  <h3 className="text-sm font-semibold text-[#2a3439] transition group-hover:text-[#C5AF73]" style={{ fontFamily: "'Playfair Display', serif" }}>{doctor.name}</h3>
+                  {doctor.role && <p className="mt-1 text-[11px] font-semibold text-[#C5AF73]">{doctor.role}</p>}
+                  {doctor.focus && <p className="mt-1.5 text-[11px] leading-relaxed text-gray-500">{doctor.focus}</p>}
+                  {doctor.summary && <p className="mt-1.5 text-[11px] leading-relaxed text-gray-500">{doctor.summary}</p>}
+                  {doctor.languages && <p className="mt-2 text-[9px] uppercase tracking-[0.2em] text-[#8aa0b5]">{doctor.languages}</p>}
+                </div>
               </Link>
-            </div>
-
-            <div className="flex h-full flex-col gap-5 rounded-3xl border border-[#dbe4ec] bg-white p-5 shadow-sm md:p-6">
-              {page.doctors.cards.map((doctor) => (
-                <article key={doctor.name} className="grid gap-3 border-b border-[#dbe4ec] pb-5 last:border-b-0 last:pb-0 sm:grid-cols-[minmax(110px,140px)_1fr] sm:items-start sm:gap-4">
-                  <img
-                    src={getDoctorPortrait(doctor.name)}
-                    alt={doctor.name}
-                    className="w-full max-w-full rounded-2xl border border-[#dbe4ec] bg-white object-contain"
-                  />
-                  <div>
-                    <h3 className="text-sm font-semibold text-[#2a3439]" style={{ fontFamily: "'Playfair Display', serif" }}>{doctor.name}</h3>
-                    {doctor.role && <p className="mt-1 text-[11px] font-semibold text-[#C5AF73]">{doctor.role}</p>}
-                    {doctor.focus && <p className="mt-1.5 text-[11px] leading-relaxed text-gray-500">{doctor.focus}</p>}
-                    {doctor.summary && <p className="mt-1.5 text-[11px] leading-relaxed text-gray-500">{doctor.summary}</p>}
-                    {doctor.languages && <p className="mt-2 text-[9px] uppercase tracking-[0.2em] text-[#8aa0b5]">{doctor.languages}</p>}
-                  </div>
-                </article>
-              ))}
-            </div>
+            ))}
           </div>
         </div>
       </section>

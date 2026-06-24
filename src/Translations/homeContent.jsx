@@ -180,10 +180,6 @@ export const homeContent = {
             languages: "Vietnamese • English • Hungarian • Chinese",
           },
         ],
-        philosophyTitle: "Our Treatment Philosophy",
-        philosophyText:
-          "Successful treatment is not only about replacing missing teeth. It is about restoring comfort, confidence, function, and quality of life through careful planning, clear communication, and long-term care.",
-        cta: "Meet Our Doctors",
       },
       situations: {
         title: "Do You See Yourself Here?",
@@ -412,9 +408,6 @@ export const homeContent = {
             languages: "Vietnamese • English • Hungarian • Chinese"
           }
         ],
-        philosophyTitle: "Our Treatment Philosophy",
-        philosophyText: "Successful treatment is not only about replacing missing teeth. It is about restoring comfort, confidence, function, and quality of life through careful planning, clear communication, and long-term care.",
-        cta: "Meet Our Doctors"
       },
       situations: {
         title: "Do You See Yourself Here?",
@@ -771,10 +764,6 @@ export const homeContent = {
             languages: "Tiếng Việt • English • Hungarian • Chinese",
           },
         ],
-        philosophyTitle: "Triết Lý Điều Trị",
-        philosophyText:
-          "Mục tiêu của chúng tôi rất đơn giản: giúp bệnh nhân ăn nhai thoải mái hơn, tự tin hơn và duy trì kết quả lâu dài.",
-        cta: "Tìm Hiểu Đội Ngũ Bác Sĩ",
       },
       situations: {
         title: "Những Điều Này Có Quen Thuộc Với Bạn?",
@@ -1003,9 +992,6 @@ export const homeContent = {
             languages: "Tiếng Việt • English • Hungarian • Chinese"
           }
         ],
-        philosophyTitle: "Triết Lý Điều Trị",
-        philosophyText: "Mục tiêu của chúng tôi rất đơn giản: giúp bệnh nhân ăn nhai thoải mái hơn, tự tin hơn và duy trì kết quả lâu dài.",
-        cta: "Tìm Hiểu Đội Ngũ Bác Sĩ"
       },
       situations: {
         title: "Những Điều Này Có Quen Thuộc Với Bạn?",
