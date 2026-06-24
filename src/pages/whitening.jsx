@@ -243,14 +243,14 @@ const WhiteningAd = () => {
   const content = isVI ? viContent : enContent;
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-pink-50 to-white">
+    <main className="min-h-screen bg-gradient-to-b from-[#f7fafc] to-white">
       <Helmet>
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaDescription} />
       </Helmet>
 
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-rose-600 via-pink-500 to-fuchsia-600 pt-24 pb-12 overflow-hidden">
+      <div className="relative bg-gradient-to-r from-[#16324a] via-[#1d3953] to-[#2a3439] pt-24 pb-12 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div
             className="absolute inset-0"
@@ -265,46 +265,46 @@ const WhiteningAd = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Text Content */}
             <div className="text-left">
-              <div className="inline-flex items-center bg-white/20 text-white px-5 py-2 rounded-full font-bold mb-6 text-sm">
-                <Heart className="w-4 h-4 mr-2 fill-white" />
-                {isVI ? "ƯU ĐÃI MÙA ĐẠI LỄ THÁNG 4" : "APRIL HOLIDAY SEASON OFFER"}
+              <div className="inline-flex items-center bg-[#C5AF73] text-[#16324a] px-5 py-2 rounded-full font-bold mb-6 text-sm">
+                <Heart className="w-4 h-4 mr-2 fill-[#16324a]" />
+                {isVI ? "ƯU ĐÃI THÁNG 6" : "JUNE SPECIAL OFFER"}
               </div>
 
               <h1 className="text-5xl md:text-6xl font-black text-white mb-3 leading-tight">
                 {content.heroTitle}
               </h1>
 
-              <p className="text-2xl font-bold text-yellow-300 mb-6">
+              <p className="text-2xl font-bold text-[#d4af37] mb-6">
                 {content.heroSubtitle}
               </p>
 
-              <p className="text-lg text-pink-100 mb-8">
+              <p className="text-lg text-[#d6e2ed] mb-8">
                 {content.heroDescription}
               </p>
 
               {/* Deal Box */}
               <div className="bg-white/15 backdrop-blur-sm border border-white/30 rounded-2xl p-6 mb-8">
-                <p className="text-yellow-300 font-bold text-sm mb-2 uppercase tracking-wide">
+                <p className="text-[#d4af37] font-bold text-sm mb-2 uppercase tracking-wide">
                   {content.dealHighlight.label}
                 </p>
                 <div className="flex items-end gap-4">
                   <div>
                     <span className="text-5xl font-black text-white">{content.dealHighlight.price}</span>
-                    <span className="text-pink-200 ml-2">{content.dealHighlight.unit}</span>
+                    <span className="text-[#c2d2df] ml-2">{content.dealHighlight.unit}</span>
                   </div>
                   <div className="mb-1">
-                    <span className="text-pink-300 line-through text-lg">{content.dealHighlight.originalPrice}</span>
+                    <span className="text-[#9fb3c4] line-through text-lg">{content.dealHighlight.originalPrice}</span>
                   </div>
                 </div>
-                <p className="text-pink-200 text-sm mt-2">{content.dealHighlight.note}</p>
+                <p className="text-[#c2d2df] text-sm mt-2">{content.dealHighlight.note}</p>
               </div>
 
               {/* Perks */}
               <div className="space-y-3">
                 {content.perks.map((perk, idx) => (
                   <div key={idx} className="flex items-start text-white">
-                    <Sparkles className="w-4 h-4 text-yellow-300 mr-3 mt-1 flex-shrink-0" />
-                    <span className="text-pink-100">{perk}</span>
+                    <Sparkles className="w-4 h-4 text-[#d4af37] mr-3 mt-1 flex-shrink-0" />
+                    <span className="text-[#d6e2ed]">{perk}</span>
                   </div>
                 ))}
               </div>
@@ -312,7 +312,7 @@ const WhiteningAd = () => {
 
             {/* Ad Image */}
             <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-pink-400 via-transparent to-fuchsia-400 rounded-3xl opacity-40 blur-xl"></div>
+              <div className="absolute -inset-4 bg-gradient-to-r from-[#d4af37] via-transparent to-[#C5AF73] rounded-3xl opacity-40 blur-xl"></div>
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/30">
                 <img
                   src={adImage}
@@ -321,7 +321,7 @@ const WhiteningAd = () => {
                 />
               </div>
               {/* Floating badge */}
-              <div className="absolute -top-3 -right-3 bg-yellow-400 text-rose-800 px-4 py-2 rounded-full font-black shadow-lg text-sm animate-bounce">
+              <div className="absolute -top-3 -right-3 bg-[#d4af37] text-[#16324a] px-4 py-2 rounded-full font-black shadow-lg text-sm animate-bounce">
                 {isVI ? "GIẢM 50%!" : "SAVE 50%!"}
               </div>
 
@@ -333,9 +333,9 @@ const WhiteningAd = () => {
                   { icon: <Sparkles className="w-6 h-6" />, val: "1 " + (isVI ? "lần" : "session"), label: isVI ? "Hiệu quả" : "Results" },
                 ].map((stat, idx) => (
                   <div key={idx} className="bg-white/15 backdrop-blur-sm rounded-xl p-3 text-center text-white">
-                    <div className="text-yellow-300 flex justify-center mb-1">{stat.icon}</div>
+                    <div className="text-[#d4af37] flex justify-center mb-1">{stat.icon}</div>
                     <div className="font-bold text-sm">{stat.val}</div>
-                    <div className="text-pink-200 text-xs">{stat.label}</div>
+                    <div className="text-[#c2d2df] text-xs">{stat.label}</div>
                   </div>
                 ))}
               </div>
@@ -346,7 +346,7 @@ const WhiteningAd = () => {
           <div className="mt-10 text-center">
             <Link
               to="/contact"
-              className="inline-flex items-center bg-white text-rose-600 font-bold text-lg py-4 px-10 rounded-full shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
+              className="inline-flex items-center bg-white text-[#16324a] font-bold text-lg py-4 px-10 rounded-full shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
             >
               {isVI ? "ĐẶT LỊCH NGAY – GIỮ SUẤT ƯU ĐÃI" : "BOOK NOW AND SECURE YOUR SPOT"}
               <ChevronRight className="w-5 h-5 ml-2" />
@@ -356,7 +356,7 @@ const WhiteningAd = () => {
       </div>
 
       {/* Quick Info Banner */}
-      <div className="bg-gradient-to-r from-pink-500 to-fuchsia-500 py-3">
+      <div className="bg-gradient-to-r from-[#16324a] to-[#2a3439] py-3">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-3">
             <div className="flex items-center text-white">
@@ -369,7 +369,7 @@ const WhiteningAd = () => {
             </div>
             <Link
               to="/contact"
-              className="bg-white text-pink-700 font-bold py-2 px-6 rounded-full hover:shadow-lg transition-all hover:-translate-y-0.5 text-sm"
+              className="bg-white text-[#16324a] font-bold py-2 px-6 rounded-full hover:shadow-lg transition-all hover:-translate-y-0.5 text-sm"
             >
               {isVI ? "INBOX GIỮ SUẤT NGAY" : "SECURE YOUR SPOT NOW"}
             </Link>
@@ -381,10 +381,10 @@ const WhiteningAd = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
         {/* Pricing Card */}
-        <div className="mb-12 bg-gradient-to-r from-rose-50 to-pink-50 border-2 border-pink-200 rounded-3xl p-8">
+        <div className="mb-12 bg-gradient-to-r from-[#eef2f6] to-[#f7fafc] border-2 border-[#dbe4ec] rounded-3xl p-8">
           <div className="text-center mb-6">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">{content.pricing.title}</h2>
-            <div className="w-32 h-1 bg-gradient-to-r from-rose-500 to-fuchsia-500 rounded-full mx-auto"></div>
+            <div className="w-32 h-1 bg-gradient-to-r from-[#d4af37] to-[#C5AF73] rounded-full mx-auto"></div>
           </div>
           <div className="grid md:grid-cols-3 gap-6 items-center">
             <div className="text-center md:text-left">
@@ -397,11 +397,11 @@ const WhiteningAd = () => {
             </div>
             <div className="text-center">
               <p className="text-gray-500 text-sm uppercase tracking-wider mb-1">{isVI ? "Giá ưu đãi" : "Deal Price"}</p>
-              <p className="text-4xl font-black text-rose-600">{content.pricing.discountPrice}</p>
+              <p className="text-4xl font-black text-[#d4af37]">{content.pricing.discountPrice}</p>
             </div>
           </div>
           <div className="mt-6 text-center">
-            <span className="inline-flex items-center bg-rose-100 text-rose-700 px-4 py-2 rounded-full font-semibold text-sm">
+            <span className="inline-flex items-center bg-[#eef2f6] text-[#16324a] px-4 py-2 rounded-full font-semibold text-sm">
               <Clock className="w-4 h-4 mr-2" />
               {content.pricing.period}
             </span>
@@ -414,7 +414,7 @@ const WhiteningAd = () => {
           {content.sections.map((section, idx) => (
             <section key={idx} className="bg-white rounded-3xl shadow-xl p-8 md:p-10">
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-rose-500 to-fuchsia-500 rounded-xl flex items-center justify-center mr-4 text-white">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#16324a] to-[#2a3439] rounded-xl flex items-center justify-center mr-4 text-white">
                   {section.icon}
                 </div>
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-800">{section.title}</h2>
@@ -423,7 +423,7 @@ const WhiteningAd = () => {
               <div className="space-y-4">
                 {section.points.map((point, pIdx) => (
                   <div key={pIdx} className="flex items-start">
-                    <CheckCircle className="w-6 h-6 text-rose-500 mr-3 flex-shrink-0 mt-1" />
+                    <CheckCircle className="w-6 h-6 text-[#d4af37] mr-3 flex-shrink-0 mt-1" />
                     <p className="text-gray-700 text-lg">{point}</p>
                   </div>
                 ))}
@@ -435,21 +435,21 @@ const WhiteningAd = () => {
           <section className="bg-white rounded-3xl shadow-xl p-8 md:p-10">
             <div className="text-center mb-10">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">{content.process.title}</h2>
-              <div className="w-32 h-1 bg-gradient-to-r from-rose-500 to-fuchsia-500 rounded-full mx-auto mb-4"></div>
+              <div className="w-32 h-1 bg-gradient-to-r from-[#d4af37] to-[#C5AF73] rounded-full mx-auto mb-4"></div>
               <p className="text-gray-600 max-w-2xl mx-auto">{content.process.description}</p>
             </div>
             <div className="grid md:grid-cols-5 gap-4">
               {content.process.steps.map((step, idx) => (
                 <div key={idx} className="relative text-center">
-                  <div className="bg-gradient-to-br from-rose-50 to-pink-50 border border-pink-100 rounded-2xl p-5 h-full hover:border-rose-300 transition-colors">
-                    <div className="w-12 h-12 bg-gradient-to-br from-rose-500 to-fuchsia-500 rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-3">
+                  <div className="bg-gradient-to-br from-[#eef2f6] to-[#f7fafc] border border-[#dbe4ec] rounded-2xl p-5 h-full hover:border-[#C5AF73] transition-colors">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#16324a] to-[#2a3439] rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-3">
                       {idx + 1}
                     </div>
                     <p className="text-gray-700 text-sm">{step}</p>
                   </div>
                   {idx < content.process.steps.length - 1 && (
                     <div className="hidden md:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 z-10">
-                      <ChevronRight className="w-6 h-6 text-pink-300" />
+                      <ChevronRight className="w-6 h-6 text-[#C5AF73]" />
                     </div>
                   )}
                 </div>
@@ -458,15 +458,15 @@ const WhiteningAd = () => {
           </section>
 
           {/* Features Section */}
-          <section className="bg-gradient-to-r from-rose-50 to-pink-50 rounded-3xl p-8 md:p-10 border-2 border-pink-100">
+          <section className="bg-gradient-to-r from-[#eef2f6] to-[#f7fafc] rounded-3xl p-8 md:p-10 border-2 border-[#dbe4ec]">
             <div className="text-center mb-10">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">{content.features.title}</h2>
-              <div className="w-32 h-1 bg-gradient-to-r from-rose-500 to-fuchsia-500 rounded-full mx-auto"></div>
+              <div className="w-32 h-1 bg-gradient-to-r from-[#d4af37] to-[#C5AF73] rounded-full mx-auto"></div>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {content.features.items.map((feature, idx) => (
                 <div key={idx} className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
-                  <div className="w-16 h-16 bg-gradient-to-br from-rose-100 to-pink-100 rounded-full flex items-center justify-center mx-auto mb-4 text-rose-600">
+                  <div className="w-16 h-16 bg-gradient-to-br from-[#eef2f6] to-[#f7fafc] rounded-full flex items-center justify-center mx-auto mb-4 text-[#16324a]">
                     {feature.icon}
                   </div>
                   <h3 className="font-bold text-gray-800 text-lg mb-2">{feature.title}</h3>
@@ -477,68 +477,68 @@ const WhiteningAd = () => {
           </section>
 
           {/* Final CTA */}
-          <section className="bg-gradient-to-r from-rose-600 via-pink-500 to-fuchsia-600 rounded-3xl p-8 md:p-10 text-center">
+          <section className="bg-gradient-to-r from-[#16324a] via-[#1d3953] to-[#2a3439] rounded-3xl p-8 md:p-10 text-center">
             <Heart className="w-16 h-16 text-white fill-white mx-auto mb-6" />
-            <p className="text-xl text-pink-100 mb-4">{content.cta.main}</p>
+            <p className="text-xl text-[#d6e2ed] mb-4">{content.cta.main}</p>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">{content.cta.question}</h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center bg-white text-rose-600 font-bold text-lg py-4 px-8 rounded-full shadow-xl hover:-translate-y-1 transition-all duration-300"
+                className="inline-flex items-center justify-center bg-white text-[#16324a] font-bold text-lg py-4 px-8 rounded-full shadow-xl hover:-translate-y-1 transition-all duration-300"
               >
                 {content.cta.button}
                 <ChevronRight className="w-5 h-5 ml-2" />
               </Link>
               <a
                 href="tel:+84919100021"
-                className="inline-flex items-center justify-center bg-rose-800 text-white font-bold text-lg py-4 px-8 rounded-full shadow-lg hover:bg-rose-900 transition-all duration-300"
+                className="inline-flex items-center justify-center bg-[#16324a] text-white font-bold text-lg py-4 px-8 rounded-full shadow-lg hover:bg-[#0f2436] transition-all duration-300"
               >
                 <Phone className="w-5 h-5 mr-2" />
                 +84 919 100 021
               </a>
 
             </div>
-            <p className="text-pink-200 text-sm">{content.cta.subtext}</p>
+            <p className="text-[#c2d2df] text-sm">{content.cta.subtext}</p>
           </section>
         </div>
 
         {/* Contact Footer */}
-        <div className="mt-12 bg-white rounded-3xl shadow-xl p-8 border-2 border-pink-100">
+        <div className="mt-12 bg-white rounded-3xl shadow-xl p-8 border-2 border-[#dbe4ec]">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-gray-800 mb-2">
               {isVI ? "NHA KHOA QUỐC TẾ " : "EMIS "}
-              <span className="text-rose-600">EMIS DENTAL</span>
+              <span className="text-[#d4af37]">EMIS DENTAL</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-rose-500 to-fuchsia-500 rounded-full mx-auto" />
+            <div className="w-24 h-1 bg-gradient-to-r from-[#d4af37] to-[#C5AF73] rounded-full mx-auto" />
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="text-center p-5 bg-rose-50 rounded-xl">
-              <div className="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <MapPin className="w-6 h-6 text-rose-600" />
+            <div className="text-center p-5 bg-[#f7fafc] rounded-xl">
+              <div className="w-12 h-12 bg-[#eef2f6] rounded-full flex items-center justify-center mx-auto mb-3">
+                <MapPin className="w-6 h-6 text-[#16324a]" />
               </div>
               <h3 className="font-bold text-gray-800 mb-1">{isVI ? "Địa chỉ" : "Address"}</h3>
               <p className="text-gray-600 text-sm">62B Phạm Ngọc Thạch</p>
               <p className="text-gray-600 text-sm">{isVI ? "P. Xuân Hòa, TP.HCM" : "District 3, HCMC"}</p>
             </div>
 
-            <div className="text-center p-5 bg-pink-50 rounded-xl">
-              <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Phone className="w-6 h-6 text-pink-600" />
+            <div className="text-center p-5 bg-[#f7fafc] rounded-xl">
+              <div className="w-12 h-12 bg-[#eef2f6] rounded-full flex items-center justify-center mx-auto mb-3">
+                <Phone className="w-6 h-6 text-[#16324a]" />
               </div>
               <h3 className="font-bold text-gray-800 mb-1">Hotline</h3>
-              <p className="text-lg font-bold text-rose-600">0919 100 021</p>
-              <p className="text-lg font-bold text-rose-600">0768 117 068</p>
+              <p className="text-lg font-bold text-[#16324a]">0919 100 021</p>
+              <p className="text-lg font-bold text-[#16324a]">0768 117 068</p>
             </div>
 
-            <div className="text-center p-5 bg-fuchsia-50 rounded-xl">
-              <div className="w-12 h-12 bg-fuchsia-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Globe className="w-6 h-6 text-fuchsia-600" />
+            <div className="text-center p-5 bg-[#f7fafc] rounded-xl">
+              <div className="w-12 h-12 bg-[#eef2f6] rounded-full flex items-center justify-center mx-auto mb-3">
+                <Globe className="w-6 h-6 text-[#16324a]" />
               </div>
               <h3 className="font-bold text-gray-800 mb-1">Website</h3>
               <a
                 href="https://www.emisdental.com"
-                className="text-rose-600 hover:underline font-medium block"
+                className="text-[#16324a] hover:text-[#d4af37] hover:underline font-medium block"
                 target="_blank"
                 rel="noopener noreferrer"
               >

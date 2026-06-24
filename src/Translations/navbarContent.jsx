@@ -20,7 +20,8 @@ const navbarContent = {
     oralSurgery: "Oral Surgery",
     canal: "Root Canal",
     juneOffer: "June Offers",
-    whitening: "Whitening"
+    whitening: "Whitening",
+    offers: "Offers"
   },
 
   vietnamese: {
@@ -43,7 +44,8 @@ const navbarContent = {
     oralSurgery: "Tiểu Phẫu Răng Hàm Mặt",
     canal: "Điều Trị Tủy",
     juneOffer: "Ưu Đãi Tháng 6",
-    whitening: "Tẩy Trắng Răng"
+    whitening: "Tẩy Trắng Răng",
+    offers: "Ưu Đãi"
   },
 
   french: {
@@ -66,7 +68,8 @@ const navbarContent = {
     oralSurgery: "Chirurgie Orale",
     canal: "Traitement de Canal",
     juneOffer: "Offres de Juin",
-    whitening: "Blanchiment"
+    whitening: "Blanchiment",
+    offers: "Offres"
   },
 
   simplified: {
@@ -89,7 +92,8 @@ const navbarContent = {
     oralSurgery: "口腔外科",
     canal: "根管治疗",
     juneOffer: "六月优惠",
-    whitening: "牙齿美白"
+    whitening: "牙齿美白",
+    offers: "优惠"
   },
 
   traditional: {
@@ -112,7 +116,8 @@ const navbarContent = {
     oralSurgery: "口腔外科",
     canal: "根管治療",
     juneOffer: "六月優惠",
-    whitening: "牙齒美白"
+    whitening: "牙齒美白",
+    offers: "優惠"
   },
 
   korean: {
@@ -135,7 +140,8 @@ const navbarContent = {
     oralSurgery: "구강 수술",
     canal: "근관 치료",
     juneOffer: "6월 프로모션",
-    whitening: "치아미백"
+    whitening: "치아미백",
+    offers: "프로모션"
   },
 
 };

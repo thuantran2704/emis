@@ -246,14 +246,14 @@ const CrownAd = () => {
   const content = isVI ? viContent : enContent;
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-pink-50 to-white">
+    <main className="min-h-screen bg-gradient-to-b from-[#f7fafc] to-white">
       <Helmet>
         <title>{content.metaTitle}</title>
         <meta name="description" content={content.metaDescription} />
       </Helmet>
 
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-rose-600 via-pink-500 to-fuchsia-600 pt-24 pb-12 overflow-hidden">
+      <div className="relative bg-gradient-to-r from-[#16324a] via-[#1d3953] to-[#2a3439] pt-24 pb-12 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div
             className="absolute inset-0"
@@ -268,8 +268,8 @@ const CrownAd = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Text */}
             <div>
-              <div className="inline-flex items-center bg-white/20 text-white px-5 py-2 rounded-full font-bold mb-6 text-sm">
-                <Heart className="w-4 h-4 mr-2 fill-white" />
+              <div className="inline-flex items-center bg-[#C5AF73] text-[#16324a] px-5 py-2 rounded-full font-bold mb-6 text-sm">
+                <Heart className="w-4 h-4 mr-2 fill-[#16324a]" />
                 {isVI ? "ƯU ĐÃI ĐẶC BIỆT THÁNG 6" : "JUNE SPECIAL OFFER"}
               </div>
 
@@ -277,33 +277,33 @@ const CrownAd = () => {
                 {content.heroTitle}
               </h1>
 
-              <p className="text-2xl font-bold text-yellow-300 mb-6">
+              <p className="text-2xl font-bold text-[#d4af37] mb-6">
                 {content.heroSubtitle}
               </p>
 
-              <p className="text-lg text-pink-100 mb-8">{content.heroDescription}</p>
+              <p className="text-lg text-[#d6e2ed] mb-8">{content.heroDescription}</p>
 
               {/* Brand pills */}
               <div className="flex flex-wrap gap-2 mb-8">
                 {content.brands.items.map((brand, idx) => (
                   <div key={idx} className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-4 py-2 text-white text-sm">
                     <span className="font-bold">{brand.name}</span>
-                    <span className="text-pink-200 ml-1">({brand.origin})</span>
+                    <span className="text-[#c2d2df] ml-1">({brand.origin})</span>
                   </div>
                 ))}
               </div>
 
               {/* Discount badge */}
               <div className="bg-white/15 backdrop-blur-sm border border-white/30 rounded-2xl p-5 inline-block">
-                <p className="text-pink-200 text-sm mb-1">{isVI ? "Ưu đãi lên đến" : "Discount up to"}</p>
-                <p className="text-6xl font-black text-yellow-300">60%</p>
-                <p className="text-pink-100 text-sm mt-1">{isVI ? "tất cả dòng răng toàn sứ" : "all ceramic crown lines"}</p>
+                <p className="text-[#c2d2df] text-sm mb-1">{isVI ? "Ưu đãi lên đến" : "Discount up to"}</p>
+                <p className="text-6xl font-black text-[#d4af37]">60%</p>
+                <p className="text-[#d6e2ed] text-sm mt-1">{isVI ? "tất cả dòng răng toàn sứ" : "all ceramic crown lines"}</p>
               </div>
             </div>
 
             {/* Image */}
             <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-pink-400 via-transparent to-fuchsia-400 rounded-3xl opacity-40 blur-xl"></div>
+              <div className="absolute -inset-4 bg-gradient-to-r from-[#d4af37] via-transparent to-[#C5AF73] rounded-3xl opacity-40 blur-xl"></div>
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/30">
                 <img
                   src={adImage}
@@ -311,7 +311,7 @@ const CrownAd = () => {
                   className="w-full h-auto object-cover"
                 />
               </div>
-              <div className="absolute -top-3 -right-3 bg-yellow-400 text-rose-800 px-4 py-2 rounded-full font-black shadow-lg text-sm animate-bounce">
+              <div className="absolute -top-3 -right-3 bg-[#d4af37] text-[#16324a] px-4 py-2 rounded-full font-black shadow-lg text-sm animate-bounce">
                 {isVI ? "GIẢM 60%!" : "60% OFF!"}
               </div>
 
@@ -323,9 +323,9 @@ const CrownAd = () => {
                   { icon: <Sparkles className="w-5 h-5" />, val: "CAD/CAM", label: isVI ? "Công nghệ" : "Technology" },
                 ].map((stat, idx) => (
                   <div key={idx} className="bg-white/15 backdrop-blur-sm rounded-xl p-3 text-center text-white">
-                    <div className="text-yellow-300 flex justify-center mb-1">{stat.icon}</div>
+                    <div className="text-[#d4af37] flex justify-center mb-1">{stat.icon}</div>
                     <div className="font-bold text-xs">{stat.val}</div>
-                    <div className="text-pink-200 text-xs">{stat.label}</div>
+                    <div className="text-[#c2d2df] text-xs">{stat.label}</div>
                   </div>
                 ))}
               </div>
@@ -335,7 +335,7 @@ const CrownAd = () => {
           <div className="mt-10 text-center">
             <Link
               to="/contact"
-              className="inline-flex items-center bg-white text-rose-600 font-bold text-lg py-4 px-10 rounded-full shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
+              className="inline-flex items-center bg-white text-[#16324a] font-bold text-lg py-4 px-10 rounded-full shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
             >
               {isVI ? "ĐẶT LỊCH TƯ VẤN MIỄN PHÍ" : "BOOK FREE CONSULTATION"}
               <ChevronRight className="w-5 h-5 ml-2" />
@@ -345,7 +345,7 @@ const CrownAd = () => {
       </div>
 
       {/* Quick Banner */}
-      <div className="bg-gradient-to-r from-pink-500 to-fuchsia-500 py-3">
+      <div className="bg-gradient-to-r from-[#16324a] to-[#2a3439] py-3">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-3">
             <div className="flex items-center text-white">
@@ -358,7 +358,7 @@ const CrownAd = () => {
             </div>
             <Link
               to="/contact"
-              className="bg-white text-pink-700 font-bold py-2 px-6 rounded-full hover:shadow-lg transition-all hover:-translate-y-0.5 text-sm"
+              className="bg-white text-[#16324a] font-bold py-2 px-6 rounded-full hover:shadow-lg transition-all hover:-translate-y-0.5 text-sm"
             >
               {isVI ? "ĐĂNG KÝ NGAY" : "REGISTER NOW"}
             </Link>
@@ -372,34 +372,34 @@ const CrownAd = () => {
 
           {/* Suitable For + Guarantees */}
           <div className="grid md:grid-cols-2 gap-6">
-            <section className="h-full bg-white rounded-3xl shadow-xl p-8 border border-pink-100">
+            <section className="h-full bg-white rounded-3xl shadow-xl p-8 border border-[#dbe4ec]">
               <h2 className="text-xl font-bold text-gray-800 mb-6 flex items-center">
-                <div className="w-8 h-8 bg-gradient-to-br from-rose-500 to-fuchsia-500 rounded-lg flex items-center justify-center mr-3 text-white">
+                <div className="w-8 h-8 bg-gradient-to-br from-[#16324a] to-[#2a3439] rounded-lg flex items-center justify-center mr-3 text-white">
                   <Smile className="w-4 h-4" />
                 </div>
                 {content.suitableFor.title}
               </h2>
               <ul className="space-y-4">
                 {content.suitableFor.items.map((item, idx) => (
-                  <li key={idx} className="flex items-start bg-rose-50 rounded-xl p-3 border border-pink-100">
-                    <CheckCircle className="w-5 h-5 text-rose-500 mr-3 flex-shrink-0 mt-0.5" />
+                  <li key={idx} className="flex items-start bg-[#f7fafc] rounded-xl p-3 border border-[#dbe4ec]">
+                    <CheckCircle className="w-5 h-5 text-[#d4af37] mr-3 flex-shrink-0 mt-0.5" />
                     <span className="text-gray-700">{item}</span>
                   </li>
                 ))}
               </ul>
             </section>
 
-            <section className="h-full bg-white rounded-3xl shadow-xl p-8 border border-pink-100">
+            <section className="h-full bg-white rounded-3xl shadow-xl p-8 border border-[#dbe4ec]">
               <h2 className="text-xl font-bold text-gray-800 mb-6 flex items-center">
-                <div className="w-8 h-8 bg-gradient-to-br from-rose-500 to-fuchsia-500 rounded-lg flex items-center justify-center mr-3 text-white">
+                <div className="w-8 h-8 bg-gradient-to-br from-[#16324a] to-[#2a3439] rounded-lg flex items-center justify-center mr-3 text-white">
                   <Shield className="w-4 h-4" />
                 </div>
                 {content.guarantees.title}
               </h2>
               <ul className="space-y-4">
                 {content.guarantees.items.map((item, idx) => (
-                  <li key={idx} className="flex items-start bg-fuchsia-50 rounded-xl p-3 border border-fuchsia-100">
-                    <CheckCircle className="w-5 h-5 text-fuchsia-500 mr-3 flex-shrink-0 mt-0.5" />
+                  <li key={idx} className="flex items-start bg-[#eef2f6] rounded-xl p-3 border border-[#dbe4ec]">
+                    <CheckCircle className="w-5 h-5 text-[#16324a] mr-3 flex-shrink-0 mt-0.5" />
                     <span className="text-gray-700">{item}</span>
                   </li>
                 ))}
@@ -408,18 +408,18 @@ const CrownAd = () => {
           </div>
 
           {/* Brands Grid */}
-          <section className="bg-gradient-to-r from-rose-50 to-pink-50 rounded-3xl p-8 border-2 border-pink-100">
+          <section className="bg-gradient-to-r from-[#eef2f6] to-[#f7fafc] rounded-3xl p-8 border-2 border-[#dbe4ec]">
             <div className="text-center mb-8">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">{content.brands.title}</h2>
-              <div className="w-32 h-1 bg-gradient-to-r from-rose-500 to-fuchsia-500 rounded-full mx-auto"></div>
+              <div className="w-32 h-1 bg-gradient-to-r from-[#d4af37] to-[#C5AF73] rounded-full mx-auto"></div>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {content.brands.items.map((brand, idx) => (
-                <div key={idx} className="bg-white rounded-2xl p-5 text-center shadow-lg border border-pink-100 hover:border-rose-300 hover:shadow-xl transition-all">
-                  <Gem className="w-10 h-10 text-rose-500 mx-auto mb-3" />
+                <div key={idx} className="bg-white rounded-2xl p-5 text-center shadow-lg border border-[#dbe4ec] hover:border-[#C5AF73] hover:shadow-xl transition-all">
+                  <Gem className="w-10 h-10 text-[#d4af37] mx-auto mb-3" />
                   <h3 className="font-black text-gray-800 text-lg">{brand.name}</h3>
-                  <p className="text-fuchsia-600 text-sm font-semibold mb-2">{brand.origin}</p>
-                  <span className="inline-block bg-gradient-to-r from-rose-500 to-fuchsia-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                  <p className="text-[#16324a] text-sm font-semibold mb-2">{brand.origin}</p>
+                  <span className="inline-block bg-gradient-to-r from-[#16324a] to-[#2a3439] text-white text-xs font-bold px-3 py-1 rounded-full">
                     {brand.discount}
                   </span>
                 </div>
@@ -431,7 +431,7 @@ const CrownAd = () => {
           {content.sections.map((section, idx) => (
             <section key={idx} className="bg-white rounded-3xl shadow-xl p-8 md:p-10">
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-rose-500 to-fuchsia-500 rounded-xl flex items-center justify-center mr-4 text-white">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#16324a] to-[#2a3439] rounded-xl flex items-center justify-center mr-4 text-white">
                   {section.icon}
                 </div>
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-800">{section.title}</h2>
@@ -439,8 +439,8 @@ const CrownAd = () => {
               <p className="text-gray-700 text-lg mb-6">{section.content}</p>
               <div className="space-y-4">
                 {section.points.map((point, pIdx) => (
-                  <div key={pIdx} className="flex items-start bg-gradient-to-r from-rose-50 to-pink-50 rounded-xl p-5 border border-pink-100">
-                    <div className="w-8 h-8 bg-gradient-to-br from-rose-500 to-fuchsia-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0 text-white font-bold text-sm">
+                  <div key={pIdx} className="flex items-start bg-gradient-to-r from-[#eef2f6] to-[#f7fafc] rounded-xl p-5 border border-[#dbe4ec]">
+                    <div className="w-8 h-8 bg-gradient-to-br from-[#16324a] to-[#2a3439] rounded-full flex items-center justify-center mr-4 flex-shrink-0 text-white font-bold text-sm">
                       {pIdx + 1}
                     </div>
                     <p className="text-gray-700">{point}</p>
@@ -454,22 +454,22 @@ const CrownAd = () => {
           <section className="bg-white rounded-3xl shadow-xl p-8 md:p-10">
             <div className="text-center mb-10">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">{content.process.title}</h2>
-              <div className="w-32 h-1 bg-gradient-to-r from-rose-500 to-fuchsia-500 rounded-full mx-auto mb-4"></div>
+              <div className="w-32 h-1 bg-gradient-to-r from-[#d4af37] to-[#C5AF73] rounded-full mx-auto mb-4"></div>
               <p className="text-gray-600 max-w-2xl mx-auto">{content.process.description}</p>
             </div>
 
             <div className="grid md:grid-cols-5 gap-4">
               {content.process.steps.map((step, idx) => (
                 <div key={idx} className="relative text-center">
-                  <div className="bg-gradient-to-br from-rose-50 to-pink-50 border border-pink-100 rounded-2xl p-5 h-full hover:border-rose-300 transition-colors">
-                    <div className="w-12 h-12 bg-gradient-to-br from-rose-500 to-fuchsia-500 rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-3">
+                  <div className="bg-gradient-to-br from-[#eef2f6] to-[#f7fafc] border border-[#dbe4ec] rounded-2xl p-5 h-full hover:border-[#C5AF73] transition-colors">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#16324a] to-[#2a3439] rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-3">
                       {idx + 1}
                     </div>
                     <p className="text-gray-700 text-sm">{step}</p>
                   </div>
                   {idx < content.process.steps.length - 1 && (
                     <div className="hidden md:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 z-10">
-                      <ChevronRight className="w-6 h-6 text-pink-300" />
+                      <ChevronRight className="w-6 h-6 text-[#C5AF73]" />
                     </div>
                   )}
                 </div>
@@ -477,9 +477,9 @@ const CrownAd = () => {
             </div>
 
             {/* Smile Design callout */}
-            <div className="mt-8 bg-gradient-to-r from-rose-50 to-fuchsia-50 rounded-2xl p-6 border border-pink-100 flex flex-col md:flex-row items-center gap-6">
-              <div className="bg-white rounded-xl p-5 shadow-md border border-pink-100 flex-shrink-0 text-center w-40">
-                <Camera className="w-12 h-12 text-rose-500 mx-auto mb-2" />
+            <div className="mt-8 bg-gradient-to-r from-[#eef2f6] to-[#f7fafc] rounded-2xl p-6 border border-[#dbe4ec] flex flex-col md:flex-row items-center gap-6">
+              <div className="bg-white rounded-xl p-5 shadow-md border border-[#dbe4ec] flex-shrink-0 text-center w-40">
+                <Camera className="w-12 h-12 text-[#d4af37] mx-auto mb-2" />
                 <p className="font-bold text-gray-800 text-sm">3D SMILE DESIGN</p>
                 <p className="text-gray-500 text-xs">{isVI ? "Xem trước kết quả" : "Preview results"}</p>
               </div>
@@ -493,13 +493,13 @@ const CrownAd = () => {
                     : "At Emis Dental, you can preview your future smile result through 3D Smile Design software before starting treatment. No surprises, no uncertainty."}
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  <span className="bg-rose-100 text-rose-700 px-3 py-1 rounded-full text-xs font-semibold border border-rose-200">
+                  <span className="bg-[#eef2f6] text-[#16324a] px-3 py-1 rounded-full text-xs font-semibold border border-[#dbe4ec]">
                     {isVI ? "Hình ảnh 3D thực tế" : "Realistic 3D Preview"}
                   </span>
-                  <span className="bg-fuchsia-100 text-fuchsia-700 px-3 py-1 rounded-full text-xs font-semibold border border-fuchsia-200">
+                  <span className="bg-[#eef2f6] text-[#16324a] px-3 py-1 rounded-full text-xs font-semibold border border-[#dbe4ec]">
                     {isVI ? "Chỉnh sửa trực tiếp" : "Live Editing"}
                   </span>
-                  <span className="bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-xs font-semibold border border-pink-200">
+                  <span className="bg-[#eef2f6] text-[#16324a] px-3 py-1 rounded-full text-xs font-semibold border border-[#dbe4ec]">
                     {isVI ? "Phù hợp khuôn mặt" : "Face Matching"}
                   </span>
                 </div>
@@ -508,15 +508,15 @@ const CrownAd = () => {
           </section>
 
           {/* Features */}
-          <section className="bg-gradient-to-r from-rose-50 to-pink-50 rounded-3xl p-8 md:p-10 border-2 border-pink-100">
+          <section className="bg-gradient-to-r from-[#eef2f6] to-[#f7fafc] rounded-3xl p-8 md:p-10 border-2 border-[#dbe4ec]">
             <div className="text-center mb-10">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">{content.features.title}</h2>
-              <div className="w-32 h-1 bg-gradient-to-r from-rose-500 to-fuchsia-500 rounded-full mx-auto"></div>
+              <div className="w-32 h-1 bg-gradient-to-r from-[#d4af37] to-[#C5AF73] rounded-full mx-auto"></div>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {content.features.items.map((feature, idx) => (
                 <div key={idx} className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
-                  <div className="w-16 h-16 bg-gradient-to-br from-rose-100 to-pink-100 rounded-full flex items-center justify-center mx-auto mb-4 text-rose-600">
+                  <div className="w-16 h-16 bg-gradient-to-br from-[#eef2f6] to-[#f7fafc] rounded-full flex items-center justify-center mx-auto mb-4 text-[#16324a]">
                     {feature.icon}
                   </div>
                   <h3 className="font-bold text-gray-800 text-lg mb-2">{feature.title}</h3>
@@ -527,44 +527,44 @@ const CrownAd = () => {
           </section>
 
           {/* Final CTA */}
-          <section className="bg-gradient-to-r from-rose-600 via-pink-500 to-fuchsia-600 rounded-3xl p-8 md:p-10 text-center shadow-xl">
+          <section className="bg-gradient-to-r from-[#16324a] via-[#1d3953] to-[#2a3439] rounded-3xl p-8 md:p-10 text-center shadow-xl">
             <Heart className="w-16 h-16 text-white fill-white mx-auto mb-4" />
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">{content.cta.title}</h2>
-            <p className="text-pink-100 mb-8 max-w-2xl mx-auto">{content.finalMessage.content}</p>
+            <p className="text-[#d6e2ed] mb-8 max-w-2xl mx-auto">{content.finalMessage.content}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center bg-white text-rose-600 font-bold text-lg py-4 px-8 rounded-full shadow-xl hover:-translate-y-1 transition-all duration-300"
+                className="inline-flex items-center justify-center bg-white text-[#16324a] font-bold text-lg py-4 px-8 rounded-full shadow-xl hover:-translate-y-1 transition-all duration-300"
               >
                 {content.cta.button}
                 <ChevronRight className="w-5 h-5 ml-2" />
               </Link>
               <a
                 href="tel:+84919100021"
-                className="inline-flex items-center justify-center bg-rose-800 text-white font-bold text-lg py-4 px-8 rounded-full shadow-lg hover:bg-rose-900 transition-all duration-300"
+                className="inline-flex items-center justify-center bg-[#16324a] text-white font-bold text-lg py-4 px-8 rounded-full shadow-lg hover:bg-[#0f2436] transition-all duration-300"
               >
                 <Phone className="w-5 h-5 mr-2" />
                 +84 919 100 021
               </a>
             </div>
-            <p className="text-pink-200 text-sm font-semibold">{content.cta.subtext}</p>
+            <p className="text-[#c2d2df] text-sm font-semibold">{content.cta.subtext}</p>
           </section>
         </div>
 
         {/* Contact Footer */}
-        <div className="mt-12 bg-white rounded-3xl shadow-xl p-8 border-2 border-pink-100">
+        <div className="mt-12 bg-white rounded-3xl shadow-xl p-8 border-2 border-[#dbe4ec]">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-gray-800 mb-2">
               {isVI ? "NHA KHOA QUỐC TẾ " : ""}
-              <span className="text-rose-600">EMIS DENTAL</span>
+              <span className="text-[#d4af37]">EMIS DENTAL</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-rose-500 to-fuchsia-500 rounded-full mx-auto" />
+            <div className="w-24 h-1 bg-gradient-to-r from-[#d4af37] to-[#C5AF73] rounded-full mx-auto" />
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="text-center p-5 bg-rose-50 rounded-xl">
-              <div className="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <MapPin className="w-6 h-6 text-rose-600" />
+            <div className="text-center p-5 bg-[#f7fafc] rounded-xl">
+              <div className="w-12 h-12 bg-[#eef2f6] rounded-full flex items-center justify-center mx-auto mb-3">
+                <MapPin className="w-6 h-6 text-[#16324a]" />
               </div>
               <h3 className="font-bold text-gray-800 mb-1">{isVI ? "Địa chỉ" : "Address"}</h3>
               <p className="text-gray-600 text-sm">62B Phạm Ngọc Thạch</p>
@@ -573,23 +573,23 @@ const CrownAd = () => {
               </p>
             </div>
 
-            <div className="text-center p-5 bg-pink-50 rounded-xl">
-              <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Phone className="w-6 h-6 text-pink-600" />
+            <div className="text-center p-5 bg-[#f7fafc] rounded-xl">
+              <div className="w-12 h-12 bg-[#eef2f6] rounded-full flex items-center justify-center mx-auto mb-3">
+                <Phone className="w-6 h-6 text-[#16324a]" />
               </div>
               <h3 className="font-bold text-gray-800 mb-1">Hotline</h3>
-              <p className="text-lg font-bold text-rose-600">+84 919 100 021</p>
-              <p className="text-lg font-bold text-rose-600">+84 768 117 068</p>
+              <p className="text-lg font-bold text-[#16324a]">+84 919 100 021</p>
+              <p className="text-lg font-bold text-[#16324a]">+84 768 117 068</p>
             </div>
 
-            <div className="text-center p-5 bg-fuchsia-50 rounded-xl">
-              <div className="w-12 h-12 bg-fuchsia-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Globe className="w-6 h-6 text-fuchsia-600" />
+            <div className="text-center p-5 bg-[#f7fafc] rounded-xl">
+              <div className="w-12 h-12 bg-[#eef2f6] rounded-full flex items-center justify-center mx-auto mb-3">
+                <Globe className="w-6 h-6 text-[#16324a]" />
               </div>
               <h3 className="font-bold text-gray-800 mb-1">Website</h3>
               <a
                 href="https://www.emisdental.com"
-                className="text-rose-600 hover:underline font-medium block"
+                className="text-[#16324a] hover:text-[#d4af37] hover:underline font-medium block"
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -11,6 +11,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [isJuneOpen, setIsJuneOpen] = useState(false);
+  const [isOffersOpen, setIsOffersOpen] = useState(false);
   const [isLandscape, setIsLandscape] = useState(() =>
     typeof window !== 'undefined'
       ? window.matchMedia('(orientation: landscape)').matches
@@ -21,6 +22,7 @@ export default function Navbar() {
     setIsMenuOpen(false);
     setIsAboutOpen(false);
     setIsJuneOpen(false);
+    setIsOffersOpen(false);
   };
 
   useEffect(() => {
@@ -46,10 +48,17 @@ export default function Navbar() {
   const toggleAbout = () => {
     setIsAboutOpen((prev) => !prev);
     setIsJuneOpen(false);
+    setIsOffersOpen(false);
   };
   const toggleJune = () => {
     setIsJuneOpen((prev) => !prev);
     setIsAboutOpen(false);
+    setIsOffersOpen(false);
+  };
+  const toggleOffers = () => {
+    setIsOffersOpen((prev) => !prev);
+    setIsAboutOpen(false);
+    setIsJuneOpen(false);
   };
 
   const content = navbarContent[language] || navbarContent.english;
@@ -99,6 +108,13 @@ export default function Navbar() {
     { name: content.crown, path: '/crown' },
     { name: content.solutions, path: '/solutions' },
     { name: content.services, path: '/services' },
+  ];
+
+  const offersDropdownItems = [
+    { name: content.juneOffer, path: '/genAd' },
+    { name: content.whitening, path: '/whiteningAd' },
+    { name: content.crown, path: '/crownAd' },
+    { name: content.canal, path: '/canal' },
   ];
 
   return (
@@ -224,9 +240,44 @@ export default function Navbar() {
               {content.gratitude}
             </Link>
 
-            <Link to="/genAd" className={navLinkClass('/genAd')} style={navFont}>
-              {content.juneOffer}
-            </Link>
+            <div className="relative flex items-center">
+              <Link
+                to="/genAd"
+                className={navLinkClass('/genAd')}
+                style={navFont}
+              >
+                {content.offers}
+              </Link>
+              <button
+                onClick={toggleOffers}
+                className="ml-0.5 inline-flex h-10 w-8 items-center justify-center rounded-full text-[#2a3439] hover:bg-[#d4af37]/15 hover:text-[#111317]"
+                aria-label="Toggle offers menu"
+              >
+                <svg
+                  className={`h-4 w-4 transition-transform duration-200 ${isOffersOpen ? 'rotate-180' : ''}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              {isOffersOpen && (
+                <div className="absolute left-0 top-full mt-3 w-56 rounded-2xl border border-[#eadfc4] bg-white p-2 shadow-[0_14px_28px_rgba(31,41,55,0.16)]">
+                  {offersDropdownItems.map((sub) => (
+                    <Link
+                      key={sub.path}
+                      to={sub.path}
+                      className="block rounded-xl px-3 py-2 text-[#2a3439] transition hover:bg-[#f7f2e7]"
+                      style={dropdownFont}
+                    >
+                      {sub.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
 
             <Link
               to="/contact"
@@ -383,9 +434,52 @@ export default function Navbar() {
               )}
             </div>
 
-            <Link to="/genAd" className={mobileLinkClass('/genAd')} onClick={closeAllMenus} style={navFont}>
-              {content.juneOffer}
-            </Link>
+            <div>
+              <div className={mobileParentRowClass('/genAd')}>
+                <Link
+                  to="/genAd"
+                  className="flex-1"
+                  style={navFont}
+                  onClick={() => {
+                    setIsOffersOpen(false);
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  {content.offers}
+                </Link>
+
+                <button
+                  onClick={toggleOffers}
+                  className="rounded-full p-1 text-[#2a3439] hover:bg-[#efe3c5]"
+                  aria-label="Toggle offers submenu"
+                >
+                  <svg
+                    className={`h-4 w-4 transition-transform ${isOffersOpen ? 'rotate-180' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+              </div>
+
+              {isOffersOpen && (
+                <div className="mt-2 ml-2 rounded-xl bg-[#f5ecd3]/70 p-2 space-y-1">
+                  {offersDropdownItems.map((sub) => (
+                    <Link
+                      key={sub.path}
+                      to={sub.path}
+                      className="block rounded-lg px-3 py-2 text-sm text-[#2a3439] hover:bg-[#f3ead2] transition"
+                      style={navFont}
+                      onClick={closeAllMenus}
+                    >
+                      {sub.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
 
             <Link
               to="/visitor-program"

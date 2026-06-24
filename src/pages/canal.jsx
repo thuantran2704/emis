@@ -178,14 +178,14 @@ const CanalAd = () => {
   const c = isVI ? viContent : enContent;
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-sky-50 to-white">
+    <main className="min-h-screen bg-gradient-to-b from-[#f7fafc] to-white">
       <Helmet>
         <title>{c.metaTitle}</title>
         <meta name="description" content={c.metaDescription} />
       </Helmet>
 
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-cyan-700 via-teal-600 to-emerald-600 pt-24 pb-12 overflow-hidden">
+      <div className="relative bg-gradient-to-r from-[#16324a] via-[#1d3953] to-[#2a3439] pt-24 pb-12 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div
             className="absolute inset-0"
@@ -200,7 +200,7 @@ const CanalAd = () => {
           <div className={`grid ${isVI ? "lg:grid-cols-2" : "lg:grid-cols-1 max-w-3xl mx-auto"} gap-12 items-center`}>
             {/* Text */}
             <div>
-              <div className="inline-flex items-center bg-white/20 text-white px-5 py-2 rounded-full font-bold mb-6 text-sm">
+              <div className="inline-flex items-center bg-[#C5AF73] text-[#16324a] px-5 py-2 rounded-full font-bold mb-6 text-sm">
                 <Stethoscope className="w-4 h-4 mr-2" />
                 {isVI ? "ĐIỀU TRỊ TỦY RĂNG CHUYÊN SÂU" : "SPECIALIZED ROOT CANAL TREATMENT"}
               </div>
@@ -209,11 +209,11 @@ const CanalAd = () => {
                 {c.heroTitle}
               </h1>
 
-              <p className="text-2xl font-bold text-emerald-200 mb-6">
+              <p className="text-2xl font-bold text-[#d4af37] mb-6">
                 {c.heroSubtitle}
               </p>
 
-              <p className="text-lg text-cyan-100 mb-8">{c.heroDescription}</p>
+              <p className="text-lg text-[#d6e2ed] mb-8">{c.heroDescription}</p>
 
               {/* Key stats */}
               <div className="grid grid-cols-3 gap-3">
@@ -223,9 +223,9 @@ const CanalAd = () => {
                   { icon: <Crown className="w-5 h-5" />, val: isVI ? "Bọc sứ" : "Crowned", label: isVI ? "Phục hồi hoàn toàn" : "Full Restoration" },
                 ].map((stat, idx) => (
                   <div key={idx} className="bg-white/15 backdrop-blur-sm rounded-xl p-3 text-center text-white">
-                    <div className="text-emerald-300 flex justify-center mb-1">{stat.icon}</div>
+                    <div className="text-[#d4af37] flex justify-center mb-1">{stat.icon}</div>
                     <div className="font-bold text-xs">{stat.val}</div>
-                    <div className="text-cyan-200 text-xs">{stat.label}</div>
+                    <div className="text-[#c2d2df] text-xs">{stat.label}</div>
                   </div>
                 ))}
               </div>
@@ -234,7 +234,7 @@ const CanalAd = () => {
             {/* Image — VI only */}
             {isVI && (
               <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-r from-teal-400 via-transparent to-emerald-400 rounded-3xl opacity-40 blur-xl"></div>
+                <div className="absolute -inset-4 bg-gradient-to-r from-[#d4af37] via-transparent to-[#C5AF73] rounded-3xl opacity-40 blur-xl"></div>
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/30">
                   <img
                     src={viImg}
@@ -249,7 +249,7 @@ const CanalAd = () => {
           <div className="mt-10 text-center">
             <Link
               to="/contact"
-              className="inline-flex items-center bg-white text-teal-700 font-bold text-lg py-4 px-10 rounded-full shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
+              className="inline-flex items-center bg-white text-[#16324a] font-bold text-lg py-4 px-10 rounded-full shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
             >
               {isVI ? "ĐẶT LỊCH THĂM KHÁM MIỄN PHÍ" : "BOOK FREE CONSULTATION"}
               <ChevronRight className="w-5 h-5 ml-2" />
@@ -259,7 +259,7 @@ const CanalAd = () => {
       </div>
 
       {/* Quick Banner */}
-      <div className="bg-gradient-to-r from-teal-600 to-emerald-600 py-3">
+      <div className="bg-gradient-to-r from-[#16324a] to-[#2a3439] py-3">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-3">
             <div className="flex items-center text-white">
@@ -272,7 +272,7 @@ const CanalAd = () => {
             </div>
             <Link
               to="/contact"
-              className="bg-white text-teal-700 font-bold py-2 px-6 rounded-full hover:shadow-lg transition-all hover:-translate-y-0.5 text-sm"
+              className="bg-white text-[#16324a] font-bold py-2 px-6 rounded-full hover:shadow-lg transition-all hover:-translate-y-0.5 text-sm"
             >
               {isVI ? "ĐĂNG KÝ NGAY" : "REGISTER NOW"}
             </Link>
@@ -285,9 +285,9 @@ const CanalAd = () => {
         <div className="space-y-10">
 
           {/* What is Pulpitis */}
-          <section className="bg-white rounded-3xl shadow-xl p-8 md:p-10 border border-sky-100">
+          <section className="bg-white rounded-3xl shadow-xl p-8 md:p-10 border border-[#dbe4ec]">
             <div className="flex items-center mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-cyan-600 to-teal-600 rounded-xl flex items-center justify-center mr-4 text-white">
+              <div className="w-12 h-12 bg-gradient-to-br from-[#16324a] to-[#2a3439] rounded-xl flex items-center justify-center mr-4 text-white">
                 <Stethoscope className="w-6 h-6" />
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-800">{c.what.title}</h2>
@@ -303,23 +303,23 @@ const CanalAd = () => {
           <section className="bg-white rounded-3xl shadow-xl p-8 md:p-10">
             <div className="text-center mb-10">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">{c.process.title}</h2>
-              <div className="w-32 h-1 bg-gradient-to-r from-cyan-600 to-emerald-500 rounded-full mx-auto"></div>
+              <div className="w-32 h-1 bg-gradient-to-r from-[#d4af37] to-[#C5AF73] rounded-full mx-auto"></div>
             </div>
 
             <div className="grid md:grid-cols-3 gap-6">
               {c.process.steps.map((step, idx) => (
                 <div key={idx} className="relative">
-                  <div className="bg-gradient-to-br from-sky-50 to-teal-50 border border-teal-100 rounded-2xl p-6 h-full hover:border-teal-300 transition-colors">
-                    <div className="w-14 h-14 bg-gradient-to-br from-cyan-600 to-teal-600 rounded-full flex items-center justify-center text-white font-black text-xl mx-auto mb-4">
+                  <div className="bg-gradient-to-br from-[#eef2f6] to-[#f7fafc] border border-[#dbe4ec] rounded-2xl p-6 h-full hover:border-[#C5AF73] transition-colors">
+                    <div className="w-14 h-14 bg-gradient-to-br from-[#16324a] to-[#2a3439] rounded-full flex items-center justify-center text-white font-black text-xl mx-auto mb-4">
                       {step.number}
                     </div>
-                    <div className="text-teal-600 flex justify-center mb-3">{step.icon}</div>
+                    <div className="text-[#d4af37] flex justify-center mb-3">{step.icon}</div>
                     <h3 className="font-bold text-gray-800 text-lg text-center mb-3">{step.title}</h3>
                     <p className="text-gray-600 text-sm text-center">{step.description}</p>
                   </div>
                   {idx < c.process.steps.length - 1 && (
                     <div className="hidden md:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 z-10">
-                      <ChevronRight className="w-6 h-6 text-teal-300" />
+                      <ChevronRight className="w-6 h-6 text-[#C5AF73]" />
                     </div>
                   )}
                 </div>
@@ -329,9 +329,9 @@ const CanalAd = () => {
 
           {/* Crown Role + Symptoms side by side */}
           <div className="grid md:grid-cols-2 gap-6">
-            <section className="h-full bg-white rounded-3xl shadow-xl p-8 border border-sky-100">
+            <section className="h-full bg-white rounded-3xl shadow-xl p-8 border border-[#dbe4ec]">
               <h2 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
-                <div className="w-8 h-8 bg-gradient-to-br from-cyan-600 to-teal-600 rounded-lg flex items-center justify-center mr-3 text-white">
+                <div className="w-8 h-8 bg-gradient-to-br from-[#16324a] to-[#2a3439] rounded-lg flex items-center justify-center mr-3 text-white">
                   <Crown className="w-4 h-4" />
                 </div>
                 {c.crownRole.title}
@@ -339,17 +339,17 @@ const CanalAd = () => {
               <p className="text-gray-600 mb-5">{c.crownRole.content}</p>
               <ul className="space-y-3">
                 {c.crownRole.items.map((item, idx) => (
-                  <li key={idx} className="flex items-start bg-teal-50 rounded-xl p-3 border border-teal-100">
-                    <CheckCircle className="w-5 h-5 text-teal-600 mr-3 flex-shrink-0 mt-0.5" />
+                  <li key={idx} className="flex items-start bg-[#eef2f6] rounded-xl p-3 border border-[#dbe4ec]">
+                    <CheckCircle className="w-5 h-5 text-[#d4af37] mr-3 flex-shrink-0 mt-0.5" />
                     <span className="text-gray-700">{item}</span>
                   </li>
                 ))}
               </ul>
             </section>
 
-            <section className="h-full bg-white rounded-3xl shadow-xl p-8 border border-sky-100">
+            <section className="h-full bg-white rounded-3xl shadow-xl p-8 border border-[#dbe4ec]">
               <h2 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
-                <div className="w-8 h-8 bg-gradient-to-br from-cyan-600 to-teal-600 rounded-lg flex items-center justify-center mr-3 text-white">
+                <div className="w-8 h-8 bg-gradient-to-br from-[#16324a] to-[#2a3439] rounded-lg flex items-center justify-center mr-3 text-white">
                   <Clock className="w-4 h-4" />
                 </div>
                 {c.symptoms.title}
@@ -357,34 +357,34 @@ const CanalAd = () => {
               <p className="text-gray-600 mb-5">{c.symptoms.content}</p>
               <ul className="space-y-3 mb-5">
                 {c.symptoms.items.map((item, idx) => (
-                  <li key={idx} className="flex items-start bg-emerald-50 rounded-xl p-3 border border-emerald-100">
-                    <AlertCircle className="w-5 h-5 text-emerald-600 mr-3 flex-shrink-0 mt-0.5" />
+                  <li key={idx} className="flex items-start bg-[#f7fafc] rounded-xl p-3 border border-[#dbe4ec]">
+                    <AlertCircle className="w-5 h-5 text-[#16324a] mr-3 flex-shrink-0 mt-0.5" />
                     <span className="text-gray-700">{item}</span>
                   </li>
                 ))}
               </ul>
-              <div className="bg-sky-50 rounded-xl p-4 border border-sky-100">
-                <p className="text-sky-800 text-sm">{c.symptoms.note}</p>
+              <div className="bg-[#eef2f6] rounded-xl p-4 border border-[#dbe4ec]">
+                <p className="text-[#16324a] text-sm">{c.symptoms.note}</p>
               </div>
             </section>
           </div>
 
           {/* Final CTA */}
-          <section className="bg-gradient-to-r from-cyan-700 via-teal-600 to-emerald-600 rounded-3xl p-8 md:p-10 text-center shadow-xl">
+          <section className="bg-gradient-to-r from-[#16324a] via-[#1d3953] to-[#2a3439] rounded-3xl p-8 md:p-10 text-center shadow-xl">
             <Stethoscope className="w-16 h-16 text-white mx-auto mb-4" />
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">{c.cta.title}</h2>
-            <p className="text-cyan-100 mb-8 max-w-2xl mx-auto">{c.cta.subtext}</p>
+            <p className="text-[#d6e2ed] mb-8 max-w-2xl mx-auto">{c.cta.subtext}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center bg-white text-teal-700 font-bold text-lg py-4 px-8 rounded-full shadow-xl hover:-translate-y-1 transition-all duration-300"
+                className="inline-flex items-center justify-center bg-white text-[#16324a] font-bold text-lg py-4 px-8 rounded-full shadow-xl hover:-translate-y-1 transition-all duration-300"
               >
                 {c.cta.button}
                 <ChevronRight className="w-5 h-5 ml-2" />
               </Link>
               <a
                 href="tel:+84919100021"
-                className="inline-flex items-center justify-center bg-teal-800 text-white font-bold text-lg py-4 px-8 rounded-full shadow-lg hover:bg-teal-900 transition-all duration-300"
+                className="inline-flex items-center justify-center bg-[#16324a] text-white font-bold text-lg py-4 px-8 rounded-full shadow-lg hover:bg-[#0f2436] transition-all duration-300"
               >
                 <Phone className="w-5 h-5 mr-2" />
                 +84 919 100 021
@@ -394,19 +394,19 @@ const CanalAd = () => {
         </div>
 
         {/* Contact Footer */}
-        <div className="mt-12 bg-white rounded-3xl shadow-xl p-8 border-2 border-sky-100">
+        <div className="mt-12 bg-white rounded-3xl shadow-xl p-8 border-2 border-[#dbe4ec]">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-gray-800 mb-2">
               {isVI ? "NHA KHOA QUỐC TẾ " : ""}
-              <span className="text-teal-600">EMIS DENTAL</span>
+              <span className="text-[#d4af37]">EMIS DENTAL</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-cyan-600 to-emerald-500 rounded-full mx-auto" />
+            <div className="w-24 h-1 bg-gradient-to-r from-[#d4af37] to-[#C5AF73] rounded-full mx-auto" />
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="text-center p-5 bg-sky-50 rounded-xl">
-              <div className="w-12 h-12 bg-sky-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <MapPin className="w-6 h-6 text-sky-600" />
+            <div className="text-center p-5 bg-[#f7fafc] rounded-xl">
+              <div className="w-12 h-12 bg-[#eef2f6] rounded-full flex items-center justify-center mx-auto mb-3">
+                <MapPin className="w-6 h-6 text-[#16324a]" />
               </div>
               <h3 className="font-bold text-gray-800 mb-1">{isVI ? "Địa chỉ" : "Address"}</h3>
               <p className="text-gray-600 text-sm">62B Phạm Ngọc Thạch</p>
@@ -415,23 +415,23 @@ const CanalAd = () => {
               </p>
             </div>
 
-            <div className="text-center p-5 bg-teal-50 rounded-xl">
-              <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Phone className="w-6 h-6 text-teal-600" />
+            <div className="text-center p-5 bg-[#f7fafc] rounded-xl">
+              <div className="w-12 h-12 bg-[#eef2f6] rounded-full flex items-center justify-center mx-auto mb-3">
+                <Phone className="w-6 h-6 text-[#16324a]" />
               </div>
               <h3 className="font-bold text-gray-800 mb-1">Hotline</h3>
-              <p className="text-lg font-bold text-teal-600">0919 100 021</p>
-              <p className="text-lg font-bold text-teal-600">0768 117 068</p>
+              <p className="text-lg font-bold text-[#16324a]">0919 100 021</p>
+              <p className="text-lg font-bold text-[#16324a]">0768 117 068</p>
             </div>
 
-            <div className="text-center p-5 bg-emerald-50 rounded-xl">
-              <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Globe className="w-6 h-6 text-emerald-600" />
+            <div className="text-center p-5 bg-[#f7fafc] rounded-xl">
+              <div className="w-12 h-12 bg-[#eef2f6] rounded-full flex items-center justify-center mx-auto mb-3">
+                <Globe className="w-6 h-6 text-[#16324a]" />
               </div>
               <h3 className="font-bold text-gray-800 mb-1">Website</h3>
               <a
                 href="https://www.emisdental.com"
-                className="text-teal-600 hover:underline font-medium block"
+                className="text-[#16324a] hover:text-[#d4af37] hover:underline font-medium block"
                 target="_blank"
                 rel="noopener noreferrer"
               >
