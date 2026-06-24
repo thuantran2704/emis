@@ -21,7 +21,7 @@ import ctaBackground from '../pics/doctor-explaining-procedure-to-patient.jpg';
 import ContactForm from '../components/ContactForm';
 import ImplantPlannerBanner from '../components/implants_banner';
 import ServiceCard from '../components/ServiceCard';
-import serviceGeneral from '../pics/patient2.jpg';
+import serviceGeneral from '../pics/teeth-whitening.jpg';
 import serviceImplant from '../pics/implant-illustration.jpg';
 import serviceCrown from '../pics/crown.jpg';
 import serviceInvisalign from '../pics/invisalign.jpg';
