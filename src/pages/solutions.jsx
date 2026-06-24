@@ -164,7 +164,7 @@ const Solutions = () => {
                 <img
                   src={pathwaysImage}
                   alt="Patient with denture treatment context for fixed and full-mouth pathways"
-                  className="w-full h-[320px] md:h-[420px] lg:h-[620px] object-cover object-center lg:object-left"
+                  className="w-full h-[320px] md:h-[420px] lg:h-[620px] object-cover object-center lg:object-left lg:scale-110 lg:origin-left"
                   loading="lazy"
                 />
               </div>
