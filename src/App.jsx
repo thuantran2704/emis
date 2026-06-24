@@ -48,12 +48,15 @@ function AppShell() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const browserLanguage = navigator.language || navigator.languages?.[0] || '';
-    const normalizedBrowserLanguage = browserLanguage.toLowerCase();
+    const browserLanguages = navigator.languages?.length
+      ? navigator.languages
+      : [navigator.language || ''];
+    const primaryLanguage = browserLanguages.find((lang) =>
+      lang.toLowerCase().startsWith('vi') || lang.toLowerCase().startsWith('en')
+    );
+    const prefersVietnamese = primaryLanguage?.toLowerCase().startsWith('vi');
 
-    if (normalizedBrowserLanguage.startsWith('vi')) {
-      dispatch(setLanguage('vietnamese'));
-    }
+    dispatch(setLanguage(prefersVietnamese ? 'vietnamese' : 'english'));
   }, [dispatch]);
 
   useEffect(() => {
@@ -95,12 +98,12 @@ function AppShell() {
           <Route path="/veneer" element={<VeneerLanding />} />
           <Route path="/implant" element={<Implant />}/>
           <Route path="/crown" element={<CrownLanding/>}/>
-          <Route path="dr-son" element={<SonPage />}/>
+          <Route path="/dr-son" element={<SonPage />}/>
           <Route path="/dr-tu" element={<DrTuPage />} />
           <Route path="/visitor-program" element={<DentalVisitorProgram />} />
           <Route path="/whiteningAd" element={<WhiteningAd/>}/>
           <Route path="/crownAd" element={<CrownAd/>}/>
-          <Route path="genAd" element={<GenAd/>}/>
+          <Route path="/genAd" element={<GenAd/>}/>
           <Route path="/doctors" element={<Doctors />} />
           <Route path="/canal" element={<CanalAd />} />
           <Route path="/mail" element={<ExternalRedirect to={zohoMailUrl} />} />

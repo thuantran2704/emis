@@ -28,7 +28,7 @@ export default function DentalVisitorProgram() {
   ];
 
   return (
-    <main className="bg-[#f7f2e7] pt-20">
+    <main className="bg-[#fdfcf8] pt-20">
       <Helmet>
         <title>Dental Visitor Support Program | Emis Dental</title>
         <meta
@@ -237,7 +237,7 @@ export default function DentalVisitorProgram() {
         </div>
       </section>
 
-      <section className="py-20 bg-[#f7f2e7]">
+      <section className="py-20 bg-[#fdfcf8]">
         <div className="max-w-4xl mx-auto px-8">
           <div className="rounded-2xl border border-[#eadfc9] bg-white p-8 shadow-sm">
             <p
