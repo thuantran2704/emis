@@ -131,7 +131,7 @@ export default function Navbar() {
       <nav className="fixed top-0 z-50 w-full border-b-2 border-[#d4af37]/60 bg-white/90 backdrop-blur-md shadow-[0_10px_30px_rgba(31,41,55,0.10)]">
         <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-4 sm:px-6">
           <Link to="/" className="group flex items-center gap-3">
-            <div className="h-12 w-12 overflow-hidden rounded-full border-2 border-[#d4af37]/60 shadow-sm transition-transform duration-200 group-hover:scale-[1.02]">
+            <div className="h-12 w-12 overflow-hidden rounded-full border-2 border-[#d4af37]/60 transition-transform duration-200 group-hover:scale-[1.02]">
               <img src={logo} alt="Nha Khoa Emis" className="h-full w-full object-cover" />
             </div>
             <span
