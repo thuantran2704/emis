@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import homeContent from '../Translations/homeContent';
 import heroBackground from '../pics/Better_emis_hall.jpeg';
 import confidencePortrait from '../pics/foreign-patient-1-with-dr-tu-smiling.jpg';
-import implantIntroImage from '../pics/doctor-smiling-with-patient.jpg';
+import implantIntroImage from '../pics/all-on-4-implant.jpg';
 import cbctReview from '../pics/dr-x-ray-consultation.jpg';
 import onlineConsultation from '../pics/consulting-team.jpg';
 import drTuPortrait from '../pics/dr-tu-potrait.jpg';
@@ -214,10 +214,18 @@ export default function Home() {
                 </li>
               ))}
             </ul>
+
+            <Link
+              to="/implant"
+              className="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.2em] text-[#C5AF73] transition-colors hover:text-[#a8924f]"
+            >
+              {implantIntro.cta || 'See more'}
+              <span aria-hidden="true">&rarr;</span>
+            </Link>
           </div>
 
-          <div className="relative hidden min-h-[320px] overflow-hidden rounded-3xl shadow-sm lg:block">
-            <img src={implantIntroImage} alt={implantIntro.title} className="absolute inset-0 h-full w-full object-cover object-bottom" />
+          <div className="relative hidden min-h-[320px] overflow-hidden rounded-3xl bg-white shadow-sm lg:block">
+            <img src={implantIntroImage} alt={implantIntro.title} className="absolute inset-0 h-full w-full object-contain object-center p-6" />
           </div>
         </div>
       </section>
