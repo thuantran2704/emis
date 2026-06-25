@@ -10,6 +10,7 @@ export default function Navbar() {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
+  const [isPatientsOpen, setIsPatientsOpen] = useState(false);
   const [isJuneOpen, setIsJuneOpen] = useState(false);
   const [isOffersOpen, setIsOffersOpen] = useState(false);
   const [isLandscape, setIsLandscape] = useState(() =>
@@ -21,6 +22,7 @@ export default function Navbar() {
   const closeAllMenus = () => {
     setIsMenuOpen(false);
     setIsAboutOpen(false);
+    setIsPatientsOpen(false);
     setIsJuneOpen(false);
     setIsOffersOpen(false);
   };
@@ -47,17 +49,26 @@ export default function Navbar() {
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
   const toggleAbout = () => {
     setIsAboutOpen((prev) => !prev);
+    setIsPatientsOpen(false);
+    setIsJuneOpen(false);
+    setIsOffersOpen(false);
+  };
+  const togglePatients = () => {
+    setIsPatientsOpen((prev) => !prev);
+    setIsAboutOpen(false);
     setIsJuneOpen(false);
     setIsOffersOpen(false);
   };
   const toggleJune = () => {
     setIsJuneOpen((prev) => !prev);
     setIsAboutOpen(false);
+    setIsPatientsOpen(false);
     setIsOffersOpen(false);
   };
   const toggleOffers = () => {
     setIsOffersOpen((prev) => !prev);
     setIsAboutOpen(false);
+    setIsPatientsOpen(false);
     setIsJuneOpen(false);
   };
 
@@ -101,6 +112,12 @@ export default function Navbar() {
     { name: content.equipment, path: '/equipment' },
   ];
 
+  const patientsDropdownItems = [
+    { name: content.internationalPatients, path: '/international-patients' },
+    { name: content.gratitude, path: '/visitor-program' },
+    { name: content.faq, path: '/faq' },
+  ];
+
   const treatmentDropdownItems = [
     { name: content.veneer, path: '/veneer' },
     { name: content.implant, path: '/implant' },
@@ -108,6 +125,7 @@ export default function Navbar() {
     // { name: content.fullMouth, path: '/full-mouth' }, // temporarily hidden
     { name: content.oralSurgery, path: '/oral-surgery' },
     { name: content.crown, path: '/crown' },
+    { name: content.smileAesthetics, path: '/smile-aesthetics' },
     { name: content.solutions, path: '/solutions' },
     { name: content.services, path: '/services' },
   ];
@@ -147,7 +165,7 @@ export default function Navbar() {
             </span>
           </Link>
 
-          <div className={`${isLandscape ? 'hidden xl:flex' : 'hidden'} flex-nowrap items-center gap-2`}>
+          <div className={`${isLandscape ? 'hidden xl:flex' : 'hidden'} flex-nowrap items-center gap-1 xl:gap-2`}>
             <Link to="/" className={navLinkClass('/')} style={navFont}>
               {content.home}
             </Link>
@@ -191,17 +209,44 @@ export default function Navbar() {
               )}
             </div>
 
-            <Link to="/international-patients" className={navLinkClass('/international-patients')} style={navFont}>
-              {content.internationalPatients}
-            </Link>
+            <div className="relative flex items-center">
+              <Link
+                to="/international-patients"
+                className={navLinkClass('/international-patients')}
+                style={navFont}
+              >
+                {content.patients}
+              </Link>
+              <button
+                onClick={togglePatients}
+                className="ml-0.5 inline-flex h-10 w-8 items-center justify-center rounded-full text-[#2a3439] hover:bg-[#d4af37]/15 hover:text-[#111317]"
+                aria-label="Toggle patients menu"
+              >
+                <svg
+                  className={`h-4 w-4 transition-transform duration-200 ${isPatientsOpen ? 'rotate-180' : ''}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
 
-            <Link to="/smile-aesthetics" className={navLinkClass('/smile-aesthetics')} style={navFont}>
-              {content.smileAesthetics}
-            </Link>
-
-            <Link to="/faq" className={navLinkClass('/faq')} style={navFont}>
-              {content.faq}
-            </Link>
+              {isPatientsOpen && (
+                <div className="absolute left-0 top-full mt-3 w-60 rounded-2xl border border-[#eadfc4] bg-white p-2 shadow-[0_14px_28px_rgba(31,41,55,0.16)]">
+                  {patientsDropdownItems.map((sub) => (
+                    <Link
+                      key={sub.path}
+                      to={sub.path}
+                      className="block rounded-xl px-3 py-2 text-[#2a3439] transition hover:bg-[#f7f2e7]"
+                      style={dropdownFont}
+                    >
+                      {sub.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
 
             <div className="relative flex items-center">
               <Link
@@ -241,10 +286,6 @@ export default function Navbar() {
                 </div>
               )}
             </div>
-
-            <Link to="/visitor-program" className={navLinkClass('/visitor-program')} style={navFont}>
-              {content.gratitude}
-            </Link>
 
             <div className="relative flex items-center">
               <Link
@@ -375,32 +416,52 @@ export default function Navbar() {
               )}
             </div>
 
-            <Link
-              to="/international-patients"
-              className={mobileLinkClass('/international-patients')}
-              onClick={closeAllMenus}
-              style={navFont}
-            >
-              {content.internationalPatients}
-            </Link>
+            <div>
+              <div className={mobileParentRowClass('/international-patients')}>
+                <Link
+                  to="/international-patients"
+                  className="flex-1"
+                  style={navFont}
+                  onClick={() => {
+                    setIsPatientsOpen(false);
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  {content.patients}
+                </Link>
 
-            <Link
-              to="/smile-aesthetics"
-              className={mobileLinkClass('/smile-aesthetics')}
-              onClick={closeAllMenus}
-              style={navFont}
-            >
-              {content.smileAesthetics}
-            </Link>
+                <button
+                  onClick={togglePatients}
+                  className="rounded-full p-1 text-[#2a3439] hover:bg-[#efe3c5]"
+                  aria-label="Toggle patients submenu"
+                >
+                  <svg
+                    className={`h-4 w-4 transition-transform ${isPatientsOpen ? 'rotate-180' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+              </div>
 
-            <Link
-              to="/faq"
-              className={mobileLinkClass('/faq')}
-              onClick={closeAllMenus}
-              style={navFont}
-            >
-              {content.faq}
-            </Link>
+              {isPatientsOpen && (
+                <div className="mt-2 ml-2 rounded-xl bg-[#f5ecd3]/70 p-2 space-y-1">
+                  {patientsDropdownItems.map((sub) => (
+                    <Link
+                      key={sub.path}
+                      to={sub.path}
+                      className="block rounded-lg px-3 py-2 text-sm text-[#2a3439] hover:bg-[#f3ead2] transition"
+                      style={navFont}
+                      onClick={closeAllMenus}
+                    >
+                      {sub.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
 
             <div>
               <div className={mobileParentRowClass('/services')}>
@@ -495,15 +556,6 @@ export default function Navbar() {
                 </div>
               )}
             </div>
-
-            <Link
-              to="/visitor-program"
-              className={mobileLinkClass('/visitor-program')}
-              onClick={closeAllMenus}
-              style={navFont}
-            >
-              {content.gratitude}
-            </Link>
 
             <Link
               to="/contact"

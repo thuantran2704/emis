@@ -12,6 +12,10 @@ const footerContent = {
     workingHoursTitle: "Working Hours",
     workingHours: "Mon – Sat: 8:00 AM – 7:00 PM\nSun: 8:00 AM - 5:00 PM",
     rights: "All rights reserved.",
+    privacy: "Privacy Policy",
+    media: "Media Consent Policy",
+    disclaimer: "Medical Disclaimer",
+    warranty: "Warranty & Support",
   },
 
   vietnamese: {
@@ -28,6 +32,10 @@ const footerContent = {
     workingHoursTitle: "Giờ làm việc",
     workingHours: "Thứ 2 – Thứ 7: 8:00 – 19:00\nChủ nhật: 8:00 – 17:00",
     rights: "Đã đăng ký bản quyền.",
+    privacy: "Chính Sách Bảo Mật",
+    media: "Chính Sách Đồng Ý Sử Dụng Hình Ảnh",
+    disclaimer: "Miễn Trừ Trách Nhiệm Y Khoa",
+    warranty: "Bảo Hành & Hỗ Trợ",
   },
 
   simplified: {

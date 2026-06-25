@@ -1,4 +1,5 @@
 import { FacebookIcon, Phone, Mail, MapPin, Clock3, ExternalLink } from "lucide-react";
+import { Link } from 'react-router-dom';
 import zaloIcon from "../pics/zalo.jpg";
 import youtubeLogo from "../pics/youtube-logo.png";
 import footerContent from "../Translations/footerContent";
@@ -153,6 +154,20 @@ export default function Footer() {
         <p>Copyright © EMIS Dental</p>
         <p>All Rights Reserved</p>
         <p className="mt-1">© {new Date().getFullYear()} {content.clinicName}. {content.rights}</p>
+        <p className="mt-1 flex flex-wrap items-center justify-center gap-x-4 gap-y-1">
+          <Link to="/privacy" className="underline-offset-2 hover:underline hover:text-[#1f2937] transition">
+            {content.privacy || 'Privacy Policy'}
+          </Link>
+          <Link to="/media-consent" className="underline-offset-2 hover:underline hover:text-[#1f2937] transition">
+            {content.media || 'Media Consent Policy'}
+          </Link>
+          <Link to="/medical-disclaimer" className="underline-offset-2 hover:underline hover:text-[#1f2937] transition">
+            {content.disclaimer || 'Medical Disclaimer'}
+          </Link>
+          <Link to="/warranty" className="underline-offset-2 hover:underline hover:text-[#1f2937] transition">
+            {content.warranty || 'Warranty & Support'}
+          </Link>
+        </p>
       </section>
     </footer>
   );

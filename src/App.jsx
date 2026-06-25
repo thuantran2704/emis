@@ -31,6 +31,10 @@ import FixedTeeth from './pages/fixedTeeth.jsx';
 import SmileAesthetics from './pages/SmileAesthetics.jsx';
 import FullMouth from './pages/fullMouth.jsx';
 import Faq from './pages/Faq.jsx';
+import Privacy from './pages/Privacy.jsx';
+import MediaConsent from './pages/MediaConsent.jsx';
+import MedicalDisclaimer from './pages/MedicalDisclaimer.jsx';
+import Warranty from './pages/Warranty.jsx';
 
 function ExternalRedirect({ to }) {
   useEffect(() => {
@@ -98,6 +102,10 @@ function AppShell() {
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/full-mouth" element={<FullMouth />} />
           <Route path="/faq" element={<Faq />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/media-consent" element={<MediaConsent />} />
+          <Route path="/medical-disclaimer" element={<MedicalDisclaimer />} />
+          <Route path="/warranty" element={<Warranty />} />
           <Route path="/fixed-teeth" element={<FixedTeeth />} />
           <Route path="/oral-surgery" element={<OralSurgery />} />
           <Route path="/equipment" element={<Equipment  />} />
