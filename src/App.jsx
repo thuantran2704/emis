@@ -13,6 +13,7 @@ import { schemaMarkup } from './components/seoMarkup';
 import Footer from './components/Footer.jsx';
 import Equipment from './pages/Equipment';
 import FloatingContactButton from './components/floatingContactButton.jsx';
+import GuidedChat from './components/GuidedChat.jsx';
 import VeneerLanding from './pages/landingPage1.jsx';
 import SonPage from './pages/drSonPage.jsx';
 import CrownLanding from './pages/bocRang.jsx';
@@ -127,6 +128,7 @@ function AppShell() {
         </Routes>
         {!isRedirectRoute && <Footer language={language} />}
         {!isRedirectRoute && <FloatingContactButton />}
+        {!isRedirectRoute && <GuidedChat />}
       </div>
     </>
   );
