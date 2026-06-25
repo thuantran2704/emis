@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { useSelector } from 'react-redux';
 import homeContent from '../Translations/homeContent';
-import heroBackground from '../pics/better_emis_hall.jpg';
+import heroBackground from '../pics/reception.jpg';
 import confidencePortrait from '../pics/foreign-patient-1-with-dr-tu-smiling.jpg';
 import implantIntroImage from '../pics/doctor-smiling-with-patient.jpg';
 import cbctReview from '../pics/dr-x-ray-consultation.jpg';
