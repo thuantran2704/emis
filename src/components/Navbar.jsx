@@ -105,6 +105,7 @@ export default function Navbar() {
     { name: content.veneer, path: '/veneer' },
     { name: content.implant, path: '/implant' },
     // { name: content.fixedTeeth, path: '/fixed-teeth' }, // temporarily hidden
+    // { name: content.fullMouth, path: '/full-mouth' }, // temporarily hidden
     { name: content.oralSurgery, path: '/oral-surgery' },
     { name: content.crown, path: '/crown' },
     { name: content.solutions, path: '/solutions' },

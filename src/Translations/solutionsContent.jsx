@@ -79,7 +79,7 @@ export const solutionsContent = {
           title: 'Full-Mouth Rehabilitation',
           text: 'For patients with extensive tooth loss, severe wear, bite problems, or complex restorative needs.',
           cta: 'Explore Full-Mouth Rehabilitation',
-          path: '/services',
+          path: '/full-mouth',
         },
         {
           title: 'Oral Surgery',
@@ -267,7 +267,7 @@ export const solutionsContent = {
           title: 'Phục Hồi Toàn Hàm',
           text: 'Dành cho trường hợp mất nhiều răng, răng mòn nặng, sai khớp cắn hoặc cần phục hồi ăn nhai toàn diện.',
           cta: 'Tìm Hiểu Phục Hồi Toàn Hàm',
-          path: '/services',
+          path: '/full-mouth',
         },
         {
           title: 'Tiểu Phẫu Răng Hàm Mặt',

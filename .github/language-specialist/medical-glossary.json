@@ -55,6 +55,8 @@
     {"id": "periodontics", "domain": "periodontics", "english": "Periodontics", "vietnamese": "Nha chu", "french": "Parodontologie", "korean": "치주과", "simplified": "牙周学", "traditional": "牙周學"},
     {"id": "gingivitis", "domain": "periodontics", "english": "Gingivitis", "vietnamese": "Viêm nướu", "french": "Gingivite", "korean": "치은염", "simplified": "牙龈炎", "traditional": "牙齦炎"},
     {"id": "periodontitis", "domain": "periodontics", "english": "Periodontitis", "vietnamese": "Viêm nha chu", "french": "Parodontite", "korean": "치주염", "simplified": "牙周炎", "traditional": "牙周炎"},
+    {"id": "gum", "domain": "periodontics", "english": "Gum", "vietnamese": "Nướu", "french": "Gencive", "korean": "잇몸", "simplified": "牙龈", "traditional": "牙齦"},
+    {"id": "bite", "domain": "restorative", "english": "Bite", "vietnamese": "Khớp cắn", "french": "Occlusion", "korean": "교합", "simplified": "咬合", "traditional": "咬合"},
     {"id": "cavity", "domain": "caries", "english": "Cavity", "vietnamese": "Sâu răng", "french": "Caries", "korean": "충치", "simplified": "蛀牙", "traditional": "蛀牙"},
     {"id": "plaque", "domain": "hygiene", "english": "Plaque", "vietnamese": "Mảng bám", "french": "Plaque dentaire", "korean": "치태", "simplified": "牙菌斑", "traditional": "牙菌斑"},
     {"id": "tartar", "domain": "hygiene", "english": "Tartar", "vietnamese": "Cao răng", "french": "Tartre", "korean": "치석", "simplified": "牙结石", "traditional": "牙結石"},
