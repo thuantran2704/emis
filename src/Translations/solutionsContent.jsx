@@ -73,7 +73,7 @@ export const solutionsContent = {
           title: 'Fixed Teeth Solutions',
           text: 'Including All-on-4 and All-on-6 for patients seeking a stable alternative to removable dentures.',
           cta: 'Explore Fixed Teeth Solutions',
-          path: '/implant',
+          path: '/fixed-teeth',
         },
         {
           title: 'Full-Mouth Rehabilitation',
@@ -261,7 +261,7 @@ export const solutionsContent = {
           title: 'Răng Cố Định Toàn Hàm',
           text: 'Bao gồm All-on-4 và All-on-6, dành cho bệnh nhân muốn có giải pháp cố định hơn hàm giả tháo lắp.',
           cta: 'Tìm Hiểu Răng Cố Định Toàn Hàm',
-          path: '/implant',
+          path: '/fixed-teeth',
         },
         {
           title: 'Phục Hồi Toàn Hàm',
@@ -449,7 +449,7 @@ export const solutionsContent = {
           title: 'Solutions De Dents Fixes',
           text: 'Incluant All-on-4 et All-on-6 pour les patients souhaitant une alternative stable aux protheses amovibles.',
           cta: 'Explorer Les Solutions De Dents Fixes',
-          path: '/implant',
+          path: '/fixed-teeth',
         },
         {
           title: 'Rehabilitation Complete',
@@ -631,7 +631,7 @@ export const solutionsContent = {
           title: '고정성 치아 솔루션',
           text: 'All-on-4, All-on-6를 포함하며 틀니의 안정적인 대안을 원하는 경우에 적합합니다.',
           cta: '고정성 치아 솔루션 보기',
-          path: '/implant',
+          path: '/fixed-teeth',
         },
         {
           title: '전악 재건',
@@ -813,7 +813,7 @@ export const solutionsContent = {
           title: '固定牙方案',
           text: '包括 All-on-4 与 All-on-6，适合希望替代活动义齿并获得稳定效果的患者。',
           cta: '了解固定牙方案',
-          path: '/implant',
+          path: '/fixed-teeth',
         },
         {
           title: '全口重建',
@@ -995,7 +995,7 @@ export const solutionsContent = {
           title: '固定牙方案',
           text: '包含 All-on-4 與 All-on-6，適合希望取代活動假牙並獲得穩定效果的患者。',
           cta: '了解固定牙方案',
-          path: '/implant',
+          path: '/fixed-teeth',
         },
         {
           title: '全口重建',

@@ -104,6 +104,7 @@ export default function Navbar() {
   const treatmentDropdownItems = [
     { name: content.veneer, path: '/veneer' },
     { name: content.implant, path: '/implant' },
+    // { name: content.fixedTeeth, path: '/fixed-teeth' }, // temporarily hidden
     { name: content.oralSurgery, path: '/oral-surgery' },
     { name: content.crown, path: '/crown' },
     { name: content.solutions, path: '/solutions' },

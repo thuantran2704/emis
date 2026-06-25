@@ -27,6 +27,7 @@ import DrTuPage from './pages/drTuPage.jsx';
 import InternationalPatients from './pages/InternationalPatients.jsx';
 import OralSurgery from './pages/OralSurgery.jsx';
 import Solutions from './pages/solutions.jsx';
+import FixedTeeth from './pages/fixedTeeth.jsx';
 import SmileAesthetics from './pages/SmileAesthetics.jsx';
 
 function ExternalRedirect({ to }) {
@@ -93,6 +94,7 @@ function AppShell() {
           <Route path="/smile-aesthetics" element={<SmileAesthetics />} />
           <Route path="/services" element={<Services  />} />
           <Route path="/solutions" element={<Solutions />} />
+          <Route path="/fixed-teeth" element={<FixedTeeth />} />
           <Route path="/oral-surgery" element={<OralSurgery />} />
           <Route path="/equipment" element={<Equipment  />} />
           <Route path="/veneer" element={<VeneerLanding />} />
