@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { useSelector } from 'react-redux';
 import homeContent from '../Translations/homeContent';
-import heroBackground from '../pics/reception.jpg';
+import heroBackground from '../pics/Better_emis_hall.jpeg';
 import confidencePortrait from '../pics/foreign-patient-1-with-dr-tu-smiling.jpg';
 import implantIntroImage from '../pics/doctor-smiling-with-patient.jpg';
 import cbctReview from '../pics/dr-x-ray-consultation.jpg';
@@ -83,7 +83,7 @@ export default function Home() {
         <img
           src={heroBackground}
           alt="EMIS Dental reception hall"
-          className="absolute inset-0 h-full w-full scale-105 object-cover object-center"
+          className="absolute inset-0 h-full w-full object-cover object-center lg:scale-110"
           style={{ objectPosition: 'center 62%' }}
         />
         <div

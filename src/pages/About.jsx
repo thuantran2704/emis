@@ -5,7 +5,7 @@ import consultationImage from '../pics/doctor-explaining-procedure-to-patient.jp
 import planningImage from '../pics/doctor-reviewing-x-ray-with-patient-explaining-treatment.jpg';
 import technologyImage from '../pics/x-ray-cbct-panoramic-machine.jpg';
 import teamImage from '../pics/healthcare-team.jpg';
-import internationalImage from '../pics/better_emis_hall.jpg';
+import internationalImage from '../pics/Better_emis_hall.jpeg';
 import safetyImage from '../pics/sterile-room-phong-khu-trung.jpg';
 import { useSelector } from 'react-redux';
 import { Helmet } from 'react-helmet';
@@ -254,11 +254,11 @@ const About = () => {
               ))}
             </div>
           </div>
-          <div className="rounded-2xl overflow-hidden shadow-sm h-[420px]">
+          <div className="rounded-2xl overflow-hidden shadow-sm h-[220px] md:h-[420px]">
             <img
               src={internationalImage}
               alt="EMIS clinic waiting room"
-              className="w-full h-full object-cover object-center"
+              className="block w-full h-full object-cover object-center"
             />
           </div>
         </div>
