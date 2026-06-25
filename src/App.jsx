@@ -30,6 +30,7 @@ import Solutions from './pages/solutions.jsx';
 import FixedTeeth from './pages/fixedTeeth.jsx';
 import SmileAesthetics from './pages/SmileAesthetics.jsx';
 import FullMouth from './pages/fullMouth.jsx';
+import Faq from './pages/Faq.jsx';
 
 function ExternalRedirect({ to }) {
   useEffect(() => {
@@ -96,6 +97,7 @@ function AppShell() {
           <Route path="/services" element={<Services  />} />
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/full-mouth" element={<FullMouth />} />
+          <Route path="/faq" element={<Faq />} />
           <Route path="/fixed-teeth" element={<FixedTeeth />} />
           <Route path="/oral-surgery" element={<OralSurgery />} />
           <Route path="/equipment" element={<Equipment  />} />

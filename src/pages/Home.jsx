@@ -433,7 +433,7 @@ export default function Home() {
               </details>
             ))}
           </div>
-          <Link to="/contact" className="mt-8 inline-block rounded-full border border-[#9ab1c5] bg-white px-6 py-3 text-sm font-semibold text-[#1f3b57] transition hover:bg-[#f2f7fb]">
+          <Link to="/faq" className="mt-8 inline-block rounded-full border border-[#9ab1c5] bg-white px-6 py-3 text-sm font-semibold text-[#1f3b57] transition hover:bg-[#f2f7fb]">
             {page.faq.cta}
           </Link>
         </div>
