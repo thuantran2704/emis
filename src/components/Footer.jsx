@@ -13,6 +13,8 @@ import footerContent from '../Translations/footerContent';
 // and "Terms of Use".
 
 const mapOpenUrl = 'https://maps.app.goo.gl/8T1cPtEKUBe6wLFz9';
+const mapEmbedUrl =
+  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.327228104639!2d106.6896131335823!3d10.786230289363182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752fa7462efccb%3A0xb79ba7e69cbb02b3!2sEmis%20Dental!5e0!3m2!1svi!2sus!4v1752074692262!5m2!1svi!2sus';
 const whatsappUrl = 'https://wa.me/84909967649';
 const facebookUrl = 'https://www.facebook.com/emisinternationaldental/';
 const youtubeUrl = 'https://www.youtube.com/@NhaKhoaEmis';
@@ -198,6 +200,19 @@ export default function Footer() {
             </div>
           ))}
         </nav>
+
+        {/* Map */}
+        <div className="mt-12 overflow-hidden rounded-2xl border border-white/10">
+          <iframe
+            src={mapEmbedUrl}
+            className="h-64 w-full grayscale-[0.2]"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title={content.clinicName}
+          ></iframe>
+        </div>
 
         {/* Brand statement */}
         <p
