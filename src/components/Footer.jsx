@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import logo from '../pics/logo.jpg';
 import footerContent from '../Translations/footerContent';
+import { primaryContactItems, socialContactItems } from '../data/contactChannels';
 
 // NOTE: The following footer links have no dedicated route yet and are mapped
 // to the closest existing page (update once real pages/routes exist):
@@ -163,16 +164,42 @@ function FooterLink({ link }) {
   );
 }
 
+// Reuses the same channel data/style as the /contact page.
+function ContactBubbles({ items }) {
+  return (
+    <div className="flex flex-wrap gap-3">
+      {items.map((item) => {
+        const isExternal = item.href.startsWith('http');
+        return (
+          <a
+            key={item.label}
+            href={item.href}
+            target={isExternal ? '_blank' : undefined}
+            rel={isExternal ? 'noopener noreferrer' : undefined}
+            aria-label={item.label}
+            title={item.label}
+            className="flex h-12 w-12 items-center justify-center rounded-full border border-[#efe4ca] bg-white shadow transition hover:-translate-y-0.5 hover:shadow-md"
+          >
+            <img src={item.icon} alt={item.alt} className="h-6 w-6 object-contain" />
+          </a>
+        );
+      })}
+    </div>
+  );
+}
+
 export default function Footer() {
   const language = useSelector((state) => state.language.language);
   const content = footerContent[language] || footerContent.english;
   const nav = footerNav[language] || footerNav.english;
+  const contactColumn = nav.columns[nav.columns.length - 2];
+  const followColumn = nav.columns[nav.columns.length - 1];
 
   return (
     <footer className="bg-[#111317] text-white border-t border-white/10">
       <div className="max-w-6xl mx-auto px-6 py-12">
         {/* Logo */}
-        <div className="mb-10">
+        <div className="mb-10 hidden lg:block">
           <img
             src={logo}
             alt={content.clinicName}
@@ -180,9 +207,9 @@ export default function Footer() {
           />
         </div>
 
-        {/* Navigation: 6 columns */}
+        {/* Navigation: 6 columns (hidden on mobile) */}
         <nav
-          className="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-3 lg:grid-cols-6"
+          className="hidden gap-x-8 gap-y-10 sm:grid sm:grid-cols-3 lg:grid-cols-6"
           aria-label="Footer"
         >
           {nav.columns.map((column) => (
@@ -201,6 +228,34 @@ export default function Footer() {
           ))}
         </nav>
 
+        {/* Mobile: Contact + Follow Us bubbles (reused from /contact), hours */}
+        <div className="space-y-8 sm:hidden">
+          <div>
+            <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-white">
+              {contactColumn.heading}
+            </h3>
+            <ContactBubbles items={primaryContactItems} />
+          </div>
+
+          <div>
+            <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-white">
+              {followColumn.heading}
+            </h3>
+            <ContactBubbles items={socialContactItems} />
+          </div>
+
+          <div>
+            <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-white">
+              {content.workingHoursTitle}
+            </h3>
+            <div className="space-y-1 text-sm text-gray-400">
+              {content.workingHours.split('\n').map((line) => (
+                <p key={line}>{line}</p>
+              ))}
+            </div>
+          </div>
+        </div>
+
         {/* Map */}
         <div className="mt-12 overflow-hidden rounded-2xl border border-white/10">
           <iframe
@@ -216,7 +271,7 @@ export default function Footer() {
 
         {/* Brand statement */}
         <p
-          className="mt-12 text-xl font-medium text-[#d4af37]"
+          className="mt-12 hidden text-xl font-medium text-[#d4af37] lg:block"
         >
           {nav.brandStatement}
         </p>
