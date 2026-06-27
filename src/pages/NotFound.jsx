@@ -11,7 +11,6 @@ export default function NotFound() {
           
           <h1 
             className="text-9xl font-bold text-[#1f2937] relative z-10"
-            style={{ fontFamily: "'Playfair Display', serif" }}
           >
             404
           </h1>
@@ -19,14 +18,12 @@ export default function NotFound() {
 
         <h2 
           className="text-4xl font-bold text-[#1f2937] mb-6"
-          style={{ fontFamily: "'Playfair Display', serif" }}
         >
           Page Not Found
         </h2>
         
         <p 
           className="text-xl text-[#6b7280] mb-8 leading-relaxed"
-          style={{ fontFamily: "'Cormorant', serif" }}
         >
           The page you're looking for doesn't exist or has been moved. 
           <br />
@@ -37,7 +34,6 @@ export default function NotFound() {
           <Link 
             to="/" 
             className="bg-[#d4af37] hover:bg-[#c19d30] text-white font-bold py-3 px-8 rounded-full transition-all text-lg shadow-md hover:shadow-lg"
-            style={{ fontFamily: "'Playfair Display', serif" }}
           >
             Return Home
           </Link>
@@ -45,7 +41,6 @@ export default function NotFound() {
           <Link 
             to="/contact" 
             className="bg-[#1f2937] hover:bg-opacity-90 text-[#f7f2e7] font-bold py-3 px-8 rounded-full transition-all text-lg shadow-md hover:shadow-lg"
-            style={{ fontFamily: "'Playfair Display', serif" }}
           >
             Contact Us
           </Link>

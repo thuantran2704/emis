@@ -110,7 +110,6 @@ export default function Home() {
             <h1
               className="text-xl sm:text-2xl md:text-3xl font-bold leading-tight text-white"
               style={{
-                fontFamily: "'Poppins', sans-serif",
                 lineHeight: '1.12',
               }}
             >
@@ -122,7 +121,6 @@ export default function Home() {
               className="mt-3 md:mt-4 text-[11px] sm:text-xs md:text-sm font-normal leading-relaxed text-white max-w-full"
               style={{
                 color: 'rgba(255,255,255,.88)',
-                fontFamily: "'Poppins', sans-serif",
               }}
             >
               {heroDescription}
@@ -203,8 +201,8 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-2 lg:items-stretch">
           <div>
             <p className={sectionLabelClass}>{implantIntro.label}</p>
-            <h2 className="text-2xl font-bold text-[#2a3439] md:text-3xl" style={{ fontFamily: "'Playfair Display', serif" }}>{implantIntro.title}</h2>
-            <p className="mt-4 text-base leading-relaxed text-gray-500" style={{ fontFamily: "'Cormorant', serif" }}>{implantIntro.intro}</p>
+            <h2 className="text-2xl font-bold text-[#2a3439] md:text-3xl">{implantIntro.title}</h2>
+            <p className="mt-4 text-base leading-relaxed text-gray-500">{implantIntro.intro}</p>
 
             <ul className="mt-6 grid gap-2.5 sm:grid-cols-2">
               {implantIntro.principles.map((item) => (
@@ -234,8 +232,8 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
             <p className={sectionLabelClass}>Why EMIS</p>
-            <h2 className="text-2xl font-bold text-[#2a3439] md:text-3xl" style={{ fontFamily: "'Playfair Display', serif" }}>{page.confidence.title}</h2>
-            <p className="mt-4 text-base leading-relaxed text-gray-500" style={{ fontFamily: "'Cormorant', serif" }}>{page.confidence.intro}</p>
+            <h2 className="text-2xl font-bold text-[#2a3439] md:text-3xl">{page.confidence.title}</h2>
+            <p className="mt-4 text-base leading-relaxed text-gray-500">{page.confidence.intro}</p>
           </div>
 
           <div className="mt-10 grid gap-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-stretch">
@@ -246,7 +244,7 @@ export default function Home() {
                   className="group flex flex-col rounded-2xl border border-[#e4ebf1] bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-[#C5AF73] hover:shadow-md"
                 >
                   <span className="block h-1 w-8 rounded-full bg-[#C5AF73] transition-all group-hover:w-12" />
-                  <h3 className="mt-4 text-base font-semibold text-[#2a3439]" style={{ fontFamily: "'Playfair Display', serif" }}>{card.title}</h3>
+                  <h3 className="mt-4 text-base font-semibold text-[#2a3439]">{card.title}</h3>
                   <p className="mt-2 text-xs leading-relaxed text-gray-500">{card.text}</p>
                 </article>
               ))}
@@ -263,10 +261,10 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
             <p className={sectionLabelClass}>{localizedHome.servicesTitle || 'Oral Health Services'}</p>
-            <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl">
               {page.pathways.title}
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-gray-500" style={{ fontFamily: "'Cormorant', serif" }}>{page.pathways.intro}</p>
+            <p className="mt-4 text-base leading-relaxed text-gray-500">{page.pathways.intro}</p>
           </div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
@@ -289,8 +287,8 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
             <p className={sectionLabelClass}>Our Team</p>
-            <h2 className="text-xl font-bold text-[#2a3439] md:text-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>{page.doctors.title}</h2>
-            <p className="mt-4 text-base leading-relaxed text-gray-500" style={{ fontFamily: "'Cormorant', serif" }}>{page.doctors.intro}</p>
+            <h2 className="text-xl font-bold text-[#2a3439] md:text-2xl">{page.doctors.title}</h2>
+            <p className="mt-4 text-base leading-relaxed text-gray-500">{page.doctors.intro}</p>
           </div>
 
           <div className="mt-10 grid gap-5 md:grid-cols-2">
@@ -306,7 +304,7 @@ export default function Home() {
                   className="w-full max-w-full rounded-2xl border border-[#dbe4ec] bg-white object-contain"
                 />
                 <div>
-                  <h3 className="text-sm font-semibold text-[#2a3439] transition group-hover:text-[#C5AF73]" style={{ fontFamily: "'Playfair Display', serif" }}>{doctor.name}</h3>
+                  <h3 className="text-sm font-semibold text-[#2a3439] transition group-hover:text-[#C5AF73]">{doctor.name}</h3>
                   {doctor.role && <p className="mt-1 text-[11px] font-semibold text-[#C5AF73]">{doctor.role}</p>}
                   {doctor.focus && <p className="mt-1.5 text-[11px] leading-relaxed text-gray-500">{doctor.focus}</p>}
                   {doctor.summary && <p className="mt-1.5 text-[11px] leading-relaxed text-gray-500">{doctor.summary}</p>}
@@ -325,13 +323,13 @@ export default function Home() {
           </div>
 
           <div>
-            <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl" style={{ fontFamily: "'Playfair Display', serif" }}>{page.situations.title}</h2>
-            <p className="mt-4 text-base leading-relaxed text-gray-500" style={{ fontFamily: "'Cormorant', serif" }}>{page.situations.intro}</p>
+            <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl">{page.situations.title}</h2>
+            <p className="mt-4 text-base leading-relaxed text-gray-500">{page.situations.intro}</p>
 
             <div className="mt-6 space-y-5 border-l-2 border-[#e5d6b0] pl-5">
               {page.situations.cards.map((item) => (
                 <article key={item.title} className="pb-4 border-b border-[#e6edf3] last:border-b-0">
-                  <h3 className="text-base font-semibold text-[#1d3953]" style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>
+                  <h3 className="text-base font-semibold text-[#1d3953]">{item.title}</h3>
                   <p className="mt-2 text-xs leading-relaxed text-[#5d7388]">{item.text}</p>
                 </article>
               ))}
@@ -347,8 +345,8 @@ export default function Home() {
       <section className="bg-[#f1f5f9] py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl" style={{ fontFamily: "'Playfair Display', serif" }}>{page.pathways.title}</h2>
-            <p className="mt-4 text-base leading-relaxed text-gray-500" style={{ fontFamily: "'Cormorant', serif" }}>{page.pathways.intro}</p>
+            <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl">{page.pathways.title}</h2>
+            <p className="mt-4 text-base leading-relaxed text-gray-500">{page.pathways.intro}</p>
           </div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -358,7 +356,7 @@ export default function Home() {
                 <article key={card.title} className="overflow-hidden rounded-2xl border border-[#d9e4ed] bg-white shadow-sm">
                   <img src={image} alt={card.title} className="hidden h-44 w-full object-cover md:block" />
                   <div className="p-6">
-                    <h3 className="text-lg font-semibold text-[#1d3953]" style={{ fontFamily: "'Playfair Display', serif" }}>{card.title}</h3>
+                    <h3 className="text-lg font-semibold text-[#1d3953]">{card.title}</h3>
                     <p className="mt-2 text-xs font-medium text-[#6f8da6]">{card.subtitle}</p>
                     <p className="mt-3 text-xs leading-relaxed text-[#5d7388]">{card.text}</p>
                   </div>
@@ -372,8 +370,8 @@ export default function Home() {
       <section className="bg-white py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl" style={{ fontFamily: "'Playfair Display', serif" }}>{page.journey.title}</h2>
-            <p className="mt-4 text-base leading-relaxed text-gray-500" style={{ fontFamily: "'Cormorant', serif" }}>{page.journey.intro}</p>
+            <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl">{page.journey.title}</h2>
+            <p className="mt-4 text-base leading-relaxed text-gray-500">{page.journey.intro}</p>
           </div>
 
           <div className="mt-10 grid gap-5 md:grid-cols-5">
@@ -383,7 +381,7 @@ export default function Home() {
                 <article key={step.title} className="rounded-2xl border border-[#dbe6ef] bg-[#f9fcff] p-3">
                   <img src={image} alt={step.title} className="hidden h-28 w-full rounded-xl object-cover md:block" />
                   <p className="mt-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#7b95ab]">{step.step}</p>
-                  <h3 className="mt-1 text-sm font-semibold text-[#1d3953]" style={{ fontFamily: "'Playfair Display', serif" }}>{step.title}</h3>
+                  <h3 className="mt-1 text-sm font-semibold text-[#1d3953]">{step.title}</h3>
                   <p className="mt-2 text-xs leading-relaxed text-[#5d7388]">{step.text}</p>
                 </article>
               );
@@ -399,8 +397,8 @@ export default function Home() {
       <section className="bg-white py-16 md:py-20">
         <div className="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-2 md:items-stretch">
           <div>
-            <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl" style={{ fontFamily: "'Playfair Display', serif" }}>{page.international.title}</h2>
-            <p className="mt-4 text-base leading-relaxed text-gray-500" style={{ fontFamily: "'Cormorant', serif" }}>{page.international.intro}</p>
+            <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl">{page.international.title}</h2>
+            <p className="mt-4 text-base leading-relaxed text-gray-500">{page.international.intro}</p>
             <ul className="mt-6 space-y-3">
               {page.international.points.map((item) => (
                 <li key={item.title} className="rounded-xl border border-[#dde7ef] bg-[#f9fcff] p-4">
@@ -422,11 +420,11 @@ export default function Home() {
 
       <section className="bg-[#f1f5f9] py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-6">
-          <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl text-center" style={{ fontFamily: "'Playfair Display', serif" }}>{page.faq.title}</h2>
+          <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl text-center">{page.faq.title}</h2>
           <div className="mt-8 space-y-4">
             {page.faq.items.map((item) => (
               <details key={item.question} className="rounded-2xl border border-[#dbe6ef] bg-white p-5 shadow-sm">
-                <summary className="cursor-pointer list-none text-base font-semibold text-[#1d3953]" style={{ fontFamily: "'Playfair Display', serif" }}>
+                <summary className="cursor-pointer list-none text-base font-semibold text-[#1d3953]">
                   {item.question}
                 </summary>
                 <p className="mt-3 text-xs leading-relaxed text-[#5d7388]">{item.answer}</p>
@@ -442,7 +440,7 @@ export default function Home() {
       <section className="relative overflow-hidden bg-[#2a3439] py-16 text-white md:py-20">
         <img src={ctaBackground} alt="" className="absolute inset-0 h-full w-full object-cover opacity-20" aria-hidden="true" />
         <div className="relative mx-auto max-w-6xl px-6">
-          <h2 className="text-2xl font-bold md:text-3xl" style={{ fontFamily: "'Playfair Display', serif" }}>{page.finalCta.title}</h2>
+          <h2 className="text-2xl font-bold md:text-3xl">{page.finalCta.title}</h2>
           <p className="mt-4 max-w-3xl text-base leading-relaxed text-[#d6e2ed]">{page.finalCta.description}</p>
 
           <div className="mt-6 flex flex-wrap gap-4">

@@ -44,7 +44,6 @@ export default function LanguageToggle({ variant = 'floating', compact = false }
                   ? 'text-[#C5AF73] bg-[#faf7f0]'
                   : 'text-gray-400 hover:text-[#2a3439] hover:bg-[#f7f2e7]'
                 }`}
-              style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
             >
               {lang.label}
             </button>
@@ -61,7 +60,6 @@ export default function LanguageToggle({ variant = 'floating', compact = false }
               ? 'h-9 min-w-[52px] justify-center gap-1 px-2 text-[11px] leading-none'
               : 'gap-1.5 px-3 py-2 text-xs'
           }`}
-          style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
         >
           <span>{currentLabel}</span>
           <svg
@@ -78,7 +76,6 @@ export default function LanguageToggle({ variant = 'floating', compact = false }
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="bg-[#d4af37] text-white font-semibold h-12 w-12 rounded-full shadow-lg flex items-center justify-center text-sm hover:bg-[#c19d30] transition-colors"
-          style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
         >
           {isOpen ? (
             <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

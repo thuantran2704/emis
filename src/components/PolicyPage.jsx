@@ -9,9 +9,9 @@ const titleClass = 'text-3xl md:text-5xl text-[#2a3439] leading-tight';
 const bodyClass = 'text-[16px] md:text-[17px] text-gray-600 leading-relaxed';
 const ctaPrimaryClass =
   'px-7 py-3.5 rounded-full bg-[#d4af37] text-white text-sm font-semibold hover:bg-[#c19d30] transition text-center';
-const eyebrowFont = { fontFamily: "'Be Vietnam Pro', sans-serif" };
-const headingFont = { fontFamily: "'Playfair Display', serif" };
-const bodyFont = { fontFamily: "'Cormorant', serif" };
+const eyebrowFont = {};
+const headingFont = {};
+const bodyFont = {};
 
 const pad = (n) => String(n + 1).padStart(2, '0');
 

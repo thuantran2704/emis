@@ -202,7 +202,6 @@ export default function Contact() {
         <div className="text-center mb-16">
           <h1
             className="text-4xl font-bold text-[#1f2937] mb-4"
-            style={{ fontFamily: "'Playfair Display', serif" }}
           >
             {content.title.split(content.highlight)[0]}
             <span className="text-[#d4af37]"> {content.highlight}</span>
@@ -215,7 +214,6 @@ export default function Contact() {
           <div className="max-w-4xl mx-auto">
             <h2
               className="text-2xl font-bold text-[#d4af37] mb-6 text-center"
-              style={{ fontFamily: "'Playfair Display', serif" }}
             >
               {content.getInTouch}
             </h2>
@@ -277,7 +275,6 @@ export default function Contact() {
           <div className="bg-[#fffaf0] p-6 sm:p-7 rounded-xl shadow-lg max-w-3xl mx-auto w-full">
             <h2
               className="text-2xl font-bold text-[#d4af37] mb-5 text-center"
-              style={{ fontFamily: "'Playfair Display', serif" }}
             >
               {content.bookAppointment}
             </h2>
@@ -289,7 +286,6 @@ export default function Contact() {
                     <label
                       htmlFor={field}
                       className="block text-[#1f2937] mb-1"
-                      style={{ fontFamily: "'Cormorant', serif" }}
                     >
                       {content.formLabels[field]}
                     </label>
@@ -300,7 +296,6 @@ export default function Contact() {
                       value={formData[field]}
                       onChange={handleChange}
                       className="w-full p-2.5 border border-[#6b7280] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
-                      style={{ fontFamily: "'Cormorant', serif" }}
                       required
                     />
                   </div>
@@ -310,7 +305,6 @@ export default function Contact() {
                   <label
                     htmlFor="service"
                     className="block text-[#1f2937] mb-1"
-                    style={{ fontFamily: "'Cormorant', serif" }}
                   >
                     {content.formLabels.service}
                   </label>
@@ -320,7 +314,6 @@ export default function Contact() {
                     value={formData.service}
                     onChange={handleChange}
                     className="w-full p-2.5 border border-[#6b7280] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
-                    style={{ fontFamily: "'Cormorant', serif" }}
                     required
                   >
                     <option value="">{content.formLabels.service}</option>
@@ -334,7 +327,6 @@ export default function Contact() {
                   <label
                     htmlFor="message"
                     className="block text-[#1f2937] mb-1"
-                    style={{ fontFamily: "'Cormorant', serif" }}
                   >
                     {content.formLabels.message}
                   </label>
@@ -345,7 +337,6 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     className="w-full p-2.5 border border-[#6b7280] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
-                    style={{ fontFamily: "'Cormorant', serif" }}
                   ></textarea>
                 </div>
               </div>
@@ -359,7 +350,6 @@ export default function Contact() {
               <button
                 type="submit"
                 className="w-full bg-[#d4af37] hover:bg-[#c19d30] text-white font-bold py-2.5 px-6 rounded-full transition-all text-base shadow-md hover:shadow-lg mt-2"
-                style={{ fontFamily: "'Playfair Display', serif" }}
               >
                 {content.formLabels.submit}
               </button>

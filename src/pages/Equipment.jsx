@@ -57,21 +57,18 @@ export default function Equipment() {
             <div className="order-2 lg:order-1 space-y-6">
               <p
                 className="uppercase tracking-[0.3em] text-[#C5AF73] text-xs font-semibold"
-                style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
               >
                 CLINIC TECHNOLOGY
               </p>
 
               <h1
                 className="text-4xl md:text-5xl text-[#2a3439] leading-tight"
-                style={{ fontFamily: "'Playfair Display', serif" }}
               >
                 {content.pageTitle || content.title}
               </h1>
 
               <p
                 className="text-lg text-gray-500 leading-relaxed max-w-md"
-                style={{ fontFamily: "'Cormorant', serif" }}
               >
                 {shortenText(content.pageIntro, 120)}
               </p>
@@ -80,14 +77,12 @@ export default function Equipment() {
                 <Link
                   to="/contact"
                   className="px-7 py-3.5 rounded-full bg-[#d4af37] text-white text-sm font-semibold hover:bg-[#c19d30] transition text-center"
-                  style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                 >
                   {language === "vietnamese" ? "Đặt Lịch Tư Vấn" : "Book Consultation"}
                 </Link>
                 <Link
                   to="/services"
                   className="px-7 py-3.5 rounded-full border border-[#d4af37] text-[#2a3439] text-sm hover:bg-white transition text-center"
-                  style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                 >
                   {language === "vietnamese" ? "Xem Bảng Giá" : "View Price List"}
                 </Link>
@@ -102,19 +97,16 @@ export default function Equipment() {
           <div className="max-w-2xl mx-auto text-center mb-16 lg:mb-20">
             <p
               className="uppercase tracking-[0.3em] text-[#C5AF73] mb-5 text-xs font-semibold"
-              style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
             >
               EQUIPMENT OVERVIEW
             </p>
             <h2
               className="text-4xl text-[#2a3439] mb-6"
-              style={{ fontFamily: "'Playfair Display', serif" }}
             >
               {language === "vietnamese" ? "Hệ Thống Thiết Bị Hiện Đại" : "Modern Equipment Systems"}
             </h2>
             <p
               className="text-lg text-gray-500 leading-relaxed"
-              style={{ fontFamily: "'Cormorant', serif" }}
             >
               {language === "vietnamese"
                 ? "Thiết bị được chọn để điều trị an toàn, chính xác và thoải mái hơn."
@@ -144,28 +136,24 @@ export default function Equipment() {
                   <div className={`${index % 2 === 0 ? "order-2" : "order-2 lg:order-1"}`}>
                     <p
                       className="uppercase tracking-[0.25em] text-[#C5AF73] text-xs font-semibold mb-4"
-                      style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                     >
                       {language === "vietnamese" ? "Thiết Bị" : "Equipment"}
                     </p>
 
                     <h3
                       className="text-2xl md:text-3xl text-[#2a3439] mb-4"
-                      style={{ fontFamily: "'Playfair Display', serif" }}
                     >
                       {content[key].title}
                     </h3>
 
                     <p
                       className="text-[#2a3439] mb-4"
-                      style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                     >
                       {shortenText(content[key].equipmentIntro, 95)}
                     </p>
 
                     <p
                       className="text-gray-500 leading-relaxed mb-5"
-                      style={{ fontFamily: "'Cormorant', serif" }}
                     >
                       {shortenText(content[key].equipmentDescription, 150)}
                     </p>
@@ -176,7 +164,6 @@ export default function Equipment() {
                           <CheckCircle className="w-5 h-5 text-[#C5AF73] mt-1 flex-shrink-0" />
                           <span
                             className="text-[#2a3439] text-sm"
-                            style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                           >
                             {feature}
                           </span>
@@ -196,19 +183,16 @@ export default function Equipment() {
           <div className="rounded-2xl border border-[#eadfc9] bg-white p-8 shadow-sm text-center">
             <p
               className="uppercase tracking-[0.25em] text-[#C5AF73] text-xs font-semibold mb-4"
-              style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
             >
               QUALITY STANDARDS
             </p>
             <h3
               className="text-3xl text-[#2a3439] mb-4"
-              style={{ fontFamily: "'Playfair Display', serif" }}
             >
               {language === "vietnamese" ? "An Toàn Và Chính Xác Trong Từng Điều Trị" : "Safety and Precision in Every Treatment"}
             </h3>
             <p
               className="text-gray-500 leading-relaxed mb-7"
-              style={{ fontFamily: "'Cormorant', serif" }}
             >
               {language === "vietnamese"
                 ? "Thiết bị được bảo trì định kỳ theo quy trình kiểm soát nghiêm ngặt."
@@ -218,7 +202,6 @@ export default function Equipment() {
             <Link
               to="/contact"
               className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-[#d4af37] text-white text-sm font-semibold hover:bg-[#c19d30] transition"
-              style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
             >
               {language === "vietnamese" ? "Liên Hệ Tư Vấn" : "Contact for Consultation"}
             </Link>

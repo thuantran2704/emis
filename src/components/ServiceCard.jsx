@@ -21,7 +21,6 @@ const ServiceCard = ({ service, image, altText, bookNowText }) => {
       <div className="flex flex-1 flex-col p-5">
         <h3
           className="text-xl font-semibold text-[#1d3953]"
-          style={{ fontFamily: "'Playfair Display', serif" }}
           itemProp="name"
         >
           {service.name}

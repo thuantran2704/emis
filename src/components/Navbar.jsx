@@ -75,12 +75,10 @@ export default function Navbar() {
   const content = navbarContent[language] || navbarContent.english;
 
   const navFont = {
-    fontFamily: "'Be Vietnam Pro', sans-serif",
     fontWeight: '600',
   };
 
   const dropdownFont = {
-    fontFamily: "'Be Vietnam Pro', sans-serif",
     fontWeight: '500',
   };
 
@@ -156,9 +154,6 @@ export default function Navbar() {
             </div>
             <span
               className="text-lg font-extrabold leading-none tracking-[0.02em] text-[#2a3439] sm:text-xl"
-              style={{
-                fontFamily: "'Be Vietnam Pro', sans-serif",
-              }}
             >
               <span className="text-[#2a3439]">EMIS</span>{' '}
               <span className="text-[#d4af37]">DENTAL</span>
@@ -329,7 +324,6 @@ export default function Navbar() {
             <Link
               to="/contact"
               className="ml-2 inline-flex h-10 items-center rounded-full bg-[#d4af37] px-5 text-sm font-semibold text-white shadow-sm transition hover:bg-[#c19d30]"
-              style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
             >
               {content.contact}
             </Link>
@@ -561,7 +555,6 @@ export default function Navbar() {
               to="/contact"
               className="mt-2 block rounded-full bg-[#d4af37] px-4 py-2.5 text-center text-sm font-semibold text-white hover:bg-[#c19d30]"
               onClick={closeAllMenus}
-              style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
             >
               {content.contact}
             </Link>

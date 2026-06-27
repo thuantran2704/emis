@@ -26,11 +26,11 @@ export default function ServiceSupportList({ items = [], descriptions = [], note
                 <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#f3e6bf] text-[#4b4b8f] shadow-sm">
                   <Icon className="h-5 w-5" />
                 </span>
-                <h3 className="text-lg font-semibold text-[#4b4b8f]" style={{ fontFamily: "'Playfair Display', serif" }}>
+                <h3 className="text-lg font-semibold text-[#4b4b8f]">
                   {item}
                 </h3>
               </div>
-              <p className="text-sm text-[#4b5563] leading-relaxed" style={{ fontFamily: "'Cormorant', serif" }}>
+              <p className="text-sm text-[#4b5563] leading-relaxed">
                 {description}
               </p>
             </article>
@@ -38,7 +38,7 @@ export default function ServiceSupportList({ items = [], descriptions = [], note
         })}
       </div>
 
-      <div className="mt-6 rounded-2xl bg-[#f7f2e7] p-4 text-sm text-[#4b5563] md:text-base" style={{ fontFamily: "'Cormorant', serif" }}>
+      <div className="mt-6 rounded-2xl bg-[#f7f2e7] p-4 text-sm text-[#4b5563] md:text-base">
         <div className="flex items-start gap-3">
           <Languages className="mt-0.5 h-5 w-5 text-[#d4af37]" />
           <p>{note}</p>

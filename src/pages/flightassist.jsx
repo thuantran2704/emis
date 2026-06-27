@@ -54,21 +54,18 @@ export default function DentalVisitorProgram() {
             <div className="order-2 lg:order-1 space-y-6">
               <p
                 className="uppercase tracking-[0.3em] text-[#C5AF73] text-xs font-semibold"
-                style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
               >
                 TRAVEL ASSIST
               </p>
 
               <h1
                 className="text-4xl md:text-5xl text-[#2a3439] leading-tight"
-                style={{ fontFamily: "'Playfair Display', serif" }}
               >
                 Dental Visitor Support Program
               </h1>
 
               <p
                 className="text-lg text-gray-500 leading-relaxed max-w-md"
-                style={{ fontFamily: "'Cormorant', serif" }}
               >
                 A refined dental travel experience designed for international patients seeking implant and comprehensive treatment in Vietnam.
               </p>
@@ -77,14 +74,12 @@ export default function DentalVisitorProgram() {
                 <Link
                   to="/contact"
                   className="px-7 py-3.5 rounded-full bg-[#d4af37] text-white text-sm font-semibold hover:bg-[#c19d30] transition text-center"
-                  style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                 >
                   Plan Your Visit
                 </Link>
                 <a
                   href="#program-details"
                   className="px-7 py-3.5 rounded-full border border-[#d4af37] text-[#2a3439] text-sm hover:bg-white transition text-center"
-                  style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                 >
                   View Program Details
                 </a>
@@ -99,19 +94,16 @@ export default function DentalVisitorProgram() {
           <div className="max-w-2xl mx-auto text-center mb-16 lg:mb-20">
             <p
               className="uppercase tracking-[0.3em] text-[#C5AF73] mb-5 text-xs font-semibold"
-              style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
             >
               PROGRAM BENEFITS
             </p>
             <h2
               className="text-4xl text-[#2a3439] mb-6"
-              style={{ fontFamily: "'Playfair Display', serif" }}
             >
               Thoughtfully Curated Support
             </h2>
             <p
               className="text-lg text-gray-500 leading-relaxed"
-              style={{ fontFamily: "'Cormorant', serif" }}
             >
               Our visitor program helps simplify treatment travel, from flight planning to accommodation and local support.
             </p>
@@ -121,7 +113,6 @@ export default function DentalVisitorProgram() {
             <article className="h-full bg-[#f7f2e7] rounded-2xl p-8 border border-[#eadfc9]/50">
               <h3
                 className="text-2xl text-[#2a3439] mb-5"
-                style={{ fontFamily: "'Playfair Display', serif" }}
               >
                 Premium Flight Support
               </h3>
@@ -129,7 +120,7 @@ export default function DentalVisitorProgram() {
                 {flightSupport.map((item) => (
                   <div key={item} className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-[#C5AF73] mt-1 flex-shrink-0" />
-                    <span className="text-[#2a3439]" style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}>
+                    <span className="text-[#2a3439]">
                       {item}
                     </span>
                   </div>
@@ -140,7 +131,6 @@ export default function DentalVisitorProgram() {
             <article className="h-full bg-white rounded-2xl p-8 shadow-sm border border-[#eadfc9]/50">
               <h3
                 className="text-2xl text-[#2a3439] mb-5"
-                style={{ fontFamily: "'Playfair Display', serif" }}
               >
                 Accommodation Assistance
               </h3>
@@ -148,7 +138,7 @@ export default function DentalVisitorProgram() {
                 {staySupport.map((item) => (
                   <div key={item} className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-[#C5AF73] mt-1 flex-shrink-0" />
-                    <span className="text-[#2a3439]" style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}>
+                    <span className="text-[#2a3439]">
                       {item}
                     </span>
                   </div>
@@ -174,13 +164,11 @@ export default function DentalVisitorProgram() {
               <div>
                 <p
                   className="uppercase tracking-[0.25em] text-[#C5AF73] text-xs font-semibold mb-4"
-                  style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                 >
                   OPTIONAL CITY EXPERIENCE
                 </p>
                 <h3
                   className="text-2xl text-[#2a3439]"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
                 >
                   Complimentary 3-Day City Trip
                 </h3>
@@ -188,14 +176,12 @@ export default function DentalVisitorProgram() {
 
               <p
                 className="text-gray-500 leading-relaxed border-y border-[#eadfc9]/60 py-6 my-2"
-                style={{ fontFamily: "'Cormorant', serif" }}
               >
                 Eligible patients can join a 3-day city itinerary designed for first-time visitors, featuring major landmarks and comfortable pacing around treatment schedules.
               </p>
 
               <p
                 className="text-gray-500 leading-relaxed"
-                style={{ fontFamily: "'Cormorant', serif" }}
               >
                 If you prefer not to join the tour, an equivalent value option may be discussed based on program terms.
               </p>
@@ -211,13 +197,11 @@ export default function DentalVisitorProgram() {
           <div className="max-w-2xl mx-auto text-center mb-16">
             <p
               className="uppercase tracking-[0.3em] text-[#C5AF73] mb-5 text-xs font-semibold"
-              style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
             >
               VIETNAM HIGHLIGHTS
             </p>
             <h2
               className="text-4xl text-[#2a3439] mb-6"
-              style={{ fontFamily: "'Playfair Display', serif" }}
             >
               Explore While You Recover
             </h2>
@@ -242,13 +226,11 @@ export default function DentalVisitorProgram() {
           <div className="rounded-2xl border border-[#eadfc9] bg-white p-8 shadow-sm">
             <p
               className="uppercase tracking-[0.25em] text-[#C5AF73] text-xs font-semibold mb-4"
-              style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
             >
               IMPORTANT NOTICE
             </p>
             <p
               className="text-gray-500 leading-relaxed"
-              style={{ fontFamily: "'Cormorant', serif" }}
             >
               Program benefits are subject to eligibility, treatment plans, and availability.
               Flight and accommodation support values are non-transferable and cannot be redeemed
@@ -259,7 +241,6 @@ export default function DentalVisitorProgram() {
               <Link
                 to="/contact"
                 className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#d4af37] text-white text-sm font-semibold hover:bg-[#c19d30] transition"
-                style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
               >
                 Request Travel Support
                 <ArrowRight className="w-4 h-4" />
@@ -267,7 +248,6 @@ export default function DentalVisitorProgram() {
               <Link
                 to="/implant"
                 className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full border border-[#d4af37] text-[#2a3439] text-sm hover:bg-white transition"
-                style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
               >
                 Explore Implant Solutions
               </Link>

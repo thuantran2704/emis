@@ -32,7 +32,6 @@ export default function ImplantPlannerBanner() {
               </p>
               <h2
                 className="mt-3 text-3xl font-bold text-white md:text-4xl"
-                style={{ fontFamily: "'Playfair Display', serif" }}
               >
                 {planner.title}
               </h2>
@@ -67,7 +66,6 @@ export default function ImplantPlannerBanner() {
                   >
                     <span
                       className="text-sm font-semibold tabular-nums text-[#d4af37]/60 transition-colors group-hover:text-[#d4af37]"
-                      style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                     >
                       {String(index + 1).padStart(2, '0')}
                     </span>

@@ -165,7 +165,6 @@ export default function ContactForm({ embedded = false }) {
 
         <h3
           className="text-2xl font-bold text-[#4b4b8f] mb-4 text-center"
-          style={{ fontFamily: "'Playfair Display', serif" }}
         >
           {content.bookAppointment}
         </h3>
@@ -181,7 +180,6 @@ export default function ContactForm({ embedded = false }) {
               onChange={handleChange}
               required
               className="w-full p-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-[#d4af37] focus:outline-none"
-              style={{ fontFamily: "'Cormorant', serif" }}
             />
           ))}
 
@@ -192,7 +190,6 @@ export default function ContactForm({ embedded = false }) {
             onChange={handleChange}
             rows="3"
             className="w-full p-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-[#d4af37] focus:outline-none"
-            style={{ fontFamily: "'Cormorant', serif" }}
           />
 
           <div className="flex justify-center my-2">
@@ -202,7 +199,7 @@ export default function ContactForm({ embedded = false }) {
                 onChange={handleRecaptchaChange}
               />
             ) : (
-              <p className="text-sm text-red-600" style={{ fontFamily: "'Cormorant', serif" }}>
+              <p className="text-sm text-red-600">
                 reCAPTCHA is not configured.
               </p>
             )}
@@ -212,7 +209,6 @@ export default function ContactForm({ embedded = false }) {
             type="submit"
             disabled={isSubmitting || !apiBaseUrl || !recaptchaSiteKey}
             className="w-full bg-[#d4af37] hover:bg-[#c19d30] text-white font-medium py-2 rounded-full transition-all shadow-sm hover:shadow-md text-sm"
-            style={{ fontFamily: "'Playfair Display', serif" }}
           >
             {isSubmitting ? content.formLabels.submit + "..." : content.formLabels.submit}
           </button>

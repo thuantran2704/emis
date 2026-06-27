@@ -13,7 +13,6 @@ import orthoCase from '../pics/doctor-explaining-procedure-to-patient.jpg';
 const SectionLabel = ({ children }) => (
   <p
     className="mb-4 text-[9px] font-semibold uppercase tracking-[0.3em] text-[#C5AF73] lg:mb-6 lg:text-[10px] lg:tracking-[0.34em]"
-    style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
   >
     {children}
   </p>
@@ -22,7 +21,6 @@ const SectionLabel = ({ children }) => (
 const SectionTitle = ({ children }) => (
   <h2
     className="mb-5 text-[1.45rem] leading-[1.1] text-[#2a3439] lg:mb-8 lg:text-[2.1rem]"
-    style={{ fontFamily: "'Playfair Display', serif" }}
   >
     {children}
   </h2>
@@ -55,11 +53,10 @@ export default function SmileAesthetics() {
             <SectionLabel>Smile Aesthetics</SectionLabel>
             <h1
               className="mb-7 max-w-2xl text-[1.6rem] leading-[1.08] text-[#2a3439] lg:mb-10 lg:text-[2.8rem]"
-              style={{ fontFamily: "'Playfair Display', serif" }}
             >
               {content.hero?.title}
             </h1>
-            <div className="mb-10 space-y-3 text-[14px] leading-7 text-gray-600 lg:mb-12 lg:text-[16px] lg:leading-8" style={{ fontFamily: "'Cormorant', serif" }}>
+            <div className="mb-10 space-y-3 text-[14px] leading-7 text-gray-600 lg:mb-12 lg:text-[16px] lg:leading-8">
               {(content.hero?.lines || []).map((line) => (
                 <p key={line}>{line}</p>
               ))}
@@ -68,14 +65,12 @@ export default function SmileAesthetics() {
               <Link
                 to="/contact"
                 className="rounded-full bg-[#d4af37] px-5 py-2.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-[#c19d30] lg:px-6 lg:py-3 lg:text-[11px]"
-                style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
               >
                 {content.hero?.primaryCta}
               </Link>
               <Link
                 to="/contact"
                 className="rounded-full border border-[#d4af37] px-5 py-2.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#2a3439] transition hover:bg-white lg:px-6 lg:py-3 lg:text-[11px]"
-                style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
               >
                 {content.hero?.secondaryCta}
               </Link>
@@ -99,7 +94,7 @@ export default function SmileAesthetics() {
         <div className="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full bg-[#d4af37]/20 blur-3xl" />
         <div className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-[#1d3953]/40 blur-3xl" />
         <div className="relative mx-auto max-w-5xl px-6 lg:px-12">
-          <h2 className="mb-8 text-[1.45rem] leading-[1.1] text-white lg:mb-12 lg:text-[2.1rem]" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h2 className="mb-8 text-[1.45rem] leading-[1.1] text-white lg:mb-12 lg:text-[2.1rem]">
             {content.improve?.title}
           </h2>
           <ol className="flex flex-col">
@@ -110,7 +105,6 @@ export default function SmileAesthetics() {
               >
                 <span
                   className="text-[1.1rem] font-semibold tabular-nums text-[#d4af37]/60 transition-colors group-hover:text-[#d4af37] lg:text-[1.35rem]"
-                  style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                 >
                   {String(index + 1).padStart(2, '0')}
                 </span>
@@ -134,7 +128,7 @@ export default function SmileAesthetics() {
             <p className="mb-5 text-[14px] font-semibold uppercase tracking-[0.06em] text-[#2a3439] lg:text-[15px]">
               {content.unique?.introTitle}
             </p>
-            <p className="text-[14px] leading-7 text-gray-600 lg:text-[16px] lg:leading-8" style={{ fontFamily: "'Cormorant', serif" }}>
+            <p className="text-[14px] leading-7 text-gray-600 lg:text-[16px] lg:leading-8">
               {content.unique?.note}
             </p>
 
@@ -169,7 +163,7 @@ export default function SmileAesthetics() {
                     <Icon className="h-6 w-6" strokeWidth={1.6} />
                   </span>
                   <div>
-                    <h3 className="text-[1.02rem] text-[#2a3439]" style={{ fontFamily: "'Playfair Display', serif" }}>
+                    <h3 className="text-[1.02rem] text-[#2a3439]">
                       {option.name}
                     </h3>
                     <p className="mt-1.5 text-[13px] leading-6 text-gray-600 lg:text-[14px]">{option.description}</p>
@@ -210,7 +204,7 @@ export default function SmileAesthetics() {
         <div className="mx-auto grid max-w-6xl gap-10 px-6 lg:grid-cols-2 lg:items-center lg:px-12">
           <div>
             <SectionTitle>{content.orthodontics?.title}</SectionTitle>
-            <div className="space-y-3 text-[14px] leading-7 text-gray-600 lg:text-[16px] lg:leading-8" style={{ fontFamily: "'Cormorant', serif" }}>
+            <div className="space-y-3 text-[14px] leading-7 text-gray-600 lg:text-[16px] lg:leading-8">
               {(content.orthodontics?.paragraphs || []).map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
@@ -218,7 +212,6 @@ export default function SmileAesthetics() {
             <Link
               to="/services"
               className="mt-7 inline-block rounded-full bg-[#d4af37] px-5 py-2.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-[#c19d30] lg:px-6 lg:py-3 lg:text-[11px]"
-              style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
             >
               {content.orthodontics?.cta}
             </Link>
@@ -255,7 +248,7 @@ export default function SmileAesthetics() {
 
       <section className="mx-auto max-w-6xl px-5 py-16 lg:px-12 lg:py-28">
         <SectionTitle>{content.cases?.title}</SectionTitle>
-        <p className="mb-8 max-w-3xl text-[14px] leading-7 text-gray-600 lg:text-[16px] lg:leading-8" style={{ fontFamily: "'Cormorant', serif" }}>
+        <p className="mb-8 max-w-3xl text-[14px] leading-7 text-gray-600 lg:text-[16px] lg:leading-8">
           {content.cases?.intro}
         </p>
 
@@ -266,7 +259,7 @@ export default function SmileAesthetics() {
                 <img src={caseImages[index]} alt={card.imageAlt} className="h-44 w-full object-cover" />
               ) : null}
               <div className="p-5">
-                <h3 className="text-[1.02rem] text-[#2a3439]" style={{ fontFamily: "'Playfair Display', serif" }}>
+                <h3 className="text-[1.02rem] text-[#2a3439]">
                   {card.title}
                 </h3>
                 <p className="mt-2 text-[13px] leading-6 text-gray-600 lg:text-[14px]">{card.description}</p>
@@ -279,7 +272,6 @@ export default function SmileAesthetics() {
           <Link
             to="/services"
             className="inline-block rounded-full border border-[#d4af37] px-5 py-2.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#2a3439] transition hover:bg-white lg:px-6 lg:py-3 lg:text-[11px]"
-            style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
           >
             {content.cases?.cta}
           </Link>
@@ -290,25 +282,22 @@ export default function SmileAesthetics() {
         <div className="mx-auto max-w-4xl rounded-2xl border border-[#dbe4ec] bg-[#f7fafc] px-6 py-10 text-center lg:px-10 lg:py-14">
           <h2
             className="mb-4 text-[1.5rem] leading-[1.15] text-[#2a3439] lg:text-[2.2rem]"
-            style={{ fontFamily: "'Playfair Display', serif" }}
           >
             {content.finalCta?.title}
           </h2>
-          <p className="mx-auto mb-8 max-w-2xl text-[14px] leading-7 text-gray-600 lg:text-[16px] lg:leading-8" style={{ fontFamily: "'Cormorant', serif" }}>
+          <p className="mx-auto mb-8 max-w-2xl text-[14px] leading-7 text-gray-600 lg:text-[16px] lg:leading-8">
             {content.finalCta?.intro}
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               to="/contact"
               className="rounded-full bg-[#d4af37] px-5 py-2.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-[#c19d30] lg:px-6 lg:py-3 lg:text-[11px]"
-              style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
             >
               {content.finalCta?.primaryCta}
             </Link>
             <Link
               to="/contact"
               className="rounded-full border border-[#d4af37] px-5 py-2.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#2a3439] transition hover:bg-white lg:px-6 lg:py-3 lg:text-[11px]"
-              style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
             >
               {content.finalCta?.secondaryCta}
             </Link>

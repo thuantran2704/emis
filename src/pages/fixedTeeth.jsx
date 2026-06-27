@@ -16,9 +16,9 @@ const ctaPrimaryClass =
   'px-7 py-3.5 rounded-full bg-[#d4af37] text-white text-sm font-semibold hover:bg-[#c19d30] transition text-center';
 const ctaSecondaryClass =
   'px-7 py-3.5 rounded-full border border-[#d4af37] text-[#2a3439] text-sm font-semibold hover:bg-white transition text-center';
-const eyebrowFont = { fontFamily: "'Be Vietnam Pro', sans-serif" };
-const headingFont = { fontFamily: "'Playfair Display', serif" };
-const bodyFont = { fontFamily: "'Cormorant', serif" };
+const eyebrowFont = {};
+const headingFont = {};
+const bodyFont = {};
 
 const Checklist = ({ items }) => (
   <div className="grid sm:grid-cols-2 gap-3">

@@ -17,7 +17,6 @@ const About = () => {
   const SectionLabel = ({ children }) => (
     <p
       className="uppercase tracking-[0.3em] text-[#C5AF73] mb-6 text-[10px] font-semibold"
-      style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
     >
       {children}
     </p>
@@ -26,7 +25,6 @@ const About = () => {
   const SectionTitle = ({ children }) => (
     <h2
       className="text-[1.75rem] md:text-[2.1rem] text-[#2a3439] mb-8"
-      style={{ fontFamily: "'Playfair Display', serif" }}
     >
       {children}
     </h2>
@@ -43,19 +41,16 @@ const About = () => {
       <section className="py-36 px-8 max-w-4xl mx-auto text-center">
         <p
           className="uppercase tracking-[0.3em] text-[#C5AF73] mb-7 text-[10px] font-semibold"
-          style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
         >
           Who We Are
         </p>
         <h1
           className="text-3xl md:text-4xl text-[#2a3439] mb-10 leading-tight"
-          style={{ fontFamily: "'Playfair Display', serif" }}
         >
           {content.heroTitle}
         </h1>
         <p
           className="text-[15px] md:text-[17px] text-gray-500 mb-14 max-w-2xl mx-auto leading-relaxed"
-          style={{ fontFamily: "'Cormorant', serif" }}
         >
           {content.heroSubtitle}
         </p>
@@ -63,14 +58,12 @@ const About = () => {
           <Link
             to="/contact"
             className="px-7 py-3.5 rounded-full bg-[#d4af37] text-white text-sm font-semibold hover:bg-[#c19d30] transition"
-            style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
           >
             {content.heroPrimaryCTA}
           </Link>
           <Link
             to="/dr-son"
             className="px-7 py-3.5 rounded-full border border-[#d4af37] text-[#2a3439] text-sm font-semibold hover:bg-white transition"
-            style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
           >
             {content.heroSecondaryCTA}
           </Link>
@@ -85,7 +78,6 @@ const About = () => {
             <SectionTitle>{content.approachTitle}</SectionTitle>
             <p
               className="text-gray-500 leading-relaxed text-[15px]"
-              style={{ fontFamily: "'Cormorant', serif" }}
             >
               {content.approachText}
             </p>
@@ -111,13 +103,11 @@ const About = () => {
                 <div key={i} className="bg-white rounded-2xl p-7 shadow-sm border border-[#dbe4ec]">
                   <h3
                     className="text-[1.05rem] text-[#2a3439] mb-2.5"
-                    style={{ fontFamily: "'Playfair Display', serif" }}
                   >
                     {b.title}
                   </h3>
                   <p
                     className="text-[13px] text-gray-500 leading-relaxed"
-                    style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                   >
                     {b.text}
                   </p>
@@ -143,7 +133,6 @@ const About = () => {
             <SectionTitle>{content.technologyTitle}</SectionTitle>
             <p
               className="text-gray-500 leading-relaxed text-[15px] mb-10"
-              style={{ fontFamily: "'Cormorant', serif" }}
             >
               {content.technologyIntro}
             </p>
@@ -153,7 +142,6 @@ const About = () => {
                   <span className="text-[#C5AF73] text-xs">●</span>
                   <span
                     className="text-[13px] text-[#2a3439]"
-                    style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                   >
                     {t}
                   </span>
@@ -179,7 +167,6 @@ const About = () => {
             <SectionTitle>{content.teamTitle}</SectionTitle>
             <p
               className="text-gray-500 leading-relaxed text-[15px] mb-12"
-              style={{ fontFamily: "'Cormorant', serif" }}
             >
               {content.teamIntro}
             </p>
@@ -188,19 +175,16 @@ const About = () => {
                 <div key={idx} className="bg-white rounded-2xl p-8 shadow-sm">
                   <h3
                     className="text-[1.2rem] text-[#2a3439] mb-1.5"
-                    style={{ fontFamily: "'Playfair Display', serif" }}
                   >
                     {m.name}
                   </h3>
                   <p
                     className="text-xs text-[#C5AF73] font-semibold mb-3 uppercase tracking-widest"
-                    style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                   >
                     {m.role}
                   </p>
                   <p
                     className="text-[13px] text-gray-500 leading-relaxed"
-                    style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                   >
                     {m.description}
                   </p>
@@ -209,7 +193,6 @@ const About = () => {
                       <Link
                         to="/contact"
                         className="inline-flex px-5 py-2.5 rounded-full border border-[#d4af37] text-[#2a3439] text-sm hover:bg-[#d4af37] hover:text-white transition"
-                        style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                       >
                         {m.cta}
                       </Link>
@@ -237,7 +220,6 @@ const About = () => {
             <SectionTitle>{content.internationalTitle}</SectionTitle>
             <p
               className="text-gray-500 leading-relaxed text-[15px] mb-10"
-              style={{ fontFamily: "'Cormorant', serif" }}
             >
               {content.internationalIntro}
             </p>
@@ -246,7 +228,6 @@ const About = () => {
                 <div
                   key={i}
                   className="flex items-center gap-3 bg-[#eef3f7] rounded-xl px-5 py-4 border border-[#dbe4ec]"
-                  style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                 >
                   <span className="text-[#C5AF73] text-xs">●</span>
                   <span className="text-[13px] text-[#2a3439]">{b}</span>
@@ -272,7 +253,6 @@ const About = () => {
             <SectionTitle>{content.trustTitle}</SectionTitle>
             <p
               className="text-gray-500 leading-relaxed text-[15px] mb-10"
-              style={{ fontFamily: "'Cormorant', serif" }}
             >
               {content.trustIntro || 'We believe patients should have access to clear information before making treatment decisions.'}
             </p>
@@ -282,7 +262,6 @@ const About = () => {
                   <span className="text-[#C5AF73] mt-0.5">✓</span>
                   <span
                     className="text-[13px] text-[#2a3439] leading-relaxed"
-                    style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                   >
                     {b}
                   </span>
@@ -311,19 +290,16 @@ const About = () => {
               <div key={i} className="rounded-2xl p-9 bg-[#eef3f7] border border-[#dbe4ec]">
                 <p
                   className="text-[#C5AF73] text-xs tracking-[0.25em] mb-4 font-semibold"
-                  style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                 >
                   {s.step}
                 </p>
                 <h3
                   className="text-[1.2rem] text-[#2a3439] mb-3.5"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
                 >
                   {s.title}
                 </h3>
                 <p
                   className="text-[13px] text-gray-500 leading-relaxed"
-                  style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                 >
                   {s.text}
                 </p>
@@ -333,7 +309,6 @@ const About = () => {
 
           <p
             className="mt-10 text-[13px] text-gray-400"
-            style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
           >
             {content.note}
           </p>
@@ -342,14 +317,12 @@ const About = () => {
             <Link
               to="/contact"
               className="px-7 py-3.5 rounded-full bg-[#d4af37] text-white text-sm font-semibold hover:bg-[#c19d30] transition"
-              style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
             >
               {content.startPrimaryCTA}
             </Link>
             <Link
               to="/contact"
               className="px-7 py-3.5 rounded-full border border-[#d4af37] text-[#2a3439] text-sm font-semibold hover:bg-[#eef3f7] transition"
-              style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
             >
               {content.startSecondaryCTA || 'Talk With Our Team'}
             </Link>

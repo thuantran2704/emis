@@ -217,7 +217,6 @@ export default function Footer() {
         {/* Brand statement */}
         <p
           className="mt-12 text-xl font-medium text-[#d4af37]"
-          style={{ fontFamily: "'Playfair Display', serif" }}
         >
           {nav.brandStatement}
         </p>

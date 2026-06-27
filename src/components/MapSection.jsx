@@ -6,7 +6,6 @@ export default function MapSection({ locationTitle, address }) {
       <div className="max-w-6xl mx-auto px-4 relative">
         <h2 
           className="text-3xl font-bold text-[#1f2937] mb-12 text-center border-b-2 border-[#d4af37] pb-2 inline-block"
-          style={{ fontFamily: "'Playfair Display', serif" }}
         >
           {locationTitle}
         </h2>
@@ -29,7 +28,6 @@ export default function MapSection({ locationTitle, address }) {
 
         <p 
           className="text-center text-gray-600 mt-4"
-          style={{ fontFamily: "'Cormorant', serif" }}
           itemProp="address"
         >
           {address}

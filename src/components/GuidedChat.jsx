@@ -4,7 +4,7 @@ import { MessageSquareText, X, RotateCcw, Phone, Clock3, ChevronRight, LifeBuoy 
 import { chatContent } from '../Translations/chatContent';
 import { faqContent } from '../Translations/faqContent';
 
-const eyebrowFont = { fontFamily: "'Be Vietnam Pro', sans-serif" };
+const eyebrowFont = {};
 
 export default function GuidedChat() {
   const language = useSelector((state) => state.language.language);

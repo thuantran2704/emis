@@ -363,14 +363,14 @@ const GenAd = () => {
               </div>
 
               {/* Main Title */}
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
                 {content.heroTitle}
               </h1>
 
               {/* Description */}
               <div className="space-y-4 mb-6">
-                <p className="text-lg text-[#d6e2ed]" style={{ fontFamily: "'Cormorant', serif" }}>{content.heroDescription}</p>
-                <p className="text-lg text-white font-semibold" style={{ fontFamily: "'Cormorant', serif" }}>{content.intro}</p>
+                <p className="text-lg text-[#d6e2ed]">{content.heroDescription}</p>
+                <p className="text-lg text-white font-semibold">{content.intro}</p>
               </div>
 
               {/* Quick Stats */}
@@ -448,11 +448,11 @@ const GenAd = () => {
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-[#C5AF73]">
               {isVI ? "ƯU ĐÃI THÁNG 6" : "JUNE OFFERS"}
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#16324a] mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#16324a] mb-3">
               {content.promoTitle}
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-[#C5AF73] to-[#d4af37] rounded-full mx-auto mb-4"></div>
-            <p className="text-gray-500 max-w-2xl mx-auto" style={{ fontFamily: "'Cormorant', serif" }}>
+            <p className="text-gray-500 max-w-2xl mx-auto">
               {isVI
                 ? "3 dịch vụ chính với ưu đãi đặc biệt trong tháng 6"
                 : "3 main services with special discounts throughout June"}
@@ -514,7 +514,7 @@ const GenAd = () => {
         {/* Highlights Section */}
         <div className="bg-white rounded-3xl shadow-sm p-8 mb-16 border border-[#e6ddc8]">
           <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#16324a] mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <h2 className="text-2xl md:text-3xl font-bold text-[#16324a] mb-2">
               {content.highlights.title}
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-[#C5AF73] to-[#d4af37] rounded-full mx-auto"></div>
@@ -526,7 +526,7 @@ const GenAd = () => {
                 key={idx}
                 className="bg-[#f7fafc] rounded-xl border border-[#dbe4ec] hover:border-[#C5AF73] transition-colors p-6"
               >
-                <h3 className="font-bold text-[#16324a] text-lg mb-4 text-center" style={{ fontFamily: "'Playfair Display', serif" }}>
+                <h3 className="font-bold text-[#16324a] text-lg mb-4 text-center">
                   {service.name}
                 </h3>
                 <ul className="space-y-3">
@@ -545,7 +545,7 @@ const GenAd = () => {
         {/* Why Choose Us */}
         <div className="bg-[#f1f5f9] rounded-3xl p-8 mb-16 border border-[#dbe4ec]">
           <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#16324a] mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <h2 className="text-2xl md:text-3xl font-bold text-[#16324a] mb-2">
               {content.whyChoose.title}
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-[#C5AF73] to-[#d4af37] rounded-full mx-auto"></div>
@@ -573,7 +573,7 @@ const GenAd = () => {
         {/* Process Section */}
         <div className="bg-[#f1f5f9] rounded-3xl p-8 mb-16 border border-[#dbe4ec]">
           <div className="text-center mb-8">
-            <h2 className="text-2xl font-bold text-[#16324a] mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <h2 className="text-2xl font-bold text-[#16324a] mb-2">
               {content.process.title}
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-[#C5AF73] to-[#d4af37] rounded-full mx-auto"></div>
@@ -603,10 +603,10 @@ const GenAd = () => {
         <div className="text-center mb-12">
           <div className="bg-gradient-to-r from-[#16324a] via-[#1d3953] to-[#2a3439] rounded-3xl p-8 md:p-10 shadow-lg">
             <Flag className="w-14 h-14 text-[#d4af37] mx-auto mb-6" />
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
               {content.cta.title}
             </h3>
-            <p className="text-[#d6e2ed] text-lg mb-8 max-w-2xl mx-auto" style={{ fontFamily: "'Cormorant', serif" }}>
+            <p className="text-[#d6e2ed] text-lg mb-8 max-w-2xl mx-auto">
               {content.cta.description}
             </p>
 
@@ -635,7 +635,7 @@ const GenAd = () => {
         {/* Contact & Service Links */}
         <div className="bg-white rounded-3xl shadow-sm p-8 border border-[#e6ddc8]">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-[#16324a] mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <h2 className="text-3xl font-bold text-[#16324a] mb-4">
               {isVI ? "NHA KHOA QUỐC TẾ EMIS DENTAL" : "EMIS INTERNATIONAL DENTAL CLINIC"}
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-[#C5AF73] to-[#d4af37] rounded-full mx-auto" />

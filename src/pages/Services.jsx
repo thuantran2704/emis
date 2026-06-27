@@ -208,7 +208,6 @@ export default function Services() {
       <div className="min-h-screen bg-[#f7f2e7] flex items-center justify-center">
         <p
           className="text-sm text-gray-400 tracking-[0.2em] uppercase"
-          style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
         >
           Loading…
         </p>
@@ -224,19 +223,16 @@ export default function Services() {
         <div className="max-w-5xl mx-auto px-8 text-center">
           <p
             className="uppercase tracking-[0.3em] text-[#C5AF73] mb-5 text-xs font-semibold"
-            style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
           >
             {columnLabels.eyebrow}
           </p>
           <h1
             className="text-4xl md:text-5xl text-[#2a3439] mb-6"
-            style={{ fontFamily: "'Playfair Display', serif" }}
           >
             {columnLabels.title}
           </h1>
           <p
             className="text-sm text-gray-400 leading-relaxed max-w-2xl mx-auto italic"
-            style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
           >
             {columnLabels.disclaimer}
           </p>
@@ -258,13 +254,11 @@ export default function Services() {
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder={columnLabels.search}
                 className="w-full pl-10 pr-5 py-3 rounded-full border border-[#d4af37]/40 bg-white text-sm text-[#2a3439] placeholder-gray-300 focus:outline-none focus:border-[#d4af37] transition"
-                style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
               />
             </div>
             {fxLastUpdated && (
               <p
                 className="text-xs text-gray-400 shrink-0"
-                style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
               >
                 FX updated: {new Date(fxLastUpdated).toLocaleString()}
               </p>
@@ -278,31 +272,26 @@ export default function Services() {
                 <tr className="border-b border-gray-100">
                   <th
                     className="px-6 py-4 text-left text-xs uppercase tracking-[0.2em] text-[#C5AF73] font-semibold w-44"
-                    style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                   >
                     {columnLabels.category}
                   </th>
                   <th
                     className="px-6 py-4 text-left text-xs uppercase tracking-[0.2em] text-[#C5AF73] font-semibold"
-                    style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                   >
                     {columnLabels.description}
                   </th>
                   <th
                     className="px-6 py-4 text-center text-xs uppercase tracking-[0.2em] text-[#C5AF73] font-semibold w-24"
-                    style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                   >
                     {columnLabels.unit}
                   </th>
                   <th
                     className="px-6 py-4 text-right text-xs uppercase tracking-[0.2em] text-[#C5AF73] font-semibold w-48"
-                    style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                   >
                     {columnLabels.priceVND}
                   </th>
                   <th
                     className="px-6 py-4 text-right text-xs uppercase tracking-[0.2em] text-gray-300 font-semibold w-40"
-                    style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                   >
                     {columnLabels.priceUSD}
                   </th>
@@ -320,7 +309,6 @@ export default function Services() {
                         <td
                           rowSpan={rows.length}
                           className="px-6 py-4 align-top"
-                          style={{ fontFamily: "'Playfair Display', serif" }}
                         >
                           <span className="text-[#2a3439] font-medium text-base leading-snug">
                             {cat}
@@ -329,25 +317,21 @@ export default function Services() {
                       )}
                       <td
                         className="px-6 py-4 text-gray-500"
-                        style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                       >
                         {r.desc}
                       </td>
                       <td
                         className="px-6 py-4 text-center text-gray-400"
-                        style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                       >
                         {r.unit}
                       </td>
                       <td
                         className="px-6 py-4 text-right font-semibold text-[#2a3439]"
-                        style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                       >
                         {r.priceVND}
                       </td>
                       <td
                         className="px-6 py-4 text-right text-gray-300"
-                        style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                       >
                         {r.priceUSD}
                       </td>

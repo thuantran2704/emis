@@ -12,13 +12,13 @@ export default function InternationalPatients() {
   const content = internationalPatientsContent[language] || internationalPatientsContent.english;
 
   const SectionLabel = ({ children }) => (
-    <p className="mb-4 text-[9px] font-semibold uppercase tracking-[0.3em] text-[#C5AF73] lg:mb-6 lg:text-[10px] lg:tracking-[0.34em]" style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}>
+    <p className="mb-4 text-[9px] font-semibold uppercase tracking-[0.3em] text-[#C5AF73] lg:mb-6 lg:text-[10px] lg:tracking-[0.34em]">
       {children}
     </p>
   );
 
   const SectionTitle = ({ children }) => (
-    <h2 className="mb-5 text-[1.45rem] leading-[1.1] text-[#2a3439] lg:mb-8 lg:text-[2.1rem]" style={{ fontFamily: "'Playfair Display', serif" }}>
+    <h2 className="mb-5 text-[1.45rem] leading-[1.1] text-[#2a3439] lg:mb-8 lg:text-[2.1rem]">
       {children}
     </h2>
   );
@@ -30,7 +30,7 @@ export default function InternationalPatients() {
     const className = `${baseClass} ${variant === 'primary' ? primaryClass : secondaryClass}`;
     
     return (
-      <Link to={href} className={className} style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}>
+      <Link to={href} className={className}>
         {children}
       </Link>
     );
@@ -47,10 +47,10 @@ export default function InternationalPatients() {
       <section className="mx-auto max-w-6xl px-5 py-20 lg:px-12 lg:py-36">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           <div>
-            <h1 className="mb-7 max-w-2xl text-[1.55rem] leading-[1.08] text-[#2a3439] lg:mb-10 lg:text-[2.7rem]" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <h1 className="mb-7 max-w-2xl text-[1.55rem] leading-[1.08] text-[#2a3439] lg:mb-10 lg:text-[2.7rem]">
               {content.heroTitle}
             </h1>
-            <p className="mb-10 max-w-xl text-[13px] leading-6 text-gray-600 lg:mb-12 lg:text-[0.98rem] lg:leading-8" style={{ fontFamily: "'Cormorant', serif" }}>
+            <p className="mb-10 max-w-xl text-[13px] leading-6 text-gray-600 lg:mb-12 lg:text-[0.98rem] lg:leading-8">
               {content.heroSubtitle}
             </p>
             <div className="flex gap-4 flex-wrap">
@@ -89,7 +89,7 @@ export default function InternationalPatients() {
         <SectionTitle>{content.beforeTravelTitle}</SectionTitle>
         <div className="grid gap-8 lg:grid-cols-2 lg:gap-16">
           <div>
-            <p className="mb-5 max-w-2xl text-[14px] leading-6 text-gray-600 lg:mb-7 lg:text-[1rem] lg:leading-8" style={{ fontFamily: "'Cormorant', serif" }}>
+            <p className="mb-5 max-w-2xl text-[14px] leading-6 text-gray-600 lg:mb-7 lg:text-[1rem] lg:leading-8">
               {content.beforeTravelText}
             </p>
             <ul className="space-y-3 lg:space-y-4">
@@ -134,14 +134,14 @@ export default function InternationalPatients() {
       <section className="mx-auto max-w-6xl px-5 py-16 lg:px-12 lg:py-32">
         <SectionLabel>Support</SectionLabel>
         <SectionTitle>{content.communicationTitle}</SectionTitle>
-        <p className="mb-8 max-w-2xl text-[14px] leading-6 text-gray-600 lg:mb-14 lg:text-[1rem] lg:leading-8" style={{ fontFamily: "'Cormorant', serif" }}>
+        <p className="mb-8 max-w-2xl text-[14px] leading-6 text-gray-600 lg:mb-14 lg:text-[1rem] lg:leading-8">
           {content.communicationIntro} Our team is experienced in supporting international patients and can coordinate treatment planning, logistics, and follow-up care.
         </p>
         <div className="grid gap-5 lg:grid-cols-2 lg:gap-8">
           <div className="group h-full rounded-2xl border border-[#d8e2eb] bg-gradient-to-br from-[#ffffff] to-[#eef4f8] p-5 shadow-sm transition hover:shadow-md lg:p-9">
             <div className="mb-5 flex items-center gap-3 lg:mb-7">
               <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#d4af37] text-[14px] text-white lg:h-10 lg:w-10 lg:text-[15px]">✦</div>
-              <h3 className="text-[1.05rem] font-semibold text-[#1f2e35] lg:text-[1.35rem]" style={{ fontFamily: "'Playfair Display', serif" }}>
+              <h3 className="text-[1.05rem] font-semibold text-[#1f2e35] lg:text-[1.35rem]">
                 {content.communicationHeading}
               </h3>
             </div>
@@ -156,7 +156,7 @@ export default function InternationalPatients() {
           <div className="group h-full rounded-2xl border border-[#d8e2eb] bg-gradient-to-br from-[#ffffff] to-[#eef4f8] p-5 shadow-sm transition hover:shadow-md lg:p-9">
             <div className="mb-5 flex items-center gap-3 lg:mb-7">
               <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#2a3439] text-[14px] text-white lg:h-10 lg:w-10 lg:text-[15px]">✈</div>
-              <h3 className="text-[1.05rem] font-semibold text-[#1f2e35] lg:text-[1.35rem]" style={{ fontFamily: "'Playfair Display', serif" }}>
+              <h3 className="text-[1.05rem] font-semibold text-[#1f2e35] lg:text-[1.35rem]">
                 {content.travelSupportHeading}
               </h3>
             </div>
@@ -176,7 +176,7 @@ export default function InternationalPatients() {
         <div className="max-w-6xl mx-auto px-6 md:px-12">
           <SectionLabel>Ongoing Care</SectionLabel>
           <SectionTitle>{content.afterTitle}</SectionTitle>
-          <p className="mb-8 max-w-2xl text-[14px] leading-6 text-gray-600 lg:mb-14 lg:text-[1rem] lg:leading-8" style={{ fontFamily: "'Cormorant', serif" }}>
+          <p className="mb-8 max-w-2xl text-[14px] leading-6 text-gray-600 lg:mb-14 lg:text-[1rem] lg:leading-8">
             {content.afterIntro}
           </p>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
@@ -196,7 +196,7 @@ export default function InternationalPatients() {
       <section className="mx-auto max-w-6xl px-5 py-16 lg:px-12 lg:py-32">
         <SectionLabel>Stories</SectionLabel>
         <SectionTitle>{content.journeysTitle}</SectionTitle>
-        <p className="mb-8 max-w-2xl text-[14px] leading-6 text-gray-600 lg:mb-14 lg:text-[1rem] lg:leading-8" style={{ fontFamily: "'Cormorant', serif" }}>
+        <p className="mb-8 max-w-2xl text-[14px] leading-6 text-gray-600 lg:mb-14 lg:text-[1rem] lg:leading-8">
           {content.journeysIntro} See how EMIS has helped patients from around the world. EMIS offers a wide range of <Link to="/services" className="text-[#d4af37] font-semibold hover:text-[#c19d30] transition">dental treatment services</Link> to meet diverse needs.
         </p>
         <div className="mb-8 grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-6">
@@ -217,7 +217,7 @@ export default function InternationalPatients() {
               </div>
               <div className="p-4 landscape:p-5 lg:p-7">
                 <p className="mb-1.5 text-[8px] font-semibold uppercase tracking-[0.16em] text-[#C5AF73] landscape:text-[9px] lg:mb-2 lg:text-[10px] lg:tracking-[0.24em]">{story.location}</p>
-                <h3 className="mb-1.5 text-[13px] font-semibold text-[#2a3439] landscape:text-[15px] lg:mb-2 lg:text-[1rem]" style={{ fontFamily: "'Playfair Display', serif" }}>{story.name}</h3>
+                <h3 className="mb-1.5 text-[13px] font-semibold text-[#2a3439] landscape:text-[15px] lg:mb-2 lg:text-[1rem]">{story.name}</h3>
                 <p className="mb-1.5 text-[9px] font-semibold uppercase tracking-[0.04em] text-[#d4af37] landscape:text-[10px] lg:mb-2 lg:text-[12px] lg:tracking-[0.08em]">{story.treatment}</p>
                 <p className="text-[11px] leading-5 text-gray-600 landscape:text-[12px] landscape:leading-6 lg:text-[14px] lg:leading-7">{story.description}</p>
               </div>
@@ -226,7 +226,7 @@ export default function InternationalPatients() {
           })}
         </div>
         <div className="text-center">
-          <Link to="/contact" className="inline-block rounded-full border border-[#d4af37] px-4 py-2.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#2a3439] transition hover:bg-white lg:px-6 lg:py-3 lg:text-[11px] lg:tracking-[0.16em]" style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}>
+          <Link to="/contact" className="inline-block rounded-full border border-[#d4af37] px-4 py-2.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#2a3439] transition hover:bg-white lg:px-6 lg:py-3 lg:text-[11px] lg:tracking-[0.16em]">
             {content.journeysCTA}
           </Link>
         </div>
@@ -235,10 +235,10 @@ export default function InternationalPatients() {
       {/* CTA FOOTER */}
       <section className="bg-white py-16 lg:py-32">
         <div className="max-w-4xl mx-auto px-6 md:px-12 text-center">
-          <h2 className="mb-5 text-[1.45rem] leading-[1.1] text-[#2a3439] lg:mb-7 lg:text-[2.1rem]" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h2 className="mb-5 text-[1.45rem] leading-[1.1] text-[#2a3439] lg:mb-7 lg:text-[2.1rem]">
             {content.ctaTitle}
           </h2>
-          <p className="mb-7 text-[14px] leading-6 text-gray-600 lg:mb-10 lg:text-[1rem] lg:leading-8" style={{ fontFamily: "'Cormorant', serif" }}>
+          <p className="mb-7 text-[14px] leading-6 text-gray-600 lg:mb-10 lg:text-[1rem] lg:leading-8">
             {content.ctaText}
           </p>
           <div className="flex gap-4 justify-center flex-wrap">

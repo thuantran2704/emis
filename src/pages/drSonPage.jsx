@@ -23,7 +23,6 @@ export default function SonPage() {
   const SectionLabel = ({ children }) => (
     <p
       className="uppercase tracking-[0.3em] text-[#C5AF73] mb-5 text-xs font-semibold"
-      style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
     >
       {children}
     </p>
@@ -39,13 +38,11 @@ export default function SonPage() {
           <SectionLabel>Meet the Doctor</SectionLabel>
           <h1
             className="text-4xl md:text-5xl text-[#2a3439] mb-8 leading-tight"
-            style={{ fontFamily: "'Playfair Display', serif" }}
           >
             {content.title}
           </h1>
           <p
             className="text-lg md:text-xl text-gray-500 leading-relaxed max-w-2xl mx-auto"
-            style={{ fontFamily: "'Cormorant', serif" }}
           >
             {content.subtitle}
           </p>
@@ -71,7 +68,6 @@ export default function SonPage() {
         <div className="max-w-3xl mx-auto px-8">
           <p
             className="text-xl text-gray-500 leading-relaxed"
-            style={{ fontFamily: "'Cormorant', serif" }}
           >
             {content.introParagraph}
           </p>
@@ -84,7 +80,6 @@ export default function SonPage() {
           <SectionLabel>Overview</SectionLabel>
           <h2
             className="text-3xl text-[#2a3439] mb-10"
-            style={{ fontFamily: "'Playfair Display', serif" }}
           >
             {content.professionalInfo.title}
           </h2>
@@ -94,7 +89,6 @@ export default function SonPage() {
                 <span className="text-[#C5AF73] text-xs mt-1">●</span>
                 <span
                   className="text-sm text-[#2a3439] leading-relaxed"
-                  style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                 >
                   {item}
                 </span>
@@ -111,7 +105,6 @@ export default function SonPage() {
             <SectionLabel>Education</SectionLabel>
             <h2
               className="text-3xl text-[#2a3439]"
-              style={{ fontFamily: "'Playfair Display', serif" }}
             >
               {content.education.title}
             </h2>
@@ -121,13 +114,11 @@ export default function SonPage() {
             <div className="h-full bg-white rounded-2xl p-8 shadow-sm">
               <h3
                 className="text-lg text-[#2a3439] mb-5"
-                style={{ fontFamily: "'Playfair Display', serif" }}
               >
                 {content.education.formalEducationTitle}
               </h3>
               <p
                 className="text-sm text-gray-500 leading-relaxed"
-                style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
               >
                 {content.education.formalEducation}
               </p>
@@ -136,7 +127,6 @@ export default function SonPage() {
             <div className="h-full bg-white rounded-2xl p-8 shadow-sm">
               <h3
                 className="text-lg text-[#2a3439] mb-5"
-                style={{ fontFamily: "'Playfair Display', serif" }}
               >
                 {content.education.advancedTrainingTitle}
               </h3>
@@ -146,7 +136,6 @@ export default function SonPage() {
                     <span className="text-[#C5AF73] text-xs mt-1">●</span>
                     <span
                       className="text-sm text-gray-500 leading-relaxed"
-                      style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                     >
                       {item}
                     </span>
@@ -181,13 +170,11 @@ export default function SonPage() {
           <SectionLabel>Experience</SectionLabel>
           <h2
             className="text-3xl text-[#2a3439] mb-10"
-            style={{ fontFamily: "'Playfair Display', serif" }}
           >
             {content.clinicalExperience.title}
           </h2>
           <p
             className="text-lg text-gray-500 leading-relaxed"
-            style={{ fontFamily: "'Cormorant', serif" }}
           >
             {content.clinicalExperience.content}
           </p>
@@ -200,21 +187,18 @@ export default function SonPage() {
           <SectionLabel>Philosophy</SectionLabel>
           <h2
             className="text-3xl text-[#2a3439] mb-12"
-            style={{ fontFamily: "'Playfair Display', serif" }}
           >
             {content.philosophy.title}
           </h2>
 
           <blockquote
             className="text-2xl text-gray-400 italic text-center border-y border-[#d4af37]/20 py-10 mb-14 leading-relaxed"
-            style={{ fontFamily: "'Cormorant', serif" }}
           >
             {content.philosophy.quote}
           </blockquote>
 
           <h3
             className="text-lg text-[#2a3439] mb-8"
-            style={{ fontFamily: "'Playfair Display', serif" }}
           >
             {content.philosophy.coreValuesTitle}
           </h3>
@@ -226,13 +210,11 @@ export default function SonPage() {
               >
                 <span
                   className="text-[#C5AF73] text-xs font-semibold tracking-widest mt-0.5 shrink-0"
-                  style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                 >
                   0{idx + 1}
                 </span>
                 <span
                   className="text-sm text-[#2a3439] leading-relaxed"
-                  style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                 >
                   {val}
                 </span>
@@ -248,7 +230,6 @@ export default function SonPage() {
           <SectionLabel>Testimonials</SectionLabel>
           <h2
             className="text-3xl text-[#2a3439] mb-12"
-            style={{ fontFamily: "'Playfair Display', serif" }}
           >
             {content.testimonials.title}
           </h2>
@@ -257,13 +238,11 @@ export default function SonPage() {
             <div className="bg-white rounded-2xl p-8 shadow-sm">
               <p
                 className="text-lg text-gray-500 italic leading-relaxed mb-6"
-                style={{ fontFamily: "'Cormorant', serif" }}
               >
                 {content.testimonials.patientReview}
               </p>
               <p
                 className="text-xs text-[#C5AF73] font-semibold uppercase tracking-widest"
-                style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
               >
                 — {content.testimonials.patientLabel}
               </p>
@@ -272,13 +251,11 @@ export default function SonPage() {
             <div className="bg-white rounded-2xl p-8 shadow-sm">
               <p
                 className="text-lg text-gray-500 italic leading-relaxed mb-6"
-                style={{ fontFamily: "'Cormorant', serif" }}
               >
                 {content.testimonials.colleagueReview}
               </p>
               <p
                 className="text-xs text-[#C5AF73] font-semibold uppercase tracking-widest"
-                style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
               >
                 — {content.testimonials.colleagueLabel}
               </p>
@@ -293,26 +270,22 @@ export default function SonPage() {
           <SectionLabel>Book a Consultation</SectionLabel>
           <h2
             className="text-3xl text-[#2a3439] mb-6"
-            style={{ fontFamily: "'Playfair Display', serif" }}
           >
             {content.cta.title}
           </h2>
           <p
             className="text-lg text-gray-500 leading-relaxed mb-4"
-            style={{ fontFamily: "'Cormorant', serif" }}
           >
             {content.cta.content}
           </p>
           <p
             className="text-sm text-gray-400 mb-12"
-            style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
           >
             {content.cta.question}
           </p>
           <a
             href="/contact"
             className="inline-flex px-8 py-4 rounded-full bg-[#d4af37] text-white text-sm font-semibold hover:bg-[#c19d30] transition"
-            style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
           >
             {content.cta.button}
           </a>
@@ -323,13 +296,13 @@ export default function SonPage() {
       <section className="py-28 bg-[#f7f2e7]">
         <div className="max-w-3xl mx-auto px-8">
           <SectionLabel>Certifications</SectionLabel>
-          <h2 className="text-3xl text-[#2a3439] mb-10" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h2 className="text-3xl text-[#2a3439] mb-10">
             {content.certification.title}
           </h2>
           <div className="rounded-2xl overflow-hidden shadow-sm">
             <img src={sonPapers} alt={content.certification.title} className="w-full object-cover" />
           </div>
-          <p className="mt-5 text-sm text-gray-400 text-center italic" style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}>
+          <p className="mt-5 text-sm text-gray-400 text-center italic">
             {content.certification.description}
           </p>
         </div>

@@ -150,27 +150,25 @@ export default function VeneerLanding() {
       <section className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-8 grid lg:grid-cols-[1.2fr_0.8fr] gap-10 lg:gap-14 items-center">
           <div className="space-y-6">
-            <p className={sectionLabelClass} style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}>
+            <p className={sectionLabelClass}>
               {copy.label}
             </p>
-            <h1 className={titleClass} style={{ fontFamily: "'Playfair Display', serif" }}>
+            <h1 className={titleClass}>
               {copy.heroTitle}
             </h1>
-            <p className={bodyClass} style={{ fontFamily: "'Cormorant', serif" }}>
+            <p className={bodyClass}>
               {copy.heroIntro}
             </p>
             <div className="flex flex-col sm:flex-row gap-3 pt-2">
               <Link
                 to="/contact"
                 className="px-7 py-3.5 rounded-full bg-[#d4af37] text-white text-sm font-semibold hover:bg-[#c19d30] transition text-center"
-                style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
               >
                 {copy.heroPrimary}
               </Link>
               <Link
                 to="/contact"
                 className="px-7 py-3.5 rounded-full border border-[#d4af37] text-[#2a3439] text-sm hover:bg-[#f1f5f9] transition text-center"
-                style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
               >
                 {copy.heroSecondary}
               </Link>
@@ -185,14 +183,14 @@ export default function VeneerLanding() {
       <section className="py-24 bg-[#f7fafc]">
         <div className="max-w-6xl mx-auto px-8 grid lg:grid-cols-2 gap-10 items-start">
           <div>
-            <h2 className={titleClass} style={{ fontFamily: "'Playfair Display', serif" }}>
+            <h2 className={titleClass}>
               {copy.whoTitle}
             </h2>
             <div className="mt-6 space-y-3">
               {copy.whoItems.map((item) => (
                 <div key={item} className="flex gap-3 items-start text-[#2a3439]">
                   <span className="mt-1.5 w-2 h-2 rounded-full bg-[#d4af37]" />
-                  <p className={bodyClass} style={{ fontFamily: "'Cormorant', serif" }}>
+                  <p className={bodyClass}>
                     {item}
                   </p>
                 </div>
@@ -207,16 +205,16 @@ export default function VeneerLanding() {
 
       <section className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-8">
-          <h2 className={titleClass + ' mb-8 text-center'} style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h2 className={titleClass + ' mb-8 text-center'}>
             {copy.benefitsTitle}
           </h2>
           <div className="grid md:grid-cols-2 gap-5">
             {copy.benefits.map((benefit) => (
               <article key={benefit.title} className="rounded-2xl border border-[#dbe4ec] bg-[#f7fafc] p-6">
-                <h3 className="text-[1.1rem] text-[#2a3439] mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
+                <h3 className="text-[1.1rem] text-[#2a3439] mb-2">
                   {benefit.title}
                 </h3>
-                <p className="text-[14px] text-gray-600 leading-relaxed" style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}>
+                <p className="text-[14px] text-gray-600 leading-relaxed">
                   {benefit.desc}
                 </p>
               </article>
@@ -227,16 +225,16 @@ export default function VeneerLanding() {
 
       <section className="py-24 bg-[#f1f5f9]">
         <div className="max-w-6xl mx-auto px-8">
-          <h2 className={titleClass + ' mb-8'} style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h2 className={titleClass + ' mb-8'}>
             {copy.processTitle}
           </h2>
           <div className="grid md:grid-cols-2 gap-4">
             {copy.processSteps.map((step, idx) => (
               <div key={step} className="rounded-xl bg-white border border-[#dbe4ec] px-5 py-4">
-                <p className="text-[11px] uppercase tracking-[0.2em] text-[#C5AF73] mb-2" style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}>
+                <p className="text-[11px] uppercase tracking-[0.2em] text-[#C5AF73] mb-2">
                   Step {idx + 1}
                 </p>
-                <p className="text-[15px] text-[#2a3439]" style={{ fontFamily: "'Cormorant', serif" }}>
+                <p className="text-[15px] text-[#2a3439]">
                   {step}
                 </p>
               </div>
@@ -247,7 +245,7 @@ export default function VeneerLanding() {
 
       <section className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-8">
-          <h2 className={titleClass + ' mb-8 text-center'} style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h2 className={titleClass + ' mb-8 text-center'}>
             {copy.galleryTitle}
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -266,16 +264,15 @@ export default function VeneerLanding() {
 
       <section className="py-24 bg-[#f7fafc]">
         <div className="max-w-4xl mx-auto px-8 text-center">
-          <h2 className={titleClass + ' mb-5'} style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h2 className={titleClass + ' mb-5'}>
             {copy.ctaTitle}
           </h2>
-          <p className={bodyClass + ' mb-8'} style={{ fontFamily: "'Cormorant', serif" }}>
+          <p className={bodyClass + ' mb-8'}>
             {copy.ctaText}
           </p>
           <Link
             to="/contact"
             className="inline-flex px-8 py-3.5 rounded-full bg-[#d4af37] text-white text-sm font-semibold hover:bg-[#c19d30] transition"
-            style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
           >
             {copy.ctaButton}
           </Link>

@@ -44,15 +44,15 @@ const OralSurgery = () => {
             </div>
 
             <div className="order-2 lg:order-1 space-y-6">
-              <p className={sectionLabelClass} style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}>
+              <p className={sectionLabelClass}>
                 {content.section1.eyebrow || 'ORAL SURGERY'}
               </p>
 
-              <h1 className={titleClass} style={{ fontFamily: "'Playfair Display', serif" }}>
+              <h1 className={titleClass}>
                 {content.section1.title}
               </h1>
 
-              <p className={bodyClass} style={{ fontFamily: "'Cormorant', serif" }}>
+              <p className={bodyClass}>
                 {content.section1.intro}
               </p>
 
@@ -60,14 +60,12 @@ const OralSurgery = () => {
                 <Link
                   to="/contact"
                   className="px-7 py-3.5 rounded-full bg-[#d4af37] text-white text-sm font-semibold hover:bg-[#c19d30] transition text-center"
-                  style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                 >
                   {content.section1.primaryCta}
                 </Link>
                 <Link
                   to="/contact"
                   className="px-7 py-3.5 rounded-full border border-[#d4af37] text-[#2a3439] text-sm hover:bg-[#f1f5f9] transition text-center"
-                  style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                 >
                   {content.section1.secondaryCta}
                 </Link>
@@ -82,14 +80,14 @@ const OralSurgery = () => {
         <div className="max-w-5xl mx-auto px-8">
           <div className="max-w-2xl mx-auto text-center mb-16 lg:mb-20">
             {showSection2Eyebrow && (
-              <p className={sectionLabelClass} style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}>
+              <p className={sectionLabelClass}>
                 {content.section2.eyebrow}
               </p>
             )}
-            <h2 className={titleClass} style={{ fontFamily: "'Playfair Display', serif" }}>
+            <h2 className={titleClass}>
               {content.section2.title}
             </h2>
-            <p className={bodyClass} style={{ fontFamily: "'Cormorant', serif" }}>
+            <p className={bodyClass}>
               {content.section2.intro}
             </p>
           </div>
@@ -100,7 +98,7 @@ const OralSurgery = () => {
                 {content.section2.checklist.map((item, i) => (
                   <div key={i} className={checklistItemClass}>
                     <CheckCircle size={20} className="text-[#d4af37] flex-shrink-0 mt-1" />
-                    <span style={{ fontFamily: "'Cormorant', serif" }}>{item}</span>
+                    <span>{item}</span>
                   </div>
                 ))}
               </div>
@@ -121,13 +119,13 @@ const OralSurgery = () => {
       <section className="py-20 lg:py-32 bg-[#f7fafc]">
         <div className="max-w-5xl mx-auto px-8">
           <div className="max-w-2xl mx-auto text-center mb-16 lg:mb-20">
-            <p className={sectionLabelClass} style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}>
+            <p className={sectionLabelClass}>
               {content.section3.eyebrow}
             </p>
-            <h2 className={titleClass} style={{ fontFamily: "'Playfair Display', serif" }}>
+            <h2 className={titleClass}>
               {content.section3.title}
             </h2>
-            <p className={bodyClass} style={{ fontFamily: "'Cormorant', serif" }}>
+            <p className={bodyClass}>
               {content.section3.description}
             </p>
           </div>
@@ -138,7 +136,7 @@ const OralSurgery = () => {
                 {content.section3.checklist.map((item, i) => (
                   <div key={i} className={checklistItemClass}>
                     <CheckCircle size={20} className="text-[#d4af37] flex-shrink-0 mt-1" />
-                    <span style={{ fontFamily: "'Cormorant', serif" }}>{item}</span>
+                    <span>{item}</span>
                   </div>
                 ))}
               </div>
@@ -159,13 +157,13 @@ const OralSurgery = () => {
       <section className="py-20 lg:py-32 bg-white">
         <div className="max-w-5xl mx-auto px-8">
           <div className="max-w-2xl mx-auto text-center mb-16">
-            <p className={sectionLabelClass} style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}>
+            <p className={sectionLabelClass}>
               {content.section4.eyebrow}
             </p>
-            <h2 className={titleClass} style={{ fontFamily: "'Playfair Display', serif" }}>
+            <h2 className={titleClass}>
               {content.section4.title}
             </h2>
-            <p className={bodyClass} style={{ fontFamily: "'Cormorant', serif" }}>
+            <p className={bodyClass}>
               {content.section4.intro}
             </p>
           </div>
@@ -177,7 +175,6 @@ const OralSurgery = () => {
                   <div className="bg-[#f7fafc] p-6 rounded-lg text-center">
                     <p
                       className="text-lg font-semibold text-[#2a3439]"
-                      style={{ fontFamily: "'Cormorant', serif" }}
                     >
                       {step}
                     </p>
@@ -198,27 +195,26 @@ const OralSurgery = () => {
       <section className="py-20 lg:py-32 bg-[#f7fafc]">
         <div className="max-w-5xl mx-auto px-8">
           <div className="max-w-2xl mx-auto">
-            <p className={sectionLabelClass} style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}>
+            <p className={sectionLabelClass}>
               {content.section5.eyebrow}
             </p>
-            <h2 className={titleClass + ' mb-6'} style={{ fontFamily: "'Playfair Display', serif" }}>
+            <h2 className={titleClass + ' mb-6'}>
               {content.section5.title}
             </h2>
             <div className="space-y-4 mb-8">
-              <p className={bodyClass} style={{ fontFamily: "'Cormorant', serif" }}>
+              <p className={bodyClass}>
                 {content.section5.intro}
               </p>
-              <p className={bodyClass} style={{ fontFamily: "'Cormorant', serif" }}>
+              <p className={bodyClass}>
                 {content.section5.description}
               </p>
-              <p className={bodyClass} style={{ fontFamily: "'Cormorant', serif" }}>
+              <p className={bodyClass}>
                 {content.section5.additional}
               </p>
             </div>
             <Link
               to="/international-patients"
               className="inline-flex items-center gap-2 text-[#d4af37] hover:text-[#c19d30] font-semibold"
-              style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
             >
               {content.section5.cta}
               <ArrowRight size={16} />
@@ -231,19 +227,18 @@ const OralSurgery = () => {
       <section className="py-20 lg:py-32 bg-white">
         <div className="max-w-5xl mx-auto px-8">
           <div className="max-w-2xl mx-auto">
-            <p className={sectionLabelClass} style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}>
+            <p className={sectionLabelClass}>
               {content.section6.eyebrow}
             </p>
-            <h2 className={titleClass + ' mb-6'} style={{ fontFamily: "'Playfair Display', serif" }}>
+            <h2 className={titleClass + ' mb-6'}>
               {content.section6.title}
             </h2>
-            <p className={bodyClass + ' mb-8'} style={{ fontFamily: "'Cormorant', serif" }}>
+            <p className={bodyClass + ' mb-8'}>
               {content.section6.intro}
             </p>
             <Link
               to="/contact"
               className="inline-flex items-center gap-2 text-[#d4af37] hover:text-[#c19d30] font-semibold"
-              style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
             >
               {content.section6.cta}
               <ArrowRight size={16} />
@@ -256,10 +251,10 @@ const OralSurgery = () => {
       <section className="py-20 lg:py-32 bg-[#f7fafc]">
         <div className="max-w-5xl mx-auto px-8">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className={titleClass + ' mb-6'} style={{ fontFamily: "'Playfair Display', serif" }}>
+            <h2 className={titleClass + ' mb-6'}>
               {content.section7.title}
             </h2>
-            <p className={bodyClass + ' mb-8'} style={{ fontFamily: "'Cormorant', serif" }}>
+            <p className={bodyClass + ' mb-8'}>
               {content.section7.intro}
             </p>
 
@@ -267,14 +262,12 @@ const OralSurgery = () => {
               <Link
                 to="/contact"
                 className="px-7 py-3.5 rounded-full bg-[#d4af37] text-white text-sm font-semibold hover:bg-[#c19d30] transition text-center"
-                style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
               >
                 {content.section7.primaryCta}
               </Link>
               <Link
                 to="/contact"
                 className="px-7 py-3.5 rounded-full border border-[#d4af37] text-[#2a3439] text-sm hover:bg-white transition text-center"
-                style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
               >
                 {content.section7.secondaryCta}
               </Link>
@@ -282,7 +275,6 @@ const OralSurgery = () => {
 
             <p
               className="text-sm text-gray-500 italic"
-              style={{ fontFamily: "'Cormorant', serif" }}
             >
               {content.section7.note}
             </p>

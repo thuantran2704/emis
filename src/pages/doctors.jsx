@@ -40,21 +40,18 @@ const Doctors = () => {
             <div className="order-2 lg:order-1 space-y-6">
               <p
                 className="uppercase tracking-[0.3em] text-[#C5AF73] text-xs font-semibold"
-                style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
               >
                 {content.hero.eyebrow}
               </p>
 
               <h1
                 className="text-4xl md:text-5xl text-[#2a3439] leading-tight"
-                style={{ fontFamily: "'Playfair Display', serif" }}
               >
                 {content.hero.title}
               </h1>
 
               <p
                 className="text-lg text-gray-500 leading-relaxed max-w-md"
-                style={{ fontFamily: "'Cormorant', serif" }}
               >
                 {content.hero.subtitle}
               </p>
@@ -64,7 +61,6 @@ const Doctors = () => {
                   <div
                     key={index}
                     className="flex items-center gap-3"
-                    style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                   >
                     <span className="text-[#C5AF73] text-xs">●</span>
                     <span className="text-[#2a3439] text-sm font-medium">{item}</span>
@@ -76,14 +72,12 @@ const Doctors = () => {
                 <Link
                   to="/contact"
                   className="px-7 py-3.5 rounded-full bg-[#d4af37] text-white text-sm font-semibold hover:bg-[#c19d30] transition text-center"
-                  style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                 >
                   {content.hero.primaryCTA}
                 </Link>
                 <Link
                   to="/contact"
                   className="px-7 py-3.5 rounded-full border border-[#d4af37] text-[#2a3439] text-sm hover:bg-white transition text-center"
-                  style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                 >
                   {content.hero.secondaryCTA}
                 </Link>
@@ -101,19 +95,16 @@ const Doctors = () => {
           <div className="max-w-2xl mx-auto text-center mb-24">
             <p
               className="uppercase tracking-[0.3em] text-[#C5AF73] mb-5 text-xs font-semibold"
-              style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
             >
               {content.journeySection.eyebrow}
             </p>
             <h2
               className="text-4xl text-[#2a3439] mb-6"
-              style={{ fontFamily: "'Playfair Display', serif" }}
             >
               {content.journeySection.title}
             </h2>
             <p
               className="text-lg text-gray-500 leading-relaxed"
-              style={{ fontFamily: "'Cormorant', serif" }}
             >
               {content.journeySection.subtitle}
             </p>
@@ -124,19 +115,16 @@ const Doctors = () => {
               <div key={index} className="bg-[#f7f2e7] rounded-2xl p-8">
                 <p
                   className="text-[#C5AF73] text-xs tracking-[0.25em] mb-5 font-semibold"
-                  style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                 >
                   {card.number}
                 </p>
                 <h3
                   className="text-xl text-[#2a3439] mb-4"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
                 >
                   {card.title}
                 </h3>
                 <p
                   className="text-sm text-gray-500 leading-relaxed"
-                  style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                 >
                   {card.description}
                 </p>
@@ -154,19 +142,16 @@ const Doctors = () => {
           <div className="max-w-2xl mx-auto text-center mb-24">
             <p
               className="uppercase tracking-[0.3em] text-[#C5AF73] mb-5 text-xs font-semibold"
-              style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
             >
               {content.doctorSection.eyebrow}
             </p>
             <h2
               className="text-4xl text-[#2a3439] mb-6"
-              style={{ fontFamily: "'Playfair Display', serif" }}
             >
               {content.doctorSection.title}
             </h2>
             <p
               className="text-lg text-gray-500 leading-relaxed"
-              style={{ fontFamily: "'Cormorant', serif" }}
             >
               {content.doctorSection.subtitle}
             </p>
@@ -186,31 +171,26 @@ const Doctors = () => {
                 <div className="p-7 lg:p-8 flex flex-col flex-grow">
                   <h3
                     className="text-xl lg:text-2xl text-[#2a3439] mb-1.5"
-                    style={{ fontFamily: "'Playfair Display', serif" }}
                   >
                     {doctor.name}
                   </h3>
                   <p
                     className="text-[#C5AF73] text-sm font-semibold mb-2"
-                    style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                   >
                     {doctor.role}
                   </p>
                   <p
                     className="text-[10px] lg:text-xs uppercase tracking-widest text-gray-400 mb-5 lg:mb-6"
-                    style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                   >
                     {doctor.specialties}
                   </p>
                   <p
                     className="text-sm text-gray-500 leading-relaxed mb-3"
-                    style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                   >
                     {doctor.descriptionOne}
                   </p>
                   <p
                     className="text-sm text-gray-500 leading-relaxed mb-6 lg:mb-7"
-                    style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                   >
                     {doctor.descriptionTwo}
                   </p>
@@ -220,7 +200,6 @@ const Doctors = () => {
                         <span className="text-[#C5AF73] text-xs">●</span>
                         <span
                           className="text-[#2a3439] text-sm"
-                          style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                         >
                           {highlight}
                         </span>
@@ -231,7 +210,6 @@ const Doctors = () => {
                     <Link
                       to="/contact"
                       className="inline-flex px-5 py-2.5 rounded-full border border-[#d4af37] text-[#2a3439] text-sm hover:bg-[#d4af37] hover:text-white transition"
-                      style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                     >
                       {doctor.cta}
                     </Link>
@@ -273,21 +251,18 @@ const Doctors = () => {
             <div className="w-full max-w-2xl space-y-5 lg:space-y-6 text-center lg:text-left">
               <p
                 className="uppercase tracking-[0.3em] text-[#C5AF73] text-xs font-semibold"
-                style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
               >
                 {content.decisionSection.eyebrow}
               </p>
 
               <h2
                 className="text-4xl text-[#2a3439] leading-tight"
-                style={{ fontFamily: "'Playfair Display', serif" }}
               >
                 {content.decisionSection.title}
               </h2>
 
               <p
                 className="text-lg text-gray-500 leading-relaxed"
-                style={{ fontFamily: "'Cormorant', serif" }}
               >
                 {content.decisionSection.subtitle}
               </p>
@@ -296,14 +271,12 @@ const Doctors = () => {
                 <Link
                   to="/contact"
                   className="px-7 py-3.5 rounded-full bg-[#d4af37] text-white text-sm font-semibold hover:bg-[#c19d30] transition text-center"
-                  style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                 >
                   {content.decisionSection.primaryCTA}
                 </Link>
                 <Link
                   to="/contact"
                   className="px-7 py-3.5 rounded-full border border-[#d4af37] text-[#2a3439] text-sm hover:bg-white transition text-center"
-                  style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                 >
                   {content.decisionSection.secondaryCTA}
                 </Link>
@@ -312,7 +285,6 @@ const Doctors = () => {
               <div className="pt-4">
                 <p
                   className="uppercase tracking-[0.25em] text-[#C5AF73] mb-5 text-xs font-semibold"
-                  style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                 >
                   {content.decisionSection.stepsTitle}
                 </p>
@@ -322,13 +294,11 @@ const Doctors = () => {
                     <div key={index} className="bg-[#f7f2e7] rounded-2xl p-4 sm:p-5">
                       <p
                         className="text-[#C5AF73] text-xs tracking-[0.2em] mb-3 font-semibold"
-                        style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                       >
                         {step.number}
                       </p>
                       <h3
                         className="text-base text-[#2a3439]"
-                        style={{ fontFamily: "'Playfair Display', serif" }}
                       >
                         {step.title}
                       </h3>
@@ -339,7 +309,6 @@ const Doctors = () => {
 
               <p
                 className="text-xs text-gray-400 leading-relaxed pt-1"
-                style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
               >
                 {content.decisionSection.note}
               </p>

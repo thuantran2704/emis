@@ -12,9 +12,9 @@ const ctaPrimaryClass =
   'px-7 py-3.5 rounded-full bg-[#d4af37] text-white text-sm font-semibold hover:bg-[#c19d30] transition text-center';
 const ctaSecondaryClass =
   'px-7 py-3.5 rounded-full border border-[#d4af37] text-[#2a3439] text-sm font-semibold hover:bg-white transition text-center';
-const eyebrowFont = { fontFamily: "'Be Vietnam Pro', sans-serif" };
-const headingFont = { fontFamily: "'Playfair Display', serif" };
-const bodyFont = { fontFamily: "'Cormorant', serif" };
+const eyebrowFont = {};
+const headingFont = {};
+const bodyFont = {};
 
 const pad = (n) => String(n + 1).padStart(2, '0');
 

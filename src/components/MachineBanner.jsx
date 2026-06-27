@@ -29,7 +29,6 @@ export default function MachineBanner() {
       <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
         <h2
           className="text-4xl font-bold text-[#3b3b6d] mb-4 drop-shadow-sm"
-          style={{ fontFamily: "'Cormorant Garamond', serif" }}
         >
           {content.title}
         </h2>
@@ -37,7 +36,6 @@ export default function MachineBanner() {
 
         <p
           className="text-lg text-gray-700 max-w-3xl mx-auto mb-16 leading-relaxed"
-          style={{ fontFamily: "'Noto Serif', serif" }}
         >
           {content.introText ||
             (isVN
@@ -68,13 +66,11 @@ export default function MachineBanner() {
               <div className="p-6 text-left">
                 <h3
                   className="text-2xl font-semibold text-[#3b3b6d] mb-3"
-                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
                 >
                   {content[key]?.title}
                 </h3>
                 <p
                   className="text-gray-700 text-sm leading-relaxed mb-1"
-                  style={{ fontFamily: "'Noto Serif', serif" }}
                 >
                   {content[key]?.equipmentIntro}
                 </p>

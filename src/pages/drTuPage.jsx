@@ -11,7 +11,6 @@ import planningImage from '../pics/dr-tu-working.jpg';
 const SectionLabel = ({ children }) => (
   <p
     className="uppercase tracking-[0.3em] text-[#C5AF73] mb-5 text-xs font-semibold"
-    style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
   >
     {children}
   </p>
@@ -20,7 +19,6 @@ const SectionLabel = ({ children }) => (
 const SectionTitle = ({ children }) => (
   <h2
     className="text-3xl md:text-4xl text-[#2a3439] mb-6"
-    style={{ fontFamily: "'Playfair Display', serif" }}
   >
     {children}
   </h2>
@@ -43,25 +41,21 @@ export default function DrTuPage() {
             <SectionLabel>{content.hero.sectionLabel}</SectionLabel>
             <h1
               className="text-4xl md:text-5xl text-[#2a3439] mb-4 leading-tight"
-              style={{ fontFamily: "'Playfair Display', serif" }}
             >
               {content.hero.name}
             </h1>
             <p
               className="text-lg text-[#C5AF73] mb-2"
-              style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
             >
               {content.hero.professionalTitle}
             </p>
             <p
               className="text-sm text-[#2a3439] mb-6"
-              style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
             >
               {content.hero.specialties}
             </p>
             <p
               className="text-lg text-gray-500 leading-relaxed mb-8"
-              style={{ fontFamily: "'Cormorant', serif" }}
             >
               {content.hero.summary}
             </p>
@@ -74,7 +68,6 @@ export default function DrTuPage() {
                 >
                   <p
                     className="text-sm text-[#2a3439]"
-                    style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                   >
                     {item}
                   </p>
@@ -86,14 +79,12 @@ export default function DrTuPage() {
               <Link
                 to="/contact"
                 className="px-7 py-3.5 rounded-full bg-[#d4af37] text-white text-sm font-semibold hover:bg-[#c19d30] transition"
-                style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
               >
                 {content.hero.primaryCta}
               </Link>
               <Link
                 to="/contact"
                 className="px-7 py-3.5 rounded-full border border-[#d4af37] text-[#2a3439] text-sm font-semibold hover:bg-[#eef3f7] transition"
-                style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
               >
                 {content.hero.secondaryCta}
               </Link>
@@ -119,14 +110,12 @@ export default function DrTuPage() {
             <SectionTitle>{content.background.title}</SectionTitle>
             <p
               className="text-lg text-gray-500 leading-relaxed mb-8"
-              style={{ fontFamily: "'Cormorant', serif" }}
             >
               {content.background.intro}
             </p>
 
             <h3
               className="text-xl text-[#2a3439] mb-4"
-              style={{ fontFamily: "'Playfair Display', serif" }}
             >
               {content.background.educationTitle}
             </h3>
@@ -136,7 +125,6 @@ export default function DrTuPage() {
                   <span className="text-[#C5AF73] mt-0.5">●</span>
                   <span
                     className="text-sm text-[#2a3439]"
-                    style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                   >
                     {item}
                   </span>
@@ -146,7 +134,6 @@ export default function DrTuPage() {
 
             <h3
               className="text-xl text-[#2a3439] mb-4"
-              style={{ fontFamily: "'Playfair Display', serif" }}
             >
               {content.background.developmentTitle}
             </h3>
@@ -156,7 +143,6 @@ export default function DrTuPage() {
                   <span className="text-[#C5AF73] mt-0.5">●</span>
                   <span
                     className="text-sm text-[#2a3439]"
-                    style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                   >
                     {item}
                   </span>
@@ -190,7 +176,6 @@ export default function DrTuPage() {
           <SectionTitle>{content.practice.title}</SectionTitle>
           <p
             className="text-lg text-gray-500 leading-relaxed mb-8 max-w-3xl"
-            style={{ fontFamily: "'Cormorant', serif" }}
           >
             {content.practice.intro}
           </p>
@@ -200,13 +185,11 @@ export default function DrTuPage() {
               <div key={idx} className="h-full rounded-2xl p-7 bg-[#f1f5f9] border border-[#dbe4ec]">
                 <h3
                   className="text-xl text-[#2a3439] mb-3"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
                 >
                   {loc.name}
                 </h3>
                 <p
                   className="text-sm text-gray-500 leading-relaxed"
-                  style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                 >
                   {loc.description}
                 </p>
@@ -216,7 +199,6 @@ export default function DrTuPage() {
 
           <h3
             className="text-2xl text-[#2a3439] mb-6"
-            style={{ fontFamily: "'Playfair Display', serif" }}
           >
             {content.practice.focusTitle}
           </h3>
@@ -228,13 +210,11 @@ export default function DrTuPage() {
               >
                 <h4
                   className="text-lg text-[#2a3439] mb-3"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
                 >
                   {card.title}
                 </h4>
                 <p
                   className="text-sm text-gray-500 leading-relaxed"
-                  style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                 >
                   {card.description}
                 </p>
@@ -251,7 +231,6 @@ export default function DrTuPage() {
             <SectionTitle>{content.philosophy.title}</SectionTitle>
             <p
               className="text-lg text-gray-500 leading-relaxed"
-              style={{ fontFamily: "'Cormorant', serif" }}
             >
               {content.philosophy.intro}
             </p>
@@ -273,13 +252,11 @@ export default function DrTuPage() {
               >
                 <h3
                   className="text-lg text-[#2a3439] mb-2"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
                 >
                   {item.title}
                 </h3>
                 <p
                   className="text-sm text-gray-500 leading-relaxed"
-                  style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                 >
                   {item.description}
                 </p>
@@ -296,14 +273,12 @@ export default function DrTuPage() {
             <SectionTitle>{content.international.title}</SectionTitle>
             <p
               className="text-lg text-gray-500 leading-relaxed mb-8"
-              style={{ fontFamily: "'Cormorant', serif" }}
             >
               {content.international.intro}
             </p>
 
             <h3
               className="text-xl text-[#2a3439] mb-4"
-              style={{ fontFamily: "'Playfair Display', serif" }}
             >
               {content.international.languagesTitle}
             </h3>
@@ -315,7 +290,6 @@ export default function DrTuPage() {
                 >
                   <span
                     className="text-sm text-[#2a3439]"
-                    style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                   >
                     {lang}
                   </span>
@@ -340,20 +314,17 @@ export default function DrTuPage() {
           <SectionTitle>{content.decision.title}</SectionTitle>
           <p
             className="text-lg text-gray-500 leading-relaxed max-w-3xl mx-auto mb-4"
-            style={{ fontFamily: "'Cormorant', serif" }}
           >
             {content.decision.intro}
           </p>
           <p
             className="text-lg text-gray-500 leading-relaxed max-w-3xl mx-auto mb-10"
-            style={{ fontFamily: "'Cormorant', serif" }}
           >
             {content.decision.support}
           </p>
 
           <h3
             className="text-2xl text-[#2a3439] mb-6"
-            style={{ fontFamily: "'Playfair Display', serif" }}
           >
             {content.decision.stepsTitle}
           </h3>
@@ -362,13 +333,11 @@ export default function DrTuPage() {
               <div key={idx} className="rounded-2xl p-6 bg-white border border-[#dbe4ec]">
                 <p
                   className="text-[#C5AF73] text-xs tracking-[0.25em] mb-3 font-semibold"
-                  style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                 >
                   STEP {idx + 1}
                 </p>
                 <p
                   className="text-sm text-[#2a3439]"
-                  style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
                 >
                   {step}
                 </p>
@@ -380,14 +349,12 @@ export default function DrTuPage() {
             <Link
               to="/contact"
               className="px-7 py-3.5 rounded-full bg-[#d4af37] text-white text-sm font-semibold hover:bg-[#c19d30] transition"
-              style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
             >
               {content.decision.primaryCta}
             </Link>
             <Link
               to="/contact"
               className="px-7 py-3.5 rounded-full border border-[#d4af37] text-[#2a3439] text-sm font-semibold hover:bg-[#eef3f7] transition"
-              style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
             >
               {content.decision.secondaryCta}
             </Link>
@@ -395,7 +362,6 @@ export default function DrTuPage() {
 
           <p
             className="text-sm text-gray-400"
-            style={{ fontFamily: "'Be Vietnam Pro', sans-serif" }}
           >
             {content.decision.note}
           </p>
