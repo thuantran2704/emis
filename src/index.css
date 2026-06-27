@@ -1,2 +1,36 @@
 @import "tailwindcss";
 
+/*
+ * Global typography
+ * Titles/headings -> Montserrat
+ * Body text       -> Helvetica
+ * !important is used so these win over any inline `font-family` styles
+ * that still exist on individual components.
+ */
+:root {
+  --font-title: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea {
+  font-family: var(--font-body) !important;
+}
+
+body * {
+  font-family: var(--font-body) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-title) !important;
+}
+

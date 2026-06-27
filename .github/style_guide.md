@@ -59,10 +59,11 @@ Split policy:
 
 ## 6) Visual and Typography Standards
 
-Typography roles:
-- Headings: Playfair Display.
-- UI labels/buttons: Be Vietnam Pro.
-- Narrative body: Cormorant.
+Typography roles (site-wide, enforced globally in `src/index.css`):
+- Titles/headings (`h1`–`h6`): Montserrat.
+- Body text (everything else, including UI labels, buttons, inputs): Helvetica (`'Helvetica Neue', Helvetica, Arial, sans-serif`).
+- These rules apply to ALL pages and ALL text. Global CSS uses `!important` so it overrides any legacy inline `font-family` styles still present in components.
+- Do not introduce new font families. If a title needs emphasis, use weight/size/tracking within Montserrat; for body, use weight/size within Helvetica.
 - For premium editorial pages, prefer slightly smaller type with more line-height and whitespace rather than larger display copy.
 - Let small labels and CTAs rely on tracking and spacing for emphasis before increasing font size.
 
