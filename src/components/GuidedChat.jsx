@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { useSelector } from 'react-redux';
-import { MessageSquareText, X, RotateCcw, Phone, Clock3, ChevronRight, LifeBuoy } from 'lucide-react';
+import { MessageSquareText, X, RotateCcw, Phone, ChevronRight, LifeBuoy } from 'lucide-react';
 import { chatContent } from '../Translations/chatContent';
 import { faqContent } from '../Translations/faqContent';
 
@@ -84,7 +84,11 @@ export default function GuidedChat() {
   const contactUs = () => {
     push({ role: 'user', text: content.stillNeedHelp });
     replyAfterHold(
-      [{ role: 'bot', text: content.contactIntro }, { role: 'bot', type: 'contact' }],
+      [
+        { role: 'bot', text: content.contactIntro },
+        { role: 'bot', text: `${content.hoursLabel}: ${content.hours}` },
+        { role: 'bot', type: 'contact' },
+      ],
       'contact',
     );
   };
@@ -138,32 +142,32 @@ export default function GuidedChat() {
                     <div key={i} className="space-y-2 pl-1">
                       <a
                         href={content.phoneHref}
-                        className="flex items-center justify-between gap-3 rounded-xl bg-[#d4af37] px-4 py-3 text-white transition hover:bg-[#c19d30]"
-                        style={eyebrowFont}
+                        className="group flex items-center gap-3 rounded-xl border border-[#eadfc4] bg-white px-4 py-3 transition hover:border-[#d4af37] hover:bg-[#fffaf0]"
                       >
-                        <span className="flex items-center gap-2.5 text-sm font-semibold">
+                        <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-[#d4af37]/15 text-[#d4af37]">
                           <Phone className="h-4 w-4" />
-                          {content.callLabel}
                         </span>
-                        <span className="text-sm">{content.phoneDisplay}</span>
+                        <span className="flex min-w-0 flex-1 flex-col">
+                          <span className="text-[13px] font-semibold text-[#2a3439]">{content.callLabel}</span>
+                          <span className="truncate text-xs text-gray-500">{content.phoneDisplay}</span>
+                        </span>
+                        <ChevronRight className="h-4 w-4 flex-shrink-0 text-[#C5AF73] transition group-hover:translate-x-0.5" />
                       </a>
+
                       <a
                         href={content.whatsappHref}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2.5 rounded-xl border border-[#d4af37] bg-white px-4 py-3 text-sm font-semibold text-[#2a3439] transition hover:bg-[#fff6da]"
-                        style={eyebrowFont}
+                        className="group flex items-center gap-3 rounded-xl border border-[#eadfc4] bg-white px-4 py-3 transition hover:border-[#d4af37] hover:bg-[#fffaf0]"
                       >
-                        <MessageSquareText className="h-4 w-4 text-[#d4af37]" />
-                        {content.whatsappLabel}
+                        <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-[#d4af37]/15 text-[#d4af37]">
+                          <MessageSquareText className="h-4 w-4" />
+                        </span>
+                        <span className="flex min-w-0 flex-1 flex-col">
+                          <span className="text-[13px] font-semibold text-[#2a3439]">{content.whatsappLabel}</span>
+                        </span>
+                        <ChevronRight className="h-4 w-4 flex-shrink-0 text-[#C5AF73] transition group-hover:translate-x-0.5" />
                       </a>
-                      <div className="flex items-start gap-2.5 rounded-xl border border-[#e4ebf2] bg-white px-4 py-3">
-                        <Clock3 className="mt-0.5 h-4 w-4 flex-shrink-0 text-[#d4af37]" />
-                        <div style={eyebrowFont}>
-                          <p className="text-xs font-semibold uppercase tracking-wider text-gray-500">{content.hoursLabel}</p>
-                          <p className="text-[13px] text-[#2a3439]">{content.hours}</p>
-                        </div>
-                      </div>
                     </div>
                   );
                 }
