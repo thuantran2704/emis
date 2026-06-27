@@ -38,35 +38,46 @@ const About = () => {
       </Helmet>
 
       {/* HERO */}
-      <section className="py-36 px-8 max-w-4xl mx-auto text-center">
-        <p
-          className="uppercase tracking-[0.3em] text-[#C5AF73] mb-7 text-[10px] font-semibold"
-        >
-          Who We Are
-        </p>
-        <h1
-          className="text-3xl md:text-4xl text-[#2a3439] mb-10 leading-tight"
-        >
-          {content.heroTitle}
-        </h1>
-        <p
-          className="text-[15px] md:text-[17px] text-gray-500 mb-14 max-w-2xl mx-auto leading-relaxed"
-        >
-          {content.heroSubtitle}
-        </p>
-        <div className="flex items-center justify-center gap-4 flex-wrap">
-          <Link
-            to="/contact"
-            className="px-7 py-3.5 rounded-full bg-[#d4af37] text-white text-sm font-semibold hover:bg-[#c19d30] transition"
+      <section className="relative overflow-hidden">
+        {/* Blurred, slightly zoomed background */}
+        <div
+          className="absolute inset-0 bg-cover bg-center scale-110 blur-[1.5px]"
+          style={{ backgroundImage: `url(${internationalImage})` }}
+          aria-hidden="true"
+        />
+        {/* Light overlay for readability */}
+        <div className="absolute inset-0 bg-[#f7fafc]/45" aria-hidden="true" />
+
+        <div className="relative py-36 px-8 max-w-4xl mx-auto text-center">
+          <p
+            className="uppercase tracking-[0.3em] text-[#C5AF73] mb-7 text-[10px] font-semibold"
           >
-            {content.heroPrimaryCTA}
-          </Link>
-          <Link
-            to="/dr-son"
-            className="px-7 py-3.5 rounded-full border border-[#d4af37] text-[#2a3439] text-sm font-semibold hover:bg-white transition"
+            Who We Are
+          </p>
+          <h1
+            className="text-3xl md:text-4xl text-[#2a3439] mb-10 leading-tight"
           >
-            {content.heroSecondaryCTA}
-          </Link>
+            {content.heroTitle}
+          </h1>
+          <p
+            className="text-[15px] md:text-[17px] text-gray-600 mb-14 max-w-2xl mx-auto leading-relaxed"
+          >
+            {content.heroSubtitle}
+          </p>
+          <div className="flex items-center justify-center gap-4 flex-wrap">
+            <Link
+              to="/contact"
+              className="px-7 py-3.5 rounded-full bg-[#d4af37] text-white text-sm font-semibold hover:bg-[#c19d30] transition"
+            >
+              {content.heroPrimaryCTA}
+            </Link>
+            <Link
+              to="/dr-son"
+              className="px-7 py-3.5 rounded-full border border-[#d4af37] text-[#2a3439] text-sm font-semibold hover:bg-white transition"
+            >
+              {content.heroSecondaryCTA}
+            </Link>
+          </div>
         </div>
       </section>
 
