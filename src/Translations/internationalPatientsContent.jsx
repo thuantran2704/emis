@@ -77,8 +77,8 @@ const internationalPatientsContent = {
       {
         name: 'Patient Story 1',
         location: 'From Overseas',
-        treatment: 'Implant Treatment',
-        description: 'Successfully completed implant treatment while living abroad',
+        treatment: 'Teeth Whitening',
+        description: 'Completed a teeth whitening treatment while living abroad',
         imageAlt: 'Patient journey testimonial',
       },
       {
@@ -182,8 +182,8 @@ const internationalPatientsContent = {
       {
         name: 'Câu Chuyện Bệnh Nhân 1',
         location: 'Từ Nước Ngoài',
-        treatment: 'Điều Trị Implant',
-        description: 'Hoàn thành thành công điều trị implant khi sống ở nước ngoài',
+        treatment: 'Tẩy Trắng Răng',
+        description: 'Hoàn thành điều trị tẩy trắng răng khi sống ở nước ngoài',
         imageAlt: 'Hành trình bệnh nhân được chứng thực',
       },
       {
@@ -288,8 +288,8 @@ const internationalPatientsContent = {
       {
         name: 'Récit de Patient 1',
         location: 'De l\'Étranger',
-        treatment: 'Traitement d\'Implant',
-        description: 'Traitement d\'implant terminé avec succès tout en vivant à l\'étranger',
+        treatment: 'Blanchiment Dentaire',
+        description: 'Blanchiment dentaire réalisé avec succès tout en vivant à l\'étranger',
         imageAlt: 'Témoignage du parcours du patient',
       },
       {
@@ -394,8 +394,8 @@ const internationalPatientsContent = {
       {
         name: '患者故事1',
         location: '来自海外',
-        treatment: '种植牙治疗',
-        description: '在国外生活时成功完成种植牙治疗',
+        treatment: '牙齿美白',
+        description: '在国外生活时完成牙齿美白治疗',
         imageAlt: '患者路程见证',
       },
       {
@@ -500,8 +500,8 @@ const internationalPatientsContent = {
       {
         name: '患者故事1',
         location: '來自海外',
-        treatment: '植牙治療',
-        description: '在國外生活時成功完成植牙治療',
+        treatment: '牙齒美白',
+        description: '在國外生活時完成牙齒美白治療',
         imageAlt: '患者路程見證',
       },
       {
@@ -606,8 +606,8 @@ const internationalPatientsContent = {
       {
         name: '환자 이야기 1',
         location: '해외에서',
-        treatment: '임플란트 치료',
-        description: '해외 거주 중 임플란트 치료 성공적으로 완료',
+        treatment: '치아 미백',
+        description: '해외 거주 중 치아 미백 치료 완료',
         imageAlt: '환자 여정 증명',
       },
       {
