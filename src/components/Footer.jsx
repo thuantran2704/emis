@@ -1,174 +1,220 @@
-import { FacebookIcon, Phone, Mail, MapPin, Clock3, ExternalLink } from "lucide-react";
 import { Link } from 'react-router-dom';
-import zaloIcon from "../pics/zalo.jpg";
-import youtubeLogo from "../pics/youtube-logo.png";
-import footerContent from "../Translations/footerContent";
 import { useSelector } from 'react-redux';
+import logo from '../pics/logo.jpg';
+import footerContent from '../Translations/footerContent';
+
+// NOTE: The following footer links have no dedicated route yet and are mapped
+// to the closest existing page (update once real pages/routes exist):
+//   - "Patient Cases" / "Ca Điều Trị Thực Tế"  -> /solutions
+//   - "Dental Resources" / "Kiến Thức Nha Khoa" -> /equipment
+//   - "Send Your X-ray" / "Gửi Phim X-quang"    -> /contact
+//   - "Restorative Dentistry" / "Điều Trị & Giữ Răng Thật" -> /services
+// Also intentionally omitted (no URL/route available): Instagram, LinkedIn,
+// and "Terms of Use".
+
+const mapOpenUrl = 'https://maps.app.goo.gl/8T1cPtEKUBe6wLFz9';
+const whatsappUrl = 'https://wa.me/84909967649';
+const facebookUrl = 'https://www.facebook.com/emisinternationaldental/';
+const youtubeUrl = 'https://www.youtube.com/@NhaKhoaEmis';
+const zaloUrl = 'https://zalo.me/2143697215679541994';
+
+const footerNav = {
+  english: {
+    brandStatement: 'Confidence starts with trust.',
+    columns: [
+      {
+        heading: 'About',
+        links: [
+          { label: 'About EMIS', to: '/about' },
+          { label: 'Meet Our Doctors', to: '/doctors' },
+          { label: 'International Patients', to: '/international-patients' },
+          { label: 'Contact Us', to: '/contact' },
+        ],
+      },
+      {
+        heading: 'Treatments',
+        links: [
+          { label: 'Implant Solutions', to: '/implant' },
+          { label: 'Fixed Teeth Solutions', to: '/fixed-teeth' },
+          { label: 'Full-Mouth Rehabilitation', to: '/full-mouth' },
+          { label: 'Oral Surgery', to: '/oral-surgery' },
+          { label: 'Restorative Dentistry', to: '/services' },
+          { label: 'Smile Aesthetics', to: '/smile-aesthetics' },
+        ],
+      },
+      {
+        heading: 'Resources',
+        links: [
+          { label: 'Patient Cases', to: '/solutions' },
+          { label: 'Dental Resources', to: '/equipment' },
+          { label: 'FAQs', to: '/faq' },
+          { label: 'Send Your X-ray', to: '/contact' },
+        ],
+      },
+      {
+        heading: 'Patient Information',
+        links: [
+          { label: 'Privacy Policy', to: '/privacy' },
+          { label: 'Medical Disclaimer', to: '/medical-disclaimer' },
+          { label: 'Warranty & Support', to: '/warranty' },
+          { label: 'Media Consent', to: '/media-consent' },
+        ],
+      },
+      {
+        heading: 'Contact',
+        links: [
+          { label: 'Phone', href: 'tel:+84919100021' },
+          { label: 'WhatsApp', href: whatsappUrl },
+          { label: 'Email', href: 'mailto:Emisdentalclinic@gmail.com' },
+          { label: 'Google Maps', href: mapOpenUrl },
+        ],
+      },
+      {
+        heading: 'Follow Us',
+        links: [
+          { label: 'Google Reviews', href: mapOpenUrl },
+          { label: 'Facebook', href: facebookUrl },
+          { label: 'YouTube', href: youtubeUrl },
+          { label: 'Zalo', href: zaloUrl },
+        ],
+      },
+    ],
+  },
+  vietnamese: {
+    brandStatement: 'An tâm bắt đầu từ niềm tin.',
+    columns: [
+      {
+        heading: 'Về EMIS',
+        links: [
+          { label: 'Về EMIS', to: '/about' },
+          { label: 'Đội Ngũ Bác Sĩ', to: '/doctors' },
+          { label: 'Bệnh Nhân Quốc Tế', to: '/international-patients' },
+          { label: 'Liên Hệ', to: '/contact' },
+        ],
+      },
+      {
+        heading: 'Giải Pháp Điều Trị',
+        links: [
+          { label: 'Trồng Răng Implant', to: '/implant' },
+          { label: 'Răng Cố Định Trên Implant', to: '/fixed-teeth' },
+          { label: 'Phục Hồi Toàn Hàm', to: '/full-mouth' },
+          { label: 'Tiểu Phẫu Răng Hàm Mặt', to: '/oral-surgery' },
+          { label: 'Điều Trị & Giữ Răng Thật', to: '/services' },
+          { label: 'Thẩm Mỹ Nụ Cười', to: '/smile-aesthetics' },
+        ],
+      },
+      {
+        heading: 'Kiến Thức',
+        links: [
+          { label: 'Ca Điều Trị Thực Tế', to: '/solutions' },
+          { label: 'Kiến Thức Nha Khoa', to: '/equipment' },
+          { label: 'Câu Hỏi Thường Gặp', to: '/faq' },
+          { label: 'Gửi Phim X-quang', to: '/contact' },
+        ],
+      },
+      {
+        heading: 'Thông Tin Bệnh Nhân',
+        links: [
+          { label: 'Chính Sách Bảo Mật', to: '/privacy' },
+          { label: 'Miễn Trừ Trách Nhiệm', to: '/medical-disclaimer' },
+          { label: 'Bảo Hành & Hỗ Trợ', to: '/warranty' },
+          { label: 'Đồng Ý Hình Ảnh', to: '/media-consent' },
+        ],
+      },
+      {
+        heading: 'Liên Hệ',
+        links: [
+          { label: 'Điện Thoại', href: 'tel:+84919100021' },
+          { label: 'WhatsApp', href: whatsappUrl },
+          { label: 'Email', href: 'mailto:Emisdentalclinic@gmail.com' },
+          { label: 'Google Maps', href: mapOpenUrl },
+        ],
+      },
+      {
+        heading: 'Theo Dõi',
+        links: [
+          { label: 'Google Reviews', href: mapOpenUrl },
+          { label: 'Facebook', href: facebookUrl },
+          { label: 'YouTube', href: youtubeUrl },
+          { label: 'Zalo', href: zaloUrl },
+        ],
+      },
+    ],
+  },
+};
+
+const linkClass =
+  'text-sm text-gray-400 hover:text-[#d4af37] transition-colors duration-200';
+
+function FooterLink({ link }) {
+  if (link.to) {
+    return (
+      <Link to={link.to} className={linkClass}>
+        {link.label}
+      </Link>
+    );
+  }
+  return (
+    <a href={link.href} target="_blank" rel="noopener noreferrer" className={linkClass}>
+      {link.label}
+    </a>
+  );
+}
 
 export default function Footer() {
   const language = useSelector((state) => state.language.language);
   const content = footerContent[language] || footerContent.english;
-  const socialHeading = content.socialTitle || content.connectTitle;
-  const mapEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.327228104639!2d106.6896131335823!3d10.786230289363182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752fa7462efccb%3A0xb79ba7e69cbb02b3!2sEmis%20Dental!5e0!3m2!1svi!2sus!4v1752074692262!5m2!1svi!2sus";
-  const mapOpenUrl = "https://maps.app.goo.gl/8T1cPtEKUBe6wLFz9";
+  const nav = footerNav[language] || footerNav.english;
 
   return (
-    <footer className="bg-[#f7f2e7] border-t border-[#e0d8c3] text-[#1f2937]">
-      <div className="max-w-6xl mx-auto px-6 py-12 grid grid-cols-[1fr_1.2fr] gap-10 items-stretch">
-        <section className="h-full" aria-labelledby="footer-clinic-name">
-          <div className="h-full p-1">
-            <h3
-              id="footer-clinic-name"
-              className="text-2xl font-bold text-[#d4af37] mb-4"
-              style={{ fontFamily: "'Playfair Display', serif" }}
-            >
-              {content.clinicName}
-            </h3>
-            <p
-              className="text-sm leading-relaxed mb-5"
-              style={{ fontFamily: "'Cormorant', serif" }}
-            >
-              {content.description}
-            </p>
+    <footer className="bg-[#111317] text-white border-t border-white/10">
+      <div className="max-w-6xl mx-auto px-6 py-12">
+        {/* Logo */}
+        <div className="mb-10">
+          <img
+            src={logo}
+            alt={content.clinicName}
+            className="h-14 w-14 rounded-full object-cover"
+          />
+        </div>
 
-            <section aria-labelledby="footer-contact-title">
-              <h4
-                id="footer-contact-title"
-                className="text-xl font-semibold text-[#d4af37] mb-4"
-                style={{ fontFamily: "'Playfair Display', serif" }}
-              >
-                {content.contactTitle}
-              </h4>
-
-              <ul className="space-y-4 text-sm" style={{ fontFamily: "'Cormorant', serif" }}>
-                <li className="flex items-start gap-4">
-                  <MapPin className="text-[#d4af37] mt-1" size={20} />
-                  <span>{content.address}</span>
-                </li>
-                <li className="flex items-start gap-4">
-                  <Phone className="text-[#d4af37] mt-1" size={20} />
-                  <a href={`tel:${content.phone.replace(/\s/g, "")}`} className="hover:text-[#c19d30] transition-colors">
-                    {content.phone}
-                  </a>
-                </li>
-                <li className="flex items-start gap-4">
-                  <Mail className="text-[#d4af37] mt-1" size={20} />
-                  <a href={`mailto:${content.email}`} className="hover:text-[#c19d30] transition-colors break-all">
-                    {content.email}
-                  </a>
-                </li>
-                <li className="flex items-start gap-4">
-                  <Clock3 className="text-[#d4af37] mt-1" size={20} />
-                  <span>
-                    {content.workingHours.split("\n").map((line, index) => (
-                      <span key={index} className="block">{line}</span>
-                    ))}
-                  </span>
-                </li>
+        {/* Navigation: 6 columns */}
+        <nav
+          className="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-3 lg:grid-cols-6"
+          aria-label="Footer"
+        >
+          {nav.columns.map((column) => (
+            <div key={column.heading} className="flex flex-col">
+              <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-white">
+                {column.heading}
+              </h3>
+              <ul className="space-y-2.5">
+                {column.links.map((link) => (
+                  <li key={link.label}>
+                    <FooterLink link={link} />
+                  </li>
+                ))}
               </ul>
-            </section>
-          </div>
-        </section>
+            </div>
+          ))}
+        </nav>
 
-        <section className="h-full self-stretch flex flex-col gap-4" aria-label="Clinic location and social channels">
-          <div className="relative overflow-hidden rounded-2xl border border-[#e0d8c3] shadow-md bg-white h-[320px] md:flex-1 md:min-h-[320px]">
-            <a
-              href={mapOpenUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="absolute left-3 top-3 z-10 inline-flex items-center gap-1 rounded-md bg-white px-3 py-1 text-sm font-semibold text-[#1f2937] shadow"
-              style={{ fontFamily: "'Cormorant', serif" }}
-            >
-              Open in Maps <ExternalLink size={14} />
-            </a>
-            <iframe
-              src={mapEmbedUrl}
-              className="absolute left-0 top-0 h-full w-full"
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Emis Dental map"
-            ></iframe>
-          </div>
-
-          <section
-            className="px-1 py-2"
-            aria-labelledby="footer-social-title"
-          >
-            <h4
-              id="footer-social-title"
-              className="text-2xl font-bold text-[#d4af37] mb-3"
-              style={{ fontFamily: "'Playfair Display', serif" }}
-            >
-              {socialHeading}
-            </h4>
-
-            <nav className="flex items-center gap-3" aria-label={socialHeading}>
-              <a
-                href="https://wa.me/84909967649"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="WhatsApp"
-                className="h-11 w-11 rounded-full bg-white/70 text-[#1f2937] flex items-center justify-center border border-[#e0d8c3] hover:bg-white transition"
-              >
-                <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 text-green-600">
-                  <path d="M12.04 2A10 10 0 0 0 2.02 12c0 1.76.46 3.45 1.33 4.94L2 22l5.2-1.36A10 10 0 1 0 12.04 2Zm5.11 14.25c-.22.63-1.27 1.16-1.93 1.31-.52.09-1.18.16-3.41-.73-2.88-1.16-4.73-4.03-4.87-4.21-.14-.18-1.16-1.55-1.16-2.95 0-1.4.73-2.08.99-2.36.26-.28.56-.35.74-.35h.54c.17 0 .4.01.61.47.22.47.75 1.63.82 1.75.07.12.12.26.02.42-.1.16-.15.26-.31.4-.16.14-.33.32-.47.54-.16.21-.33.44-.14.87.19.43.84 1.39 1.81 2.25 1.24 1.11 2.29 1.46 2.72 1.62.43.16.69.14.94-.08.25-.22.99-.91 1.26-1.22.27-.31.54-.26.91-.16.37.11 2.35 1.11 2.75 1.31.4.2.66.29.76.45.1.16.1.91-.12 1.54Z"/>
-                </svg>
-              </a>
-              <a
-                href="https://www.facebook.com/emisinternationaldental/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-                className="h-11 w-11 rounded-full bg-white/70 text-[#1f2937] flex items-center justify-center border border-[#e0d8c3] hover:bg-white transition"
-              >
-                <FacebookIcon size={22} />
-              </a>
-              <a
-                href="https://www.youtube.com/@NhaKhoaEmis"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="YouTube"
-                className="h-11 w-11 rounded-full bg-white/70 text-[#1f2937] flex items-center justify-center border border-[#e0d8c3] hover:bg-white transition"
-              >
-                <img src={youtubeLogo} alt="YouTube" className="h-5 w-5 object-contain" />
-              </a>
-              <a
-                href="https://zalo.me/2143697215679541994"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Zalo"
-                className="h-11 w-11 rounded-full bg-white/70 text-[#1f2937] flex items-center justify-center border border-[#e0d8c3] hover:bg-white transition"
-              >
-                <img src={zaloIcon} alt="Zalo" className="h-5 w-5 object-contain" />
-              </a>
-            </nav>
-          </section>
-        </section>
-      </div>
-
-      <section
-        className="bg-[#fffaf0] border-t border-[#e0d8c3] text-center py-4 text-sm text-[#6b7280]"
-        style={{ fontFamily: "'Cormorant', serif" }}
-      >
-        <p>Copyright © EMIS Dental</p>
-        <p>All Rights Reserved</p>
-        <p className="mt-1">© {new Date().getFullYear()} {content.clinicName}. {content.rights}</p>
-        <p className="mt-1 flex flex-wrap items-center justify-center gap-x-4 gap-y-1">
-          <Link to="/privacy" className="underline-offset-2 hover:underline hover:text-[#1f2937] transition">
-            {content.privacy || 'Privacy Policy'}
-          </Link>
-          <Link to="/media-consent" className="underline-offset-2 hover:underline hover:text-[#1f2937] transition">
-            {content.media || 'Media Consent Policy'}
-          </Link>
-          <Link to="/medical-disclaimer" className="underline-offset-2 hover:underline hover:text-[#1f2937] transition">
-            {content.disclaimer || 'Medical Disclaimer'}
-          </Link>
-          <Link to="/warranty" className="underline-offset-2 hover:underline hover:text-[#1f2937] transition">
-            {content.warranty || 'Warranty & Support'}
-          </Link>
+        {/* Brand statement */}
+        <p
+          className="mt-12 text-xl font-medium text-[#d4af37]"
+          style={{ fontFamily: "'Playfair Display', serif" }}
+        >
+          {nav.brandStatement}
         </p>
-      </section>
+
+        {/* Divider 2: separates brand statement from copyright */}
+        <hr className="my-8 border-white/10" />
+
+        {/* Copyright */}
+        <p className="text-xs text-gray-400">
+          © {new Date().getFullYear()} {content.clinicName}. {content.rights}
+        </p>
+      </div>
     </footer>
   );
 }
