@@ -293,11 +293,11 @@ const ImplantGuide = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
             {systemCards.map((system) => (
               <div key={system.name} className="bg-[#f7f2e7] rounded-2xl overflow-hidden shadow-sm border border-[#eadfc9]/50">
-                <div className="h-40 overflow-hidden">
+                <div className="h-40 overflow-hidden bg-white flex items-center justify-center p-4">
                   <img
                     src={system.image}
                     alt={system.name}
-                    className="w-full h-full object-cover object-center"
+                    className="max-h-full max-w-full object-contain"
                   />
                 </div>
                 <div className="p-4">

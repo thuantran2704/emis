@@ -94,7 +94,7 @@ const GenAd = () => {
           "Bảo hành dài hạn",
         ],
         icon: <Shield className="w-8 h-8" />,
-        link: "/implantAd",
+        link: "/implant",
         color: "from-[#2a3439] to-[#16324a]",
         highlight: true,
       },
@@ -243,7 +243,7 @@ const GenAd = () => {
           "Long-term warranty",
         ],
         icon: <Shield className="w-8 h-8" />,
-        link: "/implantAd",
+        link: "/implant",
         color: "from-[#2a3439] to-[#16324a]",
         highlight: true,
       },
@@ -668,7 +668,7 @@ const GenAd = () => {
                 <div className="text-sm text-[#9a8649]">{isVI ? "Giảm 50%" : "50% off"}</div>
               </Link>
               <Link
-                to="/implantAd"
+                to="/implant"
                 className="text-center p-4 bg-[#f7fafc] rounded-lg transition-all hover:shadow-md border border-[#dbe4ec] hover:border-[#C5AF73]"
               >
                 <Shield className="w-8 h-8 text-[#C5AF73] mx-auto mb-2" />
