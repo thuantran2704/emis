@@ -395,25 +395,27 @@ export default function Home() {
       </section>
 
       <section className="bg-white py-16 md:py-20">
-        <div className="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-2 md:items-stretch">
-          <div>
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 lg:landscape:grid-cols-2 lg:landscape:items-stretch">
+          <div className="mx-auto max-w-2xl text-center lg:landscape:mx-0 lg:landscape:text-left">
             <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl">{page.international.title}</h2>
             <p className="mt-4 text-base leading-relaxed text-gray-500">{page.international.intro}</p>
-            <ul className="mt-6 space-y-3">
+            <ul className="mt-6 space-y-2.5 text-left">
               {page.international.points.map((item) => (
-                <li key={item.title} className="rounded-xl border border-[#dde7ef] bg-[#f9fcff] p-4">
-                  <h3 className="text-sm font-semibold text-[#1d3953]">{item.title}</h3>
-                  <p className="mt-1 text-xs text-[#5d7388]">{item.text}</p>
+                <li key={item.title} className="flex gap-3 border-l-2 border-[#d4af37] pl-4 py-1">
+                  <div>
+                    <h3 className="text-sm font-semibold text-[#16324a]">{item.title}</h3>
+                    <p className="mt-0.5 text-xs text-gray-500">{item.text}</p>
+                  </div>
                 </li>
               ))}
             </ul>
-            <Link to="/visitor-program" className="mt-6 inline-block rounded-full bg-[#15344f] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#112c42]">
+            <Link to="/visitor-program" className="mt-7 inline-block rounded-full bg-[#15344f] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#112c42]">
               {page.international.cta}
             </Link>
           </div>
 
-          <div className="hidden overflow-hidden rounded-3xl shadow-lg md:block">
-            <img src={internationalSupport} alt="International patient consultation and planning" className="h-full w-full object-cover" />
+          <div className="hidden overflow-hidden rounded-3xl shadow-lg h-full lg:landscape:block">
+            <img src={internationalSupport} alt="International patient consultation and planning" className="h-full w-full object-cover object-center" />
           </div>
         </div>
       </section>

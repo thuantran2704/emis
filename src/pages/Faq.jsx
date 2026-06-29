@@ -1,20 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { Helmet } from 'react-helmet';
 import { Plus } from 'lucide-react';
 import { faqContent } from '../Translations/faqContent';
+import { sectionLabelClass, titleClass } from '../styles/ui';
+import ContactCtas from '../components/ContactCtas';
 
-const sectionLabelClass = 'uppercase tracking-[0.3em] text-[#C5AF73] text-xs font-semibold';
-const titleClass = 'text-3xl md:text-5xl text-[#2a3439] leading-tight';
 const bodyClass = 'text-[17px] md:text-[19px] text-gray-600 leading-relaxed';
-const ctaPrimaryClass =
-  'px-7 py-3.5 rounded-full bg-[#d4af37] text-white text-sm font-semibold hover:bg-[#c19d30] transition text-center';
-const ctaSecondaryClass =
-  'px-7 py-3.5 rounded-full border border-[#d4af37] text-[#2a3439] text-sm font-semibold hover:bg-white transition text-center';
-const eyebrowFont = {};
-const headingFont = {};
-const bodyFont = {};
 
 const pad = (n) => String(n + 1).padStart(2, '0');
 
@@ -39,12 +31,11 @@ const Faq = () => {
           aria-hidden="true"
         />
         <div className="relative max-w-3xl mx-auto px-8 py-16 lg:py-24 text-center">
-          <p className={sectionLabelClass} style={eyebrowFont}>EMIS Dental</p>
-          <h1 className={titleClass + ' mt-4'} style={headingFont}>{content.title}</h1>
-          <p className={bodyClass + ' mt-5'} style={bodyFont}>{content.intro}</p>
+          <p className={sectionLabelClass}>EMIS Dental</p>
+          <h1 className={titleClass + ' mt-4'}>{content.title}</h1>
+          <p className={bodyClass + ' mt-5'}>{content.intro}</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center pt-8">
-            <Link to="/contact" className={ctaPrimaryClass} style={eyebrowFont}>{content.primaryCta}</Link>
-            <Link to="/contact" className={ctaSecondaryClass} style={eyebrowFont}>{content.secondaryCta}</Link>
+            <ContactCtas primaryLabel={content.primaryCta} secondaryLabel={content.secondaryCta} />
           </div>
         </div>
       </section>
@@ -55,14 +46,13 @@ const Faq = () => {
           <div className="grid lg:grid-cols-[260px_1fr] gap-10 lg:gap-16 items-start">
             {/* Table of contents */}
             <nav className="lg:sticky lg:top-24 hidden lg:block" aria-label="FAQ categories">
-              <p className={sectionLabelClass + ' mb-4'} style={eyebrowFont}>Topics</p>
+              <p className={sectionLabelClass + ' mb-4'}>Topics</p>
               <ul className="space-y-1">
                 {content.categories.map((category, index) => (
                   <li key={category.title}>
                     <a
                       href={`#faq-${index}`}
                       className="group flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm text-[#2a3439] transition hover:bg-white hover:shadow-sm"
-                      style={eyebrowFont}
                     >
                       <span className="text-xs font-semibold text-[#C5AF73]">{pad(index)}</span>
                       <span className="flex-1 group-hover:text-[#a8924f]">{category.title}</span>
@@ -78,11 +68,11 @@ const Faq = () => {
               {content.categories.map((category, index) => (
                 <div key={category.title} id={`faq-${index}`} className="scroll-mt-28">
                   <div className="flex items-baseline gap-3 mb-5 border-b border-[#e4ebf2] pb-4">
-                    <span className="text-sm font-semibold text-[#C5AF73]" style={eyebrowFont}>{pad(index)}</span>
-                    <h2 className="text-[1.5rem] md:text-[1.9rem] text-[#2a3439] leading-tight flex-1" style={headingFont}>
+                    <span className="text-sm font-semibold text-[#C5AF73]">{pad(index)}</span>
+                    <h2 className="text-[1.5rem] md:text-[1.9rem] text-[#2a3439] leading-tight flex-1">
                       {category.title}
                     </h2>
-                    <span className="text-xs uppercase tracking-wider text-gray-400" style={eyebrowFont}>
+                    <span className="text-xs uppercase tracking-wider text-gray-400">
                       {category.items.length}
                     </span>
                   </div>
@@ -92,13 +82,13 @@ const Faq = () => {
                         key={item.question}
                         className="group rounded-2xl border border-[#dde5ec] bg-white px-5 py-4 shadow-sm transition hover:border-[#d4af37]/40 open:border-[#d4af37]/60 open:shadow-md"
                       >
-                        <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-semibold text-[#2a3439]" style={eyebrowFont}>
+                        <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-semibold text-[#2a3439]">
                           {item.question}
                           <span className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-[#f7f2e7] text-[#d4af37] transition-transform group-open:rotate-45" aria-hidden="true">
                             <Plus size={16} />
                           </span>
                         </summary>
-                        <p className="mt-3 text-[16px] leading-relaxed text-gray-600" style={bodyFont}>{item.answer}</p>
+                        <p className="mt-3 text-[16px] leading-relaxed text-gray-600">{item.answer}</p>
                       </details>
                     ))}
                   </div>
@@ -107,10 +97,9 @@ const Faq = () => {
 
               {/* Closing prompt */}
               <div className="rounded-3xl bg-[#f7f2e7] px-8 py-10 text-center">
-                <p className={bodyClass} style={bodyFont}>{content.intro}</p>
+                <p className={bodyClass}>{content.intro}</p>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center pt-6">
-                  <Link to="/contact" className={ctaPrimaryClass} style={eyebrowFont}>{content.primaryCta}</Link>
-                  <Link to="/contact" className={ctaSecondaryClass} style={eyebrowFont}>{content.secondaryCta}</Link>
+                  <ContactCtas primaryLabel={content.primaryCta} secondaryLabel={content.secondaryCta} />
                 </div>
               </div>
             </div>

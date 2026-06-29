@@ -9,6 +9,7 @@ import orthoImage from '../pics/elder-person-socializing.jpeg';
 import whiteningCase from '../pics/eating-casually.jpeg';
 import veneerCase from '../pics/measuring-result-cbct-x-ray-patient-smiling.jpg';
 import orthoCase from '../pics/doctor-explaining-procedure-to-patient.jpg';
+import ProcessSteps from '../components/ProcessSteps';
 
 const SectionLabel = ({ children }) => (
   <p
@@ -177,27 +178,7 @@ export default function SmileAesthetics() {
 
       <section className="mx-auto max-w-6xl px-5 py-16 lg:px-12 lg:py-28">
         <SectionTitle>{content.process?.title}</SectionTitle>
-        <div className="rounded-2xl border border-[#dbe4ec] bg-white px-5 py-7 lg:px-8 lg:py-10">
-          <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between md:gap-4">
-            {processSteps.map((step, index) => (
-              <div key={step} className="flex flex-col items-center gap-2 md:flex-1 md:flex-row md:justify-center md:gap-3">
-                <div className="flex items-center gap-3">
-                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#f7fafc] text-xs font-semibold text-[#2a3439]">
-                    {index + 1}
-                  </span>
-                  <p className="text-[12px] font-semibold uppercase tracking-[0.08em] text-[#2a3439] lg:text-[13px]">{step}</p>
-                </div>
-                {index < processSteps.length - 1 ? (
-                  <span className="text-[#c5af73] leading-none md:ml-2" aria-hidden="true">
-                    <span className="md:hidden">↓</span>
-                    <span className="hidden md:inline">→</span>
-                  </span>
-                ) : null}
-              </div>
-            ))}
-          </div>
-          <p className="mt-6 text-[13px] leading-6 text-gray-600 lg:text-[14px] lg:leading-7">{content.process?.note}</p>
-        </div>
+        <ProcessSteps steps={processSteps} note={content.process?.note} />
       </section>
 
       <section className="bg-white py-16 lg:py-28">
