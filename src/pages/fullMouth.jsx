@@ -13,34 +13,17 @@ import {
   Wrench,
 } from 'lucide-react';
 import { fullMouthContent } from '../Translations/fullMouthContent';
-import heroImage from '../pics/khach_cuoi_chup_hinh_voi_bs.jpg';
-import overseasImage from '../pics/consulting-team.jpg';
-import teamImage from '../pics/healthcare-team.jpg';
+import heroImage from '../pics/doctor-smiling-with-patient.jpg';
+import overseasImage from '../pics/doctor-reviewing-x-ray-with-patient-explaining-treatment.jpg';
+import teamImage from '../pics/doctors-discussing-implants-engaged.jpg';
 import { sectionLabelClass, titleClass, sectionTitleClass, ctaPrimaryClass, ctaSecondaryClass } from '../styles/ui';
 import ContactCtas from '../components/ContactCtas';
 import { SectionHeading } from '../components/Section';
+import ProcessSteps from '../components/ProcessSteps';
 
 const bodyClass = 'text-[17px] md:text-[19px] text-gray-600 leading-relaxed';
 
 const cardIcons = [Sparkles, Layers, Activity, HeartPulse, Stethoscope, Wrench];
-
-const FlowRow = ({ steps }) => (
-  <div className="flex flex-col md:flex-row md:flex-wrap items-stretch md:items-center justify-center gap-3">
-    {steps.map((step, index) => (
-      <React.Fragment key={step}>
-        <div className="flex items-center gap-3 rounded-xl bg-white border border-[#dde5ec] px-5 py-3">
-          <span className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-[#d4af37] text-white text-xs font-semibold">
-            {index + 1}
-          </span>
-          <span className="text-[15px] text-[#2a3439]">{step}</span>
-        </div>
-        {index < steps.length - 1 && (
-          <ArrowRight size={18} className="hidden md:block text-[#C5AF73] flex-shrink-0" aria-hidden="true" />
-        )}
-      </React.Fragment>
-    ))}
-  </div>
-);
 
 const FullMouth = () => {
   const language = useSelector((state) => state.language.language);
@@ -196,8 +179,7 @@ const FullMouth = () => {
       <section className="py-20 lg:py-28 bg-white">
         <div className="max-w-6xl mx-auto px-8">
           <SectionHeading eyebrow={journey.eyebrow} title={journey.title} />
-          <FlowRow steps={journey.steps} />
-          <p className="text-center text-[15px] text-gray-500 mt-8 max-w-3xl mx-auto">{journey.note}</p>
+          <ProcessSteps steps={journey.steps} note={journey.note} />
         </div>
       </section>
 
@@ -226,7 +208,7 @@ const FullMouth = () => {
                   className="w-full h-[260px] lg:h-[300px] object-cover object-center"
                 />
               </div>
-              <FlowRow steps={overseas.flow} />
+              <ProcessSteps steps={overseas.flow} />
             </div>
           </div>
         </div>
