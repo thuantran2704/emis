@@ -110,10 +110,10 @@ export default function Navbar() {
 
   const treatmentDropdownItems = [
     { name: content.implant, path: '/implant' },
+    { name: content.fixedTeeth, path: '/fixed-teeth' },
+    { name: content.fullMouth, path: '/full-mouth' },
     { name: content.crown, path: '/crown' },
     { name: content.veneer, path: '/veneer' },
-    // { name: content.fixedTeeth, path: '/fixed-teeth' }, // temporarily hidden
-    // { name: content.fullMouth, path: '/full-mouth' }, // temporarily hidden
     { name: content.oralSurgery, path: '/oral-surgery' },
     { name: content.smileAesthetics, path: '/smile-aesthetics' },
     { name: content.solutions, path: '/solutions' },
