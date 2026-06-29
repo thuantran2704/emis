@@ -3,15 +3,9 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { Helmet } from 'react-helmet';
 import { FileText, Check, Info, MessageCircle } from 'lucide-react';
+import { sectionLabelClass, titleClass, ctaPrimaryClass } from '../styles/ui';
 
-const sectionLabelClass = 'uppercase tracking-[0.3em] text-[#C5AF73] text-xs font-semibold';
-const titleClass = 'text-3xl md:text-5xl text-[#2a3439] leading-tight';
 const bodyClass = 'text-[16px] md:text-[17px] text-gray-600 leading-relaxed';
-const ctaPrimaryClass =
-  'px-7 py-3.5 rounded-full bg-[#d4af37] text-white text-sm font-semibold hover:bg-[#c19d30] transition text-center';
-const eyebrowFont = {};
-const headingFont = {};
-const bodyFont = {};
 
 const pad = (n) => String(n + 1).padStart(2, '0');
 
@@ -21,7 +15,6 @@ const Chips = ({ items }) => (
       <span
         key={item}
         className="inline-flex items-center gap-2 rounded-full border border-[#e9e0c8] bg-[#fbf7ec] px-4 py-2 text-[14px] text-[#2a3439]"
-        style={eyebrowFont}
       >
         <Check size={14} className="text-[#d4af37] flex-shrink-0" aria-hidden="true" />
         {item}
@@ -56,15 +49,15 @@ const PolicyPage = ({ contentByLanguage, heroIcon = FileText, sectionIcons = [],
           <span className="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-[#f7f2e7] text-[#d4af37] shadow-sm">
             <HeroIcon size={30} aria-hidden="true" />
           </span>
-          <h1 className={titleClass + ' mt-6'} style={headingFont}>{content.title}</h1>
+          <h1 className={titleClass + ' mt-6'}>{content.title}</h1>
           <p className="mt-4">
-            <span className="inline-block rounded-full bg-white border border-[#e4ebf2] px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-gray-500" style={eyebrowFont}>
+            <span className="inline-block rounded-full bg-white border border-[#e4ebf2] px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-gray-500">
               {content.lastUpdatedLabel}: {content.lastUpdated}
             </span>
           </p>
           <div className="mt-6 space-y-2">
             {content.intro.map((paragraph) => (
-              <p key={paragraph} className={bodyClass} style={bodyFont}>{paragraph}</p>
+              <p key={paragraph} className={bodyClass}>{paragraph}</p>
             ))}
           </div>
         </div>
@@ -76,7 +69,7 @@ const PolicyPage = ({ contentByLanguage, heroIcon = FileText, sectionIcons = [],
           <div className="grid lg:grid-cols-[240px_1fr] gap-10 lg:gap-14 items-start">
             {/* Contents */}
             <nav className="lg:sticky lg:top-24 hidden lg:block" aria-label="Policy sections">
-              <p className={sectionLabelClass + ' mb-4'} style={eyebrowFont}>Contents</p>
+              <p className={sectionLabelClass + ' mb-4'}>Contents</p>
               <ul className="space-y-1">
                 {content.sections.map((section, index) => {
                   const Icon = sectionIcons[index] || FileText;
@@ -85,7 +78,6 @@ const PolicyPage = ({ contentByLanguage, heroIcon = FileText, sectionIcons = [],
                       <a
                         href={`#policy-${index}`}
                         className="group flex items-center gap-2.5 rounded-xl px-3 py-2 text-[13px] text-[#2a3439] transition hover:bg-white hover:shadow-sm"
-                        style={eyebrowFont}
                       >
                         <Icon size={15} className="text-[#C5AF73] flex-shrink-0" aria-hidden="true" />
                         <span className="flex-1 group-hover:text-[#a8924f]">{section.title}</span>
@@ -107,15 +99,15 @@ const PolicyPage = ({ contentByLanguage, heroIcon = FileText, sectionIcons = [],
                         <Icon size={22} aria-hidden="true" />
                       </span>
                       <div>
-                        <span className="text-xs font-semibold text-[#C5AF73]" style={eyebrowFont}>{pad(index)}</span>
-                        <h2 className="text-[1.3rem] md:text-[1.55rem] text-[#2a3439] leading-tight" style={headingFont}>
+                        <span className="text-xs font-semibold text-[#C5AF73]">{pad(index)}</span>
+                        <h2 className="text-[1.3rem] md:text-[1.55rem] text-[#2a3439] leading-tight">
                           {section.title}
                         </h2>
                       </div>
                     </div>
 
                     {section.paragraphs && section.paragraphs.map((paragraph) => (
-                      <p key={paragraph} className={bodyClass + ' mt-2'} style={bodyFont}>{paragraph}</p>
+                      <p key={paragraph} className={bodyClass + ' mt-2'}>{paragraph}</p>
                     ))}
 
                     {section.groups && (
@@ -126,19 +118,19 @@ const PolicyPage = ({ contentByLanguage, heroIcon = FileText, sectionIcons = [],
                             <div key={group.subtitle} className="rounded-2xl bg-[#f7fafc] border border-[#e4ebf2] p-5">
                               <div className="flex items-center gap-2.5 mb-2">
                                 <GIcon size={18} className="text-[#d4af37] flex-shrink-0" aria-hidden="true" />
-                                <h3 className="text-[15px] font-semibold text-[#2a3439]" style={eyebrowFont}>{group.subtitle}</h3>
+                                <h3 className="text-[15px] font-semibold text-[#2a3439]">{group.subtitle}</h3>
                               </div>
-                              {group.intro && <p className="text-[14px] text-gray-500 leading-relaxed" style={bodyFont}>{group.intro}</p>}
+                              {group.intro && <p className="text-[14px] text-gray-500 leading-relaxed">{group.intro}</p>}
                               {group.items && (
                                 <div className="mt-3 flex flex-wrap gap-2">
                                   {group.items.map((item) => (
-                                    <span key={item} className="rounded-full bg-white border border-[#e9e0c8] px-3 py-1.5 text-[13px] text-[#2a3439]" style={eyebrowFont}>
+                                    <span key={item} className="rounded-full bg-white border border-[#e9e0c8] px-3 py-1.5 text-[13px] text-[#2a3439]">
                                       {item}
                                     </span>
                                   ))}
                                 </div>
                               )}
-                              {group.note && <p className="mt-3 text-[13px] text-gray-400" style={bodyFont}>{group.note}</p>}
+                              {group.note && <p className="mt-3 text-[13px] text-gray-400">{group.note}</p>}
                             </div>
                           );
                         })}
@@ -150,12 +142,12 @@ const PolicyPage = ({ contentByLanguage, heroIcon = FileText, sectionIcons = [],
                     {section.note && (
                       <div className="mt-5 flex items-start gap-3 rounded-2xl bg-[#fbf7ec] border border-[#e9e0c8] px-4 py-3">
                         <Info size={16} className="text-[#d4af37] mt-0.5 flex-shrink-0" aria-hidden="true" />
-                        <p className="text-[14px] text-gray-600 leading-relaxed" style={bodyFont}>{section.note}</p>
+                        <p className="text-[14px] text-gray-600 leading-relaxed">{section.note}</p>
                       </div>
                     )}
 
                     {index === content.sections.length - 1 && (
-                      <Link to="/contact" className={ctaPrimaryClass + ' inline-flex items-center gap-2 mt-6'} style={eyebrowFont}>
+                      <Link to="/contact" className={ctaPrimaryClass + ' inline-flex items-center gap-2 mt-6'}>
                         <MessageCircle size={16} aria-hidden="true" />
                         {content.contactCta}
                       </Link>

@@ -7,35 +7,20 @@ import { fixedTeethContent } from '../Translations/fixedTeethContent';
 import heroImage from '../pics/all-on-4-implant.jpg';
 import allOnImage from '../pics/allon4.png';
 import overseasImage from '../pics/doctor-reviewing-x-ray-with-patient-explaining-treatment.jpg';
+import { sectionLabelClass, titleClass, sectionTitleClass } from '../styles/ui';
+import ContactCtas from '../components/ContactCtas';
+import { SectionHeading } from '../components/Section';
 
-const sectionLabelClass = 'uppercase tracking-[0.3em] text-[#C5AF73] text-xs font-semibold';
-const titleClass = 'text-3xl md:text-5xl text-[#2a3439] leading-tight';
-const sectionTitleClass = 'text-[1.8rem] md:text-[2.4rem] text-[#2a3439] leading-tight';
 const bodyClass = 'text-[17px] md:text-[19px] text-gray-600 leading-relaxed';
-const ctaPrimaryClass =
-  'px-7 py-3.5 rounded-full bg-[#d4af37] text-white text-sm font-semibold hover:bg-[#c19d30] transition text-center';
-const ctaSecondaryClass =
-  'px-7 py-3.5 rounded-full border border-[#d4af37] text-[#2a3439] text-sm font-semibold hover:bg-white transition text-center';
-const eyebrowFont = {};
-const headingFont = {};
-const bodyFont = {};
 
 const Checklist = ({ items }) => (
   <div className="grid sm:grid-cols-2 gap-3">
     {items.map((item) => (
       <div key={item} className="flex gap-2 items-start rounded-xl bg-white border border-[#dde5ec] px-4 py-3">
         <CheckCircle size={18} className="text-[#d4af37] mt-0.5 flex-shrink-0" aria-hidden="true" />
-        <span className="text-[15px] text-[#2a3439]" style={eyebrowFont}>{item}</span>
+        <span className="text-[15px] text-[#2a3439]">{item}</span>
       </div>
     ))}
-  </div>
-);
-
-const SectionHeading = ({ eyebrow, title, intro }) => (
-  <div className="text-center max-w-3xl mx-auto mb-12">
-    <p className={sectionLabelClass} style={eyebrowFont}>{eyebrow}</p>
-    <h2 className={sectionTitleClass} style={headingFont}>{title}</h2>
-    {intro && <p className={bodyClass + ' mt-5'} style={bodyFont}>{intro}</p>}
   </div>
 );
 
@@ -58,12 +43,11 @@ const FixedTeeth = () => {
         <div className="max-w-6xl mx-auto px-8">
           <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-10 lg:gap-16 items-center">
             <div className="space-y-6">
-              <p className={sectionLabelClass} style={eyebrowFont}>{hero.eyebrow}</p>
-              <h1 className={titleClass} style={headingFont}>{hero.title}</h1>
-              <p className={bodyClass} style={bodyFont}>{hero.intro}</p>
+              <p className={sectionLabelClass}>{hero.eyebrow}</p>
+              <h1 className={titleClass}>{hero.title}</h1>
+              <p className={bodyClass}>{hero.intro}</p>
               <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                <Link to="/contact" className={ctaPrimaryClass} style={eyebrowFont}>{hero.primaryCta}</Link>
-                <Link to="/contact" className={ctaSecondaryClass} style={eyebrowFont}>{hero.secondaryCta}</Link>
+                <ContactCtas primaryLabel={hero.primaryCta} secondaryLabel={hero.secondaryCta} />
               </div>
             </div>
             <div className="rounded-2xl border border-[#dfe7ef] shadow-md bg-white p-5 lg:p-7">
@@ -84,7 +68,7 @@ const FixedTeeth = () => {
           <div className="max-w-4xl mx-auto">
             <Checklist items={familiar.items} />
             {familiar.note && (
-              <p className={bodyClass + ' mt-7 text-center'} style={bodyFont}>{familiar.note}</p>
+              <p className={bodyClass + ' mt-7 text-center'}>{familiar.note}</p>
             )}
           </div>
         </div>
@@ -94,18 +78,18 @@ const FixedTeeth = () => {
       <section className="py-20 lg:py-28 bg-[#f7fafc]">
         <div className="max-w-6xl mx-auto px-8">
           <SectionHeading eyebrow={whatAreFixedTeeth.eyebrow} title={whatAreFixedTeeth.title} intro={whatAreFixedTeeth.intro} />
-          <h3 className="text-center text-[1.2rem] text-[#2a3439] mb-7" style={headingFont}>
+          <h3 className="text-center text-[1.2rem] text-[#2a3439] mb-7">
             {whatAreFixedTeeth.comparisonTitle}
           </h3>
           <div className="grid md:grid-cols-2 gap-6 items-stretch">
             {[whatAreFixedTeeth.comparison.removable, whatAreFixedTeeth.comparison.fixed].map((col) => (
               <article key={col.title} className="flex flex-col rounded-2xl border border-[#dbe4ec] bg-white p-7 lg:p-8 h-full">
-                <h4 className="text-[1.25rem] text-[#2a3439] mb-4" style={headingFont}>{col.title}</h4>
+                <h4 className="text-[1.25rem] text-[#2a3439] mb-4">{col.title}</h4>
                 <ul className="space-y-3">
                   {col.items.map((item) => (
                     <li key={item} className="flex gap-2 items-start">
                       <CheckCircle size={18} className="text-[#d4af37] mt-1 flex-shrink-0" aria-hidden="true" />
-                      <span className="text-[16px] text-gray-600" style={bodyFont}>{item}</span>
+                      <span className="text-[16px] text-gray-600">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -129,12 +113,12 @@ const FixedTeeth = () => {
               />
             </div>
             <div className="space-y-5">
-              <p className={bodyClass} style={bodyFont}>{allOnOptions.detail}</p>
+              <p className={bodyClass}>{allOnOptions.detail}</p>
               <div className="rounded-2xl border border-[#d4af37] bg-[#fbf6e7] p-6">
-                <p className="text-[11px] uppercase tracking-[0.22em] text-[#a8842a] font-semibold mb-2" style={eyebrowFont}>
+                <p className="text-[11px] uppercase tracking-[0.22em] text-[#a8842a] font-semibold mb-2">
                   {allOnOptions.importantTitle}
                 </p>
-                <p className="text-[16px] text-[#2a3439] leading-relaxed" style={bodyFont}>
+                <p className="text-[16px] text-[#2a3439] leading-relaxed">
                   {allOnOptions.importantText}
                 </p>
               </div>
@@ -160,7 +144,7 @@ const FixedTeeth = () => {
           <div className="max-w-4xl mx-auto">
             <Checklist items={planning.items} />
             {planning.note && (
-              <p className={bodyClass + ' mt-7 text-center'} style={bodyFont}>{planning.note}</p>
+              <p className={bodyClass + ' mt-7 text-center'}>{planning.note}</p>
             )}
           </div>
         </div>
@@ -173,15 +157,15 @@ const FixedTeeth = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {journey.steps.map((step, index) => (
               <article key={step} className="rounded-2xl border border-[#dbe4ec] bg-white p-6">
-                <p className="text-[11px] uppercase tracking-[0.22em] text-[#C5AF73] font-semibold" style={eyebrowFont}>
+                <p className="text-[11px] uppercase tracking-[0.22em] text-[#C5AF73] font-semibold">
                   {language === 'vietnamese' ? `Bước ${index + 1}` : `Step ${index + 1}`}
                 </p>
-                <p className="mt-2 text-[1.05rem] text-[#2a3439]" style={headingFont}>{step}</p>
+                <p className="mt-2 text-[1.05rem] text-[#2a3439]">{step}</p>
               </article>
             ))}
           </div>
           {journey.note && (
-            <p className={bodyClass + ' mt-10 text-center max-w-3xl mx-auto'} style={bodyFont}>{journey.note}</p>
+            <p className={bodyClass + ' mt-10 text-center max-w-3xl mx-auto'}>{journey.note}</p>
           )}
         </div>
       </section>
@@ -191,16 +175,15 @@ const FixedTeeth = () => {
         <div className="max-w-6xl mx-auto px-8">
           <div className="grid lg:grid-cols-[1fr_1fr] gap-8 items-stretch">
             <div className="rounded-2xl border border-[#dbe4ec] bg-[#f7fafc] p-7 lg:p-8">
-              <p className={sectionLabelClass} style={eyebrowFont}>{overseas.eyebrow}</p>
-              <h2 className={sectionTitleClass + ' mt-3'} style={headingFont}>{overseas.title}</h2>
-              <p className={bodyClass + ' mt-5'} style={bodyFont}>{overseas.intro}</p>
-              <h3 className="mt-8 mb-3 text-[1.15rem] text-[#2a3439]" style={headingFont}>{overseas.costTitle}</h3>
-              <p className={bodyClass} style={bodyFont}>{overseas.costText}</p>
-              <p className={bodyClass + ' mt-4'} style={bodyFont}>{overseas.costTextSecondary}</p>
+              <p className={sectionLabelClass}>{overseas.eyebrow}</p>
+              <h2 className={sectionTitleClass + ' mt-3'}>{overseas.title}</h2>
+              <p className={bodyClass + ' mt-5'}>{overseas.intro}</p>
+              <h3 className="mt-8 mb-3 text-[1.15rem] text-[#2a3439]">{overseas.costTitle}</h3>
+              <p className={bodyClass}>{overseas.costText}</p>
+              <p className={bodyClass + ' mt-4'}>{overseas.costTextSecondary}</p>
               <Link
                 to={overseas.ctaPath}
                 className="mt-7 inline-flex items-center gap-2 text-sm text-[#2a3439] hover:text-[#c19d30] font-semibold"
-                style={eyebrowFont}
               >
                 {overseas.cta}
                 <ArrowRight size={15} className="text-[#d4af37]" aria-hidden="true" />
@@ -221,13 +204,12 @@ const FixedTeeth = () => {
       {/* Patient cases */}
       <section className="py-20 lg:py-28 bg-[#f7fafc]">
         <div className="max-w-4xl mx-auto px-8 text-center">
-          <p className={sectionLabelClass} style={eyebrowFont}>{patientCases.eyebrow}</p>
-          <h2 className={sectionTitleClass + ' mt-3'} style={headingFont}>{patientCases.title}</h2>
-          <p className={bodyClass + ' mt-5'} style={bodyFont}>{patientCases.intro}</p>
+          <p className={sectionLabelClass}>{patientCases.eyebrow}</p>
+          <h2 className={sectionTitleClass + ' mt-3'}>{patientCases.title}</h2>
+          <p className={bodyClass + ' mt-5'}>{patientCases.intro}</p>
           <Link
             to={patientCases.ctaPath}
             className="mt-7 inline-flex items-center gap-2 text-sm text-[#2a3439] hover:text-[#c19d30] font-semibold"
-            style={eyebrowFont}
           >
             {patientCases.cta}
             <ArrowRight size={15} className="text-[#d4af37]" aria-hidden="true" />
@@ -238,13 +220,12 @@ const FixedTeeth = () => {
       {/* Team */}
       <section className="py-20 lg:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-8 text-center">
-          <p className={sectionLabelClass} style={eyebrowFont}>{team.eyebrow}</p>
-          <h2 className={sectionTitleClass + ' mt-3'} style={headingFont}>{team.title}</h2>
-          <p className={bodyClass + ' mt-5'} style={bodyFont}>{team.intro}</p>
+          <p className={sectionLabelClass}>{team.eyebrow}</p>
+          <h2 className={sectionTitleClass + ' mt-3'}>{team.title}</h2>
+          <p className={bodyClass + ' mt-5'}>{team.intro}</p>
           <Link
             to={team.ctaPath}
             className="mt-7 inline-flex items-center gap-2 text-sm text-[#2a3439] hover:text-[#c19d30] font-semibold"
-            style={eyebrowFont}
           >
             {team.cta}
             <ArrowRight size={15} className="text-[#d4af37]" aria-hidden="true" />
@@ -255,14 +236,13 @@ const FixedTeeth = () => {
       {/* Final CTA */}
       <section className="py-20 lg:py-28 bg-[#f7fafc]">
         <div className="max-w-4xl mx-auto px-8 text-center">
-          <h2 className={sectionTitleClass} style={headingFont}>{finalCta.title}</h2>
-          <p className={bodyClass + ' mt-5'} style={bodyFont}>{finalCta.intro}</p>
+          <h2 className={sectionTitleClass}>{finalCta.title}</h2>
+          <p className={bodyClass + ' mt-5'}>{finalCta.intro}</p>
           <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-            <Link to="/contact" className={ctaPrimaryClass} style={eyebrowFont}>{finalCta.primaryCta}</Link>
-            <Link to="/contact" className={ctaSecondaryClass} style={eyebrowFont}>{finalCta.secondaryCta}</Link>
+            <ContactCtas primaryLabel={finalCta.primaryCta} secondaryLabel={finalCta.secondaryCta} />
           </div>
           {finalCta.note && (
-            <p className="text-sm text-gray-500 mt-7 italic" style={bodyFont}>{finalCta.note}</p>
+            <p className="text-sm text-gray-500 mt-7 italic">{finalCta.note}</p>
           )}
         </div>
       </section>

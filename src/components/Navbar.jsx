@@ -74,23 +74,15 @@ export default function Navbar() {
 
   const content = navbarContent[language] || navbarContent.english;
 
-  const navFont = {
-    fontWeight: '600',
-  };
-
-  const dropdownFont = {
-    fontWeight: '500',
-  };
-
   const navLinkClass = (path) =>
-    `relative inline-flex h-10 items-center whitespace-nowrap px-3 text-sm tracking-wide transition-colors duration-200 ${
+    `relative inline-flex h-10 items-center whitespace-nowrap px-3 text-sm font-semibold tracking-wide transition-colors duration-200 ${
       location.pathname === path
         ? 'text-[#1f2937] after:absolute after:left-3 after:right-3 after:-bottom-0.5 after:h-[2px] after:bg-[#d4af37]'
         : 'text-[#2a3439]/80 hover:text-[#111317]'
     }`;
 
   const mobileLinkClass = (path) =>
-    `block rounded-xl px-3 py-2.5 text-sm transition ${
+    `block rounded-xl px-3 py-2.5 text-sm font-semibold transition ${
       location.pathname === path
         ? 'bg-[#f5e9c2] text-[#1f2937]'
         : 'text-[#2a3439] hover:bg-[#f3ead2]'
@@ -161,7 +153,7 @@ export default function Navbar() {
           </Link>
 
           <div className={`${isLandscape ? 'hidden xl:flex' : 'hidden'} flex-nowrap items-center gap-1 xl:gap-2`}>
-            <Link to="/" className={navLinkClass('/')} style={navFont}>
+            <Link to="/" className={navLinkClass('/')}>
               {content.home}
             </Link>
 
@@ -169,7 +161,6 @@ export default function Navbar() {
               <Link
                 to="/about"
                 className={navLinkClass('/about')}
-                style={navFont}
               >
                 {content.about}
               </Link>
@@ -194,8 +185,7 @@ export default function Navbar() {
                     <Link
                       key={sub.name}
                       to={sub.path}
-                      className="block rounded-xl px-3 py-2 text-[#2a3439] transition hover:bg-[#f7f2e7]"
-                      style={dropdownFont}
+                      className="block rounded-xl px-3 py-2 font-medium text-[#2a3439] transition hover:bg-[#f7f2e7]"
                     >
                       {sub.name}
                     </Link>
@@ -208,7 +198,6 @@ export default function Navbar() {
               <Link
                 to="/international-patients"
                 className={navLinkClass('/international-patients')}
-                style={navFont}
               >
                 {content.patients}
               </Link>
@@ -233,8 +222,7 @@ export default function Navbar() {
                     <Link
                       key={sub.path}
                       to={sub.path}
-                      className="block rounded-xl px-3 py-2 text-[#2a3439] transition hover:bg-[#f7f2e7]"
-                      style={dropdownFont}
+                      className="block rounded-xl px-3 py-2 font-medium text-[#2a3439] transition hover:bg-[#f7f2e7]"
                     >
                       {sub.name}
                     </Link>
@@ -247,7 +235,6 @@ export default function Navbar() {
               <Link
                 to="/services"
                 className={navLinkClass('/services')}
-                style={navFont}
               >
                 {content.treatments}
               </Link>
@@ -272,8 +259,7 @@ export default function Navbar() {
                     <Link
                       key={sub.name}
                       to={sub.path}
-                      className="block rounded-xl px-3 py-2 text-[#2a3439] transition hover:bg-[#f7f2e7]"
-                      style={dropdownFont}
+                      className="block rounded-xl px-3 py-2 font-medium text-[#2a3439] transition hover:bg-[#f7f2e7]"
                     >
                       {sub.name}
                     </Link>
@@ -286,7 +272,6 @@ export default function Navbar() {
               <Link
                 to="/genAd"
                 className={navLinkClass('/genAd')}
-                style={navFont}
               >
                 {content.offers}
               </Link>
@@ -311,8 +296,7 @@ export default function Navbar() {
                     <Link
                       key={sub.path}
                       to={sub.path}
-                      className="block rounded-xl px-3 py-2 text-[#2a3439] transition hover:bg-[#f7f2e7]"
-                      style={dropdownFont}
+                      className="block rounded-xl px-3 py-2 font-medium text-[#2a3439] transition hover:bg-[#f7f2e7]"
                     >
                       {sub.name}
                     </Link>
@@ -359,7 +343,7 @@ export default function Navbar() {
           }`}
         >
           <div className="space-y-1 px-3 pb-5 pt-3">
-            <Link to="/" className={mobileLinkClass('/')} onClick={closeAllMenus} style={navFont}>
+            <Link to="/" className={mobileLinkClass('/')} onClick={closeAllMenus}>
               {content.home}
             </Link>
 
@@ -367,8 +351,7 @@ export default function Navbar() {
               <div className={mobileParentRowClass('/about')}>
                 <Link
                   to="/about"
-                  className="flex-1"
-                  style={navFont}
+                  className="flex-1 font-semibold"
                   onClick={() => {
                     setIsAboutOpen(false);
                     setIsMenuOpen(false);
@@ -399,8 +382,7 @@ export default function Navbar() {
                     <Link
                       key={sub.name}
                       to={sub.path}
-                      className="block rounded-lg px-3 py-2 text-sm text-[#2a3439] hover:bg-[#f3ead2] transition"
-                      style={navFont}
+                      className="block rounded-lg px-3 py-2 text-sm font-semibold text-[#2a3439] hover:bg-[#f3ead2] transition"
                       onClick={closeAllMenus}
                     >
                       {sub.name}
@@ -414,8 +396,7 @@ export default function Navbar() {
               <div className={mobileParentRowClass('/international-patients')}>
                 <Link
                   to="/international-patients"
-                  className="flex-1"
-                  style={navFont}
+                  className="flex-1 font-semibold"
                   onClick={() => {
                     setIsPatientsOpen(false);
                     setIsMenuOpen(false);
@@ -446,8 +427,7 @@ export default function Navbar() {
                     <Link
                       key={sub.path}
                       to={sub.path}
-                      className="block rounded-lg px-3 py-2 text-sm text-[#2a3439] hover:bg-[#f3ead2] transition"
-                      style={navFont}
+                      className="block rounded-lg px-3 py-2 text-sm font-semibold text-[#2a3439] hover:bg-[#f3ead2] transition"
                       onClick={closeAllMenus}
                     >
                       {sub.name}
@@ -461,8 +441,7 @@ export default function Navbar() {
               <div className={mobileParentRowClass('/services')}>
                 <Link
                   to="/services"
-                  className="flex-1"
-                  style={navFont}
+                  className="flex-1 font-semibold"
                   onClick={() => {
                     setIsJuneOpen(false);
                     setIsMenuOpen(false);
@@ -493,8 +472,7 @@ export default function Navbar() {
                     <Link
                       key={sub.name}
                       to={sub.path}
-                      className="block rounded-lg px-3 py-2 text-sm text-[#2a3439] hover:bg-[#f3ead2] transition"
-                      style={navFont}
+                      className="block rounded-lg px-3 py-2 text-sm font-semibold text-[#2a3439] hover:bg-[#f3ead2] transition"
                       onClick={closeAllMenus}
                     >
                       {sub.name}
@@ -508,8 +486,7 @@ export default function Navbar() {
               <div className={mobileParentRowClass('/genAd')}>
                 <Link
                   to="/genAd"
-                  className="flex-1"
-                  style={navFont}
+                  className="flex-1 font-semibold"
                   onClick={() => {
                     setIsOffersOpen(false);
                     setIsMenuOpen(false);
@@ -540,8 +517,7 @@ export default function Navbar() {
                     <Link
                       key={sub.path}
                       to={sub.path}
-                      className="block rounded-lg px-3 py-2 text-sm text-[#2a3439] hover:bg-[#f3ead2] transition"
-                      style={navFont}
+                      className="block rounded-lg px-3 py-2 text-sm font-semibold text-[#2a3439] hover:bg-[#f3ead2] transition"
                       onClick={closeAllMenus}
                     >
                       {sub.name}

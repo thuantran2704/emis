@@ -7,22 +7,16 @@ import { solutionsContent } from '../Translations/solutionsContent';
 import heroImage from '../pics/doctor-reviewing-x-ray-with-patient-explaining-treatment.jpg';
 import situationsImage from '../pics/missing-teeth-and-braces.jpeg';
 import pathwaysImage from '../pics/denture.jpeg';
-import assessmentImage from '../pics/taking-cbct-x-ray.jpg';
 import teamImage from '../pics/healthcare-team.jpg';
+import { sectionLabelClass, titleClass, sectionTitleClass } from '../styles/ui';
+import ContactCtas from '../components/ContactCtas';
+import MediaFrame from '../components/MediaFrame';
 
 const Solutions = () => {
   const language = useSelector((state) => state.language.language);
   const content = solutionsContent[language] || solutionsContent.english;
 
-  const sectionLabelClass = 'uppercase tracking-[0.3em] text-[#C5AF73] text-xs font-semibold';
-  const titleClass = 'text-3xl md:text-5xl text-[#2a3439] leading-tight';
-  const sectionTitleClass = 'text-[1.8rem] md:text-[2.4rem] text-[#2a3439] leading-tight';
   const bodyClass = 'text-[17px] md:text-[19px] text-gray-600 leading-relaxed';
-
-  const ctaPrimaryClass =
-    'px-7 py-3.5 rounded-full bg-[#d4af37] text-white text-sm font-semibold hover:bg-[#c19d30] transition text-center';
-  const ctaSecondaryClass =
-    'px-7 py-3.5 rounded-full border border-[#d4af37] text-[#2a3439] text-sm font-semibold hover:bg-white transition text-center';
 
   return (
     <main className="bg-[#f7fafc] text-[#2a3439] pt-20">
@@ -61,12 +55,10 @@ const Solutions = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                <Link to="/contact" className={ctaPrimaryClass}>
-                  {content.hero.primaryCta}
-                </Link>
-                <Link to="/contact" className={ctaSecondaryClass}>
-                  {content.hero.secondaryCta}
-                </Link>
+                <ContactCtas
+                  primaryLabel={content.hero.primaryCta}
+                  secondaryLabel={content.hero.secondaryCta}
+                />
               </div>
             </div>
 
@@ -173,99 +165,85 @@ const Solutions = () => {
       </section>
 
       <section className="py-20 lg:py-28 bg-white">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className={assessmentImage ? 'grid md:grid-cols-[1fr_1fr] lg:grid-cols-[0.85fr_1.15fr] gap-8 items-stretch' : 'max-w-4xl mx-auto text-center'}>
-            <div className="rounded-2xl border border-[#dbe4ec] bg-[#f7fafc] p-7 lg:p-8">
-              <p className={sectionLabelClass}>
-                {content.assessment.eyebrow}
-              </p>
-              <h2 className={sectionTitleClass + ' mt-3'}>
-                {content.assessment.title}
-              </h2>
-              <p className={bodyClass + ' mt-5'}>
-                {content.assessment.intro}
-              </p>
+        <div className="max-w-5xl mx-auto px-8">
+          <div className="text-center max-w-3xl mx-auto">
+            <p className={sectionLabelClass}>
+              {content.assessment.eyebrow}
+            </p>
+            <h2 className={sectionTitleClass + ' mt-3'}>
+              {content.assessment.title}
+            </h2>
+            <p className={bodyClass + ' mt-5'}>
+              {content.assessment.intro}
+            </p>
+          </div>
 
-              <h3
-                className="mt-8 mb-4 text-[1.1rem] text-[#2a3439]"
+          <h3 className="mt-12 mb-6 text-center text-[1.05rem] uppercase tracking-[0.18em] text-[#a8842a] font-semibold">
+            {content.assessment.factorsTitle}
+          </h3>
+
+          <div className="grid sm:grid-cols-2 gap-5">
+            {content.assessment.factors.map((factor, index) => (
+              <div
+                key={factor.title}
+                className="flex gap-4 rounded-2xl border border-[#dbe4ec] bg-[#f7fafc] p-5 lg:p-6"
               >
-                {content.assessment.factorsTitle}
-              </h3>
-
-              <div className="space-y-3">
-                {content.assessment.factors.map((factor) => (
-                  <div key={factor.title} className="rounded-xl bg-white border border-[#dbe4ec] p-4">
-                    <p className="text-[#2a3439] text-[1rem]">
-                      {factor.title}
-                    </p>
-                    <p className="text-[15px] text-gray-600 mt-1">
-                      {factor.text}
-                    </p>
-                  </div>
-                ))}
+                <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-[#d4af37] text-white text-sm font-semibold">
+                  {index + 1}
+                </span>
+                <div>
+                  <p className="text-[#2a3439] font-semibold">
+                    {factor.title}
+                  </p>
+                  <p className="text-[15px] text-gray-600 mt-1.5 leading-relaxed">
+                    {factor.text}
+                  </p>
+                </div>
               </div>
-            </div>
-
-            {assessmentImage && (
-              <div className="rounded-2xl overflow-hidden border border-[#dfe7ef] shadow-sm bg-white">
-                <img
-                  src={assessmentImage}
-                  alt="Patient undergoing CBCT imaging for diagnosis and treatment planning"
-                  className="w-full h-full min-h-[360px] md:min-h-[440px] lg:min-h-[520px] object-cover object-center"
-                  loading="lazy"
-                />
-              </div>
-            )}
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="py-20 lg:py-28 bg-[#f7fafc]">
-        <div className="max-w-6xl mx-auto px-8">
-          <div className={teamImage ? 'grid md:grid-cols-[0.8fr_1.2fr] gap-8 items-stretch' : 'max-w-4xl mx-auto text-center'}>
-            <div className="rounded-2xl border border-[#dbe4ec] bg-white p-7 lg:p-8">
-              <p className={sectionLabelClass}>
-                {content.team.eyebrow}
-              </p>
-              <h2 className={sectionTitleClass + ' mt-3'}>
-                {content.team.title}
-              </h2>
-              <p className={bodyClass + ' mt-5'}>
-                {content.team.intro}
-              </p>
+      <section className="relative overflow-hidden py-20 lg:py-28 bg-[#f7fafc]">
+        {teamImage && (
+          <div className="absolute inset-0" aria-hidden="true">
+            <MediaFrame image={teamImage} alt="" settings={{ blur: true, scale: 1.1, position: 'center 35%', rounded: 'rounded-none', className: 'h-full' }} />
+            <div className="absolute inset-0 bg-[#f7fafc]/70" />
+          </div>
+        )}
+        <div className="relative max-w-3xl mx-auto px-8">
+          <div className="rounded-2xl border border-white/40 bg-white/60 backdrop-blur-xl shadow-lg p-7 lg:p-8">
+            <p className={sectionLabelClass}>
+              {content.team.eyebrow}
+            </p>
+            <h2 className={sectionTitleClass + ' mt-3'}>
+              {content.team.title}
+            </h2>
+            <p className={bodyClass + ' mt-5'}>
+              {content.team.intro}
+            </p>
 
-              <div className="mt-7 space-y-4">
-                {content.team.doctors.map((doctor) => (
-                  <article key={doctor.name} className="rounded-xl border border-[#e2e8ef] bg-[#f7fafc] p-4">
-                    <h3 className="text-[1.15rem] text-[#2a3439]">
-                      {doctor.name}
-                    </h3>
-                    <p className="text-[13px] text-gray-600 mt-2">
-                      {doctor.focus}
-                    </p>
-                  </article>
-                ))}
-              </div>
-
-              <Link
-                to={content.team.ctaPath}
-                className="mt-7 inline-flex items-center gap-2 text-sm text-[#2a3439] hover:text-[#c19d30] font-semibold"
-              >
-                {content.team.cta}
-                <ArrowRight size={15} className="text-[#d4af37]" />
-              </Link>
+            <div className="mt-7 space-y-4">
+              {content.team.doctors.map((doctor) => (
+                <article key={doctor.name} className="rounded-xl border border-[#e2e8ef] bg-[#f7fafc] p-4">
+                  <h3 className="text-[1.15rem] text-[#2a3439]">
+                    {doctor.name}
+                  </h3>
+                  <p className="text-[13px] text-gray-600 mt-2">
+                    {doctor.focus}
+                  </p>
+                </article>
+              ))}
             </div>
 
-            {teamImage && (
-              <div className="rounded-2xl overflow-hidden bg-[#f7fafc] flex">
-                <img
-                  src={teamImage}
-                  alt="Multidisciplinary dental team coordinating patient care"
-                  className="w-full h-full object-cover object-center rounded-xl"
-                  loading="lazy"
-                />
-              </div>
-            )}
+            <Link
+              to={content.team.ctaPath}
+              className="mt-7 inline-flex items-center gap-2 text-sm text-[#2a3439] hover:text-[#c19d30] font-semibold"
+            >
+              {content.team.cta}
+              <ArrowRight size={15} className="text-[#d4af37]" />
+            </Link>
           </div>
         </div>
       </section>
@@ -339,12 +317,10 @@ const Solutions = () => {
           </div>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-            <Link to="/contact" className={ctaPrimaryClass}>
-              {content.finalCta.primaryCta}
-            </Link>
-            <Link to="/contact" className={ctaSecondaryClass}>
-              {content.finalCta.secondaryCta}
-            </Link>
+            <ContactCtas
+              primaryLabel={content.finalCta.primaryCta}
+              secondaryLabel={content.finalCta.secondaryCta}
+            />
           </div>
 
           <p className="text-sm text-gray-500 mt-7 italic">

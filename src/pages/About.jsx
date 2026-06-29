@@ -41,39 +41,36 @@ const About = () => {
       <section className="relative overflow-hidden">
         {/* Blurred, slightly zoomed background */}
         <div
-          className="absolute inset-0 bg-cover bg-center scale-110 blur-[1.5px]"
+          className="absolute inset-0 bg-cover bg-center scale-110 blur-[2px]"
           style={{ backgroundImage: `url(${internationalImage})` }}
           aria-hidden="true"
         />
-        {/* Light overlay for readability */}
-        <div className="absolute inset-0 bg-[#f7fafc]/45" aria-hidden="true" />
+        {/* Dark gradient scrim for strong text contrast */}
+        <div
+          className="absolute inset-0 bg-gradient-to-b from-[#16242b]/75 via-[#16242b]/60 to-[#16242b]/80"
+          aria-hidden="true"
+        />
 
         <div className="relative py-36 px-8 max-w-4xl mx-auto text-center">
-          <p
-            className="uppercase tracking-[0.3em] text-[#C5AF73] mb-7 text-[10px] font-semibold"
-          >
+          <p className="uppercase tracking-[0.3em] text-[#e7c873] mb-7 text-[11px] font-semibold">
             Who We Are
           </p>
-          <h1
-            className="text-3xl md:text-4xl text-[#2a3439] mb-10 leading-tight"
-          >
+          <h1 className="text-3xl md:text-5xl text-white mb-8 leading-tight">
             {content.heroTitle}
           </h1>
-          <p
-            className="text-[15px] md:text-[17px] text-gray-600 mb-14 max-w-2xl mx-auto leading-relaxed"
-          >
+          <p className="text-[15px] md:text-[18px] text-white/85 mb-12 max-w-2xl mx-auto leading-relaxed">
             {content.heroSubtitle}
           </p>
           <div className="flex items-center justify-center gap-4 flex-wrap">
             <Link
               to="/contact"
-              className="px-7 py-3.5 rounded-full bg-[#d4af37] text-white text-sm font-semibold hover:bg-[#c19d30] transition"
+              className="px-7 py-3.5 rounded-full bg-[#d4af37] text-white text-sm font-semibold hover:bg-[#c19d30] transition shadow-lg"
             >
               {content.heroPrimaryCTA}
             </Link>
             <Link
               to="/dr-son"
-              className="px-7 py-3.5 rounded-full border border-[#d4af37] text-[#2a3439] text-sm font-semibold hover:bg-white transition"
+              className="px-7 py-3.5 rounded-full border border-white/70 text-white text-sm font-semibold hover:bg-white/10 transition"
             >
               {content.heroSecondaryCTA}
             </Link>
@@ -225,8 +222,8 @@ const About = () => {
 
       {/* SUPPORT FOR OVERSEAS */}
       <section className="py-32 max-md:py-36 bg-white">
-        <div className="max-w-4xl mx-auto px-8 space-y-12">
-          <div>
+        <div className="max-w-5xl mx-auto px-8 grid gap-12 lg:landscape:grid-cols-2 lg:landscape:items-center">
+          <div className="text-center lg:landscape:text-left">
             <SectionLabel>International Patients</SectionLabel>
             <SectionTitle>{content.internationalTitle}</SectionTitle>
             <p
@@ -234,19 +231,18 @@ const About = () => {
             >
               {content.internationalIntro}
             </p>
-            <div className="space-y-4">
+            <div className="space-y-2.5 text-left max-w-xl mx-auto">
               {content.internationalBullets.map((b, i) => (
                 <div
                   key={i}
-                  className="flex items-center gap-3 bg-[#eef3f7] rounded-xl px-5 py-4 border border-[#dbe4ec]"
+                  className="border-l-2 border-[#d4af37] pl-4 py-1.5"
                 >
-                  <span className="text-[#C5AF73] text-xs">●</span>
-                  <span className="text-[13px] text-[#2a3439]">{b}</span>
+                  <span className="text-[14px] text-[#2a3439]">{b}</span>
                 </div>
               ))}
             </div>
           </div>
-          <div className="rounded-2xl overflow-hidden shadow-sm h-[220px] md:h-[420px]">
+          <div className="hidden rounded-2xl overflow-hidden shadow-sm h-[420px] lg:landscape:block">
             <img
               src={internationalImage}
               alt="EMIS clinic waiting room"

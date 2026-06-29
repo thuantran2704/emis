@@ -147,9 +147,9 @@ export default function VeneerLanding() {
         <meta name="description" content={copy.metaDescription} />
       </Helmet>
 
-      <section className="py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-8 grid lg:grid-cols-[1.2fr_0.8fr] gap-10 lg:gap-14 items-center">
-          <div className="space-y-6">
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-6xl mx-auto px-6 sm:px-8 grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-14 items-center">
+          <div className="space-y-5 text-center lg:text-left">
             <p className={sectionLabelClass}>
               {copy.label}
             </p>
@@ -159,7 +159,7 @@ export default function VeneerLanding() {
             <p className={bodyClass}>
               {copy.heroIntro}
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 pt-2">
+            <div className="flex flex-col sm:flex-row gap-3 pt-2 justify-center lg:justify-start">
               <Link
                 to="/contact"
                 className="px-7 py-3.5 rounded-full bg-[#d4af37] text-white text-sm font-semibold hover:bg-[#c19d30] transition text-center"
@@ -174,8 +174,12 @@ export default function VeneerLanding() {
               </Link>
             </div>
           </div>
-          <div className="rounded-2xl overflow-hidden shadow-sm border border-[#dbe4ec] bg-[#f7fafc] max-w-sm lg:max-w-md lg:ml-auto">
-            <img src={heroImage} alt="Cosmetic veneer treatment visual" className="w-full h-[260px] md:h-[300px] object-cover" />
+          <div className="w-full rounded-2xl overflow-hidden shadow-sm border border-[#dbe4ec] bg-[#f7fafc]">
+            <img
+              src={heroImage}
+              alt="Cosmetic veneer treatment visual"
+              className="w-full h-[220px] sm:h-[300px] lg:h-[400px] object-cover object-center"
+            />
           </div>
         </div>
       </section>

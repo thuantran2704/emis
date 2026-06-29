@@ -4,7 +4,6 @@ import { MessageSquareText, X, RotateCcw, Phone, ChevronRight, LifeBuoy } from '
 import { chatContent } from '../Translations/chatContent';
 import { faqContent } from '../Translations/faqContent';
 
-const eyebrowFont = {};
 
 export default function GuidedChat() {
   const language = useSelector((state) => state.language.language);
@@ -110,8 +109,8 @@ export default function GuidedChat() {
                 <MessageSquareText className="h-5 w-5" />
               </span>
               <div>
-                <p className="text-sm font-semibold leading-tight" style={eyebrowFont}>{content.title}</p>
-                <p className="text-[11px] text-white/70 leading-tight" style={eyebrowFont}>{content.subtitle}</p>
+                <p className="text-sm font-semibold leading-tight">{content.title}</p>
+                <p className="text-[11px] text-white/70 leading-tight">{content.subtitle}</p>
               </div>
             </div>
             <div className="flex items-center gap-1">
@@ -180,7 +179,6 @@ export default function GuidedChat() {
                           ? 'rounded-2xl rounded-br-sm bg-[#d4af37] text-white'
                           : 'rounded-2xl rounded-bl-sm bg-[#f7f2e7] text-[#2a3439]'
                       }`}
-                      style={eyebrowFont}
                     >
                       {msg.text}
                     </div>
@@ -205,7 +203,6 @@ export default function GuidedChat() {
                     key={category.title}
                     onClick={() => selectTopic(index)}
                     className="group flex w-full items-center justify-between gap-3 rounded-xl border border-[#e4ebf2] bg-white px-4 py-2.5 text-left text-[14px] text-[#2a3439] transition hover:border-[#d4af37] hover:bg-[#fffaf0]"
-                    style={eyebrowFont}
                   >
                     <span>{category.title}</span>
                     <ChevronRight className="h-4 w-4 flex-shrink-0 text-[#C5AF73] transition group-hover:translate-x-0.5" />
@@ -217,7 +214,6 @@ export default function GuidedChat() {
                     key={item.question}
                     onClick={() => selectQuestion(item)}
                     className="group flex w-full items-center justify-between gap-3 rounded-xl border border-[#e4ebf2] bg-white px-4 py-2.5 text-left text-[14px] text-[#2a3439] transition hover:border-[#d4af37] hover:bg-[#fffaf0]"
-                    style={eyebrowFont}
                   >
                     <span>{item.question}</span>
                     <ChevronRight className="h-4 w-4 flex-shrink-0 text-[#C5AF73] transition group-hover:translate-x-0.5" />
@@ -227,14 +223,14 @@ export default function GuidedChat() {
                 {(stage === 'questions' || stage === 'answered') && (
                   <div className="flex flex-wrap gap-2 pt-1">
                     {stage === 'answered' && (
-                      <button onClick={askAnother} className="rounded-full border border-[#e4ebf2] bg-white px-3.5 py-1.5 text-[13px] text-[#2a3439] transition hover:border-[#d4af37]" style={eyebrowFont}>
+                      <button onClick={askAnother} className="rounded-full border border-[#e4ebf2] bg-white px-3.5 py-1.5 text-[13px] text-[#2a3439] transition hover:border-[#d4af37]">
                         {content.askAnother}
                       </button>
                     )}
-                    <button onClick={chooseTopic} className="rounded-full border border-[#e4ebf2] bg-white px-3.5 py-1.5 text-[13px] text-[#2a3439] transition hover:border-[#d4af37]" style={eyebrowFont}>
+                    <button onClick={chooseTopic} className="rounded-full border border-[#e4ebf2] bg-white px-3.5 py-1.5 text-[13px] text-[#2a3439] transition hover:border-[#d4af37]">
                       {content.chooseTopic}
                     </button>
-                    <button onClick={contactUs} className="inline-flex items-center gap-1.5 rounded-full bg-[#2a3439] px-3.5 py-1.5 text-[13px] font-medium text-white transition hover:bg-[#1f262a]" style={eyebrowFont}>
+                    <button onClick={contactUs} className="inline-flex items-center gap-1.5 rounded-full bg-[#2a3439] px-3.5 py-1.5 text-[13px] font-medium text-white transition hover:bg-[#1f262a]">
                       <LifeBuoy className="h-3.5 w-3.5" />
                       {content.stillNeedHelp}
                     </button>
@@ -242,7 +238,7 @@ export default function GuidedChat() {
                 )}
 
                 {stage === 'contact' && (
-                  <button onClick={chooseTopic} className="rounded-full border border-[#e4ebf2] bg-white px-3.5 py-1.5 text-[13px] text-[#2a3439] transition hover:border-[#d4af37]" style={eyebrowFont}>
+                  <button onClick={chooseTopic} className="rounded-full border border-[#e4ebf2] bg-white px-3.5 py-1.5 text-[13px] text-[#2a3439] transition hover:border-[#d4af37]">
                     {content.backToTopics}
                   </button>
                 )}
@@ -260,7 +256,6 @@ export default function GuidedChat() {
         className="flex h-14 items-center gap-2.5 rounded-full bg-[#d4af37] px-4 text-white shadow-lg transition hover:bg-[#c19d30]"
         aria-label={content.launcherLabel}
         aria-expanded={isOpen}
-        style={eyebrowFont}
       >
         {isOpen ? <X className="h-6 w-6" /> : <MessageSquareText className="h-6 w-6" />}
         {!isOpen && <span className="hidden text-sm font-semibold sm:inline">{content.launcherLabel}</span>}

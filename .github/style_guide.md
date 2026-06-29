@@ -36,6 +36,16 @@ If two rules conflict, follow the higher item in the hierarchy.
 - Shared components may contain UI logic, not page/domain business rules.
 - Keep cross-section coupling low: pass explicit props, avoid hidden global assumptions.
 
+Shared modules (single source of truth — import, do NOT re-declare per file):
+- `src/styles/ui.js` — shared Tailwind class tokens for marketing pages: `sectionLabelClass`, `titleClass`, `sectionTitleClass`, `ctaPrimaryClass`, `ctaSecondaryClass`. Page-specific values (e.g. `bodyClass` variants) may stay local.
+- `src/components/ContactCtas.jsx` — standard "to `/contact`" CTA pair. Use `<ContactCtas primaryLabel secondaryLabel />` inside an existing flex wrapper instead of hand-writing the two `<Link>`s. Omit `secondaryLabel` for a single button.
+- `src/data/contactChannels.js` — shared clinic contact/social channels (`contactItems`, `primaryContactItems`, `socialContactItems`). Reuse for any contact/social UI (Contact page, Footer, etc.).
+- `src/components/Section.jsx` — `SectionHeading` (centered eyebrow + title + optional intro) shared by treatment pages.
+- `src/components/MediaFrame.jsx` — configurable image frame (fit cover/contain/none, scale/zoom, position, bg, blur incl. mobile). Pass `image`, `alt`, `settings`.
+- `src/components/ProcessSteps.jsx` — numbered step graph (vertical on mobile, wrapping horizontal stepper on desktop; handles up to ~10 steps). Pass `steps`, `note`.
+- `src/components/AdContactFooter.jsx`, `AdQuickBanner.jsx`, `AdFinalCta.jsx` — shared building blocks for promo/ad pages (crown, canal, whitening). Pass `isVI`/content via props.
+- Prefer Tailwind utility classes over inline `style={{ ... }}` for static styling (e.g. use `font-semibold`, not `style={{ fontWeight: 600 }}`).
+
 ## 4) Size Budgets and Split Rules
 
 - Page file soft limit: 300 lines.
@@ -64,6 +74,7 @@ Typography roles (site-wide, enforced globally in `src/index.css`):
 - Body text (everything else, including UI labels, buttons, inputs): Helvetica (`'Helvetica Neue', Helvetica, Arial, sans-serif`).
 - These rules apply to ALL pages and ALL text. Global CSS uses `!important` so it overrides any legacy inline `font-family` styles still present in components.
 - Do not introduce new font families. If a title needs emphasis, use weight/size/tracking within Montserrat; for body, use weight/size within Helvetica.
+- Do not set fonts via inline `style={{ fontFamily }}` — fonts are enforced globally in `src/index.css`; inline font styles have been removed and should not be reintroduced.
 - For premium editorial pages, prefer slightly smaller type with more line-height and whitespace rather than larger display copy.
 - Let small labels and CTAs rely on tracking and spacing for emphasis before increasing font size.
 
