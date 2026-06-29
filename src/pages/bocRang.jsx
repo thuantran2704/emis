@@ -42,6 +42,7 @@ import crown5Vie from '../pics/WEB/veneer/vie/05-mat-dan-su-veneer-duc.png';
 import crown6Vie from '../pics/WEB/veneer/vie/06-rang-su-full-ordent-y.png';
 import crown7Vie from '../pics/WEB/veneer/vie/07-rang-su-full-nt200-anh.png';
 import crown8Vie from '../pics/WEB/veneer/vie/08-rang-su-zico-centonia-han-quoc.png';
+import ProcessSteps from '../components/ProcessSteps';
 
 export default function CrownLanding() {
   const language = useSelector((state) => state.language.language);
@@ -252,18 +253,7 @@ export default function CrownLanding() {
             <h2 className={titleClass + ' mb-8'}>
               {copy.processTitle}
             </h2>
-            <div className="flex flex-1 flex-col justify-between gap-4">
-              {copy.processSteps.map((step, idx) => (
-                <div key={step} className="rounded-xl bg-white border border-[#dbe4ec] px-5 py-4">
-                  <p className="text-[11px] uppercase tracking-[0.2em] text-[#C5AF73] mb-2">
-                    Step {idx + 1}
-                  </p>
-                  <p className="text-[15px] text-[#2a3439]">
-                    {step}
-                  </p>
-                </div>
-              ))}
-            </div>
+            <ProcessSteps steps={copy.processSteps} className="flex-1" />
           </div>
           <div className="rounded-2xl overflow-hidden shadow-sm border border-[#dbe4ec] bg-white">
             <img src={labImage} alt="Clinical team discussing crown case planning" className="w-full h-full object-cover" />

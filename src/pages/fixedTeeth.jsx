@@ -4,9 +4,10 @@ import { useSelector } from 'react-redux';
 import { Helmet } from 'react-helmet';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import { fixedTeethContent } from '../Translations/fixedTeethContent';
-import heroImage from '../pics/implant-surgery-room.jpg';
-import allOnImage from '../pics/all-on-4-implant.jpg';
+import heroImage from '../pics/elder-person-teeth-uncomfortable.jpeg';
+import allOnImage from '../pics/allon6.jpeg';
 import overseasImage from '../pics/doctor-explaining-treatment-x-ray-dif-angle.jpg';
+import familiarImage from '../pics/denture.jpeg';
 import { sectionLabelClass, titleClass, sectionTitleClass } from '../styles/ui';
 import ContactCtas from '../components/ContactCtas';
 import { SectionHeading } from '../components/Section';
@@ -50,11 +51,11 @@ const FixedTeeth = () => {
                 <ContactCtas primaryLabel={hero.primaryCta} secondaryLabel={hero.secondaryCta} />
               </div>
             </div>
-            <div className="rounded-2xl border border-[#dfe7ef] shadow-md bg-white p-5 lg:p-7">
+            <div className="rounded-2xl border border-[#dfe7ef] shadow-md overflow-hidden">
               <img
                 src={heroImage}
                 alt="Illustration of an All-on-4 implant-supported fixed teeth restoration"
-                className="w-full h-[300px] lg:h-[440px] object-contain object-center"
+                className="w-full h-[300px] lg:h-[460px] object-cover object-center"
               />
             </div>
           </div>
@@ -65,11 +66,20 @@ const FixedTeeth = () => {
       <section className="py-20 lg:py-28 bg-white">
         <div className="max-w-6xl mx-auto px-8">
           <SectionHeading eyebrow={familiar.eyebrow} title={familiar.title} />
-          <div className="max-w-4xl mx-auto">
-            <Checklist items={familiar.items} />
-            {familiar.note && (
-              <p className={bodyClass + ' mt-7 text-center'}>{familiar.note}</p>
-            )}
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
+            <div className="rounded-2xl overflow-hidden shadow-sm border border-[#dfe7ef] aspect-[4/3]">
+              <img
+                src={familiarImage}
+                alt="Patient experiencing dental discomfort"
+                className="w-full h-full object-cover object-center"
+              />
+            </div>
+            <div>
+              <Checklist items={familiar.items} />
+              {familiar.note && (
+                <p className={bodyClass + ' mt-7'}>{familiar.note}</p>
+              )}
+            </div>
           </div>
         </div>
       </section>

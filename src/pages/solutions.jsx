@@ -5,12 +5,13 @@ import { Helmet } from 'react-helmet';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import { solutionsContent } from '../Translations/solutionsContent';
 import heroImage from '../pics/doctor-reviewing-x-ray-with-patient-explaining-treatment.jpg';
-import situationsImage from '../pics/missing-teeth-and-braces.jpeg';
+import situationsImage from '../pics/elder-person-teeth-uncomfortable.jpeg';
 import pathwaysImage from '../pics/denture.jpeg';
 import teamImage from '../pics/healthcare-team.jpg';
 import { sectionLabelClass, titleClass, sectionTitleClass } from '../styles/ui';
 import ContactCtas from '../components/ContactCtas';
 import MediaFrame from '../components/MediaFrame';
+import ProcessSteps from '../components/ProcessSteps';
 
 const Solutions = () => {
   const language = useSelector((state) => state.language.language);
@@ -303,18 +304,7 @@ const Solutions = () => {
             {content.finalCta.processTitle}
           </h3>
 
-          <div className="mt-6 grid md:grid-cols-3 gap-4">
-            {content.finalCta.steps.map((step, index) => (
-              <article key={step} className="rounded-xl border border-[#dbe4ec] bg-white p-5">
-                <p className="text-[11px] uppercase tracking-[0.22em] text-[#C5AF73]">
-                  {language === 'vietnamese' ? `Bước ${index + 1}` : `Step ${index + 1}`}
-                </p>
-                <p className="mt-2 text-[16px] text-[#2a3439]">
-                  {step}
-                </p>
-              </article>
-            ))}
-          </div>
+          <ProcessSteps steps={content.finalCta.steps} className="mt-6" />
 
           <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
             <ContactCtas

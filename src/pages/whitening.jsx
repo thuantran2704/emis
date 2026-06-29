@@ -22,6 +22,7 @@ import {
 
 import viImg from "../pics/teeth-whitening.jpg";
 import enImg from "../pics/teeth-whitening.jpg";
+import ProcessSteps from "../components/ProcessSteps";
 
 const WhiteningAd = () => {
   const language = useSelector((state) => state.language.language);
@@ -438,23 +439,7 @@ const WhiteningAd = () => {
               <div className="w-32 h-1 bg-gradient-to-r from-[#d4af37] to-[#C5AF73] rounded-full mx-auto mb-4"></div>
               <p className="text-gray-600 max-w-2xl mx-auto">{content.process.description}</p>
             </div>
-            <div className="grid md:grid-cols-5 gap-4">
-              {content.process.steps.map((step, idx) => (
-                <div key={idx} className="relative text-center">
-                  <div className="bg-gradient-to-br from-[#eef2f6] to-[#f7fafc] border border-[#dbe4ec] rounded-2xl p-5 h-full hover:border-[#C5AF73] transition-colors">
-                    <div className="w-12 h-12 bg-gradient-to-br from-[#16324a] to-[#2a3439] rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-3">
-                      {idx + 1}
-                    </div>
-                    <p className="text-gray-700 text-sm">{step}</p>
-                  </div>
-                  {idx < content.process.steps.length - 1 && (
-                    <div className="hidden md:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 z-10">
-                      <ChevronRight className="w-6 h-6 text-[#C5AF73]" />
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
+            <ProcessSteps steps={content.process.steps} />
           </section>
 
           {/* Features Section */}

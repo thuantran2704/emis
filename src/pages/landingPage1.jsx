@@ -23,6 +23,7 @@ import form5Vie from '../pics/WEB/forms/vie/05-rang-ovan.png';
 import form6Vie from '../pics/WEB/forms/vie/06-rang-tho.png';
 import form7Vie from '../pics/WEB/forms/vie/07-dang-rang-khenh.png';
 import form8Vie from '../pics/WEB/forms/vie/08-dang-rang-nanh.png';
+import ProcessSteps from '../components/ProcessSteps';
 
 export default function VeneerLanding() {
   const language = useSelector((state) => state.language.language);
@@ -232,18 +233,7 @@ export default function VeneerLanding() {
           <h2 className={titleClass + ' mb-8'}>
             {copy.processTitle}
           </h2>
-          <div className="grid md:grid-cols-2 gap-4">
-            {copy.processSteps.map((step, idx) => (
-              <div key={step} className="rounded-xl bg-white border border-[#dbe4ec] px-5 py-4">
-                <p className="text-[11px] uppercase tracking-[0.2em] text-[#C5AF73] mb-2">
-                  Step {idx + 1}
-                </p>
-                <p className="text-[15px] text-[#2a3439]">
-                  {step}
-                </p>
-              </div>
-            ))}
-          </div>
+          <ProcessSteps steps={copy.processSteps} />
         </div>
       </section>
 

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { Helmet } from 'react-helmet';
 import { CheckCircle, ArrowRight } from 'lucide-react';
+import ProcessSteps from '../components/ProcessSteps';
 import { oralSurgeryContent } from '../Translations/oralSurgeryContent';
 import oralSurgeryHeroImg from '../pics/dr-at-work-surgery.jpg';
 import wisdomTeethImg from '../pics/wisdom-teeth.jpg';
@@ -168,25 +169,8 @@ const OralSurgery = () => {
             </p>
           </div>
 
-          <div className="max-w-2xl mx-auto">
-            <div className="space-y-0">
-              {content.section4.steps.map((step, i) => (
-                <div key={i}>
-                  <div className="bg-[#f7fafc] p-6 rounded-lg text-center">
-                    <p
-                      className="text-lg font-semibold text-[#2a3439]"
-                    >
-                      {step}
-                    </p>
-                  </div>
-                  {i < content.section4.steps.length - 1 && (
-                    <div className="flex justify-center py-2">
-                      <ArrowRight size={20} className="text-[#d4af37] rotate-90" />
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
+          <div className="max-w-3xl mx-auto">
+            <ProcessSteps steps={content.section4.steps} />
           </div>
         </div>
       </section>

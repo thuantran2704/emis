@@ -6,6 +6,7 @@ import consultingTeam from '../pics/consulting-team.jpg';
 import xrayConsultation from '../pics/dr-x-ray-consultation.jpg';
 import foreignPatientWithDoctor from '../pics/foreign-patient-1-with-dr-tu-smiling.jpg';
 import foreignPatientSmile from '../pics/foreign-patient-2.jpg';
+import ProcessSteps from '../components/ProcessSteps';
 
 export default function InternationalPatients() {
   const language = useSelector((state) => state.language.language);
@@ -112,21 +113,7 @@ export default function InternationalPatients() {
         <div className="max-w-6xl mx-auto px-6 md:px-12">
           <SectionLabel>Our Process</SectionLabel>
           <SectionTitle>{content.processTitle}</SectionTitle>
-          <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-6">
-            {content.processSteps.map((step, i) => (
-              <div key={i} className="rounded-lg border border-[#dbe4ec] bg-[#f7fafc] p-4 lg:p-7">
-                <div className="flex items-start gap-3 lg:gap-4">
-                  <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-[#d4af37] text-[11px] font-semibold text-white lg:h-9 lg:w-9 lg:text-[12px]">
-                    {step.number}
-                  </div>
-                  <div>
-                    <h3 className="mb-1.5 text-[13px] font-semibold uppercase tracking-[0.04em] text-[#2a3439] lg:mb-2 lg:text-[15px] lg:tracking-[0.05em]">{step.title}</h3>
-                    <p className="text-[12px] leading-5 text-gray-600 lg:text-[14px] lg:leading-7">{step.description}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <ProcessSteps steps={content.processSteps} />
         </div>
       </section>
 

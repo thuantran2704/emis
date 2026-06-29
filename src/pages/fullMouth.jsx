@@ -13,7 +13,7 @@ import {
   Wrench,
 } from 'lucide-react';
 import { fullMouthContent } from '../Translations/fullMouthContent';
-import heroImage from '../pics/doctor-smiling-with-patient.jpg';
+import heroImage from '../pics/full-mouth-rehabilation.jpeg';
 import overseasImage from '../pics/doctor-reviewing-x-ray-with-patient-explaining-treatment.jpg';
 import teamImage from '../pics/doctors-discussing-implants-engaged.jpg';
 import { sectionLabelClass, titleClass, sectionTitleClass, ctaPrimaryClass, ctaSecondaryClass } from '../styles/ui';
