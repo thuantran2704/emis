@@ -7,11 +7,11 @@ export default function Services() {
   const languageRedux = useSelector((state) => state.language.language);
   const language = languageRedux === "vietnamese" ? "vietnamese" : "english";
 
-  const [services, setServices] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [rawRows, setRawRows] = useState([]);
+  const [csvLoading, setCsvLoading] = useState(true);
   const [search, setSearch] = useState("");
 
-  const [fxRate, setFxRate] = useState(undefined);
+  const [fxRate, setFxRate] = useState(undefined); // undefined = loading, null = failed
   const [fxLastUpdated, setFxLastUpdated] = useState(null);
 
   const fileCandidates = {
@@ -71,6 +71,7 @@ export default function Services() {
     return null;
   };
 
+  // FX rate — independent, loads in background
   useEffect(() => {
     let cancelled = false;
     (async () => {
@@ -93,13 +94,12 @@ export default function Services() {
     return () => { cancelled = true; };
   }, []);
 
+  // CSV — loads immediately, does not wait for FX
   useEffect(() => {
     let cancelled = false;
-    if (fxRate === undefined) return;
-
     (async () => {
-      setLoading(true);
-      setServices([]);
+      setCsvLoading(true);
+      setRawRows([]);
       let parsed = null;
 
       for (const path of fileCandidates[language]) {
@@ -115,7 +115,7 @@ export default function Services() {
       }
 
       if (cancelled || !parsed?.data?.length) {
-        setLoading(false);
+        setCsvLoading(false);
         return;
       }
 
@@ -129,58 +129,67 @@ export default function Services() {
         .filter((r) => Object.values(r).some((v) => v !== null && String(v).trim() !== ""))
         .map((r) => {
           const rawPrice = (r[priceField] || "").toString().trim();
-          const normalizedRawPrice = rawPrice.replace(/\s+/g, " ").trim();
-          const hasVND = /\bvnd\b/i.test(normalizedRawPrice);
-          const hasUSD = /\busd\b/i.test(normalizedRawPrice) || /\$/i.test(normalizedRawPrice);
-          const numbers = rawPrice.match(/\d[\d,]*/g);
-          const hasNumeric = Boolean(numbers?.length);
-          let priceUSD = "—";
-          let priceVND = "—";
-
-          if (normalizedRawPrice) {
-            if (hasNumeric) {
-              priceVND = hasVND || hasUSD ? normalizedRawPrice : `${normalizedRawPrice} VND`;
-            } else {
-              priceVND = normalizedRawPrice;
-              priceUSD = normalizedRawPrice;
-            }
-          }
-
-          if (hasNumeric && hasUSD && normalizedRawPrice) {
-            const usdBase = normalizedRawPrice
-              .replace(/\$/g, "")
-              .replace(/\busd\b/gi, "")
-              .replace(/\s+/g, " ")
-              .trim();
-            priceUSD = usdBase ? `${usdBase} USD` : "—";
-          }
-
-          if (hasNumeric && !hasUSD && numbers?.length && typeof fxRate === "number") {
-            const convert = (n) => (Math.round((n / fxRate) * 2) / 2 - 0.01).toFixed(2);
-            const nums = numbers.map((n) => parseFloat(n.replace(/,/g, "")));
-            priceUSD =
-              nums.length === 1
-                ? `${convert(nums[0])} USD`
-                : `${convert(nums[0])} – ${convert(nums[1])} USD`;
-          }
-
           return {
             category: r[categoryField]?.trim(),
             desc: r[descField]?.trim(),
             unit: r[unitField]?.trim(),
-            priceVND,
-            priceUSD,
+            rawPrice,
           };
         });
 
       if (!cancelled) {
-        setServices(rows);
-        setLoading(false);
+        setRawRows(rows);
+        setCsvLoading(false);
       }
     })();
-
     return () => { cancelled = true; };
-  }, [language, fxRate]);
+  }, [language]);
+
+  // Compute VND + USD reactively — USD updates when fxRate arrives
+  const services = useMemo(() => {
+    return rawRows.map((r) => {
+      const normalizedRawPrice = r.rawPrice.replace(/\s+/g, " ").trim();
+      const hasVND = /\bvnd\b/i.test(normalizedRawPrice);
+      const hasUSD = /\busd\b/i.test(normalizedRawPrice) || /\$/i.test(normalizedRawPrice);
+      const numbers = r.rawPrice.match(/\d[\d,]*/g);
+      const hasNumeric = Boolean(numbers?.length);
+
+      let priceVND = "—";
+      let priceUSD = null; // null = fx still loading
+
+      if (normalizedRawPrice) {
+        if (hasNumeric) {
+          priceVND = hasVND || hasUSD ? normalizedRawPrice : `${normalizedRawPrice} VND`;
+        } else {
+          priceVND = normalizedRawPrice;
+        }
+      }
+
+      if (hasNumeric && hasUSD && normalizedRawPrice) {
+        const usdBase = normalizedRawPrice
+          .replace(/\$/g, "")
+          .replace(/\busd\b/gi, "")
+          .replace(/\s+/g, " ")
+          .trim();
+        priceUSD = usdBase ? `${usdBase} USD` : "—";
+      } else if (hasNumeric && !hasUSD && numbers?.length) {
+        if (fxRate === undefined) {
+          priceUSD = null; // still loading
+        } else if (typeof fxRate === "number") {
+          const convert = (n) => (Math.round((n / fxRate) * 2) / 2 - 0.01).toFixed(2);
+          const nums = numbers.map((n) => parseFloat(n.replace(/,/g, "")));
+          priceUSD =
+            nums.length === 1
+              ? `${convert(nums[0])} USD`
+              : `${convert(nums[0])} – ${convert(nums[1])} USD`;
+        } else {
+          priceUSD = "—";
+        }
+      }
+
+      return { category: r.category, desc: r.desc, unit: r.unit, priceVND, priceUSD };
+    });
+  }, [rawRows, fxRate]);
 
   const grouped = useMemo(() => {
     return services.reduce((acc, r) => {
@@ -203,12 +212,10 @@ export default function Services() {
     );
   }, [grouped, search]);
 
-  if (loading) {
+  if (csvLoading) {
     return (
       <div className="min-h-screen bg-[#f7f2e7] flex items-center justify-center">
-        <p
-          className="text-sm text-gray-400 tracking-[0.2em] uppercase"
-        >
+        <p className="text-sm text-gray-400 tracking-[0.2em] uppercase">
           Loading…
         </p>
       </div>
@@ -265,81 +272,52 @@ export default function Services() {
             )}
           </div>
 
-          {/* TABLE */}
-          <div className="overflow-x-auto rounded-2xl shadow-sm bg-white">
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="border-b border-gray-100">
-                  <th
-                    className="px-6 py-4 text-left text-xs uppercase tracking-[0.2em] text-[#C5AF73] font-semibold w-44"
-                  >
-                    {columnLabels.category}
-                  </th>
-                  <th
-                    className="px-6 py-4 text-left text-xs uppercase tracking-[0.2em] text-[#C5AF73] font-semibold"
-                  >
-                    {columnLabels.description}
-                  </th>
-                  <th
-                    className="px-6 py-4 text-center text-xs uppercase tracking-[0.2em] text-[#C5AF73] font-semibold w-24"
-                  >
-                    {columnLabels.unit}
-                  </th>
-                  <th
-                    className="px-6 py-4 text-right text-xs uppercase tracking-[0.2em] text-[#C5AF73] font-semibold w-48"
-                  >
-                    {columnLabels.priceVND}
-                  </th>
-                  <th
-                    className="px-6 py-4 text-right text-xs uppercase tracking-[0.2em] text-gray-300 font-semibold w-40"
-                  >
-                    {columnLabels.priceUSD}
-                  </th>
-                </tr>
-              </thead>
+          {/* PRICE LIST */}
+          <div className="space-y-6">
+            {Object.entries(filtered).map(([cat, rows]) => (
+              <div key={cat}>
+                {/* Category header */}
+                <div className="flex items-center gap-3 mb-3 px-1">
+                  <span className="w-[3px] h-4 rounded-full bg-[#C5AF73]" />
+                  <h2 className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#C5AF73]">
+                    {cat}
+                  </h2>
+                </div>
 
-              <tbody>
-                {Object.entries(filtered).map(([cat, rows]) =>
-                  rows.map((r, i) => (
-                    <tr
-                      key={`${cat}-${i}`}
-                      className="border-t border-gray-50 hover:bg-[#faf7f0] transition-colors"
+                {/* Rows */}
+                <div className="bg-white rounded-2xl shadow-sm overflow-hidden divide-y divide-gray-50/80">
+                  {rows.map((r, i) => (
+                    <div
+                      key={i}
+                      className="flex items-start justify-between gap-5 px-5 py-4 hover:bg-[#faf7f0] transition-colors"
                     >
-                      {i === 0 && (
-                        <td
-                          rowSpan={rows.length}
-                          className="px-6 py-4 align-top"
-                        >
-                          <span className="text-[#2a3439] font-medium text-base leading-snug">
-                            {cat}
-                          </span>
-                        </td>
-                      )}
-                      <td
-                        className="px-6 py-4 text-gray-500"
-                      >
-                        {r.desc}
-                      </td>
-                      <td
-                        className="px-6 py-4 text-center text-gray-400"
-                      >
-                        {r.unit}
-                      </td>
-                      <td
-                        className="px-6 py-4 text-right font-semibold text-[#2a3439]"
-                      >
-                        {r.priceVND}
-                      </td>
-                      <td
-                        className="px-6 py-4 text-right text-gray-300"
-                      >
-                        {r.priceUSD}
-                      </td>
-                    </tr>
-                  ))
-                )}
-              </tbody>
-            </table>
+                      <div className="flex-1 min-w-0">
+                        <p className="text-[13.5px] text-[#2a3439] leading-snug">
+                          {r.desc}
+                        </p>
+                        {r.unit && r.unit !== "—" && (
+                          <p className="text-[11px] text-gray-400 mt-1">
+                            {r.unit}
+                          </p>
+                        )}
+                      </div>
+                      <div className="text-right shrink-0 pt-px">
+                        <p className="text-[13.5px] font-semibold text-[#2a3439] whitespace-nowrap">
+                          {r.priceVND}
+                        </p>
+                        {r.priceUSD === null ? (
+                          <p className="text-[11px] text-gray-200 mt-0.5">···</p>
+                        ) : r.priceUSD && r.priceUSD !== "—" ? (
+                          <p className="text-[11px] text-gray-300 mt-0.5 whitespace-nowrap">
+                            {r.priceUSD}
+                          </p>
+                        ) : null}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
 
         </div>

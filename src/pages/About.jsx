@@ -123,7 +123,7 @@ const About = () => {
               ))}
             </div>
           </div>
-          <div className="rounded-2xl overflow-hidden shadow-sm h-[480px]">
+          <div className="rounded-2xl overflow-hidden shadow-sm aspect-[3/2] md:aspect-auto md:h-[480px]">
             <img
               src={planningImage}
               alt="Clinical treatment planning"
@@ -210,7 +210,7 @@ const About = () => {
               ))}
             </div>
           </div>
-          <div className="rounded-2xl overflow-hidden shadow-sm h-[500px]">
+          <div className="rounded-2xl overflow-hidden shadow-sm aspect-[3/2] md:aspect-auto md:h-[500px]">
             <img
               src={teamImage}
               alt="Professional clinic team environment"
@@ -276,7 +276,7 @@ const About = () => {
               ))}
             </div>
           </div>
-          <div className="rounded-2xl overflow-hidden shadow-sm h-[420px]">
+          <div className="rounded-2xl overflow-hidden shadow-sm aspect-[3/2] md:aspect-auto md:h-[420px]">
             <img
               src={safetyImage}
               alt="Clinical sterilization and safety protocols"
