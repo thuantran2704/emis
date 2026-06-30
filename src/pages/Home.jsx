@@ -20,12 +20,8 @@ import internationalSupport from '../pics/doctor-discussing-treatment-other-pic-
 import ctaBackground from '../pics/doctor-explaining-procedure-to-patient.jpg';
 import ContactForm from '../components/ContactForm';
 import ImplantPlannerBanner from '../components/implants_banner';
-import ServiceCard from '../components/ServiceCard';
 import { DOCTORS, getDoctorTranslation } from '../data/doctors';
-import serviceGeneral from '../pics/teeth-whitening.jpg';
 import serviceImplant from '../pics/implant-illustration.jpg';
-import serviceCrown from '../pics/crown.jpg';
-import serviceInvisalign from '../pics/invisalign.jpg';
 
 const locales = {
   vietnamese: 'vi_VN',
@@ -39,11 +35,6 @@ export default function Home() {
   const language = useSelector((state) => state.language.language);
   const localizedHome = homeContent[language] || homeContent.english;
   const page = localizedHome.homepageV2 || homeContent.english.homepageV2;
-  const baseServices = (localizedHome.services || homeContent.english.services || []).slice(0, 4);
-  const serviceCards = baseServices.length > 1
-    ? [baseServices[1], baseServices[0], ...baseServices.slice(2)]
-    : baseServices;
-  const serviceImages = [serviceImplant, serviceGeneral, serviceCrown, serviceInvisalign];
   const sectionLabelClass = "mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-[#C5AF73]";
   const [activeSlide, setActiveSlide] = useState(0);
   const implantSlideImages = [implantIntroImage, allon6Image, serviceImplant];
@@ -185,8 +176,35 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Implant Specialist Slider */}
+      {/* 2 — Empathy: Mirror the visitor's pain back at them */}
       <section className="bg-white py-16 md:py-20">
+        <div className="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-[1.1fr_1fr] md:items-stretch">
+          <div className="hidden overflow-hidden rounded-3xl shadow-lg md:block">
+            <img src={lifestyleDinner} alt="Patient enjoying daily life confidently" className="h-full w-full object-cover" />
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl">{page.situations.title}</h2>
+            <p className="mt-4 text-base leading-relaxed text-gray-500">{page.situations.intro}</p>
+
+            <div className="mt-6 space-y-5 border-l-2 border-[#e5d6b0] pl-5">
+              {page.situations.cards.map((item) => (
+                <article key={item.title} className="pb-4 border-b border-[#e6edf3] last:border-b-0">
+                  <h3 className="text-base font-semibold text-[#1d3953]">{item.title}</h3>
+                  <p className="mt-2 text-xs leading-relaxed text-[#5d7388]">{item.text}</p>
+                </article>
+              ))}
+            </div>
+
+            <Link to="/services" className="mt-6 inline-block rounded-full border border-[#9ab1c5] bg-white px-6 py-3 text-sm font-semibold text-[#1f3b57] transition hover:bg-[#f2f7fb]">
+              {page.situations.cta}
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 3 — Solution: Implant specialist slider */}
+      <section className="bg-[#f7fafc] py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
             <p className={sectionLabelClass}>{page.implantSpecialist.eyebrow}</p>
@@ -237,7 +255,7 @@ export default function Home() {
                   <img
                     src={implantSlideImages[i]}
                     alt={slide.title}
-                    className="h-72 w-full object-contain bg-[#f7fafc] p-4 lg:h-96"
+                    className="h-72 w-full object-contain bg-white p-4 lg:h-96"
                   />
                 </div>
               </div>
@@ -258,7 +276,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#ffffff] py-16 md:py-20">
+      {/* 4 — Trust: Why EMIS over everyone else */}
+      <section className="bg-white py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
             <p className={sectionLabelClass}>Why EMIS</p>
@@ -287,32 +306,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#f1f5f9] py-16 md:py-20">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="mx-auto max-w-3xl text-center">
-            <p className={sectionLabelClass}>{localizedHome.servicesTitle || 'Oral Health Services'}</p>
-            <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl">
-              {page.pathways.title}
-            </h2>
-            <p className="mt-4 text-base leading-relaxed text-gray-500">{page.pathways.intro}</p>
-          </div>
-
-          <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            {serviceCards.map((service, index) => (
-              <ServiceCard
-                key={service.name}
-                service={service}
-                image={serviceImages[index % serviceImages.length]}
-                altText={service.name}
-                bookNowText={localizedHome.bookButton || 'Book Consultation'}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <ImplantPlannerBanner />
-
+      {/* 5 — Credibility: Meet the doctors */}
       <section className="bg-[#f1f5f9] py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
@@ -349,32 +343,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white py-16 md:py-20">
-        <div className="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-[1.1fr_1fr] md:items-stretch">
-          <div className="hidden overflow-hidden rounded-3xl shadow-lg md:block">
-            <img src={lifestyleDinner} alt="Patient enjoying daily life confidently" className="h-full w-full object-cover" />
-          </div>
-
-          <div>
-            <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl">{page.situations.title}</h2>
-            <p className="mt-4 text-base leading-relaxed text-gray-500">{page.situations.intro}</p>
-
-            <div className="mt-6 space-y-5 border-l-2 border-[#e5d6b0] pl-5">
-              {page.situations.cards.map((item) => (
-                <article key={item.title} className="pb-4 border-b border-[#e6edf3] last:border-b-0">
-                  <h3 className="text-base font-semibold text-[#1d3953]">{item.title}</h3>
-                  <p className="mt-2 text-xs leading-relaxed text-[#5d7388]">{item.text}</p>
-                </article>
-              ))}
-            </div>
-
-            <Link to="/services" className="mt-6 inline-block rounded-full border border-[#9ab1c5] bg-white px-6 py-3 text-sm font-semibold text-[#1f3b57] transition hover:bg-[#f2f7fb]">
-              {page.situations.cta}
-            </Link>
-          </div>
-        </div>
-      </section>
-
+      {/* 6 — Process: Reduce anxiety about what happens next */}
       <section className="bg-white py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
@@ -402,7 +371,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white py-16 md:py-20">
+      {/* 7 — Logistics: Remove the overseas barrier */}
+      <section className="bg-[#f1f5f9] py-16 md:py-20">
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 lg:landscape:grid-cols-2 lg:landscape:items-stretch">
           <div className="mx-auto max-w-2xl text-center lg:landscape:mx-0 lg:landscape:text-left">
             <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl">{page.international.title}</h2>
@@ -428,7 +398,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Finding The Right Treatment Pathway - moved lower */}
+      <ImplantPlannerBanner />
+
+      {/* 9 — Decision: Help them match situation to treatment */}
       <section className="bg-[#f1f5f9] py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
@@ -454,7 +426,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#f1f5f9] py-16 md:py-20">
+      {/* 10 — Objections: FAQ */}
+      <section className="bg-white py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-6">
           <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl text-center">{page.faq.title}</h2>
           <div className="mt-8 space-y-4">
