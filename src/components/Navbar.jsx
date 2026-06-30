@@ -9,10 +9,7 @@ export default function Navbar() {
   const language = useSelector((state) => state.language.language);
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isAboutOpen, setIsAboutOpen] = useState(false);
-  const [isPatientsOpen, setIsPatientsOpen] = useState(false);
-  const [isJuneOpen, setIsJuneOpen] = useState(false);
-  const [isOffersOpen, setIsOffersOpen] = useState(false);
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isLandscape, setIsLandscape] = useState(() =>
     typeof window !== 'undefined'
       ? window.matchMedia('(orientation: landscape)').matches
@@ -21,10 +18,7 @@ export default function Navbar() {
 
   const closeAllMenus = () => {
     setIsMenuOpen(false);
-    setIsAboutOpen(false);
-    setIsPatientsOpen(false);
-    setIsJuneOpen(false);
-    setIsOffersOpen(false);
+    setIsSolutionsOpen(false);
   };
 
   useEffect(() => {
@@ -47,30 +41,7 @@ export default function Navbar() {
   }, []);
 
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
-  const toggleAbout = () => {
-    setIsAboutOpen((prev) => !prev);
-    setIsPatientsOpen(false);
-    setIsJuneOpen(false);
-    setIsOffersOpen(false);
-  };
-  const togglePatients = () => {
-    setIsPatientsOpen((prev) => !prev);
-    setIsAboutOpen(false);
-    setIsJuneOpen(false);
-    setIsOffersOpen(false);
-  };
-  const toggleJune = () => {
-    setIsJuneOpen((prev) => !prev);
-    setIsAboutOpen(false);
-    setIsPatientsOpen(false);
-    setIsOffersOpen(false);
-  };
-  const toggleOffers = () => {
-    setIsOffersOpen((prev) => !prev);
-    setIsAboutOpen(false);
-    setIsPatientsOpen(false);
-    setIsJuneOpen(false);
-  };
+  const toggleSolutions = () => setIsSolutionsOpen((prev) => !prev);
 
   const content = navbarContent[language] || navbarContent.english;
 
@@ -88,44 +59,17 @@ export default function Navbar() {
         : 'text-[#2a3439] hover:bg-[#f3ead2]'
     }`;
 
-  const mobileParentRowClass = (path) =>
-    `flex items-center justify-between rounded-xl px-3 py-2.5 text-sm transition ${
-      location.pathname === path
-        ? 'bg-[#f5e9c2] text-[#1f2937]'
-        : 'text-[#2a3439] hover:bg-[#f3ead2]'
-    }`;
-
-  const aboutDropdownItems = [
-    { name: content.drSon, path: '/dr-son' },
-    { name: content.drTu, path: '/dr-tu' },
-    { name: content.doctors, path: '/doctors' },
-    { name: content.equipment, path: '/equipment' },
-  ];
-
-  const patientsDropdownItems = [
-    { name: content.internationalPatients, path: '/international-patients' },
-    { name: content.gratitude, path: '/visitor-program' },
-    { name: content.faq, path: '/faq' },
-  ];
-
-  const treatmentDropdownItems = [
-    { name: content.implant, path: '/implant' },
-    { name: content.fixedTeeth, path: '/fixed-teeth' },
+  const solutionsDropdownItems = [
+    { name: content.implantSolutions, path: '/implant' },
+    { name: content.fixedTeethSolutions, path: '/fixed-teeth' },
     { name: content.fullMouth, path: '/full-mouth' },
-    { name: content.crown, path: '/crown' },
-    { name: content.veneer, path: '/veneer' },
     { name: content.oralSurgery, path: '/oral-surgery' },
+    { name: content.restorativeDentistry, path: '/services' },
     { name: content.smileAesthetics, path: '/smile-aesthetics' },
-    { name: content.solutions, path: '/solutions' },
-    { name: content.services, path: '/services' },
   ];
 
-  const offersDropdownItems = [
-    { name: content.juneOffer, path: '/genAd' },
-    { name: content.whitening, path: '/whiteningAd' },
-    { name: content.crown, path: '/crownAd' },
-    { name: content.canal, path: '/canal' },
-  ];
+  const solutionsPaths = ['/implant', '/fixed-teeth', '/full-mouth', '/oral-surgery', '/services', '/smile-aesthetics'];
+  const isSolutionsActive = solutionsPaths.includes(location.pathname);
 
   return (
     <>
@@ -157,20 +101,27 @@ export default function Navbar() {
               {content.home}
             </Link>
 
-            <div className="relative flex items-center">
-              <Link
-                to="/about"
-                className={navLinkClass('/about')}
-              >
-                {content.about}
-              </Link>
+            <Link to="/about" className={navLinkClass('/about')}>
+              {content.about}
+            </Link>
+
+            <Link to="/doctors" className={navLinkClass('/doctors')}>
+              {content.doctors}
+            </Link>
+
+            <div className="relative">
               <button
-                onClick={toggleAbout}
-                className="ml-0.5 inline-flex h-10 w-8 items-center justify-center rounded-full text-[#2a3439] hover:bg-[#d4af37]/15 hover:text-[#111317]"
-                aria-label="Toggle about menu"
+                onClick={toggleSolutions}
+                className={`relative inline-flex h-10 items-center gap-1 whitespace-nowrap px-3 text-sm font-semibold tracking-wide transition-colors duration-200 ${
+                  isSolutionsActive
+                    ? 'text-[#1f2937] after:absolute after:left-3 after:right-3 after:-bottom-0.5 after:h-[2px] after:bg-[#d4af37]'
+                    : 'text-[#2a3439]/80 hover:text-[#111317]'
+                }`}
+                aria-label="Toggle solutions menu"
               >
+                {content.solutions}
                 <svg
-                  className={`h-4 w-4 transition-transform duration-200 ${isAboutOpen ? 'rotate-180' : ''}`}
+                  className={`h-4 w-4 transition-transform duration-200 ${isSolutionsOpen ? 'rotate-180' : ''}`}
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -179,50 +130,14 @@ export default function Navbar() {
                 </svg>
               </button>
 
-              {isAboutOpen && (
-                <div className="absolute left-0 top-full mt-3 w-60 rounded-2xl border border-[#eadfc4] bg-white p-2 shadow-[0_14px_28px_rgba(31,41,55,0.16)]">
-                  {aboutDropdownItems.map((sub) => (
-                    <Link
-                      key={sub.name}
-                      to={sub.path}
-                      className="block rounded-xl px-3 py-2 font-medium text-[#2a3439] transition hover:bg-[#f7f2e7]"
-                    >
-                      {sub.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            <div className="relative flex items-center">
-              <Link
-                to="/international-patients"
-                className={navLinkClass('/international-patients')}
-              >
-                {content.patients}
-              </Link>
-              <button
-                onClick={togglePatients}
-                className="ml-0.5 inline-flex h-10 w-8 items-center justify-center rounded-full text-[#2a3439] hover:bg-[#d4af37]/15 hover:text-[#111317]"
-                aria-label="Toggle patients menu"
-              >
-                <svg
-                  className={`h-4 w-4 transition-transform duration-200 ${isPatientsOpen ? 'rotate-180' : ''}`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-
-              {isPatientsOpen && (
-                <div className="absolute left-0 top-full mt-3 w-60 rounded-2xl border border-[#eadfc4] bg-white p-2 shadow-[0_14px_28px_rgba(31,41,55,0.16)]">
-                  {patientsDropdownItems.map((sub) => (
+              {isSolutionsOpen && (
+                <div className="absolute left-0 top-full mt-3 w-64 rounded-2xl border border-[#eadfc4] bg-white p-2 shadow-[0_14px_28px_rgba(31,41,55,0.16)]">
+                  {solutionsDropdownItems.map((sub) => (
                     <Link
                       key={sub.path}
                       to={sub.path}
                       className="block rounded-xl px-3 py-2 font-medium text-[#2a3439] transition hover:bg-[#f7f2e7]"
+                      onClick={closeAllMenus}
                     >
                       {sub.name}
                     </Link>
@@ -231,79 +146,17 @@ export default function Navbar() {
               )}
             </div>
 
-            <div className="relative flex items-center">
-              <Link
-                to="/services"
-                className={navLinkClass('/services')}
-              >
-                {content.treatments}
-              </Link>
-              <button
-                onClick={toggleJune}
-                className="ml-0.5 inline-flex h-10 w-8 items-center justify-center rounded-full text-[#2a3439] hover:bg-[#d4af37]/15 hover:text-[#111317]"
-                aria-label="Toggle treatments menu"
-              >
-                <svg
-                  className={`h-4 w-4 transition-transform duration-200 ${isJuneOpen ? 'rotate-180' : ''}`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
+            <Link to="/solutions" className={navLinkClass('/solutions')}>
+              {content.patientCases}
+            </Link>
 
-              {isJuneOpen && (
-                <div className="absolute left-0 top-full mt-3 w-56 rounded-2xl border border-[#eadfc4] bg-white p-2 shadow-[0_14px_28px_rgba(31,41,55,0.16)]">
-                  {treatmentDropdownItems.map((sub) => (
-                    <Link
-                      key={sub.name}
-                      to={sub.path}
-                      className="block rounded-xl px-3 py-2 font-medium text-[#2a3439] transition hover:bg-[#f7f2e7]"
-                    >
-                      {sub.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
+            <Link to="/international-patients" className={navLinkClass('/international-patients')}>
+              {content.internationalPatients}
+            </Link>
 
-            <div className="relative flex items-center">
-              <Link
-                to="/genAd"
-                className={navLinkClass('/genAd')}
-              >
-                {content.offers}
-              </Link>
-              <button
-                onClick={toggleOffers}
-                className="ml-0.5 inline-flex h-10 w-8 items-center justify-center rounded-full text-[#2a3439] hover:bg-[#d4af37]/15 hover:text-[#111317]"
-                aria-label="Toggle offers menu"
-              >
-                <svg
-                  className={`h-4 w-4 transition-transform duration-200 ${isOffersOpen ? 'rotate-180' : ''}`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-
-              {isOffersOpen && (
-                <div className="absolute left-0 top-full mt-3 w-56 rounded-2xl border border-[#eadfc4] bg-white p-2 shadow-[0_14px_28px_rgba(31,41,55,0.16)]">
-                  {offersDropdownItems.map((sub) => (
-                    <Link
-                      key={sub.path}
-                      to={sub.path}
-                      className="block rounded-xl px-3 py-2 font-medium text-[#2a3439] transition hover:bg-[#f7f2e7]"
-                    >
-                      {sub.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
+            <Link to="/faq" className={navLinkClass('/faq')}>
+              {content.resources}
+            </Link>
 
             <Link
               to="/contact"
@@ -347,26 +200,26 @@ export default function Navbar() {
               {content.home}
             </Link>
 
-            <div>
-              <div className={mobileParentRowClass('/about')}>
-                <Link
-                  to="/about"
-                  className="flex-1 font-semibold"
-                  onClick={() => {
-                    setIsAboutOpen(false);
-                    setIsMenuOpen(false);
-                  }}
-                >
-                  {content.about}
-                </Link>
+            <Link to="/about" className={mobileLinkClass('/about')} onClick={closeAllMenus}>
+              {content.about}
+            </Link>
 
+            <Link to="/doctors" className={mobileLinkClass('/doctors')} onClick={closeAllMenus}>
+              {content.doctors}
+            </Link>
+
+            <div>
+              <div className={`flex items-center justify-between rounded-xl px-3 py-2.5 text-sm transition ${
+                isSolutionsActive ? 'bg-[#f5e9c2] text-[#1f2937]' : 'text-[#2a3439] hover:bg-[#f3ead2]'
+              }`}>
+                <span className="flex-1 font-semibold">{content.solutions}</span>
                 <button
-                  onClick={toggleAbout}
+                  onClick={toggleSolutions}
                   className="rounded-full p-1 text-[#2a3439] hover:bg-[#efe3c5]"
-                  aria-label="Toggle about submenu"
+                  aria-label="Toggle solutions submenu"
                 >
                   <svg
-                    className={`h-4 w-4 transition-transform ${isAboutOpen ? 'rotate-180' : ''}`}
+                    className={`h-4 w-4 transition-transform ${isSolutionsOpen ? 'rotate-180' : ''}`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -376,54 +229,9 @@ export default function Navbar() {
                 </button>
               </div>
 
-              {isAboutOpen && (
+              {isSolutionsOpen && (
                 <div className="mt-2 ml-2 rounded-xl bg-[#f5ecd3]/70 p-2 space-y-1">
-                  {aboutDropdownItems.map((sub) => (
-                    <Link
-                      key={sub.name}
-                      to={sub.path}
-                      className="block rounded-lg px-3 py-2 text-sm font-semibold text-[#2a3439] hover:bg-[#f3ead2] transition"
-                      onClick={closeAllMenus}
-                    >
-                      {sub.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            <div>
-              <div className={mobileParentRowClass('/international-patients')}>
-                <Link
-                  to="/international-patients"
-                  className="flex-1 font-semibold"
-                  onClick={() => {
-                    setIsPatientsOpen(false);
-                    setIsMenuOpen(false);
-                  }}
-                >
-                  {content.patients}
-                </Link>
-
-                <button
-                  onClick={togglePatients}
-                  className="rounded-full p-1 text-[#2a3439] hover:bg-[#efe3c5]"
-                  aria-label="Toggle patients submenu"
-                >
-                  <svg
-                    className={`h-4 w-4 transition-transform ${isPatientsOpen ? 'rotate-180' : ''}`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-              </div>
-
-              {isPatientsOpen && (
-                <div className="mt-2 ml-2 rounded-xl bg-[#f5ecd3]/70 p-2 space-y-1">
-                  {patientsDropdownItems.map((sub) => (
+                  {solutionsDropdownItems.map((sub) => (
                     <Link
                       key={sub.path}
                       to={sub.path}
@@ -437,95 +245,17 @@ export default function Navbar() {
               )}
             </div>
 
-            <div>
-              <div className={mobileParentRowClass('/services')}>
-                <Link
-                  to="/services"
-                  className="flex-1 font-semibold"
-                  onClick={() => {
-                    setIsJuneOpen(false);
-                    setIsMenuOpen(false);
-                  }}
-                >
-                  {content.treatments}
-                </Link>
+            <Link to="/solutions" className={mobileLinkClass('/solutions')} onClick={closeAllMenus}>
+              {content.patientCases}
+            </Link>
 
-                <button
-                  onClick={toggleJune}
-                  className="rounded-full p-1 text-[#2a3439] hover:bg-[#efe3c5]"
-                  aria-label="Toggle treatments submenu"
-                >
-                  <svg
-                    className={`h-4 w-4 transition-transform ${isJuneOpen ? 'rotate-180' : ''}`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-              </div>
+            <Link to="/international-patients" className={mobileLinkClass('/international-patients')} onClick={closeAllMenus}>
+              {content.internationalPatients}
+            </Link>
 
-              {isJuneOpen && (
-                <div className="mt-2 ml-2 rounded-xl bg-[#f5ecd3]/70 p-2 space-y-1">
-                  {treatmentDropdownItems.map((sub) => (
-                    <Link
-                      key={sub.name}
-                      to={sub.path}
-                      className="block rounded-lg px-3 py-2 text-sm font-semibold text-[#2a3439] hover:bg-[#f3ead2] transition"
-                      onClick={closeAllMenus}
-                    >
-                      {sub.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            <div>
-              <div className={mobileParentRowClass('/genAd')}>
-                <Link
-                  to="/genAd"
-                  className="flex-1 font-semibold"
-                  onClick={() => {
-                    setIsOffersOpen(false);
-                    setIsMenuOpen(false);
-                  }}
-                >
-                  {content.offers}
-                </Link>
-
-                <button
-                  onClick={toggleOffers}
-                  className="rounded-full p-1 text-[#2a3439] hover:bg-[#efe3c5]"
-                  aria-label="Toggle offers submenu"
-                >
-                  <svg
-                    className={`h-4 w-4 transition-transform ${isOffersOpen ? 'rotate-180' : ''}`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-              </div>
-
-              {isOffersOpen && (
-                <div className="mt-2 ml-2 rounded-xl bg-[#f5ecd3]/70 p-2 space-y-1">
-                  {offersDropdownItems.map((sub) => (
-                    <Link
-                      key={sub.path}
-                      to={sub.path}
-                      className="block rounded-lg px-3 py-2 text-sm font-semibold text-[#2a3439] hover:bg-[#f3ead2] transition"
-                      onClick={closeAllMenus}
-                    >
-                      {sub.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
+            <Link to="/faq" className={mobileLinkClass('/faq')} onClick={closeAllMenus}>
+              {content.resources}
+            </Link>
 
             <Link
               to="/contact"
