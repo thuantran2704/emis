@@ -185,6 +185,79 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Implant Specialist Slider */}
+      <section className="bg-white py-16 md:py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className={sectionLabelClass}>{page.implantSpecialist.eyebrow}</p>
+            <h2 className="text-2xl font-bold text-[#2a3439] md:text-3xl">{page.implantSpecialist.title}</h2>
+            <p className="mt-4 text-base leading-relaxed text-gray-500">{page.implantSpecialist.intro}</p>
+          </div>
+
+          {/* Tab pills */}
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            {page.implantSpecialist.slides.map((slide, i) => (
+              <button
+                key={i}
+                onClick={() => setActiveSlide(i)}
+                className={`rounded-full px-5 py-2 text-sm font-semibold transition-all duration-200 ${
+                  activeSlide === i
+                    ? 'bg-[#2a3439] text-white shadow'
+                    : 'border border-[#d0dce8] text-[#2a3439] hover:border-[#C5AF73] hover:text-[#C5AF73]'
+                }`}
+              >
+                {slide.tag}
+              </button>
+            ))}
+          </div>
+
+          {/* Slides */}
+          <div className="mt-10">
+            {page.implantSpecialist.slides.map((slide, i) => (
+              <div
+                key={i}
+                className={`grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-center transition-all duration-300 ${activeSlide === i ? 'block' : 'hidden'}`}
+              >
+                <div>
+                  <span className="text-xs font-semibold uppercase tracking-[0.3em] text-[#C5AF73]">{slide.tag}</span>
+                  <h3 className="mt-2 text-2xl font-bold text-[#2a3439] md:text-3xl">{slide.title}</h3>
+                  <p className="mt-1 text-sm font-medium text-[#8aa0b5]">{slide.subtitle}</p>
+                  <p className="mt-4 text-base leading-relaxed text-gray-500">{slide.text}</p>
+                  <Link
+                    to={slide.href}
+                    className="mt-7 inline-flex items-center gap-2 rounded-full bg-[#2a3439] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#1e282d]"
+                  >
+                    {slide.cta}
+                    <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </Link>
+                </div>
+                <div className="overflow-hidden rounded-3xl shadow-sm">
+                  <img
+                    src={implantSlideImages[i]}
+                    alt={slide.title}
+                    className="h-72 w-full object-contain bg-[#f7fafc] p-4 lg:h-96"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Dot indicators */}
+          <div className="mt-8 flex justify-center gap-2">
+            {page.implantSpecialist.slides.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setActiveSlide(i)}
+                className={`h-2 rounded-full transition-all duration-200 ${activeSlide === i ? 'w-6 bg-[#C5AF73]' : 'w-2 bg-[#d0dce8]'}`}
+                aria-label={`Slide ${i + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="bg-[#ffffff] py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
@@ -298,79 +371,6 @@ export default function Home() {
             <Link to="/services" className="mt-6 inline-block rounded-full border border-[#9ab1c5] bg-white px-6 py-3 text-sm font-semibold text-[#1f3b57] transition hover:bg-[#f2f7fb]">
               {page.situations.cta}
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Implant Specialist Slider */}
-      <section className="bg-white py-16 md:py-20">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="mx-auto max-w-3xl text-center">
-            <p className={sectionLabelClass}>{page.implantSpecialist.eyebrow}</p>
-            <h2 className="text-2xl font-bold text-[#2a3439] md:text-3xl">{page.implantSpecialist.title}</h2>
-            <p className="mt-4 text-base leading-relaxed text-gray-500">{page.implantSpecialist.intro}</p>
-          </div>
-
-          {/* Tab pills */}
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
-            {page.implantSpecialist.slides.map((slide, i) => (
-              <button
-                key={i}
-                onClick={() => setActiveSlide(i)}
-                className={`rounded-full px-5 py-2 text-sm font-semibold transition-all duration-200 ${
-                  activeSlide === i
-                    ? 'bg-[#2a3439] text-white shadow'
-                    : 'border border-[#d0dce8] text-[#2a3439] hover:border-[#C5AF73] hover:text-[#C5AF73]'
-                }`}
-              >
-                {slide.tag}
-              </button>
-            ))}
-          </div>
-
-          {/* Slides */}
-          <div className="mt-10">
-            {page.implantSpecialist.slides.map((slide, i) => (
-              <div
-                key={i}
-                className={`grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-center transition-all duration-300 ${activeSlide === i ? 'block' : 'hidden'}`}
-              >
-                <div>
-                  <span className="text-xs font-semibold uppercase tracking-[0.3em] text-[#C5AF73]">{slide.tag}</span>
-                  <h3 className="mt-2 text-2xl font-bold text-[#2a3439] md:text-3xl">{slide.title}</h3>
-                  <p className="mt-1 text-sm font-medium text-[#8aa0b5]">{slide.subtitle}</p>
-                  <p className="mt-4 text-base leading-relaxed text-gray-500">{slide.text}</p>
-                  <Link
-                    to={slide.href}
-                    className="mt-7 inline-flex items-center gap-2 rounded-full bg-[#2a3439] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#1e282d]"
-                  >
-                    {slide.cta}
-                    <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                  </Link>
-                </div>
-                <div className="overflow-hidden rounded-3xl shadow-sm">
-                  <img
-                    src={implantSlideImages[i]}
-                    alt={slide.title}
-                    className="h-72 w-full object-contain bg-[#f7fafc] p-4 lg:h-96"
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Dot indicators */}
-          <div className="mt-8 flex justify-center gap-2">
-            {page.implantSpecialist.slides.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setActiveSlide(i)}
-                className={`h-2 rounded-full transition-all duration-200 ${activeSlide === i ? 'w-6 bg-[#C5AF73]' : 'w-2 bg-[#d0dce8]'}`}
-                aria-label={`Slide ${i + 1}`}
-              />
-            ))}
           </div>
         </div>
       </section>
