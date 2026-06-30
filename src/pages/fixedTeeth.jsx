@@ -51,11 +51,11 @@ const FixedTeeth = () => {
                 <ContactCtas primaryLabel={hero.primaryCta} secondaryLabel={hero.secondaryCta} />
               </div>
             </div>
-            <div className="rounded-2xl border border-[#dfe7ef] shadow-md overflow-hidden">
+            <div className="rounded-2xl border border-[#dfe7ef] shadow-md overflow-hidden bg-[#f7fafc]">
               <img
                 src={heroImage}
                 alt="Illustration of an All-on-4 implant-supported fixed teeth restoration"
-                className="w-full h-[300px] lg:h-[460px] object-cover object-center"
+                className="w-full object-contain lg:h-[460px] lg:object-cover lg:object-center"
               />
             </div>
           </div>

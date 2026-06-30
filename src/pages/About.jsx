@@ -1,17 +1,39 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import aboutContent from '../Translations/aboutContent';
+import equipmentContent from '../Translations/equipmentContent';
+import ServicesSlider from '../components/ServicesSlider';
 import consultationImage from '../pics/doctor-explaining-procedure-to-patient.jpg';
 import planningImage from '../pics/dr-x-ray-consultation.jpg';
 import technologyImage from '../pics/measuring-result-cbct-x-ray-patient-smiling.jpg';
 import teamImage from '../pics/healthcare-team.jpg';
 import internationalImage from '../pics/Better_emis_hall.jpeg';
 import safetyImage from '../pics/sterile-room-phong-khu-trung.jpg';
+import vatechImg from '../pics/vatech.jpg';
+import kehongImg from '../pics/ghe-ngoi-nha-khoa-kehong.jpg';
+import hyperlightImg from '../pics/hyperlight.jpg';
+import uvStorageImg from '../pics/uvStorage.jpg';
+import hyundaiImg from '../pics/hyundai.jpg';
 import { useSelector } from 'react-redux';
 import { Helmet } from 'react-helmet';
 
 const About = () => {
   const language = useSelector((state) => state.language.language);
+  const eqContent = equipmentContent[language] || equipmentContent.english;
+  const equipmentList = [
+    { key: 'vatech', image: vatechImg },
+    { key: 'kehong', image: kehongImg },
+    { key: 'hyperlight', image: hyperlightImg },
+    { key: 'uvStorage', image: uvStorageImg },
+    { key: 'hyundai', image: hyundaiImg },
+  ];
+  const eqServices = equipmentList.map(({ key }) => ({
+    name: eqContent[key]?.title || key,
+    desc: eqContent[key]?.equipmentIntro || '',
+  }));
+  const eqImages = equipmentList.map(({ image }) => image);
+  const eqAlts = equipmentList.map(({ key }) => eqContent[key]?.title || key);
+
   const content = aboutContent[language];
 
   const SectionLabel = ({ children }) => (
@@ -144,18 +166,12 @@ const About = () => {
             >
               {content.technologyIntro}
             </p>
-            <div className="space-y-4">
-              {content.technologyBullets.map((t, idx) => (
-                <div key={idx} className="flex items-center gap-3.5">
-                  <span className="text-[#C5AF73] text-xs">●</span>
-                  <span
-                    className="text-[13px] text-[#2a3439]"
-                  >
-                    {t}
-                  </span>
-                </div>
-              ))}
-            </div>
+            <ServicesSlider
+              services={eqServices}
+              serviceImages={eqImages}
+              serviceAltTexts={eqAlts}
+              bookNowText={language === 'vietnamese' ? 'Đặt Lịch' : 'Book Now'}
+            />
           </div>
           <div className="rounded-2xl overflow-hidden shadow-sm h-[460px]">
             <img

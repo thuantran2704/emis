@@ -79,11 +79,11 @@ export default function SmileAesthetics() {
           </div>
 
           {heroImage ? (
-            <div className="overflow-hidden rounded-2xl border border-[#dbe4ec] bg-white shadow-sm lg:h-[28rem]">
+            <div className="overflow-hidden rounded-2xl border border-[#dbe4ec] bg-white shadow-sm h-56 lg:h-[28rem]">
               <img
                 src={heroImage}
                 alt={content.hero?.imageAlt || 'Smile aesthetics consultation'}
-                className="w-full object-contain lg:h-full lg:scale-125 lg:object-cover"
+                className="w-full h-full object-cover object-top lg:scale-125"
               />
             </div>
           ) : null}

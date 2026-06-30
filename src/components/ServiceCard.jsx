@@ -8,11 +8,11 @@ const ServiceCard = ({ service, image, altText, bookNowText }) => {
       itemScope
       itemType="https://schema.org/MedicalProcedure"
     >
-      <div className="hidden overflow-hidden border-b border-[#e4edf4] md:block">
+      <div className="overflow-hidden border-b border-[#e4edf4] bg-[#f7fafc] h-48 md:h-56 flex items-center justify-center">
         <img
           src={image}
           alt={altText || `${service.name} service`}
-          className="aspect-[4/3] w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+          className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
           loading="lazy"
           itemProp="image"
         />

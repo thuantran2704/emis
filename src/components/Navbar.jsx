@@ -68,7 +68,7 @@ export default function Navbar() {
     { name: content.smileAesthetics, path: '/smile-aesthetics' },
   ];
 
-  const solutionsPaths = ['/implant', '/fixed-teeth', '/full-mouth', '/oral-surgery', '/services', '/smile-aesthetics'];
+  const solutionsPaths = ['/solutions', '/implant', '/fixed-teeth', '/full-mouth', '/oral-surgery', '/restorative-dentistry', '/smile-aesthetics'];
   const isSolutionsActive = solutionsPaths.includes(location.pathname);
 
   return (
@@ -110,14 +110,14 @@ export default function Navbar() {
             </Link>
 
             <div className="relative">
-              <button
+              <Link
+                to="/solutions"
                 onClick={toggleSolutions}
                 className={`relative inline-flex h-10 items-center gap-1 whitespace-nowrap px-3 text-sm font-semibold tracking-wide transition-colors duration-200 ${
                   isSolutionsActive
                     ? 'text-[#1f2937] after:absolute after:left-3 after:right-3 after:-bottom-0.5 after:h-[2px] after:bg-[#d4af37]'
                     : 'text-[#2a3439]/80 hover:text-[#111317]'
                 }`}
-                aria-label="Toggle solutions menu"
               >
                 {content.solutions}
                 <svg
@@ -128,7 +128,7 @@ export default function Navbar() {
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                 </svg>
-              </button>
+              </Link>
 
               {isSolutionsOpen && (
                 <div className="absolute left-0 top-full mt-3 w-64 rounded-2xl border border-[#eadfc4] bg-white p-2 shadow-[0_14px_28px_rgba(31,41,55,0.16)]">
@@ -146,9 +146,9 @@ export default function Navbar() {
               )}
             </div>
 
-            <Link to="/solutions" className={navLinkClass('/solutions')}>
+            {/* <Link to="/solutions" className={navLinkClass('/solutions')}>
               {content.patientCases}
-            </Link>
+            </Link> */}
 
             <Link to="/international-patients" className={navLinkClass('/international-patients')}>
               {content.internationalPatients}
@@ -212,7 +212,7 @@ export default function Navbar() {
               <div className={`flex items-center justify-between rounded-xl px-3 py-2.5 text-sm transition ${
                 isSolutionsActive ? 'bg-[#f5e9c2] text-[#1f2937]' : 'text-[#2a3439] hover:bg-[#f3ead2]'
               }`}>
-                <span className="flex-1 font-semibold">{content.solutions}</span>
+                <Link to="/solutions" className="flex-1 font-semibold" onClick={closeAllMenus}>{content.solutions}</Link>
                 <button
                   onClick={toggleSolutions}
                   className="rounded-full p-1 text-[#2a3439] hover:bg-[#efe3c5]"
@@ -245,9 +245,9 @@ export default function Navbar() {
               )}
             </div>
 
-            <Link to="/solutions" className={mobileLinkClass('/solutions')} onClick={closeAllMenus}>
+            {/* <Link to="/solutions" className={mobileLinkClass('/solutions')} onClick={closeAllMenus}>
               {content.patientCases}
-            </Link>
+            </Link> */}
 
             <Link to="/international-patients" className={mobileLinkClass('/international-patients')} onClick={closeAllMenus}>
               {content.internationalPatients}

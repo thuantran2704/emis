@@ -63,11 +63,11 @@ const Solutions = () => {
               </div>
             </div>
 
-            <div className="rounded-2xl overflow-hidden shadow-md border border-[#dfe7ef] bg-white">
+            <div className="rounded-2xl overflow-hidden shadow-md border border-[#dfe7ef] bg-[#f7fafc]">
               <img
                 src={heroImage}
                 alt="Doctor reviewing dental X-ray with patient while discussing treatment options"
-                className="w-full h-[360px] lg:h-[520px] object-cover object-center"
+                className="w-full object-contain lg:h-[520px] lg:object-cover lg:object-center"
               />
             </div>
           </div>
@@ -103,11 +103,11 @@ const Solutions = () => {
             </div>
 
             {situationsImage && (
-              <div className="rounded-2xl overflow-hidden border border-[#dfe7ef] shadow-sm bg-white lg:sticky lg:top-28">
+              <div className="rounded-2xl overflow-hidden border border-[#dfe7ef] shadow-sm bg-[#f7fafc] lg:sticky lg:top-28">
                 <img
                   src={situationsImage}
                   alt="Visual illustration of missing teeth and alignment concerns"
-                  className="w-full h-[300px] lg:h-[540px] object-cover object-center"
+                  className="w-full object-contain lg:h-[540px] lg:object-cover lg:object-center"
                   loading="lazy"
                 />
               </div>
