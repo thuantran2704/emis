@@ -27,6 +27,7 @@ import Doctors from './pages/doctors.jsx';
 import DrTuPage from './pages/drTuPage.jsx';
 import InternationalPatients from './pages/InternationalPatients.jsx';
 import OralSurgery from './pages/OralSurgery.jsx';
+import RestorativeDentistry from './pages/RestorativeDentistry.jsx';
 import Solutions from './pages/solutions.jsx';
 import FixedTeeth from './pages/fixedTeeth.jsx';
 import SmileAesthetics from './pages/SmileAesthetics.jsx';
@@ -109,6 +110,7 @@ function AppShell() {
           <Route path="/warranty" element={<Warranty />} />
           <Route path="/fixed-teeth" element={<FixedTeeth />} />
           <Route path="/oral-surgery" element={<OralSurgery />} />
+          <Route path="/restorative-dentistry" element={<RestorativeDentistry />} />
           <Route path="/equipment" element={<Equipment  />} />
           <Route path="/veneer" element={<VeneerLanding />} />
           <Route path="/implant" element={<Implant />}/>

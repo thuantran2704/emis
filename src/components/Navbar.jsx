@@ -64,7 +64,7 @@ export default function Navbar() {
     { name: content.fixedTeethSolutions, path: '/fixed-teeth' },
     { name: content.fullMouth, path: '/full-mouth' },
     { name: content.oralSurgery, path: '/oral-surgery' },
-    { name: content.restorativeDentistry, path: '/services' },
+    { name: content.restorativeDentistry, path: '/restorative-dentistry' },
     { name: content.smileAesthetics, path: '/smile-aesthetics' },
   ];
 
