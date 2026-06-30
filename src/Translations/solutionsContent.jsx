@@ -91,7 +91,7 @@ export const solutionsContent = {
           title: 'Restorative Dentistry',
           text: 'For restoring damaged teeth and supporting everyday oral function.',
           cta: 'Explore Restorative Dentistry',
-          path: '/services',
+          path: '/restorative-dentistry',
         },
         {
           title: 'Aesthetic Dentistry',
@@ -279,7 +279,7 @@ export const solutionsContent = {
           title: 'Điều Trị & Giữ Răng Thật',
           text: 'Dành cho răng hư hỏng, gãy vỡ hoặc cần phục hồi để duy trì chức năng ăn nhai.',
           cta: 'Tìm Hiểu Điều Trị & Giữ Răng Thật',
-          path: '/services',
+          path: '/restorative-dentistry',
         },
         {
           title: 'Thẩm Mỹ Nụ Cười',
@@ -455,7 +455,7 @@ export const solutionsContent = {
           title: 'Rehabilitation Complete',
           text: 'Pour les patients avec perte dentaire etendue, usure severe, troubles de l occlusion ou besoins complexes.',
           cta: 'Explorer La Rehabilitation Complete',
-          path: '/services',
+          path: '/restorative-dentistry',
         },
         {
           title: 'Chirurgie Orale',
@@ -467,7 +467,7 @@ export const solutionsContent = {
           title: 'Dentisterie Restauratrice',
           text: 'Pour restaurer les dents endommagees et soutenir la fonction orale au quotidien.',
           cta: 'Explorer La Dentisterie Restauratrice',
-          path: '/services',
+          path: '/restorative-dentistry',
         },
         {
           title: 'Dentisterie Esthetique',
@@ -637,7 +637,7 @@ export const solutionsContent = {
           title: '전악 재건',
           text: '광범위한 치아 상실, 심한 마모, 교합 문제, 복합 수복이 필요한 경우를 위한 경로입니다.',
           cta: '전악 재건 보기',
-          path: '/services',
+          path: '/restorative-dentistry',
         },
         {
           title: '구강외과',
@@ -649,7 +649,7 @@ export const solutionsContent = {
           title: '수복 치과',
           text: '손상된 치아를 회복하고 일상적인 구강 기능을 지원합니다.',
           cta: '수복 치과 보기',
-          path: '/services',
+          path: '/restorative-dentistry',
         },
         {
           title: '심미 치과',
@@ -819,7 +819,7 @@ export const solutionsContent = {
           title: '全口重建',
           text: '适用于广泛缺牙、严重磨耗、咬合问题或复杂修复需求。',
           cta: '了解全口重建',
-          path: '/services',
+          path: '/restorative-dentistry',
         },
         {
           title: '口腔外科',
@@ -831,7 +831,7 @@ export const solutionsContent = {
           title: '修复牙科',
           text: '用于修复受损牙齿并支持日常口腔功能。',
           cta: '了解修复牙科',
-          path: '/services',
+          path: '/restorative-dentistry',
         },
         {
           title: '美学牙科',
@@ -1001,7 +1001,7 @@ export const solutionsContent = {
           title: '全口重建',
           text: '適用於廣泛缺牙、嚴重磨耗、咬合問題或複雜修復需求。',
           cta: '了解全口重建',
-          path: '/services',
+          path: '/restorative-dentistry',
         },
         {
           title: '口腔外科',
@@ -1013,7 +1013,7 @@ export const solutionsContent = {
           title: '修復牙科',
           text: '用於修復受損牙齒並支持日常口腔功能。',
           cta: '了解修復牙科',
-          path: '/services',
+          path: '/restorative-dentistry',
         },
         {
           title: '美學牙科',

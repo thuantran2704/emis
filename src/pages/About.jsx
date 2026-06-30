@@ -69,7 +69,7 @@ const About = () => {
               {content.heroPrimaryCTA}
             </Link>
             <Link
-              to="/dr-son"
+              to="/doctors"
               className="px-7 py-3.5 rounded-full border border-white/70 text-white text-sm font-semibold hover:bg-white/10 transition"
             >
               {content.heroSecondaryCTA}

@@ -29,7 +29,6 @@ export const DOCTORS = [
   // ─── Dr. Nguyen The Son ─────────────────────────────────────────────────────
   {
     id: 'dr-son',
-    slug: '/dr-son',
     portrait: drSonPortrait,
 
     english: {
@@ -159,7 +158,6 @@ export const DOCTORS = [
   // ─── Dr. Tran Minh Tu ───────────────────────────────────────────────────────
   {
     id: 'dr-tu',
-    slug: '/dr-tu',
     portrait: drTuPortrait,
 
     english: {

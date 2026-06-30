@@ -79,11 +79,11 @@ export default function SmileAesthetics() {
           </div>
 
           {heroImage ? (
-            <div className="h-80 overflow-hidden rounded-2xl border border-[#dbe4ec] bg-white shadow-sm lg:h-[28rem]">
+            <div className="overflow-hidden rounded-2xl border border-[#dbe4ec] bg-white shadow-sm lg:h-[28rem]">
               <img
                 src={heroImage}
                 alt={content.hero?.imageAlt || 'Smile aesthetics consultation'}
-                className="h-full w-full scale-125 object-cover"
+                className="w-full object-contain lg:h-full lg:scale-125 lg:object-cover"
               />
             </div>
           ) : null}
@@ -191,8 +191,7 @@ export default function SmileAesthetics() {
               ))}
             </div>
             <Link
-              to="/services"
-              className="mt-7 inline-block rounded-full bg-[#d4af37] px-5 py-2.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-[#c19d30] lg:px-6 lg:py-3 lg:text-[11px]"
+              to="/restorative-dentistry"              className="mt-7 inline-block rounded-full bg-[#d4af37] px-5 py-2.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-[#c19d30] lg:px-6 lg:py-3 lg:text-[11px]"
             >
               {content.orthodontics?.cta}
             </Link>
@@ -251,7 +250,7 @@ export default function SmileAesthetics() {
 
         <div className="mt-8 text-center">
           <Link
-            to="/services"
+            to="/restorative-dentistry"
             className="inline-block rounded-full border border-[#d4af37] px-5 py-2.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#2a3439] transition hover:bg-white lg:px-6 lg:py-3 lg:text-[11px]"
           >
             {content.cases?.cta}

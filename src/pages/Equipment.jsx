@@ -81,7 +81,7 @@ export default function Equipment() {
                   {language === "vietnamese" ? "Đặt Lịch Tư Vấn" : "Book Consultation"}
                 </Link>
                 <Link
-                  to="/services"
+                  to="/restorative-dentistry"
                   className="px-7 py-3.5 rounded-full border border-[#d4af37] text-[#2a3439] text-sm hover:bg-white transition text-center"
                 >
                   {language === "vietnamese" ? "Xem Bảng Giá" : "View Price List"}

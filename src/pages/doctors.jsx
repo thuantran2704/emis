@@ -207,12 +207,14 @@ const Doctors = () => {
                     ))}
                   </div>
                   <div className="mt-auto">
-                    <Link
-                      to={doctor.slug}
-                      className="inline-flex px-5 py-2.5 rounded-full border border-[#d4af37] text-[#2a3439] text-sm hover:bg-[#d4af37] hover:text-white transition"
-                    >
-                      {t.cta}
-                    </Link>
+                    {doctor.slug && (
+                      <Link
+                        to={doctor.slug}
+                        className="inline-flex px-5 py-2.5 rounded-full border border-[#d4af37] text-[#2a3439] text-sm hover:bg-[#d4af37] hover:text-white transition"
+                      >
+                        {t.cta}
+                      </Link>
+                    )}
                   </div>
                 </div>
               </div>

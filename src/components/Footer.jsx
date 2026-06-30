@@ -9,7 +9,7 @@ import { primaryContactItems, socialContactItems } from '../data/contactChannels
 //   - "Patient Cases" / "Ca Điều Trị Thực Tế"  -> /solutions
 //   - "Dental Resources" / "Kiến Thức Nha Khoa" -> /equipment
 //   - "Send Your X-ray" / "Gửi Phim X-quang"    -> /contact
-//   - "Restorative Dentistry" / "Điều Trị & Giữ Răng Thật" -> /services
+//   - "Restorative Dentistry" / "Điều Trị & Giữ Răng Thật" -> /restorative-dentistry
 // Also intentionally omitted (no URL/route available): Instagram, LinkedIn,
 // and "Terms of Use".
 
@@ -31,6 +31,7 @@ const footerNav = {
           { label: 'About EMIS', to: '/about' },
           { label: 'Meet Our Doctors', to: '/doctors' },
           { label: 'International Patients', to: '/international-patients' },
+          { label: 'Dental Visitor Program', to: '/visitor-program' },
           { label: 'Contact Us', to: '/contact' },
         ],
       },
@@ -41,7 +42,7 @@ const footerNav = {
           { label: 'Fixed Teeth Solutions', to: '/fixed-teeth' },
           { label: 'Full-Mouth Rehabilitation', to: '/full-mouth' },
           { label: 'Oral Surgery', to: '/oral-surgery' },
-          { label: 'Restorative Dentistry', to: '/services' },
+          { label: 'Restorative Dentistry', to: '/restorative-dentistry' },
           { label: 'Smile Aesthetics', to: '/smile-aesthetics' },
         ],
       },
@@ -92,6 +93,7 @@ const footerNav = {
           { label: 'Về EMIS', to: '/about' },
           { label: 'Đội Ngũ Bác Sĩ', to: '/doctors' },
           { label: 'Bệnh Nhân Quốc Tế', to: '/international-patients' },
+          { label: 'Chương Trình Thăm Khám', to: '/visitor-program' },
           { label: 'Liên Hệ', to: '/contact' },
         ],
       },
@@ -102,7 +104,7 @@ const footerNav = {
           { label: 'Răng Cố Định Trên Implant', to: '/fixed-teeth' },
           { label: 'Phục Hồi Toàn Hàm', to: '/full-mouth' },
           { label: 'Tiểu Phẫu Răng Hàm Mặt', to: '/oral-surgery' },
-          { label: 'Điều Trị & Giữ Răng Thật', to: '/services' },
+          { label: 'Điều Trị & Giữ Răng Thật', to: '/restorative-dentistry' },
           { label: 'Thẩm Mỹ Nụ Cười', to: '/smile-aesthetics' },
         ],
       },

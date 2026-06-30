@@ -121,7 +121,7 @@ export default function Home() {
 
               {/* Secondary Button */}
               <Link
-                to="/services"
+                to="/restorative-dentistry"
                 className="group inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-transparent px-5 md:px-7 py-2 md:py-3 text-xs md:text-sm font-semibold text-white transition-all duration-200 hover:bg-white/10 w-full sm:w-auto"
                 style={{
                   height: '44px',
@@ -269,7 +269,7 @@ export default function Home() {
               ))}
             </div>
 
-            <Link to="/services" className="mt-6 inline-block rounded-full border border-[#9ab1c5] bg-white px-6 py-3 text-sm font-semibold text-[#1f3b57] transition hover:bg-[#f2f7fb]">
+            <Link to="/restorative-dentistry" className="mt-6 inline-block rounded-full border border-[#9ab1c5] bg-white px-6 py-3 text-sm font-semibold text-[#1f3b57] transition hover:bg-[#f2f7fb]">
               {page.situations.cta}
             </Link>
           </div>

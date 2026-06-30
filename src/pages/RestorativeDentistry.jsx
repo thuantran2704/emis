@@ -145,7 +145,7 @@ export default function RestorativeDentistry() {
           </div>
 
           <div className="flex flex-col sm:flex-row justify-center gap-3">
-            <ContactCtas primaryLabel={c.section7.primaryCta} secondaryLabel={c.section7.secondaryCta} />
+            <ContactCtas primaryLabel={c.section7.primaryCta} secondaryLabel={c.section7.secondaryCta} dark />
           </div>
           <p className="text-xs text-[#8aa0b5] leading-relaxed max-w-xl mx-auto">{c.section7.note}</p>
         </div>

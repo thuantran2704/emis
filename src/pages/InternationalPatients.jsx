@@ -56,7 +56,7 @@ export default function InternationalPatients() {
             </p>
             <div className="flex gap-4 flex-wrap">
               <CTAButton variant="primary" href="/contact">{content.heroPrimaryCTA}</CTAButton>
-              <CTAButton variant="secondary" href="/contact">{content.heroSecondaryCTA}</CTAButton>
+              <CTAButton variant="secondary" href="/visitor-program">{content.heroSecondaryCTA}</CTAButton>
             </div>
           </div>
           <div className="hidden h-80 overflow-hidden rounded-2xl shadow-md lg:block lg:h-96">
@@ -184,7 +184,7 @@ export default function InternationalPatients() {
         <SectionLabel>Stories</SectionLabel>
         <SectionTitle>{content.journeysTitle}</SectionTitle>
         <p className="mb-8 max-w-2xl text-[14px] leading-6 text-gray-600 lg:mb-14 lg:text-[1rem] lg:leading-8">
-          {content.journeysIntro} See how EMIS has helped patients from around the world. EMIS offers a wide range of <Link to="/services" className="text-[#d4af37] font-semibold hover:text-[#c19d30] transition">dental treatment services</Link> to meet diverse needs.
+          {content.journeysIntro} See how EMIS has helped patients from around the world. EMIS offers a wide range of <Link to="/restorative-dentistry" className="text-[#d4af37] font-semibold hover:text-[#c19d30] transition">dental treatment services</Link> to meet diverse needs.
         </p>
         <div className="mb-8 grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-6">
           {content.patientStories.slice(0, 2).map((story, i) => {
