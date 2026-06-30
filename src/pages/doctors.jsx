@@ -2,17 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { Helmet } from 'react-helmet';
-import drTuPortrait from '../pics/dr-tu-potrait.jpg';
 import doctorsContent from '../Translations/doctorsContent';
 import patient2 from '../pics/patient2.jpg';
 import ContactForm from '../components/ContactForm.jsx';
 import consultationImage from '../pics/dr-x-ray-consultation.jpg';
-import drSonPortrait from '../pics/dr-son-potrait.jpg';
+import { DOCTORS, getDoctorTranslation } from '../data/doctors';
 
 const Doctors = () => {
   const language = useSelector((state) => state.language.language);
   const content = doctorsContent[language] || doctorsContent.english;
-  const doctorImages = [drSonPortrait, drTuPortrait];
 
   return (
     <main className="bg-[#f7f2e7] pt-20">
@@ -158,44 +156,46 @@ const Doctors = () => {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-6">
-            {content.doctors.map((doctor, index) => (
+            {DOCTORS.map((doctor) => {
+              const t = getDoctorTranslation(doctor, language);
+              return (
               <div
-                key={index}
+                key={doctor.id}
                 className="h-full bg-white rounded-2xl overflow-hidden shadow-sm flex flex-col max-w-xl mx-auto"
               >
                 <img
-                  src={doctorImages[index]}
-                  alt={doctor.name}
+                  src={doctor.portrait}
+                  alt={t.name}
                   className="w-full h-[320px] lg:h-[300px] object-cover object-[center_20%]"
                 />
                 <div className="p-7 lg:p-8 flex flex-col flex-grow">
                   <h3
                     className="text-xl lg:text-2xl text-[#2a3439] mb-1.5"
                   >
-                    {doctor.name}
+                    {t.name}
                   </h3>
                   <p
                     className="text-[#C5AF73] text-sm font-semibold mb-2"
                   >
-                    {doctor.role}
+                    {t.role}
                   </p>
                   <p
                     className="text-[10px] lg:text-xs uppercase tracking-widest text-gray-400 mb-5 lg:mb-6"
                   >
-                    {doctor.specialties}
+                    {t.specialties}
                   </p>
                   <p
                     className="text-sm text-gray-500 leading-relaxed mb-3"
                   >
-                    {doctor.descriptionOne}
+                    {t.descriptionOne}
                   </p>
                   <p
                     className="text-sm text-gray-500 leading-relaxed mb-6 lg:mb-7"
                   >
-                    {doctor.descriptionTwo}
+                    {t.descriptionTwo}
                   </p>
                   <div className="space-y-2 mb-6 lg:mb-7">
-                    {doctor.highlights.map((highlight, idx) => (
+                    {t.highlights.map((highlight, idx) => (
                       <div key={idx} className="flex items-center gap-3">
                         <span className="text-[#C5AF73] text-xs">●</span>
                         <span
@@ -208,15 +208,16 @@ const Doctors = () => {
                   </div>
                   <div className="mt-auto">
                     <Link
-                      to="/contact"
+                      to={doctor.slug}
                       className="inline-flex px-5 py-2.5 rounded-full border border-[#d4af37] text-[#2a3439] text-sm hover:bg-[#d4af37] hover:text-white transition"
                     >
-                      {doctor.cta}
+                      {t.cta}
                     </Link>
                   </div>
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
 
         </div>

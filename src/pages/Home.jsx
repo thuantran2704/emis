@@ -7,8 +7,6 @@ import confidencePortrait from '../pics/foreign-patient-1-with-dr-tu-smiling.jpg
 import implantIntroImage from '../pics/all-on-4-implant.jpg';
 import cbctReview from '../pics/dr-x-ray-consultation.jpg';
 import onlineConsultation from '../pics/consulting-team.jpg';
-import drTuPortrait from '../pics/dr-tu-potrait.jpg';
-import drSonPortrait from '../pics/dr-son-potrait.jpg';
 import lifestyleDinner from '../pics/eating-casually.jpeg';
 import confidentSmile from '../pics/confident-smile-social.jpeg';
 import elderSocializing from '../pics/elder-person-socializing.jpeg';
@@ -21,6 +19,7 @@ import ctaBackground from '../pics/doctor-explaining-procedure-to-patient.jpg';
 import ContactForm from '../components/ContactForm';
 import ImplantPlannerBanner from '../components/implants_banner';
 import ServiceCard from '../components/ServiceCard';
+import { DOCTORS, getDoctorTranslation } from '../data/doctors';
 import serviceGeneral from '../pics/teeth-whitening.jpg';
 import serviceImplant from '../pics/implant-illustration.jpg';
 import serviceCrown from '../pics/crown.jpg';
@@ -45,20 +44,6 @@ export default function Home() {
     : baseServices;
   const serviceImages = [serviceImplant, serviceGeneral, serviceCrown, serviceInvisalign];
   const sectionLabelClass = "mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-[#C5AF73]";
-  const getDoctorPortrait = (doctorName = '') => {
-    const normalizedName = doctorName.toLowerCase();
-    if (/son|sơn|손/.test(normalizedName)) {
-      return drSonPortrait;
-    }
-    return drTuPortrait;
-  };
-  const getDoctorPath = (doctorName = '') => {
-    const normalizedName = doctorName.toLowerCase();
-    if (/son|sơn|손/.test(normalizedName)) {
-      return '/dr-son';
-    }
-    return '/dr-tu';
-  };
   const heroDescription = page.hero.description.length > 95
     ? `${page.hero.description.slice(0, 92).trim()}...`
     : page.hero.description;
@@ -292,26 +277,29 @@ export default function Home() {
           </div>
 
           <div className="mt-10 grid gap-5 md:grid-cols-2">
-            {page.doctors.cards.map((doctor) => (
+            {DOCTORS.map((doctor) => {
+              const t = getDoctorTranslation(doctor, language);
+              return (
               <Link
-                key={doctor.name}
-                to={getDoctorPath(doctor.name)}
+                key={doctor.id}
+                to={doctor.slug}
                 className="group grid gap-3 rounded-3xl border border-[#dbe4ec] bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-[#C5AF73] hover:shadow-md sm:grid-cols-[minmax(110px,140px)_1fr] sm:items-start sm:gap-4 md:p-6"
               >
                 <img
-                  src={getDoctorPortrait(doctor.name)}
-                  alt={doctor.name}
+                  src={doctor.portrait}
+                  alt={t.name}
                   className="w-full max-w-full rounded-2xl border border-[#dbe4ec] bg-white object-contain"
                 />
                 <div>
-                  <h3 className="text-sm font-semibold text-[#2a3439] transition group-hover:text-[#C5AF73]">{doctor.name}</h3>
-                  {doctor.role && <p className="mt-1 text-[11px] font-semibold text-[#C5AF73]">{doctor.role}</p>}
-                  {doctor.focus && <p className="mt-1.5 text-[11px] leading-relaxed text-gray-500">{doctor.focus}</p>}
-                  {doctor.summary && <p className="mt-1.5 text-[11px] leading-relaxed text-gray-500">{doctor.summary}</p>}
-                  {doctor.languages && <p className="mt-2 text-[9px] uppercase tracking-[0.2em] text-[#8aa0b5]">{doctor.languages}</p>}
+                  <h3 className="text-sm font-semibold text-[#2a3439] transition group-hover:text-[#C5AF73]">{t.name}</h3>
+                  {t.role && <p className="mt-1 text-[11px] font-semibold text-[#C5AF73]">{t.role}</p>}
+                  {t.focus && <p className="mt-1.5 text-[11px] leading-relaxed text-gray-500">{t.focus}</p>}
+                  {t.summary && <p className="mt-1.5 text-[11px] leading-relaxed text-gray-500">{t.summary}</p>}
+                  {t.languages && <p className="mt-2 text-[9px] uppercase tracking-[0.2em] text-[#8aa0b5]">{t.languages}</p>}
                 </div>
               </Link>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

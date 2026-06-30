@@ -60,58 +60,6 @@ const doctorsContent = {
         'Every patient is different. Below are the doctors who support patients throughout their treatment journey at EMIS.',
     },
 
-    doctors: [
-    {
-
-      name: 'Dr. Nguyen The Son',
-
-      role: 'Chief Dentist - Implant & Aesthetic Prosthetics',
-
-      specialties:
-      'Dental Implants • Aesthetic Prosthetics • Sinus Lift & Bone Grafting',
-
-      descriptionOne:
-      'Dr. Son has over 10 years of specialized experience in dental implants, aesthetic prosthetics, and sinus lift - bone grafting procedures.',
-
-      descriptionTwo:
-      'With more than 3,000 implant cases from simple to complex, he focuses on restoring chewing function, natural esthetics, and long-term treatment stability.',
-
-      highlights: [
-      'Over 10 Years Of Experience',
-      '3,000+ Implant Cases',
-      'Advanced Bone Grafting & Sinus Lift Training',
-      'Digital Implant Planning & 3D Diagnostics',
-      ],
-
-      cta: 'View Full Profile',
-    },
-
-    {
-
-        name: 'Dr. Tran Minh Tu',
-
-        role: 'Oral & Maxillofacial Surgeon',
-
-        specialties:
-        'Implant Surgery • Full-Mouth Rehabilitation • Oral Surgery',
-
-        descriptionOne:
-        'Dr. Tu focuses on implant surgery, full-mouth rehabilitation, oral surgery, and aesthetic dentistry, with a particular interest in complex rehabilitation cases.',
-
-        descriptionTwo:
-        'Having studied and trained in the United States, Hungary, and Vietnam, he combines international training with active clinical practice.',
-
-        highlights: [
-        'Active Hospital Practice',
-        'International Training',
-        'Implant & Full-Mouth Rehabilitation Focus',
-        'Multilingual Communication',
-        ],
-
-        cta: 'View Full Profile',
-    },
-    ],
-
     decisionSection: {
     eyebrow: 'TREATMENT DECISIONS',
 
@@ -208,58 +156,6 @@ const doctorsContent = {
         'Mỗi bác sĩ mang đến một thế mạnh chuyên môn khác nhau. Dưới đây là đội ngũ bác sĩ đang đồng hành cùng bệnh nhân tại EMIS.',
     },
 
-    doctors: [
-    {
-
-      name: 'BS. Nguyễn Thế Sơn',
-
-      role: 'Bác Sĩ Trưởng - Implant & Phục Hình Thẩm Mỹ',
-
-      specialties:
-      'Cấy Ghép Implant • Phục Hình Thẩm Mỹ • Nâng Xoang & Ghép Xương',
-
-      descriptionOne:
-      'Bác sĩ Sơn có hơn 10 năm kinh nghiệm chuyên sâu trong lĩnh vực cấy ghép Implant, phục hình thẩm mỹ và phẫu thuật nâng xoang - ghép xương.',
-
-      descriptionTwo:
-      'Với hơn 3.000 ca Implant từ đơn giản đến phức tạp, bác sĩ tập trung phục hồi chức năng ăn nhai, thẩm mỹ tự nhiên và sự ổn định lâu dài.',
-
-      highlights: [
-      'Hơn 10 Năm Kinh Nghiệm',
-      'Hơn 3.000 Ca Implant',
-      'Đào Tạo Chính Quy Tại ĐH Y Dược TP.HCM',
-      'Ứng Dụng Chẩn Đoán 3D Trong Lập Kế Hoạch',
-      ],
-
-      cta: 'Xem Hồ Sơ Chi Tiết',
-    },
-
-    {
-
-        name: 'BS. CKI Trần Minh Tú',
-
-        role: 'Phẫu Thuật Răng Hàm Mặt',
-
-        specialties:
-        'Implant • Phục Hồi Toàn Hàm • Tiểu Phẫu Răng Hàm Mặt',
-
-        descriptionOne:
-        'Bác sĩ Tú tập trung vào Implant, phục hồi toàn hàm và phẫu thuật Răng Hàm Mặt, đặc biệt với những trường hợp cần phục hồi phức tạp và đòi hỏi kế hoạch điều trị kỹ lưỡng.',
-
-        descriptionTwo:
-        'Nền tảng học tập và đào tạo tại Hoa Kỳ, Hungary và Việt Nam giúp bác sĩ có thêm góc nhìn quốc tế trong quá trình điều trị và chăm sóc bệnh nhân.',
-
-        highlights: [
-        'Đang Công Tác Tại Bệnh Viện Răng Hàm Mặt TP.HCM',
-        'Đào Tạo Tại Nhiều Quốc Gia',
-        'Thành Viên Hội Răng Hàm Mặt TP.HCM',
-        'Giao Tiếp Đa Ngôn Ngữ',
-        ],
-
-        cta: 'Xem Hồ Sơ Chi Tiết',
-    },
-    ],
-
     decisionSection: {
     eyebrow: 'HIỂU RÕ TRƯỚC KHI QUYẾT ĐỊNH',
 
@@ -354,60 +250,6 @@ const doctorsContent = {
     'Chaque patient est différent. Découvrez les praticiens qui accompagnent les patients tout au long de leur parcours de traitement chez EMIS.',
     },
 
-    doctors: [
-    {
-
-    name: 'Dr. Nguyen The Son',
-
-    role: 'Dentiste En Chef - Implantologie Et Prothèse Esthétique',
-
-    specialties:
-    'Implantologie • Prothèse Esthétique • Élévation Sinusienne Et Greffe Osseuse',
-
-    descriptionOne:
-    'Le Dr Son possède plus de 10 ans d’expérience spécialisée en implantologie, prothèse esthétique et chirurgie de greffe osseuse avec élévation sinusienne.',
-
-    descriptionTwo:
-    'Avec plus de 3 000 cas d’implants, il se concentre sur la restauration fonctionnelle, l’esthétique naturelle et la stabilité à long terme.',
-
-    highlights: [
-    'Plus De 10 Ans D’Expérience',
-    'Plus De 3 000 Cas D’Implants',
-    'Formation Avancée En Greffe Osseuse Et Sinus Lift',
-    'Planification Numérique Et Diagnostic 3D',
-    ],
-
-    cta: 'Voir Le Profil Complet',
-
-    },
-
-    {
-
-    name: 'Dr. Tran Minh Tu',
-
-    role: 'Chirurgien Oral Et Maxillo-Facial',
-
-    specialties:
-    'Implantologie • Réhabilitation Complète • Chirurgie Orale',
-
-    descriptionOne:
-    'Le Dr Tu se consacre à l’implantologie, à la réhabilitation complète, à la chirurgie orale et à la dentisterie esthétique, avec un intérêt particulier pour les cas complexes.',
-
-    descriptionTwo:
-    'Formé aux États-Unis, en Hongrie et au Vietnam, il associe une formation internationale à une pratique clinique active.',
-
-    highlights: [
-    'Pratique Hospitalière Active',
-    'Formation Internationale',
-    'Expertise En Implantologie Et Réhabilitation Complète',
-    'Communication Multilingue',
-    ],
-
-    cta: 'Voir Le Profil Complet',
-
-    },
-    ],
-
     decisionSection: {
     eyebrow: 'AVANT DE PRENDRE UNE DÉCISION',
 
@@ -493,60 +335,6 @@ const doctorsContent = {
     subtitle:
     '모든 환자는 서로 다릅니다. 아래는 EMIS에서 환자의 치료 여정을 함께하는 의료진입니다.',
     },
-
-    doctors: [
-    {
-
-    name: 'Dr. Nguyen The Son',
-
-    role: '총괄 원장 - 임플란트 및 심미 보철',
-
-    specialties:
-    '임플란트 • 심미 보철 • 상악동 거상술 및 골이식',
-
-    descriptionOne:
-    'Son 원장은 임플란트, 심미 보철, 상악동 거상술과 골이식 분야에서 10년 이상 전문 임상 경험을 보유하고 있습니다.',
-
-    descriptionTwo:
-    '3,000건 이상의 임플란트 케이스 경험을 바탕으로 기능 회복, 자연스러운 심미성, 장기적인 안정성을 중점으로 진료합니다.',
-
-    highlights: [
-    '10년 이상 임상 경험',
-    '3,000건 이상 임플란트 케이스',
-    '골이식 및 상악동 거상술 고급 교육',
-    '디지털 임플란트 계획 및 3D 진단',
-    ],
-
-    cta: '자세히 보기',
-
-    },
-
-    {
-
-    name: 'Dr. Tran Minh Tu',
-
-    role: '구강악안면외과 전문의',
-
-    specialties:
-    '임플란트 수술 • 전체 구강 재건 • 구강외과',
-
-    descriptionOne:
-    'Tu 원장은 임플란트 수술, 전체 구강 재건, 구강외과 및 심미치과를 중심으로 진료하며 복잡한 재건 치료에 특별한 관심을 가지고 있습니다.',
-
-    descriptionTwo:
-    '미국, 헝가리, 베트남에서 교육과 수련을 받았으며 국제적인 교육 배경과 풍부한 임상 경험을 바탕으로 진료하고 있습니다.',
-
-    highlights: [
-    '병원 임상 진료',
-    '국제 교육 이수',
-    '임플란트 및 전체 구강 재건 집중',
-    '다국어 소통',
-    ],
-
-    cta: '자세히 보기',
-
-    },
-    ],
 
     decisionSection: {
     eyebrow: '치료 결정 전',
@@ -636,60 +424,6 @@ const doctorsContent = {
     '每位患者的情况都不同。以下是 EMIS 陪伴患者完成治疗旅程的医生团队。',
     },
 
-    doctors: [
-    {
-
-    name: 'Dr. Nguyen The Son',
-
-    role: '主任医师 - 种植与美学修复',
-
-    specialties:
-    '种植牙 • 美学修复 • 上颌窦提升与骨增量',
-
-    descriptionOne:
-    'Son 医生在种植牙、美学修复及上颌窦提升与骨增量手术方面拥有超过10年的专科经验。',
-
-    descriptionTwo:
-    '凭借超过3,000例种植病例经验，他专注于恢复咀嚼功能、自然美观及长期稳定效果。',
-
-    highlights: [
-    '10年以上临床经验',
-    '3,000+ 种植病例',
-    '骨增量与上颌窦提升进阶培训',
-    '数字化种植规划与3D诊断',
-    ],
-
-    cta: '查看完整资料',
-
-    },
-
-    {
-
-    name: 'Dr. Tran Minh Tu',
-
-    role: '口腔颌面外科医生',
-
-    specialties:
-    '种植手术 • 全口重建 • 口腔外科',
-
-    descriptionOne:
-    'Tu 医生专注于种植牙手术、全口重建、口腔外科以及美学牙科，尤其关注复杂重建病例。',
-
-    descriptionTwo:
-    '曾在美国、匈牙利和越南接受教育与培训，将国际化背景与丰富的临床实践相结合。',
-
-    highlights: [
-    '医院临床工作经验',
-    '国际培训背景',
-    '专注种植牙与全口重建',
-    '多语言沟通',
-    ],
-
-    cta: '查看完整资料',
-
-    },
-    ],
-
     decisionSection: {
     eyebrow: '治疗决策前',
 
@@ -778,60 +512,6 @@ const doctorsContent = {
     subtitle:
     '每位患者的情況都不同。以下是 EMIS 陪伴患者完成治療旅程的醫師團隊。',
     },
-
-    doctors: [
-    {
-
-    name: 'Dr. Nguyen The Son',
-
-    role: '主任醫師 - 植牙與美學修復',
-
-    specialties:
-    '植牙 • 美學修復 • 上顎竇提升與骨增量',
-
-    descriptionOne:
-    'Son 醫師在植牙、美學修復，以及上顎竇提升與骨增量手術領域擁有超過10年專科經驗。',
-
-    descriptionTwo:
-    '累積超過3,000例植牙案例，專注於恢復咀嚼功能、自然美觀與長期穩定成果。',
-
-    highlights: [
-    '10年以上臨床經驗',
-    '3,000+ 植牙案例',
-    '骨增量與上顎竇提升進階培訓',
-    '數位植牙規劃與3D診斷',
-    ],
-
-    cta: '查看完整資料',
-
-    },
-
-    {
-
-    name: 'Dr. Tran Minh Tu',
-
-    role: '口腔顎面外科醫師',
-
-    specialties:
-    '植牙手術 • 全口重建 • 口腔外科',
-
-    descriptionOne:
-    'Tu 醫師專注於植牙手術、全口重建、口腔外科及美學牙科，特別關注複雜重建案例。',
-
-    descriptionTwo:
-    '曾於美國、匈牙利及越南接受教育與培訓，結合國際背景與豐富臨床經驗。',
-
-    highlights: [
-    '醫院臨床經驗',
-    '國際培訓背景',
-    '專注植牙與全口重建',
-    '多語言溝通',
-    ],
-
-    cta: '查看完整資料',
-
-    },
-    ],
 
     decisionSection: {
     eyebrow: '治療決策前',
