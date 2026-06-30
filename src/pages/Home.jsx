@@ -39,7 +39,6 @@ export default function Home() {
   const language = useSelector((state) => state.language.language);
   const localizedHome = homeContent[language] || homeContent.english;
   const page = localizedHome.homepageV2 || homeContent.english.homepageV2;
-  const implantIntro = localizedHome.implantIntro || page.implantIntro;
   const baseServices = (localizedHome.services || homeContent.english.services || []).slice(0, 4);
   const serviceCards = baseServices.length > 1
     ? [baseServices[1], baseServices[0], ...baseServices.slice(2)]
@@ -183,37 +182,6 @@ export default function Home() {
               <p className="text-xs font-medium opacity-90">VIETNAM SUPPORT LINE</p>
             </div>
           </a>
-        </div>
-      </section>
-
-      <section className="bg-[#f7fafc] py-16 md:py-20">
-        <div className="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-2 lg:items-stretch">
-          <div>
-            <p className={sectionLabelClass}>{implantIntro.label}</p>
-            <h2 className="text-2xl font-bold text-[#2a3439] md:text-3xl">{implantIntro.title}</h2>
-            <p className="mt-4 text-base leading-relaxed text-gray-500">{implantIntro.intro}</p>
-
-            <ul className="mt-6 grid gap-2.5 sm:grid-cols-2">
-              {implantIntro.principles.map((item) => (
-                <li key={item.title} className="flex items-center gap-2.5 text-sm text-[#2a3439]">
-                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#C5AF73]" />
-                  {item.title}
-                </li>
-              ))}
-            </ul>
-
-            <Link
-              to="/implant"
-              className="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.2em] text-[#C5AF73] transition-colors hover:text-[#a8924f]"
-            >
-              {implantIntro.cta || 'See more'}
-              <span aria-hidden="true">&rarr;</span>
-            </Link>
-          </div>
-
-          <div className="relative hidden min-h-[320px] overflow-hidden rounded-3xl bg-white shadow-sm lg:block">
-            <img src={implantIntroImage} alt={implantIntro.title} className="absolute inset-0 h-full w-full object-contain object-center p-6" />
-          </div>
         </div>
       </section>
 
