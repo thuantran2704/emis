@@ -176,34 +176,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2 — Empathy: Mirror the visitor's pain back at them */}
-      <section className="bg-white py-16 md:py-20">
-        <div className="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-[1.1fr_1fr] md:items-stretch">
-          <div className="hidden overflow-hidden rounded-3xl shadow-lg md:block">
-            <img src={lifestyleDinner} alt="Patient enjoying daily life confidently" className="h-full w-full object-cover" />
-          </div>
-
-          <div>
-            <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl">{page.situations.title}</h2>
-            <p className="mt-4 text-base leading-relaxed text-gray-500">{page.situations.intro}</p>
-
-            <div className="mt-6 space-y-5 border-l-2 border-[#e5d6b0] pl-5">
-              {page.situations.cards.map((item) => (
-                <article key={item.title} className="pb-4 border-b border-[#e6edf3] last:border-b-0">
-                  <h3 className="text-base font-semibold text-[#1d3953]">{item.title}</h3>
-                  <p className="mt-2 text-xs leading-relaxed text-[#5d7388]">{item.text}</p>
-                </article>
-              ))}
-            </div>
-
-            <Link to="/services" className="mt-6 inline-block rounded-full border border-[#9ab1c5] bg-white px-6 py-3 text-sm font-semibold text-[#1f3b57] transition hover:bg-[#f2f7fb]">
-              {page.situations.cta}
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* 3 — Solution: Implant specialist slider */}
+      {/* 2 — Solution: Implant specialist slider */}
       <section className="bg-[#f7fafc] py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
@@ -272,6 +245,33 @@ export default function Home() {
                 aria-label={`Slide ${i + 1}`}
               />
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 3 — Empathy: Mirror the visitor's pain back at them */}
+      <section className="bg-white py-16 md:py-20">
+        <div className="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-[1.1fr_1fr] md:items-stretch">
+          <div className="hidden overflow-hidden rounded-3xl shadow-lg md:block">
+            <img src={lifestyleDinner} alt="Patient enjoying daily life confidently" className="h-full w-full object-cover" />
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl">{page.situations.title}</h2>
+            <p className="mt-4 text-base leading-relaxed text-gray-500">{page.situations.intro}</p>
+
+            <div className="mt-6 space-y-5 border-l-2 border-[#e5d6b0] pl-5">
+              {page.situations.cards.map((item) => (
+                <article key={item.title} className="pb-4 border-b border-[#e6edf3] last:border-b-0">
+                  <h3 className="text-base font-semibold text-[#1d3953]">{item.title}</h3>
+                  <p className="mt-2 text-xs leading-relaxed text-[#5d7388]">{item.text}</p>
+                </article>
+              ))}
+            </div>
+
+            <Link to="/services" className="mt-6 inline-block rounded-full border border-[#9ab1c5] bg-white px-6 py-3 text-sm font-semibold text-[#1f3b57] transition hover:bg-[#f2f7fb]">
+              {page.situations.cta}
+            </Link>
           </div>
         </div>
       </section>
