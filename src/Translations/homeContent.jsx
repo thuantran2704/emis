@@ -169,6 +169,38 @@ export const homeContent = {
           },
         ],
       },
+      implantSpecialist: {
+        eyebrow: "Implant Expertise",
+        title: "Specializing In Implant-Based Solutions",
+        intro:
+          "EMIS Dental focuses on implant-based tooth replacement and full-arch rehabilitation. Our team has treated thousands of implant cases — from single tooth replacement to full-mouth reconstruction.",
+        slides: [
+          {
+            tag: "All-on-4",
+            title: "All-on-4 Dental Implants",
+            subtitle: "Full arch on four implants",
+            text: "Replace an entire upper or lower arch using just four strategically placed implants. Suitable for patients with moderate bone loss who want a fixed, stable alternative to removable dentures.",
+            cta: "Explore All-on-4",
+            href: "/fixed-teeth",
+          },
+          {
+            tag: "All-on-6",
+            title: "All-on-6 Dental Implants",
+            subtitle: "Enhanced stability with six implants",
+            text: "Six implants provide greater load distribution and added security for the full arch. Often recommended for patients seeking maximum long-term stability and natural chewing function.",
+            cta: "Explore All-on-6",
+            href: "/fixed-teeth",
+          },
+          {
+            tag: "Dental Implants",
+            title: "Single & Multiple Implants",
+            subtitle: "Replace one or several missing teeth",
+            text: "Titanium implants fuse with the jawbone to create a stable, permanent base for a crown or bridge. The most natural-feeling tooth replacement option available today.",
+            cta: "Explore Implants",
+            href: "/implant",
+          },
+        ],
+      },
       doctors: {
         title: "Meet Our Doctors",
         intro:
@@ -742,6 +774,38 @@ export const homeContent = {
           {
             title: "Giao Tiếp Minh Bạch",
             text: "Giúp bệnh nhân hiểu rõ các lựa chọn điều trị và hành trình phía trước.",
+          },
+        ],
+      },
+      implantSpecialist: {
+        eyebrow: "Chuyên Sâu Implant",
+        title: "Chuyên Môn Trọng Tâm: Implant & Phục Hồi Toàn Hàm",
+        intro:
+          "Emis Dental tập trung vào Implant nha khoa và phục hồi toàn hàm. Đội ngũ đã điều trị thành công hàng nghìn ca từ cấy ghép đơn lẻ đến phục hồi toàn bộ hai hàm.",
+        slides: [
+          {
+            tag: "All-on-4",
+            title: "Implant All-on-4",
+            subtitle: "Phục hình toàn hàm với 4 implant",
+            text: "Phục hồi toàn bộ hàm trên hoặc hàm dưới chỉ với 4 implant đặt ở vị trí tối ưu. Phù hợp cho bệnh nhân tiêu xương vừa phải muốn thay thế hàm giả tháo lắp bằng giải pháp cố định.",
+            cta: "Tìm Hiểu All-on-4",
+            href: "/fixed-teeth",
+          },
+          {
+            tag: "All-on-6",
+            title: "Implant All-on-6",
+            subtitle: "Tăng cường ổn định với 6 implant",
+            text: "Sáu implant phân tán lực đều hơn, mang lại sự ổn định vượt trội cho toàn hàm. Thường được khuyến nghị cho bệnh nhân cần độ bền cao và chức năng ăn nhai tự nhiên tối đa.",
+            cta: "Tìm Hiểu All-on-6",
+            href: "/fixed-teeth",
+          },
+          {
+            tag: "Implant Đơn & Nhiều Răng",
+            title: "Cấy Ghép Implant Đơn & Nhiều Răng",
+            subtitle: "Thay thế một hoặc nhiều răng đã mất",
+            text: "Implant titan tích hợp với xương hàm tạo nền tảng vững chắc cho mão sứ hoặc cầu răng. Lựa chọn phục hồi tự nhiên nhất hiện nay.",
+            cta: "Tìm Hiểu Implant",
+            href: "/implant",
           },
         ],
       },

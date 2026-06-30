@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { useSelector } from 'react-redux';
@@ -5,6 +6,7 @@ import homeContent from '../Translations/homeContent';
 import heroBackground from '../pics/Better_emis_hall.jpeg';
 import confidencePortrait from '../pics/foreign-patient-1-with-dr-tu-smiling.jpg';
 import implantIntroImage from '../pics/all-on-4-implant.jpg';
+import allon6Image from '../pics/allon6.jpeg';
 import cbctReview from '../pics/dr-x-ray-consultation.jpg';
 import onlineConsultation from '../pics/consulting-team.jpg';
 import lifestyleDinner from '../pics/eating-casually.jpeg';
@@ -44,6 +46,8 @@ export default function Home() {
     : baseServices;
   const serviceImages = [serviceImplant, serviceGeneral, serviceCrown, serviceInvisalign];
   const sectionLabelClass = "mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-[#C5AF73]";
+  const [activeSlide, setActiveSlide] = useState(0);
+  const implantSlideImages = [implantIntroImage, allon6Image, serviceImplant];
   const heroDescription = page.hero.description.length > 95
     ? `${page.hero.description.slice(0, 92).trim()}...`
     : page.hero.description;
@@ -330,27 +334,75 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#f1f5f9] py-16 md:py-20">
+      {/* Implant Specialist Slider */}
+      <section className="bg-white py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl">{page.pathways.title}</h2>
-            <p className="mt-4 text-base leading-relaxed text-gray-500">{page.pathways.intro}</p>
+            <p className={sectionLabelClass}>{page.implantSpecialist.eyebrow}</p>
+            <h2 className="text-2xl font-bold text-[#2a3439] md:text-3xl">{page.implantSpecialist.title}</h2>
+            <p className="mt-4 text-base leading-relaxed text-gray-500">{page.implantSpecialist.intro}</p>
           </div>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {[confidentSmile, elderSocializing, pathwayConsult].map((image, index) => {
-              const card = page.pathways.cards[index];
-              return (
-                <article key={card.title} className="overflow-hidden rounded-2xl border border-[#d9e4ed] bg-white shadow-sm">
-                  <img src={image} alt={card.title} className="hidden h-44 w-full object-cover md:block" />
-                  <div className="p-6">
-                    <h3 className="text-lg font-semibold text-[#1d3953]">{card.title}</h3>
-                    <p className="mt-2 text-xs font-medium text-[#6f8da6]">{card.subtitle}</p>
-                    <p className="mt-3 text-xs leading-relaxed text-[#5d7388]">{card.text}</p>
-                  </div>
-                </article>
-              );
-            })}
+          {/* Tab pills */}
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            {page.implantSpecialist.slides.map((slide, i) => (
+              <button
+                key={i}
+                onClick={() => setActiveSlide(i)}
+                className={`rounded-full px-5 py-2 text-sm font-semibold transition-all duration-200 ${
+                  activeSlide === i
+                    ? 'bg-[#2a3439] text-white shadow'
+                    : 'border border-[#d0dce8] text-[#2a3439] hover:border-[#C5AF73] hover:text-[#C5AF73]'
+                }`}
+              >
+                {slide.tag}
+              </button>
+            ))}
+          </div>
+
+          {/* Slides */}
+          <div className="mt-10">
+            {page.implantSpecialist.slides.map((slide, i) => (
+              <div
+                key={i}
+                className={`grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-center transition-all duration-300 ${activeSlide === i ? 'block' : 'hidden'}`}
+              >
+                <div>
+                  <span className="text-xs font-semibold uppercase tracking-[0.3em] text-[#C5AF73]">{slide.tag}</span>
+                  <h3 className="mt-2 text-2xl font-bold text-[#2a3439] md:text-3xl">{slide.title}</h3>
+                  <p className="mt-1 text-sm font-medium text-[#8aa0b5]">{slide.subtitle}</p>
+                  <p className="mt-4 text-base leading-relaxed text-gray-500">{slide.text}</p>
+                  <Link
+                    to={slide.href}
+                    className="mt-7 inline-flex items-center gap-2 rounded-full bg-[#2a3439] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#1e282d]"
+                  >
+                    {slide.cta}
+                    <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </Link>
+                </div>
+                <div className="overflow-hidden rounded-3xl shadow-sm">
+                  <img
+                    src={implantSlideImages[i]}
+                    alt={slide.title}
+                    className="h-72 w-full object-contain bg-[#f7fafc] p-4 lg:h-96"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Dot indicators */}
+          <div className="mt-8 flex justify-center gap-2">
+            {page.implantSpecialist.slides.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setActiveSlide(i)}
+                className={`h-2 rounded-full transition-all duration-200 ${activeSlide === i ? 'w-6 bg-[#C5AF73]' : 'w-2 bg-[#d0dce8]'}`}
+                aria-label={`Slide ${i + 1}`}
+              />
+            ))}
           </div>
         </div>
       </section>
@@ -404,6 +456,32 @@ export default function Home() {
 
           <div className="hidden overflow-hidden rounded-3xl shadow-lg h-full lg:landscape:block">
             <img src={internationalSupport} alt="International patient consultation and planning" className="h-full w-full object-cover object-center" />
+          </div>
+        </div>
+      </section>
+
+      {/* Finding The Right Treatment Pathway - moved lower */}
+      <section className="bg-[#f1f5f9] py-16 md:py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl">{page.pathways.title}</h2>
+            <p className="mt-4 text-base leading-relaxed text-gray-500">{page.pathways.intro}</p>
+          </div>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {[confidentSmile, elderSocializing, pathwayConsult].map((image, index) => {
+              const card = page.pathways.cards[index];
+              return (
+                <article key={card.title} className="overflow-hidden rounded-2xl border border-[#d9e4ed] bg-white shadow-sm">
+                  <img src={image} alt={card.title} className="hidden h-44 w-full object-cover md:block" />
+                  <div className="p-6">
+                    <h3 className="text-lg font-semibold text-[#1d3953]">{card.title}</h3>
+                    <p className="mt-2 text-xs font-medium text-[#6f8da6]">{card.subtitle}</p>
+                    <p className="mt-3 text-xs leading-relaxed text-[#5d7388]">{card.text}</p>
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>
