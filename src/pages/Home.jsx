@@ -22,6 +22,11 @@ import ContactForm from '../components/ContactForm';
 import ImplantPlannerBanner from '../components/implants_banner';
 import { DOCTORS, getDoctorTranslation } from '../data/doctors';
 import serviceImplant from '../pics/implant-illustration.jpg';
+import chatPreTrip from '../pics/chat-pic-timeline-discussion-pre-trip.jpeg';
+import chatMedHistory from '../pics/chat-pic-checking-med-history.jpeg';
+import chatAirport from '../pics/chat-pic-pick-up-airport.jpeg';
+import chatAftercare from '../pics/chat-pic-aftercare.jpeg';
+import PicSlider from '../components/PicSlider';
 
 const locales = {
   vietnamese: 'vi_VN',
@@ -37,6 +42,18 @@ export default function Home() {
   const page = localizedHome.homepageV2 || homeContent.english.homepageV2;
   const sectionLabelClass = "mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-[#C5AF73]";
   const [activeSlide, setActiveSlide] = useState(0);
+  const journeyPics = [chatPreTrip, chatMedHistory, chatAirport, chatAftercare];
+  const journeyContent = {
+    label: 'Real Journeys',
+    heading: 'What Your Journey With EMIS Looks Like',
+    subheading: "From first message to long-term care, here's how patients experience EMIS.",
+    pic: [
+      { title: 'Online Consultation', description: 'You share your situation, photos, or X-rays. We discuss your goals and give you an honest plan, before you book anything.' },
+      { title: 'Medical Review & Planning', description: 'Our team reviews your full history and builds a personalized schedule so your time in Vietnam is used efficiently.' },
+      { title: 'Welcome to Saigon', description: 'Airport pickup, hotel guidance, and orientation. We make sure your arrival is smooth and completely stress-free.' },
+      { title: 'Treatment & Aftercare', description: 'Your procedure is completed with precision. We follow up via chat and coordinate with your local dentist back home.' },
+    ],
+  };
   const implantSlideImages = [implantIntroImage, allon6Image, serviceImplant];
   const heroDescription = page.hero.description.length > 95
     ? `${page.hero.description.slice(0, 92).trim()}...`
@@ -397,13 +414,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 8 — Real Patient Journeys — TODO: replace with 1 featured case story */}
-      {/* <section className="bg-white py-16 md:py-20">
-        <div className="mx-auto max-w-7xl px-6">
-          PLACEHOLDER: Add a single featured patient case story here.
-          Use a real before/after case with patient quote, treatment summary, and outcome.
-        </div>
-      </section> */}
+      {/* 8 — Real Patient Journeys */}
+      <PicSlider pics={journeyPics} content={journeyContent} />
 
       {/* 9 — Logistics: Remove the overseas barrier */}
       <section className="bg-[#f1f5f9] py-16 md:py-20">
