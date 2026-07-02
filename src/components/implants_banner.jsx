@@ -2,12 +2,12 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { ArrowRight } from 'lucide-react';
 import { implantContent } from '../Translations/implantContent';
+import NumberedList from './NumberedList';
 
 export default function ImplantPlannerBanner() {
   const language = useSelector((state) => state.language.language);
   const content = implantContent[language] || implantContent.english;
   const planner = content.section9;
-  const options = (content.section4?.options || []).slice(0, 4);
 
   if (!planner) {
     return null;
@@ -57,23 +57,11 @@ export default function ImplantPlannerBanner() {
             </div>
 
             <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-5 backdrop-blur-sm md:p-6">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#d4af37]/80">Treatment Paths</p>
-              <ol className="mt-4 flex flex-col">
-                {options.map((option, index) => (
-                  <li
-                    key={option.title}
-                    className="group flex items-center gap-4 border-b border-white/10 py-3.5 transition-colors last:border-b-0 hover:bg-white/[0.03]"
-                  >
-                    <span
-                      className="text-sm font-semibold tabular-nums text-[#d4af37]/60 transition-colors group-hover:text-[#d4af37]"
-                    >
-                      {String(index + 1).padStart(2, '0')}
-                    </span>
-                    <span className="flex-1 text-sm text-white/85 transition-colors group-hover:text-white">{option.title}</span>
-                    <ArrowRight className="h-4 w-4 translate-x-[-6px] text-[#d4af37] opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100" strokeWidth={1.6} />
-                  </li>
-                ))}
-              </ol>
+              <NumberedList
+                title={content.labels?.section4 || 'Treatment Paths'}
+                items={(content.section4?.options || []).slice(0, 4).map((o) => o.title)}
+                compact
+              />
             </div>
           </div>
         </div>

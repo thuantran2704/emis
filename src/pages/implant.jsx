@@ -51,7 +51,7 @@ const ImplantGuide = () => {
               <p
                 className="uppercase tracking-[0.3em] text-[#C5AF73] text-xs font-semibold"
               >
-                IMPLANT SOLUTIONS
+                {content.labels?.section1 || 'IMPLANT SOLUTIONS'}
               </p>
 
               <h1
@@ -92,7 +92,7 @@ const ImplantGuide = () => {
             <p
               className="uppercase tracking-[0.3em] text-[#C5AF73] mb-5 text-xs font-semibold"
             >
-              IMPLANT SUITABILITY
+              {content.labels?.section2 || 'IMPLANT SUITABILITY'}
             </p>
             <h2
               className="text-4xl text-[#2a3439] mb-6"
@@ -144,7 +144,7 @@ const ImplantGuide = () => {
             <p
               className="uppercase tracking-[0.3em] text-[#C5AF73] mb-5 text-xs font-semibold"
             >
-              TREATMENT JOURNEY
+              {content.labels?.section3 || 'TREATMENT JOURNEY'}
             </p>
             <h2
               className="text-4xl text-[#2a3439] mb-6"
@@ -194,7 +194,7 @@ const ImplantGuide = () => {
             <p
               className="uppercase tracking-[0.3em] text-[#C5AF73] mb-5 text-xs font-semibold"
             >
-              TREATMENT OPTIONS
+              {content.labels?.section4 || 'TREATMENT OPTIONS'}
             </p>
             <h2
               className="text-4xl text-[#2a3439] mb-6"
@@ -234,7 +234,7 @@ const ImplantGuide = () => {
             <p
               className="uppercase tracking-[0.3em] text-[#C5AF73] mb-5 text-xs font-semibold"
             >
-              TREATMENT PLANNING
+              {content.labels?.section5 || 'TREATMENT PLANNING'}
             </p>
             <h2
               className="text-4xl text-[#2a3439] mb-6"
@@ -276,7 +276,7 @@ const ImplantGuide = () => {
             <p
               className="uppercase tracking-[0.3em] text-[#C5AF73] mb-5 text-xs font-semibold"
             >
-              IMPLANT SYSTEMS
+              {content.labels?.section6 || 'IMPLANT SYSTEMS'}
             </p>
             <h2
               className="text-4xl text-[#2a3439] mb-6"
@@ -326,7 +326,7 @@ const ImplantGuide = () => {
             <p
               className="uppercase tracking-[0.3em] text-[#C5AF73] mb-5 text-xs font-semibold"
             >
-              OVERSEAS PATIENTS
+              {content.labels?.section7 || 'OVERSEAS PATIENTS'}
             </p>
             <h2
               className="text-4xl text-[#2a3439] mb-6"
@@ -379,7 +379,7 @@ const ImplantGuide = () => {
             <p
               className="uppercase tracking-[0.3em] text-[#C5AF73] mb-5 text-xs font-semibold"
             >
-              REAL PATIENT CASES
+              {content.labels?.section8 || 'REAL PATIENT CASES'}
             </p>
             <h2
               className="text-4xl text-[#2a3439] mb-6"
@@ -427,7 +427,7 @@ const ImplantGuide = () => {
           <p
             className="uppercase tracking-[0.3em] text-[#C5AF73] mb-5 text-xs font-semibold"
           >
-            FINAL CTA
+            {content.labels?.section9 || 'GET STARTED'}
           </p>
           <h2
             className="text-4xl text-[#2a3439] mb-6"

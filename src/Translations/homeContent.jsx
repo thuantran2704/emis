@@ -147,6 +147,7 @@ export const homeContent = {
         cta: "See more",
       },
       confidence: {
+        label: "Why EMIS",
         title: "Why Patients Feel More Confident With EMIS",
         intro:
           "Choosing implant treatment is often a significant decision. Many patients spend months researching, comparing options, and looking for reassurance before feeling ready to move forward.",
@@ -202,6 +203,7 @@ export const homeContent = {
         ],
       },
       doctors: {
+        label: "Our Team",
         title: "Meet Our Doctors",
         intro:
           "Successful treatment often involves much more than a single procedure. It is a process that combines diagnosis, planning, surgical care, restorative expertise, and long-term follow-up.",
@@ -310,6 +312,17 @@ export const homeContent = {
         cta: "Explore Patient Journeys",
         privacyNote:
           "Patient journeys are shared with consent and may be anonymized to help protect patient privacy.",
+      },
+      realJourneys: {
+        label: "Real Journeys",
+        heading: "What Your Journey With EMIS Looks Like",
+        subheading: "From first message to long-term care, here's how patients experience EMIS.",
+        pic: [
+          { title: "Online Consultation", description: "You share your situation, photos, or X-rays. We discuss your goals and give you an honest plan, before you book anything." },
+          { title: "Medical Review & Planning", description: "Our team reviews your full history and builds a personalized schedule so your time in Vietnam is used efficiently." },
+          { title: "Welcome to Saigon", description: "Airport pickup, hotel guidance, and orientation. We make sure your arrival is smooth and completely stress-free." },
+          { title: "Treatment & Aftercare", description: "Your procedure is completed with precision. We follow up via chat and coordinate with your local dentist back home." },
+        ],
       },
       international: {
         title: "For Overseas Vietnamese & International Patients",
@@ -755,6 +768,7 @@ export const homeContent = {
         cta: "Xem thêm",
       },
       confidence: {
+        label: "Tại Sao EMIS",
         title: "Vì Sao Nhiều Bệnh Nhân Chọn EMIS?",
         intro:
           "Điều trị Implant thường là một quyết định lớn. Nhiều người dành nhiều tháng để tìm hiểu, so sánh và cân nhắc trước khi bắt đầu.",
@@ -810,6 +824,7 @@ export const homeContent = {
         ],
       },
       doctors: {
+        label: "Đội Ngũ",
         title: "Đội Ngũ Bác Sĩ EMIS",
         intro:
           "Một ca Implant hay phục hồi toàn hàm thành công không chỉ là một thủ thuật đơn lẻ. Đó là cả một quá trình từ chẩn đoán, lập kế hoạch đến theo dõi lâu dài.",
@@ -918,6 +933,17 @@ export const homeContent = {
         cta: "Xem Các Hành Trình Điều Trị",
         privacyNote:
           "Các hành trình điều trị được chia sẻ khi có sự đồng ý và có thể ẩn danh để bảo vệ quyền riêng tư.",
+      },
+      realJourneys: {
+        label: "Hành Trình Thực Tế",
+        heading: "Hành Trình Của Bạn Cùng EMIS Sẽ Như Thế Nào",
+        subheading: "Từ tin nhắn đầu tiên đến chăm sóc lâu dài, đây là cách bệnh nhân trải nghiệm EMIS.",
+        pic: [
+          { title: "Tư Vấn Trực Tuyến", description: "Bạn chia sẻ tình trạng, ảnh hoặc X-ray. Chúng tôi thảo luận về mục tiêu và đưa ra kế hoạch trung thực, trước khi bạn đặt lịch hẹn." },
+          { title: "Đánh Giá Y Tế & Lập Kế Hoạch", description: "Đội ngũ xem xét toàn bộ hồ sơ và xây dựng lịch trình phù hợp để tận dụng tối đa thời gian của bạn tại Việt Nam." },
+          { title: "Chào Mừng Đến Sài Gòn", description: "Đón sân bay, hỗ trợ khách sạn và định hướng. Chúng tôi đảm bảo chuyến đến của bạn diễn ra suôn sẻ và thoải mái." },
+          { title: "Điều Trị & Chăm Sóc Sau Điều Trị", description: "Quy trình được thực hiện chính xác. Chúng tôi theo dõi qua chat và phối hợp với nha sĩ địa phương của bạn tại quê nhà." },
+        ],
       },
       international: {
         title: "Dành Cho Việt Kiều & Bệnh Nhân Quốc Tế",

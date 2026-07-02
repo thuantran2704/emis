@@ -43,17 +43,6 @@ export default function Home() {
   const sectionLabelClass = "mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-[#C5AF73]";
   const [activeSlide, setActiveSlide] = useState(0);
   const journeyPics = [chatPreTrip, chatMedHistory, chatAirport, chatAftercare];
-  const journeyContent = {
-    label: 'Real Journeys',
-    heading: 'What Your Journey With EMIS Looks Like',
-    subheading: "From first message to long-term care, here's how patients experience EMIS.",
-    pic: [
-      { title: 'Online Consultation', description: 'You share your situation, photos, or X-rays. We discuss your goals and give you an honest plan, before you book anything.' },
-      { title: 'Medical Review & Planning', description: 'Our team reviews your full history and builds a personalized schedule so your time in Vietnam is used efficiently.' },
-      { title: 'Welcome to Saigon', description: 'Airport pickup, hotel guidance, and orientation. We make sure your arrival is smooth and completely stress-free.' },
-      { title: 'Treatment & Aftercare', description: 'Your procedure is completed with precision. We follow up via chat and coordinate with your local dentist back home.' },
-    ],
-  };
   const implantSlideImages = [implantIntroImage, allon6Image, serviceImplant];
   const heroDescription = page.hero.description.length > 95
     ? `${page.hero.description.slice(0, 92).trim()}...`
@@ -197,7 +186,7 @@ export default function Home() {
       <section className="bg-white py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
-            <p className={sectionLabelClass}>Why EMIS</p>
+            <p className={sectionLabelClass}>{page.confidence.label}</p>
             <h2 className="text-2xl font-bold text-[#2a3439] md:text-3xl">{page.confidence.title}</h2>
             <p className="mt-4 text-base leading-relaxed text-gray-500">{page.confidence.intro}</p>
           </div>
@@ -227,7 +216,7 @@ export default function Home() {
       <section className="bg-[#f1f5f9] py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
-            <p className={sectionLabelClass}>Our Team</p>
+            <p className={sectionLabelClass}>{page.doctors.label}</p>
             <h2 className="text-xl font-bold text-[#2a3439] md:text-2xl">{page.doctors.title}</h2>
             <p className="mt-4 text-base leading-relaxed text-gray-500">{page.doctors.intro}</p>
           </div>
@@ -415,7 +404,7 @@ export default function Home() {
       </section>
 
       {/* 8 — Real Patient Journeys */}
-      <PicSlider pics={journeyPics} content={journeyContent} />
+      <PicSlider pics={journeyPics} content={page.realJourneys} />
 
       {/* 9 — Logistics: Remove the overseas barrier */}
       <section className="bg-[#f1f5f9] py-16 md:py-20">

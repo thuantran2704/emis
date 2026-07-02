@@ -10,6 +10,7 @@ import whiteningCase from '../pics/eating-casually.jpeg';
 import veneerCase from '../pics/measuring-result-cbct-x-ray-patient-smiling.jpg';
 import orthoCase from '../pics/doctor-explaining-procedure-to-patient.jpg';
 import ProcessSteps from '../components/ProcessSteps';
+import NumberedList from '../components/NumberedList';
 
 const SectionLabel = ({ children }) => (
   <p
@@ -95,29 +96,7 @@ export default function SmileAesthetics() {
         <div className="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full bg-[#d4af37]/20 blur-3xl" />
         <div className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-[#1d3953]/40 blur-3xl" />
         <div className="relative mx-auto max-w-5xl px-6 lg:px-12">
-          <h2 className="mb-8 text-[1.45rem] leading-[1.1] text-white lg:mb-12 lg:text-[2.1rem]">
-            {content.improve?.title}
-          </h2>
-          <ol className="flex flex-col">
-            {improveItems.map((item, index) => (
-              <li
-                key={item}
-                className="group flex items-center gap-5 border-b border-white/10 py-5 transition-colors hover:bg-white/[0.03] lg:gap-8 lg:py-6"
-              >
-                <span
-                  className="text-[1.1rem] font-semibold tabular-nums text-[#d4af37]/60 transition-colors group-hover:text-[#d4af37] lg:text-[1.35rem]"
-                >
-                  {String(index + 1).padStart(2, '0')}
-                </span>
-                <p className="flex-1 text-[14px] font-medium uppercase tracking-[0.12em] text-white/85 transition-colors group-hover:text-white lg:text-[16px]">
-                  {item}
-                </p>
-                <span className="translate-x-[-6px] text-[#d4af37] opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
-                  <ArrowRight className="h-5 w-5" strokeWidth={1.6} />
-                </span>
-              </li>
-            ))}
-          </ol>
+          <NumberedList title={content.improve?.title} items={improveItems} />
         </div>
       </section>
 

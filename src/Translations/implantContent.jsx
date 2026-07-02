@@ -4,6 +4,18 @@ export const implantContent = {
     metaDescription:
       "Understand dental implants: from assessment to full restoration. Explore solutions suitable for your tooth loss at EMIS Dental.",
 
+    labels: {
+      section1: 'IMPLANT SOLUTIONS',
+      section2: 'IMPLANT SUITABILITY',
+      section3: 'TREATMENT JOURNEY',
+      section4: 'TREATMENT OPTIONS',
+      section5: 'TREATMENT PLANNING',
+      section6: 'IMPLANT SYSTEMS',
+      section7: 'OVERSEAS PATIENTS',
+      section8: 'REAL PATIENT CASES',
+      section9: 'GET STARTED',
+    },
+
     section1: {
       title: "Restore Missing Teeth With Confidence",
       intro:
@@ -114,6 +126,18 @@ export const implantContent = {
     metaTitle: "Giải Pháp Trồng Răng Implant | EMIS Dental",
     metaDescription:
       "Hiểu về cấy ghép implant: từ đánh giá tình trạng đến phục hồi toàn diện. Khám phá các giải pháp phù hợp cho mất răng của bạn tại EMIS Dental.",
+
+    labels: {
+      section1: 'GIẢI PHÁP IMPLANT',
+      section2: 'IMPLANT CÓ PHÙ HỢP?',
+      section3: 'HÀNH TRÌNH ĐIỀU TRỊ',
+      section4: 'CÁC LỰA CHỌN',
+      section5: 'LẬP KẾ HOẠCH ĐIỀU TRỊ',
+      section6: 'HỆ THỐNG IMPLANT',
+      section7: 'BỆNH NHÂN QUỐC TẾ',
+      section8: 'CA ĐIỀU TRỊ THỰC TẾ',
+      section9: 'BẮT ĐẦU NGAY',
+    },
 
     section1: {
       title: "Khôi Phục Răng Mất Với Sự Tự Tin",
@@ -232,6 +256,17 @@ export const implantContent = {
     metaTitle: "Solutions Implantaires | EMIS Dental",
     metaDescription:
       "Comprenez le traitement implantaire: de l'évaluation à la restauration complète. Découvrez les solutions adaptées à votre perte dentaire chez EMIS Dental.",
+    labels: {
+      section1: 'SOLUTIONS IMPLANTAIRES',
+      section2: 'ÉLIGIBILITÉ À L\'IMPLANT',
+      section3: 'PARCOURS DE TRAITEMENT',
+      section4: 'OPTIONS DE TRAITEMENT',
+      section5: 'PLANIFICATION',
+      section6: 'SYSTÈMES IMPLANTAIRES',
+      section7: 'PATIENTS INTERNATIONAUX',
+      section8: 'CAS PATIENTS',
+      section9: 'COMMENCER',
+    },
     section1: {
       title: "Retrouver vos dents avec confiance",
       intro:
@@ -315,6 +350,17 @@ export const implantContent = {
     metaTitle: "种植解决方案 | EMIS Dental",
     metaDescription:
       "了解牙科种植：从评估到完整修复。在 EMIS Dental 探索适合您缺牙情况的方案。",
+    labels: {
+      section1: '种植方案',
+      section2: '种植适合您吗',
+      section3: '治疗流程',
+      section4: '治疗选项',
+      section5: '治疗规划',
+      section6: '种植系统',
+      section7: '海外患者',
+      section8: '真实案例',
+      section9: '开始咨询',
+    },
     section1: {
       title: "自信修复缺失牙",
       intro:
@@ -398,6 +444,17 @@ export const implantContent = {
     metaTitle: "植牙解決方案 | EMIS Dental",
     metaDescription:
       "了解牙科植牙：從評估到完整重建。在 EMIS Dental 探索適合您缺牙狀況的方案。",
+    labels: {
+      section1: '植牙方案',
+      section2: '植牙適合您嗎',
+      section3: '治療歷程',
+      section4: '治療選項',
+      section5: '治療規劃',
+      section6: '植體系統',
+      section7: '海外患者',
+      section8: '真實案例',
+      section9: '開始諮詢',
+    },
     section1: {
       title: "自信修復缺牙",
       intro:
@@ -481,6 +538,17 @@ export const implantContent = {
     metaTitle: "임플란트 솔루션 | EMIS Dental",
     metaDescription:
       "임플란트 치료를 이해하세요: 평가부터 최종 수복까지. EMIS Dental에서 상태에 맞는 치료 옵션을 확인해보세요.",
+    labels: {
+      section1: '임플란트 솔루션',
+      section2: '적합성 확인',
+      section3: '치료 과정',
+      section4: '치료 옵션',
+      section5: '치료 계획',
+      section6: '임플란트 시스템',
+      section7: '해외 환자',
+      section8: '실제 사례',
+      section9: '시작하기',
+    },
     section1: {
       title: "자신 있게 결손치를 회복하세요",
       intro:

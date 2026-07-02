@@ -104,7 +104,7 @@ const About = () => {
       <section className="py-32 max-md:py-36 bg-white">
         <div className="max-w-4xl mx-auto px-8 space-y-12">
           <div>
-            <SectionLabel>Our Approach</SectionLabel>
+            <SectionLabel>{content.labels?.approach || 'Our Approach'}</SectionLabel>
             <SectionTitle>{content.approachTitle}</SectionTitle>
             <p
               className="text-gray-500 leading-relaxed text-[15px]"
@@ -126,7 +126,7 @@ const About = () => {
       <section className="py-32 max-md:py-36 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto px-8 space-y-12">
           <div>
-            <SectionLabel>Planning</SectionLabel>
+            <SectionLabel>{content.labels?.planning || 'Planning'}</SectionLabel>
             <SectionTitle>{content.planningTitle}</SectionTitle>
             <div className="space-y-5">
               {content.planningBullets.map((b, i) => (
@@ -159,7 +159,7 @@ const About = () => {
       <section className="py-32 max-md:py-36 bg-white">
         <div className="max-w-4xl mx-auto px-8 space-y-12">
           <div>
-            <SectionLabel>Technology</SectionLabel>
+            <SectionLabel>{content.labels?.technology || 'Technology'}</SectionLabel>
             <SectionTitle>{content.technologyTitle}</SectionTitle>
             <p
               className="text-gray-500 leading-relaxed text-[15px] mb-10"
@@ -187,7 +187,7 @@ const About = () => {
       <section className="py-32 max-md:py-36 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto px-8 space-y-12">
           <div>
-            <SectionLabel>Our Team</SectionLabel>
+            <SectionLabel>{content.labels?.team || 'Our Team'}</SectionLabel>
             <SectionTitle>{content.teamTitle}</SectionTitle>
             <p
               className="text-gray-500 leading-relaxed text-[15px] mb-12"
@@ -240,7 +240,7 @@ const About = () => {
       <section className="py-32 max-md:py-36 bg-white">
         <div className="max-w-5xl mx-auto px-8 grid gap-12 lg:landscape:grid-cols-2 lg:landscape:items-center">
           <div className="text-center lg:landscape:text-left">
-            <SectionLabel>International Patients</SectionLabel>
+            <SectionLabel>{content.labels?.international || 'International Patients'}</SectionLabel>
             <SectionTitle>{content.internationalTitle}</SectionTitle>
             <p
               className="text-gray-500 leading-relaxed text-[15px] mb-10"
@@ -272,7 +272,7 @@ const About = () => {
       <section className="py-32 max-md:py-36 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto px-8 space-y-12">
           <div>
-            <SectionLabel>Trust & Transparency</SectionLabel>
+            <SectionLabel>{content.labels?.trust || 'Trust & Transparency'}</SectionLabel>
             <SectionTitle>{content.trustTitle}</SectionTitle>
             <p
               className="text-gray-500 leading-relaxed text-[15px] mb-10"
@@ -305,7 +305,7 @@ const About = () => {
       {/* START STEPS */}
       <section className="py-32 max-md:py-36 bg-white">
         <div className="max-w-5xl mx-auto px-8 text-center">
-          <SectionLabel>Getting Started</SectionLabel>
+          <SectionLabel>{content.labels?.start || 'Getting Started'}</SectionLabel>
           <SectionTitle>{content.startTitle}</SectionTitle>
 
           <div className="mt-16 grid md:grid-cols-3 gap-7">

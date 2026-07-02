@@ -25,6 +25,30 @@ import {
 
 import viImg from "../pics/crown.jpg";
 import enImg from "../pics/crown.jpg";
+import PicSlider from "../components/PicSlider";
+import crownDB from "../pics/WEB/veneer/eng/01-porcelain-DB-BIO-Crowns-Germany.png";
+import crownZirconia from "../pics/WEB/veneer/eng/02-zirconia-porcelain-crown.png";
+import crownCercon from "../pics/WEB/veneer/eng/03-cercon-ht-porcelain-crowns-germany.png";
+import crownLava from "../pics/WEB/veneer/eng/04-lava-plus-porcelain-crowns-usa.png";
+import crownNT200 from "../pics/WEB/veneer/eng/05-full-nt200-porcelain-crowns-england.png";
+import crownOrdent from "../pics/WEB/veneer/eng/06-ordent-porcelain-crowns-italy.png";
+import crownZico from "../pics/WEB/veneer/eng/07-zico-centonia-porcelain-crowns-korea.png";
+import shapeEn01 from "../pics/WEB/forms/eng/01-baby-style.png";
+import shapeEn02 from "../pics/WEB/forms/eng/02-aggressive-style.png";
+import shapeEn03 from "../pics/WEB/forms/eng/03-vigorous-style.png";
+import shapeEn04 from "../pics/WEB/forms/eng/04-softened-style.png";
+import shapeEn05 from "../pics/WEB/forms/eng/05-ovan-style.png";
+import shapeEn06 from "../pics/WEB/forms/eng/06-youthful-style.png";
+import shapeEn07 from "../pics/WEB/forms/eng/07-enhanced-style.png";
+import shapeEn08 from "../pics/WEB/forms/eng/08-functional-style.png";
+import shapeVi01 from "../pics/WEB/forms/vie/01-rang-tre-trung.png";
+import shapeVi02 from "../pics/WEB/forms/vie/02-rang-ca-tinh.png";
+import shapeVi03 from "../pics/WEB/forms/vie/03-rang-dang-manh-me.png";
+import shapeVi04 from "../pics/WEB/forms/vie/04-rang-de-thuong.png";
+import shapeVi05 from "../pics/WEB/forms/vie/05-rang-ovan.png";
+import shapeVi06 from "../pics/WEB/forms/vie/06-rang-tho.png";
+import shapeVi07 from "../pics/WEB/forms/vie/07-dang-rang-khenh.png";
+import shapeVi08 from "../pics/WEB/forms/vie/08-dang-rang-nanh.png";
 
 const CrownAd = () => {
   const language = useSelector((state) => state.language.language);
@@ -265,9 +289,9 @@ const CrownAd = () => {
         </div>
 
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Text */}
-            <div>
+            <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
               <div className="inline-flex items-center bg-[#C5AF73] text-[#16324a] px-5 py-2 rounded-full font-bold mb-6 text-sm">
                 <Heart className="w-4 h-4 mr-2 fill-[#16324a]" />
                 {isVI ? "ƯU ĐÃI ĐẶC BIỆT THÁNG 6" : "JUNE SPECIAL OFFER"}
@@ -284,7 +308,7 @@ const CrownAd = () => {
               <p className="text-lg text-[#d6e2ed] mb-8">{content.heroDescription}</p>
 
               {/* Brand pills */}
-              <div className="flex flex-wrap gap-2 mb-8">
+              <div className="flex flex-wrap gap-2 mb-8 justify-center lg:justify-start">
                 {content.brands.items.map((brand, idx) => (
                   <div key={idx} className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-4 py-2 text-white text-sm">
                     <span className="font-bold">{brand.name}</span>
@@ -294,7 +318,7 @@ const CrownAd = () => {
               </div>
 
               {/* Discount badge */}
-              <div className="bg-white/15 backdrop-blur-sm border border-white/30 rounded-2xl p-5 inline-block">
+              <div className="bg-white/15 backdrop-blur-sm border border-white/30 rounded-2xl p-5 w-full lg:inline-block">
                 <p className="text-[#c2d2df] text-sm mb-1">{isVI ? "Ưu đãi lên đến" : "Discount up to"}</p>
                 <p className="text-6xl font-black text-[#d4af37]">60%</p>
                 <p className="text-[#d6e2ed] text-sm mt-1">{isVI ? "tất cả dòng răng toàn sứ" : "all ceramic crown lines"}</p>
@@ -426,6 +450,50 @@ const CrownAd = () => {
               ))}
             </div>
           </section>
+
+          {/* Crown Lines Showcase */}
+          <PicSlider
+            pics={[crownDB, crownZirconia, crownCercon, crownLava, crownNT200, crownOrdent, crownZico]}
+            content={{
+              label: isVI ? 'Dòng Sứ Tại EMIS Dental' : 'Crown Lines at EMIS Dental',
+              heading: isVI ? 'Khám Phá Các Dòng Răng Toàn Sứ' : 'Explore Our Porcelain Crown Lines',
+              pic: [
+                { title: isVI ? 'DB Bio — Đức' : 'DB Bio — Germany', description: isVI ? 'Sứ nhập khẩu chính hãng từ Đức. Độ thấu quang tự nhiên, bền bỉ.' : 'Genuine imported porcelain from Germany. Natural translucency, long-lasting.' },
+                { title: isVI ? 'Zirconia — Mỹ' : 'Zirconia — USA', description: isVI ? 'Sứ Zirconia cứng độ cao từ Mỹ. Phù hợp cả răng trước và răng sau.' : 'High-strength Zirconia from the USA. Suitable for front and back teeth.' },
+                { title: isVI ? 'Cercon HT — Đức' : 'Cercon HT — Germany', description: isVI ? 'Nổi bật với độ trong tự nhiên, lý tưởng cho răng cười.' : 'Outstanding translucency, ideal for smile restoration.' },
+                { title: isVI ? 'Lava Plus — Mỹ' : 'Lava Plus — USA', description: isVI ? 'Công nghệ 3M ESPE, bền cơ học và màu sắc ổn định lâu dài.' : '3M ESPE technology. High mechanical strength and stable color.' },
+                { title: isVI ? 'NT200 — Anh' : 'NT200 — England', description: isVI ? 'Sứ toàn phần Anh Quốc. Thẩm mỹ cao cho phục hồi toàn hàm.' : 'Full-ceramic from England. High aesthetics for full-arch cases.' },
+                { title: isVI ? 'Ordent — Italy' : 'Ordent — Italy', description: isVI ? 'Cấu trúc phân tầng, màu sắc tự nhiên theo nhiều tầng răng.' : 'Layered structure for multi-tonal natural color.' },
+                { title: isVI ? 'Zico Centonia — Hàn Quốc' : 'Zico Centonia — Korea', description: isVI ? 'Công nghệ CAD/CAM Hàn Quốc. Độ chính xác cao, khớp cắn chuẩn.' : 'Korean CAD/CAM technology. High precision, accurate bite fit.' },
+              ],
+            }}
+            bgColor="#ffffff"
+            className="bg-[#f7fafc] rounded-3xl overflow-hidden py-10"
+          />
+
+          {/* Reference Smile Shapes */}
+          <PicSlider
+            pics={isVI
+              ? [shapeVi01, shapeVi02, shapeVi03, shapeVi04, shapeVi05, shapeVi06, shapeVi07, shapeVi08]
+              : [shapeEn01, shapeEn02, shapeEn03, shapeEn04, shapeEn05, shapeEn06, shapeEn07, shapeEn08]
+            }
+            content={{
+              label: isVI ? 'Dáng Răng Tham Khảo' : 'Reference Smile Shapes',
+              heading: isVI ? 'Chọn Dáng Răng Phù Hợp Với Bạn' : 'Find The Shape That Suits You',
+              pic: [
+                { title: isVI ? 'Răng Trẻ Trung' : 'Baby Style' },
+                { title: isVI ? 'Răng Cá Tính' : 'Aggressive Style' },
+                { title: isVI ? 'Răng Mạnh Mẽ' : 'Vigorous Style' },
+                { title: isVI ? 'Răng Dễ Thương' : 'Softened Style' },
+                { title: isVI ? 'Răng Oval' : 'Oval Style' },
+                { title: isVI ? 'Răng Thô' : 'Youthful Style' },
+                { title: isVI ? 'Dáng Răng Khểnh' : 'Enhanced Style' },
+                { title: isVI ? 'Dáng Răng Nanh' : 'Functional Style' },
+              ],
+            }}
+            bgColor="#f0ece4"
+            className="bg-white rounded-3xl overflow-hidden py-10"
+          />
 
           {/* Why Choose Section */}
           {content.sections.map((section, idx) => (

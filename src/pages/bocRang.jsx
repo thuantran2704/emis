@@ -43,122 +43,21 @@ import crown6Vie from '../pics/WEB/veneer/vie/06-rang-su-full-ordent-y.png';
 import crown7Vie from '../pics/WEB/veneer/vie/07-rang-su-full-nt200-anh.png';
 import crown8Vie from '../pics/WEB/veneer/vie/08-rang-su-zico-centonia-han-quoc.png';
 import ProcessSteps from '../components/ProcessSteps';
+import PicSlider from '../components/PicSlider';
+import { crownContent } from '../Translations/crownContent';
 
 export default function CrownLanding() {
   const language = useSelector((state) => state.language.language);
-  const isVie = language === 'vietnamese';
 
-  const shapeImages = isVie
+  const copy = crownContent[language] ?? crownContent.english;
+
+  const shapeImages = language === 'vietnamese'
     ? [form1Vie, form2Vie, form3Vie, form4Vie, form5Vie, form6Vie, form7Vie, form8Vie]
     : [form1Eng, form2Eng, form3Eng, form4Eng, form5Eng, form6Eng, form7Eng, form8Eng];
 
-  const crownTypes = isVie
+  const crownTypes = language === 'vietnamese'
     ? [crown1Vie, crown2Vie, crown3Vie, crown4Vie, crown5Vie, crown6Vie, crown7Vie, crown8Vie]
     : [crown1Eng, crown2Eng, crown3Eng, crown4Eng, crown5Eng, crown6Eng, crown7Eng, crown8Eng];
-
-  const copy = isVie
-    ? {
-        metaTitle: 'Bọc Răng Sứ Thẩm Mỹ | Emis Dental',
-        metaDescription:
-          'Bọc răng sứ tại Emis Dental giúp cải thiện màu sắc, hình thể và chức năng ăn nhai với vật liệu chính hãng và quy trình chuẩn.',
-        label: 'Phục Hình Thẩm Mỹ',
-        heroTitle: 'Bọc Răng Sứ Thẩm Mỹ',
-        heroIntro:
-          'Giải pháp phục hình cố định giúp tái tạo hình thể răng, cải thiện nụ cười và duy trì chức năng ăn nhai ổn định.',
-        heroPrimary: 'Đặt Lịch Tư Vấn',
-        heroSecondary: 'Nhận Báo Giá Phù Hợp',
-        suitableTitle: 'Trường Hợp Nên Bọc Răng Sứ',
-        suitableItems: [
-          'Răng xỉn màu nặng, nhiễm màu không đáp ứng tẩy trắng.',
-          'Răng mẻ lớn, hình thể răng mất cân đối hoặc mòn nhiều.',
-          'Răng thưa, lệch nhẹ cần cải thiện nhanh về thẩm mỹ.',
-          'Răng sau điều trị tủy cần được bảo vệ lâu dài.',
-        ],
-        advantagesTitle: 'Ưu Điểm Nổi Bật',
-        advantages: [
-          {
-            title: 'Thẩm Mỹ Tự Nhiên',
-            desc: 'Điều chỉnh màu sắc và form răng hài hòa với khuôn mặt.',
-          },
-          {
-            title: 'Ăn Nhai Ổn Định',
-            desc: 'Phục hồi chức năng và bảo vệ mô răng bên dưới hiệu quả.',
-          },
-          {
-            title: 'Vật Liệu Rõ Nguồn Gốc',
-            desc: 'Sử dụng các dòng răng sứ chính hãng, thông tin minh bạch.',
-          },
-          {
-            title: 'Quy Trình Kiểm Soát',
-            desc: 'Theo dõi độ khít, khớp cắn và cảm giác sử dụng trước khi hoàn tất.',
-          },
-        ],
-        processTitle: 'Quy Trình Bọc Răng Sứ',
-        processSteps: [
-          'Thăm khám tổng quát, chụp phim và đánh giá nền răng.',
-          'Lập thiết kế nụ cười, chọn màu sắc và dáng răng phù hợp.',
-          'Chuẩn bị răng theo tỉ lệ bảo tồn và lấy dấu phục hình.',
-          'Gắn răng tạm trong thời gian labo hoàn thiện răng sứ.',
-          'Thử sứ, điều chỉnh khớp cắn và gắn hoàn tất.',
-        ],
-        shapeTitle: 'Dáng Răng Thẩm Mỹ Tham Khảo',
-        crownTypeTitle: 'Các Dòng Răng Sứ Tại Emis Dental',
-        ctaTitle: 'Sẵn Sàng Cải Thiện Nụ Cười?',
-        ctaText:
-          'Đặt lịch để được bác sĩ đánh giá trực tiếp tình trạng răng và đề xuất kế hoạch phục hình phù hợp với mục tiêu thẩm mỹ của bạn.',
-        ctaButton: 'Liên Hệ Tư Vấn Ngay',
-      }
-    : {
-        metaTitle: 'Cosmetic Dental Crowns | Emis Dental',
-        metaDescription:
-          'Cosmetic crowns at Emis Dental improve tooth color, shape, and chewing stability with genuine materials and a controlled treatment workflow.',
-        label: 'Aesthetic Restoration',
-        heroTitle: 'Cosmetic Dental Crowns',
-        heroIntro:
-          'A fixed restorative solution to rebuild tooth shape, improve smile aesthetics, and maintain stable chewing performance.',
-        heroPrimary: 'Book Consultation',
-        heroSecondary: 'Get Personalized Quote',
-        suitableTitle: 'When Crowns Are Suitable',
-        suitableItems: [
-          'Severe discoloration not responsive to whitening.',
-          'Large chips, shape loss, or advanced tooth wear.',
-          'Mild spacing or alignment concerns needing faster cosmetic correction.',
-          'Root-canal-treated teeth requiring long-term protection.',
-        ],
-        advantagesTitle: 'Key Advantages',
-        advantages: [
-          {
-            title: 'Natural Aesthetic Outcome',
-            desc: 'Color and tooth shape are calibrated to your facial profile.',
-          },
-          {
-            title: 'Functional Stability',
-            desc: 'Restores chewing while protecting underlying tooth structure.',
-          },
-          {
-            title: 'Traceable Materials',
-            desc: 'Genuine crown lines with clear sourcing and clinical indication.',
-          },
-          {
-            title: 'Controlled Protocol',
-            desc: 'Fit, bite, and comfort are validated before final placement.',
-          },
-        ],
-        processTitle: 'Crown Treatment Workflow',
-        processSteps: [
-          'Comprehensive exam, imaging, and baseline dental assessment.',
-          'Smile planning with matched shade and shape selection.',
-          'Conservative tooth preparation and precision impression.',
-          'Temporary crowns during laboratory fabrication.',
-          'Try-in, bite refinement, and final cementation.',
-        ],
-        shapeTitle: 'Reference Smile Shapes',
-        crownTypeTitle: 'Crown Lines at Emis Dental',
-        ctaTitle: 'Ready To Upgrade Your Smile?',
-        ctaText:
-          'Book a direct consultation for clinical assessment and a crown plan aligned with your aesthetic and functional goals.',
-        ctaButton: 'Contact For Consultation',
-      };
 
   const sectionLabelClass = 'uppercase tracking-[0.28em] text-[#C5AF73] text-[10px] font-semibold';
   const titleClass = 'text-[1.85rem] md:text-[2.2rem] text-[#2a3439]';
@@ -171,9 +70,10 @@ export default function CrownLanding() {
         <meta name="description" content={copy.metaDescription} />
       </Helmet>
 
-      <section className="py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-8 grid lg:grid-cols-[1.2fr_0.8fr] gap-10 lg:gap-14 items-center">
-          <div className="space-y-6">
+      <section className="py-12 sm:py-24 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-8 grid lg:grid-cols-[1.2fr_0.8fr] gap-8 lg:gap-14 items-center">
+          {/* Text */}
+          <div className="space-y-5 text-center lg:text-left">
             <p className={sectionLabelClass}>
               {copy.label}
             </p>
@@ -183,7 +83,7 @@ export default function CrownLanding() {
             <p className={bodyClass}>
               {copy.heroIntro}
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 pt-2">
+            <div className="flex flex-col sm:flex-row gap-3 pt-2 justify-center lg:justify-start">
               <Link
                 to="/contact"
                 className="px-7 py-3.5 rounded-full bg-[#d4af37] text-white text-sm font-semibold hover:bg-[#c19d30] transition text-center"
@@ -198,8 +98,9 @@ export default function CrownLanding() {
               </Link>
             </div>
           </div>
-          <div className="rounded-2xl overflow-hidden shadow-sm border border-[#dbe4ec] bg-[#f7fafc] max-w-sm lg:max-w-md lg:ml-auto">
-            <img src={crownHeroImage} alt="Cosmetic crown treatment visual" className="w-full h-[260px] md:h-[300px] object-cover" />
+          {/* Image */}
+          <div className="w-full rounded-2xl overflow-hidden shadow-sm border border-[#dbe4ec] bg-[#f7fafc] lg:max-w-md lg:ml-auto">
+            <img src={crownHeroImage} alt="Cosmetic crown treatment visual" className="w-full h-[320px] sm:h-[380px] object-cover" />
           </div>
         </div>
       </section>
@@ -261,35 +162,25 @@ export default function CrownLanding() {
         </div>
       </section>
 
-      <section className="py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-8">
-          <h2 className={titleClass + ' mb-8 text-center'}>
-            {copy.shapeTitle}
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {shapeImages.map((img, idx) => (
-              <div key={`${img}-${idx}`} className="rounded-xl overflow-hidden border border-[#dbe4ec] bg-[#f7fafc]">
-                <img src={img} alt={`Smile shape sample ${idx + 1}`} className="w-full h-40 object-cover" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <PicSlider
+        pics={shapeImages}
+        content={{
+          label: copy.shapeLabel,
+          heading: copy.shapeTitle,
+        }}
+        bgColor="#f0ece4"
+        className="bg-white"
+      />
 
-      <section className="py-24 bg-[#f7fafc]">
-        <div className="max-w-6xl mx-auto px-8">
-          <h2 className={titleClass + ' mb-8 text-center'}>
-            {copy.crownTypeTitle}
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {crownTypes.map((img, idx) => (
-              <div key={`${img}-${idx}`} className="rounded-xl overflow-hidden border border-[#dbe4ec] bg-white">
-                <img src={img} alt={`Crown type sample ${idx + 1}`} className="w-full h-40 object-cover" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <PicSlider
+        pics={crownTypes}
+        content={{
+          label: copy.crownTypeLabel,
+          heading: copy.crownTypeTitle,
+        }}
+        bgColor="#ffffff"
+        className="bg-[#f7fafc]"
+      />
 
       <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-8 text-center">

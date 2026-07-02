@@ -63,6 +63,16 @@ const aboutContent = {
       'Language Assistance When Needed',
     ],
 
+    labels: {
+      approach: 'Our Approach',
+      planning: 'Planning',
+      technology: 'Technology',
+      team: 'Our Team',
+      international: 'International Patients',
+      trust: 'Trust & Transparency',
+      start: 'Getting Started',
+    },
+
     trustTitle: 'Building Confidence Through Clarity',
     trustBullets: [
       'Clinic License Information',
@@ -116,6 +126,16 @@ const aboutContent = {
     internationalTitle: 'Hỗ Trợ Trước, Trong Và Sau Điều Trị',
     internationalIntro: 'Nhiều bệnh nhân lựa chọn trở về Việt Nam để làm Implant hoặc phục hồi toàn hàm. Chúng tôi cố gắng giúp quá trình này trở nên thuận tiện và rõ ràng hơn thông qua việc chuẩn bị trước và hỗ trợ xuyên suốt hành trình điều trị.',
     internationalBullets: ['Tư Vấn Trực Tuyến', 'Đánh Giá X-ray Ban Đầu', 'Lập Kế Hoạch Theo Thời Gian Lưu Trú', 'Theo Dõi Từ Xa Sau Điều Trị', 'Hỗ Trợ Ngôn Ngữ Khi Cần'],
+
+    labels: {
+      approach: 'Phương Pháp Tiếp Cận',
+      planning: 'Lập Kế Hoạch',
+      technology: 'Công Nghệ',
+      team: 'Đội Ngũ',
+      international: 'Bệnh Nhân Quốc Tế',
+      trust: 'Minh Bạch & Tin Cậy',
+      start: 'Bắt Đầu',
+    },
 
     trustTitle: 'Minh Bạch & Đáng Tin Cậy',
     trustBullets: ['Giấy Phép Hoạt Động', 'Hồ Sơ & Bằng Cấp Bác Sĩ', 'Google Maps & Địa Chỉ Phòng Khám', 'Kênh Liên Hệ Chính Thức (WhatsApp, Email)'],
@@ -194,6 +214,16 @@ const aboutContent = {
       'Suivi À Distance',
       'Assistance Linguistique Si Nécessaire',
     ],
+
+    labels: {
+      approach: 'Notre Approche',
+      planning: 'Planification',
+      technology: 'Technologie',
+      team: 'Notre Équipe',
+      international: 'Patients Internationaux',
+      trust: 'Confiance & Transparence',
+      start: 'Commencer',
+    },
 
     trustTitle: 'Construire La Confiance Par La Clarté',
     trustBullets: [
@@ -278,6 +308,16 @@ const aboutContent = {
       '按需语言协助',
     ],
 
+    labels: {
+      approach: '我们的方法',
+      planning: '规划',
+      technology: '技术',
+      team: '我们的团队',
+      international: '国际患者',
+      trust: '信任与透明',
+      start: '开始',
+    },
+
     trustTitle: '以透明建立信任',
     trustBullets: [
       '诊所执照信息',
@@ -361,6 +401,16 @@ const aboutContent = {
       '需要時提供語言協助',
     ],
 
+    labels: {
+      approach: '我們的方法',
+      planning: '規劃',
+      technology: '技術',
+      team: '我們的團隊',
+      international: '國際患者',
+      trust: '信任與透明',
+      start: '開始',
+    },
+
     trustTitle: '以清楚透明建立信任',
     trustBullets: [
       '診所執照資訊',
@@ -443,6 +493,16 @@ const aboutContent = {
       '원격 사후관리 지원',
       '필요 시 언어 지원',
     ],
+
+    labels: {
+      approach: '접근 방식',
+      planning: '계획',
+      technology: '기술',
+      team: '의료진',
+      international: '국제 환자',
+      trust: '신뢰 & 투명성',
+      start: '시작하기',
+    },
 
     trustTitle: '명확함을 통한 신뢰 구축',
     trustBullets: [
