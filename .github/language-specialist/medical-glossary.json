@@ -39,6 +39,7 @@
     {"id": "all_on_4", "domain": "implantology", "english": "All-on-4", "vietnamese": "All-on-4", "french": "All-on-4", "korean": "올온포", "simplified": "All-on-4", "traditional": "All-on-4"},
     {"id": "all_on_6", "domain": "implantology", "english": "All-on-6", "vietnamese": "All-on-6", "french": "All-on-6", "korean": "올온식스", "simplified": "All-on-6", "traditional": "All-on-6"},
     {"id": "crown", "domain": "restorative", "english": "Dental Crown", "vietnamese": "Bọc răng sứ", "french": "Couronne dentaire", "korean": "치관", "simplified": "牙冠", "traditional": "牙冠"},
+    {"id": "porcelain_crown", "domain": "restorative", "english": "Porcelain Crown", "vietnamese": "Mão Răng Sứ", "french": "Couronne en Porcelaine", "korean": "세라믹 크라운", "simplified": "全瓷牙冠", "traditional": "全瓷牙冠"},
     {"id": "bridge", "domain": "restorative", "english": "Dental Bridge", "vietnamese": "Cầu răng", "french": "Bridge dentaire", "korean": "치아 브릿지", "simplified": "牙桥", "traditional": "牙橋"},
     {"id": "veneer", "domain": "cosmetic", "english": "Veneer", "vietnamese": "Mặt dán sứ", "french": "Facette dentaire", "korean": "라미네이트", "simplified": "贴面", "traditional": "貼片"},
     {"id": "inlay_onlay", "domain": "restorative", "english": "Inlay/Onlay", "vietnamese": "Inlay/Onlay", "french": "Inlay/Onlay", "korean": "인레이/온레이", "simplified": "嵌体/高嵌体", "traditional": "嵌體/高嵌體"},

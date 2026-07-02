@@ -69,7 +69,6 @@ export default function ImplantPlannerBanner() {
                     >
                       {String(index + 1).padStart(2, '0')}
                     </span>
-                    <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#d4af37]/40 transition-all duration-300 group-hover:scale-125 group-hover:bg-[#d4af37] group-hover:shadow-[0_0_12px_2px_rgba(212,175,55,0.5)]" />
                     <span className="flex-1 text-sm text-white/85 transition-colors group-hover:text-white">{option.title}</span>
                     <ArrowRight className="h-4 w-4 translate-x-[-6px] text-[#d4af37] opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100" strokeWidth={1.6} />
                   </li>

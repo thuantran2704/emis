@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { useSelector } from 'react-redux';
 import homeContent from '../Translations/homeContent';
-import heroBackground from '../pics/Better_emis_hall.jpeg';
+import heroBackground from '../pics/doctors-discussing-implants-engaged.jpg';
 import confidencePortrait from '../pics/foreign-patient-1-with-dr-tu-smiling.jpg';
 import implantIntroImage from '../pics/all-on-4-implant.jpg';
 import allon6Image from '../pics/allon6.jpeg';
@@ -176,7 +176,127 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2 — Solution: Implant specialist slider */}
+      {/* 2 — Trust: Why EMIS over everyone else */}
+      <section className="bg-white py-16 md:py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className={sectionLabelClass}>Why EMIS</p>
+            <h2 className="text-2xl font-bold text-[#2a3439] md:text-3xl">{page.confidence.title}</h2>
+            <p className="mt-4 text-base leading-relaxed text-gray-500">{page.confidence.intro}</p>
+          </div>
+
+          <div className="mt-10 grid gap-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-stretch">
+            <div className="grid gap-3 sm:grid-cols-2 sm:auto-rows-fr">
+              {page.confidence.cards.map((card) => (
+                <article
+                  key={card.title}
+                  className="group flex flex-col rounded-2xl border border-[#e4ebf1] bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-[#C5AF73] hover:shadow-md"
+                >
+                  <span className="block h-1 w-8 rounded-full bg-[#C5AF73] transition-all group-hover:w-12" />
+                  <h3 className="mt-4 text-base font-semibold text-[#2a3439]">{card.title}</h3>
+                  <p className="mt-2 text-xs leading-relaxed text-gray-500">{card.text}</p>
+                </article>
+              ))}
+            </div>
+
+            <div className="relative hidden overflow-hidden rounded-2xl shadow-sm lg:block">
+              <img src={confidencePortrait} alt={page.confidence.title} className="absolute inset-0 h-full w-full object-cover object-center" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3 — Credibility: Meet the doctors */}
+      <section className="bg-[#f1f5f9] py-16 md:py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className={sectionLabelClass}>Our Team</p>
+            <h2 className="text-xl font-bold text-[#2a3439] md:text-2xl">{page.doctors.title}</h2>
+            <p className="mt-4 text-base leading-relaxed text-gray-500">{page.doctors.intro}</p>
+          </div>
+
+          <div className="mt-10 grid gap-5 md:grid-cols-2">
+            {DOCTORS.map((doctor) => {
+              const t = getDoctorTranslation(doctor, language);
+              return (
+              <Link
+                key={doctor.id}
+                to={doctor.slug}
+                className="group grid gap-3 rounded-3xl border border-[#dbe4ec] bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-[#C5AF73] hover:shadow-md sm:grid-cols-[minmax(110px,140px)_1fr] sm:items-start sm:gap-4 md:p-6"
+              >
+                <img
+                  src={doctor.portrait}
+                  alt={t.name}
+                  className="w-full max-w-full rounded-2xl border border-[#dbe4ec] bg-white object-contain"
+                />
+                <div>
+                  <h3 className="text-sm font-semibold text-[#2a3439] transition group-hover:text-[#C5AF73]">{t.name}</h3>
+                  {t.role && <p className="mt-1 text-[11px] font-semibold text-[#C5AF73]">{t.role}</p>}
+                  {t.focus && <p className="mt-1.5 text-[11px] leading-relaxed text-gray-500">{t.focus}</p>}
+                  {t.summary && <p className="mt-1.5 text-[11px] leading-relaxed text-gray-500">{t.summary}</p>}
+                  {t.languages && <p className="mt-2 text-[9px] uppercase tracking-[0.2em] text-[#8aa0b5]">{t.languages}</p>}
+                </div>
+              </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* 4 — Empathy: Mirror the visitor's pain back at them */}
+      <section className="bg-white py-16 md:py-20">
+        <div className="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-[1.1fr_1fr] md:items-stretch">
+          <div className="hidden overflow-hidden rounded-3xl shadow-lg md:block">
+            <img src={lifestyleDinner} alt="Patient enjoying daily life confidently" className="h-full w-full object-cover" />
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl">{page.situations.title}</h2>
+            <p className="mt-4 text-base leading-relaxed text-gray-500">{page.situations.intro}</p>
+
+            <div className="mt-6 space-y-5 border-l-2 border-[#e5d6b0] pl-5">
+              {page.situations.cards.map((item) => (
+                <article key={item.title} className="pb-4 border-b border-[#e6edf3] last:border-b-0">
+                  <h3 className="text-base font-semibold text-[#1d3953]">{item.title}</h3>
+                  <p className="mt-2 text-xs leading-relaxed text-[#5d7388]">{item.text}</p>
+                </article>
+              ))}
+            </div>
+
+            <Link to="/restorative-dentistry" className="mt-6 inline-block rounded-full border border-[#9ab1c5] bg-white px-6 py-3 text-sm font-semibold text-[#1f3b57] transition hover:bg-[#f2f7fb]">
+              {page.situations.cta}
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 5 — Decision: Help them match situation to treatment */}
+      <section className="bg-[#f1f5f9] py-16 md:py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl">{page.pathways.title}</h2>
+            <p className="mt-4 text-base leading-relaxed text-gray-500">{page.pathways.intro}</p>
+          </div>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {[confidentSmile, elderSocializing, pathwayConsult].map((image, index) => {
+              const card = page.pathways.cards[index];
+              return (
+                <article key={card.title} className="overflow-hidden rounded-2xl border border-[#d9e4ed] bg-white shadow-sm">
+                  <img src={image} alt={card.title} className="hidden h-44 w-full object-cover md:block" />
+                  <div className="p-6">
+                    <h3 className="text-lg font-semibold text-[#1d3953]">{card.title}</h3>
+                    <p className="mt-2 text-xs font-medium text-[#6f8da6]">{card.subtitle}</p>
+                    <p className="mt-3 text-xs leading-relaxed text-[#5d7388]">{card.text}</p>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* 6 — Solution: Implant specialist slider */}
       <section className="bg-[#f7fafc] py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
@@ -249,101 +369,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3 — Empathy: Mirror the visitor's pain back at them */}
-      <section className="bg-white py-16 md:py-20">
-        <div className="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-[1.1fr_1fr] md:items-stretch">
-          <div className="hidden overflow-hidden rounded-3xl shadow-lg md:block">
-            <img src={lifestyleDinner} alt="Patient enjoying daily life confidently" className="h-full w-full object-cover" />
-          </div>
-
-          <div>
-            <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl">{page.situations.title}</h2>
-            <p className="mt-4 text-base leading-relaxed text-gray-500">{page.situations.intro}</p>
-
-            <div className="mt-6 space-y-5 border-l-2 border-[#e5d6b0] pl-5">
-              {page.situations.cards.map((item) => (
-                <article key={item.title} className="pb-4 border-b border-[#e6edf3] last:border-b-0">
-                  <h3 className="text-base font-semibold text-[#1d3953]">{item.title}</h3>
-                  <p className="mt-2 text-xs leading-relaxed text-[#5d7388]">{item.text}</p>
-                </article>
-              ))}
-            </div>
-
-            <Link to="/restorative-dentistry" className="mt-6 inline-block rounded-full border border-[#9ab1c5] bg-white px-6 py-3 text-sm font-semibold text-[#1f3b57] transition hover:bg-[#f2f7fb]">
-              {page.situations.cta}
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* 4 — Trust: Why EMIS over everyone else */}
-      <section className="bg-white py-16 md:py-20">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="mx-auto max-w-3xl text-center">
-            <p className={sectionLabelClass}>Why EMIS</p>
-            <h2 className="text-2xl font-bold text-[#2a3439] md:text-3xl">{page.confidence.title}</h2>
-            <p className="mt-4 text-base leading-relaxed text-gray-500">{page.confidence.intro}</p>
-          </div>
-
-          <div className="mt-10 grid gap-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-stretch">
-            <div className="grid gap-3 sm:grid-cols-2 sm:auto-rows-fr">
-              {page.confidence.cards.map((card) => (
-                <article
-                  key={card.title}
-                  className="group flex flex-col rounded-2xl border border-[#e4ebf1] bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-[#C5AF73] hover:shadow-md"
-                >
-                  <span className="block h-1 w-8 rounded-full bg-[#C5AF73] transition-all group-hover:w-12" />
-                  <h3 className="mt-4 text-base font-semibold text-[#2a3439]">{card.title}</h3>
-                  <p className="mt-2 text-xs leading-relaxed text-gray-500">{card.text}</p>
-                </article>
-              ))}
-            </div>
-
-            <div className="relative hidden overflow-hidden rounded-2xl shadow-sm lg:block">
-              <img src={confidencePortrait} alt={page.confidence.title} className="absolute inset-0 h-full w-full object-cover object-center" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 5 — Credibility: Meet the doctors */}
-      <section className="bg-[#f1f5f9] py-16 md:py-20">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="mx-auto max-w-3xl text-center">
-            <p className={sectionLabelClass}>Our Team</p>
-            <h2 className="text-xl font-bold text-[#2a3439] md:text-2xl">{page.doctors.title}</h2>
-            <p className="mt-4 text-base leading-relaxed text-gray-500">{page.doctors.intro}</p>
-          </div>
-
-          <div className="mt-10 grid gap-5 md:grid-cols-2">
-            {DOCTORS.map((doctor) => {
-              const t = getDoctorTranslation(doctor, language);
-              return (
-              <Link
-                key={doctor.id}
-                to={doctor.slug}
-                className="group grid gap-3 rounded-3xl border border-[#dbe4ec] bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-[#C5AF73] hover:shadow-md sm:grid-cols-[minmax(110px,140px)_1fr] sm:items-start sm:gap-4 md:p-6"
-              >
-                <img
-                  src={doctor.portrait}
-                  alt={t.name}
-                  className="w-full max-w-full rounded-2xl border border-[#dbe4ec] bg-white object-contain"
-                />
-                <div>
-                  <h3 className="text-sm font-semibold text-[#2a3439] transition group-hover:text-[#C5AF73]">{t.name}</h3>
-                  {t.role && <p className="mt-1 text-[11px] font-semibold text-[#C5AF73]">{t.role}</p>}
-                  {t.focus && <p className="mt-1.5 text-[11px] leading-relaxed text-gray-500">{t.focus}</p>}
-                  {t.summary && <p className="mt-1.5 text-[11px] leading-relaxed text-gray-500">{t.summary}</p>}
-                  {t.languages && <p className="mt-2 text-[9px] uppercase tracking-[0.2em] text-[#8aa0b5]">{t.languages}</p>}
-                </div>
-              </Link>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* 6 — Process: Reduce anxiety about what happens next */}
+      {/* 7 — Process: Reduce anxiety about what happens next */}
       <section className="bg-white py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
@@ -371,7 +397,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 7 — Logistics: Remove the overseas barrier */}
+      {/* 8 — Real Patient Journeys — TODO: replace with 1 featured case story */}
+      {/* <section className="bg-white py-16 md:py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          PLACEHOLDER: Add a single featured patient case story here.
+          Use a real before/after case with patient quote, treatment summary, and outcome.
+        </div>
+      </section> */}
+
+      {/* 9 — Logistics: Remove the overseas barrier */}
       <section className="bg-[#f1f5f9] py-16 md:py-20">
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 lg:landscape:grid-cols-2 lg:landscape:items-stretch">
           <div className="mx-auto max-w-2xl text-center lg:landscape:mx-0 lg:landscape:text-left">
@@ -399,32 +433,6 @@ export default function Home() {
       </section>
 
       <ImplantPlannerBanner />
-
-      {/* 9 — Decision: Help them match situation to treatment */}
-      <section className="bg-[#f1f5f9] py-16 md:py-20">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl">{page.pathways.title}</h2>
-            <p className="mt-4 text-base leading-relaxed text-gray-500">{page.pathways.intro}</p>
-          </div>
-
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {[confidentSmile, elderSocializing, pathwayConsult].map((image, index) => {
-              const card = page.pathways.cards[index];
-              return (
-                <article key={card.title} className="overflow-hidden rounded-2xl border border-[#d9e4ed] bg-white shadow-sm">
-                  <img src={image} alt={card.title} className="hidden h-44 w-full object-cover md:block" />
-                  <div className="p-6">
-                    <h3 className="text-lg font-semibold text-[#1d3953]">{card.title}</h3>
-                    <p className="mt-2 text-xs font-medium text-[#6f8da6]">{card.subtitle}</p>
-                    <p className="mt-3 text-xs leading-relaxed text-[#5d7388]">{card.text}</p>
-                  </div>
-                </article>
-              );
-            })}
-          </div>
-        </div>
-      </section>
 
       {/* 10 — Objections: FAQ */}
       <section className="bg-white py-16 md:py-20">

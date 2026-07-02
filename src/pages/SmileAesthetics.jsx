@@ -109,7 +109,6 @@ export default function SmileAesthetics() {
                 >
                   {String(index + 1).padStart(2, '0')}
                 </span>
-                <span className="h-2 w-2 flex-shrink-0 rounded-full bg-[#d4af37]/40 transition-all duration-300 group-hover:scale-125 group-hover:bg-[#d4af37] group-hover:shadow-[0_0_12px_2px_rgba(212,175,55,0.5)]" />
                 <p className="flex-1 text-[14px] font-medium uppercase tracking-[0.12em] text-white/85 transition-colors group-hover:text-white lg:text-[16px]">
                   {item}
                 </p>

@@ -43,9 +43,8 @@ const footerNav = {
           { label: 'Full-Mouth Rehabilitation', to: '/full-mouth' },
           { label: 'Oral Surgery', to: '/oral-surgery' },
           { label: 'Restorative Dentistry', to: '/restorative-dentistry' },
-          { label: 'Porcelain Crowns', to: '/crown' },
-          { label: 'Veneers', to: '/veneer' },
-          { label: 'Smile Aesthetics', to: '/smile-aesthetics' },
+          { label: 'Smile Aesthetics', to: '/smile-aesthetics', sublinks: [
+          ]},
         ],
       },
       {
@@ -107,9 +106,11 @@ const footerNav = {
           { label: 'Phục Hồi Toàn Hàm', to: '/full-mouth' },
           { label: 'Tiểu Phẫu Răng Hàm Mặt', to: '/oral-surgery' },
           { label: 'Điều Trị & Giữ Răng Thật', to: '/restorative-dentistry' },
-          { label: 'Răng Sứ Bọc Răng', to: '/crown' },
-          { label: 'Mặt Dán Sứ Veneer', to: '/veneer' },
-          { label: 'Thẩm Mỹ Nụ Cười', to: '/smile-aesthetics' },
+          { label: 'Thẩm Mỹ Nụ Cười', to: '/smile-aesthetics', sublinks: [
+            { label: 'Răng Sứ Bọc Răng', to: '/crown' },
+            { label: 'Mặt Dán Sứ Veneer', to: '/veneer' },
+          ]},
+
         ],
       },
       {
@@ -156,18 +157,34 @@ const linkClass =
   'text-sm text-gray-400 hover:text-[#d4af37] transition-colors duration-200';
 
 function FooterLink({ link }) {
-  if (link.to) {
-    return (
-      <Link to={link.to} className={linkClass}>
-        {link.label}
-      </Link>
-    );
-  }
-  return (
+  const el = link.to ? (
+    <Link to={link.to} className={linkClass}>
+      {link.label}
+    </Link>
+  ) : (
     <a href={link.href} target="_blank" rel="noopener noreferrer" className={linkClass}>
       {link.label}
     </a>
   );
+
+  if (link.sublinks?.length) {
+    return (
+      <>
+        {el}
+        <ul className="mt-1.5 space-y-1.5 pl-3 border-l border-white/10">
+          {link.sublinks.map((sub) => (
+            <li key={sub.label}>
+              <Link to={sub.to} className={linkClass}>
+                {sub.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </>
+    );
+  }
+
+  return el;
 }
 
 // Reuses the same channel data/style as the /contact page.

@@ -10,6 +10,8 @@ export default function Navbar() {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+  const [isSmileOpen, setIsSmileOpen] = useState(false);
+  const [isDentalTourismOpen, setIsDentalTourismOpen] = useState(false);
   const [isLandscape, setIsLandscape] = useState(() =>
     typeof window !== 'undefined'
       ? window.matchMedia('(orientation: landscape)').matches
@@ -19,6 +21,8 @@ export default function Navbar() {
   const closeAllMenus = () => {
     setIsMenuOpen(false);
     setIsSolutionsOpen(false);
+    setIsSmileOpen(false);
+    setIsDentalTourismOpen(false);
   };
 
   useEffect(() => {
@@ -42,6 +46,8 @@ export default function Navbar() {
 
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
   const toggleSolutions = () => setIsSolutionsOpen((prev) => !prev);
+  const toggleSmile = () => setIsSmileOpen((prev) => !prev);
+  const toggleDentalTourism = () => setIsDentalTourismOpen((prev) => !prev);
 
   const content = navbarContent[language] || navbarContent.english;
 
@@ -65,11 +71,21 @@ export default function Navbar() {
     { name: content.fullMouth, path: '/full-mouth' },
     { name: content.oralSurgery, path: '/oral-surgery' },
     { name: content.restorativeDentistry, path: '/restorative-dentistry' },
-    { name: content.smileAesthetics, path: '/smile-aesthetics' },
   ];
 
-  const solutionsPaths = ['/solutions', '/implant', '/fixed-teeth', '/full-mouth', '/oral-surgery', '/restorative-dentistry', '/smile-aesthetics'];
+  const smileAestheticsDropdownItems = [
+    { name: content.crown, path: '/crown' },
+    { name: content.veneer, path: '/veneer' },
+  ];
+
+  const dentalTourismDropdownItems = [
+    { name: content.internationalPatients, path: '/international-patients' },
+  ];
+
+  const solutionsPaths = ['/solutions', '/implant', '/fixed-teeth', '/full-mouth', '/oral-surgery', '/restorative-dentistry'];
   const isSolutionsActive = solutionsPaths.includes(location.pathname);
+  const isSmileActive = ['/smile-aesthetics', '/crown', '/veneer'].includes(location.pathname);
+  const isDentalTourismActive = ['/visitor-program', '/international-patients'].includes(location.pathname);
 
   return (
     <>
@@ -150,9 +166,77 @@ export default function Navbar() {
               {content.patientCases}
             </Link> */}
 
-            <Link to="/international-patients" className={navLinkClass('/international-patients')}>
-              {content.internationalPatients}
-            </Link>
+            <div className="relative">
+              <button
+                onClick={toggleSmile}
+                className={`relative inline-flex h-10 items-center gap-1 whitespace-nowrap px-3 text-sm font-semibold tracking-wide transition-colors duration-200 ${
+                  isSmileActive
+                    ? 'text-[#1f2937] after:absolute after:left-3 after:right-3 after:-bottom-0.5 after:h-[2px] after:bg-[#d4af37]'
+                    : 'text-[#2a3439]/80 hover:text-[#111317]'
+                }`}
+              >
+                {content.smileAesthetics}
+                <svg
+                  className={`h-4 w-4 transition-transform duration-200 ${isSmileOpen ? 'rotate-180' : ''}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              {isSmileOpen && (
+                <div className="absolute left-0 top-full mt-3 w-48 rounded-2xl border border-[#eadfc4] bg-white p-2 shadow-[0_14px_28px_rgba(31,41,55,0.16)]">
+                  {smileAestheticsDropdownItems.map((sub) => (
+                    <Link
+                      key={sub.path}
+                      to={sub.path}
+                      className="block rounded-xl px-3 py-2 font-medium text-[#2a3439] transition hover:bg-[#f7f2e7]"
+                      onClick={closeAllMenus}
+                    >
+                      {sub.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <div className="relative">
+              <button
+                onClick={toggleDentalTourism}
+                className={`relative inline-flex h-10 items-center gap-1 whitespace-nowrap px-3 text-sm font-semibold tracking-wide transition-colors duration-200 ${
+                  isDentalTourismActive
+                    ? 'text-[#1f2937] after:absolute after:left-3 after:right-3 after:-bottom-0.5 after:h-[2px] after:bg-[#d4af37]'
+                    : 'text-[#2a3439]/80 hover:text-[#111317]'
+                }`}
+              >
+                {content.gratitude}
+                <svg
+                  className={`h-4 w-4 transition-transform duration-200 ${isDentalTourismOpen ? 'rotate-180' : ''}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              {isDentalTourismOpen && (
+                <div className="absolute left-0 top-full mt-3 w-56 rounded-2xl border border-[#eadfc4] bg-white p-2 shadow-[0_14px_28px_rgba(31,41,55,0.16)]">
+                  {dentalTourismDropdownItems.map((sub) => (
+                    <Link
+                      key={sub.path}
+                      to={sub.path}
+                      className="block rounded-xl px-3 py-2 font-medium text-[#2a3439] transition hover:bg-[#f7f2e7]"
+                      onClick={closeAllMenus}
+                    >
+                      {sub.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
 
             <Link to="/faq" className={navLinkClass('/faq')}>
               {content.resources}
@@ -249,9 +333,79 @@ export default function Navbar() {
               {content.patientCases}
             </Link> */}
 
-            <Link to="/international-patients" className={mobileLinkClass('/international-patients')} onClick={closeAllMenus}>
-              {content.internationalPatients}
-            </Link>
+            <div>
+              <div className={`flex items-center justify-between rounded-xl px-3 py-2.5 text-sm transition ${
+                isSmileActive ? 'bg-[#f5e9c2] text-[#1f2937]' : 'text-[#2a3439] hover:bg-[#f3ead2]'
+              }`}>
+                <Link to="/smile-aesthetics" className="flex-1 font-semibold" onClick={closeAllMenus}>{content.smileAesthetics}</Link>
+                <button
+                  onClick={toggleSmile}
+                  className="rounded-full p-1 text-[#2a3439] hover:bg-[#efe3c5]"
+                  aria-label="Toggle smile aesthetics submenu"
+                >
+                  <svg
+                    className={`h-4 w-4 transition-transform ${isSmileOpen ? 'rotate-180' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+              </div>
+
+              {isSmileOpen && (
+                <div className="mt-2 ml-2 rounded-xl bg-[#f5ecd3]/70 p-2 space-y-1">
+                  {smileAestheticsDropdownItems.map((sub) => (
+                    <Link
+                      key={sub.path}
+                      to={sub.path}
+                      className="block rounded-lg px-3 py-2 text-sm font-semibold text-[#2a3439] hover:bg-[#f3ead2] transition"
+                      onClick={closeAllMenus}
+                    >
+                      {sub.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <div>
+              <div className={`flex items-center justify-between rounded-xl px-3 py-2.5 text-sm transition ${
+                isDentalTourismActive ? 'bg-[#f5e9c2] text-[#1f2937]' : 'text-[#2a3439] hover:bg-[#f3ead2]'
+              }`}>
+                <Link to="/visitor-program" className="flex-1 font-semibold" onClick={closeAllMenus}>{content.gratitude}</Link>
+                <button
+                  onClick={toggleDentalTourism}
+                  className="rounded-full p-1 text-[#2a3439] hover:bg-[#efe3c5]"
+                  aria-label="Toggle dental tourism submenu"
+                >
+                  <svg
+                    className={`h-4 w-4 transition-transform ${isDentalTourismOpen ? 'rotate-180' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+              </div>
+
+              {isDentalTourismOpen && (
+                <div className="mt-2 ml-2 rounded-xl bg-[#f5ecd3]/70 p-2 space-y-1">
+                  {dentalTourismDropdownItems.map((sub) => (
+                    <Link
+                      key={sub.path}
+                      to={sub.path}
+                      className="block rounded-lg px-3 py-2 text-sm font-semibold text-[#2a3439] hover:bg-[#f3ead2] transition"
+                      onClick={closeAllMenus}
+                    >
+                      {sub.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
 
             <Link to="/faq" className={mobileLinkClass('/faq')} onClick={closeAllMenus}>
               {content.resources}

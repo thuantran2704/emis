@@ -61,7 +61,7 @@ export default function DentalVisitorProgram() {
               <h1
                 className="text-4xl md:text-5xl text-[#2a3439] leading-tight"
               >
-                Dental Visitor Support Program
+                Dental Visitor Program
               </h1>
 
               <p
@@ -217,6 +217,15 @@ export default function DentalVisitorProgram() {
                 />
               </div>
             ))}
+          </div>
+          <div className="mt-10 text-center">
+            <Link
+              to="/international-patients"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-[#d4af37] text-[#2a3439] text-sm font-semibold hover:bg-[#fdf8ee] transition"
+            >
+              International Patient Support
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+            </Link>
           </div>
         </div>
       </section>
