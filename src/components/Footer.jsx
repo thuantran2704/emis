@@ -230,6 +230,48 @@ export default function Footer() {
           />
         </div>
 
+        {/* Desktop (landscape): Contact info (left) + Map (right) */}
+        <div className="mb-12 hidden gap-8 sm:grid sm:grid-cols-2 lg:gap-12">
+          <div className="space-y-8">
+            <div>
+              <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-white">
+                {contactColumn.heading}
+              </h3>
+              <ContactBubbles items={primaryContactItems} />
+            </div>
+
+            <div>
+              <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-white">
+                {followColumn.heading}
+              </h3>
+              <ContactBubbles items={socialContactItems} />
+            </div>
+
+            <div>
+              <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-white">
+                {content.workingHoursTitle}
+              </h3>
+              <div className="space-y-1 text-sm text-gray-400">
+                {content.workingHours.split('\n').map((line) => (
+                  <p key={line}>{line}</p>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="overflow-hidden rounded-2xl border border-white/10">
+            <iframe
+              src={mapEmbedUrl}
+              className="h-full min-h-64 w-full grayscale-[0.2]"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title={content.clinicName}
+            ></iframe>
+          </div>
+        </div>
+
         {/* Navigation: 6 columns (hidden on mobile) */}
         <nav
           className="hidden gap-x-8 gap-y-10 sm:grid sm:grid-cols-3 lg:grid-cols-6"
@@ -279,8 +321,8 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Map */}
-        <div className="mt-12 overflow-hidden rounded-2xl border border-white/10">
+        {/* Mobile: Map */}
+        <div className="mt-12 overflow-hidden rounded-2xl border border-white/10 sm:hidden">
           <iframe
             src={mapEmbedUrl}
             className="h-64 w-full grayscale-[0.2]"

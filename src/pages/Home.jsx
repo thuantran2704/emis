@@ -29,6 +29,7 @@ import chatAftercare from '../pics/chat-pic-aftercare.jpeg';
 import PicSlider from '../components/PicSlider';
 import Text from '../components/Text';
 import CtaButton from '../components/CtaButton';
+import Section from '../components/Section';
 
 const locales = {
   vietnamese: 'vi_VN',
@@ -147,7 +148,7 @@ export default function Home() {
       </section>
 
       {/* 2 — Trust: Why EMIS over everyone else */}
-      <section className="bg-white py-16 md:py-20">
+      <Section tone="white">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
             <Text variant="eyebrow" className="mb-4">{page.confidence.label}</Text>
@@ -174,10 +175,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </Section>
 
       {/* 3 — Credibility: Meet the doctors */}
-      <section className="bg-[#f1f5f9] py-16 md:py-20">
+      <Section tone="cool">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
             <Text variant="eyebrow" className="mb-4">{page.doctors.label}</Text>
@@ -219,10 +220,10 @@ export default function Home() {
             })}
           </div>
         </div>
-      </section>
+      </Section>
 
       {/* 4 — Empathy: Mirror the visitor's pain back at them */}
-      <section className="bg-white py-16 md:py-20">
+      <Section tone="white">
         <div className="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-[1.1fr_1fr] md:items-stretch">
           <div className="hidden overflow-hidden rounded-3xl shadow-lg md:block">
             <img src={elderCoupleSmiling} alt="Patient enjoying daily life confidently" className="h-full w-full object-cover" />
@@ -246,10 +247,10 @@ export default function Home() {
             </CtaButton>
           </div>
         </div>
-      </section>
+      </Section>
 
       {/* 5 — Decision: Help them match situation to treatment */}
-      <section className="bg-[#f1f5f9] py-16 md:py-20">
+      <Section tone="cool">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
             <Text variant="title" tone="headingBlue">{page.pathways.title}</Text>
@@ -272,10 +273,10 @@ export default function Home() {
             })}
           </div>
         </div>
-      </section>
+      </Section>
 
       {/* 6 — Solution: Implant specialist slider */}
-      <section className="bg-[#f7fafc] py-16 md:py-20">
+      <Section tone="light">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
             <Text variant="eyebrow" className="mb-4">{page.implantSpecialist.eyebrow}</Text>
@@ -339,10 +340,10 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </Section>
 
       {/* 7 — Process: Reduce anxiety about what happens next */}
-      <section className="bg-white py-16 md:py-20">
+      <Section tone="white">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
             <Text variant="title" tone="headingBlue">{page.journey.title}</Text>
@@ -367,13 +368,13 @@ export default function Home() {
             {page.journey.cta}
           </CtaButton>
         </div>
-      </section>
+      </Section>
 
       {/* 8 — Real Patient Journeys */}
       <PicSlider pics={journeyPics} content={page.realJourneys} />
 
       {/* 9 — Logistics: Remove the overseas barrier */}
-      <section className="bg-[#f1f5f9] py-16 md:py-20">
+      <Section tone="cool">
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 lg:landscape:grid-cols-2 lg:landscape:items-stretch">
           <div className="mx-auto max-w-2xl text-center lg:landscape:mx-0 lg:landscape:text-left">
             <Text variant="title" tone="headingBlue">{page.international.title}</Text>
@@ -397,12 +398,12 @@ export default function Home() {
             <img src={internationalSupport} alt="International patient consultation and planning" className="h-full w-full object-cover object-center" />
           </div>
         </div>
-      </section>
+      </Section>
 
       <ImplantPlannerBanner />
 
       {/* 10 — Objections: FAQ */}
-      <section className="bg-white py-16 md:py-20">
+      <Section tone="white">
         <div className="mx-auto max-w-6xl px-6">
           <Text variant="title" tone="headingBlue" align="center">{page.faq.title}</Text>
           <div className="mt-8 space-y-4">
@@ -419,7 +420,7 @@ export default function Home() {
             {page.faq.cta}
           </CtaButton>
         </div>
-      </section>
+      </Section>
 
       <section className="relative overflow-hidden bg-[#2a3439] py-16 text-white md:py-20">
         <img src={ctaBackground} alt="" className="absolute inset-0 h-full w-full object-cover opacity-20" aria-hidden="true" />
