@@ -15,13 +15,9 @@ import FloatingContactButton from './components/floatingContactButton.jsx';
 import GuidedChat from './components/GuidedChat.jsx';
 import VeneerLanding from './pages/landingPage1.jsx';
 import SonPage from './pages/drSonPage.jsx';
-import CrownLanding from './pages/bocRang.jsx';
+import CrownLanding from './pages/crown.jsx';
 import DentalVisitorProgram from './pages/flightassist.jsx';
-import WhiteningAd from './pages/whitening.jsx';
 import Implant from './pages/implant.jsx';
-import CrownAd from './pages/crown.jsx';
-import GenAd from './pages/genAd.jsx';
-import CanalAd from './pages/canal.jsx';
 import Doctors from './pages/doctors.jsx';
 import DrTuPage from './pages/drTuPage.jsx';
 import InternationalPatients from './pages/InternationalPatients.jsx';
@@ -116,11 +112,7 @@ function AppShell() {
           <Route path="/dr-son" element={<SonPage />}/>
           <Route path="/dr-tu" element={<DrTuPage />} />
           <Route path="/visitor-program" element={<DentalVisitorProgram />} />
-          <Route path="/whiteningAd" element={<WhiteningAd/>}/>
-          <Route path="/crownAd" element={<CrownAd/>}/>
-          <Route path="/genAd" element={<GenAd/>}/>
           <Route path="/doctors" element={<Doctors />} />
-          <Route path="/canal" element={<CanalAd />} />
           <Route path="/mail" element={<ExternalRedirect to={zohoMailUrl} />} />
           <Route path="/drive" element={<ExternalRedirect to={zohoDriveUrl} />} />
           <Route path="*" element={<NotFound />} />

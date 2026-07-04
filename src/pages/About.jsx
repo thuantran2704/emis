@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import aboutContent from '../Translations/aboutContent';
 import equipmentContent from '../Translations/equipmentContent';
 import ServicesSlider from '../components/ServicesSlider';
+import Text from '../components/Text';
 import consultationImage from '../pics/doctor-explaining-procedure-to-patient.jpg';
 import planningImage from '../pics/dr-x-ray-consultation.jpg';
 import technologyImage from '../pics/measuring-result-cbct-x-ray-patient-smiling.jpg';
@@ -37,19 +38,11 @@ const About = () => {
   const content = aboutContent[language];
 
   const SectionLabel = ({ children }) => (
-    <p
-      className="uppercase tracking-[0.3em] text-[#C5AF73] mb-6 text-[10px] font-semibold"
-    >
-      {children}
-    </p>
+    <Text variant="eyebrow" size="micro" className="mb-6">{children}</Text>
   );
 
   const SectionTitle = ({ children }) => (
-    <h2
-      className="text-[1.75rem] md:text-[2.1rem] text-[#2a3439] mb-8"
-    >
-      {children}
-    </h2>
+    <Text variant="title" weight="normal" size="aboutTitle" className="mb-8">{children}</Text>
   );
 
   return (
@@ -74,15 +67,15 @@ const About = () => {
         />
 
         <div className="relative py-36 px-8 max-w-4xl mx-auto text-center">
-          <p className="uppercase tracking-[0.3em] text-[#e7c873] mb-7 text-[11px] font-semibold">
+          <Text variant="eyebrow" size="tiny" tone="goldLight" className="mb-7">
             Who We Are
-          </p>
-          <h1 className="text-3xl md:text-5xl text-white mb-8 leading-tight">
+          </Text>
+          <Text as="h1" variant="title" weight="normal" size="hero" tone="white" className="mb-8">
             {content.heroTitle}
-          </h1>
-          <p className="text-[15px] md:text-[18px] text-white/85 mb-12 max-w-2xl mx-auto leading-relaxed">
+          </Text>
+          <Text variant="intro" size="heroSub" tone="whiteSoft" className="mb-12 max-w-2xl mx-auto">
             {content.heroSubtitle}
-          </p>
+          </Text>
           <div className="flex items-center justify-center gap-4 flex-wrap">
             <Link
               to="/contact"
@@ -106,11 +99,9 @@ const About = () => {
           <div>
             <SectionLabel>{content.labels?.approach || 'Our Approach'}</SectionLabel>
             <SectionTitle>{content.approachTitle}</SectionTitle>
-            <p
-              className="text-gray-500 leading-relaxed text-[15px]"
-            >
+            <Text variant="description" size="p15">
               {content.approachText}
-            </p>
+            </Text>
           </div>
           <div className="rounded-2xl overflow-hidden shadow-sm h-[420px]">
             <img
@@ -131,16 +122,12 @@ const About = () => {
             <div className="space-y-5">
               {content.planningBullets.map((b, i) => (
                 <div key={i} className="bg-white rounded-2xl p-7 shadow-sm border border-[#dbe4ec]">
-                  <h3
-                    className="text-[1.05rem] text-[#2a3439] mb-2.5"
-                  >
+                  <Text variant="cardTitle" weight="normal" size="bullet" className="mb-2.5">
                     {b.title}
-                  </h3>
-                  <p
-                    className="text-[13px] text-gray-500 leading-relaxed"
-                  >
+                  </Text>
+                  <Text variant="description" size="p13">
                     {b.text}
-                  </p>
+                  </Text>
                 </div>
               ))}
             </div>
@@ -161,11 +148,9 @@ const About = () => {
           <div>
             <SectionLabel>{content.labels?.technology || 'Technology'}</SectionLabel>
             <SectionTitle>{content.technologyTitle}</SectionTitle>
-            <p
-              className="text-gray-500 leading-relaxed text-[15px] mb-10"
-            >
+            <Text variant="description" size="p15" className="mb-10">
               {content.technologyIntro}
-            </p>
+            </Text>
             <ServicesSlider
               services={eqServices}
               serviceImages={eqImages}
@@ -189,29 +174,23 @@ const About = () => {
           <div>
             <SectionLabel>{content.labels?.team || 'Our Team'}</SectionLabel>
             <SectionTitle>{content.teamTitle}</SectionTitle>
-            <p
-              className="text-gray-500 leading-relaxed text-[15px] mb-12"
-            >
+            <Text variant="description" size="p15" className="mb-12">
               {content.teamIntro}
-            </p>
+            </Text>
             <div className="space-y-6">
               {content.teamMembers.map((m, idx) => (
                 <div key={idx} className="bg-white rounded-2xl p-8 shadow-sm">
-                  <h3
-                    className="text-[1.2rem] text-[#2a3439] mb-1.5"
-                  >
+                  <Text variant="cardTitle" weight="normal" size="cardLg" className="mb-1.5">
                     {m.name}
-                  </h3>
+                  </Text>
                   <p
                     className="text-xs text-[#C5AF73] font-semibold mb-3 uppercase tracking-widest"
                   >
                     {m.role}
                   </p>
-                  <p
-                    className="text-[13px] text-gray-500 leading-relaxed"
-                  >
+                  <Text variant="description" size="p13">
                     {m.description}
-                  </p>
+                  </Text>
                   {m.cta && (
                     <div className="mt-5">
                       <Link
@@ -242,18 +221,16 @@ const About = () => {
           <div className="text-center lg:landscape:text-left">
             <SectionLabel>{content.labels?.international || 'International Patients'}</SectionLabel>
             <SectionTitle>{content.internationalTitle}</SectionTitle>
-            <p
-              className="text-gray-500 leading-relaxed text-[15px] mb-10"
-            >
+            <Text variant="description" size="p15" className="mb-10">
               {content.internationalIntro}
-            </p>
+            </Text>
             <div className="space-y-2.5 text-left max-w-xl mx-auto">
               {content.internationalBullets.map((b, i) => (
                 <div
                   key={i}
                   className="border-l-2 border-[#d4af37] pl-4 py-1.5"
                 >
-                  <span className="text-[14px] text-[#2a3439]">{b}</span>
+                  <Text as="span" variant="description" size="p14" tone="heading">{b}</Text>
                 </div>
               ))}
             </div>
@@ -274,20 +251,16 @@ const About = () => {
           <div>
             <SectionLabel>{content.labels?.trust || 'Trust & Transparency'}</SectionLabel>
             <SectionTitle>{content.trustTitle}</SectionTitle>
-            <p
-              className="text-gray-500 leading-relaxed text-[15px] mb-10"
-            >
+            <Text variant="description" size="p15" className="mb-10">
               {content.trustIntro || 'We believe patients should have access to clear information before making treatment decisions.'}
-            </p>
+            </Text>
             <div className="space-y-4">
               {content.trustBullets.map((b, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <span className="text-[#C5AF73] mt-0.5">✓</span>
-                  <span
-                    className="text-[13px] text-[#2a3439] leading-relaxed"
-                  >
+                  <Text as="span" variant="description" size="p13" tone="heading">
                     {b}
-                  </span>
+                  </Text>
                 </div>
               ))}
             </div>
@@ -316,25 +289,19 @@ const About = () => {
                 >
                   {s.step}
                 </p>
-                <h3
-                  className="text-[1.2rem] text-[#2a3439] mb-3.5"
-                >
+                <Text variant="cardTitle" weight="normal" size="cardLg" className="mb-3.5">
                   {s.title}
-                </h3>
-                <p
-                  className="text-[13px] text-gray-500 leading-relaxed"
-                >
+                </Text>
+                <Text variant="description" size="p13">
                   {s.text}
-                </p>
+                </Text>
               </div>
             ))}
           </div>
 
-          <p
-            className="mt-10 text-[13px] text-gray-400"
-          >
+          <Text variant="description" size="p13" tone="subtle" className="mt-10">
             {content.note}
-          </p>
+          </Text>
 
           <div className="mt-10 flex items-center justify-center gap-4 flex-wrap">
             <Link

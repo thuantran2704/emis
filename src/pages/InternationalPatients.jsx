@@ -7,6 +7,7 @@ import xrayConsultation from '../pics/dr-x-ray-consultation.jpg';
 import foreignPatientWithDoctor from '../pics/foreign-patient-1-with-dr-tu-smiling.jpg';
 import foreignPatientSmile from '../pics/foreign-patient-2.jpg';
 import ProcessSteps from '../components/ProcessSteps';
+import CtaButton from '../components/CtaButton';
 
 export default function InternationalPatients() {
   const language = useSelector((state) => state.language.language);
@@ -24,18 +25,11 @@ export default function InternationalPatients() {
     </h2>
   );
 
-  const CTAButton = ({ variant = 'primary', children, href = '#' }) => {
-    const baseClass = "rounded-full px-4 py-2.5 text-[10px] font-semibold uppercase tracking-[0.12em] transition lg:px-6 lg:py-3 lg:text-[11px] lg:tracking-[0.16em]";
-    const primaryClass = "bg-[#d4af37] text-white hover:bg-[#c19d30]";
-    const secondaryClass = "border border-[#d4af37] text-[#2a3439] hover:bg-white";
-    const className = `${baseClass} ${variant === 'primary' ? primaryClass : secondaryClass}`;
-    
-    return (
-      <Link to={href} className={className}>
-        {children}
-      </Link>
-    );
-  };
+  const CTAButton = ({ variant = 'primary', children, href = '#' }) => (
+    <CtaButton to={href} variant={variant === 'primary' ? 'primary' : 'outlineGold'} size="chip">
+      {children}
+    </CtaButton>
+  );
 
   return (
     <main className="bg-[#f7fafc] text-[#2a3439] min-h-[calc(100vh-4rem)] pt-20">
@@ -213,9 +207,9 @@ export default function InternationalPatients() {
           })}
         </div>
         <div className="text-center">
-          <Link to="/contact" className="inline-block rounded-full border border-[#d4af37] px-4 py-2.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#2a3439] transition hover:bg-white lg:px-6 lg:py-3 lg:text-[11px] lg:tracking-[0.16em]">
+          <CtaButton to="/contact" variant="outlineGold" size="chip">
             {content.journeysCTA}
-          </Link>
+          </CtaButton>
         </div>
       </section>
 

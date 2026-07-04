@@ -27,7 +27,8 @@ import chatMedHistory from '../pics/chat-pic-checking-med-history.jpeg';
 import chatAirport from '../pics/chat-pic-pick-up-airport.jpeg';
 import chatAftercare from '../pics/chat-pic-aftercare.jpeg';
 import PicSlider from '../components/PicSlider';
-import FitTextBox from '../components/FitTextBox';
+import Text from '../components/Text';
+import CtaButton from '../components/CtaButton';
 
 const locales = {
   vietnamese: 'vi_VN',
@@ -41,7 +42,6 @@ export default function Home() {
   const language = useSelector((state) => state.language.language);
   const localizedHome = homeContent[language] || homeContent.english;
   const page = localizedHome.homepageV2 || homeContent.english.homepageV2;
-  const sectionLabelClass = "mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-[#C5AF73]";
   const [activeSlide, setActiveSlide] = useState(0);
   const journeyPics = [chatPreTrip, chatMedHistory, chatAirport, chatAftercare];
   const implantSlideImages = [serviceImplant, implantIntroImage, allon6Image];
@@ -150,9 +150,9 @@ export default function Home() {
       <section className="bg-white py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
-            <p className={sectionLabelClass}>{page.confidence.label}</p>
-            <h2 className="text-2xl font-bold text-[#2a3439] md:text-3xl">{page.confidence.title}</h2>
-            <FitTextBox className="mt-4 h-32 sm:h-28 md:h-24 text-gray-500" minFontSize={11} maxFontSize={18} padding={4}>{page.confidence.intro}</FitTextBox>
+            <Text variant="eyebrow" className="mb-4">{page.confidence.label}</Text>
+            <Text variant="title">{page.confidence.title}</Text>
+            <Text variant="intro" className="mt-4">{page.confidence.intro}</Text>
           </div>
 
           <div className="mt-10 grid gap-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-stretch">
@@ -163,8 +163,8 @@ export default function Home() {
                   className="group flex flex-col rounded-2xl border border-[#e4ebf1] bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-[#C5AF73] hover:shadow-md"
                 >
                   <span className="block h-1 w-8 rounded-full bg-[#C5AF73] transition-all group-hover:w-12" />
-                  <h3 className="mt-4 text-base font-semibold text-[#2a3439]">{card.title}</h3>
-                  <FitTextBox className="mt-2 h-16 text-gray-500" align="start" minFontSize={11} maxFontSize={14} padding={2}>{card.text}</FitTextBox>
+                  <Text variant="cardTitle" className="mt-4">{card.title}</Text>
+                  <Text variant="description" className="mt-2">{card.text}</Text>
                 </article>
               ))}
             </div>
@@ -180,9 +180,9 @@ export default function Home() {
       <section className="bg-[#f1f5f9] py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
-            <p className={sectionLabelClass}>{page.doctors.label}</p>
-            <h2 className="text-xl font-bold text-[#2a3439] md:text-2xl">{page.doctors.title}</h2>
-            <FitTextBox className="mt-4 h-32 sm:h-28 md:h-24 text-gray-500" minFontSize={11} maxFontSize={18} padding={4}>{page.doctors.intro}</FitTextBox>
+            <Text variant="eyebrow" className="mb-4">{page.doctors.label}</Text>
+            <Text variant="title" size="titleSm">{page.doctors.title}</Text>
+            <Text variant="intro" className="mt-4">{page.doctors.intro}</Text>
           </div>
 
           <div className="mt-10 grid gap-5 md:grid-cols-2">
@@ -200,7 +200,7 @@ export default function Home() {
                   className="w-full max-w-full rounded-2xl border border-[#dbe4ec] bg-white object-contain"
                 />
                 <div>
-                  <h3 className="text-sm font-semibold text-[#2a3439] transition group-hover:text-[#C5AF73]">{t.name}</h3>
+                  <Text variant="cardTitle" size="sm" className="transition group-hover:text-[#C5AF73]">{t.name}</Text>
                   {t.role && <p className="mt-1 text-[11px] font-semibold text-[#C5AF73]">{t.role}</p>}
                   {t.focus && <p className="mt-1.5 text-[11px] leading-relaxed text-gray-500">{t.focus}</p>}
                   {t.summary && <p className="mt-1.5 text-[11px] leading-relaxed text-gray-500">{t.summary}</p>}
@@ -229,21 +229,21 @@ export default function Home() {
           </div>
 
           <div>
-            <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl">{page.situations.title}</h2>
-            <FitTextBox className="mt-4 h-32 sm:h-28 md:h-24 text-gray-500" minFontSize={11} maxFontSize={18} padding={4}>{page.situations.intro}</FitTextBox>
+            <Text variant="title" tone="headingBlue" align="center">{page.situations.title}</Text>
+            <Text variant="intro" align="center" className="mt-4">{page.situations.intro}</Text>
 
             <div className="mt-6 space-y-5 border-l-2 border-[#e5d6b0] pl-5">
               {page.situations.cards.map((item) => (
                 <article key={item.title} className="pb-4 border-b border-[#e6edf3] last:border-b-0">
-                  <h3 className="text-base font-semibold text-[#1d3953]">{item.title}</h3>
-                  <FitTextBox className="mt-2 h-16 text-[#5d7388]" align="start" minFontSize={11} maxFontSize={14} padding={2}>{item.text}</FitTextBox>
+                  <Text variant="cardTitle" tone="headingSlate">{item.title}</Text>
+                  <Text variant="description" tone="slate" className="mt-2">{item.text}</Text>
                 </article>
               ))}
             </div>
 
-            <Link to="/restorative-dentistry" className="mt-6 inline-block rounded-full border border-[#9ab1c5] bg-white px-6 py-3 text-sm font-semibold text-[#1f3b57] transition hover:bg-[#f2f7fb]">
+            <CtaButton to="/restorative-dentistry" variant="outline" className="mt-6">
               {page.situations.cta}
-            </Link>
+            </CtaButton>
           </div>
         </div>
       </section>
@@ -252,8 +252,8 @@ export default function Home() {
       <section className="bg-[#f1f5f9] py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl">{page.pathways.title}</h2>
-            <FitTextBox className="mt-4 h-32 sm:h-28 md:h-24 text-gray-500" minFontSize={11} maxFontSize={18} padding={4}>{page.pathways.intro}</FitTextBox>
+            <Text variant="title" tone="headingBlue">{page.pathways.title}</Text>
+            <Text variant="intro" className="mt-4">{page.pathways.intro}</Text>
           </div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -263,9 +263,9 @@ export default function Home() {
                 <article key={card.title} className="overflow-hidden rounded-2xl border border-[#d9e4ed] bg-white shadow-sm">
                   <img src={image} alt={card.title} className="hidden h-44 w-full object-cover md:block" />
                   <div className="p-6">
-                    <h3 className="text-lg font-semibold text-[#1d3953]">{card.title}</h3>
-                    <p className="mt-2 text-xs font-medium text-[#6f8da6]">{card.subtitle}</p>
-                    <FitTextBox className="mt-3 h-16 text-[#5d7388]" align="start" minFontSize={11} maxFontSize={14} padding={2}>{card.text}</FitTextBox>
+                    <Text variant="cardTitle" size="lg" tone="headingSlate">{card.title}</Text>
+                    <Text variant="cardSubtitle" tone="steel" className="mt-2">{card.subtitle}</Text>
+                    <Text variant="description" tone="slate" className="mt-3">{card.text}</Text>
                   </div>
                 </article>
               );
@@ -278,9 +278,9 @@ export default function Home() {
       <section className="bg-[#f7fafc] py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
-            <p className={sectionLabelClass}>{page.implantSpecialist.eyebrow}</p>
-            <h2 className="text-2xl font-bold text-[#2a3439] md:text-3xl">{page.implantSpecialist.title}</h2>
-            <FitTextBox className="mt-4 h-32 sm:h-28 md:h-24 text-gray-500" minFontSize={11} maxFontSize={18} padding={4}>{page.implantSpecialist.intro}</FitTextBox>
+            <Text variant="eyebrow" className="mb-4">{page.implantSpecialist.eyebrow}</Text>
+            <Text variant="title">{page.implantSpecialist.title}</Text>
+            <Text variant="intro" className="mt-4">{page.implantSpecialist.intro}</Text>
           </div>
 
           {/* Tab pills */}
@@ -308,19 +308,13 @@ export default function Home() {
                 className={`grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-center transition-all duration-300 ${activeSlide === i ? 'block' : 'hidden'}`}
               >
                 <div>
-                  <span className="text-xs font-semibold uppercase tracking-[0.3em] text-[#C5AF73]">{slide.tag}</span>
-                  <h3 className="mt-2 text-2xl font-bold text-[#2a3439] md:text-3xl">{slide.title}</h3>
-                  <p className="mt-1 text-sm font-medium text-[#8aa0b5]">{slide.subtitle}</p>
-                  <FitTextBox className="mt-4 h-28 md:h-24 text-gray-500" align="start" minFontSize={11} maxFontSize={18} padding={4}>{slide.text}</FitTextBox>
-                  <Link
-                    to={slide.href}
-                    className="mt-7 inline-flex items-center gap-2 rounded-full bg-[#2a3439] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#1e282d]"
-                  >
+                  <Text as="span" variant="eyebrow">{slide.tag}</Text>
+                  <Text as="h3" variant="title" className="mt-2">{slide.title}</Text>
+                  <Text variant="subtitle" className="mt-1">{slide.subtitle}</Text>
+                  <Text variant="description" size="base" className="mt-4">{slide.text}</Text>
+                  <CtaButton to={slide.href} variant="secondary" withArrow className="mt-7">
                     {slide.cta}
-                    <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                  </Link>
+                  </CtaButton>
                 </div>
                 <div className="overflow-hidden rounded-3xl shadow-sm">
                   <img
@@ -351,8 +345,8 @@ export default function Home() {
       <section className="bg-white py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl">{page.journey.title}</h2>
-            <FitTextBox className="mt-4 h-32 sm:h-28 md:h-24 text-gray-500" minFontSize={11} maxFontSize={18} padding={4}>{page.journey.intro}</FitTextBox>
+            <Text variant="title" tone="headingBlue">{page.journey.title}</Text>
+            <Text variant="intro" className="mt-4">{page.journey.intro}</Text>
           </div>
 
           <div className="mt-10 grid gap-5 md:grid-cols-5">
@@ -363,15 +357,15 @@ export default function Home() {
                   <img src={image} alt={step.title} className="hidden h-28 w-full rounded-xl object-cover md:block" />
                   <p className="mt-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#7b95ab]">{step.step}</p>
                   <h3 className="mt-1 text-sm font-semibold text-[#1d3953]">{step.title}</h3>
-                  <FitTextBox className="mt-2 h-24 text-[#5d7388]" align="start" minFontSize={11} maxFontSize={14} padding={2}>{step.text}</FitTextBox>
+                  <Text variant="description" tone="slate" className="mt-2">{step.text}</Text>
                 </article>
               );
             })}
           </div>
 
-          <Link to="/contact" className="mt-8 inline-block rounded-full bg-[#c99533] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#b4842b]">
+          <CtaButton to="/contact" variant="primary" className="mt-8">
             {page.journey.cta}
-          </Link>
+          </CtaButton>
         </div>
       </section>
 
@@ -382,14 +376,14 @@ export default function Home() {
       <section className="bg-[#f1f5f9] py-16 md:py-20">
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 lg:landscape:grid-cols-2 lg:landscape:items-stretch">
           <div className="mx-auto max-w-2xl text-center lg:landscape:mx-0 lg:landscape:text-left">
-            <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl">{page.international.title}</h2>
-            <FitTextBox className="mt-4 h-32 sm:h-28 md:h-24 text-gray-500" minFontSize={11} maxFontSize={18} padding={4}>{page.international.intro}</FitTextBox>
+            <Text variant="title" tone="headingBlue">{page.international.title}</Text>
+            <Text variant="intro" className="mt-4">{page.international.intro}</Text>
             <ul className="mt-6 space-y-2.5 text-left">
               {page.international.points.map((item) => (
                 <li key={item.title} className="flex gap-3 border-l-2 border-[#d4af37] pl-4 py-1">
                   <div>
                     <h3 className="text-sm font-semibold text-[#16324a]">{item.title}</h3>
-                    <FitTextBox className="mt-0.5 h-12 text-gray-500" align="start" minFontSize={11} maxFontSize={13} padding={2}>{item.text}</FitTextBox>
+                    <Text variant="description" className="mt-0.5">{item.text}</Text>
                   </div>
                 </li>
               ))}
@@ -410,36 +404,36 @@ export default function Home() {
       {/* 10 — Objections: FAQ */}
       <section className="bg-white py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-6">
-          <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl text-center">{page.faq.title}</h2>
+          <Text variant="title" tone="headingBlue" align="center">{page.faq.title}</Text>
           <div className="mt-8 space-y-4">
             {page.faq.items.map((item) => (
               <details key={item.question} className="rounded-2xl border border-[#dbe6ef] bg-white p-5 shadow-sm">
                 <summary className="cursor-pointer list-none text-base font-semibold text-[#1d3953]">
                   {item.question}
                 </summary>
-                <FitTextBox className="mt-3 h-16 text-[#5d7388]" align="start" minFontSize={12} maxFontSize={14} padding={2}>{item.answer}</FitTextBox>
+                <Text variant="description" tone="slate" className="mt-3">{item.answer}</Text>
               </details>
             ))}
           </div>
-          <Link to="/faq" className="mt-8 inline-block rounded-full border border-[#9ab1c5] bg-white px-6 py-3 text-sm font-semibold text-[#1f3b57] transition hover:bg-[#f2f7fb]">
+          <CtaButton to="/faq" variant="outline" className="mt-8">
             {page.faq.cta}
-          </Link>
+          </CtaButton>
         </div>
       </section>
 
       <section className="relative overflow-hidden bg-[#2a3439] py-16 text-white md:py-20">
         <img src={ctaBackground} alt="" className="absolute inset-0 h-full w-full object-cover opacity-20" aria-hidden="true" />
         <div className="relative mx-auto max-w-6xl px-6">
-          <h2 className="text-2xl font-bold md:text-3xl">{page.finalCta.title}</h2>
-          <FitTextBox className="mt-4 max-w-3xl h-20 md:h-16 text-[#d6e2ed]" align="start" minFontSize={11} maxFontSize={18} padding={4}>{page.finalCta.description}</FitTextBox>
+          <Text variant="title" tone="white">{page.finalCta.title}</Text>
+          <Text variant="description" size="base" tone="invert" className="mt-4 max-w-3xl">{page.finalCta.description}</Text>
 
           <div className="mt-6 flex flex-wrap gap-4">
-            <Link to="/contact" className="rounded-full bg-[#d4af37] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#c19d30]">
+            <CtaButton to="/contact" variant="primary">
               {page.finalCta.primaryCta}
-            </Link>
-            <Link to="/contact" className="rounded-full border border-[#95acc1] px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10">
+            </CtaButton>
+            <CtaButton to="/contact" variant="ghostWhite">
               {page.finalCta.secondaryCta}
-            </Link>
+            </CtaButton>
           </div>
 
           <div className="mt-8 space-y-4 rounded-3xl border border-white/20 bg-[#1c2832]/70 p-6 backdrop-blur-sm md:p-7">
@@ -451,7 +445,7 @@ export default function Home() {
                 ))}
               </ul>
             </div>
-            <FitTextBox className="rounded-xl border border-white/15 bg-white/5 h-16 text-[#dce7f1]" align="start" minFontSize={11} maxFontSize={14} padding={12}>{page.finalCta.importantNote}</FitTextBox>
+            <Text variant="description" tone="dim" className="rounded-xl border border-white/15 bg-white/5 px-4 py-3">{page.finalCta.importantNote}</Text>
           </div>
 
           <div className="mt-10 rounded-3xl border border-white/25 bg-[#f8fbff] p-4 text-[#1f2d3d] shadow-[0_12px_30px_rgba(11,24,38,0.25)] md:p-6">

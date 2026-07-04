@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { useSelector } from 'react-redux';
 import { Sparkles, Layers, Brush, Smile, Wrench, Plus, ArrowRight } from 'lucide-react';
@@ -11,6 +10,7 @@ import veneerCase from '../pics/measuring-result-cbct-x-ray-patient-smiling.jpg'
 import orthoCase from '../pics/doctor-explaining-procedure-to-patient.jpg';
 import ProcessSteps from '../components/ProcessSteps';
 import NumberedList from '../components/NumberedList';
+import CtaButton from '../components/CtaButton';
 
 const SectionLabel = ({ children }) => (
   <p
@@ -64,18 +64,12 @@ export default function SmileAesthetics() {
               ))}
             </div>
             <div className="flex flex-wrap gap-4">
-              <Link
-                to="/contact"
-                className="rounded-full bg-[#d4af37] px-5 py-2.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-[#c19d30] lg:px-6 lg:py-3 lg:text-[11px]"
-              >
+              <CtaButton to="/contact" variant="primary" size="chip">
                 {content.hero?.primaryCta}
-              </Link>
-              <Link
-                to="/contact"
-                className="rounded-full border border-[#d4af37] px-5 py-2.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#2a3439] transition hover:bg-white lg:px-6 lg:py-3 lg:text-[11px]"
-              >
+              </CtaButton>
+              <CtaButton to="/contact" variant="outlineGold" size="chip">
                 {content.hero?.secondaryCta}
-              </Link>
+              </CtaButton>
             </div>
           </div>
 
@@ -168,11 +162,9 @@ export default function SmileAesthetics() {
                 <p key={paragraph}>{paragraph}</p>
               ))}
             </div>
-            <Link
-              to="/restorative-dentistry"              className="mt-7 inline-block rounded-full bg-[#d4af37] px-5 py-2.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-[#c19d30] lg:px-6 lg:py-3 lg:text-[11px]"
-            >
+            <CtaButton to="/restorative-dentistry" variant="primary" size="chip" className="mt-7">
               {content.orthodontics?.cta}
-            </Link>
+            </CtaButton>
           </div>
 
           {orthoImage ? (
@@ -227,12 +219,9 @@ export default function SmileAesthetics() {
         </div>
 
         <div className="mt-8 text-center">
-          <Link
-            to="/restorative-dentistry"
-            className="inline-block rounded-full border border-[#d4af37] px-5 py-2.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#2a3439] transition hover:bg-white lg:px-6 lg:py-3 lg:text-[11px]"
-          >
+          <CtaButton to="/restorative-dentistry" variant="outlineGold" size="chip">
             {content.cases?.cta}
-          </Link>
+          </CtaButton>
         </div>
       </section>
 
@@ -247,18 +236,12 @@ export default function SmileAesthetics() {
             {content.finalCta?.intro}
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              to="/contact"
-              className="rounded-full bg-[#d4af37] px-5 py-2.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-[#c19d30] lg:px-6 lg:py-3 lg:text-[11px]"
-            >
+            <CtaButton to="/contact" variant="primary" size="chip">
               {content.finalCta?.primaryCta}
-            </Link>
-            <Link
-              to="/contact"
-              className="rounded-full border border-[#d4af37] px-5 py-2.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#2a3439] transition hover:bg-white lg:px-6 lg:py-3 lg:text-[11px]"
-            >
+            </CtaButton>
+            <CtaButton to="/contact" variant="outlineGold" size="chip">
               {content.finalCta?.secondaryCta}
-            </Link>
+            </CtaButton>
           </div>
           <p className="mt-6 text-[11px] leading-6 text-gray-500 lg:text-[12px]">{content.finalCta?.note}</p>
         </div>
