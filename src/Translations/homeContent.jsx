@@ -174,8 +174,16 @@ export const homeContent = {
         eyebrow: "Implant Expertise",
         title: "Specializing In Implant-Based Solutions",
         intro:
-          "EMIS Dental focuses on implant-based tooth replacement and full-arch rehabilitation. Our team has treated thousands of implant cases — from single tooth replacement to full-mouth reconstruction.",
+          "EMIS Dental focuses on implant-based tooth replacement and full-arch rehabilitation. Our team has treated thousands of implant cases, from single tooth replacement to full-mouth reconstruction.",
         slides: [
+          {
+            tag: "Dental Implants",
+            title: "Single & Multiple Implants",
+            subtitle: "Replace one or several missing teeth",
+            text: "Titanium implants fuse with the jawbone to create a stable, permanent base for a crown or bridge. The most natural-feeling tooth replacement option available today.",
+            cta: "Explore Implants",
+            href: "/implant",
+          },
           {
             tag: "All-on-4",
             title: "All-on-4 Dental Implants",
@@ -192,14 +200,6 @@ export const homeContent = {
             cta: "Explore All-on-6",
             href: "/fixed-teeth",
           },
-          {
-            tag: "Dental Implants",
-            title: "Single & Multiple Implants",
-            subtitle: "Replace one or several missing teeth",
-            text: "Titanium implants fuse with the jawbone to create a stable, permanent base for a crown or bridge. The most natural-feeling tooth replacement option available today.",
-            cta: "Explore Implants",
-            href: "/implant",
-          },
         ],
       },
       doctors: {
@@ -211,7 +211,7 @@ export const homeContent = {
       situations: {
         title: "Do You See Yourself Here?",
         intro:
-          "Many patients spend years adapting to missing teeth, uncomfortable dentures, or ongoing dental problems before seeking treatment. Over time, these challenges can affect much more than oral health. They can influence how you eat, speak, smile, and feel in everyday life. You do not need to decide on treatment immediately. The first step is understanding your situation and exploring your options.",
+          "Many patients spend years adapting to missing teeth, uncomfortable dentures, or ongoing dental problems before seeking treatment. Over time, these challenges can affect much more than oral health. They can influence how you eat, speak, smile, and feel in everyday life.",
         cards: [
           {
             title: "Missing One Or More Teeth",
@@ -448,7 +448,7 @@ export const homeContent = {
       },
       situations: {
         title: "Do You See Yourself Here?",
-        intro: "Many patients spend years adapting to missing teeth, uncomfortable dentures, or ongoing dental problems before seeking treatment. Over time, these challenges can affect much more than oral health. They can influence how you eat, speak, smile, and feel in everyday life. You do not need to decide on treatment immediately. The first step is understanding your situation and exploring your options.",
+        intro: "Many patients spend years adapting to missing teeth, uncomfortable dentures, or ongoing dental problems before seeking treatment. Over time, these challenges can affect much more than oral health. They can influence how you eat, speak, smile, and feel in everyday life.",
         cards: [
           {
             title: "Missing One Or More Teeth",
@@ -798,6 +798,14 @@ export const homeContent = {
           "Emis Dental tập trung vào Implant nha khoa và phục hồi toàn hàm. Đội ngũ đã điều trị thành công hàng nghìn ca từ cấy ghép đơn lẻ đến phục hồi toàn bộ hai hàm.",
         slides: [
           {
+            tag: "Implant Đơn & Nhiều Răng",
+            title: "Cấy Ghép Implant Đơn & Nhiều Răng",
+            subtitle: "Thay thế một hoặc nhiều răng đã mất",
+            text: "Implant titan tích hợp với xương hàm tạo nền tảng vững chắc cho mão sứ hoặc cầu răng. Lựa chọn phục hồi tự nhiên nhất hiện nay.",
+            cta: "Tìm Hiểu Implant",
+            href: "/implant",
+          },
+          {
             tag: "All-on-4",
             title: "Implant All-on-4",
             subtitle: "Phục hình toàn hàm với 4 implant",
@@ -812,14 +820,6 @@ export const homeContent = {
             text: "Sáu implant phân tán lực đều hơn, mang lại sự ổn định vượt trội cho toàn hàm. Thường được khuyến nghị cho bệnh nhân cần độ bền cao và chức năng ăn nhai tự nhiên tối đa.",
             cta: "Tìm Hiểu All-on-6",
             href: "/fixed-teeth",
-          },
-          {
-            tag: "Implant Đơn & Nhiều Răng",
-            title: "Cấy Ghép Implant Đơn & Nhiều Răng",
-            subtitle: "Thay thế một hoặc nhiều răng đã mất",
-            text: "Implant titan tích hợp với xương hàm tạo nền tảng vững chắc cho mão sứ hoặc cầu răng. Lựa chọn phục hồi tự nhiên nhất hiện nay.",
-            cta: "Tìm Hiểu Implant",
-            href: "/implant",
           },
         ],
       },

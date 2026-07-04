@@ -9,7 +9,7 @@ import implantIntroImage from '../pics/all-on-4-implant.jpg';
 import allon6Image from '../pics/allon6.jpeg';
 import cbctReview from '../pics/dr-x-ray-consultation.jpg';
 import onlineConsultation from '../pics/consulting-team.jpg';
-import lifestyleDinner from '../pics/eating-casually.jpeg';
+import elderCoupleSmiling from '../pics/elder-couple-smiling-outdoors-healthy-walking.jpeg';
 import confidentSmile from '../pics/confident-smile-social.jpeg';
 import elderSocializing from '../pics/elder-person-socializing.jpeg';
 import pathwayConsult from '../pics/doctor-explaining-procedure-to-patient.jpg';
@@ -27,6 +27,7 @@ import chatMedHistory from '../pics/chat-pic-checking-med-history.jpeg';
 import chatAirport from '../pics/chat-pic-pick-up-airport.jpeg';
 import chatAftercare from '../pics/chat-pic-aftercare.jpeg';
 import PicSlider from '../components/PicSlider';
+import FitTextBox from '../components/FitTextBox';
 
 const locales = {
   vietnamese: 'vi_VN',
@@ -43,7 +44,7 @@ export default function Home() {
   const sectionLabelClass = "mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-[#C5AF73]";
   const [activeSlide, setActiveSlide] = useState(0);
   const journeyPics = [chatPreTrip, chatMedHistory, chatAirport, chatAftercare];
-  const implantSlideImages = [implantIntroImage, allon6Image, serviceImplant];
+  const implantSlideImages = [serviceImplant, implantIntroImage, allon6Image];
   const heroDescription = page.hero.description.length > 95
     ? `${page.hero.description.slice(0, 92).trim()}...`
     : page.hero.description;
@@ -143,43 +144,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-
-        {/* Floating Contact Widgets - Bottom Right - Responsive */}
-        <div className="absolute bottom-6 right-6 z-10 flex flex-col gap-3 md:bottom-8 md:right-8 md:gap-[14px]">
-          {/* WhatsApp Widget */}
-          <a
-            href="https://wa.me/84909967649"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 md:gap-4 rounded-[16px] md:rounded-[18px] bg-[#25D366] px-3 md:px-[18px] py-3 md:py-[18px] text-white shadow-lg transition-all duration-200 hover:shadow-xl hover:-translate-y-1"
-          >
-            <div className="flex h-10 md:h-12 w-10 md:w-12 flex-shrink-0 items-center justify-center rounded-full bg-white/20">
-              <svg className="h-5 md:h-6 w-5 md:w-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.947 1.227l-.356.214-3.71-.973.992 3.605-.235.374a9.861 9.861 0 1513.243-13.241c-.001 0-.001 0-.001 0z" />
-              </svg>
-            </div>
-            <div className="hidden md:flex flex-col gap-0.5">
-              <p className="text-sm font-semibold">Chat via WhatsApp</p>
-              <p className="text-xs font-medium opacity-90">SPEAK WITH EMIS DENTAL</p>
-            </div>
-          </a>
-
-          {/* Phone Widget */}
-          <a
-            href="tel:+84919100021"
-            className="flex items-center gap-2 md:gap-4 rounded-[16px] md:rounded-[18px] bg-[#8B6F47] px-3 md:px-[18px] py-3 md:py-[18px] text-white shadow-lg transition-all duration-200 hover:shadow-xl hover:-translate-y-1"
-          >
-            <div className="flex h-10 md:h-12 w-10 md:w-12 flex-shrink-0 items-center justify-center rounded-full bg-white/20">
-              <svg className="h-5 md:h-6 w-5 md:w-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-            </div>
-            <div className="hidden md:flex flex-col gap-0.5">
-              <p className="text-sm font-semibold">Call EMIS Dental</p>
-              <p className="text-xs font-medium opacity-90">VIETNAM SUPPORT LINE</p>
-            </div>
-          </a>
-        </div>
       </section>
 
       {/* 2 — Trust: Why EMIS over everyone else */}
@@ -188,7 +152,7 @@ export default function Home() {
           <div className="mx-auto max-w-3xl text-center">
             <p className={sectionLabelClass}>{page.confidence.label}</p>
             <h2 className="text-2xl font-bold text-[#2a3439] md:text-3xl">{page.confidence.title}</h2>
-            <p className="mt-4 text-base leading-relaxed text-gray-500">{page.confidence.intro}</p>
+            <FitTextBox className="mt-4 h-32 sm:h-28 md:h-24 text-gray-500" minFontSize={11} maxFontSize={18} padding={4}>{page.confidence.intro}</FitTextBox>
           </div>
 
           <div className="mt-10 grid gap-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-stretch">
@@ -200,7 +164,7 @@ export default function Home() {
                 >
                   <span className="block h-1 w-8 rounded-full bg-[#C5AF73] transition-all group-hover:w-12" />
                   <h3 className="mt-4 text-base font-semibold text-[#2a3439]">{card.title}</h3>
-                  <p className="mt-2 text-xs leading-relaxed text-gray-500">{card.text}</p>
+                  <FitTextBox className="mt-2 h-16 text-gray-500" align="start" minFontSize={11} maxFontSize={14} padding={2}>{card.text}</FitTextBox>
                 </article>
               ))}
             </div>
@@ -218,7 +182,7 @@ export default function Home() {
           <div className="mx-auto max-w-3xl text-center">
             <p className={sectionLabelClass}>{page.doctors.label}</p>
             <h2 className="text-xl font-bold text-[#2a3439] md:text-2xl">{page.doctors.title}</h2>
-            <p className="mt-4 text-base leading-relaxed text-gray-500">{page.doctors.intro}</p>
+            <FitTextBox className="mt-4 h-32 sm:h-28 md:h-24 text-gray-500" minFontSize={11} maxFontSize={18} padding={4}>{page.doctors.intro}</FitTextBox>
           </div>
 
           <div className="mt-10 grid gap-5 md:grid-cols-2">
@@ -241,6 +205,14 @@ export default function Home() {
                   {t.focus && <p className="mt-1.5 text-[11px] leading-relaxed text-gray-500">{t.focus}</p>}
                   {t.summary && <p className="mt-1.5 text-[11px] leading-relaxed text-gray-500">{t.summary}</p>}
                   {t.languages && <p className="mt-2 text-[9px] uppercase tracking-[0.2em] text-[#8aa0b5]">{t.languages}</p>}
+                  {t.cta && (
+                    <span className="mt-3 inline-flex items-center gap-1 text-[11px] font-semibold text-[#C5AF73] transition group-hover:gap-2">
+                      {t.cta}
+                      <svg className="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </span>
+                  )}
                 </div>
               </Link>
               );
@@ -253,18 +225,18 @@ export default function Home() {
       <section className="bg-white py-16 md:py-20">
         <div className="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-[1.1fr_1fr] md:items-stretch">
           <div className="hidden overflow-hidden rounded-3xl shadow-lg md:block">
-            <img src={lifestyleDinner} alt="Patient enjoying daily life confidently" className="h-full w-full object-cover" />
+            <img src={elderCoupleSmiling} alt="Patient enjoying daily life confidently" className="h-full w-full object-cover" />
           </div>
 
           <div>
             <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl">{page.situations.title}</h2>
-            <p className="mt-4 text-base leading-relaxed text-gray-500">{page.situations.intro}</p>
+            <FitTextBox className="mt-4 h-32 sm:h-28 md:h-24 text-gray-500" minFontSize={11} maxFontSize={18} padding={4}>{page.situations.intro}</FitTextBox>
 
             <div className="mt-6 space-y-5 border-l-2 border-[#e5d6b0] pl-5">
               {page.situations.cards.map((item) => (
                 <article key={item.title} className="pb-4 border-b border-[#e6edf3] last:border-b-0">
                   <h3 className="text-base font-semibold text-[#1d3953]">{item.title}</h3>
-                  <p className="mt-2 text-xs leading-relaxed text-[#5d7388]">{item.text}</p>
+                  <FitTextBox className="mt-2 h-16 text-[#5d7388]" align="start" minFontSize={11} maxFontSize={14} padding={2}>{item.text}</FitTextBox>
                 </article>
               ))}
             </div>
@@ -281,7 +253,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl">{page.pathways.title}</h2>
-            <p className="mt-4 text-base leading-relaxed text-gray-500">{page.pathways.intro}</p>
+            <FitTextBox className="mt-4 h-32 sm:h-28 md:h-24 text-gray-500" minFontSize={11} maxFontSize={18} padding={4}>{page.pathways.intro}</FitTextBox>
           </div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -293,7 +265,7 @@ export default function Home() {
                   <div className="p-6">
                     <h3 className="text-lg font-semibold text-[#1d3953]">{card.title}</h3>
                     <p className="mt-2 text-xs font-medium text-[#6f8da6]">{card.subtitle}</p>
-                    <p className="mt-3 text-xs leading-relaxed text-[#5d7388]">{card.text}</p>
+                    <FitTextBox className="mt-3 h-16 text-[#5d7388]" align="start" minFontSize={11} maxFontSize={14} padding={2}>{card.text}</FitTextBox>
                   </div>
                 </article>
               );
@@ -308,7 +280,7 @@ export default function Home() {
           <div className="mx-auto max-w-3xl text-center">
             <p className={sectionLabelClass}>{page.implantSpecialist.eyebrow}</p>
             <h2 className="text-2xl font-bold text-[#2a3439] md:text-3xl">{page.implantSpecialist.title}</h2>
-            <p className="mt-4 text-base leading-relaxed text-gray-500">{page.implantSpecialist.intro}</p>
+            <FitTextBox className="mt-4 h-32 sm:h-28 md:h-24 text-gray-500" minFontSize={11} maxFontSize={18} padding={4}>{page.implantSpecialist.intro}</FitTextBox>
           </div>
 
           {/* Tab pills */}
@@ -339,7 +311,7 @@ export default function Home() {
                   <span className="text-xs font-semibold uppercase tracking-[0.3em] text-[#C5AF73]">{slide.tag}</span>
                   <h3 className="mt-2 text-2xl font-bold text-[#2a3439] md:text-3xl">{slide.title}</h3>
                   <p className="mt-1 text-sm font-medium text-[#8aa0b5]">{slide.subtitle}</p>
-                  <p className="mt-4 text-base leading-relaxed text-gray-500">{slide.text}</p>
+                  <FitTextBox className="mt-4 h-28 md:h-24 text-gray-500" align="start" minFontSize={11} maxFontSize={18} padding={4}>{slide.text}</FitTextBox>
                   <Link
                     to={slide.href}
                     className="mt-7 inline-flex items-center gap-2 rounded-full bg-[#2a3439] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#1e282d]"
@@ -380,7 +352,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl">{page.journey.title}</h2>
-            <p className="mt-4 text-base leading-relaxed text-gray-500">{page.journey.intro}</p>
+            <FitTextBox className="mt-4 h-32 sm:h-28 md:h-24 text-gray-500" minFontSize={11} maxFontSize={18} padding={4}>{page.journey.intro}</FitTextBox>
           </div>
 
           <div className="mt-10 grid gap-5 md:grid-cols-5">
@@ -391,7 +363,7 @@ export default function Home() {
                   <img src={image} alt={step.title} className="hidden h-28 w-full rounded-xl object-cover md:block" />
                   <p className="mt-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#7b95ab]">{step.step}</p>
                   <h3 className="mt-1 text-sm font-semibold text-[#1d3953]">{step.title}</h3>
-                  <p className="mt-2 text-xs leading-relaxed text-[#5d7388]">{step.text}</p>
+                  <FitTextBox className="mt-2 h-24 text-[#5d7388]" align="start" minFontSize={11} maxFontSize={14} padding={2}>{step.text}</FitTextBox>
                 </article>
               );
             })}
@@ -411,13 +383,13 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 lg:landscape:grid-cols-2 lg:landscape:items-stretch">
           <div className="mx-auto max-w-2xl text-center lg:landscape:mx-0 lg:landscape:text-left">
             <h2 className="text-2xl font-bold text-[#16324a] md:text-3xl">{page.international.title}</h2>
-            <p className="mt-4 text-base leading-relaxed text-gray-500">{page.international.intro}</p>
+            <FitTextBox className="mt-4 h-32 sm:h-28 md:h-24 text-gray-500" minFontSize={11} maxFontSize={18} padding={4}>{page.international.intro}</FitTextBox>
             <ul className="mt-6 space-y-2.5 text-left">
               {page.international.points.map((item) => (
                 <li key={item.title} className="flex gap-3 border-l-2 border-[#d4af37] pl-4 py-1">
                   <div>
                     <h3 className="text-sm font-semibold text-[#16324a]">{item.title}</h3>
-                    <p className="mt-0.5 text-xs text-gray-500">{item.text}</p>
+                    <FitTextBox className="mt-0.5 h-12 text-gray-500" align="start" minFontSize={11} maxFontSize={13} padding={2}>{item.text}</FitTextBox>
                   </div>
                 </li>
               ))}
@@ -445,7 +417,7 @@ export default function Home() {
                 <summary className="cursor-pointer list-none text-base font-semibold text-[#1d3953]">
                   {item.question}
                 </summary>
-                <p className="mt-3 text-xs leading-relaxed text-[#5d7388]">{item.answer}</p>
+                <FitTextBox className="mt-3 h-16 text-[#5d7388]" align="start" minFontSize={12} maxFontSize={14} padding={2}>{item.answer}</FitTextBox>
               </details>
             ))}
           </div>
@@ -459,7 +431,7 @@ export default function Home() {
         <img src={ctaBackground} alt="" className="absolute inset-0 h-full w-full object-cover opacity-20" aria-hidden="true" />
         <div className="relative mx-auto max-w-6xl px-6">
           <h2 className="text-2xl font-bold md:text-3xl">{page.finalCta.title}</h2>
-          <p className="mt-4 max-w-3xl text-base leading-relaxed text-[#d6e2ed]">{page.finalCta.description}</p>
+          <FitTextBox className="mt-4 max-w-3xl h-20 md:h-16 text-[#d6e2ed]" align="start" minFontSize={11} maxFontSize={18} padding={4}>{page.finalCta.description}</FitTextBox>
 
           <div className="mt-6 flex flex-wrap gap-4">
             <Link to="/contact" className="rounded-full bg-[#d4af37] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#c19d30]">
@@ -479,7 +451,7 @@ export default function Home() {
                 ))}
               </ul>
             </div>
-            <p className="rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-xs leading-relaxed text-[#dce7f1]">{page.finalCta.importantNote}</p>
+            <FitTextBox className="rounded-xl border border-white/15 bg-white/5 h-16 text-[#dce7f1]" align="start" minFontSize={11} maxFontSize={14} padding={12}>{page.finalCta.importantNote}</FitTextBox>
           </div>
 
           <div className="mt-10 rounded-3xl border border-white/25 bg-[#f8fbff] p-4 text-[#1f2d3d] shadow-[0_12px_30px_rgba(11,24,38,0.25)] md:p-6">

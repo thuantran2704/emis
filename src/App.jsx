@@ -14,6 +14,7 @@ import Equipment from './pages/Equipment';
 import FloatingContactButton from './components/floatingContactButton.jsx';
 import GuidedChat from './components/GuidedChat.jsx';
 import VeneerLanding from './pages/landingPage1.jsx';
+import SonPage from './pages/drSonPage.jsx';
 import CrownLanding from './pages/bocRang.jsx';
 import DentalVisitorProgram from './pages/flightassist.jsx';
 import WhiteningAd from './pages/whitening.jsx';
@@ -22,6 +23,7 @@ import CrownAd from './pages/crown.jsx';
 import GenAd from './pages/genAd.jsx';
 import CanalAd from './pages/canal.jsx';
 import Doctors from './pages/doctors.jsx';
+import DrTuPage from './pages/drTuPage.jsx';
 import InternationalPatients from './pages/InternationalPatients.jsx';
 import OralSurgery from './pages/OralSurgery.jsx';
 import RestorativeDentistry from './pages/RestorativeDentistry.jsx';
@@ -111,6 +113,8 @@ function AppShell() {
           <Route path="/veneer" element={<VeneerLanding />} />
           <Route path="/implant" element={<Implant />}/>
           <Route path="/crown" element={<CrownLanding/>}/>
+          <Route path="/dr-son" element={<SonPage />}/>
+          <Route path="/dr-tu" element={<DrTuPage />} />
           <Route path="/visitor-program" element={<DentalVisitorProgram />} />
           <Route path="/whiteningAd" element={<WhiteningAd/>}/>
           <Route path="/crownAd" element={<CrownAd/>}/>

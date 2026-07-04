@@ -82,14 +82,14 @@ export default function PicSlider({ pics, content = {}, bgColor = '#CCBA78', cla
             <div className="flex flex-col md:flex-row">
               {/* Image pane */}
               <div
-                className="w-full md:w-[55%] flex items-center justify-center p-6 min-h-[300px] md:min-h-[480px]"
+                className="relative w-full md:w-[55%] min-h-[380px] md:min-h-[480px] overflow-hidden"
                 style={{ backgroundColor: bgColor }}
               >
                 <img
                   key={active}
                   src={pics[active]}
                   alt={cur.title ?? `Slide ${active + 1}`}
-                  className="max-h-[440px] max-w-full object-contain"
+                  className="absolute inset-0 h-full w-full object-cover"
                 />
               </div>
 
