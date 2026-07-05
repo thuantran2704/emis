@@ -66,8 +66,10 @@ const VARIANT_STYLE = {
   description: 'leading-relaxed text-pretty',
 };
 
-// Variants that get JS line-balancing by default (headings + lead paragraphs).
-const BALANCE_DEFAULT = { title: true, intro: true };
+// Variants that get JS line-balancing by default. Only short headings — body
+// paragraphs (intro/description) should fill their container proportionally, so
+// balancing (which caps width) is left off for them.
+const BALANCE_DEFAULT = { title: true };
 
 /**
  * Line-balancing hook. Measures the element at full width to learn its natural
@@ -137,10 +139,10 @@ const VARIANT_SIZE = {
   eyebrow: 'xs',
   title: 'title',
   subtitle: 'sm',
-  intro: 'base',
+  intro: 'xs',
   cardTitle: 'base',
   cardSubtitle: 'xs',
-  description: 'xs',
+  description: 'tiny',
 };
 
 const VARIANT_TAG = {

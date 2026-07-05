@@ -150,7 +150,7 @@ export default function Home() {
       {/* 2 — Trust: Why EMIS over everyone else */}
       <Section tone="white">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="mx-auto max-w-3xl text-center">
+          <div className="mx-auto max-w-5xl text-center">
             <Text variant="eyebrow" className="mb-4">{page.confidence.label}</Text>
             <Text variant="title">{page.confidence.title}</Text>
             <Text variant="intro" className="mt-4">{page.confidence.intro}</Text>
@@ -180,7 +180,7 @@ export default function Home() {
       {/* 3 — Credibility: Meet the doctors */}
       <Section tone="cool">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="mx-auto max-w-3xl text-center">
+          <div className="mx-auto max-w-5xl text-center">
             <Text variant="eyebrow" className="mb-4">{page.doctors.label}</Text>
             <Text variant="title" size="titleSm">{page.doctors.title}</Text>
             <Text variant="intro" className="mt-4">{page.doctors.intro}</Text>
@@ -252,7 +252,7 @@ export default function Home() {
       {/* 5 — Decision: Help them match situation to treatment */}
       <Section tone="cool">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="mx-auto max-w-3xl text-center">
+          <div className="mx-auto max-w-5xl text-center">
             <Text variant="title" tone="headingBlue">{page.pathways.title}</Text>
             <Text variant="intro" className="mt-4">{page.pathways.intro}</Text>
           </div>
@@ -278,7 +278,7 @@ export default function Home() {
       {/* 6 — Solution: Implant specialist slider */}
       <Section tone="light">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="mx-auto max-w-3xl text-center">
+          <div className="mx-auto max-w-5xl text-center">
             <Text variant="eyebrow" className="mb-4">{page.implantSpecialist.eyebrow}</Text>
             <Text variant="title">{page.implantSpecialist.title}</Text>
             <Text variant="intro" className="mt-4">{page.implantSpecialist.intro}</Text>
@@ -345,7 +345,7 @@ export default function Home() {
       {/* 7 — Process: Reduce anxiety about what happens next */}
       <Section tone="white">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="mx-auto max-w-3xl text-center">
+          <div className="mx-auto max-w-5xl text-center">
             <Text variant="title" tone="headingBlue">{page.journey.title}</Text>
             <Text variant="intro" className="mt-4">{page.journey.intro}</Text>
           </div>
