@@ -8,9 +8,12 @@
  * different values. `Text` centralizes those decisions so a role looks the same
  * everywhere and changes (alignment, wrap, color) are a single prop.
  *
- * This is PURELY presentational (class mapping only) — no measuring, no JS
- * resizing. Do NOT reintroduce auto-fit font scaling here; per-element font
- * scaling produced inconsistent sizes and was removed on purpose.
+ * Class mapping is PURELY presentational. The one piece of JS behavior is
+ * *line balancing* (`balance` prop, on by default for title/intro): it does NOT
+ * scale the font — it shrinks the element's max-width to the narrowest width
+ * that keeps the same number of lines, so the lines come out roughly equal in
+ * length (no lonely short "widow" line). Do NOT reintroduce per-element font
+ * scaling here; that produced inconsistent sizes and was removed on purpose.
  *
  * ─────────────────────────────────────────────────────────────────────────────
  * HOW TO USE (for agents & contributors)
@@ -50,6 +53,8 @@
  * ─────────────────────────────────────────────────────────────────────────────
  */
 
+import { useLayoutEffect, useRef } from 'react';
+
 // Role → transform / wrap only (size, color, weight and alignment live below).
 const VARIANT_STYLE = {
   eyebrow: 'uppercase tracking-[0.3em]',
@@ -60,6 +65,73 @@ const VARIANT_STYLE = {
   cardSubtitle: '',
   description: 'leading-relaxed text-pretty',
 };
+
+// Variants that get JS line-balancing by default (headings + lead paragraphs).
+const BALANCE_DEFAULT = { title: true, intro: true };
+
+/**
+ * Line-balancing hook. Measures the element at full width to learn its natural
+ * line count, then binary-searches the narrowest width that still renders in
+ * that same number of lines. The final width is interpolated between that
+ * narrowest width and the full width by `ratio` (1 = fully balanced / most
+ * even lines but the most side whitespace, 0 = no balancing). Font size is
+ * untouched.
+ *
+ * Re-runs when the text content changes and on container resize.
+ */
+function useBalanceLines(ref, enabled, text, ratio) {
+  useLayoutEffect(() => {
+    const el = ref.current;
+    if (!enabled || !el) return;
+
+    const balance = () => {
+      // Reset any prior constraint so we measure the full available width.
+      el.style.maxWidth = '';
+      el.style.width = '';
+      el.style.marginInline = '';
+
+      const fullWidth = el.clientWidth;
+      if (fullWidth <= 0) return;
+
+      // Natural rendering at full width = the minimum possible line count.
+      el.style.width = `${fullWidth}px`;
+      const targetHeight = el.clientHeight;
+
+      // Binary-search the smallest width that keeps `targetHeight` (same lines).
+      let lower = 0;
+      let upper = fullWidth;
+      for (let i = 0; i < 24 && upper - lower > 0.5; i++) {
+        const mid = (lower + upper) / 2;
+        el.style.width = `${mid}px`;
+        if (el.scrollHeight > targetHeight) {
+          lower = mid; // too narrow — spilled onto an extra line
+        } else {
+          upper = mid; // still fits — try narrower
+        }
+      }
+
+      // Interpolate between the balanced width and the full width by `ratio`,
+      // so we don't collapse the box more than necessary (less side whitespace).
+      const balancedWidth = upper + (fullWidth - upper) * (1 - ratio);
+
+      // Apply as max-width so the element stays responsive below this cap.
+      el.style.width = '';
+      el.style.maxWidth = `${Math.ceil(balancedWidth)}px`;
+      // A narrower block would drift left; re-center it when the text is centered.
+      if (getComputedStyle(el).textAlign === 'center') {
+        el.style.marginInline = 'auto';
+      }
+    };
+
+    balance();
+
+    const parent = el.parentElement;
+    if (!parent || typeof ResizeObserver === 'undefined') return;
+    const ro = new ResizeObserver(balance);
+    ro.observe(parent);
+    return () => ro.disconnect();
+  }, [ref, enabled, text, ratio]);
+}
 
 const VARIANT_SIZE = {
   eyebrow: 'xs',
@@ -166,6 +238,8 @@ export default function Text({
   weight,
   align,
   as,
+  balance,
+  balanceRatio = 1,
   className = '',
   children,
   ...rest
@@ -177,12 +251,16 @@ export default function Text({
   const weightClass = WEIGHTS[weight] || WEIGHTS[VARIANT_WEIGHT[variant]] || '';
   const alignClass = align ? ALIGN[align] : '';
 
+  const enableBalance = balance ?? Boolean(BALANCE_DEFAULT[variant]);
+  const ref = useRef(null);
+  useBalanceLines(ref, enableBalance, typeof children === 'string' ? children : '', balanceRatio);
+
   const classes = [style, sizeClass, weightClass, toneClass, alignClass, className]
     .filter(Boolean)
     .join(' ');
 
   return (
-    <Tag className={classes} {...rest}>
+    <Tag ref={ref} className={classes} {...rest}>
       {children}
     </Tag>
   );
