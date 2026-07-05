@@ -74,7 +74,7 @@ const Solutions = () => {
 
       <section className="py-20 lg:py-28 bg-white">
         <div className="max-w-6xl mx-auto px-8">
-          <div className="text-center max-w-5xl mx-auto mb-12">
+          <div className="text-center mb-12">
             <Text variant="eyebrow">
               {content.situations.eyebrow}
             </Text>
@@ -116,7 +116,7 @@ const Solutions = () => {
 
       <section className="py-20 lg:py-28 bg-[#f7fafc]">
         <div className="max-w-6xl mx-auto px-8">
-          <div className="text-center max-w-5xl mx-auto mb-12">
+          <div className="text-center mb-12">
             <Text variant="eyebrow">
               {content.pathways.eyebrow}
             </Text>
@@ -165,7 +165,7 @@ const Solutions = () => {
 
       <section className="py-20 lg:py-28 bg-white">
         <div className="max-w-5xl mx-auto px-8">
-          <div className="text-center max-w-5xl mx-auto">
+          <div className="text-center">
             <Text variant="eyebrow">
               {content.assessment.eyebrow}
             </Text>

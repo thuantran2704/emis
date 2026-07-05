@@ -56,20 +56,27 @@
 import { useLayoutEffect, useRef } from 'react';
 
 // Role → transform / wrap only (size, color, weight and alignment live below).
+//
+// Body copy gets a character-based `max-width` measure instead of a pixel width.
+// Research (Baymard, WCAG 1.4.8, Butterick's Practical Typography) puts the
+// readable line length at ~50–75 characters (hard cap 80). A `ch` measure keeps
+// that optimal automatically on every screen: on phones it's wider than the
+// viewport so the text fills the width, and on large screens it caps the line
+// so it never runs too long. `mx-auto` re-centers the capped block.
 const VARIANT_STYLE = {
   eyebrow: 'uppercase tracking-[0.3em]',
   title: 'leading-tight text-balance',
   subtitle: '',
-  intro: 'leading-relaxed text-balance',
+  intro: 'leading-relaxed mx-auto max-w-[68ch]',
   cardTitle: '',
   cardSubtitle: '',
-  description: 'leading-relaxed text-pretty',
+  description: 'leading-relaxed text-pretty mx-auto max-w-[72ch]',
 };
 
-// Variants that get JS line-balancing by default. Only short headings — body
-// paragraphs (intro/description) should fill their container proportionally, so
-// balancing (which caps width) is left off for them.
-const BALANCE_DEFAULT = { title: true };
+// JS line-balancing is opt-in only (pass `balance` on a <Text>). It's off by
+// default — sizing is handled by the static `ch` measures above, not by
+// per-render JS measurement.
+const BALANCE_DEFAULT = {};
 
 /**
  * Line-balancing hook. Measures the element at full width to learn its natural
@@ -139,7 +146,7 @@ const VARIANT_SIZE = {
   eyebrow: 'xs',
   title: 'title',
   subtitle: 'sm',
-  intro: 'xs',
+  intro: 'p15',
   cardTitle: 'base',
   cardSubtitle: 'xs',
   description: 'tiny',
