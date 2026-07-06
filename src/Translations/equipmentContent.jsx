@@ -84,6 +84,19 @@ const equipmentContent = {
         "Certified staff for infection control",
       ],
     },
+    ui: {
+      heroLabel: "CLINIC TECHNOLOGY",
+      bookCta: "Book Consultation",
+      priceCta: "View Price List",
+      overviewLabel: "EQUIPMENT OVERVIEW",
+      overviewTitle: "Modern Equipment Systems",
+      overviewIntro: "Each system is chosen for safer, more accurate, and more comfortable care.",
+      cardLabel: "Equipment",
+      qualityLabel: "QUALITY STANDARDS",
+      qualityTitle: "Safety and Precision in Every Treatment",
+      qualityText: "All systems are maintained regularly under strict quality protocols.",
+      qualityCta: "Contact for Consultation",
+    },
   },
 
   vietnamese: {
@@ -169,6 +182,19 @@ const equipmentContent = {
         "Nhân viên được chứng nhận kiểm soát nhiễm khuẩn",
       ],
     },
+    ui: {
+      heroLabel: "CÔNG NGHỆ PHÒNG KHÁM",
+      bookCta: "Đặt Lịch Tư Vấn",
+      priceCta: "Xem Bảng Giá",
+      overviewLabel: "TỔNG QUAN THIẾT BỊ",
+      overviewTitle: "Hệ Thống Thiết Bị Hiện Đại",
+      overviewIntro: "Thiết bị được chọn để điều trị an toàn, chính xác và thoải mái hơn.",
+      cardLabel: "Thiết Bị",
+      qualityLabel: "TIÊU CHUẨN CHẤT LƯỢNG",
+      qualityTitle: "An Toàn Và Chính Xác Trong Từng Điều Trị",
+      qualityText: "Thiết bị được bảo trì định kỳ theo quy trình kiểm soát nghiêm ngặt.",
+      qualityCta: "Liên Hệ Tư Vấn",
+    },
   },
 
   french: {
@@ -248,6 +274,19 @@ const equipmentContent = {
         "Personnel certifié en contrôle des infections",
       ],
     },
+    ui: {
+      heroLabel: "TECHNOLOGIE DE LA CLINIQUE",
+      bookCta: "Prendre rendez-vous",
+      priceCta: "Voir la grille tarifaire",
+      overviewLabel: "APERÇU DES ÉQUIPEMENTS",
+      overviewTitle: "Systèmes d'équipement modernes",
+      overviewIntro: "Chaque système est choisi pour des soins plus sûrs, plus précis et plus confortables.",
+      cardLabel: "Équipement",
+      qualityLabel: "NORMES DE QUALITÉ",
+      qualityTitle: "Sécurité et précision à chaque traitement",
+      qualityText: "Tous les systèmes sont entretenus régulièrement selon des protocoles de qualité stricts.",
+      qualityCta: "Contacter pour une consultation",
+    },
   },
 
   simplified: {
@@ -302,6 +341,19 @@ const equipmentContent = {
       equipmentDescription:
         "无菌室执行国际感染控制标准，器械经过清洗、超声、烘干、灭菌、无菌保存五步流程。",
       features: ["五步灭菌流程", "洁污分区", "感染控制认证团队"],
+    },
+    ui: {
+      heroLabel: "诊所技术",
+      bookCta: "预约咨询",
+      priceCta: "查看价目表",
+      overviewLabel: "设备概览",
+      overviewTitle: "现代化设备系统",
+      overviewIntro: "每套系统均为更安全、更精准、更舆适的治疗而选。",
+      cardLabel: "设备",
+      qualityLabel: "质量标准",
+      qualityTitle: "每次治疗都安全精准",
+      qualityText: "所有系统均按严格质量规程定期维护。",
+      qualityCta: "联系咨询",
     },
   },
 
@@ -358,6 +410,19 @@ const equipmentContent = {
         "無菌室遵循國際感染控制標準，器械經過清洗、超音波、烘乾、滅菌、無菌保存五步流程。",
       features: ["五步滅菌流程", "潔污分區", "感染控制認證團隊"],
     },
+    ui: {
+      heroLabel: "診所技術",
+      bookCta: "預約諢詢",
+      priceCta: "查看價目表",
+      overviewLabel: "設備概覽",
+      overviewTitle: "現代化設備系統",
+      overviewIntro: "每套系統均為更安全、更精準、更舒適的治療而選。",
+      cardLabel: "設備",
+      qualityLabel: "品質標準",
+      qualityTitle: "每次治療都安全精準",
+      qualityText: "所有系統均按嚴格品質規程定期維護。",
+      qualityCta: "聯繫諢詢",
+    },
   },
 
   korean: {
@@ -412,6 +477,19 @@ const equipmentContent = {
       equipmentDescription:
         "멸균실은 국제 감염관리 기준을 따르며, 기구는 세척-초음파-건조-멸균-무균보관의 5단계를 거칩니다.",
       features: ["5단계 멸균 프로세스", "청결/오염 구역 분리", "감염관리 인증 인력"],
+    },
+    ui: {
+      heroLabel: "클리닉 기술",
+      bookCta: "상담 예약",
+      priceCta: "가격표 보기",
+      overviewLabel: "장비 개요",
+      overviewTitle: "현대적 장비 시스템",
+      overviewIntro: "모든 시스템은 더 안전하고 정확하며 편안한 치료를 위해 선택되었습니다.",
+      cardLabel: "장비",
+      qualityLabel: "품질 기준",
+      qualityTitle: "모든 치료에서 안전과 정밀함",
+      qualityText: "모든 시스템은 엄격한 품질 프로토콜에 따라 정기적으로 유지관리됩니다.",
+      qualityCta: "상담 문의",
     },
   },
 };

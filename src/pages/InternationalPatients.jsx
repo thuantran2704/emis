@@ -62,7 +62,7 @@ export default function InternationalPatients() {
       {/* WHO IS THIS FOR */}
       <section className="bg-white py-16 lg:py-32">
         <div className="max-w-6xl mx-auto px-6 md:px-12">
-          <SectionLabel>Who We Serve</SectionLabel>
+          <SectionLabel>{content.labelWhoWeServe}</SectionLabel>
           <SectionTitle>{content.whoForTitle}</SectionTitle>
           <div className="mb-8 grid grid-cols-1 gap-3 lg:mb-12 lg:grid-cols-5 lg:gap-4">
             {content.audiences.map((aud, i) => (
@@ -73,14 +73,14 @@ export default function InternationalPatients() {
             ))}
           </div>
           <p className="max-w-3xl text-[13px] leading-6 text-gray-600 lg:text-[15px] lg:leading-8">
-            Whether you're living abroad, an expat in Vietnam, or an overseas Vietnamese planning a visit, EMIS provides personalized support for dental care. Learn more about <Link to="/about" className="text-[#d4af37] font-semibold hover:text-[#c19d30] transition">our clinic and approach</Link>, or meet our <Link to="/doctors" className="text-[#d4af37] font-semibold hover:text-[#c19d30] transition">experienced dental team</Link>.
+            {content.whoForPara.pre}<Link to="/about" className="text-[#d4af37] font-semibold hover:text-[#c19d30] transition">{content.whoForPara.link1}</Link>{content.whoForPara.mid}<Link to="/doctors" className="text-[#d4af37] font-semibold hover:text-[#c19d30] transition">{content.whoForPara.link2}</Link>{content.whoForPara.post}
           </p>
         </div>
       </section>
 
       {/* BEFORE YOU TRAVEL */}
       <section className="mx-auto max-w-6xl px-5 py-16 lg:px-12 lg:py-32">
-        <SectionLabel>Preparation</SectionLabel>
+        <SectionLabel>{content.labelPreparation}</SectionLabel>
         <SectionTitle>{content.beforeTravelTitle}</SectionTitle>
         <div className="grid gap-8 lg:grid-cols-2 lg:gap-16">
           <div>
@@ -105,7 +105,7 @@ export default function InternationalPatients() {
       {/* PROCESS TIMELINE */}
       <section className="bg-white py-16 lg:py-32">
         <div className="max-w-6xl mx-auto px-6 md:px-12">
-          <SectionLabel>Our Process</SectionLabel>
+          <SectionLabel>{content.labelOurProcess}</SectionLabel>
           <SectionTitle>{content.processTitle}</SectionTitle>
           <ProcessSteps steps={content.processSteps} />
         </div>
@@ -113,10 +113,10 @@ export default function InternationalPatients() {
 
       {/* COMMUNICATION & COORDINATION */}
       <section className="mx-auto max-w-6xl px-5 py-16 lg:px-12 lg:py-32">
-        <SectionLabel>Support</SectionLabel>
+        <SectionLabel>{content.labelSupport}</SectionLabel>
         <SectionTitle>{content.communicationTitle}</SectionTitle>
         <p className="mb-8 max-w-2xl text-[14px] leading-6 text-gray-600 lg:mb-14 lg:text-[1rem] lg:leading-8">
-          {content.communicationIntro} Our team is experienced in supporting international patients and can coordinate treatment planning, logistics, and follow-up care.
+          {content.communicationIntro} {content.communicationSubtext}
         </p>
         <div className="grid gap-5 lg:grid-cols-2 lg:gap-8">
           <div className="group h-full rounded-2xl border border-[#d8e2eb] bg-gradient-to-br from-[#ffffff] to-[#eef4f8] p-5 shadow-sm transition hover:shadow-md lg:p-9">
@@ -155,30 +155,21 @@ export default function InternationalPatients() {
       {/* AFTER YOU RETURN HOME */}
       <section className="bg-white py-16 lg:py-32">
         <div className="max-w-6xl mx-auto px-6 md:px-12">
-          <SectionLabel>Ongoing Care</SectionLabel>
+          <SectionLabel>{content.labelOngoingCare}</SectionLabel>
           <SectionTitle>{content.afterTitle}</SectionTitle>
           <p className="mb-8 max-w-2xl text-[14px] leading-6 text-gray-600 lg:mb-14 lg:text-[1rem] lg:leading-8">
             {content.afterIntro}
           </p>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
-            {content.afterCards.map((card, i) => (
-              <div key={i} className="flex items-center gap-3 rounded-lg border border-[#dbe4ec] bg-[#f7fafc] p-4 lg:gap-4 lg:p-6">
-                <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-[#d4af37] text-[11px] font-semibold text-white lg:h-9 lg:w-9 lg:text-[12px]">
-                  {i + 1}
-                </div>
-                <p className="text-[12px] font-semibold uppercase tracking-[0.04em] text-[#2a3439] lg:text-[13px] lg:tracking-[0.05em]">{card.title}</p>
-              </div>
-            ))}
-          </div>
+          <ProcessSteps steps={content.afterCards} />
         </div>
       </section>
 
       {/* PATIENT JOURNEYS */}
       <section className="mx-auto max-w-6xl px-5 py-16 lg:px-12 lg:py-32">
-        <SectionLabel>Stories</SectionLabel>
+        <SectionLabel>{content.labelStories}</SectionLabel>
         <SectionTitle>{content.journeysTitle}</SectionTitle>
         <p className="mb-8 max-w-2xl text-[14px] leading-6 text-gray-600 lg:mb-14 lg:text-[1rem] lg:leading-8">
-          {content.journeysIntro} See how EMIS has helped patients from around the world. EMIS offers a wide range of <Link to="/restorative-dentistry" className="text-[#d4af37] font-semibold hover:text-[#c19d30] transition">dental treatment services</Link> to meet diverse needs.
+          {content.journeysIntro} {content.journeysLink.pre}<Link to="/restorative-dentistry" className="text-[#d4af37] font-semibold hover:text-[#c19d30] transition">{content.journeysLink.link}</Link>{content.journeysLink.post}
         </p>
         <div className="mb-8 grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-6">
           {content.patientStories.slice(0, 2).map((story, i) => {
@@ -207,7 +198,7 @@ export default function InternationalPatients() {
           })}
         </div>
         <div className="text-center">
-          <CtaButton to="/contact" variant="outlineGold" size="chip">
+          <CtaButton to="/patient-story/dental-implants" variant="outlineGold" size="chip">
             {content.journeysCTA}
           </CtaButton>
         </div>

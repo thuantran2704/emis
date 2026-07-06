@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import logo from '../pics/logo.jpg';
 import footerContent from '../Translations/footerContent';
+import navbarContent from '../Translations/navbarContent';
 import { primaryContactItems, socialContactItems } from '../data/contactChannels';
 
 // NOTE: The following footer links have no dedicated route yet and are mapped
@@ -21,137 +22,79 @@ const facebookUrl = 'https://www.facebook.com/emisinternationaldental/';
 const youtubeUrl = 'https://www.youtube.com/@NhaKhoaEmis';
 const zaloUrl = 'https://zalo.me/2143697215679541994';
 
-const footerNav = {
-  english: {
-    brandStatement: 'Confidence starts with trust.',
-    columns: [
-      {
-        heading: 'About',
-        links: [
-          { label: 'About EMIS', to: '/about' },
-          { label: 'Meet Our Doctors', to: '/doctors' },
-          { label: 'International Patients', to: '/international-patients' },
-          { label: 'Dental Visitor Program', to: '/visitor-program' },
-          { label: 'Contact Us', to: '/contact' },
-        ],
-      },
-      {
-        heading: 'Treatments',
-        links: [
-          { label: 'Implant Solutions', to: '/implant' },
-          { label: 'Fixed Teeth Solutions', to: '/fixed-teeth' },
-          { label: 'Full-Mouth Rehabilitation', to: '/full-mouth' },
-          { label: 'Oral Surgery', to: '/oral-surgery' },
-          { label: 'Restorative Dentistry', to: '/restorative-dentistry' },
-          { label: 'Smile Aesthetics', to: '/smile-aesthetics', sublinks: [
-          ]},
-        ],
-      },
-      {
-        heading: 'Resources',
-        links: [
-          { label: 'Patient Cases', to: '/solutions' },
-          { label: 'Dental Resources', to: '/equipment' },
-          { label: 'FAQs', to: '/faq' },
-          { label: 'Send Your X-ray', to: '/contact' },
-        ],
-      },
-      {
-        heading: 'Patient Information',
-        links: [
-          { label: 'Privacy Policy', to: '/privacy' },
-          { label: 'Medical Disclaimer', to: '/medical-disclaimer' },
-          { label: 'Warranty & Support', to: '/warranty' },
-          { label: 'Media Consent', to: '/media-consent' },
-        ],
-      },
-      {
-        heading: 'Contact',
-        links: [
-          { label: 'Phone', href: 'tel:+84919100021' },
-          { label: 'WhatsApp', href: whatsappUrl },
-          { label: 'Email', href: 'mailto:Emisdentalclinic@gmail.com' },
-          { label: 'Google Maps', href: mapOpenUrl },
-        ],
-      },
-      {
-        heading: 'Follow Us',
-        links: [
-          { label: 'Google Reviews', href: mapOpenUrl },
-          { label: 'Facebook', href: facebookUrl },
-          { label: 'YouTube', href: youtubeUrl },
-          { label: 'Zalo', href: zaloUrl },
-        ],
-      },
-    ],
-  },
-  vietnamese: {
-    brandStatement: 'An tâm bắt đầu từ niềm tin.',
-    columns: [
-      {
-        heading: 'Về EMIS',
-        links: [
-          { label: 'Về EMIS', to: '/about' },
-          { label: 'Đội Ngũ Bác Sĩ', to: '/doctors' },
-          { label: 'Bệnh Nhân Quốc Tế', to: '/international-patients' },
-          { label: 'Chương Trình Thăm Khám', to: '/visitor-program' },
-          { label: 'Liên Hệ', to: '/contact' },
-        ],
-      },
-      {
-        heading: 'Giải Pháp Điều Trị',
-        links: [
-          { label: 'Trồng Răng Implant', to: '/implant' },
-          { label: 'Răng Cố Định Trên Implant', to: '/fixed-teeth' },
-          { label: 'Phục Hồi Toàn Hàm', to: '/full-mouth' },
-          { label: 'Tiểu Phẫu Răng Hàm Mặt', to: '/oral-surgery' },
-          { label: 'Điều Trị & Giữ Răng Thật', to: '/restorative-dentistry' },
-          { label: 'Thẩm Mỹ Nụ Cười', to: '/smile-aesthetics', sublinks: [
-            { label: 'Răng Sứ Bọc Răng', to: '/crown' },
-            { label: 'Mặt Dán Sứ Veneer', to: '/veneer' },
-          ]},
-
-        ],
-      },
-      {
-        heading: 'Kiến Thức',
-        links: [
-          { label: 'Ca Điều Trị Thực Tế', to: '/solutions' },
-          { label: 'Kiến Thức Nha Khoa', to: '/equipment' },
-          { label: 'Câu Hỏi Thường Gặp', to: '/faq' },
-          { label: 'Gửi Phim X-quang', to: '/contact' },
-        ],
-      },
-      {
-        heading: 'Thông Tin Bệnh Nhân',
-        links: [
-          { label: 'Chính Sách Bảo Mật', to: '/privacy' },
-          { label: 'Miễn Trừ Trách Nhiệm', to: '/medical-disclaimer' },
-          { label: 'Bảo Hành & Hỗ Trợ', to: '/warranty' },
-          { label: 'Đồng Ý Hình Ảnh', to: '/media-consent' },
-        ],
-      },
-      {
-        heading: 'Liên Hệ',
-        links: [
-          { label: 'Điện Thoại', href: 'tel:+84919100021' },
-          { label: 'WhatsApp', href: whatsappUrl },
-          { label: 'Email', href: 'mailto:Emisdentalclinic@gmail.com' },
-          { label: 'Google Maps', href: mapOpenUrl },
-        ],
-      },
-      {
-        heading: 'Theo Dõi',
-        links: [
-          { label: 'Google Reviews', href: mapOpenUrl },
-          { label: 'Facebook', href: facebookUrl },
-          { label: 'YouTube', href: youtubeUrl },
-          { label: 'Zalo', href: zaloUrl },
-        ],
-      },
-    ],
-  },
-};
+// Language-neutral footer navigation. Labels are resolved from the existing
+// translations: `nav` = navbarContent (reused menu titles), `f` = footerContent
+// (footer-specific strings + policy labels). Brand names (WhatsApp, Facebook,
+// YouTube, Zalo) are proper nouns and stay as literals.
+function buildFooterColumns(nav, f) {
+  const fn = f.nav;
+  return [
+    {
+      heading: fn.aboutHeading,
+      links: [
+        { label: nav.about, to: '/about' },
+        { label: nav.doctors, to: '/doctors' },
+        { label: nav.internationalPatients, to: '/international-patients' },
+        { label: fn.visitorProgram, to: '/visitor-program' },
+        { label: nav.contact, to: '/contact' },
+      ],
+    },
+    {
+      heading: nav.treatments,
+      links: [
+        { label: nav.implantSolutions, to: '/implant' },
+        { label: nav.fixedTeethSolutions, to: '/fixed-teeth' },
+        { label: nav.fullMouth, to: '/full-mouth' },
+        { label: nav.oralSurgery, to: '/oral-surgery' },
+        { label: nav.restorativeDentistry, to: '/restorative-dentistry' },
+        {
+          label: nav.smileAesthetics,
+          to: '/smile-aesthetics',
+          sublinks: [
+            { label: nav.crown, to: '/crown' },
+            { label: nav.veneer, to: '/veneer' },
+          ],
+        },
+      ],
+    },
+    {
+      heading: nav.resources,
+      links: [
+        { label: nav.patientCases, to: '/solutions' },
+        { label: fn.dentalResources, to: '/equipment' },
+        { label: nav.faq, to: '/faq' },
+        { label: fn.sendXray, to: '/contact' },
+      ],
+    },
+    {
+      heading: fn.patientInfoHeading,
+      links: [
+        { label: f.privacy, to: '/privacy' },
+        { label: f.disclaimer, to: '/medical-disclaimer' },
+        { label: f.warranty, to: '/warranty' },
+        { label: f.media, to: '/media-consent' },
+      ],
+    },
+    {
+      heading: nav.contact,
+      links: [
+        { label: fn.phone, href: 'tel:+84919100021' },
+        { label: 'WhatsApp', href: whatsappUrl },
+        { label: fn.email, href: 'mailto:Emisdentalclinic@gmail.com' },
+        { label: fn.googleMaps, href: mapOpenUrl },
+      ],
+    },
+    {
+      heading: fn.followHeading,
+      links: [
+        { label: fn.googleReviews, href: mapOpenUrl },
+        { label: 'Facebook', href: facebookUrl },
+        { label: 'YouTube', href: youtubeUrl },
+        { label: 'Zalo', href: zaloUrl },
+      ],
+    },
+  ];
+}
 
 const linkClass =
   'text-sm text-gray-400 hover:text-[#d4af37] transition-colors duration-200';
@@ -214,9 +157,10 @@ function ContactBubbles({ items }) {
 export default function Footer() {
   const language = useSelector((state) => state.language.language);
   const content = footerContent[language] || footerContent.english;
-  const nav = footerNav[language] || footerNav.english;
-  const contactColumn = nav.columns[nav.columns.length - 2];
-  const followColumn = nav.columns[nav.columns.length - 1];
+  const nav = navbarContent[language] || navbarContent.english;
+  const columns = buildFooterColumns(nav, content);
+  const contactColumn = columns[columns.length - 2];
+  const followColumn = columns[columns.length - 1];
 
   return (
     <footer className="bg-[#111317] text-white border-t border-white/10">
@@ -277,7 +221,7 @@ export default function Footer() {
           className="hidden gap-x-8 gap-y-10 sm:grid sm:grid-cols-3 lg:grid-cols-6"
           aria-label="Footer"
         >
-          {nav.columns.map((column) => (
+          {columns.map((column) => (
             <div key={column.heading} className="flex flex-col">
               <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-white">
                 {column.heading}
@@ -338,7 +282,7 @@ export default function Footer() {
         <p
           className="mt-12 hidden text-xl font-medium text-[#d4af37] lg:block"
         >
-          {nav.brandStatement}
+          {content.nav.brandStatement}
         </p>
 
         {/* Divider 2: separates brand statement from copyright */}

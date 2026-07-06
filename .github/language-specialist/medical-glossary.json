@@ -89,6 +89,9 @@
     {"id": "full_mouth_rehabilitation", "domain": "restorative", "english": "Full-Mouth Rehabilitation", "vietnamese": "Phục hồi toàn hàm", "french": "Réhabilitation complète", "korean": "전악 재건", "simplified": "全口重建", "traditional": "全口重建"},
     {"id": "restorative_dentistry", "domain": "restorative", "english": "Restorative Dentistry", "vietnamese": "Nha khoa phục hồi", "french": "Dentisterie restauratrice", "korean": "수복 치과", "simplified": "修复牙科", "traditional": "修復牙科"},
     {"id": "aesthetic_dentistry", "domain": "cosmetic", "english": "Aesthetic Dentistry", "vietnamese": "Nha khoa thẩm mỹ", "french": "Dentisterie esthétique", "korean": "심미 치과", "simplified": "美学牙科", "traditional": "美學牙科"},
-    {"id": "functional_goal", "domain": "clinical", "english": "Functional Goal", "vietnamese": "Mục tiêu chức năng", "french": "Objectif fonctionnel", "korean": "기능적 목표", "simplified": "功能目标", "traditional": "功能目標"}
+    {"id": "functional_goal", "domain": "clinical", "english": "Functional Goal", "vietnamese": "Mục tiêu chức năng", "french": "Objectif fonctionnel", "korean": "기능적 목표", "simplified": "功能目标", "traditional": "功能目標"},
+    {"id": "tooth_loss", "domain": "restorative", "english": "Tooth Loss", "vietnamese": "Mất răng", "french": "Perte dentaire", "korean": "치아 상실", "simplified": "牙齿缺失", "traditional": "牙齒缺失"},
+    {"id": "bone_loss", "domain": "implantology", "english": "Bone Loss", "vietnamese": "Tiêu xương", "french": "Perte osseuse", "korean": "골 소실", "simplified": "骨质流失", "traditional": "骨質流失"},
+    {"id": "prescription", "domain": "care", "english": "Prescription", "vietnamese": "Toa thuốc", "french": "Ordonnance", "korean": "처방전", "simplified": "处方", "traditional": "處方"}
   ]
 }

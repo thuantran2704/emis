@@ -9,6 +9,27 @@ const internationalPatientsContent = {
     heroPrimaryCTA: 'Send Your X-ray',
     heroSecondaryCTA: 'Discuss Your Situation',
     heroImageAlt: 'International patient consultation with dental team',
+
+    // Section labels & linked copy
+    labelWhoWeServe: 'Who We Serve',
+    labelPreparation: 'Preparation',
+    labelOurProcess: 'Our Process',
+    labelSupport: 'Support',
+    labelOngoingCare: 'Ongoing Care',
+    labelStories: 'Stories',
+    whoForPara: {
+      pre: 'Whether you\'re living abroad, an expat in Vietnam, or an overseas Vietnamese planning a visit, EMIS provides personalized support for dental care. Learn more about ',
+      link1: 'our clinic and approach',
+      mid: ', or meet our ',
+      link2: 'experienced dental team',
+      post: '.',
+    },
+    communicationSubtext: 'Our team is experienced in supporting international patients and can coordinate treatment planning, logistics, and follow-up care.',
+    journeysLink: {
+      pre: 'See how EMIS has helped patients from around the world. EMIS offers a wide range of ',
+      link: 'dental treatment services',
+      post: ' to meet diverse needs.',
+    },
     
     // Who is this for
     whoForTitle: 'Who Is This Page For?',
@@ -72,7 +93,7 @@ const internationalPatientsContent = {
     // Patient journeys
     journeysTitle: 'Real Patient Journeys',
     journeysIntro: 'Explore real treatment experiences from overseas Vietnamese and international patients at EMIS.',
-    journeysCTA: 'Patient Stories Coming Soon',
+    journeysCTA: 'Read a Patient Story',
     patientStories: [
       {
         name: 'Patient Story 1',
@@ -114,6 +135,27 @@ const internationalPatientsContent = {
     heroPrimaryCTA: 'Gửi X-ray Của Bạn',
     heroSecondaryCTA: 'Trao Đổi Về Trường Hợp Của Bạn',
     heroImageAlt: 'Bệnh nhân quốc tế trao đổi với đội ngũ nha khoa',
+
+    // Section labels & linked copy
+    labelWhoWeServe: 'Đối Tượng Phục Vụ',
+    labelPreparation: 'Chuẩn Bị',
+    labelOurProcess: 'Quy Trình',
+    labelSupport: 'Hỗ Trợ',
+    labelOngoingCare: 'Chăm Sóc Liên Tục',
+    labelStories: 'Câu Chuyện',
+    whoForPara: {
+      pre: 'Dù bạn đang sống ở nước ngoài, là người nước ngoài tại Việt Nam hay Việt kiều đang lên kế hoạch về thăm, EMIS cung cấp hỗ trợ cá nhân hóa cho việc chăm sóc nha khoa. Tìm hiểu thêm về ',
+      link1: 'phòng khám và phương pháp của chúng tôi',
+      mid: ', hoặc gặp gỡ ',
+      link2: 'đội ngũ nha khoa giàu kinh nghiệm',
+      post: ' của chúng tôi.',
+    },
+    communicationSubtext: 'Đội ngũ của chúng tôi giàu kinh nghiệm hỗ trợ bệnh nhân quốc tế và có thể phối hợp lập kế hoạch điều trị, hậu cần và chăm sóc theo dõi.',
+    journeysLink: {
+      pre: 'Xem cách EMIS đã giúp đỡ bệnh nhân từ khắp nơi trên thế giới. EMIS cung cấp nhiều ',
+      link: 'dịch vụ điều trị nha khoa',
+      post: ' để đáp ứng nhu cầu đa dạng.',
+    },
     
     // Who is this for
     whoForTitle: 'Trang Này Dành Cho Ai?',
@@ -177,7 +219,7 @@ const internationalPatientsContent = {
     // Patient journeys
     journeysTitle: 'Hành Trình Điều Trị Thực Tế',
     journeysIntro: 'Khám phá những trải nghiệm điều trị thực tế của Việt kiều và bệnh nhân quốc tế tại EMIS.',
-    journeysCTA: 'Câu Chuyện Bệnh Nhân Sắp Có',
+    journeysCTA: 'Đọc Câu Chuyện Bệnh Nhân',
     patientStories: [
       {
         name: 'Câu Chuyện Bệnh Nhân 1',
@@ -220,6 +262,27 @@ const internationalPatientsContent = {
     heroPrimaryCTA: 'Envoyer Votre Radiographie',
     heroSecondaryCTA: 'Discuter de Votre Situation',
     heroImageAlt: 'Consultation d\'un patient international avec l\'équipe dentaire',
+
+    // Section labels & linked copy
+    labelWhoWeServe: 'Qui Nous Servons',
+    labelPreparation: 'Préparation',
+    labelOurProcess: 'Notre Processus',
+    labelSupport: 'Soutien',
+    labelOngoingCare: 'Soins Continus',
+    labelStories: 'Témoignages',
+    whoForPara: {
+      pre: 'Que vous viviez à l\'étranger, que vous soyez expatrié au Vietnam ou Vietnamien de l\'étranger planifiant une visite, EMIS offre un soutien personnalisé pour les soins dentaires. Apprenez-en plus sur ',
+      link1: 'notre clinique et notre approche',
+      mid: ', ou rencontrez notre ',
+      link2: 'équipe dentaire expérimentée',
+      post: '.',
+    },
+    communicationSubtext: 'Notre équipe est expérimentée dans le soutien aux patients internationaux et peut coordonner la planification du traitement, la logistique et les soins de suivi.',
+    journeysLink: {
+      pre: 'Découvrez comment EMIS a aidé des patients du monde entier. EMIS propose une large gamme de ',
+      link: 'services de traitement dentaire',
+      post: ' pour répondre à des besoins divers.',
+    },
     
     // Who is this for
     whoForTitle: 'Pour Qui Cette Page Est-Elle ?',
@@ -283,7 +346,7 @@ const internationalPatientsContent = {
     // Patient journeys
     journeysTitle: 'Véritables Parcours de Patients',
     journeysIntro: 'Explorez les véritables expériences de traitement de patients vietnamiens de l\'étranger et de patients internationaux chez EMIS.',
-    journeysCTA: 'Histoires de Patients Bientôt Disponibles',
+    journeysCTA: 'Lire un Témoignage de Patient',
     patientStories: [
       {
         name: 'Récit de Patient 1',
@@ -326,6 +389,27 @@ const internationalPatientsContent = {
     heroPrimaryCTA: '发送您的X光片',
     heroSecondaryCTA: '讨论您的情况',
     heroImageAlt: '国际患者与牙科团队的咨询',
+
+    // Section labels & linked copy
+    labelWhoWeServe: '服务对象',
+    labelPreparation: '准备',
+    labelOurProcess: '我们的流程',
+    labelSupport: '支持',
+    labelOngoingCare: '持续护理',
+    labelStories: '故事',
+    whoForPara: {
+      pre: '无论您是居住在国外、在越南的外籍人士，还是计划回国探访的海外越南人，EMIS都为牙科护理提供个性化支持。进一步了解',
+      link1: '我们的诊所和方法',
+      mid: '，或认识我们',
+      link2: '经验丰富的牙科团队',
+      post: '。',
+    },
+    communicationSubtext: '我们的团队在支持国际患者方面经验丰富，可以协调治疗计划、后勤和后续护理。',
+    journeysLink: {
+      pre: '了解EMIS如何帮助来自世界各地的患者。EMIS提供广泛的',
+      link: '牙科治疗服务',
+      post: '以满足多样化需求。',
+    },
     
     // Who is this for
     whoForTitle: '这个页面适合谁？',
@@ -389,7 +473,7 @@ const internationalPatientsContent = {
     // Patient journeys
     journeysTitle: '真实患者故事',
     journeysIntro: '探索来自海外越南人和EMIS国际患者的真实治疗经验。',
-    journeysCTA: '患者故事即将上线',
+    journeysCTA: '阅读患者故事',
     patientStories: [
       {
         name: '患者故事1',
@@ -432,6 +516,27 @@ const internationalPatientsContent = {
     heroPrimaryCTA: '發送您的X光片',
     heroSecondaryCTA: '討論您的情況',
     heroImageAlt: '國際患者與牙科團隊的諮詢',
+
+    // Section labels & linked copy
+    labelWhoWeServe: '服務對象',
+    labelPreparation: '準備',
+    labelOurProcess: '我們的流程',
+    labelSupport: '支持',
+    labelOngoingCare: '持續護理',
+    labelStories: '故事',
+    whoForPara: {
+      pre: '無論您是居住在國外、在越南的外籍人士，還是計畫回國探訪的海外越南人，EMIS都為牙科護理提供個人化支持。進一步了解',
+      link1: '我們的診所和方法',
+      mid: '，或認識我們',
+      link2: '經驗豐富的牙科團隊',
+      post: '。',
+    },
+    communicationSubtext: '我們的團隊在支持國際患者方面經驗豐富，可以協調治療計畫、後勤和後續護理。',
+    journeysLink: {
+      pre: '了解EMIS如何幫助來自世界各地的患者。EMIS提供廣泛的',
+      link: '牙科治療服務',
+      post: '以滿足多樣化需求。',
+    },
     
     // Who is this for
     whoForTitle: '這個頁面適合誰？',
@@ -495,7 +600,7 @@ const internationalPatientsContent = {
     // Patient journeys
     journeysTitle: '真實患者故事',
     journeysIntro: '探索來自海外越南人和EMIS國際患者的真實治療經驗。',
-    journeysCTA: '患者故事即將上線',
+    journeysCTA: '閱讀患者故事',
     patientStories: [
       {
         name: '患者故事1',
@@ -538,6 +643,27 @@ const internationalPatientsContent = {
     heroPrimaryCTA: '엑스레이 보내기',
     heroSecondaryCTA: '상황 논의하기',
     heroImageAlt: '치과 팀과의 국제 환자 상담',
+
+    // Section labels & linked copy
+    labelWhoWeServe: '서비스 대상',
+    labelPreparation: '준비',
+    labelOurProcess: '진행 과정',
+    labelSupport: '지원',
+    labelOngoingCare: '지속적 관리',
+    labelStories: '이야기',
+    whoForPara: {
+      pre: '해외에 거주하든, 베트남 주재원이든, 방문을 계획 중인 해외 베트남인이든, EMIS는 치과 진료를 위한 맞춤형 지원을 제공합니다. ',
+      link1: '저희 클리닉과 접근 방식',
+      mid: '에 대해 자세히 알아보거나, ',
+      link2: '경험 많은 치과 팀',
+      post: '을 만나보세요.',
+    },
+    communicationSubtext: '저희 팀은 국제 환자 지원에 경험이 풍부하며 치료 계획, 물류 및 후속 관리를 조율할 수 있습니다.',
+    journeysLink: {
+      pre: 'EMIS가 전 세계 환자들을 어떻게 도왔는지 확인해 보세요. EMIS는 다양한 요구를 충족하기 위해 폭넓은 ',
+      link: '치과 치료 서비스',
+      post: '를 제공합니다.',
+    },
     
     // Who is this for
     whoForTitle: '이 페이지는 누구를 위한 것인가요?',
@@ -601,7 +727,7 @@ const internationalPatientsContent = {
     // Patient journeys
     journeysTitle: '실제 환자 이야기',
     journeysIntro: 'EMIS에서 해외 베트남인 및 국제 환자의 실제 치료 경험을 탐색하세요.',
-    journeysCTA: '환자 이야기 곧 공개',
+    journeysCTA: '환자 이야기 읽기',
     patientStories: [
       {
         name: '환자 이야기 1',

@@ -21,15 +21,15 @@ export default function ProcessSteps({ steps = [], note, className = '' }) {
     <div className={className}>
 
       {/* ── Mobile: simple numbered list ── */}
-      <ol className="sm:hidden space-y-3">
+      <ol className="sm:hidden space-y-4">
         {items.map((item, i) => (
-          <li key={i} className="flex items-start gap-3">
-            <span className="flex-shrink-0 w-7 h-7 rounded-full bg-[#d4af37] text-white text-xs font-semibold flex items-center justify-center mt-0.5">
+          <li key={i} className="flex items-center gap-4">
+            <span className="flex-shrink-0 w-10 h-10 rounded-full bg-[#d4af37] text-white text-[15px] font-semibold flex items-center justify-center">
               {i + 1}
             </span>
             <div>
-              <p className="text-[14px] font-medium text-[#2a3439] leading-snug">{item.title}</p>
-              {item.text && <p className="text-[12px] text-gray-400 mt-0.5">{item.text}</p>}
+              <p className="text-[15px] font-medium text-[#2a3439] leading-snug">{item.title}</p>
+              {item.text && <p className="text-[13px] text-gray-400 mt-0.5 leading-snug">{item.text}</p>}
             </div>
           </li>
         ))}

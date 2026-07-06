@@ -2,27 +2,16 @@ import { Helmet } from 'react-helmet';
 import { useSelector } from 'react-redux';
 import patientJourneyContent from '../Translations/patientJourneyContent';
 import CtaButton from '../components/CtaButton';
+import timelineChat from '../pics/patient-case1-timeline-chat.png';
+import airportPickup from '../pics/patient-case1-airport-pickup.png';
+import prescriptionChat from '../pics/patient-case1-prescription-chat.png';
+import beforeCT from '../pics/patient-case1-before-CT.png';
+import afterCT from '../pics/patient-case1-after-CT.png';
+import thankYouChat from '../pics/patient-case1-thank-you-followup-chat.png';
 
-// NOTE: Images are intentionally placeholders for review before real assets are
-// added. Replace each <MediaPlaceholder> with an <img> once anonymized, cropped
-// case screenshots and CT scans are ready. See .github/content.md for the asset
-// spec (which screenshots to use, privacy masking, and consent watermark).
-
-function MediaPlaceholder({ label, note, className = '', ratio = 'aspect-[4/3]' }) {
-  return (
-    <div
-      className={`flex ${ratio} w-full flex-col items-center justify-center rounded-2xl border-2 border-dashed border-[#d4af37]/50 bg-[#f7f2e7] p-6 text-center ${className}`}
-      role="img"
-      aria-label={label}
-    >
-      <span className="text-3xl text-[#d4af37]">◺</span>
-      <p className="mt-3 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#b6923a]">
-        {note}
-      </p>
-      <p className="mt-2 max-w-xs text-xs leading-5 text-gray-500">{label}</p>
-    </div>
-  );
-}
+// Screenshots mapped by journey step index. Index 1 (medical readiness) stays a
+// text card — the blood-test screenshot is not shown publicly for privacy.
+const stepImages = [timelineChat, null, airportPickup, prescriptionChat];
 
 function StepLabel({ children }) {
   return (
@@ -75,7 +64,7 @@ export default function PatientJourney() {
           </h2>
 
           <div className="grid gap-8 md:grid-cols-2">
-            {content.steps.map((step) => (
+            {content.steps.map((step, i) => (
               <article
                 key={step.title}
                 className="rounded-2xl border border-[#e6ecf1] bg-[#f7fafc] p-6 lg:p-8"
@@ -84,12 +73,14 @@ export default function PatientJourney() {
                 <h3 className="mb-5 text-lg text-[#2a3439] lg:text-xl">{step.title}</h3>
 
                 {step.media === 'screenshot' ? (
-                  <MediaPlaceholder
-                    note={content.placeholderNote}
-                    label={step.mediaAlt}
-                    ratio="aspect-[3/4] sm:aspect-[4/3]"
-                    className="mb-5 max-w-sm"
-                  />
+                  <div className="mb-5 max-w-sm overflow-hidden rounded-2xl border border-[#e6ecf1] bg-white">
+                    <img
+                      src={stepImages[i]}
+                      alt={step.mediaAlt}
+                      loading="lazy"
+                      className="w-full object-contain"
+                    />
+                  </div>
                 ) : (
                   <div className="mb-5 flex items-center gap-4 rounded-2xl border border-[#e6ecf1] bg-white p-5">
                     <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#f7f2e7] text-xl text-[#d4af37]">
@@ -120,22 +111,28 @@ export default function PatientJourney() {
         <div className="grid gap-8 md:grid-cols-2">
           <figure>
             <StepLabel>{content.clinicalBeforeLabel}</StepLabel>
-            <MediaPlaceholder
-              note={content.placeholderNote}
-              label={content.clinicalBeforeCaption}
-              ratio="aspect-[4/3]"
-            />
+            <div className="overflow-hidden rounded-2xl border border-[#e6ecf1] bg-white">
+              <img
+                src={beforeCT}
+                alt={content.clinicalBeforeCaption}
+                loading="lazy"
+                className="aspect-[4/3] w-full object-cover"
+              />
+            </div>
             <figcaption className="mt-4 text-[13px] leading-6 text-gray-600">
               {content.clinicalBeforeCaption}
             </figcaption>
           </figure>
           <figure>
             <StepLabel>{content.clinicalAfterLabel}</StepLabel>
-            <MediaPlaceholder
-              note={content.placeholderNote}
-              label={content.clinicalAfterCaption}
-              ratio="aspect-[4/3]"
-            />
+            <div className="overflow-hidden rounded-2xl border border-[#e6ecf1] bg-white">
+              <img
+                src={afterCT}
+                alt={content.clinicalAfterCaption}
+                loading="lazy"
+                className="aspect-[4/3] w-full object-cover"
+              />
+            </div>
             <figcaption className="mt-4 text-[13px] leading-6 text-gray-600">
               {content.clinicalAfterCaption}
             </figcaption>
@@ -158,6 +155,14 @@ export default function PatientJourney() {
             {content.experienceQuote}
             <span className="text-[#d4af37]">”</span>
           </blockquote>
+          <div className="mx-auto mt-10 max-w-sm overflow-hidden rounded-2xl border border-[#e6ecf1] bg-white">
+            <img
+              src={thankYouChat}
+              alt={content.experienceImageAlt}
+              loading="lazy"
+              className="w-full object-contain"
+            />
+          </div>
         </div>
       </section>
 

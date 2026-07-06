@@ -58,7 +58,7 @@ export default function Equipment() {
               <p
                 className="uppercase tracking-[0.3em] text-[#C5AF73] text-xs font-semibold"
               >
-                CLINIC TECHNOLOGY
+                {content.ui.heroLabel}
               </p>
 
               <h1
@@ -78,13 +78,13 @@ export default function Equipment() {
                   to="/contact"
                   className="px-7 py-3.5 rounded-full bg-[#d4af37] text-white text-sm font-semibold hover:bg-[#c19d30] transition text-center"
                 >
-                  {language === "vietnamese" ? "Đặt Lịch Tư Vấn" : "Book Consultation"}
+                  {content.ui.bookCta}
                 </Link>
                 <Link
                   to="/restorative-dentistry"
                   className="px-7 py-3.5 rounded-full border border-[#d4af37] text-[#2a3439] text-sm hover:bg-white transition text-center"
                 >
-                  {language === "vietnamese" ? "Xem Bảng Giá" : "View Price List"}
+                  {content.ui.priceCta}
                 </Link>
               </div>
             </div>
@@ -98,19 +98,17 @@ export default function Equipment() {
             <p
               className="uppercase tracking-[0.3em] text-[#C5AF73] mb-5 text-xs font-semibold"
             >
-              EQUIPMENT OVERVIEW
+              {content.ui.overviewLabel}
             </p>
             <h2
               className="text-4xl text-[#2a3439] mb-6"
             >
-              {language === "vietnamese" ? "Hệ Thống Thiết Bị Hiện Đại" : "Modern Equipment Systems"}
+              {content.ui.overviewTitle}
             </h2>
             <p
               className="text-lg text-gray-500 leading-relaxed"
             >
-              {language === "vietnamese"
-                ? "Thiết bị được chọn để điều trị an toàn, chính xác và thoải mái hơn."
-                : "Each system is chosen for safer, more accurate, and more comfortable care."}
+              {content.ui.overviewIntro}
             </p>
           </div>
 
@@ -137,7 +135,7 @@ export default function Equipment() {
                     <p
                       className="uppercase tracking-[0.25em] text-[#C5AF73] text-xs font-semibold mb-4"
                     >
-                      {language === "vietnamese" ? "Thiết Bị" : "Equipment"}
+                      {content.ui.cardLabel}
                     </p>
 
                     <h3
@@ -184,26 +182,24 @@ export default function Equipment() {
             <p
               className="uppercase tracking-[0.25em] text-[#C5AF73] text-xs font-semibold mb-4"
             >
-              QUALITY STANDARDS
+              {content.ui.qualityLabel}
             </p>
             <h3
               className="text-3xl text-[#2a3439] mb-4"
             >
-              {language === "vietnamese" ? "An Toàn Và Chính Xác Trong Từng Điều Trị" : "Safety and Precision in Every Treatment"}
+              {content.ui.qualityTitle}
             </h3>
             <p
               className="text-gray-500 leading-relaxed mb-7"
             >
-              {language === "vietnamese"
-                ? "Thiết bị được bảo trì định kỳ theo quy trình kiểm soát nghiêm ngặt."
-                : "All systems are maintained regularly under strict quality protocols."}
+              {content.ui.qualityText}
             </p>
 
             <Link
               to="/contact"
               className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-[#d4af37] text-white text-sm font-semibold hover:bg-[#c19d30] transition"
             >
-              {language === "vietnamese" ? "Liên Hệ Tư Vấn" : "Contact for Consultation"}
+              {content.ui.qualityCta}
             </Link>
           </div>
         </div>

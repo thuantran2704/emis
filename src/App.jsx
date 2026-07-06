@@ -33,6 +33,7 @@ import MediaConsent from './pages/MediaConsent.jsx';
 import MedicalDisclaimer from './pages/MedicalDisclaimer.jsx';
 import Warranty from './pages/Warranty.jsx';
 import PatientJourney from './pages/PatientJourney.jsx';
+import PatientCase1 from './pages/PatientCase1.jsx';
 
 function ExternalRedirect({ to }) {
   useEffect(() => {
@@ -96,6 +97,7 @@ function AppShell() {
           <Route path="/about" element={<About  />} />
           <Route path="/international-patients" element={<InternationalPatients  />} />
           <Route path="/patient-journey" element={<PatientJourney />} />
+          <Route path="/patient-story/dental-implants" element={<PatientCase1 />} />
           <Route path="/smile-aesthetics" element={<SmileAesthetics />} />
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/full-mouth" element={<FullMouth />} />

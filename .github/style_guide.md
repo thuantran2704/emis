@@ -42,7 +42,7 @@ Shared modules (single source of truth — import, do NOT re-declare per file):
 - `src/data/contactChannels.js` — shared clinic contact/social channels (`contactItems`, `primaryContactItems`, `socialContactItems`). Reuse for any contact/social UI (Contact page, Footer, etc.).
 - `src/components/Section.jsx` — `SectionHeading` (centered eyebrow + title + optional intro) shared by treatment pages.
 - `src/components/MediaFrame.jsx` — configurable image frame (fit cover/contain/none, scale/zoom, position, bg, blur incl. mobile). Pass `image`, `alt`, `settings`.
-- `src/components/ProcessSteps.jsx` — numbered step graph (vertical on mobile, wrapping horizontal stepper on desktop; handles up to ~10 steps). Pass `steps`, `note`.
+- `src/components/ProcessSteps.jsx` — reusable multi-step graph: numbered vertical list on mobile, horizontal stepper on desktop (handles up to ~10 steps). Auto-numbers items, so just pass a `steps` array — no per-page markup needed. Accepts flexible item shapes: `string[]`, `{ title, text }`, `{ title, description }` (description shown as subtext), or `{ number, title, description }` (any `icon`/`number` field is ignored, index drives the number). Optional `note` renders centered italic caption below. Use it for any "how it works / journey / ongoing care" step sequence instead of hand-rolling card grids.
 - `src/components/AdContactFooter.jsx`, `AdQuickBanner.jsx`, `AdFinalCta.jsx` — shared building blocks for promo/ad pages (crown, canal, whitening). Pass `isVI`/content via props.
 - Prefer Tailwind utility classes over inline `style={{ ... }}` for static styling (e.g. use `font-semibold`, not `style={{ fontWeight: 600 }}`).
 
