@@ -66,7 +66,7 @@ export default function Home() {
       </Helmet>
 
       {/* Premium Hero Section with 100vh full-screen background */}
-      <section className="relative mt-[72px] h-[calc(100vh-72px)] w-full overflow-hidden">
+      <section className="relative mt-[72px] min-h-[calc(100vh-72px)] w-full overflow-hidden">
         <img
           src={heroBackground}
           alt="EMIS Dental reception hall"
@@ -79,7 +79,7 @@ export default function Home() {
           aria-hidden="true"
         />
         {/* Hero Content - Left Aligned Overlay */}
-        <div className="absolute inset-0 z-10 flex flex-col items-start justify-center px-6 pt-16 sm:px-12 md:px-24 md:pt-0">
+        <div className="relative z-10 flex min-h-[calc(100vh-72px)] flex-col items-start justify-center px-6 py-16 sm:px-12 md:px-24 md:py-0">
           <div className="max-w-[320px] md:max-w-[420px]">
             {/* Google Rating */}
             <div className="mb-4 md:mb-6 flex items-center gap-2">
