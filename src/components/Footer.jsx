@@ -47,14 +47,7 @@ function buildFooterColumns(nav, f) {
         { label: nav.fullMouth, to: '/full-mouth' },
         { label: nav.oralSurgery, to: '/oral-surgery' },
         { label: nav.restorativeDentistry, to: '/restorative-dentistry' },
-        {
-          label: nav.smileAesthetics,
-          to: '/smile-aesthetics',
-          sublinks: [
-            { label: nav.crown, to: '/crown' },
-            { label: nav.veneer, to: '/veneer' },
-          ],
-        },
+        { label: nav.smileAesthetics, to: '/smile-aesthetics' },
       ],
     },
     {
@@ -109,23 +102,6 @@ function FooterLink({ link }) {
       {link.label}
     </a>
   );
-
-  if (link.sublinks?.length) {
-    return (
-      <>
-        {el}
-        <ul className="mt-1.5 space-y-1.5 pl-3 border-l border-white/10">
-          {link.sublinks.map((sub) => (
-            <li key={sub.label}>
-              <Link to={sub.to} className={linkClass}>
-                {sub.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </>
-    );
-  }
 
   return el;
 }
