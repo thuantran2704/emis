@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import { useSelector } from 'react-redux';
 import homeContent from '../Translations/homeContent';
 import heroBackground from '../pics/doctors-discussing-implants-engaged.jpg';
+import heroBackgroundMobile from '../pics/doctor-nurse-mid-surgery-no-patient-mouth-visible.jpg';
 import confidencePortrait from '../pics/foreign-patient-1-with-dr-tu-smiling.jpg';
 import implantIntroImage from '../pics/all-on-4-implant.jpg';
 import allon6Image from '../pics/allon6.jpeg';
@@ -68,9 +69,14 @@ export default function Home() {
       {/* Premium Hero Section with 100vh full-screen background */}
       <section className="relative mt-[72px] min-h-[calc(100vh-72px)] w-full overflow-hidden">
         <img
+          src={heroBackgroundMobile}
+          alt="EMIS Dental surgical team during a procedure"
+          className="absolute inset-0 h-full w-full object-cover object-center lg:hidden"
+        />
+        <img
           src={heroBackground}
           alt="EMIS Dental reception hall"
-          className="absolute inset-0 h-full w-full object-cover object-right lg:scale-110"
+          className="absolute inset-0 hidden h-full w-full object-cover object-right lg:block lg:scale-110"
           style={{ objectPosition: 'right 62%' }}
         />
         <div

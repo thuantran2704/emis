@@ -97,17 +97,17 @@ const internationalPatientsContent = {
     patientStories: [
       {
         name: 'Patient Story 1',
-        location: 'From Overseas',
-        treatment: 'Teeth Whitening',
-        description: 'Completed a teeth whitening treatment while living abroad',
-        imageAlt: 'Patient journey testimonial',
-      },
-      {
-        name: 'Patient Story 2',
         location: 'Overseas Vietnamese',
         treatment: 'Full Rehabilitation',
         description: 'Restored smile and confidence with comprehensive care',
         imageAlt: 'Patient care experience',
+      },
+      {
+        name: 'Patient Story 2',
+        location: 'From Overseas',
+        treatment: 'Teeth Whitening',
+        description: 'Completed a teeth whitening treatment while living abroad',
+        imageAlt: 'Patient journey testimonial',
       },
       {
         name: 'Patient Story 3',
@@ -223,17 +223,17 @@ const internationalPatientsContent = {
     patientStories: [
       {
         name: 'Câu Chuyện Bệnh Nhân 1',
-        location: 'Từ Nước Ngoài',
-        treatment: 'Tẩy Trắng Răng',
-        description: 'Hoàn thành điều trị tẩy trắng răng khi sống ở nước ngoài',
-        imageAlt: 'Hành trình bệnh nhân được chứng thực',
-      },
-      {
-        name: 'Câu Chuyện Bệnh Nhân 2',
         location: 'Việt Kiều',
         treatment: 'Phục Hồi Toàn Hàm',
         description: 'Khôi phục nụ cười và tự tin thông qua chăm sóc toàn diện',
         imageAlt: 'Trải nghiệm chăm sóc bệnh nhân',
+      },
+      {
+        name: 'Câu Chuyện Bệnh Nhân 2',
+        location: 'Từ Nước Ngoài',
+        treatment: 'Tẩy Trắng Răng',
+        description: 'Hoàn thành điều trị tẩy trắng răng khi sống ở nước ngoài',
+        imageAlt: 'Hành trình bệnh nhân được chứng thực',
       },
       {
         name: 'Câu Chuyện Bệnh Nhân 3',
@@ -350,17 +350,17 @@ const internationalPatientsContent = {
     patientStories: [
       {
         name: 'Récit de Patient 1',
-        location: 'De l\'Étranger',
-        treatment: 'Blanchiment Dentaire',
-        description: 'Blanchiment dentaire réalisé avec succès tout en vivant à l\'étranger',
-        imageAlt: 'Témoignage du parcours du patient',
-      },
-      {
-        name: 'Récit de Patient 2',
         location: 'Vietnamien de l\'Étranger',
         treatment: 'Réhabilitation Complète',
         description: 'Sourire et confiance restaurés grâce à des soins complets',
         imageAlt: 'Expérience de soins du patient',
+      },
+      {
+        name: 'Récit de Patient 2',
+        location: 'De l\'Étranger',
+        treatment: 'Blanchiment Dentaire',
+        description: 'Blanchiment dentaire réalisé avec succès tout en vivant à l\'étranger',
+        imageAlt: 'Témoignage du parcours du patient',
       },
       {
         name: 'Récit de Patient 3',
@@ -477,17 +477,17 @@ const internationalPatientsContent = {
     patientStories: [
       {
         name: '患者故事1',
-        location: '来自海外',
-        treatment: '牙齿美白',
-        description: '在国外生活时完成牙齿美白治疗',
-        imageAlt: '患者路程见证',
-      },
-      {
-        name: '患者故事2',
         location: '海外越南人',
         treatment: '完全修复',
         description: '通过综合护理恢复笑容和自信',
         imageAlt: '患者护理经验',
+      },
+      {
+        name: '患者故事2',
+        location: '来自海外',
+        treatment: '牙齿美白',
+        description: '在国外生活时完成牙齿美白治疗',
+        imageAlt: '患者路程见证',
       },
       {
         name: '患者故事3',
@@ -604,17 +604,17 @@ const internationalPatientsContent = {
     patientStories: [
       {
         name: '患者故事1',
-        location: '來自海外',
-        treatment: '牙齒美白',
-        description: '在國外生活時完成牙齒美白治療',
-        imageAlt: '患者路程見證',
-      },
-      {
-        name: '患者故事2',
         location: '海外越南人',
         treatment: '完全修復',
         description: '通過綜合護理恢復笑容和自信',
         imageAlt: '患者護理經驗',
+      },
+      {
+        name: '患者故事2',
+        location: '來自海外',
+        treatment: '牙齒美白',
+        description: '在國外生活時完成牙齒美白治療',
+        imageAlt: '患者路程見證',
       },
       {
         name: '患者故事3',
@@ -731,17 +731,17 @@ const internationalPatientsContent = {
     patientStories: [
       {
         name: '환자 이야기 1',
-        location: '해외에서',
-        treatment: '치아 미백',
-        description: '해외 거주 중 치아 미백 치료 완료',
-        imageAlt: '환자 여정 증명',
-      },
-      {
-        name: '환자 이야기 2',
         location: '해외 베트남인',
         treatment: '전체 재활',
         description: '종합 치료를 통해 미소와 자신감 회복',
         imageAlt: '환자 치료 경험',
+      },
+      {
+        name: '환자 이야기 2',
+        location: '해외에서',
+        treatment: '치아 미백',
+        description: '해외 거주 중 치아 미백 치료 완료',
+        imageAlt: '환자 여정 증명',
       },
       {
         name: '환자 이야기 3',
