@@ -94,7 +94,7 @@ const About = () => {
       </section>
 
       {/* OUR APPROACH */}
-      <section className="py-32 max-md:py-36 bg-white">
+      <section className="py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-8 space-y-12">
           <div>
             <SectionLabel>{content.labels?.approach || 'Our Approach'}</SectionLabel>
@@ -114,7 +114,7 @@ const About = () => {
       </section>
 
       {/* WHY PLANNING MATTERS */}
-      <section className="py-32 max-md:py-36 bg-[#f1f5f9]">
+      <section className="py-16 md:py-20 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto px-8 space-y-12">
           <div>
             <SectionLabel>{content.labels?.planning || 'Planning'}</SectionLabel>
@@ -143,7 +143,7 @@ const About = () => {
       </section>
 
       {/* TECHNOLOGY & SAFETY */}
-      <section className="py-32 max-md:py-36 bg-white">
+      <section className="py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-8 space-y-12">
           <div>
             <SectionLabel>{content.labels?.technology || 'Technology'}</SectionLabel>
@@ -169,7 +169,7 @@ const About = () => {
       </section>
 
       {/* TEAM */}
-      <section className="py-32 max-md:py-36 bg-[#f1f5f9]">
+      <section className="py-16 md:py-20 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto px-8 space-y-12">
           <div>
             <SectionLabel>{content.labels?.team || 'Our Team'}</SectionLabel>
@@ -216,7 +216,7 @@ const About = () => {
       </section>
 
       {/* SUPPORT FOR OVERSEAS */}
-      <section className="py-32 max-md:py-36 bg-white">
+      <section className="py-16 md:py-20 bg-white">
         <div className="max-w-5xl mx-auto px-8 grid gap-12 lg:landscape:grid-cols-2 lg:landscape:items-center">
           <div className="text-center lg:landscape:text-left">
             <SectionLabel>{content.labels?.international || 'International Patients'}</SectionLabel>
@@ -246,7 +246,7 @@ const About = () => {
       </section>
 
       {/* TRUST & TRANSPARENCY */}
-      <section className="py-32 max-md:py-36 bg-[#f1f5f9]">
+      <section className="py-16 md:py-20 bg-[#f1f5f9]">
         <div className="max-w-4xl mx-auto px-8 space-y-12">
           <div>
             <SectionLabel>{content.labels?.trust || 'Trust & Transparency'}</SectionLabel>
@@ -256,9 +256,9 @@ const About = () => {
             </Text>
             <div className="space-y-4">
               {content.trustBullets.map((b, i) => (
-                <div key={i} className="flex items-start gap-3">
+                <div key={i} className="flex items-start gap-3 text-left">
                   <span className="text-[#C5AF73] mt-0.5">✓</span>
-                  <Text as="span" variant="description" size="p13" tone="heading">
+                  <Text as="span" variant="description" size="p13" tone="heading" className="!mx-0 max-w-none">
                     {b}
                   </Text>
                 </div>
@@ -276,7 +276,7 @@ const About = () => {
       </section>
 
       {/* START STEPS */}
-      <section className="py-32 max-md:py-36 bg-white">
+      <section className="py-16 md:py-20 bg-white">
         <div className="max-w-5xl mx-auto px-8 text-center">
           <SectionLabel>{content.labels?.start || 'Getting Started'}</SectionLabel>
           <SectionTitle>{content.startTitle}</SectionTitle>

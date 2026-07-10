@@ -12,6 +12,7 @@ import Text from '../components/Text';
 import ContactCtas from '../components/ContactCtas';
 import MediaFrame from '../components/MediaFrame';
 import ProcessSteps from '../components/ProcessSteps';
+import Section from '../components/Section';
 
 const Solutions = () => {
   const language = useSelector((state) => state.language.language);
@@ -26,8 +27,7 @@ const Solutions = () => {
         <meta property="og:description" content={content.metaDescription} />
       </Helmet>
 
-      <section className="py-20 lg:py-24">
-        <div className="max-w-6xl mx-auto px-8">
+      <Section py="lg" tone="light" width="6xl">
           <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-10 lg:gap-16 items-center">
             <div className="space-y-6">
               <Text variant="eyebrow">
@@ -69,11 +69,9 @@ const Solutions = () => {
               />
             </div>
           </div>
-        </div>
-      </section>
+      </Section>
 
-      <section className="py-20 lg:py-28 bg-white">
-        <div className="max-w-6xl mx-auto px-8">
+      <Section py="lg" tone="white" width="6xl">
           <div className="text-center mb-12">
             <Text variant="eyebrow">
               {content.situations.eyebrow}
@@ -111,11 +109,9 @@ const Solutions = () => {
               </div>
             )}
           </div>
-        </div>
-      </section>
+      </Section>
 
-      <section className="py-20 lg:py-28 bg-[#f7fafc]">
-        <div className="max-w-6xl mx-auto px-8">
+      <Section py="lg" tone="light" width="6xl">
           <div className="text-center mb-12">
             <Text variant="eyebrow">
               {content.pathways.eyebrow}
@@ -160,11 +156,9 @@ const Solutions = () => {
               </div>
             )}
           </div>
-        </div>
-      </section>
+      </Section>
 
-      <section className="py-20 lg:py-28 bg-white">
-        <div className="max-w-5xl mx-auto px-8">
+      <Section py="lg" tone="white" width="5xl">
           <div className="text-center">
             <Text variant="eyebrow">
               {content.assessment.eyebrow}
@@ -201,10 +195,9 @@ const Solutions = () => {
               </div>
             ))}
           </div>
-        </div>
-      </section>
+      </Section>
 
-      <section className="relative overflow-hidden py-20 lg:py-28 bg-[#f7fafc]">
+      <Section py="lg" tone="light" className="relative overflow-hidden">
         {teamImage && (
           <div className="absolute inset-0" aria-hidden="true">
             <MediaFrame image={teamImage} alt="" settings={{ blur: true, scale: 1.1, position: 'center 35%', rounded: 'rounded-none', className: 'h-full' }} />
@@ -245,10 +238,9 @@ const Solutions = () => {
             </Link>
           </div>
         </div>
-      </section>
+      </Section>
 
-      <section className="py-20 lg:py-28 bg-white">
-        <div className="max-w-6xl mx-auto px-8">
+      <Section py="lg" tone="white" width="6xl">
           <div className="max-w-4xl mx-auto text-center">
             <div className="rounded-2xl border border-[#dbe4ec] bg-[#f7fafc] p-7 lg:p-8">
               <Text variant="eyebrow">
@@ -286,11 +278,10 @@ const Solutions = () => {
               </Link>
             </div>
           </div>
-        </div>
-      </section>
+      </Section>
 
-      <section className="py-20 lg:py-28 bg-[#f7fafc]">
-        <div className="max-w-4xl mx-auto px-8 text-center">
+      <Section py="lg" tone="light" width="4xl">
+        <div className="text-center">
           <Text variant="title" weight="normal" size="sectionTitle">
             {content.finalCta.title}
           </Text>
@@ -315,7 +306,7 @@ const Solutions = () => {
             {content.finalCta.note}
           </Text>
         </div>
-      </section>
+      </Section>
     </main>
   );
 };
