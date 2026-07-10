@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { useSelector } from 'react-redux';
 import homeContent from '../Translations/homeContent';
-import heroBackground from '../pics/doctors-discussing-implants-engaged.jpg';
 import heroBackgroundMobile from '../pics/doctor-nurse-mid-surgery-no-patient-mouth-visible.jpg';
+import heroBackgroundLandscape from '../pics/doctor-analyzing-implant.jpg';
 import confidencePortrait from '../pics/foreign-patient-1-with-dr-tu-smiling.jpg';
 import implantIntroImage from '../pics/all-on-4-implant.jpg';
 import allon6Image from '../pics/allon6.jpeg';
@@ -71,13 +71,12 @@ export default function Home() {
         <img
           src={heroBackgroundMobile}
           alt="EMIS Dental surgical team during a procedure"
-          className="absolute inset-0 h-full w-full object-cover object-center lg:hidden"
+          className="absolute inset-0 hidden h-full w-full object-cover object-center max-lg:portrait:block"
         />
         <img
-          src={heroBackground}
-          alt="EMIS Dental reception hall"
-          className="absolute inset-0 hidden h-full w-full object-cover object-right lg:block lg:scale-110"
-          style={{ objectPosition: 'right 62%' }}
+          src={heroBackgroundLandscape}
+          alt="EMIS Dental doctor analyzing a dental implant"
+          className="absolute inset-0 block h-full w-full object-cover object-center max-lg:portrait:hidden"
         />
         <div
           className="absolute inset-0"
