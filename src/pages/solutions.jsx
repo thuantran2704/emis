@@ -44,9 +44,9 @@ const Solutions = () => {
 
               <div className="grid sm:grid-cols-2 gap-3">
                 {content.hero.highlights.map((item) => (
-                  <div key={item} className="flex gap-2 items-start rounded-xl bg-white/80 border border-[#dde5ec] px-4 py-3">
-                    <CheckCircle size={18} className="text-[#d4af37] mt-0.5 flex-shrink-0" />
-                    <Text as="span" variant="description" size="sm" tone="heading">
+                  <div key={item} className="flex gap-2 items-center justify-start text-left rounded-xl bg-white/80 border border-[#dde5ec] px-4 py-3">
+                    <CheckCircle size={18} className="text-[#d4af37] flex-shrink-0" />
+                    <Text as="span" variant="description" size="sm" tone="heading" className="!mx-0 max-w-none">
                       {item}
                     </Text>
                   </div>
