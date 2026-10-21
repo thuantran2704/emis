@@ -4,8 +4,8 @@ import { useSelector } from 'react-redux';
 import { Helmet } from 'react-helmet';
 import drTuContent from '../Translations/drTuContent';
 import doctorPortrait from '../pics/dr-tu-potrait.jpg';
-import consultImage from '../pics/doctor-reviewing-x-ray-with-patient-explaining-treatment.jpg';
-import teamImage from '../pics/doctor-discussing-case-with-each-other-at-work-desk.jpg';
+import consultImage from '../pics/measuring-result-cbct-x-ray-patient-smiling.jpg';
+import teamImage from '../pics/sterile-room-phong-khu-trung.jpg';
 import planningImage from '../pics/dr-tu-working.jpg';
 
 const SectionLabel = ({ children }) => (

@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { Helmet } from 'react-helmet';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import { solutionsContent } from '../Translations/solutionsContent';
-import heroImage from '../pics/doctor-reviewing-x-ray-with-patient-explaining-treatment.jpg';
+import heroImage from '../pics/implant-illustration.jpg';
 import situationsImage from '../pics/elder-person-teeth-uncomfortable.jpeg';
 import pathwaysImage from '../pics/denture.jpeg';
 import teamImage from '../pics/healthcare-team.jpg';

@@ -7,7 +7,7 @@ import ProcessSteps from '../components/ProcessSteps';
 import { oralSurgeryContent } from '../Translations/oralSurgeryContent';
 import oralSurgeryHeroImg from '../pics/dr-at-work-surgery.jpg';
 import wisdomTeethImg from '../pics/wisdom-teeth.jpg';
-import evaluationProcessImg from '../pics/doctor-reviewing-x-ray-with-patient-explaining-treatment.jpg';
+import evaluationProcessImg from '../pics/sterile-room-phong-khu-trung.jpg';
 
 const OralSurgery = () => {
   const language = useSelector((state) => state.language.language);

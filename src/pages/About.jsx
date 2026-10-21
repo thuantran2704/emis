@@ -5,7 +5,7 @@ import equipmentContent from '../Translations/equipmentContent';
 import ServicesSlider from '../components/ServicesSlider';
 import Text from '../components/Text';
 import consultationImage from '../pics/doctor-explaining-procedure-to-patient.jpg';
-import planningImage from '../pics/doctor-reviewing-x-ray-with-patient-explaining-treatment.jpg';
+import planningImage from '../pics/measuring-result-cbct-x-ray-patient-smiling.jpg';
 import technologyImage from '../pics/measuring-result-cbct-x-ray-patient-smiling.jpg';
 import teamImage from '../pics/sterile-room-phong-khu-trung.jpg';
 import internationalImage from '../pics/chat-pic-timeline-discussion-pre-trip.jpeg';

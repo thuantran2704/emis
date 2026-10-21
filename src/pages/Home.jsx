@@ -8,7 +8,7 @@ import heroBackgroundLandscape from '../pics/doctor-analyzing-implant.jpg';
 import confidencePortrait from '../pics/foreign-patient-1-with-dr-tu-smiling.jpg';
 import implantIntroImage from '../pics/all-on-4-implant.jpg';
 import allon6Image from '../pics/allon6.jpeg';
-import cbctReview from '../pics/doctor-reviewing-x-ray-with-patient-explaining-treatment.jpg';
+import cbctReview from '../pics/measuring-result-cbct-x-ray-patient-smiling.jpg';
 import onlineConsultation from '../pics/consulting-team.jpg';
 import elderCoupleSmiling from '../pics/elder-couple-smiling-outdoors-healthy-walking.jpeg';
 import confidentSmile from '../pics/confident-smile-social.jpeg';

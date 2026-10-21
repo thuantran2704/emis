@@ -14,7 +14,7 @@ import {
 } from 'lucide-react';
 import { fullMouthContent } from '../Translations/fullMouthContent';
 import heroImage from '../pics/full-mouth-rehabilation.jpeg';
-import overseasImage from '../pics/doctor-reviewing-x-ray-with-patient-explaining-treatment.jpg';
+import overseasImage from '../pics/chat-pic-timeline-discussion-pre-trip.jpeg';
 import teamImage from '../pics/sterile-room-phong-khu-trung.jpg';
 import { sectionLabelClass, titleClass, sectionTitleClass, ctaPrimaryClass, ctaSecondaryClass } from '../styles/ui';
 import ContactCtas from '../components/ContactCtas';
