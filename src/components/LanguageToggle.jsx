@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setLanguage } from '../slices/languageSlice';
 
@@ -14,8 +14,8 @@ export default function LanguageToggle({ variant = 'floating', compact = false }
     { code: 'english',    label: 'EN' },
     { code: 'french',     label: 'FR' },
     { code: 'korean',     label: '한' },
-    { code: 'simplified', label: '简' },
-    { code: 'traditional',label: '繁' },
+    { code: 'simplified', label: '中' },
+    { code: 'traditional',label: '中' },
   ];
 
   const currentLabel = languages.find((l) => l.code === currentLanguage)?.label ?? 'EN';
@@ -51,7 +51,7 @@ export default function LanguageToggle({ variant = 'floating', compact = false }
         </div>
       )}
 
-      {/* Trigger button — navbar variant */}
+      {/* Trigger button â€” navbar variant */}
       {isNavbar ? (
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -90,3 +90,4 @@ export default function LanguageToggle({ variant = 'floating', compact = false }
     </div>
   );
 }
+
