@@ -34,11 +34,11 @@ export const DOCTORS = [
     english: {
       name: 'Dr. Tran Minh Tu',
       role: 'Odonto-Maxillofacial Surgeon',
-      focus: 'Implant Surgery â€¢ Oral Surgery â€¢ Full-Mouth Rehabilitation',
+      focus: 'Implant Surgery • Oral Surgery • Full-Mouth Rehabilitation',
       summary:
         'Currently practicing at Ho Chi Minh City Odonto-Maxillofacial Hospital and EMIS Premium Dental Clinic.',
-      languages: 'Vietnamese â€¢ English â€¢ Hungarian â€¢ Chinese',
-      specialties: 'Implant Surgery â€¢ Full-Mouth Rehabilitation â€¢ Oral Surgery',
+      languages: 'Vietnamese • English • Hungarian • Chinese',
+      specialties: 'Implant Surgery • Full-Mouth Rehabilitation • Oral Surgery',
       descriptionOne:
         'Dr. Tu focuses on implant surgery, full-mouth rehabilitation, oral surgery, and aesthetic dentistry, with a particular interest in complex rehabilitation cases.',
       descriptionTwo:
