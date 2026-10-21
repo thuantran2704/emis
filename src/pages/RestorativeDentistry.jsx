@@ -6,8 +6,8 @@ import { restorativeContent } from '../Translations/restorativeContent';
 import { SectionHeading } from '../components/Section';
 import ContactCtas from '../components/ContactCtas';
 import { sectionLabelClass, ctaPrimaryClass } from '../styles/ui';
-import heroImg from '../pics/doctor-reviewing-x-ray-with-patient-explaining-treatment.jpg';
-import xrayImg from '../pics/dr-x-ray-consultation.jpg';
+import heroImg from '../pics/measuring-result-cbct-x-ray-patient-smiling.jpg';
+import xrayImg from '../pics/sterile-room-phong-khu-trung.jpg';
 
 const bodyClass = 'text-lg text-gray-600 leading-relaxed';
 

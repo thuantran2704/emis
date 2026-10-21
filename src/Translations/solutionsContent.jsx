@@ -139,11 +139,11 @@
         'Depending on your case, treatment may involve diagnosis, planning, surgery, restoration, and follow-up care. The EMIS team works together to support each stage clearly and carefully.',
       doctors: [
         {
-          focus: 'Implant Prosthetics â€¢ Restorative Rehabilitation â€¢ Function & Smile Aesthetics',
+          focus: 'Implant Prosthetics • Restorative Rehabilitation • Function & Smile Aesthetics',
         },
         {
           name: 'Dr. Tran Minh Tu',
-          focus: 'Implant Surgery â€¢ Oral Surgery â€¢ Complex Rehabilitation Planning',
+          focus: 'Implant Surgery • Oral Surgery • Complex Rehabilitation Planning',
         },
       ],
       cta: 'Meet Our Doctors',
@@ -327,11 +327,11 @@
       doctors: [
         {
           name: 'BS. CKI Nguyá»…n Tháº¿ SÆ¡n',
-          focus: 'Phá»¥c hÃ¬nh Implant â€¢ Phá»¥c há»“i chá»©c nÄƒng â€¢ Tháº©m má»¹ ná»¥ cÆ°á»i',
+          focus: 'Phá»¥c hÃ¬nh Implant • Phá»¥c há»“i chá»©c nÄƒng • Tháº©m má»¹ ná»¥ cÆ°á»i',
         },
         {
           name: 'BS. CKI Tráº§n Minh TÃº',
-          focus: 'Pháº«u thuáº­t Implant â€¢ Tiá»ƒu pháº«u RÄƒng HÃ m Máº·t â€¢ Phá»¥c há»“i phá»©c táº¡p',
+          focus: 'Pháº«u thuáº­t Implant • Tiá»ƒu pháº«u RÄƒng HÃ m Máº·t • Phá»¥c há»“i phá»©c táº¡p',
         },
       ],
       cta: 'TÃ¬m Hiá»ƒu Äá»™i NgÅ© BÃ¡c SÄ©',
@@ -514,11 +514,11 @@
         'Selon votre cas, le traitement peut inclure diagnostic, planification, chirurgie, restauration et suivi. L equipe EMIS coordonne chaque etape de facon claire et rigoureuse.',
       doctors: [
         {
-          focus: 'Prothese implantaire â€¢ Rehabilitation restauratrice â€¢ Fonction et esthetique du sourire',
+          focus: 'Prothese implantaire • Rehabilitation restauratrice • Fonction et esthetique du sourire',
         },
         {
           name: 'Dr Tran Minh Tu',
-          focus: 'Chirurgie implantaire â€¢ Chirurgie orale â€¢ Planification des rehabilitations complexes',
+          focus: 'Chirurgie implantaire • Chirurgie orale • Planification des rehabilitations complexes',
         },
       ],
       cta: 'Rencontrer Nos Medecins',
@@ -695,11 +695,11 @@
         'í™˜ìž ìƒíƒœì— ë”°ë¼ ì§„ë‹¨, ê³„íš, ìˆ˜ìˆ , ìˆ˜ë³µ, ì¶”ì  ê´€ë¦¬ê°€ í•¨ê»˜ ì§„í–‰ë  ìˆ˜ ìžˆìŠµë‹ˆë‹¤. EMIS íŒ€ì€ ê° ë‹¨ê³„ë¥¼ ëª…í™•í•˜ê³  ì‹ ì¤‘í•˜ê²Œ í˜‘ì—…í•©ë‹ˆë‹¤.',
       doctors: [
         {
-          focus: 'ìž„í”Œëž€íŠ¸ ë³´ì²  â€¢ ìˆ˜ë³µ ìž¬ê±´ â€¢ ê¸°ëŠ¥ ë° ë¯¸ì†Œ ì‹¬ë¯¸',
+          focus: 'ìž„í”Œëž€íŠ¸ ë³´ì²  • ìˆ˜ë³µ ìž¬ê±´ • ê¸°ëŠ¥ ë° ë¯¸ì†Œ ì‹¬ë¯¸',
         },
         {
           name: 'Dr. Tran Minh Tu',
-          focus: 'ìž„í”Œëž€íŠ¸ ìˆ˜ìˆ  â€¢ êµ¬ê°•ì™¸ê³¼ â€¢ ë³µí•© ìž¬ê±´ ê³„íš',
+          focus: 'ìž„í”Œëž€íŠ¸ ìˆ˜ìˆ  • êµ¬ê°•ì™¸ê³¼ • ë³µí•© ìž¬ê±´ ê³„íš',
         },
       ],
       cta: 'ì˜ë£Œì§„ ë³´ê¸°',
@@ -876,11 +876,11 @@
         'æ ¹æ®ä¸ªæ¡ˆéœ€è¦ï¼Œæ²»ç–—å¯èƒ½æ¶‰åŠè¯Šæ–­ã€è®¡åˆ’ã€æ‰‹æœ¯ã€ä¿®å¤ä¸Žå¤è¯Šè·Ÿè¿›ã€‚EMIS å›¢é˜Ÿä¼šåœ¨æ¯ä¸ªé˜¶æ®µååŒé…åˆã€‚',
       doctors: [
         {
-          focus: 'ç§æ¤ä¿®å¤ â€¢ åŠŸèƒ½é‡å»º â€¢ åŠŸèƒ½ä¸Žç¬‘å®¹ç¾Žå­¦',
+          focus: 'ç§æ¤ä¿®å¤ • åŠŸèƒ½é‡å»º • åŠŸèƒ½ä¸Žç¬‘å®¹ç¾Žå­¦',
         },
         {
           name: 'Dr. Tran Minh Tu',
-          focus: 'ç§æ¤å¤–ç§‘ â€¢ å£è…”å¤–ç§‘ â€¢ å¤æ‚é‡å»ºè§„åˆ’',
+          focus: 'ç§æ¤å¤–ç§‘ • å£è…”å¤–ç§‘ • å¤æ‚é‡å»ºè§„åˆ’',
         },
       ],
       cta: 'äº†è§£åŒ»ç”Ÿå›¢é˜Ÿ',
@@ -1057,11 +1057,11 @@
         'ä¾å€‹æ¡ˆéœ€æ±‚ï¼Œæ²»ç™‚å¯èƒ½åŒ…å«è¨ºæ–·ã€è¦åŠƒã€æ‰‹è¡“ã€ä¿®å¾©èˆ‡è¿½è¹¤ç…§è­·ã€‚EMIS åœ˜éšŠæœƒåœ¨æ¯å€‹éšŽæ®µå”ä½œé…åˆã€‚',
       doctors: [
         {
-          focus: 'æ¤ç‰™ä¿®å¾© â€¢ åŠŸèƒ½é‡å»º â€¢ åŠŸèƒ½èˆ‡ç¬‘å®¹ç¾Žå­¸',
+          focus: 'æ¤ç‰™ä¿®å¾© • åŠŸèƒ½é‡å»º • åŠŸèƒ½èˆ‡ç¬‘å®¹ç¾Žå­¸',
         },
         {
           name: 'Dr. Tran Minh Tu',
-          focus: 'æ¤ç‰™å¤–ç§‘ â€¢ å£è…”å¤–ç§‘ â€¢ è¤‡é›œé‡å»ºè¦åŠƒ',
+          focus: 'æ¤ç‰™å¤–ç§‘ • å£è…”å¤–ç§‘ • è¤‡é›œé‡å»ºè¦åŠƒ',
         },
       ],
       cta: 'äº†è§£é†«å¸«åœ˜éšŠ',

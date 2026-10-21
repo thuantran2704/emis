@@ -5,10 +5,10 @@ import equipmentContent from '../Translations/equipmentContent';
 import ServicesSlider from '../components/ServicesSlider';
 import Text from '../components/Text';
 import consultationImage from '../pics/doctor-explaining-procedure-to-patient.jpg';
-import planningImage from '../pics/dr-x-ray-consultation.jpg';
+import planningImage from '../pics/doctor-reviewing-x-ray-with-patient-explaining-treatment.jpg';
 import technologyImage from '../pics/measuring-result-cbct-x-ray-patient-smiling.jpg';
-import teamImage from '../pics/healthcare-team.jpg';
-import internationalImage from '../pics/Better_emis_hall.jpeg';
+import teamImage from '../pics/sterile-room-phong-khu-trung.jpg';
+import internationalImage from '../pics/chat-pic-timeline-discussion-pre-trip.jpeg';
 import safetyImage from '../pics/sterile-room-phong-khu-trung.jpg';
 import vatechImg from '../pics/vatech.jpg';
 import kehongImg from '../pics/ghe-ngoi-nha-khoa-kehong.jpg';
@@ -53,29 +53,17 @@ const About = () => {
       </Helmet>
 
       {/* HERO */}
-      <section className="relative overflow-hidden">
-        {/* Blurred, slightly zoomed background */}
-        <div
-          className="absolute inset-0 bg-cover bg-center scale-110 blur-[2px]"
-          style={{ backgroundImage: `url(${internationalImage})` }}
-          aria-hidden="true"
-        />
-        {/* Dark gradient scrim for strong text contrast */}
-        <div
-          className="absolute inset-0 bg-gradient-to-b from-[#16242b]/75 via-[#16242b]/60 to-[#16242b]/80"
-          aria-hidden="true"
-        />
-
-        <div className="relative py-36 px-8 max-w-4xl mx-auto text-center">
-          <Text variant="eyebrow" size="tiny" tone="goldLight" className="mb-7">
+      <section className="overflow-hidden bg-white">
+        <div className="py-28 px-8 max-w-4xl mx-auto text-center">
+          <p className="mb-7 text-xs font-semibold uppercase tracking-[0.3em] text-[#C5AF73]">
             Who We Are
-          </Text>
-          <Text as="h1" variant="title" weight="normal" size="hero" tone="white" className="mb-8">
+          </p>
+          <h1 className="mb-8 text-3xl font-normal leading-tight text-[#16324a] md:text-5xl">
             {content.heroTitle}
-          </Text>
-          <Text variant="intro" size="heroSub" tone="whiteSoft" className="mb-12 max-w-2xl mx-auto">
+          </h1>
+          <p className="mb-12 mx-auto max-w-2xl text-[15px] leading-relaxed text-[#5d7388] md:text-[18px]">
             {content.heroSubtitle}
-          </Text>
+          </p>
           <div className="flex items-center justify-center gap-4 flex-wrap">
             <Link
               to="/contact"
@@ -85,7 +73,7 @@ const About = () => {
             </Link>
             <Link
               to="/doctors"
-              className="px-7 py-3.5 rounded-full border border-white/70 text-white text-sm font-semibold hover:bg-white/10 transition"
+              className="px-7 py-3.5 rounded-full border border-[#15344f] text-[#15344f] text-sm font-semibold hover:bg-[#15344f]/10 transition"
             >
               {content.heroSecondaryCTA}
             </Link>

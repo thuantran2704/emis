@@ -55,10 +55,10 @@ export const DOCTORS = [
     vietnamese: {
       name: 'BS. CKI Tráº§n Minh TÃº',
       role: 'Pháº«u thuáº­t viÃªn RÄƒng HÃ m Máº·t',
-      focus: 'Pháº«u thuáº­t Implant â€¢ Tiá»ƒu pháº«u RÄƒng HÃ m Máº·t â€¢ Phá»¥c há»“i toÃ n hÃ m',
+      focus: 'Pháº«u thuáº­t Implant • Tiá»ƒu pháº«u RÄƒng HÃ m Máº·t • Phá»¥c há»“i toÃ n hÃ m',
       summary: 'Hiá»‡n Ä‘ang cÃ´ng tÃ¡c táº¡i Bá»‡nh viá»‡n RÄƒng HÃ m Máº·t TP.HCM vÃ  EMIS Premium Dental Clinic.',
-      languages: 'Tiáº¿ng Viá»‡t â€¢ English â€¢ Hungarian â€¢ Chinese',
-      specialties: 'Implant â€¢ Phá»¥c Há»“i ToÃ n HÃ m â€¢ Tiá»ƒu Pháº«u RÄƒng HÃ m Máº·t',
+      languages: 'Tiáº¿ng Viá»‡t • English • Hungarian • Chinese',
+      specialties: 'Implant • Phá»¥c Há»“i ToÃ n HÃ m • Tiá»ƒu Pháº«u RÄƒng HÃ m Máº·t',
       descriptionOne:
         'BÃ¡c sÄ© TÃº táº­p trung vÃ o Implant, phá»¥c há»“i toÃ n hÃ m vÃ  pháº«u thuáº­t RÄƒng HÃ m Máº·t, Ä‘áº·c biá»‡t vá»›i nhá»¯ng trÆ°á»ng há»£p cáº§n phá»¥c há»“i phá»©c táº¡p vÃ  Ä‘Ã²i há»i káº¿ hoáº¡ch Ä‘iá»u trá»‹ ká»¹ lÆ°á»¡ng.',
       descriptionTwo:
@@ -75,11 +75,11 @@ export const DOCTORS = [
     french: {
       name: 'Dr. Tran Minh Tu',
       role: 'Chirurgien Oral Et Maxillo-Facial',
-      focus: 'Implantologie â€¢ RÃ©habilitation ComplÃ¨te â€¢ Chirurgie Orale',
+      focus: 'Implantologie • RÃ©habilitation ComplÃ¨te • Chirurgie Orale',
       summary:
         'FormÃ© aux Ã‰tats-Unis, en Hongrie et au Vietnam, avec une pratique clinique active Ã  HÃ´ Chi Minh-Ville.',
-      languages: 'Vietnamien â€¢ Anglais â€¢ Hongrois â€¢ Chinois',
-      specialties: 'Implantologie â€¢ RÃ©habilitation ComplÃ¨te â€¢ Chirurgie Orale',
+      languages: 'Vietnamien • Anglais • Hongrois • Chinois',
+      specialties: 'Implantologie • RÃ©habilitation ComplÃ¨te • Chirurgie Orale',
       descriptionOne:
         'Le Dr Tu se consacre Ã  l\'implantologie, Ã  la rÃ©habilitation complÃ¨te, Ã  la chirurgie orale et Ã  la dentisterie esthÃ©tique, avec un intÃ©rÃªt particulier pour les cas complexes.',
       descriptionTwo:
@@ -96,10 +96,10 @@ export const DOCTORS = [
     korean: {
       name: 'Dr. Tran Minh Tu',
       role: 'êµ¬ê°•ì•…ì•ˆë©´ì™¸ê³¼ ì „ë¬¸ì˜',
-      focus: 'ìž„í”Œëž€íŠ¸ ìˆ˜ìˆ  â€¢ ì „ì²´ êµ¬ê°• ìž¬ê±´ â€¢ êµ¬ê°•ì™¸ê³¼',
+      focus: 'ìž„í”Œëž€íŠ¸ ìˆ˜ìˆ  • ì „ì²´ êµ¬ê°• ìž¬ê±´ • êµ¬ê°•ì™¸ê³¼',
       summary: 'ë¯¸êµ­, í—ê°€ë¦¬, ë² íŠ¸ë‚¨ì—ì„œ êµìœ¡ê³¼ ìˆ˜ë ¨ì„ ë°›ì€ êµ­ì œì  ë°°ê²½ì˜ êµ¬ê°•ì•…ì•ˆë©´ì™¸ê³¼ ì „ë¬¸ì˜.',
-      languages: 'ë² íŠ¸ë‚¨ì–´ â€¢ ì˜ì–´ â€¢ í—ê°€ë¦¬ì–´ â€¢ ì¤‘êµ­ì–´',
-      specialties: 'ìž„í”Œëž€íŠ¸ ìˆ˜ìˆ  â€¢ ì „ì²´ êµ¬ê°• ìž¬ê±´ â€¢ êµ¬ê°•ì™¸ê³¼',
+      languages: 'ë² íŠ¸ë‚¨ì–´ • ì˜ì–´ • í—ê°€ë¦¬ì–´ • ì¤‘êµ­ì–´',
+      specialties: 'ìž„í”Œëž€íŠ¸ ìˆ˜ìˆ  • ì „ì²´ êµ¬ê°• ìž¬ê±´ • êµ¬ê°•ì™¸ê³¼',
       descriptionOne:
         'Tu ì›ìž¥ì€ ìž„í”Œëž€íŠ¸ ìˆ˜ìˆ , ì „ì²´ êµ¬ê°• ìž¬ê±´, êµ¬ê°•ì™¸ê³¼ ë° ì‹¬ë¯¸ì¹˜ê³¼ë¥¼ ì¤‘ì‹¬ìœ¼ë¡œ ì§„ë£Œí•˜ë©° ë³µìž¡í•œ ìž¬ê±´ ì¹˜ë£Œì— íŠ¹ë³„í•œ ê´€ì‹¬ì„ ê°€ì§€ê³  ìžˆìŠµë‹ˆë‹¤.',
       descriptionTwo:
@@ -116,10 +116,10 @@ export const DOCTORS = [
     simplified: {
       name: 'Dr. Tran Minh Tu',
       role: 'å£è…”é¢Œé¢å¤–ç§‘åŒ»ç”Ÿ',
-      focus: 'ç§æ¤æ‰‹æœ¯ â€¢ å…¨å£é‡å»º â€¢ å£è…”å¤–ç§‘',
+      focus: 'ç§æ¤æ‰‹æœ¯ • å…¨å£é‡å»º • å£è…”å¤–ç§‘',
       summary: 'æ›¾åœ¨ç¾Žå›½ã€åŒˆç‰™åˆ©å’Œè¶Šå—æŽ¥å—æ•™è‚²ä¸ŽåŸ¹è®­ï¼Œç›®å‰åœ¨èƒ¡å¿—æ˜Žå¸‚å£è…”é¢Œé¢åŒ»é™¢ä»»èŒã€‚',
-      languages: 'è¶Šå—è¯­ â€¢ è‹±è¯­ â€¢ åŒˆç‰™åˆ©è¯­ â€¢ ä¸­æ–‡',
-      specialties: 'ç§æ¤æ‰‹æœ¯ â€¢ å…¨å£é‡å»º â€¢ å£è…”å¤–ç§‘',
+      languages: 'è¶Šå—è¯­ • è‹±è¯­ • åŒˆç‰™åˆ©è¯­ • ä¸­æ–‡',
+      specialties: 'ç§æ¤æ‰‹æœ¯ • å…¨å£é‡å»º • å£è…”å¤–ç§‘',
       descriptionOne:
         'Tu åŒ»ç”Ÿä¸“æ³¨äºŽç§æ¤ç‰™æ‰‹æœ¯ã€å…¨å£é‡å»ºã€å£è…”å¤–ç§‘ä»¥åŠç¾Žå­¦ç‰™ç§‘ï¼Œå°¤å…¶å…³æ³¨å¤æ‚é‡å»ºç—…ä¾‹ã€‚',
       descriptionTwo:
@@ -136,10 +136,10 @@ export const DOCTORS = [
     traditional: {
       name: 'Dr. Tran Minh Tu',
       role: 'å£è…”é¡Žé¢å¤–ç§‘é†«å¸«',
-      focus: 'æ¤ç‰™æ‰‹è¡“ â€¢ å…¨å£é‡å»º â€¢ å£è…”å¤–ç§‘',
+      focus: 'æ¤ç‰™æ‰‹è¡“ • å…¨å£é‡å»º • å£è…”å¤–ç§‘',
       summary: 'æ›¾æ–¼ç¾Žåœ‹ã€åŒˆç‰™åˆ©åŠè¶Šå—æŽ¥å—æ•™è‚²èˆ‡åŸ¹è¨“ï¼Œç›®å‰ä»»è·æ–¼èƒ¡å¿—æ˜Žå¸‚å£è…”é¡Žé¢é†«é™¢ã€‚',
-      languages: 'è¶Šå—èªž â€¢ è‹±èªž â€¢ åŒˆç‰™åˆ©èªž â€¢ ä¸­æ–‡',
-      specialties: 'æ¤ç‰™æ‰‹è¡“ â€¢ å…¨å£é‡å»º â€¢ å£è…”å¤–ç§‘',
+      languages: 'è¶Šå—èªž • è‹±èªž • åŒˆç‰™åˆ©èªž • ä¸­æ–‡',
+      specialties: 'æ¤ç‰™æ‰‹è¡“ • å…¨å£é‡å»º • å£è…”å¤–ç§‘',
       descriptionOne:
         'Tu é†«å¸«å°ˆæ³¨æ–¼æ¤ç‰™æ‰‹è¡“ã€å…¨å£é‡å»ºã€å£è…”å¤–ç§‘åŠç¾Žå­¸ç‰™ç§‘ï¼Œç‰¹åˆ¥é—œæ³¨è¤‡é›œé‡å»ºæ¡ˆä¾‹ã€‚',
       descriptionTwo:

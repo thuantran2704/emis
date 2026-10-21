@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet';
 import doctorsContent from '../Translations/doctorsContent';
 import patient2 from '../pics/patient2.jpg';
 import ContactForm from '../components/ContactForm.jsx';
-import consultationImage from '../pics/dr-x-ray-consultation.jpg';
+import consultationImage from '../pics/consulting-team.jpg';
 import { DOCTORS, getDoctorTranslation } from '../data/doctors';
 
 const Doctors = () => {

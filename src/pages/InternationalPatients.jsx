@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import { useSelector } from 'react-redux';
 import internationalPatientsContent from '../Translations/internationalPatientsContent';
 import consultingTeam from '../pics/consulting-team.jpg';
-import xrayConsultation from '../pics/dr-x-ray-consultation.jpg';
+import xrayConsultation from '../pics/chat-pic-timeline-discussion-pre-trip.jpeg';
 import foreignPatientWithDoctor from '../pics/foreign-patient-1-with-dr-tu-smiling.jpg';
 import foreignPatientSmile from '../pics/foreign-patient-2.jpg';
 import ProcessSteps from '../components/ProcessSteps';

@@ -15,7 +15,7 @@ import {
 import { fullMouthContent } from '../Translations/fullMouthContent';
 import heroImage from '../pics/full-mouth-rehabilation.jpeg';
 import overseasImage from '../pics/doctor-reviewing-x-ray-with-patient-explaining-treatment.jpg';
-import teamImage from '../pics/doctors-discussing-implants-engaged.jpg';
+import teamImage from '../pics/sterile-room-phong-khu-trung.jpg';
 import { sectionLabelClass, titleClass, sectionTitleClass, ctaPrimaryClass, ctaSecondaryClass } from '../styles/ui';
 import ContactCtas from '../components/ContactCtas';
 import { SectionHeading } from '../components/Section';

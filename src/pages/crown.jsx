@@ -4,8 +4,8 @@ import { useSelector } from 'react-redux';
 import { Helmet } from 'react-helmet';
 
 import crownHeroImage from '../pics/crown.jpg';
-import planningImage from '../pics/doctor-discussing-treatment-other-pic-ad-in-the-back.jpg';
-import labImage from '../pics/doctor-discussing-case-with-each-other-at-work-desk.jpg';
+import planningImage from '../pics/patient2.jpg';
+import labImage from '../pics/measuring-result-cbct-x-ray-patient-smiling.jpg';
 
 import form1Eng from '../pics/WEB/forms/eng/01-baby-style.png';
 import form2Eng from '../pics/WEB/forms/eng/02-aggressive-style.png';

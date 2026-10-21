@@ -42,7 +42,7 @@
       {
         name: 'Dr. Tran Minh Tu',
         role: 'Odonto-Maxillofacial Surgeon',
-        description: 'Implant Surgery â€¢ Oral Surgery â€¢ Full-Mouth Rehabilitation. Currently practicing at Ho Chi Minh City Odonto-Maxillofacial Hospital and EMIS Premium Dental Clinic.',
+        description: 'Implant Surgery • Oral Surgery • Full-Mouth Rehabilitation. Currently practicing at Ho Chi Minh City Odonto-Maxillofacial Hospital and EMIS Premium Dental Clinic.',
         cta: 'Contact Us',
       },
     ],
@@ -114,7 +114,7 @@
     teamIntro: 'Má»™t Ä‘á»™i ngÅ© hÆ°á»›ng tá»›i má»™t má»¥c tiÃªu chung: giÃºp bá»‡nh nhÃ¢n khÃ´i phá»¥c kháº£ nÄƒng Äƒn nhai, tá»± tin vÃ  cháº¥t lÆ°á»£ng cuá»™c sá»‘ng lÃ¢u dÃ i.',
     teamMembers: [
       { name: 'BS. CKI Nguyá»…n Tháº¿ SÆ¡n', role: 'BÃ¡c SÄ© TrÆ°á»Ÿng - Implant & Phá»¥c HÃ¬nh Tháº©m Má»¹', description: 'BÃ¡c sÄ© SÆ¡n cÃ³ hÆ¡n 10 nÄƒm kinh nghiá»‡m chuyÃªn sÃ¢u trong lÄ©nh vá»±c cáº¥y ghÃ©p Implant, phá»¥c hÃ¬nh tháº©m má»¹ vÃ  pháº«u thuáº­t nÃ¢ng xoang - ghÃ©p xÆ°Æ¡ng. Vá»›i hÆ¡n 3.000 ca Implant tá»« Ä‘Æ¡n giáº£n Ä‘áº¿n phá»©c táº¡p, bÃ¡c sÄ© táº­p trung phá»¥c há»“i chá»©c nÄƒng Äƒn nhai, tháº©m má»¹ tá»± nhiÃªn vÃ  sá»± á»•n Ä‘á»‹nh lÃ¢u dÃ i.', cta: 'LiÃªn Há»‡ ChÃºng TÃ´i' },
-      { name: 'BS. CKI Tráº§n Minh TÃº', role: 'Pháº«u thuáº­t RÄƒng HÃ m Máº·t', description: 'Implant â€¢ Tiá»ƒu pháº«u RÄƒng HÃ m Máº·t â€¢ Phá»¥c há»“i toÃ n hÃ m. Hiá»‡n Ä‘ang cÃ´ng tÃ¡c táº¡i Bá»‡nh viá»‡n RÄƒng HÃ m Máº·t TP.HCM vÃ  EMIS Premium Dental Clinic.', cta: 'LiÃªn Há»‡ ChÃºng TÃ´i' },
+      { name: 'BS. CKI Tráº§n Minh TÃº', role: 'Pháº«u thuáº­t RÄƒng HÃ m Máº·t', description: 'Implant • Tiá»ƒu pháº«u RÄƒng HÃ m Máº·t • Phá»¥c há»“i toÃ n hÃ m. Hiá»‡n Ä‘ang cÃ´ng tÃ¡c táº¡i Bá»‡nh viá»‡n RÄƒng HÃ m Máº·t TP.HCM vÃ  EMIS Premium Dental Clinic.', cta: 'LiÃªn Há»‡ ChÃºng TÃ´i' },
     ],
 
     internationalTitle: 'Há»— Trá»£ TrÆ°á»›c, Trong VÃ  Sau Äiá»u Trá»‹',
@@ -188,7 +188,7 @@
       {
         name: 'Dr Tran Minh Tu',
         role: 'Chirurgien Maxillo-Facial',
-        description: 'Chirurgie implantaire â€¢ Chirurgie orale â€¢ RÃ©habilitation complÃ¨te. Exerce actuellement Ã  l\'HÃ´pital Odonto-Maxillo-Facial de Ho Chi Minh-Ville et Ã  EMIS Premium Dental Clinic.',
+        description: 'Chirurgie implantaire • Chirurgie orale • RÃ©habilitation complÃ¨te. Exerce actuellement Ã  l\'HÃ´pital Odonto-Maxillo-Facial de Ho Chi Minh-Ville et Ã  EMIS Premium Dental Clinic.',
         cta: 'Contactez-Nous',
       },
     ],
@@ -275,7 +275,7 @@
       {
         name: 'Dr. Tran Minh Tu',
         role: 'å£è…”é¢Œé¢å¤–ç§‘åŒ»ç”Ÿ',
-        description: 'ç§æ¤æ‰‹æœ¯ â€¢ å£è…”å¤–ç§‘ â€¢ å…¨å£é‡å»ºã€‚çŽ°å°±èŒäºŽèƒ¡å¿—æ˜Žå¸‚å£è…”é¢Œé¢åŒ»é™¢åŠ EMIS Premium Dental Clinicã€‚',
+        description: 'ç§æ¤æ‰‹æœ¯ • å£è…”å¤–ç§‘ • å…¨å£é‡å»ºã€‚çŽ°å°±èŒäºŽèƒ¡å¿—æ˜Žå¸‚å£è…”é¢Œé¢åŒ»é™¢åŠ EMIS Premium Dental Clinicã€‚',
         cta: 'è”ç³»æˆ‘ä»¬',
       },
     ],
@@ -362,7 +362,7 @@
       {
         name: 'Dr. Tran Minh Tu',
         role: 'å£è…”é¡Žé¢å¤–ç§‘é†«å¸«',
-        description: 'æ¤ç‰™æ‰‹è¡“ â€¢ å£è…”å¤–ç§‘ â€¢ å…¨å£é‡å»ºã€‚ç¾ä»»è·æ–¼èƒ¡å¿—æ˜Žå¸‚å£è…”é¡Žé¢é†«é™¢èˆ‡ EMIS Premium Dental Clinicã€‚',
+        description: 'æ¤ç‰™æ‰‹è¡“ • å£è…”å¤–ç§‘ • å…¨å£é‡å»ºã€‚ç¾ä»»è·æ–¼èƒ¡å¿—æ˜Žå¸‚å£è…”é¡Žé¢é†«é™¢èˆ‡ EMIS Premium Dental Clinicã€‚',
         cta: 'è¯çµ¡æˆ‘å€‘',
       },
     ],
@@ -449,7 +449,7 @@
       {
         name: 'Dr. Tran Minh Tu',
         role: 'êµ¬ê°•ì•…ì•ˆë©´ì™¸ê³¼ ì „ë¬¸ì˜',
-        description: 'ìž„í”Œëž€íŠ¸ ìˆ˜ìˆ  â€¢ êµ¬ê°•ì™¸ê³¼ â€¢ ì „ì•… ìž¬ê±´. í˜„ìž¬ í˜¸ì¹˜ë¯¼ì‹œ êµ¬ê°•ì•…ì•ˆë©´ë³‘ì› ë° EMIS Premium Dental Clinicì—ì„œ ì§„ë£Œ ì¤‘ìž…ë‹ˆë‹¤.',
+        description: 'ìž„í”Œëž€íŠ¸ ìˆ˜ìˆ  • êµ¬ê°•ì™¸ê³¼ • ì „ì•… ìž¬ê±´. í˜„ìž¬ í˜¸ì¹˜ë¯¼ì‹œ êµ¬ê°•ì•…ì•ˆë©´ë³‘ì› ë° EMIS Premium Dental Clinicì—ì„œ ì§„ë£Œ ì¤‘ìž…ë‹ˆë‹¤.',
         cta: 'ë¬¸ì˜í•˜ê¸°',
       },
     ],
