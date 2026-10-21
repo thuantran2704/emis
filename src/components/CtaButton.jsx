@@ -50,7 +50,7 @@ const SIZES = {
 };
 
 const VARIANTS = {
-  primary: 'bg-[#d4af37] text-white hover:bg-[#c19d30]',
+  primary: 'bg-[#d4af37] text-[#202a30] hover:bg-[#e1be50]',
   secondary: 'bg-[#2a3439] text-white hover:bg-[#1e282d]',
   outline: 'border border-[#9ab1c5] bg-white text-[#1f3b57] hover:bg-[#f2f7fb]',
   outlineGold: 'border border-[#d4af37] text-[#2a3439] hover:bg-white',

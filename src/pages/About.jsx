@@ -5,10 +5,10 @@ import equipmentContent from '../Translations/equipmentContent';
 import ServicesSlider from '../components/ServicesSlider';
 import Text from '../components/Text';
 import consultationImage from '../pics/doctor-explaining-procedure-to-patient.jpg';
-import planningImage from '../pics/measuring-result-cbct-x-ray-patient-smiling.jpg';
+import planningImage from '../pics/dr-tu-working.jpg';
 import technologyImage from '../pics/measuring-result-cbct-x-ray-patient-smiling.jpg';
-import teamImage from '../pics/sterile-room-phong-khu-trung.jpg';
-import internationalImage from '../pics/chat-pic-timeline-discussion-pre-trip.jpeg';
+import teamImage from '../pics/consulting-team.jpg';
+import internationalImage from '../pics/Phong-cho-waiting-room-Emis.jpg';
 import safetyImage from '../pics/sterile-room-phong-khu-trung.jpg';
 import vatechImg from '../pics/vatech.jpg';
 import kehongImg from '../pics/ghe-ngoi-nha-khoa-kehong.jpg';
@@ -35,7 +35,7 @@ const About = () => {
   const eqImages = equipmentList.map(({ image }) => image);
   const eqAlts = equipmentList.map(({ key }) => eqContent[key]?.title || key);
 
-  const content = aboutContent[language];
+  const content = aboutContent[language] || aboutContent.english;
 
   const SectionLabel = ({ children }) => (
     <Text variant="eyebrow" size="micro" className="mb-6">{children}</Text>
@@ -54,7 +54,7 @@ const About = () => {
 
       {/* HERO */}
       <section className="overflow-hidden bg-white">
-        <div className="py-28 px-8 max-w-4xl mx-auto text-center">
+        <div className="px-6 py-20 md:py-28 max-w-4xl mx-auto text-center">
           <p className="mb-7 text-xs font-semibold uppercase tracking-[0.3em] text-[#C5AF73]">
             Who We Are
           </p>
@@ -83,7 +83,7 @@ const About = () => {
 
       {/* OUR APPROACH */}
       <section className="py-16 md:py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-8 space-y-12">
+        <div className="max-w-4xl mx-auto px-6 md:px-8 space-y-12">
           <div>
             <SectionLabel>{content.labels?.approach || 'Our Approach'}</SectionLabel>
             <SectionTitle>{content.approachTitle}</SectionTitle>
@@ -91,10 +91,12 @@ const About = () => {
               {content.approachText}
             </Text>
           </div>
-          <div className="rounded-2xl overflow-hidden shadow-sm h-[420px]">
+          <div className="rounded-2xl overflow-hidden shadow-sm aspect-[3/2]">
             <img
               src={consultationImage}
-              alt="Patient care consultation"
+              alt="Clinician and nurse caring for a patient at EMIS"
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover object-[center_58%] md:object-center"
             />
           </div>
@@ -103,7 +105,7 @@ const About = () => {
 
       {/* WHY PLANNING MATTERS */}
       <section className="py-16 md:py-20 bg-[#f1f5f9]">
-        <div className="max-w-4xl mx-auto px-8 space-y-12">
+        <div className="max-w-4xl mx-auto px-6 md:px-8 space-y-12">
           <div>
             <SectionLabel>{content.labels?.planning || 'Planning'}</SectionLabel>
             <SectionTitle>{content.planningTitle}</SectionTitle>
@@ -120,10 +122,12 @@ const About = () => {
               ))}
             </div>
           </div>
-          <div className="rounded-2xl overflow-hidden shadow-sm aspect-[3/2] md:aspect-auto md:h-[480px]">
+          <div className="rounded-2xl overflow-hidden shadow-sm aspect-[3/2]">
             <img
               src={planningImage}
-              alt="Clinical treatment planning"
+              alt="Dr. Tran Minh Tu reviewing a treatment plan at EMIS"
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover object-center"
             />
           </div>
@@ -132,7 +136,7 @@ const About = () => {
 
       {/* TECHNOLOGY & SAFETY */}
       <section className="py-16 md:py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-8 space-y-12">
+        <div className="max-w-4xl mx-auto px-6 md:px-8 space-y-12">
           <div>
             <SectionLabel>{content.labels?.technology || 'Technology'}</SectionLabel>
             <SectionTitle>{content.technologyTitle}</SectionTitle>
@@ -146,10 +150,12 @@ const About = () => {
               bookNowText={language === 'vietnamese' ? 'Đặt Lịch' : 'Book Now'}
             />
           </div>
-          <div className="rounded-2xl overflow-hidden shadow-sm h-[460px]">
+          <div className="rounded-2xl overflow-hidden shadow-sm aspect-[3/2]">
             <img
               src={technologyImage}
-              alt={content.technologyImageAlt || 'Clinical treatment room'}
+              alt="Patient undergoing a CBCT scan at EMIS"
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover object-center"
             />
           </div>
@@ -158,7 +164,7 @@ const About = () => {
 
       {/* TEAM */}
       <section className="py-16 md:py-20 bg-[#f1f5f9]">
-        <div className="max-w-4xl mx-auto px-8 space-y-12">
+        <div className="max-w-4xl mx-auto px-6 md:px-8 space-y-12">
           <div>
             <SectionLabel>{content.labels?.team || 'Our Team'}</SectionLabel>
             <SectionTitle>{content.teamTitle}</SectionTitle>
@@ -193,10 +199,12 @@ const About = () => {
               ))}
             </div>
           </div>
-          <div className="rounded-2xl overflow-hidden shadow-sm aspect-[3/2] md:aspect-auto md:h-[500px]">
+          <div className="rounded-2xl overflow-hidden shadow-sm aspect-[3/2]">
             <img
               src={teamImage}
-              alt="Professional clinic team environment"
+              alt="EMIS patient support team at the clinic reception"
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover object-center"
             />
           </div>
@@ -205,7 +213,7 @@ const About = () => {
 
       {/* SUPPORT FOR OVERSEAS */}
       <section className="py-16 md:py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-8 grid gap-12 lg:landscape:grid-cols-2 lg:landscape:items-center">
+        <div className="max-w-5xl mx-auto px-6 md:px-8 grid gap-12 lg:landscape:grid-cols-2 lg:landscape:items-center">
           <div className="text-center lg:landscape:text-left">
             <SectionLabel>{content.labels?.international || 'International Patients'}</SectionLabel>
             <SectionTitle>{content.internationalTitle}</SectionTitle>
@@ -223,10 +231,12 @@ const About = () => {
               ))}
             </div>
           </div>
-          <div className="hidden rounded-2xl overflow-hidden shadow-sm h-[420px] lg:landscape:block">
+          <div className="rounded-2xl overflow-hidden shadow-sm aspect-[4/3] lg:landscape:aspect-auto lg:landscape:h-[420px]">
             <img
               src={internationalImage}
-              alt="EMIS clinic waiting room"
+              alt="Waiting and reception area at EMIS Dental"
+              loading="lazy"
+              decoding="async"
               className="block w-full h-full object-cover object-center"
             />
           </div>
@@ -235,7 +245,7 @@ const About = () => {
 
       {/* TRUST & TRANSPARENCY */}
       <section className="py-16 md:py-20 bg-[#f1f5f9]">
-        <div className="max-w-4xl mx-auto px-8 space-y-12">
+        <div className="max-w-4xl mx-auto px-6 md:px-8 space-y-12">
           <div>
             <SectionLabel>{content.labels?.trust || 'Trust & Transparency'}</SectionLabel>
             <SectionTitle>{content.trustTitle}</SectionTitle>
@@ -253,10 +263,12 @@ const About = () => {
               ))}
             </div>
           </div>
-          <div className="rounded-2xl overflow-hidden shadow-sm aspect-[3/2] md:aspect-auto md:h-[420px]">
+          <div className="rounded-2xl overflow-hidden shadow-sm aspect-[16/9]">
             <img
               src={safetyImage}
-              alt="Clinical sterilization and safety protocols"
+              alt="EMIS staff member preparing instruments in the sterilization room"
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover object-center"
             />
           </div>
@@ -265,7 +277,7 @@ const About = () => {
 
       {/* START STEPS */}
       <section className="py-16 md:py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-8 text-center">
+        <div className="max-w-5xl mx-auto px-6 md:px-8 text-center">
           <SectionLabel>{content.labels?.start || 'Getting Started'}</SectionLabel>
           <SectionTitle>{content.startTitle}</SectionTitle>
 

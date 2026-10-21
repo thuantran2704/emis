@@ -7,12 +7,6 @@ import orthoImage from '../pics/three-women-smiling-fitness-outdoors.jpeg';
 import whiteningCase from '../pics/elder-couple-smiling-outdoors-healthy-walking.jpeg';
 import veneerCase from '../pics/confident-smile-social.jpeg';
 import orthoCase from '../pics/doctor-smiling-with-patient.jpg';
-import improveCardImage1 from '../pics/three-women-smiling-fitness-outdoors.jpeg';
-import improveCardImage2 from '../pics/elder-couple-smiling-outdoors-healthy-walking.jpeg';
-import improveCardImage3 from '../pics/elder-person-socializing.jpeg';
-import improveCardImage4 from '../pics/confident-smile-social.jpeg';
-import improveCardImage5 from '../pics/doctor-smiling-with-patient.jpg';
-import improveCardImage6 from '../pics/khach_cuoi_chup_hinh_voi_bs.jpg';
 import optionCardImage1 from '../pics/doctor-smiling-with-patient.jpg';
 import optionCardImage2 from '../pics/elder-person-socializing.jpeg';
 import optionCardImage3 from '../pics/three-women-smiling-fitness-outdoors.jpeg';
@@ -53,14 +47,6 @@ export default function SmileAesthetics() {
   const caseCards = content.cases?.cards || [];
 
   const caseImages = [whiteningCase, veneerCase, orthoCase];
-  const improveImages = [
-    improveCardImage1,
-    improveCardImage2,
-    improveCardImage3,
-    improveCardImage4,
-    improveCardImage5,
-    improveCardImage6,
-  ];
   const optionImages = [
     optionCardImage1,
     optionCardImage2,

@@ -207,7 +207,7 @@ const equipmentContent = {
       equipmentIntro:
         "Chez Emis Dental, nous utilisons le Vatech 3D CBCT Smart Plus, une génération récente de Cone Beam CT pour un diagnostic et une planification précis.",
       equipmentDescription:
-        "Le Vatech 3D CBCT Smart Plus offre une solution complète pour l\'implantologie et l\'orthodontie. Il capture les images CT et panoramiques en un seul passage, réduisant l\'exposition et le temps, tout en conservant une grande précision.",
+        "Le Vatech 3D CBCT Smart Plus offre une solution complète pour l'implantologie et l'orthodontie. Il capture les images CT et panoramiques en un seul passage, réduisant l'exposition et le temps, tout en conservant une grande précision.",
       features: [
         "FOV étendu 12×9",
         "Radiographie Ceph rapide en 1,9 seconde",
@@ -229,7 +229,7 @@ const equipmentContent = {
     hyperlight: {
       title: "HyperLight-G (imagerie périapicale)",
       equipmentIntro:
-        "Pour l\'imagerie périapicale, Emis Dental utilise HyperLight-G, un appareil numérique précis et sûr.",
+        "Pour l'imagerie périapicale, Emis Dental utilise HyperLight-G, un appareil numérique précis et sûr.",
       equipmentDescription:
         "HyperLight-G produit des images nettes à fort contraste pour la détection précoce des caries, pulpites, pertes osseuses et infections périapicales, avec une faible dose de rayonnement.",
       features: [
@@ -241,9 +241,9 @@ const equipmentContent = {
     uvStorage: {
       title: "Stérilisateur UV Storage Dongju Dent",
       equipmentIntro:
-        "Le contrôle des infections est une priorité chez Emis Dental grâce à l\'unité UV Storage.",
+        "Le contrôle des infections est une priorité chez Emis Dental grâce à l'unité UV Storage.",
       equipmentDescription:
-        "Grâce à la technologie UV-C, l\'unité UV Storage réduit efficacement bactéries, champignons et virus. Sa chambre spacieuse et son système de sécurité garantissent une conservation stérile fiable des instruments.",
+        "Grâce à la technologie UV-C, l'unité UV Storage réduit efficacement bactéries, champignons et virus. Sa chambre spacieuse et son système de sécurité garantissent une conservation stérile fiable des instruments.",
       features: [
         "Stérilisation UV-C",
         "Grande capacité de stockage",
@@ -253,9 +253,9 @@ const equipmentContent = {
     hyundai: {
       title: "Armoire de stérilisation haute température Hyundai",
       equipmentIntro:
-        "Pour une stérilisation complète, Emis Dental utilise l\'armoire Hyundai.",
+        "Pour une stérilisation complète, Emis Dental utilise l'armoire Hyundai.",
       equipmentDescription:
-        "L\'armoire Hyundai élimine bactéries, virus et champignons après nettoyage, avec une chaleur stable, une chambre inox durable et un contrôle intelligent de la température.",
+        "L'armoire Hyundai élimine bactéries, virus et champignons après nettoyage, avec une chaleur stable, une chambre inox durable et un contrôle intelligent de la température.",
       features: [
         "Séchage haute température",
         "Chambre en acier inoxydable",

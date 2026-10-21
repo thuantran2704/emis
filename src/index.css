@@ -10,6 +10,20 @@
 :root {
   --font-title: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --font-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #2a3439;
+  background: #f7fafc;
+}
+
+html { scroll-behavior: smooth; }
+body { min-width: 320px; }
+img { max-width: 100%; }
+:where(a, button, input, select, textarea):focus-visible {
+  outline: 3px solid #8a6514;
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }
 
 html,

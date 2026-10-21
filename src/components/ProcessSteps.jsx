@@ -24,12 +24,12 @@ export default function ProcessSteps({ steps = [], note, className = '' }) {
       <ol className="sm:hidden space-y-4">
         {items.map((item, i) => (
           <li key={i} className="flex items-center gap-4">
-            <span className="flex-shrink-0 w-10 h-10 rounded-full bg-[#d4af37] text-white text-[15px] font-semibold flex items-center justify-center">
+            <span className="flex-shrink-0 w-10 h-10 rounded-full bg-[#d4af37] text-[#202a30] text-[15px] font-semibold flex items-center justify-center">
               {i + 1}
             </span>
             <div>
               <p className="text-[15px] font-medium text-[#2a3439] leading-snug">{item.title}</p>
-              {item.text && <p className="text-[13px] text-gray-400 mt-0.5 leading-snug">{item.text}</p>}
+              {item.text && <p className="text-sm text-[#46576a] mt-1 leading-relaxed">{item.text}</p>}
             </div>
           </li>
         ))}
@@ -43,7 +43,7 @@ export default function ProcessSteps({ steps = [], note, className = '' }) {
           <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-px bg-[#dde5ec]" aria-hidden="true" />
           {items.map((_, i) => (
             <div key={i} className="relative z-10 flex flex-col items-center" style={{ width: `${100 / items.length}%` }}>
-              <span className="w-8 h-8 rounded-full bg-[#d4af37] text-white text-xs font-semibold flex items-center justify-center ring-4 ring-white">
+              <span className="w-8 h-8 rounded-full bg-[#d4af37] text-[#202a30] text-xs font-semibold flex items-center justify-center ring-4 ring-white">
                 {i + 1}
               </span>
             </div>
@@ -54,8 +54,8 @@ export default function ProcessSteps({ steps = [], note, className = '' }) {
         <div className="flex justify-between mt-3">
           {items.map((item, i) => (
             <div key={i} className="flex flex-col items-center text-center px-1" style={{ width: `${100 / items.length}%` }}>
-              <p className="text-[12px] font-medium text-[#2a3439] leading-snug">{item.title}</p>
-              {item.text && <p className="text-[11px] text-gray-400 mt-0.5 leading-relaxed">{item.text}</p>}
+              <p className="text-[13px] font-semibold text-[#2a3439] leading-snug">{item.title}</p>
+              {item.text && <p className="text-xs text-[#46576a] mt-1 leading-relaxed">{item.text}</p>}
             </div>
           ))}
         </div>

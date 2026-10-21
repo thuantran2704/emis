@@ -1,7 +1,7 @@
 import { sectionLabelClass, sectionTitleClass } from '../styles/ui';
 
 const introClass =
-  'text-[17px] md:text-[19px] text-gray-600 leading-relaxed mt-5';
+  'text-[16px] md:text-[18px] text-[#46576a] leading-relaxed mt-5';
 
 /**
  * Section — page section shell with a shared background + vertical rhythm.
@@ -27,7 +27,7 @@ const TONES = {
 };
 
 const PY = {
-  default: 'py-16 md:py-20',
+  default: 'py-16 md:py-24',
   lg: 'py-20 lg:py-28',
 };
 

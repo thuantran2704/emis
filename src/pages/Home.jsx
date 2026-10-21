@@ -15,10 +15,9 @@ import confidentSmile from '../pics/confident-smile-social.jpeg';
 import elderSocializing from '../pics/elder-person-socializing.jpeg';
 import pathwayConsult from '../pics/doctor-explaining-procedure-to-patient.jpg';
 import treatmentImage from '../pics/dr-at-work-with-nurse.jpg';
-import followupImage from '../pics/measuring-result-cbct-x-ray-patient-smiling.jpg';
+import followupImage from '../pics/doctor-explaining-treatment-x-ray-angle-3.jpg';
 import longTermCare from '../pics/khach_cuoi_chup_hinh_voi_bs.jpg';
-import internationalSupport from '../pics/chat-pic-timeline-discussion-pre-trip.jpeg';
-import ctaBackground from '../pics/doctor-explaining-procedure-to-patient.jpg';
+import internationalSupport from '../pics/Phong-cho-waiting-room-Emis.jpg';
 import ContactForm from '../components/ContactForm';
 import ImplantPlannerBanner from '../components/implants_banner';
 import { DOCTORS, getDoctorTranslation } from '../data/doctors';
@@ -47,9 +46,7 @@ export default function Home() {
   const [activeSlide, setActiveSlide] = useState(0);
   const journeyPics = [chatPreTrip, chatMedHistory, chatAirport, chatAftercare];
   const implantSlideImages = [serviceImplant, implantIntroImage, allon6Image];
-  const heroDescription = page.hero.description.length > 95
-    ? `${page.hero.description.slice(0, 92).trim()}...`
-    : page.hero.description;
+  const heroDescription = page.hero.description;
 
   return (
     <main className="bg-[#f7fafc] text-[#2a3439]">
@@ -66,26 +63,28 @@ export default function Home() {
         <link rel="canonical" href="https://emisdental.com" />
       </Helmet>
 
-      {/* Premium Hero Section with 100vh full-screen background */}
-      <section className="relative mt-[72px] min-h-[calc(100vh-72px)] w-full overflow-hidden">
+      {/* Main introduction */}
+      <section className="relative mt-[72px] min-h-[min(760px,calc(100svh-72px))] w-full overflow-hidden">
         <img
           src={heroBackgroundMobile}
           alt="EMIS Dental surgical team during a procedure"
+          fetchPriority="high"
           className="absolute inset-0 hidden h-full w-full object-cover object-center max-lg:portrait:block"
         />
         <img
           src={heroBackgroundLandscape}
           alt="EMIS Dental doctor analyzing a dental implant"
+          fetchPriority="high"
           className="absolute inset-0 block h-full w-full object-cover object-center max-lg:portrait:hidden"
         />
         <div
           className="absolute inset-0"
-          style={{ background: 'linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.40))' }}
+          style={{ background: 'linear-gradient(90deg, rgba(13,24,30,.82) 0%, rgba(13,24,30,.6) 46%, rgba(13,24,30,.18) 100%)' }}
           aria-hidden="true"
         />
         {/* Hero Content - Left Aligned Overlay */}
-        <div className="relative z-10 flex min-h-[calc(100vh-72px)] flex-col items-start justify-center px-6 py-16 sm:px-12 md:px-24 md:py-0">
-          <div className="max-w-[320px] md:max-w-[420px]">
+        <div className="relative z-10 mx-auto flex min-h-[min(760px,calc(100svh-72px))] max-w-7xl flex-col items-start justify-center px-6 py-20 sm:px-10 lg:px-12">
+          <div className="max-w-[42rem]">
             {/* Google Rating */}
             <div className="mb-4 md:mb-6 flex items-center gap-2">
               <div className="flex flex-col">
@@ -100,7 +99,7 @@ export default function Home() {
 
             {/* Main Heading */}
             <h1
-              className="text-xl sm:text-2xl md:text-3xl font-bold leading-tight text-white"
+              className="text-[clamp(2.35rem,5vw,4.75rem)] font-bold leading-[1.08] tracking-[-0.035em] text-white"
               style={{
                 lineHeight: '1.12',
               }}
@@ -110,7 +109,7 @@ export default function Home() {
 
             {/* Description */}
             <p
-              className="mt-3 md:mt-4 text-[11px] sm:text-xs md:text-sm font-normal leading-relaxed text-white max-w-full"
+              className="mt-5 max-w-[58ch] text-base font-normal leading-7 text-white md:text-lg md:leading-8"
               style={{
                 color: 'rgba(255,255,255,.88)',
               }}
@@ -123,7 +122,7 @@ export default function Home() {
               {/* Primary Button */}
               <Link
                 to="/contact"
-                className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#C89D2D] px-5 md:px-7 py-2 md:py-3 text-xs md:text-sm font-semibold text-white transition-all duration-200 hover:bg-[#B8892A] hover:shadow-lg w-full sm:w-auto"
+                className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#e2bd56] px-6 py-3 text-sm font-semibold text-[#202a30] transition-all duration-200 hover:bg-[#f0cf73] hover:shadow-lg w-full sm:w-auto"
                 style={{ height: '44px', minHeight: '44px' }}
               >
                 {page.hero.primaryCta}
@@ -135,7 +134,7 @@ export default function Home() {
               {/* Secondary Button */}
               <Link
                 to="/restorative-dentistry"
-                className="group inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-transparent px-5 md:px-7 py-2 md:py-3 text-xs md:text-sm font-semibold text-white transition-all duration-200 hover:bg-white/10 w-full sm:w-auto"
+                className="group inline-flex items-center justify-center gap-2 rounded-full border-2 border-white bg-transparent px-6 py-3 text-sm font-semibold text-white transition-all duration-200 hover:bg-white/10 w-full sm:w-auto"
                 style={{
                   height: '44px',
                   minHeight: '44px',
@@ -176,7 +175,7 @@ export default function Home() {
             </div>
 
             <div className="relative hidden overflow-hidden rounded-2xl shadow-sm lg:block">
-              <img src={confidencePortrait} alt={page.confidence.title} className="absolute inset-0 h-full w-full object-cover object-center" />
+              <img src={confidencePortrait} alt={page.confidence.title} loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-cover object-center" />
             </div>
           </div>
         </div>
@@ -203,16 +202,18 @@ export default function Home() {
                 <img
                   src={doctor.portrait}
                   alt={t.name}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full max-w-full rounded-2xl border border-[#dbe4ec] bg-white object-contain"
                 />
                 <div>
                   <Text variant="cardTitle" size="sm" className="transition group-hover:text-[#C5AF73]">{t.name}</Text>
-                  {t.role && <p className="mt-1 text-[11px] font-semibold text-[#C5AF73]">{t.role}</p>}
-                  {t.focus && <p className="mt-1.5 text-[11px] leading-relaxed text-gray-500">{t.focus}</p>}
-                  {t.summary && <p className="mt-1.5 text-[11px] leading-relaxed text-gray-500">{t.summary}</p>}
-                  {t.languages && <p className="mt-2 text-[9px] uppercase tracking-[0.2em] text-[#8aa0b5]">{t.languages}</p>}
+                  {t.role && <p className="mt-1 text-xs font-semibold text-[#806019]">{t.role}</p>}
+                  {t.focus && <p className="mt-2 text-sm leading-relaxed text-[#46576a]">{t.focus}</p>}
+                  {t.summary && <p className="mt-2 text-sm leading-relaxed text-[#46576a]">{t.summary}</p>}
+                  {t.languages && <p className="mt-3 text-[11px] uppercase tracking-[0.12em] text-[#52687b]">{t.languages}</p>}
                   {t.cta && (
-                    <span className="mt-3 inline-flex items-center gap-1 text-[11px] font-semibold text-[#C5AF73] transition group-hover:gap-2">
+                    <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#806019] transition group-hover:gap-2">
                       {t.cta}
                       <svg className="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -231,7 +232,7 @@ export default function Home() {
       <Section tone="white">
         <div className="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-[1.1fr_1fr] md:items-stretch">
           <div className="hidden overflow-hidden rounded-3xl shadow-lg md:block">
-            <img src={elderCoupleSmiling} alt="Patient enjoying daily life confidently" className="h-full w-full object-cover" />
+            <img src={elderCoupleSmiling} alt="Couple enjoying a walk together" loading="lazy" decoding="async" className="h-full w-full object-cover" />
           </div>
 
           <div>
@@ -267,7 +268,7 @@ export default function Home() {
               const card = page.pathways.cards[index];
               return (
                 <article key={card.title} className="overflow-hidden rounded-2xl border border-[#d9e4ed] bg-white shadow-sm">
-                  <img src={image} alt={card.title} className="hidden h-44 w-full object-cover md:block" />
+                  <img src={image} alt={card.title} loading="lazy" decoding="async" className="hidden h-44 w-full object-cover md:block" />
                   <div className="p-6">
                     <Text variant="cardTitle" size="lg" tone="headingSlate">{card.title}</Text>
                     <Text variant="cardSubtitle" tone="steel" className="mt-2">{card.subtitle}</Text>
@@ -326,6 +327,8 @@ export default function Home() {
                   <img
                     src={implantSlideImages[i]}
                     alt={slide.title}
+                    loading="lazy"
+                    decoding="async"
                     className="h-72 w-full object-contain bg-white p-4 lg:h-96"
                   />
                 </div>
@@ -360,7 +363,7 @@ export default function Home() {
               const step = page.journey.steps[index];
               return (
                 <article key={step.title} className="rounded-2xl border border-[#dbe6ef] bg-[#f9fcff] p-3">
-                  <img src={image} alt={step.title} className="hidden h-28 w-full rounded-xl object-cover md:block" />
+                  <img src={image} alt={step.title} loading="lazy" decoding="async" className="hidden h-28 w-full rounded-xl object-cover md:block" />
                   <p className="mt-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#7b95ab]">{step.step}</p>
                   <h3 className="mt-1 text-sm font-semibold text-[#1d3953]">{step.title}</h3>
                   <Text variant="description" tone="slate" className="mt-2">{step.text}</Text>
@@ -400,7 +403,7 @@ export default function Home() {
           </div>
 
           <div className="hidden overflow-hidden rounded-3xl shadow-lg h-full lg:landscape:block">
-            <img src={internationalSupport} alt="International patient consultation and planning" className="h-full w-full object-cover object-center" />
+            <img src={internationalSupport} alt="Waiting and reception area at EMIS Dental" loading="lazy" decoding="async" className="h-full w-full object-cover object-center" />
           </div>
         </div>
       </Section>
@@ -427,8 +430,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <section className="relative overflow-hidden bg-[#2a3439] py-16 text-white md:py-20">
-        <img src={ctaBackground} alt="" className="absolute inset-0 h-full w-full object-cover opacity-20" aria-hidden="true" />
+      <section className="relative overflow-hidden bg-[linear-gradient(135deg,#152b3a,#2a3439)] py-16 text-white md:py-20">
         <div className="relative mx-auto max-w-6xl px-6">
           <Text variant="title" tone="white">{page.finalCta.title}</Text>
           <Text variant="description" size="base" tone="invert" className="mt-4 max-w-3xl">{page.finalCta.description}</Text>

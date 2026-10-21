@@ -52,7 +52,7 @@ export default function Navbar() {
   const content = navbarContent[language] || navbarContent.english;
 
   const navLinkClass = (path) =>
-    `relative inline-flex h-10 items-center whitespace-nowrap px-3 text-sm font-semibold tracking-wide transition-colors duration-200 ${
+    `relative inline-flex h-10 max-w-[9.5rem] items-center whitespace-nowrap truncate px-3 text-sm font-semibold tracking-wide transition-colors duration-200 ${
       location.pathname === path
         ? 'text-[#1f2937] after:absolute after:left-3 after:right-3 after:-bottom-0.5 after:h-[2px] after:bg-[#d4af37]'
         : 'text-[#2a3439]/80 hover:text-[#111317]'
@@ -129,7 +129,7 @@ export default function Navbar() {
               <Link
                 to="/solutions"
                 onClick={toggleSolutions}
-                className={`relative inline-flex h-10 items-center gap-1 whitespace-nowrap px-3 text-sm font-semibold tracking-wide transition-colors duration-200 ${
+                className={`relative inline-flex h-10 max-w-[10rem] items-center gap-1 whitespace-nowrap truncate px-3 text-sm font-semibold tracking-wide transition-colors duration-200 ${
                   isSolutionsActive
                     ? 'text-[#1f2937] after:absolute after:left-3 after:right-3 after:-bottom-0.5 after:h-[2px] after:bg-[#d4af37]'
                     : 'text-[#2a3439]/80 hover:text-[#111317]'
@@ -244,13 +244,13 @@ export default function Navbar() {
 
             <Link
               to="/contact"
-              className="ml-2 inline-flex h-10 items-center rounded-full bg-[#d4af37] px-5 text-sm font-semibold text-white shadow-sm transition hover:bg-[#c19d30]"
+              className="ml-2 inline-flex h-10 items-center rounded-full bg-[#d4af37] px-5 text-sm font-semibold text-[#202a30] shadow-sm transition hover:bg-[#e1be50]"
             >
               {content.contact}
             </Link>
 
-            <div className="ml-1">
-              <LanguageToggle variant="navbar" />
+            <div className="ml-2 border-l border-[#e9e0c8] pl-3">
+              <LanguageToggle variant="navbar" showLabel />
             </div>
           </div>
 
@@ -260,6 +260,7 @@ export default function Navbar() {
             </div>
             <button
               onClick={toggleMenu}
+              aria-expanded={isMenuOpen}
               className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#d4af37]/40 text-[#2a3439] hover:bg-[#d4af37]/15 hover:text-[#111317]"
               aria-label="Toggle mobile menu"
             >
@@ -275,6 +276,8 @@ export default function Navbar() {
         </div>
 
         <div
+          inert={!isMenuOpen}
+          aria-hidden={!isMenuOpen}
           className={`${isLandscape ? 'xl:hidden' : ''} overflow-hidden border-t border-[#e6d9ba] bg-[#fbf7ed] transition-[max-height] duration-300 ${
             isMenuOpen ? 'max-h-[85vh]' : 'max-h-0'
           }`}
@@ -413,7 +416,7 @@ export default function Navbar() {
 
             <Link
               to="/contact"
-              className="mt-2 block rounded-full bg-[#d4af37] px-4 py-2.5 text-center text-sm font-semibold text-white hover:bg-[#c19d30]"
+              className="mt-2 block rounded-full bg-[#d4af37] px-4 py-2.5 text-center text-sm font-semibold text-[#202a30] hover:bg-[#e1be50]"
               onClick={closeAllMenus}
             >
               {content.contact}

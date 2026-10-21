@@ -7,10 +7,8 @@ import { solutionsContent } from '../Translations/solutionsContent';
 import heroImage from '../pics/implant-illustration.jpg';
 import situationsImage from '../pics/elder-person-teeth-uncomfortable.jpeg';
 import pathwaysImage from '../pics/denture.jpeg';
-import teamImage from '../pics/healthcare-team.jpg';
 import Text from '../components/Text';
 import ContactCtas from '../components/ContactCtas';
-import MediaFrame from '../components/MediaFrame';
 import ProcessSteps from '../components/ProcessSteps';
 import Section from '../components/Section';
 
@@ -197,15 +195,9 @@ const Solutions = () => {
           </div>
       </Section>
 
-      <Section py="lg" tone="light" className="relative overflow-hidden">
-        {teamImage && (
-          <div className="absolute inset-0" aria-hidden="true">
-            <MediaFrame image={teamImage} alt="" settings={{ blur: true, scale: 1.1, position: 'center 35%', rounded: 'rounded-none', className: 'h-full' }} />
-            <div className="absolute inset-0 bg-[#f7fafc]/70" />
-          </div>
-        )}
-        <div className="relative max-w-3xl mx-auto px-8">
-          <div className="rounded-2xl border border-white/40 bg-white/60 backdrop-blur-xl shadow-lg p-7 lg:p-8">
+      <Section py="lg" tone="cream">
+        <div className="max-w-3xl mx-auto px-6">
+          <div className="rounded-2xl border border-[#e9e0c8] bg-white shadow-sm p-7 lg:p-10">
             <Text variant="eyebrow">
               {content.team.eyebrow}
             </Text>
