@@ -14,7 +14,6 @@ import Equipment from './pages/Equipment';
 import FloatingContactButton from './components/floatingContactButton.jsx';
 import GuidedChat from './components/GuidedChat.jsx';
 import VeneerLanding from './pages/landingPage1.jsx';
-import SonPage from './pages/drSonPage.jsx';
 import CrownLanding from './pages/crown.jsx';
 import DentalVisitorProgram from './pages/flightassist.jsx';
 import Implant from './pages/implant.jsx';
@@ -113,7 +112,6 @@ function AppShell() {
           <Route path="/veneer" element={<VeneerLanding />} />
           <Route path="/implant" element={<Implant />}/>
           <Route path="/crown" element={<CrownLanding/>}/>
-          <Route path="/dr-son" element={<SonPage />}/>
           <Route path="/dr-tu" element={<DrTuPage />} />
           <Route path="/visitor-program" element={<DentalVisitorProgram />} />
           <Route path="/doctors" element={<Doctors />} />

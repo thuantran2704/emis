@@ -7,7 +7,7 @@
 ## Extract these shared pieces first (highest leverage)
 
 - **`SectionLabel` / `SectionTitle` / `SectionHeading`** — currently re-defined
-  inline and identically in `About`, `drSonPage`, `drTuPage`, `fixedTeeth`,
+  inline and identically in `About`, `drTuPage`, `fixedTeeth`,
   `fullMouth`. Move to one `src/components/Section.jsx`.
 - **`<Section tone="white|cool|cream">` wrapper** — almost every page alternates
   `py-* bg-white / bg-[#f1f5f9] / bg-[#f7f2e7]`. One wrapper removes the repetition.
@@ -19,7 +19,7 @@
   `OralSurgery`, `SmileAesthetics`: hero + `ContactCtas`, alternating
   `SectionHeading` blocks, journey steps, patient-cases grid, team strip,
   final CTA → `JourneySteps`, `PatientCasesGrid`, `TeamStrip`, `FinalCtaSection`.
-- **Doctor-page template** — `drSonPage` (314) / `drTuPage` (372) share the same
+- **Doctor-page template** — `drTuPage` shares the same
   section flow → shared profile section components.
 - **Already shared (reuse, don't duplicate):** `ContactCtas`, `contactChannels`,
   `styles/ui.js`, `PolicyPage`, `ContactForm`, `MachineBanner`, `AdBanner`.
@@ -55,7 +55,7 @@
 - **Home (474):** hero + multiple feature/CTA bands → section components.
 - **implant (469):** hero + sections 1–7 (incl. system-cards grid) → section components.
 - **doctors (329):** HeroSection, JourneySection, DoctorSection, DecisionSection (+ form).
-- **drSonPage (314) / drTuPage (372):** shared `DoctorProfile` sections.
+- **drTuPage:** shared `DoctorProfile` sections.
 - **Services (350) / SmileAesthetics (310) / OralSurgery (288) / solutions (349) /
   fixedTeeth (260) / fullMouth (294):** treatment template sections.
 - **Contact (308):** ContactActions (bubbles — reuse `contactChannels`) +

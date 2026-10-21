@@ -130,7 +130,6 @@ export const schemaMarkup = JSON.stringify([
   {
     "@context": "https://schema.org",
     "@type": "Physician",
-    "name": "Dr. Son",
     "description": "Dental specialist at EMIS Dental focused on patient care, treatment planning, and communication support.",
     "affiliation": "EMIS Dental",
     "worksFor": {

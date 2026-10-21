@@ -1,4 +1,4 @@
-export const solutionsContent = {
+﻿export const solutionsContent = {
   english: {
     metaTitle: 'Treatment Solutions | EMIS Dental',
     metaDescription:
@@ -139,12 +139,11 @@ export const solutionsContent = {
         'Depending on your case, treatment may involve diagnosis, planning, surgery, restoration, and follow-up care. The EMIS team works together to support each stage clearly and carefully.',
       doctors: [
         {
-          name: 'Dr. Nguyen The Son',
-          focus: 'Implant Prosthetics • Restorative Rehabilitation • Function & Smile Aesthetics',
+          focus: 'Implant Prosthetics â€¢ Restorative Rehabilitation â€¢ Function & Smile Aesthetics',
         },
         {
           name: 'Dr. Tran Minh Tu',
-          focus: 'Implant Surgery • Oral Surgery • Complex Rehabilitation Planning',
+          focus: 'Implant Surgery â€¢ Oral Surgery â€¢ Complex Rehabilitation Planning',
         },
       ],
       cta: 'Meet Our Doctors',
@@ -188,190 +187,190 @@ export const solutionsContent = {
   },
 
   vietnamese: {
-    metaTitle: 'Giải Pháp Điều Trị | EMIS Dental',
+    metaTitle: 'Giáº£i PhÃ¡p Äiá»u Trá»‹ | EMIS Dental',
     metaDescription:
-      'Tìm hướng điều trị phù hợp theo tình trạng và mục tiêu của bạn tại EMIS, từ implant, răng cố định, phục hồi toàn hàm, tiểu phẫu, phục hồi chức năng đến thẩm mỹ nụ cười.',
+      'TÃ¬m hÆ°á»›ng Ä‘iá»u trá»‹ phÃ¹ há»£p theo tÃ¬nh tráº¡ng vÃ  má»¥c tiÃªu cá»§a báº¡n táº¡i EMIS, tá»« implant, rÄƒng cá»‘ Ä‘á»‹nh, phá»¥c há»“i toÃ n hÃ m, tiá»ƒu pháº«u, phá»¥c há»“i chá»©c nÄƒng Ä‘áº¿n tháº©m má»¹ ná»¥ cÆ°á»i.',
 
     hero: {
-      eyebrow: 'Giải Pháp Điều Trị',
-      title: 'Tìm Hướng Điều Trị Phù Hợp Với Bạn',
+      eyebrow: 'Giáº£i PhÃ¡p Äiá»u Trá»‹',
+      title: 'TÃ¬m HÆ°á»›ng Äiá»u Trá»‹ PhÃ¹ Há»£p Vá»›i Báº¡n',
       intro:
-        'Khi mất răng, dùng hàm giả lâu năm hoặc gặp nhiều vấn đề răng miệng cùng lúc, nhiều bệnh nhân thường không biết nên bắt đầu từ đâu. Tại EMIS, bước đầu tiên không phải là chọn ngay một phương pháp điều trị, mà là hiểu rõ tình trạng hiện tại của bạn.',
+        'Khi máº¥t rÄƒng, dÃ¹ng hÃ m giáº£ lÃ¢u nÄƒm hoáº·c gáº·p nhiá»u váº¥n Ä‘á» rÄƒng miá»‡ng cÃ¹ng lÃºc, nhiá»u bá»‡nh nhÃ¢n thÆ°á»ng khÃ´ng biáº¿t nÃªn báº¯t Ä‘áº§u tá»« Ä‘Ã¢u. Táº¡i EMIS, bÆ°á»›c Ä‘áº§u tiÃªn khÃ´ng pháº£i lÃ  chá»n ngay má»™t phÆ°Æ¡ng phÃ¡p Ä‘iá»u trá»‹, mÃ  lÃ  hiá»ƒu rÃµ tÃ¬nh tráº¡ng hiá»‡n táº¡i cá»§a báº¡n.',
       highlights: [
-        'Giải pháp Implant',
-        'Răng Cố Định Toàn Hàm',
-        'Phục hồi toàn hàm',
-        'Tiểu phẫu Răng Hàm Mặt',
-        'Thẩm mỹ nụ cười',
+        'Giáº£i phÃ¡p Implant',
+        'RÄƒng Cá»‘ Äá»‹nh ToÃ n HÃ m',
+        'Phá»¥c há»“i toÃ n hÃ m',
+        'Tiá»ƒu pháº«u RÄƒng HÃ m Máº·t',
+        'Tháº©m má»¹ ná»¥ cÆ°á»i',
       ],
-      primaryCta: 'Gửi X-ray Của Bạn',
-      secondaryCta: 'Trao Đổi Về Trường Hợp Của Bạn',
+      primaryCta: 'Gá»­i X-ray Cá»§a Báº¡n',
+      secondaryCta: 'Trao Äá»•i Vá» TrÆ°á»ng Há»£p Cá»§a Báº¡n',
     },
 
     situations: {
-      eyebrow: 'Tình Trạng Nào Giống Với Bạn Nhất?',
-      title: 'Bắt Đầu Từ Vấn Đề Bạn Đang Quan Tâm',
+      eyebrow: 'TÃ¬nh Tráº¡ng NÃ o Giá»‘ng Vá»›i Báº¡n Nháº¥t?',
+      title: 'Báº¯t Äáº§u Tá»« Váº¥n Äá» Báº¡n Äang Quan TÃ¢m',
       intro:
-        'Chưa cần biết tên phương pháp điều trị mình cần. Trước tiên, hãy bắt đầu từ tình trạng bạn đang gặp phải.',
+        'ChÆ°a cáº§n biáº¿t tÃªn phÆ°Æ¡ng phÃ¡p Ä‘iá»u trá»‹ mÃ¬nh cáº§n. TrÆ°á»›c tiÃªn, hÃ£y báº¯t Ä‘áº§u tá»« tÃ¬nh tráº¡ng báº¡n Ä‘ang gáº·p pháº£i.',
       cards: [
         {
-          title: 'Mất Một Răng',
-          text: 'Bạn muốn ăn nhai thoải mái hơn, cười tự nhiên hơn và tự tin hơn.',
+          title: 'Máº¥t Má»™t RÄƒng',
+          text: 'Báº¡n muá»‘n Äƒn nhai thoáº£i mÃ¡i hÆ¡n, cÆ°á»i tá»± nhiÃªn hÆ¡n vÃ  tá»± tin hÆ¡n.',
         },
         {
-          title: 'Mất Nhiều Răng',
-          text: 'Việc ăn uống, giao tiếp hoặc mỉm cười có thể không còn dễ dàng như trước.',
+          title: 'Máº¥t Nhiá»u RÄƒng',
+          text: 'Viá»‡c Äƒn uá»‘ng, giao tiáº¿p hoáº·c má»‰m cÆ°á»i cÃ³ thá»ƒ khÃ´ng cÃ²n dá»… dÃ ng nhÆ° trÆ°á»›c.',
         },
         {
-          title: 'Hàm Giả Lỏng Hoặc Không Còn Thoải Mái',
-          text: 'Bạn đang tìm một giải pháp cố định và ổn định hơn hàm giả tháo lắp.',
+          title: 'HÃ m Giáº£ Lá»ng Hoáº·c KhÃ´ng CÃ²n Thoáº£i MÃ¡i',
+          text: 'Báº¡n Ä‘ang tÃ¬m má»™t giáº£i phÃ¡p cá»‘ Ä‘á»‹nh vÃ  á»•n Ä‘á»‹nh hÆ¡n hÃ m giáº£ thÃ¡o láº¯p.',
         },
         {
-          title: 'Nhiều Răng Đang Gặp Vấn Đề',
-          text: 'Khi nhiều răng cùng đau, yếu, gãy vỡ hoặc hư hỏng, bạn có thể không biết nên xử lý từ đâu.',
+          title: 'Nhiá»u RÄƒng Äang Gáº·p Váº¥n Äá»',
+          text: 'Khi nhiá»u rÄƒng cÃ¹ng Ä‘au, yáº¿u, gÃ£y vá»¡ hoáº·c hÆ° há»ng, báº¡n cÃ³ thá»ƒ khÃ´ng biáº¿t nÃªn xá»­ lÃ½ tá»« Ä‘Ã¢u.',
         },
         {
-          title: 'Tình Trạng Răng Miệng Phức Tạp',
-          text: 'Mất răng lâu năm, răng mòn nhiều hoặc thay đổi khớp cắn có thể cần một kế hoạch phục hồi toàn diện hơn.',
+          title: 'TÃ¬nh Tráº¡ng RÄƒng Miá»‡ng Phá»©c Táº¡p',
+          text: 'Máº¥t rÄƒng lÃ¢u nÄƒm, rÄƒng mÃ²n nhiá»u hoáº·c thay Ä‘á»•i khá»›p cáº¯n cÃ³ thá»ƒ cáº§n má»™t káº¿ hoáº¡ch phá»¥c há»“i toÃ n diá»‡n hÆ¡n.',
         },
         {
-          title: 'Cần Nhổ Răng Khôn Hoặc Tiểu Phẫu',
-          text: 'Răng khôn mọc lệch, nang xương hoặc nhiễm trùng có thể cần được xử lý bằng thủ thuật chuyên sâu.',
+          title: 'Cáº§n Nhá»• RÄƒng KhÃ´n Hoáº·c Tiá»ƒu Pháº«u',
+          text: 'RÄƒng khÃ´n má»c lá»‡ch, nang xÆ°Æ¡ng hoáº·c nhiá»…m trÃ¹ng cÃ³ thá»ƒ cáº§n Ä‘Æ°á»£c xá»­ lÃ½ báº±ng thá»§ thuáº­t chuyÃªn sÃ¢u.',
         },
         {
-          title: 'Mong Muốn Cải Thiện Nụ Cười',
-          text: 'Bạn muốn cười tự nhiên hơn và cảm thấy tự tin hơn mỗi ngày.',
+          title: 'Mong Muá»‘n Cáº£i Thiá»‡n Ná»¥ CÆ°á»i',
+          text: 'Báº¡n muá»‘n cÆ°á»i tá»± nhiÃªn hÆ¡n vÃ  cáº£m tháº¥y tá»± tin hÆ¡n má»—i ngÃ y.',
         },
       ],
     },
 
     pathways: {
-      eyebrow: 'Các Hướng Điều Trị Tại EMIS',
-      title: 'Khám Phá Hướng Điều Trị Phù Hợp',
+      eyebrow: 'CÃ¡c HÆ°á»›ng Äiá»u Trá»‹ Táº¡i EMIS',
+      title: 'KhÃ¡m PhÃ¡ HÆ°á»›ng Äiá»u Trá»‹ PhÃ¹ Há»£p',
       intro:
-        'Không có một hướng điều trị phù hợp cho tất cả mọi người. Mỗi trường hợp cần được đánh giá dựa trên tình trạng, mong muốn, thời gian và mục tiêu lâu dài.',
+        'KhÃ´ng cÃ³ má»™t hÆ°á»›ng Ä‘iá»u trá»‹ phÃ¹ há»£p cho táº¥t cáº£ má»i ngÆ°á»i. Má»—i trÆ°á»ng há»£p cáº§n Ä‘Æ°á»£c Ä‘Ã¡nh giÃ¡ dá»±a trÃªn tÃ¬nh tráº¡ng, mong muá»‘n, thá»i gian vÃ  má»¥c tiÃªu lÃ¢u dÃ i.',
       cards: [
         {
-          title: 'Giải Pháp Implant',
-          text: 'Dành cho trường hợp mất một hoặc nhiều răng và đang tìm hiểu về trồng răng Implant.',
-          cta: 'Tìm Hiểu Giải Pháp Implant',
+          title: 'Giáº£i PhÃ¡p Implant',
+          text: 'DÃ nh cho trÆ°á»ng há»£p máº¥t má»™t hoáº·c nhiá»u rÄƒng vÃ  Ä‘ang tÃ¬m hiá»ƒu vá» trá»“ng rÄƒng Implant.',
+          cta: 'TÃ¬m Hiá»ƒu Giáº£i PhÃ¡p Implant',
           path: '/implant',
         },
         {
-          title: 'Răng Cố Định Toàn Hàm',
-          text: 'Bao gồm All-on-4 và All-on-6, dành cho bệnh nhân muốn có giải pháp cố định hơn hàm giả tháo lắp.',
-          cta: 'Tìm Hiểu Răng Cố Định Toàn Hàm',
+          title: 'RÄƒng Cá»‘ Äá»‹nh ToÃ n HÃ m',
+          text: 'Bao gá»“m All-on-4 vÃ  All-on-6, dÃ nh cho bá»‡nh nhÃ¢n muá»‘n cÃ³ giáº£i phÃ¡p cá»‘ Ä‘á»‹nh hÆ¡n hÃ m giáº£ thÃ¡o láº¯p.',
+          cta: 'TÃ¬m Hiá»ƒu RÄƒng Cá»‘ Äá»‹nh ToÃ n HÃ m',
           path: '/fixed-teeth',
         },
         {
-          title: 'Phục Hồi Toàn Hàm',
-          text: 'Dành cho trường hợp mất nhiều răng, răng mòn nặng, sai khớp cắn hoặc cần phục hồi ăn nhai toàn diện.',
-          cta: 'Tìm Hiểu Phục Hồi Toàn Hàm',
+          title: 'Phá»¥c Há»“i ToÃ n HÃ m',
+          text: 'DÃ nh cho trÆ°á»ng há»£p máº¥t nhiá»u rÄƒng, rÄƒng mÃ²n náº·ng, sai khá»›p cáº¯n hoáº·c cáº§n phá»¥c há»“i Äƒn nhai toÃ n diá»‡n.',
+          cta: 'TÃ¬m Hiá»ƒu Phá»¥c Há»“i ToÃ n HÃ m',
           path: '/full-mouth',
         },
         {
-          title: 'Tiểu Phẫu Răng Hàm Mặt',
-          text: 'Bao gồm nhổ răng khôn, xử lý nang xương, nhiễm trùng và các thủ thuật liên quan.',
-          cta: 'Tìm Hiểu Tiểu Phẫu Răng Hàm Mặt',
+          title: 'Tiá»ƒu Pháº«u RÄƒng HÃ m Máº·t',
+          text: 'Bao gá»“m nhá»• rÄƒng khÃ´n, xá»­ lÃ½ nang xÆ°Æ¡ng, nhiá»…m trÃ¹ng vÃ  cÃ¡c thá»§ thuáº­t liÃªn quan.',
+          cta: 'TÃ¬m Hiá»ƒu Tiá»ƒu Pháº«u RÄƒng HÃ m Máº·t',
           path: '/oral-surgery',
         },
         {
-          title: 'Điều Trị & Giữ Răng Thật',
-          text: 'Dành cho răng hư hỏng, gãy vỡ hoặc cần phục hồi để duy trì chức năng ăn nhai.',
-          cta: 'Tìm Hiểu Điều Trị & Giữ Răng Thật',
+          title: 'Äiá»u Trá»‹ & Giá»¯ RÄƒng Tháº­t',
+          text: 'DÃ nh cho rÄƒng hÆ° há»ng, gÃ£y vá»¡ hoáº·c cáº§n phá»¥c há»“i Ä‘á»ƒ duy trÃ¬ chá»©c nÄƒng Äƒn nhai.',
+          cta: 'TÃ¬m Hiá»ƒu Äiá»u Trá»‹ & Giá»¯ RÄƒng Tháº­t',
           path: '/restorative-dentistry',
         },
         {
-          title: 'Thẩm Mỹ Nụ Cười',
-          text: 'Dành cho bệnh nhân muốn nụ cười tự nhiên, hài hòa và phù hợp với khuôn mặt.',
-          cta: 'Tìm Hiểu Thẩm Mỹ Nụ Cười',
+          title: 'Tháº©m Má»¹ Ná»¥ CÆ°á»i',
+          text: 'DÃ nh cho bá»‡nh nhÃ¢n muá»‘n ná»¥ cÆ°á»i tá»± nhiÃªn, hÃ i hÃ²a vÃ  phÃ¹ há»£p vá»›i khuÃ´n máº·t.',
+          cta: 'TÃ¬m Hiá»ƒu Tháº©m Má»¹ Ná»¥ CÆ°á»i',
           path: '/veneer',
         },
       ],
     },
 
     assessment: {
-      eyebrow: 'Hướng Điều Trị Được Xác Định Như Thế Nào?',
-      title: 'Điều Trị Bắt Đầu Từ Việc Đánh Giá',
+      eyebrow: 'HÆ°á»›ng Äiá»u Trá»‹ ÄÆ°á»£c XÃ¡c Äá»‹nh NhÆ° Tháº¿ NÃ o?',
+      title: 'Äiá»u Trá»‹ Báº¯t Äáº§u Tá»« Viá»‡c ÄÃ¡nh GiÃ¡',
       intro:
-        'Không phải bệnh nhân nào cũng cần cùng một phương pháp điều trị. Hướng điều trị phù hợp không chỉ phụ thuộc vào số răng đã mất, mà còn liên quan đến cấu trúc xương, khả năng ăn nhai, thẩm mỹ và mục tiêu lâu dài. Vì vậy, EMIS luôn bắt đầu bằng việc đánh giá kỹ tình trạng hiện tại.',
-      factorsTitle: 'Những Yếu Tố Thường Được Đánh Giá',
+        'KhÃ´ng pháº£i bá»‡nh nhÃ¢n nÃ o cÅ©ng cáº§n cÃ¹ng má»™t phÆ°Æ¡ng phÃ¡p Ä‘iá»u trá»‹. HÆ°á»›ng Ä‘iá»u trá»‹ phÃ¹ há»£p khÃ´ng chá»‰ phá»¥ thuá»™c vÃ o sá»‘ rÄƒng Ä‘Ã£ máº¥t, mÃ  cÃ²n liÃªn quan Ä‘áº¿n cáº¥u trÃºc xÆ°Æ¡ng, kháº£ nÄƒng Äƒn nhai, tháº©m má»¹ vÃ  má»¥c tiÃªu lÃ¢u dÃ i. VÃ¬ váº­y, EMIS luÃ´n báº¯t Ä‘áº§u báº±ng viá»‡c Ä‘Ã¡nh giÃ¡ ká»¹ tÃ¬nh tráº¡ng hiá»‡n táº¡i.',
+      factorsTitle: 'Nhá»¯ng Yáº¿u Tá»‘ ThÆ°á»ng ÄÆ°á»£c ÄÃ¡nh GiÃ¡',
       factors: [
         {
-          title: 'Tình Trạng Răng Miệng',
-          text: 'Những vấn đề hiện tại cần được xử lý.',
+          title: 'TÃ¬nh Tráº¡ng RÄƒng Miá»‡ng',
+          text: 'Nhá»¯ng váº¥n Ä‘á» hiá»‡n táº¡i cáº§n Ä‘Æ°á»£c xá»­ lÃ½.',
         },
         {
-          title: 'Chẩn Đoán Hình Ảnh',
-          text: 'Cấu trúc xương, giải phẫu và các yếu tố chuyên môn liên quan.',
+          title: 'Cháº©n ÄoÃ¡n HÃ¬nh áº¢nh',
+          text: 'Cáº¥u trÃºc xÆ°Æ¡ng, giáº£i pháº«u vÃ  cÃ¡c yáº¿u tá»‘ chuyÃªn mÃ´n liÃªn quan.',
         },
         {
-          title: 'Mục Tiêu Chức Năng',
-          text: 'Khả năng ăn nhai, phát âm và sự thoải mái hằng ngày.',
+          title: 'Má»¥c TiÃªu Chá»©c NÄƒng',
+          text: 'Kháº£ nÄƒng Äƒn nhai, phÃ¡t Ã¢m vÃ  sá»± thoáº£i mÃ¡i háº±ng ngÃ y.',
         },
         {
-          title: 'Thời Gian Điều Trị',
-          text: 'Lịch trình cá nhân, thời gian lưu trú và nhu cầu hồi phục.',
+          title: 'Thá»i Gian Äiá»u Trá»‹',
+          text: 'Lá»‹ch trÃ¬nh cÃ¡ nhÃ¢n, thá»i gian lÆ°u trÃº vÃ  nhu cáº§u há»“i phá»¥c.',
         },
         {
-          title: 'Mục Tiêu Lâu Dài',
-          text: 'Sự ổn định, thoải mái và khả năng duy trì kết quả.',
+          title: 'Má»¥c TiÃªu LÃ¢u DÃ i',
+          text: 'Sá»± á»•n Ä‘á»‹nh, thoáº£i mÃ¡i vÃ  kháº£ nÄƒng duy trÃ¬ káº¿t quáº£.',
         },
       ],
     },
 
     team: {
-      eyebrow: 'Đội Ngũ Đồng Hành Cùng Bạn',
-      title: 'Mỗi Bác Sĩ Một Thế Mạnh, Cùng Một Mục Tiêu',
+      eyebrow: 'Äá»™i NgÅ© Äá»“ng HÃ nh CÃ¹ng Báº¡n',
+      title: 'Má»—i BÃ¡c SÄ© Má»™t Tháº¿ Máº¡nh, CÃ¹ng Má»™t Má»¥c TiÃªu',
       intro:
-        'Với Implant, phục hồi răng cố định hoặc phục hồi toàn hàm, quá trình điều trị thường cần phối hợp nhiều bước. Tùy từng trường hợp, các bác sĩ có thể cùng tham gia chẩn đoán, lập kế hoạch, điều trị và theo dõi.',
+        'Vá»›i Implant, phá»¥c há»“i rÄƒng cá»‘ Ä‘á»‹nh hoáº·c phá»¥c há»“i toÃ n hÃ m, quÃ¡ trÃ¬nh Ä‘iá»u trá»‹ thÆ°á»ng cáº§n phá»‘i há»£p nhiá»u bÆ°á»›c. TÃ¹y tá»«ng trÆ°á»ng há»£p, cÃ¡c bÃ¡c sÄ© cÃ³ thá»ƒ cÃ¹ng tham gia cháº©n Ä‘oÃ¡n, láº­p káº¿ hoáº¡ch, Ä‘iá»u trá»‹ vÃ  theo dÃµi.',
       doctors: [
         {
-          name: 'BS. CKI Nguyễn Thế Sơn',
-          focus: 'Phục hình Implant • Phục hồi chức năng • Thẩm mỹ nụ cười',
+          name: 'BS. CKI Nguyá»…n Tháº¿ SÆ¡n',
+          focus: 'Phá»¥c hÃ¬nh Implant â€¢ Phá»¥c há»“i chá»©c nÄƒng â€¢ Tháº©m má»¹ ná»¥ cÆ°á»i',
         },
         {
-          name: 'BS. CKI Trần Minh Tú',
-          focus: 'Phẫu thuật Implant • Tiểu phẫu Răng Hàm Mặt • Phục hồi phức tạp',
+          name: 'BS. CKI Tráº§n Minh TÃº',
+          focus: 'Pháº«u thuáº­t Implant â€¢ Tiá»ƒu pháº«u RÄƒng HÃ m Máº·t â€¢ Phá»¥c há»“i phá»©c táº¡p',
         },
       ],
-      cta: 'Tìm Hiểu Đội Ngũ Bác Sĩ',
+      cta: 'TÃ¬m Hiá»ƒu Äá»™i NgÅ© BÃ¡c SÄ©',
       ctaPath: '/doctors',
     },
 
     overseas: {
-      eyebrow: 'Dành Cho Việt Kiều & Bệnh Nhân Quốc Tế',
-      title: 'Có Thể Bắt Đầu Từ Khi Bạn Còn Ở Nước Ngoài',
+      eyebrow: 'DÃ nh Cho Viá»‡t Kiá»u & Bá»‡nh NhÃ¢n Quá»‘c Táº¿',
+      title: 'CÃ³ Thá»ƒ Báº¯t Äáº§u Tá»« Khi Báº¡n CÃ²n á»ž NÆ°á»›c NgoÃ i',
       intro:
-        'Bạn không cần đợi đến khi về Việt Nam mới bắt đầu tìm hiểu. Nhiều bệnh nhân gửi X-ray trước để trao đổi và chuẩn bị kế hoạch điều trị phù hợp.',
+        'Báº¡n khÃ´ng cáº§n Ä‘á»£i Ä‘áº¿n khi vá» Viá»‡t Nam má»›i báº¯t Ä‘áº§u tÃ¬m hiá»ƒu. Nhiá»u bá»‡nh nhÃ¢n gá»­i X-ray trÆ°á»›c Ä‘á»ƒ trao Ä‘á»•i vÃ  chuáº©n bá»‹ káº¿ hoáº¡ch Ä‘iá»u trá»‹ phÃ¹ há»£p.',
       timeline: [
         {
-          step: 'Trước Khi Đến Việt Nam',
-          text: 'Gửi X-ray hoặc hồ sơ nha khoa để được đánh giá sơ bộ.',
+          step: 'TrÆ°á»›c Khi Äáº¿n Viá»‡t Nam',
+          text: 'Gá»­i X-ray hoáº·c há»“ sÆ¡ nha khoa Ä‘á»ƒ Ä‘Æ°á»£c Ä‘Ã¡nh giÃ¡ sÆ¡ bá»™.',
         },
         {
-          step: 'Chuẩn Bị Kế Hoạch Điều Trị',
-          text: 'Trao đổi về thời gian điều trị phù hợp với lịch trình lưu trú của bạn.',
+          step: 'Chuáº©n Bá»‹ Káº¿ Hoáº¡ch Äiá»u Trá»‹',
+          text: 'Trao Ä‘á»•i vá» thá»i gian Ä‘iá»u trá»‹ phÃ¹ há»£p vá»›i lá»‹ch trÃ¬nh lÆ°u trÃº cá»§a báº¡n.',
         },
         {
-          step: 'Sau Khi Trở Về Nước',
-          text: 'Tiếp tục kết nối với EMIS trong quá trình hồi phục và theo dõi.',
+          step: 'Sau Khi Trá»Ÿ Vá» NÆ°á»›c',
+          text: 'Tiáº¿p tá»¥c káº¿t ná»‘i vá»›i EMIS trong quÃ¡ trÃ¬nh há»“i phá»¥c vÃ  theo dÃµi.',
         },
       ],
-      cta: 'Tìm Hiểu Về Bệnh Nhân Quốc Tế',
+      cta: 'TÃ¬m Hiá»ƒu Vá» Bá»‡nh NhÃ¢n Quá»‘c Táº¿',
       ctaPath: '/international-patients',
     },
 
     finalCta: {
-      title: 'Chưa Biết Hướng Điều Trị Nào Phù Hợp?',
+      title: 'ChÆ°a Biáº¿t HÆ°á»›ng Äiá»u Trá»‹ NÃ o PhÃ¹ Há»£p?',
       intro:
-        'Bạn không cần quyết định trước khi liên hệ. Nếu đã có X-ray hoặc CBCT, EMIS có thể hỗ trợ đánh giá sơ bộ và giúp bạn hiểu rõ hơn những lựa chọn phù hợp với bạn.',
-      processTitle: 'Những Bước Tiếp Theo',
-      steps: ['Gửi X-ray Hoặc CBCT', 'Nhận Đánh Giá Ban Đầu', 'Trao Đổi Về Trường Hợp Của Bạn'],
-      primaryCta: 'Gửi X-ray Của Bạn',
-      secondaryCta: 'Trao Đổi Về Trường Hợp Của Bạn',
+        'Báº¡n khÃ´ng cáº§n quyáº¿t Ä‘á»‹nh trÆ°á»›c khi liÃªn há»‡. Náº¿u Ä‘Ã£ cÃ³ X-ray hoáº·c CBCT, EMIS cÃ³ thá»ƒ há»— trá»£ Ä‘Ã¡nh giÃ¡ sÆ¡ bá»™ vÃ  giÃºp báº¡n hiá»ƒu rÃµ hÆ¡n nhá»¯ng lá»±a chá»n phÃ¹ há»£p vá»›i báº¡n.',
+      processTitle: 'Nhá»¯ng BÆ°á»›c Tiáº¿p Theo',
+      steps: ['Gá»­i X-ray Hoáº·c CBCT', 'Nháº­n ÄÃ¡nh GiÃ¡ Ban Äáº§u', 'Trao Äá»•i Vá» TrÆ°á»ng Há»£p Cá»§a Báº¡n'],
+      primaryCta: 'Gá»­i X-ray Cá»§a Báº¡n',
+      secondaryCta: 'Trao Äá»•i Vá» TrÆ°á»ng Há»£p Cá»§a Báº¡n',
       note:
-        'Đánh giá sơ bộ giúp EMIS hiểu rõ hơn về trường hợp của bạn. Kế hoạch điều trị cuối cùng cần được xác định sau khi thăm khám trực tiếp và thực hiện đầy đủ chẩn đoán cần thiết.',
+        'ÄÃ¡nh giÃ¡ sÆ¡ bá»™ giÃºp EMIS hiá»ƒu rÃµ hÆ¡n vá» trÆ°á»ng há»£p cá»§a báº¡n. Káº¿ hoáº¡ch Ä‘iá»u trá»‹ cuá»‘i cÃ¹ng cáº§n Ä‘Æ°á»£c xÃ¡c Ä‘á»‹nh sau khi thÄƒm khÃ¡m trá»±c tiáº¿p vÃ  thá»±c hiá»‡n Ä‘áº§y Ä‘á»§ cháº©n Ä‘oÃ¡n cáº§n thiáº¿t.',
     },
   },
 
@@ -515,12 +514,11 @@ export const solutionsContent = {
         'Selon votre cas, le traitement peut inclure diagnostic, planification, chirurgie, restauration et suivi. L equipe EMIS coordonne chaque etape de facon claire et rigoureuse.',
       doctors: [
         {
-          name: 'Dr Nguyen The Son',
-          focus: 'Prothese implantaire • Rehabilitation restauratrice • Fonction et esthetique du sourire',
+          focus: 'Prothese implantaire â€¢ Rehabilitation restauratrice â€¢ Fonction et esthetique du sourire',
         },
         {
           name: 'Dr Tran Minh Tu',
-          focus: 'Chirurgie implantaire • Chirurgie orale • Planification des rehabilitations complexes',
+          focus: 'Chirurgie implantaire â€¢ Chirurgie orale â€¢ Planification des rehabilitations complexes',
         },
       ],
       cta: 'Rencontrer Nos Medecins',
@@ -564,550 +562,548 @@ export const solutionsContent = {
   },
 
   korean: {
-    metaTitle: '치료 솔루션 | EMIS Dental',
+    metaTitle: 'ì¹˜ë£Œ ì†”ë£¨ì…˜ | EMIS Dental',
     metaDescription:
-      '임플란트, 고정성 치아 재건, 전악 재건, 구강외과, 수복 및 심미 치료를 포함해 환자 상태와 목표에 맞는 치료 경로를 EMIS에서 확인하세요.',
+      'ìž„í”Œëž€íŠ¸, ê³ ì •ì„± ì¹˜ì•„ ìž¬ê±´, ì „ì•… ìž¬ê±´, êµ¬ê°•ì™¸ê³¼, ìˆ˜ë³µ ë° ì‹¬ë¯¸ ì¹˜ë£Œë¥¼ í¬í•¨í•´ í™˜ìž ìƒíƒœì™€ ëª©í‘œì— ë§žëŠ” ì¹˜ë£Œ ê²½ë¡œë¥¼ EMISì—ì„œ í™•ì¸í•˜ì„¸ìš”.',
 
     hero: {
-      eyebrow: '치료 솔루션',
-      title: '현재 상황에 맞는 치료 경로를 찾으세요',
+      eyebrow: 'ì¹˜ë£Œ ì†”ë£¨ì…˜',
+      title: 'í˜„ìž¬ ìƒí™©ì— ë§žëŠ” ì¹˜ë£Œ ê²½ë¡œë¥¼ ì°¾ìœ¼ì„¸ìš”',
       intro:
-        '어디서부터 시작해야 할지 막막한 환자가 많습니다. 치아 상실, 틀니 불편, 복합적인 구강 문제 등 상황은 다양합니다. EMIS의 첫 단계는 치료를 고르는 것이 아니라 현재 상태를 정확히 이해하는 것입니다.',
-      highlights: ['임플란트 솔루션', '고정성 치아 재건', '전악 재건', '구강외과', '수복 및 심미 치과'],
-      primaryCta: '엑스레이 보내기',
-      secondaryCta: '내 상태 상담하기',
+        'ì–´ë””ì„œë¶€í„° ì‹œìž‘í•´ì•¼ í• ì§€ ë§‰ë§‰í•œ í™˜ìžê°€ ë§ŽìŠµë‹ˆë‹¤. ì¹˜ì•„ ìƒì‹¤, í‹€ë‹ˆ ë¶ˆíŽ¸, ë³µí•©ì ì¸ êµ¬ê°• ë¬¸ì œ ë“± ìƒí™©ì€ ë‹¤ì–‘í•©ë‹ˆë‹¤. EMISì˜ ì²« ë‹¨ê³„ëŠ” ì¹˜ë£Œë¥¼ ê³ ë¥´ëŠ” ê²ƒì´ ì•„ë‹ˆë¼ í˜„ìž¬ ìƒíƒœë¥¼ ì •í™•ížˆ ì´í•´í•˜ëŠ” ê²ƒìž…ë‹ˆë‹¤.',
+      highlights: ['ìž„í”Œëž€íŠ¸ ì†”ë£¨ì…˜', 'ê³ ì •ì„± ì¹˜ì•„ ìž¬ê±´', 'ì „ì•… ìž¬ê±´', 'êµ¬ê°•ì™¸ê³¼', 'ìˆ˜ë³µ ë° ì‹¬ë¯¸ ì¹˜ê³¼'],
+      primaryCta: 'ì—‘ìŠ¤ë ˆì´ ë³´ë‚´ê¸°',
+      secondaryCta: 'ë‚´ ìƒíƒœ ìƒë‹´í•˜ê¸°',
     },
 
     situations: {
-      eyebrow: '어떤 상황이 가장 가깝나요?',
-      title: '지금 겪는 문제에서 시작하세요',
+      eyebrow: 'ì–´ë–¤ ìƒí™©ì´ ê°€ìž¥ ê°€ê¹ë‚˜ìš”?',
+      title: 'ì§€ê¸ˆ ê²ªëŠ” ë¬¸ì œì—ì„œ ì‹œìž‘í•˜ì„¸ìš”',
       intro:
-        'EMIS를 찾는 환자의 고민은 모두 다릅니다. 치료명부터 시작하기보다 현재 겪는 문제부터 정리하는 것이 더 쉽습니다.',
+        'EMISë¥¼ ì°¾ëŠ” í™˜ìžì˜ ê³ ë¯¼ì€ ëª¨ë‘ ë‹¤ë¦…ë‹ˆë‹¤. ì¹˜ë£Œëª…ë¶€í„° ì‹œìž‘í•˜ê¸°ë³´ë‹¤ í˜„ìž¬ ê²ªëŠ” ë¬¸ì œë¶€í„° ì •ë¦¬í•˜ëŠ” ê²ƒì´ ë” ì‰½ìŠµë‹ˆë‹¤.',
       cards: [
         {
-          title: '치아 한 개 상실',
-          text: '미소, 저작 편안함, 자신감을 회복하고 싶을 수 있습니다.',
+          title: 'ì¹˜ì•„ í•œ ê°œ ìƒì‹¤',
+          text: 'ë¯¸ì†Œ, ì €ìž‘ íŽ¸ì•ˆí•¨, ìžì‹ ê°ì„ íšŒë³µí•˜ê³  ì‹¶ì„ ìˆ˜ ìžˆìŠµë‹ˆë‹¤.',
         },
         {
-          title: '여러 개 치아 상실',
-          text: '여러 치아가 없으면 식사, 발음, 일상생활에 영향을 줄 수 있습니다.',
+          title: 'ì—¬ëŸ¬ ê°œ ì¹˜ì•„ ìƒì‹¤',
+          text: 'ì—¬ëŸ¬ ì¹˜ì•„ê°€ ì—†ìœ¼ë©´ ì‹ì‚¬, ë°œìŒ, ì¼ìƒìƒí™œì— ì˜í–¥ì„ ì¤„ ìˆ˜ ìžˆìŠµë‹ˆë‹¤.',
         },
         {
-          title: '틀니가 헐겁거나 불편함',
-          text: '틀니가 불안정하거나 사용이 어렵다면 더 안정적인 대안을 찾고 있을 수 있습니다.',
+          title: 'í‹€ë‹ˆê°€ í—ê²ê±°ë‚˜ ë¶ˆíŽ¸í•¨',
+          text: 'í‹€ë‹ˆê°€ ë¶ˆì•ˆì •í•˜ê±°ë‚˜ ì‚¬ìš©ì´ ì–´ë µë‹¤ë©´ ë” ì•ˆì •ì ì¸ ëŒ€ì•ˆì„ ì°¾ê³  ìžˆì„ ìˆ˜ ìžˆìŠµë‹ˆë‹¤.',
         },
         {
-          title: '여러 치아의 기능 저하',
-          text: '여러 치아가 손상되거나 통증이 있으면 무엇부터 치료해야 할지 어려울 수 있습니다.',
+          title: 'ì—¬ëŸ¬ ì¹˜ì•„ì˜ ê¸°ëŠ¥ ì €í•˜',
+          text: 'ì—¬ëŸ¬ ì¹˜ì•„ê°€ ì†ìƒë˜ê±°ë‚˜ í†µì¦ì´ ìžˆìœ¼ë©´ ë¬´ì—‡ë¶€í„° ì¹˜ë£Œí•´ì•¼ í• ì§€ ì–´ë ¤ìš¸ ìˆ˜ ìžˆìŠµë‹ˆë‹¤.',
         },
         {
-          title: '복합적인 전악 문제',
-          text: '오랜 치아 상실, 심한 마모, 교합 변화는 보다 종합적인 계획이 필요할 수 있습니다.',
+          title: 'ë³µí•©ì ì¸ ì „ì•… ë¬¸ì œ',
+          text: 'ì˜¤ëžœ ì¹˜ì•„ ìƒì‹¤, ì‹¬í•œ ë§ˆëª¨, êµí•© ë³€í™”ëŠ” ë³´ë‹¤ ì¢…í•©ì ì¸ ê³„íšì´ í•„ìš”í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.',
         },
         {
-          title: '사랑니 또는 구강외과 필요',
-          text: '매복 사랑니, 낭종, 감염 등은 외과적 처치가 필요할 수 있습니다.',
+          title: 'ì‚¬ëž‘ë‹ˆ ë˜ëŠ” êµ¬ê°•ì™¸ê³¼ í•„ìš”',
+          text: 'ë§¤ë³µ ì‚¬ëž‘ë‹ˆ, ë‚­ì¢…, ê°ì—¼ ë“±ì€ ì™¸ê³¼ì  ì²˜ì¹˜ê°€ í•„ìš”í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.',
         },
         {
-          title: '미소 및 심미 고민',
-          text: '구강 건강을 지키면서 더 자연스럽고 균형 있는 미소를 원할 수 있습니다.',
+          title: 'ë¯¸ì†Œ ë° ì‹¬ë¯¸ ê³ ë¯¼',
+          text: 'êµ¬ê°• ê±´ê°•ì„ ì§€í‚¤ë©´ì„œ ë” ìžì—°ìŠ¤ëŸ½ê³  ê· í˜• ìžˆëŠ” ë¯¸ì†Œë¥¼ ì›í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.',
         },
       ],
     },
 
     pathways: {
-      eyebrow: '치료 경로 살펴보기',
-      title: 'EMIS 치료 경로',
+      eyebrow: 'ì¹˜ë£Œ ê²½ë¡œ ì‚´íŽ´ë³´ê¸°',
+      title: 'EMIS ì¹˜ë£Œ ê²½ë¡œ',
       intro:
-        '적절한 치료는 현재 상태, 목표, 장기적 필요에 따라 달라집니다. 아래는 EMIS에서 자주 검토하는 치료 경로입니다.',
+        'ì ì ˆí•œ ì¹˜ë£ŒëŠ” í˜„ìž¬ ìƒíƒœ, ëª©í‘œ, ìž¥ê¸°ì  í•„ìš”ì— ë”°ë¼ ë‹¬ë¼ì§‘ë‹ˆë‹¤. ì•„ëž˜ëŠ” EMISì—ì„œ ìžì£¼ ê²€í† í•˜ëŠ” ì¹˜ë£Œ ê²½ë¡œìž…ë‹ˆë‹¤.',
       cards: [
         {
-          title: '임플란트 솔루션',
-          text: '한 개 또는 여러 개의 상실 치아를 임플란트 기반 보철로 회복합니다.',
-          cta: '임플란트 솔루션 보기',
+          title: 'ìž„í”Œëž€íŠ¸ ì†”ë£¨ì…˜',
+          text: 'í•œ ê°œ ë˜ëŠ” ì—¬ëŸ¬ ê°œì˜ ìƒì‹¤ ì¹˜ì•„ë¥¼ ìž„í”Œëž€íŠ¸ ê¸°ë°˜ ë³´ì² ë¡œ íšŒë³µí•©ë‹ˆë‹¤.',
+          cta: 'ìž„í”Œëž€íŠ¸ ì†”ë£¨ì…˜ ë³´ê¸°',
           path: '/implant',
         },
         {
-          title: '고정성 치아 솔루션',
-          text: 'All-on-4, All-on-6를 포함하며 틀니의 안정적인 대안을 원하는 경우에 적합합니다.',
-          cta: '고정성 치아 솔루션 보기',
+          title: 'ê³ ì •ì„± ì¹˜ì•„ ì†”ë£¨ì…˜',
+          text: 'All-on-4, All-on-6ë¥¼ í¬í•¨í•˜ë©° í‹€ë‹ˆì˜ ì•ˆì •ì ì¸ ëŒ€ì•ˆì„ ì›í•˜ëŠ” ê²½ìš°ì— ì í•©í•©ë‹ˆë‹¤.',
+          cta: 'ê³ ì •ì„± ì¹˜ì•„ ì†”ë£¨ì…˜ ë³´ê¸°',
           path: '/fixed-teeth',
         },
         {
-          title: '전악 재건',
-          text: '광범위한 치아 상실, 심한 마모, 교합 문제, 복합 수복이 필요한 경우를 위한 경로입니다.',
-          cta: '전악 재건 보기',
+          title: 'ì „ì•… ìž¬ê±´',
+          text: 'ê´‘ë²”ìœ„í•œ ì¹˜ì•„ ìƒì‹¤, ì‹¬í•œ ë§ˆëª¨, êµí•© ë¬¸ì œ, ë³µí•© ìˆ˜ë³µì´ í•„ìš”í•œ ê²½ìš°ë¥¼ ìœ„í•œ ê²½ë¡œìž…ë‹ˆë‹¤.',
+          cta: 'ì „ì•… ìž¬ê±´ ë³´ê¸°',
           path: '/restorative-dentistry',
         },
         {
-          title: '구강외과',
-          text: '사랑니 수술, 낭종 제거 및 관련 구강외과 처치를 포함합니다.',
-          cta: '구강외과 보기',
+          title: 'êµ¬ê°•ì™¸ê³¼',
+          text: 'ì‚¬ëž‘ë‹ˆ ìˆ˜ìˆ , ë‚­ì¢… ì œê±° ë° ê´€ë ¨ êµ¬ê°•ì™¸ê³¼ ì²˜ì¹˜ë¥¼ í¬í•¨í•©ë‹ˆë‹¤.',
+          cta: 'êµ¬ê°•ì™¸ê³¼ ë³´ê¸°',
           path: '/oral-surgery',
         },
         {
-          title: '수복 치과',
-          text: '손상된 치아를 회복하고 일상적인 구강 기능을 지원합니다.',
-          cta: '수복 치과 보기',
+          title: 'ìˆ˜ë³µ ì¹˜ê³¼',
+          text: 'ì†ìƒëœ ì¹˜ì•„ë¥¼ íšŒë³µí•˜ê³  ì¼ìƒì ì¸ êµ¬ê°• ê¸°ëŠ¥ì„ ì§€ì›í•©ë‹ˆë‹¤.',
+          cta: 'ìˆ˜ë³µ ì¹˜ê³¼ ë³´ê¸°',
           path: '/restorative-dentistry',
         },
         {
-          title: '심미 치과',
-          text: '기능, 편안함, 구강 건강을 해치지 않으면서 미소를 개선합니다.',
-          cta: '심미 치과 보기',
+          title: 'ì‹¬ë¯¸ ì¹˜ê³¼',
+          text: 'ê¸°ëŠ¥, íŽ¸ì•ˆí•¨, êµ¬ê°• ê±´ê°•ì„ í•´ì¹˜ì§€ ì•Šìœ¼ë©´ì„œ ë¯¸ì†Œë¥¼ ê°œì„ í•©ë‹ˆë‹¤.',
+          cta: 'ì‹¬ë¯¸ ì¹˜ê³¼ ë³´ê¸°',
           path: '/veneer',
         },
       ],
     },
 
     assessment: {
-      eyebrow: '치료 결정은 어떻게 이루어지나요?',
-      title: '치료는 평가에서 시작됩니다',
+      eyebrow: 'ì¹˜ë£Œ ê²°ì •ì€ ì–´ë–»ê²Œ ì´ë£¨ì–´ì§€ë‚˜ìš”?',
+      title: 'ì¹˜ë£ŒëŠ” í‰ê°€ì—ì„œ ì‹œìž‘ë©ë‹ˆë‹¤',
       intro:
-        '모든 환자에게 같은 치료가 필요한 것은 아닙니다. 적절한 계획은 구강 상태, 잔존 치아, 골 지지, 목표, 장기 기대를 함께 고려해야 합니다. 그래서 EMIS는 옵션 논의 전에 현재 상태를 먼저 파악합니다.',
-      factorsTitle: '주요 평가 항목',
+        'ëª¨ë“  í™˜ìžì—ê²Œ ê°™ì€ ì¹˜ë£Œê°€ í•„ìš”í•œ ê²ƒì€ ì•„ë‹™ë‹ˆë‹¤. ì ì ˆí•œ ê³„íšì€ êµ¬ê°• ìƒíƒœ, ìž”ì¡´ ì¹˜ì•„, ê³¨ ì§€ì§€, ëª©í‘œ, ìž¥ê¸° ê¸°ëŒ€ë¥¼ í•¨ê»˜ ê³ ë ¤í•´ì•¼ í•©ë‹ˆë‹¤. ê·¸ëž˜ì„œ EMISëŠ” ì˜µì…˜ ë…¼ì˜ ì „ì— í˜„ìž¬ ìƒíƒœë¥¼ ë¨¼ì € íŒŒì•…í•©ë‹ˆë‹¤.',
+      factorsTitle: 'ì£¼ìš” í‰ê°€ í•­ëª©',
       factors: [
         {
-          title: '구강 상태',
-          text: '현재 치아와 구강 건강 상태, 핵심 불편 요소를 확인합니다.',
+          title: 'êµ¬ê°• ìƒíƒœ',
+          text: 'í˜„ìž¬ ì¹˜ì•„ì™€ êµ¬ê°• ê±´ê°• ìƒíƒœ, í•µì‹¬ ë¶ˆíŽ¸ ìš”ì†Œë¥¼ í™•ì¸í•©ë‹ˆë‹¤.',
         },
         {
-          title: '영상 진단',
-          text: '골 구조, 해부학적 특징, 임상 세부 정보를 평가합니다.',
+          title: 'ì˜ìƒ ì§„ë‹¨',
+          text: 'ê³¨ êµ¬ì¡°, í•´ë¶€í•™ì  íŠ¹ì§•, ìž„ìƒ ì„¸ë¶€ ì •ë³´ë¥¼ í‰ê°€í•©ë‹ˆë‹¤.',
         },
         {
-          title: '기능 목표',
-          text: '저작 편안함, 발음, 일상 사용성을 확인합니다.',
+          title: 'ê¸°ëŠ¥ ëª©í‘œ',
+          text: 'ì €ìž‘ íŽ¸ì•ˆí•¨, ë°œìŒ, ì¼ìƒ ì‚¬ìš©ì„±ì„ í™•ì¸í•©ë‹ˆë‹¤.',
         },
         {
-          title: '치료 일정',
-          text: '개인 일정, 이동 계획, 회복 시간을 함께 고려합니다.',
+          title: 'ì¹˜ë£Œ ì¼ì •',
+          text: 'ê°œì¸ ì¼ì •, ì´ë™ ê³„íš, íšŒë³µ ì‹œê°„ì„ í•¨ê»˜ ê³ ë ¤í•©ë‹ˆë‹¤.',
         },
         {
-          title: '장기 안정성',
-          text: '치료 결과가 장기적으로 기능과 편안함을 유지할 수 있는지 검토합니다.',
+          title: 'ìž¥ê¸° ì•ˆì •ì„±',
+          text: 'ì¹˜ë£Œ ê²°ê³¼ê°€ ìž¥ê¸°ì ìœ¼ë¡œ ê¸°ëŠ¥ê³¼ íŽ¸ì•ˆí•¨ì„ ìœ ì§€í•  ìˆ˜ ìžˆëŠ”ì§€ ê²€í† í•©ë‹ˆë‹¤.',
         },
       ],
     },
 
     team: {
-      eyebrow: '진료를 함께하는 팀',
-      title: '다른 전문성, 하나의 목표',
+      eyebrow: 'ì§„ë£Œë¥¼ í•¨ê»˜í•˜ëŠ” íŒ€',
+      title: 'ë‹¤ë¥¸ ì „ë¬¸ì„±, í•˜ë‚˜ì˜ ëª©í‘œ',
       intro:
-        '환자 상태에 따라 진단, 계획, 수술, 수복, 추적 관리가 함께 진행될 수 있습니다. EMIS 팀은 각 단계를 명확하고 신중하게 협업합니다.',
+        'í™˜ìž ìƒíƒœì— ë”°ë¼ ì§„ë‹¨, ê³„íš, ìˆ˜ìˆ , ìˆ˜ë³µ, ì¶”ì  ê´€ë¦¬ê°€ í•¨ê»˜ ì§„í–‰ë  ìˆ˜ ìžˆìŠµë‹ˆë‹¤. EMIS íŒ€ì€ ê° ë‹¨ê³„ë¥¼ ëª…í™•í•˜ê³  ì‹ ì¤‘í•˜ê²Œ í˜‘ì—…í•©ë‹ˆë‹¤.',
       doctors: [
         {
-          name: 'Dr. Nguyen The Son',
-          focus: '임플란트 보철 • 수복 재건 • 기능 및 미소 심미',
+          focus: 'ìž„í”Œëž€íŠ¸ ë³´ì²  â€¢ ìˆ˜ë³µ ìž¬ê±´ â€¢ ê¸°ëŠ¥ ë° ë¯¸ì†Œ ì‹¬ë¯¸',
         },
         {
           name: 'Dr. Tran Minh Tu',
-          focus: '임플란트 수술 • 구강외과 • 복합 재건 계획',
+          focus: 'ìž„í”Œëž€íŠ¸ ìˆ˜ìˆ  â€¢ êµ¬ê°•ì™¸ê³¼ â€¢ ë³µí•© ìž¬ê±´ ê³„íš',
         },
       ],
-      cta: '의료진 보기',
+      cta: 'ì˜ë£Œì§„ ë³´ê¸°',
       ctaPath: '/doctors',
     },
 
     overseas: {
-      eyebrow: '해외 환자 안내',
-      title: '해외에서도 치료 준비를 시작할 수 있습니다',
+      eyebrow: 'í•´ì™¸ í™˜ìž ì•ˆë‚´',
+      title: 'í•´ì™¸ì—ì„œë„ ì¹˜ë£Œ ì¤€ë¹„ë¥¼ ì‹œìž‘í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤',
       intro:
-        '많은 해외 거주 환자와 외국인 환자가 베트남 방문 전에 과정을 시작합니다. EMIS는 상태 검토, 일정 협의, 다음 단계 계획을 명확하게 도와드립니다.',
+        'ë§Žì€ í•´ì™¸ ê±°ì£¼ í™˜ìžì™€ ì™¸êµ­ì¸ í™˜ìžê°€ ë² íŠ¸ë‚¨ ë°©ë¬¸ ì „ì— ê³¼ì •ì„ ì‹œìž‘í•©ë‹ˆë‹¤. EMISëŠ” ìƒíƒœ ê²€í† , ì¼ì • í˜‘ì˜, ë‹¤ìŒ ë‹¨ê³„ ê³„íšì„ ëª…í™•í•˜ê²Œ ë„ì™€ë“œë¦½ë‹ˆë‹¤.',
       timeline: [
         {
-          step: '방문 전',
-          text: '초기 검토를 위해 엑스레이 또는 치과 기록을 공유하세요.',
+          step: 'ë°©ë¬¸ ì „',
+          text: 'ì´ˆê¸° ê²€í† ë¥¼ ìœ„í•´ ì—‘ìŠ¤ë ˆì´ ë˜ëŠ” ì¹˜ê³¼ ê¸°ë¡ì„ ê³µìœ í•˜ì„¸ìš”.',
         },
         {
-          step: '계획 단계',
-          text: '체류 일정에 맞춰 치료 일정을 함께 조율합니다.',
+          step: 'ê³„íš ë‹¨ê³„',
+          text: 'ì²´ë¥˜ ì¼ì •ì— ë§žì¶° ì¹˜ë£Œ ì¼ì •ì„ í•¨ê»˜ ì¡°ìœ¨í•©ë‹ˆë‹¤.',
         },
         {
-          step: '귀국 후',
-          text: '회복 및 추적 관리 동안 EMIS 팀과 지속적으로 연결됩니다.',
+          step: 'ê·€êµ­ í›„',
+          text: 'íšŒë³µ ë° ì¶”ì  ê´€ë¦¬ ë™ì•ˆ EMIS íŒ€ê³¼ ì§€ì†ì ìœ¼ë¡œ ì—°ê²°ë©ë‹ˆë‹¤.',
         },
       ],
-      cta: '해외 환자 지원 보기',
+      cta: 'í•´ì™¸ í™˜ìž ì§€ì› ë³´ê¸°',
       ctaPath: '/international-patients',
     },
 
     finalCta: {
-      title: '어떤 옵션이 맞는지 아직 모르시나요?',
+      title: 'ì–´ë–¤ ì˜µì…˜ì´ ë§žëŠ”ì§€ ì•„ì§ ëª¨ë¥´ì‹œë‚˜ìš”?',
       intro:
-        '치료 결정을 먼저 내릴 필요는 없습니다. 엑스레이나 CBCT가 있다면, EMIS 팀이 초기 검토를 통해 논의할 가치가 있는 옵션을 안내해 드립니다.',
-      processTitle: '다음 단계는 무엇인가요?',
-      steps: ['엑스레이 보내기', '초기 평가 받기', '내 상태 상담하기'],
-      primaryCta: '엑스레이 보내기',
-      secondaryCta: '내 상태 상담하기',
+        'ì¹˜ë£Œ ê²°ì •ì„ ë¨¼ì € ë‚´ë¦´ í•„ìš”ëŠ” ì—†ìŠµë‹ˆë‹¤. ì—‘ìŠ¤ë ˆì´ë‚˜ CBCTê°€ ìžˆë‹¤ë©´, EMIS íŒ€ì´ ì´ˆê¸° ê²€í† ë¥¼ í†µí•´ ë…¼ì˜í•  ê°€ì¹˜ê°€ ìžˆëŠ” ì˜µì…˜ì„ ì•ˆë‚´í•´ ë“œë¦½ë‹ˆë‹¤.',
+      processTitle: 'ë‹¤ìŒ ë‹¨ê³„ëŠ” ë¬´ì—‡ì¸ê°€ìš”?',
+      steps: ['ì—‘ìŠ¤ë ˆì´ ë³´ë‚´ê¸°', 'ì´ˆê¸° í‰ê°€ ë°›ê¸°', 'ë‚´ ìƒíƒœ ìƒë‹´í•˜ê¸°'],
+      primaryCta: 'ì—‘ìŠ¤ë ˆì´ ë³´ë‚´ê¸°',
+      secondaryCta: 'ë‚´ ìƒíƒœ ìƒë‹´í•˜ê¸°',
       note:
-        '초기 평가는 환자 상태를 이해하는 데 도움이 됩니다. 최종 치료 권고는 대면 임상 검사와 적절한 진단 후 확정됩니다.',
+        'ì´ˆê¸° í‰ê°€ëŠ” í™˜ìž ìƒíƒœë¥¼ ì´í•´í•˜ëŠ” ë° ë„ì›€ì´ ë©ë‹ˆë‹¤. ìµœì¢… ì¹˜ë£Œ ê¶Œê³ ëŠ” ëŒ€ë©´ ìž„ìƒ ê²€ì‚¬ì™€ ì ì ˆí•œ ì§„ë‹¨ í›„ í™•ì •ë©ë‹ˆë‹¤.',
     },
   },
 
   simplified: {
-    metaTitle: '治疗方案 | EMIS Dental',
+    metaTitle: 'æ²»ç–—æ–¹æ¡ˆ | EMIS Dental',
     metaDescription:
-      '根据您的口腔情况与目标，探索 EMIS 的治疗路径，包括种植、固定牙修复、全口重建、口腔外科、修复与美学治疗。',
+      'æ ¹æ®æ‚¨çš„å£è…”æƒ…å†µä¸Žç›®æ ‡ï¼ŒæŽ¢ç´¢ EMIS çš„æ²»ç–—è·¯å¾„ï¼ŒåŒ…æ‹¬ç§æ¤ã€å›ºå®šç‰™ä¿®å¤ã€å…¨å£é‡å»ºã€å£è…”å¤–ç§‘ã€ä¿®å¤ä¸Žç¾Žå­¦æ²»ç–—ã€‚',
 
     hero: {
-      eyebrow: '治疗方案',
-      title: '找到适合您情况的治疗路径',
+      eyebrow: 'æ²»ç–—æ–¹æ¡ˆ',
+      title: 'æ‰¾åˆ°é€‚åˆæ‚¨æƒ…å†µçš„æ²»ç–—è·¯å¾„',
       intro:
-        '许多患者不知道该从哪里开始。您可能有缺牙、活动义齿不适、多个口腔问题，或只是想了解哪种方案更合适。在 EMIS，第一步不是立刻选治疗，而是先清楚了解您的当前情况。',
-      highlights: ['种植方案', '固定牙修复', '全口重建', '口腔外科', '修复与美学牙科'],
-      primaryCta: '发送您的 X 光片',
-      secondaryCta: '咨询您的情况',
+        'è®¸å¤šæ‚£è€…ä¸çŸ¥é“è¯¥ä»Žå“ªé‡Œå¼€å§‹ã€‚æ‚¨å¯èƒ½æœ‰ç¼ºç‰™ã€æ´»åŠ¨ä¹‰é½¿ä¸é€‚ã€å¤šä¸ªå£è…”é—®é¢˜ï¼Œæˆ–åªæ˜¯æƒ³äº†è§£å“ªç§æ–¹æ¡ˆæ›´åˆé€‚ã€‚åœ¨ EMISï¼Œç¬¬ä¸€æ­¥ä¸æ˜¯ç«‹åˆ»é€‰æ²»ç–—ï¼Œè€Œæ˜¯å…ˆæ¸…æ¥šäº†è§£æ‚¨çš„å½“å‰æƒ…å†µã€‚',
+      highlights: ['ç§æ¤æ–¹æ¡ˆ', 'å›ºå®šç‰™ä¿®å¤', 'å…¨å£é‡å»º', 'å£è…”å¤–ç§‘', 'ä¿®å¤ä¸Žç¾Žå­¦ç‰™ç§‘'],
+      primaryCta: 'å‘é€æ‚¨çš„ X å…‰ç‰‡',
+      secondaryCta: 'å’¨è¯¢æ‚¨çš„æƒ…å†µ',
     },
 
     situations: {
-      eyebrow: '哪种情况最接近您？',
-      title: '从您正在经历的问题开始',
+      eyebrow: 'å“ªç§æƒ…å†µæœ€æŽ¥è¿‘æ‚¨ï¼Ÿ',
+      title: 'ä»Žæ‚¨æ­£åœ¨ç»åŽ†çš„é—®é¢˜å¼€å§‹',
       intro:
-        '来到 EMIS 的患者关注点各不相同。与其先从治疗名称开始，不如先从您目前的实际问题开始。',
+        'æ¥åˆ° EMIS çš„æ‚£è€…å…³æ³¨ç‚¹å„ä¸ç›¸åŒã€‚ä¸Žå…¶å…ˆä»Žæ²»ç–—åç§°å¼€å§‹ï¼Œä¸å¦‚å…ˆä»Žæ‚¨ç›®å‰çš„å®žé™…é—®é¢˜å¼€å§‹ã€‚',
       cards: [
         {
-          title: '缺失一颗牙',
-          text: '您可能希望恢复笑容、咀嚼舒适度和自信。',
+          title: 'ç¼ºå¤±ä¸€é¢—ç‰™',
+          text: 'æ‚¨å¯èƒ½å¸Œæœ›æ¢å¤ç¬‘å®¹ã€å’€åš¼èˆ’é€‚åº¦å’Œè‡ªä¿¡ã€‚',
         },
         {
-          title: '缺失多颗牙',
-          text: '多颗缺牙会影响日常进食、发音和生活感受。',
+          title: 'ç¼ºå¤±å¤šé¢—ç‰™',
+          text: 'å¤šé¢—ç¼ºç‰™ä¼šå½±å“æ—¥å¸¸è¿›é£Ÿã€å‘éŸ³å’Œç”Ÿæ´»æ„Ÿå—ã€‚',
         },
         {
-          title: '义齿松动或不舒适',
-          text: '如果义齿松动、不舒适或使用困难，您可能在寻找更稳定的方案。',
+          title: 'ä¹‰é½¿æ¾åŠ¨æˆ–ä¸èˆ’é€‚',
+          text: 'å¦‚æžœä¹‰é½¿æ¾åŠ¨ã€ä¸èˆ’é€‚æˆ–ä½¿ç”¨å›°éš¾ï¼Œæ‚¨å¯èƒ½åœ¨å¯»æ‰¾æ›´ç¨³å®šçš„æ–¹æ¡ˆã€‚',
         },
         {
-          title: '多颗牙功能不良',
-          text: '当多颗牙受损或疼痛时，往往很难判断应先处理哪一项。',
+          title: 'å¤šé¢—ç‰™åŠŸèƒ½ä¸è‰¯',
+          text: 'å½“å¤šé¢—ç‰™å—æŸæˆ–ç–¼ç—›æ—¶ï¼Œå¾€å¾€å¾ˆéš¾åˆ¤æ–­åº”å…ˆå¤„ç†å“ªä¸€é¡¹ã€‚',
         },
         {
-          title: '复杂全口问题',
-          text: '长期缺牙、严重磨耗或咬合改变，可能需要更完整的治疗计划。',
+          title: 'å¤æ‚å…¨å£é—®é¢˜',
+          text: 'é•¿æœŸç¼ºç‰™ã€ä¸¥é‡ç£¨è€—æˆ–å’¬åˆæ”¹å˜ï¼Œå¯èƒ½éœ€è¦æ›´å®Œæ•´çš„æ²»ç–—è®¡åˆ’ã€‚',
         },
         {
-          title: '智齿或口腔外科需求',
-          text: '部分情况可能涉及阻生智齿、囊肿、感染或其他外科处理。',
+          title: 'æ™ºé½¿æˆ–å£è…”å¤–ç§‘éœ€æ±‚',
+          text: 'éƒ¨åˆ†æƒ…å†µå¯èƒ½æ¶‰åŠé˜»ç”Ÿæ™ºé½¿ã€å›Šè‚¿ã€æ„ŸæŸ“æˆ–å…¶ä»–å¤–ç§‘å¤„ç†ã€‚',
         },
         {
-          title: '微笑与美观顾虑',
-          text: '您可能希望在维护长期口腔健康的同时，让笑容更自然、更协调、更自信。',
+          title: 'å¾®ç¬‘ä¸Žç¾Žè§‚é¡¾è™‘',
+          text: 'æ‚¨å¯èƒ½å¸Œæœ›åœ¨ç»´æŠ¤é•¿æœŸå£è…”å¥åº·çš„åŒæ—¶ï¼Œè®©ç¬‘å®¹æ›´è‡ªç„¶ã€æ›´åè°ƒã€æ›´è‡ªä¿¡ã€‚',
         },
       ],
     },
 
     pathways: {
-      eyebrow: '探索治疗路径',
-      title: 'EMIS 的治疗路径',
+      eyebrow: 'æŽ¢ç´¢æ²»ç–—è·¯å¾„',
+      title: 'EMIS çš„æ²»ç–—è·¯å¾„',
       intro:
-        '合适的治疗取决于您的口腔状况、目标与长期需求。以下是 EMIS 常见的治疗路径。',
+        'åˆé€‚çš„æ²»ç–—å–å†³äºŽæ‚¨çš„å£è…”çŠ¶å†µã€ç›®æ ‡ä¸Žé•¿æœŸéœ€æ±‚ã€‚ä»¥ä¸‹æ˜¯ EMIS å¸¸è§çš„æ²»ç–—è·¯å¾„ã€‚',
       cards: [
         {
-          title: '种植方案',
-          text: '用于一颗或多颗缺牙的种植支持修复。',
-          cta: '了解种植方案',
+          title: 'ç§æ¤æ–¹æ¡ˆ',
+          text: 'ç”¨äºŽä¸€é¢—æˆ–å¤šé¢—ç¼ºç‰™çš„ç§æ¤æ”¯æŒä¿®å¤ã€‚',
+          cta: 'äº†è§£ç§æ¤æ–¹æ¡ˆ',
           path: '/implant',
         },
         {
-          title: '固定牙方案',
-          text: '包括 All-on-4 与 All-on-6，适合希望替代活动义齿并获得稳定效果的患者。',
-          cta: '了解固定牙方案',
+          title: 'å›ºå®šç‰™æ–¹æ¡ˆ',
+          text: 'åŒ…æ‹¬ All-on-4 ä¸Ž All-on-6ï¼Œé€‚åˆå¸Œæœ›æ›¿ä»£æ´»åŠ¨ä¹‰é½¿å¹¶èŽ·å¾—ç¨³å®šæ•ˆæžœçš„æ‚£è€…ã€‚',
+          cta: 'äº†è§£å›ºå®šç‰™æ–¹æ¡ˆ',
           path: '/fixed-teeth',
         },
         {
-          title: '全口重建',
-          text: '适用于广泛缺牙、严重磨耗、咬合问题或复杂修复需求。',
-          cta: '了解全口重建',
+          title: 'å…¨å£é‡å»º',
+          text: 'é€‚ç”¨äºŽå¹¿æ³›ç¼ºç‰™ã€ä¸¥é‡ç£¨è€—ã€å’¬åˆé—®é¢˜æˆ–å¤æ‚ä¿®å¤éœ€æ±‚ã€‚',
+          cta: 'äº†è§£å…¨å£é‡å»º',
           path: '/restorative-dentistry',
         },
         {
-          title: '口腔外科',
-          text: '包括智齿手术、囊肿处理及相关口腔外科治疗。',
-          cta: '了解口腔外科',
+          title: 'å£è…”å¤–ç§‘',
+          text: 'åŒ…æ‹¬æ™ºé½¿æ‰‹æœ¯ã€å›Šè‚¿å¤„ç†åŠç›¸å…³å£è…”å¤–ç§‘æ²»ç–—ã€‚',
+          cta: 'äº†è§£å£è…”å¤–ç§‘',
           path: '/oral-surgery',
         },
         {
-          title: '修复牙科',
-          text: '用于修复受损牙齿并支持日常口腔功能。',
-          cta: '了解修复牙科',
+          title: 'ä¿®å¤ç‰™ç§‘',
+          text: 'ç”¨äºŽä¿®å¤å—æŸç‰™é½¿å¹¶æ”¯æŒæ—¥å¸¸å£è…”åŠŸèƒ½ã€‚',
+          cta: 'äº†è§£ä¿®å¤ç‰™ç§‘',
           path: '/restorative-dentistry',
         },
         {
-          title: '美学牙科',
-          text: '在兼顾功能、舒适与口腔健康的前提下改善笑容外观。',
-          cta: '了解美学牙科',
+          title: 'ç¾Žå­¦ç‰™ç§‘',
+          text: 'åœ¨å…¼é¡¾åŠŸèƒ½ã€èˆ’é€‚ä¸Žå£è…”å¥åº·çš„å‰æä¸‹æ”¹å–„ç¬‘å®¹å¤–è§‚ã€‚',
+          cta: 'äº†è§£ç¾Žå­¦ç‰™ç§‘',
           path: '/veneer',
         },
       ],
     },
 
     assessment: {
-      eyebrow: '治疗决策如何制定',
-      title: '治疗从评估开始',
+      eyebrow: 'æ²»ç–—å†³ç­–å¦‚ä½•åˆ¶å®š',
+      title: 'æ²»ç–—ä»Žè¯„ä¼°å¼€å§‹',
       intro:
-        '并非每位患者都需要相同治疗。合适方案取决于口腔状况、现有牙齿、骨支持、个人目标和长期预期。因此在讨论选项前，我们会先全面了解您的情况。',
-      factorsTitle: '我们常评估的因素',
+        'å¹¶éžæ¯ä½æ‚£è€…éƒ½éœ€è¦ç›¸åŒæ²»ç–—ã€‚åˆé€‚æ–¹æ¡ˆå–å†³äºŽå£è…”çŠ¶å†µã€çŽ°æœ‰ç‰™é½¿ã€éª¨æ”¯æŒã€ä¸ªäººç›®æ ‡å’Œé•¿æœŸé¢„æœŸã€‚å› æ­¤åœ¨è®¨è®ºé€‰é¡¹å‰ï¼Œæˆ‘ä»¬ä¼šå…ˆå…¨é¢äº†è§£æ‚¨çš„æƒ…å†µã€‚',
+      factorsTitle: 'æˆ‘ä»¬å¸¸è¯„ä¼°çš„å› ç´ ',
       factors: [
         {
-          title: '口腔状况',
-          text: '当前口腔健康状态与主要问题。',
+          title: 'å£è…”çŠ¶å†µ',
+          text: 'å½“å‰å£è…”å¥åº·çŠ¶æ€ä¸Žä¸»è¦é—®é¢˜ã€‚',
         },
         {
-          title: '影像诊断',
-          text: '骨结构、解剖条件与临床细节。',
+          title: 'å½±åƒè¯Šæ–­',
+          text: 'éª¨ç»“æž„ã€è§£å‰–æ¡ä»¶ä¸Žä¸´åºŠç»†èŠ‚ã€‚',
         },
         {
-          title: '功能目标',
-          text: '咀嚼舒适度、发音与日常使用。',
+          title: 'åŠŸèƒ½ç›®æ ‡',
+          text: 'å’€åš¼èˆ’é€‚åº¦ã€å‘éŸ³ä¸Žæ—¥å¸¸ä½¿ç”¨ã€‚',
         },
         {
-          title: '治疗时间安排',
-          text: '您的行程、旅行计划与恢复需求。',
+          title: 'æ²»ç–—æ—¶é—´å®‰æŽ’',
+          text: 'æ‚¨çš„è¡Œç¨‹ã€æ—…è¡Œè®¡åˆ’ä¸Žæ¢å¤éœ€æ±‚ã€‚',
         },
         {
-          title: '长期稳定性',
-          text: '治疗如何在长期内支持舒适与功能。',
+          title: 'é•¿æœŸç¨³å®šæ€§',
+          text: 'æ²»ç–—å¦‚ä½•åœ¨é•¿æœŸå†…æ”¯æŒèˆ’é€‚ä¸ŽåŠŸèƒ½ã€‚',
         },
       ],
     },
 
     team: {
-      eyebrow: '您的治疗团队',
-      title: '不同专长, 同一目标',
+      eyebrow: 'æ‚¨çš„æ²»ç–—å›¢é˜Ÿ',
+      title: 'ä¸åŒä¸“é•¿, åŒä¸€ç›®æ ‡',
       intro:
-        '根据个案需要，治疗可能涉及诊断、计划、手术、修复与复诊跟进。EMIS 团队会在每个阶段协同配合。',
+        'æ ¹æ®ä¸ªæ¡ˆéœ€è¦ï¼Œæ²»ç–—å¯èƒ½æ¶‰åŠè¯Šæ–­ã€è®¡åˆ’ã€æ‰‹æœ¯ã€ä¿®å¤ä¸Žå¤è¯Šè·Ÿè¿›ã€‚EMIS å›¢é˜Ÿä¼šåœ¨æ¯ä¸ªé˜¶æ®µååŒé…åˆã€‚',
       doctors: [
         {
-          name: 'Dr. Nguyen The Son',
-          focus: '种植修复 • 功能重建 • 功能与笑容美学',
+          focus: 'ç§æ¤ä¿®å¤ â€¢ åŠŸèƒ½é‡å»º â€¢ åŠŸèƒ½ä¸Žç¬‘å®¹ç¾Žå­¦',
         },
         {
           name: 'Dr. Tran Minh Tu',
-          focus: '种植外科 • 口腔外科 • 复杂重建规划',
+          focus: 'ç§æ¤å¤–ç§‘ â€¢ å£è…”å¤–ç§‘ â€¢ å¤æ‚é‡å»ºè§„åˆ’',
         },
       ],
-      cta: '了解医生团队',
+      cta: 'äº†è§£åŒ»ç”Ÿå›¢é˜Ÿ',
       ctaPath: '/doctors',
     },
 
     overseas: {
-      eyebrow: '海外患者',
-      title: '在海外也可开始治疗规划',
+      eyebrow: 'æµ·å¤–æ‚£è€…',
+      title: 'åœ¨æµ·å¤–ä¹Ÿå¯å¼€å§‹æ²»ç–—è§„åˆ’',
       intro:
-        '许多海外越南人和国际患者会在赴越前先启动流程。EMIS 可协助您先行评估、讨论时间安排并明确下一步。',
+        'è®¸å¤šæµ·å¤–è¶Šå—äººå’Œå›½é™…æ‚£è€…ä¼šåœ¨èµ´è¶Šå‰å…ˆå¯åŠ¨æµç¨‹ã€‚EMIS å¯ååŠ©æ‚¨å…ˆè¡Œè¯„ä¼°ã€è®¨è®ºæ—¶é—´å®‰æŽ’å¹¶æ˜Žç¡®ä¸‹ä¸€æ­¥ã€‚',
       timeline: [
         {
-          step: '出行前',
-          text: '可先提交 X 光片或牙科资料进行初步评估。',
+          step: 'å‡ºè¡Œå‰',
+          text: 'å¯å…ˆæäº¤ X å…‰ç‰‡æˆ–ç‰™ç§‘èµ„æ–™è¿›è¡Œåˆæ­¥è¯„ä¼°ã€‚',
         },
         {
-          step: '规划阶段',
-          text: '根据您的停留时间与行程安排讨论治疗时间。',
+          step: 'è§„åˆ’é˜¶æ®µ',
+          text: 'æ ¹æ®æ‚¨çš„åœç•™æ—¶é—´ä¸Žè¡Œç¨‹å®‰æŽ’è®¨è®ºæ²»ç–—æ—¶é—´ã€‚',
         },
         {
-          step: '回国后',
-          text: '在恢复与随访阶段继续与 EMIS 团队保持联系。',
+          step: 'å›žå›½åŽ',
+          text: 'åœ¨æ¢å¤ä¸Žéšè®¿é˜¶æ®µç»§ç»­ä¸Ž EMIS å›¢é˜Ÿä¿æŒè”ç³»ã€‚',
         },
       ],
-      cta: '了解国际患者支持',
+      cta: 'äº†è§£å›½é™…æ‚£è€…æ”¯æŒ',
       ctaPath: '/international-patients',
     },
 
     finalCta: {
-      title: '还不确定哪种方案适合您？',
+      title: 'è¿˜ä¸ç¡®å®šå“ªç§æ–¹æ¡ˆé€‚åˆæ‚¨ï¼Ÿ',
       intro:
-        '在联系前您无需先决定治疗。若您已有 X 光片或 CBCT，团队可进行初步评估，帮助您明确值得进一步讨论的方案。',
-      processTitle: '接下来会发生什么？',
-      steps: ['发送您的 X 光片', '获得初步评估', '咨询您的情况'],
-      primaryCta: '发送您的 X 光片',
-      secondaryCta: '咨询您的情况',
+        'åœ¨è”ç³»å‰æ‚¨æ— éœ€å…ˆå†³å®šæ²»ç–—ã€‚è‹¥æ‚¨å·²æœ‰ X å…‰ç‰‡æˆ– CBCTï¼Œå›¢é˜Ÿå¯è¿›è¡Œåˆæ­¥è¯„ä¼°ï¼Œå¸®åŠ©æ‚¨æ˜Žç¡®å€¼å¾—è¿›ä¸€æ­¥è®¨è®ºçš„æ–¹æ¡ˆã€‚',
+      processTitle: 'æŽ¥ä¸‹æ¥ä¼šå‘ç”Ÿä»€ä¹ˆï¼Ÿ',
+      steps: ['å‘é€æ‚¨çš„ X å…‰ç‰‡', 'èŽ·å¾—åˆæ­¥è¯„ä¼°', 'å’¨è¯¢æ‚¨çš„æƒ…å†µ'],
+      primaryCta: 'å‘é€æ‚¨çš„ X å…‰ç‰‡',
+      secondaryCta: 'å’¨è¯¢æ‚¨çš„æƒ…å†µ',
       note:
-        '初步评估有助于我们先了解您的情况。最终治疗建议仍需在面诊及完整诊断后确定。',
+        'åˆæ­¥è¯„ä¼°æœ‰åŠ©äºŽæˆ‘ä»¬å…ˆäº†è§£æ‚¨çš„æƒ…å†µã€‚æœ€ç»ˆæ²»ç–—å»ºè®®ä»éœ€åœ¨é¢è¯ŠåŠå®Œæ•´è¯Šæ–­åŽç¡®å®šã€‚',
     },
   },
 
   traditional: {
-    metaTitle: '治療方案 | EMIS Dental',
+    metaTitle: 'æ²»ç™‚æ–¹æ¡ˆ | EMIS Dental',
     metaDescription:
-      '依據您的口腔狀況與目標，探索 EMIS 的治療路徑，包括植牙、固定牙重建、全口重建、口腔外科、修復與美學治療。',
+      'ä¾æ“šæ‚¨çš„å£è…”ç‹€æ³èˆ‡ç›®æ¨™ï¼ŒæŽ¢ç´¢ EMIS çš„æ²»ç™‚è·¯å¾‘ï¼ŒåŒ…æ‹¬æ¤ç‰™ã€å›ºå®šç‰™é‡å»ºã€å…¨å£é‡å»ºã€å£è…”å¤–ç§‘ã€ä¿®å¾©èˆ‡ç¾Žå­¸æ²»ç™‚ã€‚',
 
     hero: {
-      eyebrow: '治療方案',
-      title: '找到適合您狀況的治療路徑',
+      eyebrow: 'æ²»ç™‚æ–¹æ¡ˆ',
+      title: 'æ‰¾åˆ°é©åˆæ‚¨ç‹€æ³çš„æ²»ç™‚è·¯å¾‘',
       intro:
-        '許多患者不知道該從哪裡開始。您可能有缺牙、活動假牙不適、多項口腔問題，或只是想了解哪種方案更合適。在 EMIS，第一步不是立刻選治療，而是先清楚了解您的目前狀況。',
-      highlights: ['植牙方案', '固定牙重建', '全口重建', '口腔外科', '修復與美學牙科'],
-      primaryCta: '傳送您的 X 光片',
-      secondaryCta: '諮詢您的狀況',
+        'è¨±å¤šæ‚£è€…ä¸çŸ¥é“è©²å¾žå“ªè£¡é–‹å§‹ã€‚æ‚¨å¯èƒ½æœ‰ç¼ºç‰™ã€æ´»å‹•å‡ç‰™ä¸é©ã€å¤šé …å£è…”å•é¡Œï¼Œæˆ–åªæ˜¯æƒ³äº†è§£å“ªç¨®æ–¹æ¡ˆæ›´åˆé©ã€‚åœ¨ EMISï¼Œç¬¬ä¸€æ­¥ä¸æ˜¯ç«‹åˆ»é¸æ²»ç™‚ï¼Œè€Œæ˜¯å…ˆæ¸…æ¥šäº†è§£æ‚¨çš„ç›®å‰ç‹€æ³ã€‚',
+      highlights: ['æ¤ç‰™æ–¹æ¡ˆ', 'å›ºå®šç‰™é‡å»º', 'å…¨å£é‡å»º', 'å£è…”å¤–ç§‘', 'ä¿®å¾©èˆ‡ç¾Žå­¸ç‰™ç§‘'],
+      primaryCta: 'å‚³é€æ‚¨çš„ X å…‰ç‰‡',
+      secondaryCta: 'è«®è©¢æ‚¨çš„ç‹€æ³',
     },
 
     situations: {
-      eyebrow: '哪種情況最像您？',
-      title: '從您正在面對的問題開始',
+      eyebrow: 'å“ªç¨®æƒ…æ³æœ€åƒæ‚¨ï¼Ÿ',
+      title: 'å¾žæ‚¨æ­£åœ¨é¢å°çš„å•é¡Œé–‹å§‹',
       intro:
-        '來到 EMIS 的患者關注點各不相同。與其先從治療名稱開始，不如先從您目前的實際情況開始。',
+        'ä¾†åˆ° EMIS çš„æ‚£è€…é—œæ³¨é»žå„ä¸ç›¸åŒã€‚èˆ‡å…¶å…ˆå¾žæ²»ç™‚åç¨±é–‹å§‹ï¼Œä¸å¦‚å…ˆå¾žæ‚¨ç›®å‰çš„å¯¦éš›æƒ…æ³é–‹å§‹ã€‚',
       cards: [
         {
-          title: '缺失一顆牙',
-          text: '您可能希望恢復笑容、咀嚼舒適度與自信。',
+          title: 'ç¼ºå¤±ä¸€é¡†ç‰™',
+          text: 'æ‚¨å¯èƒ½å¸Œæœ›æ¢å¾©ç¬‘å®¹ã€å’€åš¼èˆ’é©åº¦èˆ‡è‡ªä¿¡ã€‚',
         },
         {
-          title: '缺失多顆牙',
-          text: '多顆缺牙會影響日常進食、發音與生活品質。',
+          title: 'ç¼ºå¤±å¤šé¡†ç‰™',
+          text: 'å¤šé¡†ç¼ºç‰™æœƒå½±éŸ¿æ—¥å¸¸é€²é£Ÿã€ç™¼éŸ³èˆ‡ç”Ÿæ´»å“è³ªã€‚',
         },
         {
-          title: '活動假牙鬆動或不舒適',
-          text: '若假牙鬆動、不舒適或使用困難，您可能在尋找更穩定的替代方案。',
+          title: 'æ´»å‹•å‡ç‰™é¬†å‹•æˆ–ä¸èˆ’é©',
+          text: 'è‹¥å‡ç‰™é¬†å‹•ã€ä¸èˆ’é©æˆ–ä½¿ç”¨å›°é›£ï¼Œæ‚¨å¯èƒ½åœ¨å°‹æ‰¾æ›´ç©©å®šçš„æ›¿ä»£æ–¹æ¡ˆã€‚',
         },
         {
-          title: '多顆牙功能不佳',
-          text: '當多顆牙受損或疼痛時，往往難以判斷該先處理哪一項。',
+          title: 'å¤šé¡†ç‰™åŠŸèƒ½ä¸ä½³',
+          text: 'ç•¶å¤šé¡†ç‰™å—ææˆ–ç–¼ç—›æ™‚ï¼Œå¾€å¾€é›£ä»¥åˆ¤æ–·è©²å…ˆè™•ç†å“ªä¸€é …ã€‚',
         },
         {
-          title: '複雜全口問題',
-          text: '長期缺牙、嚴重磨耗或咬合改變，可能需要更完整的治療計畫。',
+          title: 'è¤‡é›œå…¨å£å•é¡Œ',
+          text: 'é•·æœŸç¼ºç‰™ã€åš´é‡ç£¨è€—æˆ–å’¬åˆæ”¹è®Šï¼Œå¯èƒ½éœ€è¦æ›´å®Œæ•´çš„æ²»ç™‚è¨ˆç•«ã€‚',
         },
         {
-          title: '智齒或口腔外科需求',
-          text: '部分情況可能涉及阻生智齒、囊腫、感染或其他外科處置。',
+          title: 'æ™ºé½’æˆ–å£è…”å¤–ç§‘éœ€æ±‚',
+          text: 'éƒ¨åˆ†æƒ…æ³å¯èƒ½æ¶‰åŠé˜»ç”Ÿæ™ºé½’ã€å›Šè…«ã€æ„ŸæŸ“æˆ–å…¶ä»–å¤–ç§‘è™•ç½®ã€‚',
         },
         {
-          title: '笑容與美觀顧慮',
-          text: '您可能希望在兼顧長期口腔健康下，讓笑容更自然、更協調、更有自信。',
+          title: 'ç¬‘å®¹èˆ‡ç¾Žè§€é¡§æ…®',
+          text: 'æ‚¨å¯èƒ½å¸Œæœ›åœ¨å…¼é¡§é•·æœŸå£è…”å¥åº·ä¸‹ï¼Œè®“ç¬‘å®¹æ›´è‡ªç„¶ã€æ›´å”èª¿ã€æ›´æœ‰è‡ªä¿¡ã€‚',
         },
       ],
     },
 
     pathways: {
-      eyebrow: '探索治療路徑',
-      title: 'EMIS 的治療路徑',
+      eyebrow: 'æŽ¢ç´¢æ²»ç™‚è·¯å¾‘',
+      title: 'EMIS çš„æ²»ç™‚è·¯å¾‘',
       intro:
-        '合適的治療取決於您的口腔狀況、目標與長期需求。以下是 EMIS 常見的治療路徑。',
+        'åˆé©çš„æ²»ç™‚å–æ±ºæ–¼æ‚¨çš„å£è…”ç‹€æ³ã€ç›®æ¨™èˆ‡é•·æœŸéœ€æ±‚ã€‚ä»¥ä¸‹æ˜¯ EMIS å¸¸è¦‹çš„æ²»ç™‚è·¯å¾‘ã€‚',
       cards: [
         {
-          title: '植牙方案',
-          text: '用於一顆或多顆缺牙的植體支持修復。',
-          cta: '了解植牙方案',
+          title: 'æ¤ç‰™æ–¹æ¡ˆ',
+          text: 'ç”¨æ–¼ä¸€é¡†æˆ–å¤šé¡†ç¼ºç‰™çš„æ¤é«”æ”¯æŒä¿®å¾©ã€‚',
+          cta: 'äº†è§£æ¤ç‰™æ–¹æ¡ˆ',
           path: '/implant',
         },
         {
-          title: '固定牙方案',
-          text: '包含 All-on-4 與 All-on-6，適合希望取代活動假牙並獲得穩定效果的患者。',
-          cta: '了解固定牙方案',
+          title: 'å›ºå®šç‰™æ–¹æ¡ˆ',
+          text: 'åŒ…å« All-on-4 èˆ‡ All-on-6ï¼Œé©åˆå¸Œæœ›å–ä»£æ´»å‹•å‡ç‰™ä¸¦ç²å¾—ç©©å®šæ•ˆæžœçš„æ‚£è€…ã€‚',
+          cta: 'äº†è§£å›ºå®šç‰™æ–¹æ¡ˆ',
           path: '/fixed-teeth',
         },
         {
-          title: '全口重建',
-          text: '適用於廣泛缺牙、嚴重磨耗、咬合問題或複雜修復需求。',
-          cta: '了解全口重建',
+          title: 'å…¨å£é‡å»º',
+          text: 'é©ç”¨æ–¼å»£æ³›ç¼ºç‰™ã€åš´é‡ç£¨è€—ã€å’¬åˆå•é¡Œæˆ–è¤‡é›œä¿®å¾©éœ€æ±‚ã€‚',
+          cta: 'äº†è§£å…¨å£é‡å»º',
           path: '/restorative-dentistry',
         },
         {
-          title: '口腔外科',
-          text: '包含智齒手術、囊腫處理與相關口腔外科治療。',
-          cta: '了解口腔外科',
+          title: 'å£è…”å¤–ç§‘',
+          text: 'åŒ…å«æ™ºé½’æ‰‹è¡“ã€å›Šè…«è™•ç†èˆ‡ç›¸é—œå£è…”å¤–ç§‘æ²»ç™‚ã€‚',
+          cta: 'äº†è§£å£è…”å¤–ç§‘',
           path: '/oral-surgery',
         },
         {
-          title: '修復牙科',
-          text: '用於修復受損牙齒並支持日常口腔功能。',
-          cta: '了解修復牙科',
+          title: 'ä¿®å¾©ç‰™ç§‘',
+          text: 'ç”¨æ–¼ä¿®å¾©å—æç‰™é½’ä¸¦æ”¯æŒæ—¥å¸¸å£è…”åŠŸèƒ½ã€‚',
+          cta: 'äº†è§£ä¿®å¾©ç‰™ç§‘',
           path: '/restorative-dentistry',
         },
         {
-          title: '美學牙科',
-          text: '在兼顧功能、舒適與口腔健康的前提下改善笑容外觀。',
-          cta: '了解美學牙科',
+          title: 'ç¾Žå­¸ç‰™ç§‘',
+          text: 'åœ¨å…¼é¡§åŠŸèƒ½ã€èˆ’é©èˆ‡å£è…”å¥åº·çš„å‰æä¸‹æ”¹å–„ç¬‘å®¹å¤–è§€ã€‚',
+          cta: 'äº†è§£ç¾Žå­¸ç‰™ç§‘',
           path: '/veneer',
         },
       ],
     },
 
     assessment: {
-      eyebrow: '治療決策如何制定',
-      title: '治療從評估開始',
+      eyebrow: 'æ²»ç™‚æ±ºç­–å¦‚ä½•åˆ¶å®š',
+      title: 'æ²»ç™‚å¾žè©•ä¼°é–‹å§‹',
       intro:
-        '並非每位患者都需要相同治療。合適方案取決於口腔狀況、現有牙齒、骨支持、個人目標與長期預期。因此在討論選項前，我們會先完整了解您的情況。',
-      factorsTitle: '我們常評估的項目',
+        'ä¸¦éžæ¯ä½æ‚£è€…éƒ½éœ€è¦ç›¸åŒæ²»ç™‚ã€‚åˆé©æ–¹æ¡ˆå–æ±ºæ–¼å£è…”ç‹€æ³ã€ç¾æœ‰ç‰™é½’ã€éª¨æ”¯æŒã€å€‹äººç›®æ¨™èˆ‡é•·æœŸé æœŸã€‚å› æ­¤åœ¨è¨Žè«–é¸é …å‰ï¼Œæˆ‘å€‘æœƒå…ˆå®Œæ•´äº†è§£æ‚¨çš„æƒ…æ³ã€‚',
+      factorsTitle: 'æˆ‘å€‘å¸¸è©•ä¼°çš„é …ç›®',
       factors: [
         {
-          title: '口腔狀況',
-          text: '目前口腔健康狀態與主要問題。',
+          title: 'å£è…”ç‹€æ³',
+          text: 'ç›®å‰å£è…”å¥åº·ç‹€æ…‹èˆ‡ä¸»è¦å•é¡Œã€‚',
         },
         {
-          title: '影像診斷',
-          text: '骨結構、解剖條件與臨床細節。',
+          title: 'å½±åƒè¨ºæ–·',
+          text: 'éª¨çµæ§‹ã€è§£å‰–æ¢ä»¶èˆ‡è‡¨åºŠç´°ç¯€ã€‚',
         },
         {
-          title: '功能目標',
-          text: '咀嚼舒適度、發音與日常使用性。',
+          title: 'åŠŸèƒ½ç›®æ¨™',
+          text: 'å’€åš¼èˆ’é©åº¦ã€ç™¼éŸ³èˆ‡æ—¥å¸¸ä½¿ç”¨æ€§ã€‚',
         },
         {
-          title: '治療時程',
-          text: '您的行程安排、旅行計畫與恢復需求。',
+          title: 'æ²»ç™‚æ™‚ç¨‹',
+          text: 'æ‚¨çš„è¡Œç¨‹å®‰æŽ’ã€æ—…è¡Œè¨ˆç•«èˆ‡æ¢å¾©éœ€æ±‚ã€‚',
         },
         {
-          title: '長期穩定性',
-          text: '治療如何在長期內支持舒適與功能。',
+          title: 'é•·æœŸç©©å®šæ€§',
+          text: 'æ²»ç™‚å¦‚ä½•åœ¨é•·æœŸå…§æ”¯æŒèˆ’é©èˆ‡åŠŸèƒ½ã€‚',
         },
       ],
     },
 
     team: {
-      eyebrow: '您的照護團隊',
-      title: '不同專長, 同一目標',
+      eyebrow: 'æ‚¨çš„ç…§è­·åœ˜éšŠ',
+      title: 'ä¸åŒå°ˆé•·, åŒä¸€ç›®æ¨™',
       intro:
-        '依個案需求，治療可能包含診斷、規劃、手術、修復與追蹤照護。EMIS 團隊會在每個階段協作配合。',
+        'ä¾å€‹æ¡ˆéœ€æ±‚ï¼Œæ²»ç™‚å¯èƒ½åŒ…å«è¨ºæ–·ã€è¦åŠƒã€æ‰‹è¡“ã€ä¿®å¾©èˆ‡è¿½è¹¤ç…§è­·ã€‚EMIS åœ˜éšŠæœƒåœ¨æ¯å€‹éšŽæ®µå”ä½œé…åˆã€‚',
       doctors: [
         {
-          name: 'Dr. Nguyen The Son',
-          focus: '植牙修復 • 功能重建 • 功能與笑容美學',
+          focus: 'æ¤ç‰™ä¿®å¾© â€¢ åŠŸèƒ½é‡å»º â€¢ åŠŸèƒ½èˆ‡ç¬‘å®¹ç¾Žå­¸',
         },
         {
           name: 'Dr. Tran Minh Tu',
-          focus: '植牙外科 • 口腔外科 • 複雜重建規劃',
+          focus: 'æ¤ç‰™å¤–ç§‘ â€¢ å£è…”å¤–ç§‘ â€¢ è¤‡é›œé‡å»ºè¦åŠƒ',
         },
       ],
-      cta: '了解醫師團隊',
+      cta: 'äº†è§£é†«å¸«åœ˜éšŠ',
       ctaPath: '/doctors',
     },
 
     overseas: {
-      eyebrow: '海外患者',
-      title: '在海外也可開始治療規劃',
+      eyebrow: 'æµ·å¤–æ‚£è€…',
+      title: 'åœ¨æµ·å¤–ä¹Ÿå¯é–‹å§‹æ²»ç™‚è¦åŠƒ',
       intro:
-        '許多海外越南人與國際患者會在赴越前先啟動流程。EMIS 可協助您先行評估、討論時程並釐清下一步。',
+        'è¨±å¤šæµ·å¤–è¶Šå—äººèˆ‡åœ‹éš›æ‚£è€…æœƒåœ¨èµ´è¶Šå‰å…ˆå•Ÿå‹•æµç¨‹ã€‚EMIS å¯å”åŠ©æ‚¨å…ˆè¡Œè©•ä¼°ã€è¨Žè«–æ™‚ç¨‹ä¸¦é‡æ¸…ä¸‹ä¸€æ­¥ã€‚',
       timeline: [
         {
-          step: '出行前',
-          text: '可先提供 X 光片或牙科資料進行初步評估。',
+          step: 'å‡ºè¡Œå‰',
+          text: 'å¯å…ˆæä¾› X å…‰ç‰‡æˆ–ç‰™ç§‘è³‡æ–™é€²è¡Œåˆæ­¥è©•ä¼°ã€‚',
         },
         {
-          step: '規劃階段',
-          text: '依您的停留時間與行程安排討論治療時程。',
+          step: 'è¦åŠƒéšŽæ®µ',
+          text: 'ä¾æ‚¨çš„åœç•™æ™‚é–“èˆ‡è¡Œç¨‹å®‰æŽ’è¨Žè«–æ²»ç™‚æ™‚ç¨‹ã€‚',
         },
         {
-          step: '返國後',
-          text: '在恢復與追蹤期間持續與 EMIS 團隊保持聯繫。',
+          step: 'è¿”åœ‹å¾Œ',
+          text: 'åœ¨æ¢å¾©èˆ‡è¿½è¹¤æœŸé–“æŒçºŒèˆ‡ EMIS åœ˜éšŠä¿æŒè¯ç¹«ã€‚',
         },
       ],
-      cta: '了解國際患者支援',
+      cta: 'äº†è§£åœ‹éš›æ‚£è€…æ”¯æ´',
       ctaPath: '/international-patients',
     },
 
     finalCta: {
-      title: '還不確定哪個方案適合您？',
+      title: 'é‚„ä¸ç¢ºå®šå“ªå€‹æ–¹æ¡ˆé©åˆæ‚¨ï¼Ÿ',
       intro:
-        '在聯絡我們前，您不需要先決定治療。若您已有 X 光片或 CBCT，團隊可先做初步評估，協助您了解值得進一步討論的選項。',
-      processTitle: '接下來會如何進行？',
-      steps: ['傳送您的 X 光片', '取得初步評估', '諮詢您的情況'],
-      primaryCta: '傳送您的 X 光片',
-      secondaryCta: '諮詢您的情況',
+        'åœ¨è¯çµ¡æˆ‘å€‘å‰ï¼Œæ‚¨ä¸éœ€è¦å…ˆæ±ºå®šæ²»ç™‚ã€‚è‹¥æ‚¨å·²æœ‰ X å…‰ç‰‡æˆ– CBCTï¼Œåœ˜éšŠå¯å…ˆåšåˆæ­¥è©•ä¼°ï¼Œå”åŠ©æ‚¨äº†è§£å€¼å¾—é€²ä¸€æ­¥è¨Žè«–çš„é¸é …ã€‚',
+      processTitle: 'æŽ¥ä¸‹ä¾†æœƒå¦‚ä½•é€²è¡Œï¼Ÿ',
+      steps: ['å‚³é€æ‚¨çš„ X å…‰ç‰‡', 'å–å¾—åˆæ­¥è©•ä¼°', 'è«®è©¢æ‚¨çš„æƒ…æ³'],
+      primaryCta: 'å‚³é€æ‚¨çš„ X å…‰ç‰‡',
+      secondaryCta: 'è«®è©¢æ‚¨çš„æƒ…æ³',
       note:
-        '初步評估有助於我們先了解您的情況。最終治療建議仍需經面診與完整診斷後確認。',
+        'åˆæ­¥è©•ä¼°æœ‰åŠ©æ–¼æˆ‘å€‘å…ˆäº†è§£æ‚¨çš„æƒ…æ³ã€‚æœ€çµ‚æ²»ç™‚å»ºè­°ä»éœ€ç¶“é¢è¨ºèˆ‡å®Œæ•´è¨ºæ–·å¾Œç¢ºèªã€‚',
     },
   },
 };
 
 export default solutionsContent;
+
