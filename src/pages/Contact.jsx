@@ -176,12 +176,12 @@ export default function Contact() {
                       rel={isExternalLink ? 'noopener noreferrer' : undefined}
                       aria-label={item.label}
                       title={item.label}
-                      className="h-12 w-12 sm:h-14 sm:w-14 bg-white rounded-full flex items-center justify-center shadow hover:shadow-md transition hover:-translate-y-0.5 border border-[#efe4ca]"
+                      className="group h-14 w-14 sm:h-16 sm:w-16 bg-[#111317]/90 rounded-full flex items-center justify-center shadow-[0_10px_24px_rgba(0,0,0,0.18)] hover:shadow-[0_14px_30px_rgba(212,175,55,0.16)] transition hover:-translate-y-1 border border-[#d4af37]/55 hover:border-[#d4af37]"
                     >
                       {typeof Icon === 'string' ? (
                         <img src={Icon} alt={item.alt} className="h-6 w-6 sm:h-7 sm:w-7 object-contain" />
                       ) : (
-                        <Icon className="h-6 w-6 sm:h-7 sm:w-7 text-[#d4af37]" />
+                        <Icon aria-hidden="true" className="h-6 w-6 sm:h-7 sm:w-7 text-[#d4af37] transition-transform group-hover:scale-110" />
                       )}
                     </a>
                   </li>
@@ -203,12 +203,12 @@ export default function Contact() {
                       rel={isExternalLink ? 'noopener noreferrer' : undefined}
                       aria-label={item.label}
                       title={item.label}
-                      className="h-12 w-12 sm:h-14 sm:w-14 bg-white rounded-full flex items-center justify-center shadow hover:shadow-md transition hover:-translate-y-0.5 border border-[#efe4ca]"
+                      className="group h-14 w-14 sm:h-16 sm:w-16 bg-[#111317]/90 rounded-full flex items-center justify-center shadow-[0_10px_24px_rgba(0,0,0,0.18)] hover:shadow-[0_14px_30px_rgba(212,175,55,0.16)] transition hover:-translate-y-1 border border-[#d4af37]/55 hover:border-[#d4af37]"
                     >
                       {typeof Icon === 'string' ? (
                         <img src={Icon} alt={item.alt} className="h-6 w-6 sm:h-7 sm:w-7 object-contain" />
                       ) : (
-                        <Icon className="h-6 w-6 sm:h-7 sm:w-7 text-[#d4af37]" />
+                        <Icon aria-hidden="true" className="h-6 w-6 sm:h-7 sm:w-7 text-[#d4af37] transition-transform group-hover:scale-110" />
                       )}
                     </a>
                   </li>

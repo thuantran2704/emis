@@ -1,50 +1,52 @@
-import googleMaplogo from '../pics/googlemap-logo.png';
-import mailIcon from '../pics/mail.jpg';
-import phoneIcon from '../pics/phone.jpg';
-import facebook from '../pics/facebook.jpg';
-import zaloIcon from '../pics/zalo.jpg';
-import youtubeLogo from '../pics/youtube-logo.png';
-import whatsapp from '../pics/whatsapp-logo.png';
+import {
+  FaEnvelope,
+  FaFacebookF,
+  FaMapLocationDot,
+  FaPhone,
+  FaWhatsapp,
+  FaYoutube,
+} from 'react-icons/fa6';
+import { SiZalo } from 'react-icons/si';
 
 export const contactItems = [
   {
-    icon: whatsapp,
+    icon: FaWhatsapp,
     alt: 'WhatsApp',
     label: 'WhatsApp',
     href: 'https://wa.me/84909967649',
   },
   {
-    icon: phoneIcon,
+    icon: FaPhone,
     alt: 'Phone',
     label: 'Phone',
     href: 'tel:+84919100021',
   },
   {
-    icon: mailIcon,
+    icon: FaEnvelope,
     alt: 'Email',
     label: 'Email',
     href: 'mailto:Emisdentalclinic@gmail.com',
   },
   {
-    icon: zaloIcon,
+    icon: SiZalo,
     alt: 'Zalo',
     label: 'Zalo',
     href: 'https://zalo.me/2143697215679541994',
   },
   {
-    icon: facebook,
+    icon: FaFacebookF,
     alt: 'Facebook',
     label: 'Facebook',
     href: 'https://www.facebook.com/emisinternationaldental/',
   },
   {
-    icon: youtubeLogo,
+    icon: FaYoutube,
     alt: 'YouTube',
     label: 'YouTube',
     href: 'https://www.youtube.com/@NhaKhoaEmis',
   },
   {
-    icon: googleMaplogo,
+    icon: FaMapLocationDot,
     alt: 'Google Reviews',
     label: 'Google Reviews',
     href: 'https://maps.app.goo.gl/8T1cPtEKUBe6wLFz9',

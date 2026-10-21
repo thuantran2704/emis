@@ -120,9 +120,13 @@ function ContactBubbles({ items }) {
             rel={isExternal ? 'noopener noreferrer' : undefined}
             aria-label={item.label}
             title={item.label}
-            className="flex h-12 w-12 items-center justify-center rounded-full border border-[#efe4ca] bg-white shadow transition hover:-translate-y-0.5 hover:shadow-md"
+            className="group flex h-12 w-12 items-center justify-center rounded-full border border-[#d4af37]/45 bg-[#181a1f] text-[#d4af37] shadow-[0_8px_20px_rgba(0,0,0,0.2)] transition hover:-translate-y-1 hover:border-[#d4af37] hover:shadow-[0_12px_24px_rgba(212,175,55,0.14)]"
           >
-            <img src={item.icon} alt={item.alt} className="h-6 w-6 object-contain" />
+            {typeof item.icon === 'string' ? (
+              <img src={item.icon} alt={item.alt} className="h-6 w-6 object-contain" />
+            ) : (
+              <item.icon aria-hidden="true" className="h-5 w-5 transition-transform group-hover:scale-110" />
+            )}
           </a>
         );
       })}
