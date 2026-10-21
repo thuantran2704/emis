@@ -92,7 +92,7 @@ export default function Navbar() {
       {isMenuOpen && (
         <div
           className={`fixed inset-0 bg-[#2a3439]/20 backdrop-blur-sm z-40 ${
-            isLandscape ? 'xl:hidden' : ''
+          isLandscape ? '2xl:hidden' : ''
           }`}
           onClick={closeAllMenus}
         />
@@ -112,7 +112,7 @@ export default function Navbar() {
             </span>
           </Link>
 
-          <div className={`${isLandscape ? 'hidden xl:flex' : 'hidden'} flex-nowrap items-center gap-1 xl:gap-2`}>
+          <div className={`${isLandscape ? 'hidden 2xl:flex' : 'hidden'} flex-nowrap items-center gap-0 2xl:gap-1`}>
             <Link to="/" className={navLinkClass('/')}>
               {content.home}
             </Link>
@@ -254,7 +254,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          <div className={`${isLandscape ? 'flex xl:hidden' : 'flex'} items-center gap-2 shrink-0`}>
+          <div className={`${isLandscape ? 'flex 2xl:hidden' : 'flex'} items-center gap-2 shrink-0`}>
             <div className="shrink-0">
               <LanguageToggle variant="navbar" compact />
             </div>
@@ -278,7 +278,7 @@ export default function Navbar() {
         <div
           inert={!isMenuOpen}
           aria-hidden={!isMenuOpen}
-          className={`${isLandscape ? 'xl:hidden' : ''} overflow-hidden border-t border-[#e6d9ba] bg-[#fbf7ed] transition-[max-height] duration-300 ${
+          className={`${isLandscape ? '2xl:hidden' : ''} overflow-hidden border-t border-[#e6d9ba] bg-[#fbf7ed] transition-[max-height] duration-300 ${
             isMenuOpen ? 'max-h-[85vh]' : 'max-h-0'
           }`}
         >

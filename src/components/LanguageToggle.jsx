@@ -92,8 +92,11 @@ export default function LanguageToggle({ variant = 'floating', compact = false, 
                 : 'gap-1.5 px-3 py-2 text-xs'
           }`}
         >
-          {showLabel && <span className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[#806019]">Languages</span>}
-          <span className={showLabel ? 'flex h-6 min-w-6 items-center justify-center rounded-full bg-[#f1dfaa] px-1 text-[11px]' : ''}>{currentLabel}</span>
+          {showLabel ? (
+            <span className="text-[11px] font-semibold tracking-[0.08em] text-[#806019]">中 · EN</span>
+          ) : (
+            <span>{currentLabel}</span>
+          )}
           <svg
             className={`w-3 h-3 text-[#C5AF73] transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
             fill="none"
