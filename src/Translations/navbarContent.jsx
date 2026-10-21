@@ -57,7 +57,7 @@ const navbarContent = {
     oralSurgery: "Tiểu Phẫu Răng Hàm Mặt",
     restorativeDentistry: "Điều Trị & Giữ Răng Thật",
     patientCases: "Ca Điều Trị Thực Tế",
-    resources: "Kiến Thức Nha Khoa",
+    resources: "Kiến Thức",
     canal: "Điều Trị Tủy",
     juneOffer: "Ưu Đãi Tháng 6",
     whitening: "Tẩy Trắng Răng",
