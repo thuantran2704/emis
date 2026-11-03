@@ -10,7 +10,7 @@
  *  4. Register the route in src/App.jsx.
  *
  * Fields per language block:
- *  name            â€“ Display name shown on all cards.
+ *  name            – Display name shown on all cards.
  *  role            â€“ Professional title / position.
  *  focus           â€“ Specialty areas (short bullet string for home mini-card).
  *  summary         â€“ One-sentence summary for home mini-card.
@@ -25,7 +25,7 @@
 import drTuPortrait from '../pics/dr-tu-potrait.jpg';
 
 export const DOCTORS = [
-  // Dr. Tran Minh Tu â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // Dr. Tran Minh Tu -----------------------------------------------------
   {
     id: 'dr-tu',
     slug: '/dr-tu',
@@ -53,41 +53,41 @@ export const DOCTORS = [
     },
 
     vietnamese: {
-      name: 'BS. CKI Tráº§n Minh TÃº',
-      role: 'Pháº«u thuáº­t viÃªn RÄƒng HÃ m Máº·t',
-      focus: 'Pháº«u thuáº­t Implant • Tiá»ƒu pháº«u RÄƒng HÃ m Máº·t • Phá»¥c há»“i toÃ n hÃ m',
-      summary: 'Hiá»‡n Ä‘ang cÃ´ng tÃ¡c táº¡i Bá»‡nh viá»‡n RÄƒng HÃ m Máº·t TP.HCM vÃ  EMIS Premium Dental Clinic.',
-      languages: 'Tiáº¿ng Viá»‡t • English • Hungarian • Chinese',
-      specialties: 'Implant • Phá»¥c Há»“i ToÃ n HÃ m • Tiá»ƒu Pháº«u RÄƒng HÃ m Máº·t',
+      name: 'BS. CKI Trần Minh Tú',
+      role: 'Bác sĩ chuyên khoa Răng Hàm Mặt',
+      focus: 'Phẫu thuật Implant • Tiểu phẫu Răng Hàm Mặt • Phục hồi toàn hàm',
+      summary: 'Hiện đang công tác tại Bệnh viện Răng Hàm Mặt TP.HCM và EMIS Premium Dental Clinic.',
+      languages: 'Tiếng Việt • Tiếng Anh • Tiếng Hungary • Tiếng Trung',
+      specialties: 'Implant • Phục hồi toàn hàm • Tiểu phẫu Răng Hàm Mặt',
       descriptionOne:
-        'BÃ¡c sÄ© TÃº táº­p trung vÃ o Implant, phá»¥c há»“i toÃ n hÃ m vÃ  pháº«u thuáº­t RÄƒng HÃ m Máº·t, Ä‘áº·c biá»‡t vá»›i nhá»¯ng trÆ°á»ng há»£p cáº§n phá»¥c há»“i phá»©c táº¡p vÃ  Ä‘Ã²i há»i káº¿ hoáº¡ch Ä‘iá»u trá»‹ ká»¹ lÆ°á»¡ng.',
+        'Bác sĩ Tú tập trung vào Implant, phục hồi toàn hàm và phẫu thuật Răng Hàm Mặt, đặc biệt với những trường hợp cần phục hồi phức tạp và đòi hỏi kế hoạch điều trị kỹ lưỡng.',
       descriptionTwo:
-        'Ná»n táº£ng há»c táº­p vÃ  Ä‘Ã o táº¡o táº¡i Hoa Ká»³, Hungary vÃ  Viá»‡t Nam giÃºp bÃ¡c sÄ© cÃ³ thÃªm gÃ³c nhÃ¬n quá»‘c táº¿ trong quÃ¡ trÃ¬nh Ä‘iá»u trá»‹ vÃ  chÄƒm sÃ³c bá»‡nh nhÃ¢n.',
+        'Nền tảng học tập và đào tạo tại Hoa Kỳ, Hungary và Việt Nam giúp bác sĩ có thêm góc nhìn quốc tế trong quá trình điều trị và chăm sóc bệnh nhân.',
       highlights: [
-        'Äang CÃ´ng TÃ¡c Táº¡i Bá»‡nh Viá»‡n RÄƒng HÃ m Máº·t TP.HCM',
-        'ÄÃ o Táº¡o Táº¡i Nhiá»u Quá»‘c Gia',
-        'ThÃ nh ViÃªn Há»™i RÄƒng HÃ m Máº·t TP.HCM',
-        'Giao Tiáº¿p Äa NgÃ´n Ngá»¯',
+        'Đang công tác tại Bệnh viện Răng Hàm Mặt TP.HCM',
+        'Được đào tạo tại nhiều quốc gia',
+        'Thành viên Hội Răng Hàm Mặt TP.HCM',
+        'Giao tiếp đa ngôn ngữ',
       ],
-      cta: 'Xem Há»“ SÆ¡ Chi Tiáº¿t',
+      cta: 'Xem hồ sơ chi tiết',
     },
 
     french: {
       name: 'Dr. Tran Minh Tu',
       role: 'Chirurgien Oral Et Maxillo-Facial',
-      focus: 'Implantologie • RÃ©habilitation ComplÃ¨te • Chirurgie Orale',
+      focus: 'Implantologie • Réhabilitation complète • Chirurgie orale',
       summary:
-        'FormÃ© aux Ã‰tats-Unis, en Hongrie et au Vietnam, avec une pratique clinique active Ã  HÃ´ Chi Minh-Ville.',
+        'Formé aux États-Unis, en Hongrie et au Vietnam, avec une pratique clinique active à Hô Chi Minh-Ville.',
       languages: 'Vietnamien • Anglais • Hongrois • Chinois',
-      specialties: 'Implantologie • RÃ©habilitation ComplÃ¨te • Chirurgie Orale',
+      specialties: 'Implantologie • Réhabilitation complète • Chirurgie orale',
       descriptionOne:
-        'Le Dr Tu se consacre Ã  l\'implantologie, Ã  la rÃ©habilitation complÃ¨te, Ã  la chirurgie orale et Ã  la dentisterie esthÃ©tique, avec un intÃ©rÃªt particulier pour les cas complexes.',
+        'Le Dr Tu se consacre à l\'implantologie, à la réhabilitation complète, à la chirurgie orale et à la dentisterie esthétique, avec un intérêt particulier pour les cas complexes.',
       descriptionTwo:
-        'FormÃ© aux Ã‰tats-Unis, en Hongrie et au Vietnam, il associe une formation internationale Ã  une pratique clinique active.',
+        'Formé aux États-Unis, en Hongrie et au Vietnam, il associe une formation internationale à une pratique clinique active.',
       highlights: [
-        'Pratique HospitaliÃ¨re Active',
+        'Pratique hospitalière active',
         'Formation Internationale',
-        'Expertise En Implantologie Et RÃ©habilitation ComplÃ¨te',
+        'Expertise en implantologie et réhabilitation complète',
         'Communication Multilingue',
       ],
       cta: 'Voir Le Profil Complet',
@@ -95,62 +95,62 @@ export const DOCTORS = [
 
     korean: {
       name: 'Dr. Tran Minh Tu',
-      role: 'êµ¬ê°•ì•…ì•ˆë©´ì™¸ê³¼ ì „ë¬¸ì˜',
-      focus: 'ìž„í”Œëž€íŠ¸ ìˆ˜ìˆ  • ì „ì²´ êµ¬ê°• ìž¬ê±´ • êµ¬ê°•ì™¸ê³¼',
-      summary: 'ë¯¸êµ­, í—ê°€ë¦¬, ë² íŠ¸ë‚¨ì—ì„œ êµìœ¡ê³¼ ìˆ˜ë ¨ì„ ë°›ì€ êµ­ì œì  ë°°ê²½ì˜ êµ¬ê°•ì•…ì•ˆë©´ì™¸ê³¼ ì „ë¬¸ì˜.',
-      languages: 'ë² íŠ¸ë‚¨ì–´ • ì˜ì–´ • í—ê°€ë¦¬ì–´ • ì¤‘êµ­ì–´',
-      specialties: 'ìž„í”Œëž€íŠ¸ ìˆ˜ìˆ  • ì „ì²´ êµ¬ê°• ìž¬ê±´ • êµ¬ê°•ì™¸ê³¼',
+      role: '구강악안면외과 전문의',
+      focus: '임플란트 수술 • 전악 재건 • 구강외과',
+      summary: '미국, 헝가리, 베트남에서 교육과 수련을 받은 국제적 배경의 구강악안면외과 전문의입니다.',
+      languages: '베트남어 • 영어 • 헝가리어 • 중국어',
+      specialties: '임플란트 수술 • 전악 재건 • 구강외과',
       descriptionOne:
-        'Tu ì›ìž¥ì€ ìž„í”Œëž€íŠ¸ ìˆ˜ìˆ , ì „ì²´ êµ¬ê°• ìž¬ê±´, êµ¬ê°•ì™¸ê³¼ ë° ì‹¬ë¯¸ì¹˜ê³¼ë¥¼ ì¤‘ì‹¬ìœ¼ë¡œ ì§„ë£Œí•˜ë©° ë³µìž¡í•œ ìž¬ê±´ ì¹˜ë£Œì— íŠ¹ë³„í•œ ê´€ì‹¬ì„ ê°€ì§€ê³  ìžˆìŠµë‹ˆë‹¤.',
+        'Tu 원장은 임플란트 수술, 전악 재건, 구강외과 및 심미치과 진료에 집중하며, 특히 복잡한 재건 치료에 관심을 두고 있습니다.',
       descriptionTwo:
-        'ë¯¸êµ­, í—ê°€ë¦¬, ë² íŠ¸ë‚¨ì—ì„œ êµìœ¡ê³¼ ìˆ˜ë ¨ì„ ë°›ì•˜ìœ¼ë©° êµ­ì œì ì¸ êµìœ¡ ë°°ê²½ê³¼ í’ë¶€í•œ ìž„ìƒ ê²½í—˜ì„ ë°”íƒ•ìœ¼ë¡œ ì§„ë£Œí•˜ê³  ìžˆìŠµë‹ˆë‹¤.',
+        '미국, 헝가리, 베트남에서 교육과 수련을 받았으며, 국제적인 교육 배경과 풍부한 임상 경험을 바탕으로 진료하고 있습니다.',
       highlights: [
-        'ë³‘ì› ìž„ìƒ ì§„ë£Œ',
-        'êµ­ì œ êµìœ¡ ì´ìˆ˜',
-        'ìž„í”Œëž€íŠ¸ ë° ì „ì²´ êµ¬ê°• ìž¬ê±´ ì§‘ì¤‘',
-        'ë‹¤êµ­ì–´ ì†Œí†µ',
+        '병원 임상 진료',
+        '국제 교육 이수',
+        '임플란트 및 전악 재건 집중',
+        '다국어 소통',
       ],
-      cta: 'ìžì„¸ížˆ ë³´ê¸°',
+      cta: '자세히 보기',
     },
 
     simplified: {
       name: 'Dr. Tran Minh Tu',
-      role: 'å£è…”é¢Œé¢å¤–ç§‘åŒ»ç”Ÿ',
-      focus: 'ç§æ¤æ‰‹æœ¯ • å…¨å£é‡å»º • å£è…”å¤–ç§‘',
-      summary: 'æ›¾åœ¨ç¾Žå›½ã€åŒˆç‰™åˆ©å’Œè¶Šå—æŽ¥å—æ•™è‚²ä¸ŽåŸ¹è®­ï¼Œç›®å‰åœ¨èƒ¡å¿—æ˜Žå¸‚å£è…”é¢Œé¢åŒ»é™¢ä»»èŒã€‚',
-      languages: 'è¶Šå—è¯­ • è‹±è¯­ • åŒˆç‰™åˆ©è¯­ • ä¸­æ–‡',
-      specialties: 'ç§æ¤æ‰‹æœ¯ • å…¨å£é‡å»º • å£è…”å¤–ç§‘',
+      role: '口腔颌面外科医生',
+      focus: '种植手术 • 全口重建 • 口腔外科',
+      summary: '曾在美国、匈牙利和越南接受教育与培训，目前在胡志明市口腔颌面医院任职。',
+      languages: '越南语 • 英语 • 匈牙利语 • 中文',
+      specialties: '种植手术 • 全口重建 • 口腔外科',
       descriptionOne:
-        'Tu åŒ»ç”Ÿä¸“æ³¨äºŽç§æ¤ç‰™æ‰‹æœ¯ã€å…¨å£é‡å»ºã€å£è…”å¤–ç§‘ä»¥åŠç¾Žå­¦ç‰™ç§‘ï¼Œå°¤å…¶å…³æ³¨å¤æ‚é‡å»ºç—…ä¾‹ã€‚',
+        'Tu 医生专注于种植牙手术、全口重建、口腔外科以及美学牙科，尤其关注复杂重建病例。',
       descriptionTwo:
-        'æ›¾åœ¨ç¾Žå›½ã€åŒˆç‰™åˆ©å’Œè¶Šå—æŽ¥å—æ•™è‚²ä¸ŽåŸ¹è®­ï¼Œå°†å›½é™…åŒ–èƒŒæ™¯ä¸Žä¸°å¯Œçš„ä¸´åºŠå®žè·µç›¸ç»“åˆã€‚',
+        '曾在美国、匈牙利和越南接受教育与培训，将国际化背景与丰富的临床实践相结合。',
       highlights: [
-        'åŒ»é™¢ä¸´åºŠå·¥ä½œç»éªŒ',
-        'å›½é™…åŸ¹è®­èƒŒæ™¯',
-        'ä¸“æ³¨ç§æ¤ç‰™ä¸Žå…¨å£é‡å»º',
-        'å¤šè¯­è¨€æ²Ÿé€š',
+        '医院临床工作经验',
+        '国际培训背景',
+        '专注种植牙与全口重建',
+        '多语言沟通',
       ],
-      cta: 'æŸ¥çœ‹å®Œæ•´èµ„æ–™',
+      cta: '查看完整资料',
     },
 
     traditional: {
       name: 'Dr. Tran Minh Tu',
-      role: 'å£è…”é¡Žé¢å¤–ç§‘é†«å¸«',
-      focus: 'æ¤ç‰™æ‰‹è¡“ • å…¨å£é‡å»º • å£è…”å¤–ç§‘',
-      summary: 'æ›¾æ–¼ç¾Žåœ‹ã€åŒˆç‰™åˆ©åŠè¶Šå—æŽ¥å—æ•™è‚²èˆ‡åŸ¹è¨“ï¼Œç›®å‰ä»»è·æ–¼èƒ¡å¿—æ˜Žå¸‚å£è…”é¡Žé¢é†«é™¢ã€‚',
-      languages: 'è¶Šå—èªž • è‹±èªž • åŒˆç‰™åˆ©èªž • ä¸­æ–‡',
-      specialties: 'æ¤ç‰™æ‰‹è¡“ • å…¨å£é‡å»º • å£è…”å¤–ç§‘',
+      role: '口腔顎面外科醫師',
+      focus: '植牙手術 • 全口重建 • 口腔外科',
+      summary: '曾於美國、匈牙利及越南接受教育與培訓，目前任職於胡志明市口腔顎面醫院。',
+      languages: '越南語 • 英語 • 匈牙利語 • 中文',
+      specialties: '植牙手術 • 全口重建 • 口腔外科',
       descriptionOne:
-        'Tu é†«å¸«å°ˆæ³¨æ–¼æ¤ç‰™æ‰‹è¡“ã€å…¨å£é‡å»ºã€å£è…”å¤–ç§‘åŠç¾Žå­¸ç‰™ç§‘ï¼Œç‰¹åˆ¥é—œæ³¨è¤‡é›œé‡å»ºæ¡ˆä¾‹ã€‚',
+        'Tu 醫師專注於植牙手術、全口重建、口腔外科及美學牙科，特別關注複雜重建案例。',
       descriptionTwo:
-        'æ›¾æ–¼ç¾Žåœ‹ã€åŒˆç‰™åˆ©åŠè¶Šå—æŽ¥å—æ•™è‚²èˆ‡åŸ¹è¨“ï¼Œçµåˆåœ‹éš›èƒŒæ™¯èˆ‡è±å¯Œè‡¨åºŠç¶“é©—ã€‚',
+        '曾於美國、匈牙利及越南接受教育與培訓，結合國際背景與豐富臨床經驗。',
       highlights: [
-        'é†«é™¢è‡¨åºŠç¶“é©—',
-        'åœ‹éš›åŸ¹è¨“èƒŒæ™¯',
-        'å°ˆæ³¨æ¤ç‰™èˆ‡å…¨å£é‡å»º',
-        'å¤šèªžè¨€æºé€š',
+        '醫院臨床經驗',
+        '國際培訓背景',
+        '專注植牙與全口重建',
+        '多語言溝通',
       ],
-      cta: 'æŸ¥çœ‹å®Œæ•´è³‡æ–™',
+      cta: '查看完整資料',
     },
   },
 ];
@@ -162,4 +162,3 @@ export const DOCTORS = [
 export function getDoctorTranslation(doctor, language) {
   return doctor[language] || doctor.english;
 }
-
