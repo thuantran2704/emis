@@ -3,16 +3,11 @@ import { Helmet } from 'react-helmet';
 import { Link, useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import realCasesContent from '../Translations/realCasesContent';
-import { RealCaseCard } from './RealCases';
-import { realCaseIds, realCaseImages } from '../data/realCaseAssets';
+import { realCaseIds } from '../data/realCaseAssets';
 import zhannaBefore from '../pics/real-cases/zhanna-before.jpg';
 import zhannaAfter from '../pics/real-cases/zhanna-after.jpg';
-import klausAfter from '../pics/real-cases/klaus-after.jpg';
+import klausBeforeAfter from '../pics/real-cases/klaus-before-after.jpg';
 import NotFound from './NotFound';
-
-const galleryImages = {
-  klaus: klausAfter,
-};
 
 export default function RealCaseDetail() {
   const { caseId } = useParams();
@@ -23,7 +18,7 @@ export default function RealCaseDetail() {
 
   if (!realCaseIds.includes(caseId)) return <NotFound />;
 
-  const otherId = realCaseIds.find((id) => id !== caseId);
+  const socialImage = caseId === 'klaus' ? klausBeforeAfter : zhannaAfter;
 
   return (
     <main className="overflow-hidden bg-[#fdfcf8] pt-[72px]">
@@ -32,7 +27,7 @@ export default function RealCaseDetail() {
         <meta name="description" content={item.seoDescription} />
         <meta property="og:title" content={item.seoTitle} />
         <meta property="og:description" content={item.seoDescription} />
-        <meta property="og:image" content={new URL(realCaseImages[caseId], siteUrl).href} />
+        <meta property="og:image" content={new URL(socialImage, siteUrl).href} />
         <meta property="og:type" content="article" />
       </Helmet>
 
@@ -48,13 +43,24 @@ export default function RealCaseDetail() {
         </div>
       </header>
 
-      <div className="mx-auto -mt-16 max-w-7xl px-5 sm:-mt-24 sm:px-8">
-        <div className="relative overflow-hidden rounded-[1.5rem] border-[6px] border-white bg-[#ede8df] shadow-[0_24px_70px_rgba(21,32,40,0.18)] sm:rounded-[2rem] sm:border-[10px]">
-          <img src={realCaseImages[caseId]} alt={item.imageAlt} className="aspect-[4/3] w-full object-cover object-center md:aspect-[16/9]" decoding="async" />
-          {caseId === 'klaus' && (
-            <div className="absolute inset-x-2 bottom-3 grid grid-cols-2 text-center text-xs font-bold uppercase tracking-[0.13em] text-white sm:bottom-5">
-              <span className="mx-auto rounded-full bg-[#20313d]/85 px-3 py-1">{content.beforeLabel}</span>
-              <span className="mx-auto rounded-full bg-[#20313d]/85 px-3 py-1">{content.afterLabel}</span>
+      <div className="mx-auto -mt-16 max-w-5xl px-5 sm:-mt-24 sm:px-8">
+        <div className="overflow-hidden rounded-[1.5rem] border-[6px] border-white bg-white shadow-[0_24px_70px_rgba(21,32,40,0.18)] sm:rounded-[2rem] sm:border-[10px]">
+          {caseId === 'sergey-zhanna' ? (
+            <div className="grid gap-2 bg-white p-2 sm:gap-3 sm:p-3">
+              {[[zhannaBefore, content.beforeLabel], [zhannaAfter, content.afterLabel]].map(([src, label]) => (
+                <figure key={label} className="relative overflow-hidden rounded-xl bg-[#eee8dd]">
+                  <img src={src} alt={`${label}: ${item.galleryAlt}`} className="aspect-[15/5] w-full object-cover" decoding="async" />
+                  <figcaption className="absolute bottom-2 left-2 rounded-full bg-[#20313d]/90 px-3 py-1 text-xs font-bold uppercase tracking-[0.12em] text-white sm:bottom-4 sm:left-4">{label}</figcaption>
+                </figure>
+              ))}
+            </div>
+          ) : (
+            <div className="relative">
+              <img src={klausBeforeAfter} alt={item.imageAlt} className="w-full object-cover" decoding="async" />
+              <div className="absolute inset-x-2 bottom-3 grid grid-cols-2 text-center text-xs font-bold uppercase tracking-[0.13em] text-white sm:bottom-5">
+                <span className="mx-auto rounded-full bg-[#20313d]/85 px-3 py-1">{content.beforeLabel}</span>
+                <span className="mx-auto rounded-full bg-[#20313d]/85 px-3 py-1">{content.afterLabel}</span>
+              </div>
             </div>
           )}
         </div>
@@ -71,33 +77,14 @@ export default function RealCaseDetail() {
           ))}
         </div>
 
-        <div className="mt-16 grid gap-12 lg:grid-cols-[minmax(0,1fr)_22rem] lg:gap-20">
-          <div className="max-w-3xl">
-            {item.sections.map((section, index) => (
-              <section key={section.heading} className={index ? 'mt-12 border-t border-[#e7ddc9] pt-12' : ''}>
-                <p className="text-xs font-bold tracking-[0.2em] text-[#9a772c]">{String(index + 1).padStart(2, '0')}</p>
-                <h2 className="mt-3 text-2xl font-semibold leading-tight text-[#24343f] sm:text-3xl">{section.heading}</h2>
-                {section.paragraphs.map((paragraph) => <p key={paragraph} className="mt-5 text-base leading-8 text-[#4a5861]">{paragraph}</p>)}
-              </section>
-            ))}
-          </div>
-          <aside className="lg:pt-8">
-            <div className="overflow-hidden rounded-[1.5rem] border border-[#e9ddc4] bg-[#f5f0e4] p-3">
-              {caseId === 'sergey-zhanna' ? (
-                <div className="space-y-3">
-                  {[[zhannaBefore, content.beforeLabel], [zhannaAfter, content.afterLabel]].map(([src, label]) => (
-                    <figure key={label}>
-                      <img src={src} alt={`${label}: ${item.galleryAlt}`} loading="lazy" decoding="async" className="w-full rounded-xl object-cover" />
-                      <figcaption className="px-1 pt-1 text-xs font-bold uppercase tracking-[0.12em] text-[#775d25]">{label}</figcaption>
-                    </figure>
-                  ))}
-                </div>
-              ) : (
-                <img src={galleryImages[caseId]} alt={item.galleryAlt} loading="lazy" decoding="async" className="w-full rounded-xl object-cover" />
-              )}
-              <p className="px-2 pb-1 pt-3 text-xs leading-5 text-[#68737a]">{content.imageCaption}</p>
-            </div>
-          </aside>
+        <div className="mx-auto mt-16 max-w-3xl">
+          {item.sections.map((section, index) => (
+            <section key={section.heading} className={index ? 'mt-12 border-t border-[#e7ddc9] pt-12' : ''}>
+              <p className="text-xs font-bold tracking-[0.2em] text-[#9a772c]">{String(index + 1).padStart(2, '0')}</p>
+              <h2 className="mt-3 text-2xl font-semibold leading-tight text-[#24343f] sm:text-3xl">{section.heading}</h2>
+              {section.paragraphs.map((paragraph) => <p key={paragraph} className="mt-5 text-base leading-8 text-[#4a5861]">{paragraph}</p>)}
+            </section>
+          ))}
         </div>
       </section>
 
@@ -108,9 +95,37 @@ export default function RealCaseDetail() {
         </figure>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-24">
-        <p className="text-xs font-bold tracking-[0.2em] text-[#97742d]">{content.moreCases}</p>
-        <div className="mt-6 max-w-xl"><RealCaseCard id={otherId} content={content} index={realCaseIds.indexOf(otherId)} /></div>
+      <section className="bg-[#f8f5ed] px-5 py-16 sm:px-8 sm:py-20" aria-labelledby="case-directory-heading">
+        <div className="mx-auto max-w-5xl">
+          <p className="text-center text-xs font-bold tracking-[0.2em] text-[#97742d]">{content.caseCount}</p>
+          <h2 id="case-directory-heading" className="mt-3 text-center text-3xl font-semibold text-[#24343f] sm:text-4xl">{content.storiesHeading}</h2>
+          <div className="mt-9 grid gap-4 sm:grid-cols-2">
+            {realCaseIds.map((id, index) => {
+              const entry = content.cases[id];
+              const isCurrent = id === caseId;
+              const cardClass = `flex min-h-44 flex-col rounded-2xl border p-6 sm:p-7 ${isCurrent ? 'border-[#c9a75b] bg-[#f0e8d7]' : 'border-[#e3d7bd] bg-white transition hover:-translate-y-0.5 hover:border-[#b99446] hover:shadow-md'}`;
+              const cardBody = (
+                <>
+                  <span className="text-xs font-bold tracking-[0.16em] text-[#96742c]">{content.caseLabel} {String(index + 1).padStart(2, '0')}</span>
+                  <span className="mt-3 text-xl font-semibold leading-snug text-[#253642]">{entry.name}</span>
+                  <span className="mt-1 text-sm leading-6 text-[#5b6870]">{entry.category}</span>
+                  <span className="mt-auto inline-flex items-center gap-2 pt-5 text-sm font-bold text-[#80611f]">
+                    {isCurrent ? content.currentStory : content.readCase}
+                    {!isCurrent && <ArrowRight size={16} aria-hidden="true" />}
+                  </span>
+                </>
+              );
+              return isCurrent
+                ? <div key={id} className={cardClass}>{cardBody}</div>
+                : <Link key={id} to={`/real-cases/${id}`} className={cardClass}>{cardBody}</Link>;
+            })}
+          </div>
+          <div className="mt-8 text-center">
+            <Link to="/real-cases" className="inline-flex min-h-11 items-center gap-2 border-b-2 border-[#c9a652] text-sm font-bold text-[#263744] hover:text-[#80611f]">
+              {content.back} <ArrowRight size={16} aria-hidden="true" />
+            </Link>
+          </div>
+        </div>
       </section>
 
       <section className="bg-[#20313d] px-5 py-16 text-white sm:px-8 sm:py-20">
