@@ -33,6 +33,8 @@ import MedicalDisclaimer from './pages/MedicalDisclaimer.jsx';
 import Warranty from './pages/Warranty.jsx';
 import PatientJourney from './pages/PatientJourney.jsx';
 import PatientCase1 from './pages/PatientCase1.jsx';
+import RealCases from './pages/RealCases.jsx';
+import RealCaseDetail from './pages/RealCaseDetail.jsx';
 
 function ExternalRedirect({ to }) {
   useEffect(() => {
@@ -50,18 +52,26 @@ function AppShell() {
   const zohoMailUrl = import.meta.env.VITE_ZOHO_MAIL_URL || 'https://mail.zoho.com';
   const zohoDriveUrl = import.meta.env.VITE_ZOHO_DRIVE_URL || 'https://workdrive.zoho.com';
   const language = useSelector((state) => state.language.language);
+  const htmlLang = {
+    english: 'en', vietnamese: 'vi', french: 'fr', korean: 'ko',
+    simplified: 'zh-Hans', traditional: 'zh-Hant',
+  }[language] || 'en';
   const dispatch = useDispatch();
 
   useEffect(() => {
     const browserLanguages = navigator.languages?.length
       ? navigator.languages
       : [navigator.language || ''];
-    const primaryLanguage = browserLanguages.find((lang) =>
-      lang.toLowerCase().startsWith('vi') || lang.toLowerCase().startsWith('en')
-    );
-    const prefersVietnamese = primaryLanguage?.toLowerCase().startsWith('vi');
+    const supportedLanguage = browserLanguages.find((lang) => /^(vi|en|fr|ko|zh)(-|$)/i.test(lang));
+    const locale = supportedLanguage?.toLowerCase() || 'en';
+    const selectedLanguage = locale.startsWith('vi') ? 'vietnamese'
+      : locale.startsWith('fr') ? 'french'
+        : locale.startsWith('ko') ? 'korean'
+          : locale.startsWith('zh')
+            ? /^(zh-(tw|hk|mo|hant))/.test(locale) ? 'traditional' : 'simplified'
+            : 'english';
 
-    dispatch(setLanguage(prefersVietnamese ? 'vietnamese' : 'english'));
+    dispatch(setLanguage(selectedLanguage));
   }, [dispatch]);
 
   useEffect(() => {
@@ -78,7 +88,7 @@ function AppShell() {
 
   return (
     <>
-      <Helmet>
+      <Helmet htmlAttributes={{ lang: htmlLang }}>
         <link rel="canonical" href={canonicalUrl} />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="website" />
@@ -97,6 +107,8 @@ function AppShell() {
           <Route path="/international-patients" element={<InternationalPatients  />} />
           <Route path="/patient-journey" element={<PatientJourney />} />
           <Route path="/patient-story/dental-implants" element={<PatientCase1 />} />
+          <Route path="/real-cases" element={<RealCases />} />
+          <Route path="/real-cases/:caseId" element={<RealCaseDetail />} />
           <Route path="/smile-aesthetics" element={<SmileAesthetics />} />
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/full-mouth" element={<FullMouth />} />

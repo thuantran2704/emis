@@ -7,7 +7,6 @@ import { primaryContactItems, socialContactItems } from '../data/contactChannels
 
 // NOTE: The following footer links have no dedicated route yet and are mapped
 // to the closest existing page (update once real pages/routes exist):
-//   - "Patient Cases" / "Ca Điều Trị Thực Tế"  -> /solutions
 //   - "Dental Resources" / "Kiến Thức Nha Khoa" -> /equipment
 //   - "Send Your X-ray" / "Gửi Phim X-quang"    -> /contact
 //   - "Restorative Dentistry" / "Điều Trị & Giữ Răng Thật" -> /restorative-dentistry
@@ -53,7 +52,7 @@ function buildFooterColumns(nav, f) {
     {
       heading: nav.resources,
       links: [
-        { label: nav.patientCases, to: '/solutions' },
+        { label: nav.patientCases, to: '/real-cases' },
         { label: fn.dentalResources, to: '/equipment' },
         { label: nav.faq, to: '/faq' },
         { label: fn.sendXray, to: '/contact' },

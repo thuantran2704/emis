@@ -12,6 +12,7 @@ export default function Navbar() {
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isSmileOpen, setIsSmileOpen] = useState(false);
   const [isDentalTourismOpen, setIsDentalTourismOpen] = useState(false);
+  const [isPatientsOpen, setIsPatientsOpen] = useState(false);
   const [isLandscape, setIsLandscape] = useState(() =>
     typeof window !== 'undefined'
       ? window.matchMedia('(orientation: landscape)').matches
@@ -23,6 +24,7 @@ export default function Navbar() {
     setIsSolutionsOpen(false);
     setIsSmileOpen(false);
     setIsDentalTourismOpen(false);
+    setIsPatientsOpen(false);
   };
 
   useEffect(() => {
@@ -48,6 +50,7 @@ export default function Navbar() {
   const toggleSolutions = () => setIsSolutionsOpen((prev) => !prev);
   const toggleSmile = () => setIsSmileOpen((prev) => !prev);
   const toggleDentalTourism = () => setIsDentalTourismOpen((prev) => !prev);
+  const togglePatients = () => setIsPatientsOpen((prev) => !prev);
 
   const content = navbarContent[language] || navbarContent.english;
 
@@ -82,10 +85,17 @@ export default function Navbar() {
     { name: content.internationalPatients, path: '/international-patients' },
   ];
 
+  const patientsDropdownItems = [
+    { name: content.patientCases, path: '/real-cases' },
+    { name: content.patientJourney, path: '/patient-journey' },
+    { name: content.faq, path: '/faq' },
+  ];
+
   const solutionsPaths = ['/solutions', '/implant', '/fixed-teeth', '/full-mouth', '/oral-surgery', '/restorative-dentistry'];
   const isSolutionsActive = solutionsPaths.includes(location.pathname);
   const isSmileActive = ['/smile-aesthetics', '/crown', '/veneer'].includes(location.pathname);
   const isDentalTourismActive = ['/visitor-program', '/international-patients'].includes(location.pathname);
+  const isPatientsActive = location.pathname.startsWith('/real-cases') || ['/patient-journey', '/patient-story/dental-implants', '/faq'].includes(location.pathname);
 
   return (
     <>
@@ -98,7 +108,7 @@ export default function Navbar() {
         />
       )}
 
-      <nav className="fixed top-0 z-50 w-full border-b-2 border-[#d4af37]/60 bg-white/90 backdrop-blur-md shadow-[0_10px_30px_rgba(31,41,55,0.10)]">
+      <nav onKeyDown={(event) => { if (event.key === 'Escape') closeAllMenus(); }} className="fixed top-0 z-50 w-full border-b-2 border-[#d4af37]/60 bg-white/90 backdrop-blur-md shadow-[0_10px_30px_rgba(31,41,55,0.10)]">
         <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-4 sm:px-6">
           <Link to="/" className="group flex items-center gap-3">
             <div className="h-12 w-12 overflow-hidden rounded-full border-2 border-[#d4af37]/60 transition-transform duration-200 group-hover:scale-[1.02]">
@@ -238,9 +248,32 @@ export default function Navbar() {
               )}
             </div>
 
-            <Link to="/faq" className={navLinkClass('/faq')}>
-              {content.resources}
-            </Link>
+            <div className="relative">
+              <button
+                type="button"
+                onClick={togglePatients}
+                aria-expanded={isPatientsOpen}
+                className={`relative inline-flex h-10 items-center gap-1 whitespace-nowrap px-3 text-sm font-semibold tracking-wide transition-colors duration-200 ${
+                  isPatientsActive
+                    ? 'text-[#1f2937] after:absolute after:left-3 after:right-3 after:-bottom-0.5 after:h-[2px] after:bg-[#d4af37]'
+                    : 'text-[#2a3439]/80 hover:text-[#111317]'
+                }`}
+              >
+                {content.patients}
+                <svg className={`h-4 w-4 transition-transform duration-200 ${isPatientsOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {isPatientsOpen && (
+                <div id="patients-nav-menu" className="absolute right-0 top-full mt-3 w-56 rounded-2xl border border-[#eadfc4] bg-white p-2 shadow-[0_14px_28px_rgba(31,41,55,0.16)]">
+                  {patientsDropdownItems.map((sub) => (
+                    <Link key={sub.path} to={sub.path} className="block rounded-xl px-3 py-2 font-medium text-[#2a3439] transition hover:bg-[#f7f2e7]" onClick={closeAllMenus}>
+                      {sub.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
 
             <Link
               to="/contact"
@@ -278,7 +311,7 @@ export default function Navbar() {
         <div
           inert={!isMenuOpen}
           aria-hidden={!isMenuOpen}
-          className={`${isLandscape ? '2xl:hidden' : ''} overflow-hidden border-t border-[#e6d9ba] bg-[#fbf7ed] transition-[max-height] duration-300 ${
+          className={`${isLandscape ? '2xl:hidden' : ''} overflow-x-hidden overflow-y-auto border-t border-[#e6d9ba] bg-[#fbf7ed] transition-[max-height] duration-300 ${
             isMenuOpen ? 'max-h-[85vh]' : 'max-h-0'
           }`}
         >
@@ -410,9 +443,27 @@ export default function Navbar() {
               )}
             </div>
 
-            <Link to="/faq" className={mobileLinkClass('/faq')} onClick={closeAllMenus}>
-              {content.resources}
-            </Link>
+            <div>
+              <div className={`flex items-center justify-between rounded-xl px-3 py-2.5 text-sm transition ${
+                isPatientsActive ? 'bg-[#f5e9c2] text-[#1f2937]' : 'text-[#2a3439] hover:bg-[#f3ead2]'
+              }`}>
+                <Link to="/real-cases" className="flex-1 font-semibold" onClick={closeAllMenus}>{content.patients}</Link>
+                <button type="button" onClick={togglePatients} aria-expanded={isPatientsOpen} aria-label={`${content.patients} menu`} className="rounded-full p-1 text-[#2a3439] hover:bg-[#efe3c5]">
+                  <svg className={`h-4 w-4 transition-transform ${isPatientsOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+              </div>
+              {isPatientsOpen && (
+                <div className="mt-2 ml-2 space-y-1 rounded-xl bg-[#f5ecd3]/70 p-2">
+                  {patientsDropdownItems.map((sub) => (
+                    <Link key={sub.path} to={sub.path} className="block rounded-lg px-3 py-2 text-sm font-semibold text-[#2a3439] transition hover:bg-[#f3ead2]" onClick={closeAllMenus}>
+                      {sub.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
 
             <Link
               to="/contact"
