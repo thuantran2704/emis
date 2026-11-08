@@ -10,16 +10,13 @@ function RealCaseCard({ id, content, index }) {
   return (
     <article id={id} className="group flex h-full scroll-mt-28 flex-col overflow-hidden rounded-[1.5rem] border border-[#e7ddc9] bg-white shadow-[0_18px_45px_rgba(27,40,50,0.07)] transition-transform duration-300 hover:-translate-y-1">
       <Link to={`/real-cases/${id}`} className="relative block overflow-hidden bg-[#eee8db]" aria-label={`${content.readCase}: ${item.name}`}>
-        {id === 'klaus' ? (
-          <div className="grid aspect-[16/10] grid-cols-[46%_54%]">
-            <img src={realCaseImages[id]} alt={item.cardImageAlt} loading="lazy" decoding="async" className="h-full w-full object-cover object-[center_30%] transition-transform duration-500 group-hover:scale-[1.03]" />
-            <div className="flex items-center bg-[#20313d] px-4 py-6 text-[#f7f1e5] sm:px-5 lg:px-7">
-              <p className="text-sm font-medium leading-6 lg:text-base lg:leading-7">“{item.quote}”</p>
-            </div>
-          </div>
-        ) : (
-          <img src={realCaseImages[id]} alt={item.imageAlt} loading={index === 0 ? 'eager' : 'lazy'} decoding="async" className="aspect-[16/10] w-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]" />
-        )}
+        <img
+          src={realCaseImages[id]}
+          alt={id === 'klaus' ? item.cardImageAlt : item.imageAlt}
+          loading={index === 0 ? 'eager' : 'lazy'}
+          decoding="async"
+          className={`aspect-[4/3] w-full bg-[#e9e3d8] transition-transform duration-500 group-hover:scale-[1.03] ${id === 'klaus' ? 'object-contain' : 'object-cover object-center'}`}
+        />
         <span className="absolute left-5 top-5 rounded-full border border-white/70 bg-white/90 px-3 py-1 text-xs font-bold tracking-[0.13em] text-[#263745] backdrop-blur-sm">
           {content.caseLabel} {String(index + 1).padStart(2, '0')}
         </span>
