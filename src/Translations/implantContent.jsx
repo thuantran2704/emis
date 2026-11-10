@@ -92,7 +92,7 @@ export const implantContent = {
       title: "Implant Systems Available At EMIS",
       intro: "EMIS works with several implant systems, including:",
       systems: ["Straumann", "Hiossen", "Osstem", "ETK", "Biotem"],
-      note: "Different implant systems may be appropriate for different clinical situations.\n\nYour treatment recommendation will be based on your oral condition, bone support, restoration needs, and long-term treatment goals — not brand preference alone.",
+      note: "Different implant systems may be appropriate for different clinical situations.\n\nYour treatment recommendation will be based on your oral condition, bone support, restoration needs, and long-term treatment goals, rather than brand preference alone.",
     },
 
     section7: {

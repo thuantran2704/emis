@@ -2,7 +2,7 @@ export const mediaContent = {
   english: {
     metaTitle: 'Media Consent Policy | EMIS Dental',
     metaDescription:
-      'How EMIS Dental documents and uses patient photographs, videos, and treatment materials—and how you control their use.',
+      'How EMIS Dental documents and uses patient photographs, videos, and treatment materials, and how you control their use.',
     title: 'Media Consent Policy',
     lastUpdatedLabel: 'Last updated',
     lastUpdated: '06/25/2026',
@@ -87,7 +87,7 @@ export const mediaContent = {
   vietnamese: {
     metaTitle: 'Chính Sách Đồng Ý Sử Dụng Hình Ảnh | EMIS Dental',
     metaDescription:
-      'Cách EMIS Dental ghi nhận và sử dụng hình ảnh, video và tư liệu điều trị của khách hàng—và cách bạn kiểm soát việc sử dụng.',
+      'Cách EMIS Dental ghi nhận và sử dụng hình ảnh, video và tư liệu điều trị của khách hàng, cùng cách bạn kiểm soát việc sử dụng.',
     title: 'Chính Sách Đồng Ý Sử Dụng Hình Ảnh',
     lastUpdatedLabel: 'Cập nhật lần cuối',
     lastUpdated: '25/06/2026',

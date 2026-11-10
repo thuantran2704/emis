@@ -57,7 +57,7 @@ export const privacyContent = {
       {
         title: 'X-rays, CBCT Scans, and Dental Records',
         paragraphs: [
-          'Many of our patients—especially those travelling from overseas—choose to send us their dental records before visiting the clinic.',
+          'Many of our patients, especially those travelling from overseas, choose to send us their dental records before visiting the clinic.',
           'These records help us provide an initial assessment, discuss treatment options, and coordinate your care before your visit.',
         ],
       },

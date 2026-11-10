@@ -1,8 +1,8 @@
 const patientJourneyContent = {
   english: {
-    metaTitle: 'A Real Patient Journey — International Implant Case | EMIS Dental',
+    metaTitle: 'A Real Patient Journey | International Implant Case | EMIS Dental',
     metaDescription:
-      'How EMIS supports an international patient through a real implant treatment journey — from planning before travel to treatment, recovery, and follow-up.',
+      'How EMIS supports an international patient through a real implant treatment journey, from planning before travel to treatment, recovery, and follow-up.',
 
     // Hero
     heroEyebrow: 'Real Patient Journey',
@@ -57,7 +57,7 @@ const patientJourneyContent = {
     clinicalBeforeCaption: 'Long-term tooth loss and bone loss after years of removable denture use.',
     clinicalAfterLabel: 'After',
     clinicalAfterCaption: 'Implant placement performed as part of the patient\u2019s rehabilitation plan.',
-    clinicalConsent: 'EMIS Dental — Patient case used with consent.',
+    clinicalConsent: 'EMIS Dental: Patient case used with consent.',
 
     // Patient experience
     experienceEyebrow: 'Patient Experience',
@@ -78,9 +78,9 @@ const patientJourneyContent = {
   },
 
   vietnamese: {
-    metaTitle: 'Hành Trình Điều Trị Thực Tế — Ca Implant Quốc Tế | EMIS Dental',
+    metaTitle: 'Hành Trình Điều Trị Thực Tế | Ca Implant Quốc Tế | EMIS Dental',
     metaDescription:
-      'Cách EMIS đồng hành cùng bệnh nhân quốc tế trong một hành trình điều trị implant thực tế — từ lập kế hoạch trước khi đến, điều trị, hồi phục đến theo dõi sau điều trị.',
+      'Cách EMIS đồng hành cùng bệnh nhân quốc tế trong một hành trình điều trị implant thực tế, từ lập kế hoạch trước khi đến, điều trị, hồi phục đến theo dõi sau điều trị.',
 
     heroEyebrow: 'Hành Trình Bệnh Nhân Thực Tế',
     heroTitle: 'Hành Trình Của Một Bệnh Nhân Từ Hoa Kỳ Đến EMIS Dental',
@@ -132,7 +132,7 @@ const patientJourneyContent = {
     clinicalBeforeCaption: 'Mất răng lâu năm và tiêu xương sau nhiều năm sử dụng hàm giả tháo lắp.',
     clinicalAfterLabel: 'Sau',
     clinicalAfterCaption: 'Cấy ghép implant được thực hiện như một phần của kế hoạch phục hồi cho bệnh nhân.',
-    clinicalConsent: 'EMIS Dental — Ca bệnh nhân được sử dụng với sự đồng ý.',
+    clinicalConsent: 'EMIS Dental: Ca bệnh nhân được sử dụng với sự đồng ý.',
 
     experienceEyebrow: 'Trải Nghiệm Bệnh Nhân',
     experienceQuote:
@@ -150,9 +150,9 @@ const patientJourneyContent = {
   },
 
   french: {
-    metaTitle: 'Un vrai parcours patient — Cas d\u2019implant international | EMIS Dental',
+    metaTitle: 'Un vrai parcours patient | Cas d\u2019implant international | EMIS Dental',
     metaDescription:
-      'Comment EMIS accompagne un patient international tout au long d\u2019un parcours de traitement implantaire réel — de la planification avant le voyage au traitement, à la récupération et au suivi.',
+      'Comment EMIS accompagne un patient international tout au long d\u2019un parcours de traitement implantaire réel, de la planification avant le voyage au traitement, à la récupération et au suivi.',
 
     heroEyebrow: 'Parcours patient réel',
     heroTitle: 'Le parcours réel d\u2019un patient, des États-Unis à EMIS Dental',
@@ -204,7 +204,7 @@ const patientJourneyContent = {
     clinicalBeforeCaption: 'Perte dentaire de longue durée et perte osseuse après des années de port d\u2019une prothèse amovible.',
     clinicalAfterLabel: 'Après',
     clinicalAfterCaption: 'Pose d\u2019implants réalisée dans le cadre du plan de réhabilitation du patient.',
-    clinicalConsent: 'EMIS Dental — Cas patient utilisé avec consentement.',
+    clinicalConsent: 'EMIS Dental : cas patient utilisé avec consentement.',
 
     experienceEyebrow: 'Expérience du patient',
     experienceQuote:
@@ -222,9 +222,9 @@ const patientJourneyContent = {
   },
 
   korean: {
-    metaTitle: '실제 환자 여정 — 국제 임플란트 사례 | EMIS Dental',
+    metaTitle: '실제 환자 여정 | 국제 임플란트 사례 | EMIS Dental',
     metaDescription:
-      'EMIS가 실제 임플란트 치료 여정 전반에 걸쳐 국제 환자를 어떻게 지원하는지 — 여행 전 계획부터 치료, 회복, 추적 진료까지.',
+      'EMIS가 실제 임플란트 치료 여정 전반에 걸쳐 국제 환자를 어떻게 지원하는지, 여행 전 계획부터 치료, 회복, 추적 진료까지.',
 
     heroEyebrow: '실제 환자 여정',
     heroTitle: '미국에서 EMIS Dental까지, 한 환자의 실제 여정',
@@ -276,7 +276,7 @@ const patientJourneyContent = {
     clinicalBeforeCaption: '수년간 가철식 틀니 사용 후 장기간의 치아 상실과 골 소실.',
     clinicalAfterLabel: '후',
     clinicalAfterCaption: '환자의 재건 계획의 일부로 시행된 임플란트 식립.',
-    clinicalConsent: 'EMIS Dental — 동의를 받아 사용된 환자 사례.',
+    clinicalConsent: 'EMIS Dental: 동의를 받아 사용된 환자 사례.',
 
     experienceEyebrow: '환자 경험',
     experienceQuote:
@@ -294,9 +294,9 @@ const patientJourneyContent = {
   },
 
   simplified: {
-    metaTitle: '真实患者旅程 — 国际种植牙病例 | EMIS Dental',
+    metaTitle: '真实患者旅程 | 国际种植牙病例 | EMIS Dental',
     metaDescription:
-      'EMIS 如何在真实的种植牙治疗旅程中为国际患者提供支持——从出行前的规划到治疗、恢复和复诊。',
+      'EMIS 如何在真实的种植牙治疗旅程中为国际患者提供支持，从出行前的规划到治疗、恢复和复诊。',
 
     heroEyebrow: '真实患者旅程',
     heroTitle: '一位患者从美国到 EMIS Dental 的真实旅程',
@@ -348,7 +348,7 @@ const patientJourneyContent = {
     clinicalBeforeCaption: '多年使用活动义齿后长期牙齿缺失和骨质流失。',
     clinicalAfterLabel: '治疗后',
     clinicalAfterCaption: '作为患者康复计划的一部分进行的种植牙植入。',
-    clinicalConsent: 'EMIS Dental — 经同意使用的患者病例。',
+    clinicalConsent: 'EMIS Dental：经同意使用的患者病例。',
 
     experienceEyebrow: '患者体验',
     experienceQuote:
@@ -366,9 +366,9 @@ const patientJourneyContent = {
   },
 
   traditional: {
-    metaTitle: '真實患者旅程 — 國際植牙病例 | EMIS Dental',
+    metaTitle: '真實患者旅程 | 國際植牙病例 | EMIS Dental',
     metaDescription:
-      'EMIS 如何在真實的植牙治療旅程中為國際患者提供支援——從出行前的規劃到治療、恢復和複診。',
+      'EMIS 如何在真實的植牙治療旅程中為國際患者提供支援，從出行前的規劃到治療、恢復和複診。',
 
     heroEyebrow: '真實患者旅程',
     heroTitle: '一位患者從美國到 EMIS Dental 的真實旅程',
@@ -420,7 +420,7 @@ const patientJourneyContent = {
     clinicalBeforeCaption: '多年使用活動假牙後長期牙齒缺失和骨質流失。',
     clinicalAfterLabel: '治療後',
     clinicalAfterCaption: '作為患者康復計畫的一部分進行的植牙植入。',
-    clinicalConsent: 'EMIS Dental — 經同意使用的患者病例。',
+    clinicalConsent: 'EMIS Dental：經同意使用的患者病例。',
 
     experienceEyebrow: '患者體驗',
     experienceQuote:

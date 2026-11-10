@@ -1,6 +1,6 @@
 ﻿const aboutContent = {
   english: {
-    metaTitle: 'About EMIS — Implant & Full-Mouth Rehabilitation',
+    metaTitle: 'About EMIS | Implant & Full-Mouth Rehabilitation',
     heroTitle: 'Advanced Implant & Full-Mouth Rehabilitation Care',
     heroSubtitle:
       'At EMIS, we help patients restore comfort, function, and confidence through carefully planned implant and rehabilitation treatment. Whether you live in Vietnam or overseas, our goal is to help you understand your situation clearly and explore treatment options with greater confidence.',
@@ -87,7 +87,7 @@
   },
 
   vietnamese: {
-    metaTitle: 'Về EMIS — Implant & Phục Hồi Toàn Hàm',
+    metaTitle: 'Về EMIS | Implant & Phục Hồi Toàn Hàm',
     heroTitle: 'Chuyên Sâu Implant & Phục Hồi Toàn Hàm',
     heroSubtitle:
       'Tại EMIS, chúng tôi tập trung vào Implant và phục hồi toàn hàm nhằm giúp bệnh nhân khôi phục khả năng ăn nhai, sự tự tin và chất lượng cuộc sống lâu dài. Dù bạn đang sinh sống tại Việt Nam hay ở nước ngoài, chúng tôi mong muốn giúp bạn hiểu rõ sức khỏe răng miệng của mình và có đủ thông tin trước khi đưa ra lựa chọn.',
@@ -145,7 +145,7 @@
   },
 
   french: {
-    metaTitle: 'À Propos d\'EMIS — Implantologie & Réhabilitation Complète',
+    metaTitle: 'À Propos d\'EMIS | Implantologie & Réhabilitation Complète',
     heroTitle: 'Soins Avancés en Implantologie et Réhabilitation Complète',
     heroSubtitle:
       'Chez EMIS, nous aidons les patients à retrouver confort, fonction et confiance grâce à une prise en charge implantaire et de réhabilitation soigneusement planifiée. Que vous viviez au Vietnam ou à l\'étranger, notre objectif est de vous aider à comprendre clairement votre situation et à explorer vos options avec confiance.',
@@ -232,7 +232,7 @@
   },
 
   simplified: {
-    metaTitle: '关于 EMIS — 种植与全口重建',
+    metaTitle: '关于 EMIS | 种植与全口重建',
     heroTitle: '先进种植与全口重建护理',
     heroSubtitle:
       '在 EMIS，我们通过周密规划的种植与重建治疗，帮助患者恢复舒适、功能与自信。无论您居住在越南还是海外，我们都希望帮助您清晰了解自身情况，并更有信心地选择治疗方案。',
@@ -319,7 +319,7 @@
   },
 
   traditional: {
-    metaTitle: '關於 EMIS — 植牙與全口重建',
+    metaTitle: '關於 EMIS | 植牙與全口重建',
     heroTitle: '進階植牙與全口重建照護',
     heroSubtitle:
       '在 EMIS，我們透過審慎規劃的植牙與重建治療，協助患者恢復舒適、功能與自信。無論您居住在越南或海外，我們都希望幫助您清楚理解自身狀況，並更有信心地評估治療選項。',
@@ -406,7 +406,7 @@
   },
 
   korean: {
-    metaTitle: 'EMIS 소개 — 임플란트 및 전악 재건',
+    metaTitle: 'EMIS 소개 | 임플란트 및 전악 재건',
     heroTitle: '고도 임플란트 및 전악 재건 치료',
     heroSubtitle:
       'EMIS는 체계적으로 계획된 임플란트 및 재건 치료를 통해 환자의 편안함, 기능, 자신감을 회복하도록 돕습니다. 베트남 거주자와 해외 환자 모두가 자신의 상태를 명확히 이해하고 더 자신 있게 치료 옵션을 선택할 수 있도록 지원합니다.',
