@@ -92,11 +92,11 @@ export default function DrTuPage() {
           </div>
 
           <div className="order-1 lg:order-2">
-            <div className="rounded-2xl overflow-hidden bg-[#fff0c2] shadow-sm h-[480px] md:h-[560px]">
+            <div className="doctor-portrait-frame rounded-2xl overflow-hidden shadow-sm h-[480px] md:h-[560px]">
               <img
                 src={doctorPortrait}
                 alt="Dr. Tran Minh Tu portrait"
-                className="w-full h-full rounded-[3rem] object-cover object-center"
+                className="w-full h-full object-cover object-center"
               />
             </div>
           </div>

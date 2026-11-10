@@ -164,8 +164,8 @@ const Doctors = () => {
                 key={doctor.id}
                 className={`overflow-hidden rounded-3xl border shadow-sm ${featured ? 'border-[#c5af73] bg-[#193543] lg:grid lg:grid-cols-[minmax(320px,0.82fr)_1fr]' : 'border-[#e2e6e6] bg-white md:grid md:grid-cols-[minmax(230px,0.52fr)_1fr]'}`}
               >
-                <div className={`overflow-hidden bg-[#fff0c2] ${featured ? 'h-[420px] lg:h-full lg:min-h-[600px]' : 'h-[360px] md:h-full md:min-h-[420px]'}`}>
-                  <img src={doctor.portrait} alt={t.name} loading="lazy" decoding="async" className="h-full w-full rounded-[3rem] object-cover object-top" />
+                <div className={`doctor-portrait-frame overflow-hidden ${featured ? 'h-[420px] lg:h-full lg:min-h-[600px]' : 'h-[360px] md:h-full md:min-h-[420px]'}`}>
+                  <img src={doctor.portrait} alt={t.name} loading="lazy" decoding="async" className="h-full w-full object-cover object-top" />
                 </div>
                 <div className={`flex flex-col ${featured ? 'p-7 sm:p-10 lg:p-12' : 'p-7 sm:p-9'}`}>
                   {featured && <span className="mb-7 block h-1 w-12 rounded-full bg-[#d7bc7b]" aria-hidden="true" />}
