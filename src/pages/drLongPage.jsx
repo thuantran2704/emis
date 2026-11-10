@@ -297,8 +297,8 @@ export default function DrLongPage() {
             <p className="mt-4 max-w-[65ch] text-base leading-relaxed text-[#d9e3e6]">{t.descriptionTwo}</p>
             <Link to="/contact" className="mt-9 inline-flex min-h-11 items-center rounded-full bg-[#d7bc7b] px-7 py-3 text-sm font-semibold text-[#193543] transition hover:bg-[#ebd59f]">{content.contact}</Link>
           </div>
-          <div className="order-1 mx-auto w-full max-w-[460px] overflow-hidden rounded-3xl border border-[#d7bc7b] bg-[#fff0be] shadow-2xl lg:order-2">
-            <img src={doctor.portrait} alt={t.name} className="aspect-[4/5] w-full object-cover object-top" fetchPriority="high" />
+          <div className="order-1 mx-auto w-full max-w-[460px] overflow-hidden rounded-3xl border border-[#d7bc7b] bg-[#fff0c2] shadow-2xl lg:order-2">
+            <img src={doctor.portrait} alt={t.name} className="aspect-[4/5] w-full rounded-[3rem] object-cover object-top" fetchPriority="high" />
           </div>
         </div>
       </section>

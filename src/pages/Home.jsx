@@ -200,13 +200,13 @@ export default function Home() {
                 to={doctor.slug}
                 className={`group grid gap-5 overflow-hidden rounded-3xl border p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg sm:items-center sm:p-6 ${featured ? 'border-[#c5af73] bg-[#193543] sm:grid-cols-[minmax(150px,220px)_1fr]' : 'border-[#dbe4ec] bg-white sm:grid-cols-[minmax(130px,165px)_1fr] hover:border-[#c5af73]'}`}
               >
-                <div className="aspect-[4/5] overflow-hidden rounded-2xl bg-[#fff0be]">
+                <div className="aspect-[4/5] overflow-hidden rounded-2xl bg-[#fff0c2]">
                   <img
                     src={doctor.portrait}
                     alt={t.name}
                     loading="lazy"
                     decoding="async"
-                    className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-[1.03]"
+                    className="h-full w-full rounded-[3rem] object-cover object-top transition duration-500 group-hover:scale-[1.03]"
                   />
                 </div>
                 <div className="min-w-0">
