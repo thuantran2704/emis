@@ -1,8 +1,8 @@
 export const restorativeContent = {
   english: {
-    metaTitle: "Restorative Dentistry & Tooth Preservation | EMIS Dental",
+    metaTitle: "Restorative Dentistry & Tooth Preservation | Emis Dental",
     metaDescription:
-      "Not every damaged tooth needs to be removed. Explore root canal treatment, crowns, inlays, and other restorative procedures at EMIS Dental in Ho Chi Minh City.",
+      "Not every damaged tooth needs to be removed. Explore root canal treatment, crowns, inlays, and other restorative procedures at Emis Dental in Ho Chi Minh City.",
 
     section1: {
       eyebrow: "Restorative Dentistry",
@@ -91,7 +91,7 @@ export const restorativeContent = {
       eyebrow: "Real Patient Cases",
       title: "Real Patient Cases",
       intro:
-        "Explore how damaged, worn, or infected teeth were treated and repaired at EMIS.",
+        "Explore how damaged, worn, or infected teeth were treated and repaired at Emis Dental.",
       cta: "View Restorative Cases",
     },
 
@@ -107,9 +107,9 @@ export const restorativeContent = {
   },
 
   vietnamese: {
-    metaTitle: "Điều Trị & Giữ Răng Thật | EMIS Dental",
+    metaTitle: "Điều Trị & Giữ Răng Thật | Emis Dental",
     metaDescription:
-      "Không phải chiếc răng nào gặp vấn đề cũng cần nhổ bỏ. Tìm hiểu điều trị tủy, mão răng, inlay và các phương pháp bảo tồn răng tại EMIS Dental.",
+      "Không phải chiếc răng nào gặp vấn đề cũng cần nhổ bỏ. Tìm hiểu điều trị tủy, mão răng, inlay và các phương pháp bảo tồn răng tại Emis Dental.",
 
     section1: {
       eyebrow: "Điều Trị Răng",
@@ -198,7 +198,7 @@ export const restorativeContent = {
       eyebrow: "Những Ca Điều Trị Thực Tế",
       title: "Những Ca Điều Trị Thực Tế",
       intro:
-        "Khám phá những trường hợp răng hư hỏng, nhiễm trùng hoặc mòn nhiều đã được điều trị tại EMIS.",
+        "Khám phá những trường hợp răng hư hỏng, nhiễm trùng hoặc mòn nhiều đã được điều trị tại Emis Dental.",
       cta: "Xem Các Ca Điều Trị Thực Tế",
     },
 
@@ -214,9 +214,9 @@ export const restorativeContent = {
   },
 
   french: {
-    metaTitle: "Dentisterie Restauratrice & Conservation Dentaire | EMIS Dental",
+    metaTitle: "Dentisterie Restauratrice & Conservation Dentaire | Emis Dental",
     metaDescription:
-      "Une dent endommagée ne nécessite pas toujours une extraction. Explorez le traitement canalaire, les couronnes, les Inlay/Onlay et d'autres procédures restauratrices chez EMIS Dental à Hô-Chi-Minh-Ville.",
+      "Une dent endommagée ne nécessite pas toujours une extraction. Explorez le traitement canalaire, les couronnes, les Inlay/Onlay et d'autres procédures restauratrices chez Emis Dental à Hô-Chi-Minh-Ville.",
 
     section1: {
       eyebrow: "Dentisterie Restauratrice",
@@ -305,7 +305,7 @@ export const restorativeContent = {
       eyebrow: "Cas Réels",
       title: "Cas De Patients Réels",
       intro:
-        "Découvrez comment des dents endommagées, usées ou infectées ont été traitées et réparées chez EMIS.",
+        "Découvrez comment des dents endommagées, usées ou infectées ont été traitées et réparées chez Emis Dental.",
       cta: "Voir Les Cas Restaurateurs",
     },
 
@@ -321,9 +321,9 @@ export const restorativeContent = {
   },
 
   korean: {
-    metaTitle: "수복 치과 & 자연 치아 보존 | EMIS Dental",
+    metaTitle: "수복 치과 & 자연 치아 보존 | Emis Dental",
     metaDescription:
-      "손상된 치아라고 해서 반드시 발치가 필요한 것은 아닙니다. 호치민시 EMIS Dental에서 신경치료, 치관, 인레이/온레이 및 기타 수복 치료를 알아보세요.",
+      "손상된 치아라고 해서 반드시 발치가 필요한 것은 아닙니다. 호치민시 Emis Dental에서 신경치료, 치관, 인레이/온레이 및 기타 수복 치료를 알아보세요.",
 
     section1: {
       eyebrow: "수복 치과",
@@ -412,7 +412,7 @@ export const restorativeContent = {
       eyebrow: "실제 환자 사례",
       title: "실제 환자 사례",
       intro:
-        "EMIS에서 손상, 마모 또는 감염된 치아가 어떻게 치료되었는지 확인하세요.",
+        "Emis Dental에서 손상, 마모 또는 감염된 치아가 어떻게 치료되었는지 확인하세요.",
       cta: "수복 치료 사례 보기",
     },
 
@@ -428,9 +428,9 @@ export const restorativeContent = {
   },
 
   simplified: {
-    metaTitle: "修复牙科与天然牙保存 | EMIS Dental",
+    metaTitle: "修复牙科与天然牙保存 | Emis Dental",
     metaDescription:
-      "并非每颗受损的牙齿都需要拔除。探索在胡志明市EMIS Dental提供的根管治疗、牙冠、嵌体/高嵌体及其他修复治疗。",
+      "并非每颗受损的牙齿都需要拔除。探索在胡志明市Emis Dental提供的根管治疗、牙冠、嵌体/高嵌体及其他修复治疗。",
 
     section1: {
       eyebrow: "修复牙科",
@@ -519,7 +519,7 @@ export const restorativeContent = {
       eyebrow: "真实病例",
       title: "真实患者病例",
       intro:
-        "了解EMIS如何治疗受损、磨损或感染的牙齿。",
+        "了解Emis Dental如何治疗受损、磨损或感染的牙齿。",
       cta: "查看修复病例",
     },
 
@@ -535,9 +535,9 @@ export const restorativeContent = {
   },
 
   traditional: {
-    metaTitle: "修復牙科與天然牙保存 | EMIS Dental",
+    metaTitle: "修復牙科與天然牙保存 | Emis Dental",
     metaDescription:
-      "並非每顆受損的牙齒都需要拔除。探索在胡志明市EMIS Dental提供的根管治療、牙冠、嵌體/高嵌體及其他修復治療。",
+      "並非每顆受損的牙齒都需要拔除。探索在胡志明市Emis Dental提供的根管治療、牙冠、嵌體/高嵌體及其他修復治療。",
 
     section1: {
       eyebrow: "修復牙科",
@@ -626,7 +626,7 @@ export const restorativeContent = {
       eyebrow: "真實病例",
       title: "真實患者病例",
       intro:
-        "了解EMIS如何治療受損、磨損或感染的牙齒。",
+        "了解Emis Dental如何治療受損、磨損或感染的牙齒。",
       cta: "查看修復病例",
     },
 

@@ -2,7 +2,7 @@ const navbarContent = {
 
   english: {
     home: "Home",
-    about: "About EMIS",
+    about: "About Emis Dental",
     services: "Price List",
     treatments: "Treatments",
     internationalPatients: "International Patients",
@@ -35,7 +35,7 @@ const navbarContent = {
 
   vietnamese: {
     home: "Trang Chủ",
-    about: "Về EMIS",
+    about: "Về Emis Dental",
     services: "Bảng Giá",
     treatments: "Điều Trị",
     internationalPatients: "Bệnh Nhân Quốc Tế",
@@ -68,7 +68,7 @@ const navbarContent = {
 
   french: {
     home: "Accueil",
-    about: "À Propos d'EMIS",
+    about: "À Propos d'Emis Dental",
     services: "Tarifs",
     treatments: "Traitements",
     internationalPatients: "Patients Internationaux",
@@ -101,7 +101,7 @@ const navbarContent = {
 
   simplified: {
     home: "首页",
-    about: "关于 EMIS",
+    about: "关于 Emis Dental",
     services: "价目表",
     treatments: "治疗项目",
     internationalPatients: "国际患者",
@@ -134,7 +134,7 @@ const navbarContent = {
 
   traditional: {
     home: "首頁",
-    about: "關於 EMIS",
+    about: "關於 Emis Dental",
     services: "價目表",
     treatments: "治療項目",
     internationalPatients: "國際患者",
@@ -167,7 +167,7 @@ const navbarContent = {
 
   korean: {
     home: "홈",
-    about: "EMIS 소개",
+    about: "Emis Dental 소개",
     services: "가격표",
     treatments: "치료 항목",
     internationalPatients: "국제 환자",

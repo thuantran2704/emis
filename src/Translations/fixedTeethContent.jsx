@@ -1,8 +1,8 @@
 export const fixedTeethContent = {
   english: {
-    metaTitle: 'Fixed Teeth Solutions | All-on-4 & All-on-6 | EMIS Dental',
+    metaTitle: 'Fixed Teeth Solutions | All-on-4 & All-on-6 | Emis Dental',
     metaDescription:
-      'Fixed teeth supported by dental implants may offer a more stable alternative to removable dentures. Explore All-on-4 and All-on-6 options, treatment planning, and overseas patient support at EMIS.',
+      'Fixed teeth supported by dental implants may offer a more stable alternative to removable dentures. Explore All-on-4 and All-on-6 options, treatment planning, and overseas patient support at Emis Dental.',
 
     hero: {
       eyebrow: 'Fixed Teeth Solutions',
@@ -114,7 +114,7 @@ export const fixedTeethContent = {
       eyebrow: 'Real Patient Cases',
       title: 'See How Patients Were Treated',
       intro:
-        'Explore how patients with extensive tooth loss or dentures were treated and supported at EMIS.',
+        'Explore how patients with extensive tooth loss or dentures were treated and supported at Emis Dental.',
       cta: 'View Fixed Teeth Patient Cases',
       ctaPath: '/doctors',
     },
@@ -140,9 +140,9 @@ export const fixedTeethContent = {
   },
 
   vietnamese: {
-    metaTitle: 'Giải Pháp Răng Cố Định Trên Implant | All-on-4 & All-on-6 | EMIS Dental',
+    metaTitle: 'Giải Pháp Răng Cố Định Trên Implant | All-on-4 & All-on-6 | Emis Dental',
     metaDescription:
-      'Răng cố định trên Implant mang lại cảm giác chắc chắn và thuận tiện hơn so với hàm giả tháo lắp. Tìm hiểu All-on-4, All-on-6, kế hoạch điều trị và hỗ trợ bệnh nhân quốc tế tại EMIS.',
+      'Răng cố định trên Implant mang lại cảm giác chắc chắn và thuận tiện hơn so với hàm giả tháo lắp. Tìm hiểu All-on-4, All-on-6, kế hoạch điều trị và hỗ trợ bệnh nhân quốc tế tại Emis Dental.',
 
     hero: {
       eyebrow: 'Giải Pháp Răng Cố Định',
@@ -263,7 +263,7 @@ export const fixedTeethContent = {
       eyebrow: 'Đội Ngũ Đồng Hành Cùng Bạn',
       title: 'Đội Ngũ Cùng Phối Hợp Vì Bạn',
       intro:
-        'Đội ngũ EMIS cùng phối hợp trong từng giai đoạn, từ thăm khám ban đầu đến theo dõi sau điều trị.',
+        'Đội ngũ Emis Dental cùng phối hợp trong từng giai đoạn, từ thăm khám ban đầu đến theo dõi sau điều trị.',
       cta: 'Gặp Gỡ Đội Ngũ Bác Sĩ',
       ctaPath: '/doctors',
     },
@@ -280,9 +280,9 @@ export const fixedTeethContent = {
   },
 
   french: {
-    metaTitle: 'Solutions de Dents Fixes | All-on-4 et All-on-6 | EMIS Dental',
+    metaTitle: 'Solutions de Dents Fixes | All-on-4 et All-on-6 | Emis Dental',
     metaDescription:
-      "Les dents fixes soutenues par des implants dentaires peuvent offrir une alternative plus stable aux prothèses amovibles. Découvrez les options All-on-4 et All-on-6, la planification du traitement et l'accompagnement des patients internationaux chez EMIS.",
+      "Les dents fixes soutenues par des implants dentaires peuvent offrir une alternative plus stable aux prothèses amovibles. Découvrez les options All-on-4 et All-on-6, la planification du traitement et l'accompagnement des patients internationaux chez Emis Dental.",
 
     hero: {
       eyebrow: 'Solutions de Dents Fixes',
@@ -394,7 +394,7 @@ export const fixedTeethContent = {
       eyebrow: 'Cas De Patients Réels',
       title: 'Découvrez Comment Les Patients Ont Été Traités',
       intro:
-        'Découvrez comment des patients ayant une perte dentaire importante ou portant des prothèses ont été traités et accompagnés chez EMIS.',
+        'Découvrez comment des patients ayant une perte dentaire importante ou portant des prothèses ont été traités et accompagnés chez Emis Dental.',
       cta: 'Voir Les Cas De Patients En Dents Fixes',
       ctaPath: '/doctors',
     },
@@ -420,9 +420,9 @@ export const fixedTeethContent = {
   },
 
   korean: {
-    metaTitle: '고정식 치아 솔루션 | All-on-4 & All-on-6 | EMIS Dental',
+    metaTitle: '고정식 치아 솔루션 | All-on-4 & All-on-6 | Emis Dental',
     metaDescription:
-      '치과 임플란트로 지지되는 고정식 치아는 가철식 틀니보다 더 안정적인 대안이 될 수 있습니다. EMIS의 All-on-4 및 All-on-6 옵션, 치료 계획, 국제 환자 지원을 알아보세요.',
+      '치과 임플란트로 지지되는 고정식 치아는 가철식 틀니보다 더 안정적인 대안이 될 수 있습니다. Emis Dental의 All-on-4 및 All-on-6 옵션, 치료 계획, 국제 환자 지원을 알아보세요.',
 
     hero: {
       eyebrow: '고정식 치아 솔루션',
@@ -534,7 +534,7 @@ export const fixedTeethContent = {
       eyebrow: '실제 환자 사례',
       title: '환자들이 어떻게 치료받았는지 살펴보기',
       intro:
-        '광범위한 치아 상실이나 틀니를 사용하던 환자들이 EMIS에서 어떻게 치료받고 지원받았는지 살펴보세요.',
+        '광범위한 치아 상실이나 틀니를 사용하던 환자들이 Emis Dental에서 어떻게 치료받고 지원받았는지 살펴보세요.',
       cta: '고정식 치아 환자 사례 보기',
       ctaPath: '/doctors',
     },
@@ -560,9 +560,9 @@ export const fixedTeethContent = {
   },
 
   simplified: {
-    metaTitle: '固定牙解决方案 | All-on-4 和 All-on-6 | EMIS Dental',
+    metaTitle: '固定牙解决方案 | All-on-4 和 All-on-6 | Emis Dental',
     metaDescription:
-      '由种植牙支撑的固定牙可能比活动义齿更稳定。了解 EMIS 的 All-on-4 和 All-on-6 选项、治疗规划以及国际患者支持。',
+      '由种植牙支撑的固定牙可能比活动义齿更稳定。了解 Emis Dental 的 All-on-4 和 All-on-6 选项、治疗规划以及国际患者支持。',
 
     hero: {
       eyebrow: '固定牙解决方案',
@@ -674,7 +674,7 @@ export const fixedTeethContent = {
       eyebrow: '真实患者案例',
       title: '了解患者是如何接受治疗的',
       intro:
-        '了解大范围牙齿缺失或使用假牙的患者在 EMIS 是如何接受治疗和支持的。',
+        '了解大范围牙齿缺失或使用假牙的患者在 Emis Dental 是如何接受治疗和支持的。',
       cta: '查看固定牙患者案例',
       ctaPath: '/doctors',
     },
@@ -700,9 +700,9 @@ export const fixedTeethContent = {
   },
 
   traditional: {
-    metaTitle: '固定牙解決方案 | All-on-4 和 All-on-6 | EMIS Dental',
+    metaTitle: '固定牙解決方案 | All-on-4 和 All-on-6 | Emis Dental',
     metaDescription:
-      '由植牙支撐的固定牙可能比活動假牙更穩定。了解 EMIS 的 All-on-4 和 All-on-6 選項、治療規劃以及國際患者支援。',
+      '由植牙支撐的固定牙可能比活動假牙更穩定。了解 Emis Dental 的 All-on-4 和 All-on-6 選項、治療規劃以及國際患者支援。',
 
     hero: {
       eyebrow: '固定牙解決方案',
@@ -814,7 +814,7 @@ export const fixedTeethContent = {
       eyebrow: '真實患者案例',
       title: '了解患者是如何接受治療的',
       intro:
-        '了解大範圍牙齒缺失或使用假牙的患者在 EMIS 是如何接受治療與支援的。',
+        '了解大範圍牙齒缺失或使用假牙的患者在 Emis Dental 是如何接受治療與支援的。',
       cta: '查看固定牙患者案例',
       ctaPath: '/doctors',
     },

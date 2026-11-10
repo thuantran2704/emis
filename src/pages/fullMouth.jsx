@@ -204,7 +204,7 @@ const FullMouth = () => {
               <div className="rounded-2xl overflow-hidden shadow-md border border-[#dfe7ef] bg-white">
                 <img
                   src={overseasImage}
-                  alt="EMIS care team reviewing a patient's situation during a consultation"
+                  alt="Emis Dental care team reviewing a patient's situation during a consultation"
                   className="w-full h-[260px] lg:h-[300px] object-cover object-center"
                 />
               </div>
@@ -234,7 +234,7 @@ const FullMouth = () => {
             <div className="rounded-2xl overflow-hidden shadow-md border border-[#dfe7ef] bg-white">
               <img
                 src={teamImage}
-                alt="EMIS dental team collaborating on treatment planning"
+                alt="Emis Dental dental team collaborating on treatment planning"
                 className="w-full h-[300px] lg:h-[360px] object-cover object-center"
               />
             </div>

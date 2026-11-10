@@ -1,15 +1,15 @@
 export const oralSurgeryContent = {
   english: {
-    metaTitle: "Oral & Maxillofacial Surgery | EMIS Dental",
+    metaTitle: "Oral & Maxillofacial Surgery | Emis Dental",
     metaDescription:
-      "Need oral surgery? Explore wisdom teeth extraction, impacted teeth treatment, and diagnosis. EMIS explains assessment, planning, and recovery.",
+      "Need oral surgery? Explore wisdom teeth extraction, impacted teeth treatment, and diagnosis. Emis Dental explains assessment, planning, and recovery.",
 
     section1: {
       title: "Oral & Maxillofacial Surgery",
       subtitle:
         "Some dental conditions may require surgical treatment.",
       intro:
-        "Wisdom teeth extraction, impacted teeth removal, and other oral surgical procedures start with understanding whether surgery is truly needed. EMIS guides you through assessment, diagnosis, and recovery.",
+        "Wisdom teeth extraction, impacted teeth removal, and other oral surgical procedures start with understanding whether surgery is truly needed. Emis Dental guides you through assessment, diagnosis, and recovery.",
       primaryCta: "Send Your X-ray",
       secondaryCta: "Discuss Your Situation",
     },
@@ -74,7 +74,7 @@ export const oralSurgeryContent = {
       eyebrow: "Real Cases",
       title: "Real Patient Cases",
       intro:
-        "Explore how patients with wisdom teeth, infection, cysts, and other oral surgical concerns were treated at EMIS.",
+        "Explore how patients with wisdom teeth, infection, cysts, and other oral surgical concerns were treated at Emis Dental.",
       cta: "View Oral Surgery Cases",
     },
 
@@ -89,16 +89,16 @@ export const oralSurgeryContent = {
   },
 
   vietnamese: {
-    metaTitle: "Tiểu Phẫu Răng Hàm Mặt | EMIS Dental",
+    metaTitle: "Tiểu Phẫu Răng Hàm Mặt | Emis Dental",
     metaDescription:
-      "Cần phẫu thuật? Tìm hiểu về nhổ răng khôn, răng mọc lệch, cách chẩn đoán, lập kế hoạch điều trị và hồi phục tại EMIS.",
+      "Cần phẫu thuật? Tìm hiểu về nhổ răng khôn, răng mọc lệch, cách chẩn đoán, lập kế hoạch điều trị và hồi phục tại Emis Dental.",
 
     section1: {
       title: "Tiểu Phẫu Răng Hàm Mặt",
       subtitle:
         "Một số tình trạng răng miệng có thể cần được xử lý bằng tiểu phẫu.",
       intro:
-        "Nhổ răng khôn, nhổ răng mọc lệch, và các thủ thuật phẫu thuật khác đều bắt đầu từ việc hiểu rõ liệu phẫu thuật có thực sự cần thiết không. EMIS hướng dẫn bạn từ khâu đánh giá, chẩn đoán cho đến phục hồi.",
+        "Nhổ răng khôn, nhổ răng mọc lệch, và các thủ thuật phẫu thuật khác đều bắt đầu từ việc hiểu rõ liệu phẫu thuật có thực sự cần thiết không. Emis Dental hướng dẫn bạn từ khâu đánh giá, chẩn đoán cho đến phục hồi.",
       primaryCta: "Gửi X-ray Của Bạn",
       secondaryCta: "Trao Đổi Về Trường Hợp Của Bạn",
     },
@@ -153,7 +153,7 @@ export const oralSurgeryContent = {
       intro:
         "Nhiều Việt kiều và bệnh nhân quốc tế thường gửi X-ray trước khi về Việt Nam.",
       description:
-        "Điều này giúp đội ngũ EMIS xem xét tình trạng hiện tại, trao đổi về các bước tiếp theo và hỗ trợ chuẩn bị kế hoạch điều trị phù hợp trước chuyến đi.",
+        "Điều này giúp đội ngũ Emis Dental xem xét tình trạng hiện tại, trao đổi về các bước tiếp theo và hỗ trợ chuẩn bị kế hoạch điều trị phù hợp trước chuyến đi.",
       additional:
         "Với nhiều bệnh nhân, điều trị tại Việt Nam giúp chi phí cho các thủ thuật cần thiết trở nên hợp lý hơn so với nơi họ đang sinh sống.",
       cta: "Tìm Hiểu Về Bệnh Nhân Quốc Tế",
@@ -163,7 +163,7 @@ export const oralSurgeryContent = {
       eyebrow: "Những Ca Điều Trị Thực Tế",
       title: "Những Ca Điều Trị Thực Tế",
       intro:
-        "Khám phá những trường hợp răng khôn, nhiễm trùng, nang xương và các vấn đề răng hàm mặt khác đã được điều trị tại EMIS.",
+        "Khám phá những trường hợp răng khôn, nhiễm trùng, nang xương và các vấn đề răng hàm mặt khác đã được điều trị tại Emis Dental.",
       cta: "Xem Các Ca Điều Trị Thực Tế",
     },
 
@@ -178,16 +178,16 @@ export const oralSurgeryContent = {
   },
 
   french: {
-    metaTitle: "Chirurgie Orale et Maxillofaciale | EMIS Dental",
+    metaTitle: "Chirurgie Orale et Maxillofaciale | Emis Dental",
     metaDescription:
-      "Avez-vous besoin d'une chirurgie orale? Découvrez l'extraction des dents de sagesse, le traitement des dents incluses, et le diagnostic. EMIS explique l'évaluation, la planification et la récupération.",
+      "Avez-vous besoin d'une chirurgie orale? Découvrez l'extraction des dents de sagesse, le traitement des dents incluses, et le diagnostic. Emis Dental explique l'évaluation, la planification et la récupération.",
 
     section1: {
       title: "Chirurgie Orale et Maxillofaciale",
       subtitle:
         "Certaines conditions dentaires peuvent nécessiter un traitement chirurgical.",
       intro:
-        "L'extraction des dents de sagesse, l'ablation des dents incluses et d'autres interventions chirurgicales commencent par comprendre si la chirurgie est vraiment nécessaire. EMIS vous guide à travers l'évaluation, le diagnostic et la récupération.",
+        "L'extraction des dents de sagesse, l'ablation des dents incluses et d'autres interventions chirurgicales commencent par comprendre si la chirurgie est vraiment nécessaire. Emis Dental vous guide à travers l'évaluation, le diagnostic et la récupération.",
       primaryCta: "Envoyez Votre Radiographie",
       secondaryCta: "Discutez De Votre Situation",
     },
@@ -242,7 +242,7 @@ export const oralSurgeryContent = {
       intro:
         "Beaucoup de patients vietnamiens à l'étranger et internationaux envoient des radiographies avant de voyager au Vietnam.",
       description:
-        "Cela aide l'équipe EMIS à examiner la situation, à discuter des prochaines étapes et à soutenir la planification du traitement avant le voyage.",
+        "Cela aide l'équipe Emis Dental à examiner la situation, à discuter des prochaines étapes et à soutenir la planification du traitement avant le voyage.",
       additional:
         "Pour de nombreux patients, le traitement au Vietnam rend possible de traiter les besoins chirurgicaux qui auraient pu sembler difficiles ou coûteux à domicile.",
       cta: "En Savoir Plus Sur Les Patients Internationaux",
@@ -252,7 +252,7 @@ export const oralSurgeryContent = {
       eyebrow: "Cas Réels",
       title: "Cas De Patients Réels",
       intro:
-        "Découvrez comment les patients atteints de dents de sagesse, d'infections, de kystes et d'autres problèmes buccaux ont été traités chez EMIS.",
+        "Découvrez comment les patients atteints de dents de sagesse, d'infections, de kystes et d'autres problèmes buccaux ont été traités chez Emis Dental.",
       cta: "Voir Les Cas De Chirurgie Orale",
     },
 
@@ -267,16 +267,16 @@ export const oralSurgeryContent = {
   },
 
   korean: {
-    metaTitle: "구강악안면 수술 | EMIS Dental",
+    metaTitle: "구강악안면 수술 | Emis Dental",
     metaDescription:
-      "구강 수술이 필요하신가요? 사랑니 발치, 매복치 치료 및 진단에 대해 알아보세요. EMIS는 평가, 계획 및 회복을 설명합니다.",
+      "구강 수술이 필요하신가요? 사랑니 발치, 매복치 치료 및 진단에 대해 알아보세요. Emis Dental은 평가, 계획 및 회복을 설명합니다.",
 
     section1: {
       title: "구강악안면 수술",
       subtitle:
         "일부 치과 질환은 수술 치료가 필요할 수 있습니다.",
       intro:
-        "사랑니 발치, 매복치 제거 및 기타 구강 수술 절차는 수술이 정말 필요한지 이해하는 것으로 시작됩니다. EMIS는 평가, 진단 및 회복을 통해 안내합니다.",
+        "사랑니 발치, 매복치 제거 및 기타 구강 수술 절차는 수술이 정말 필요한지 이해하는 것으로 시작됩니다. Emis Dental은 평가, 진단 및 회복을 통해 안내합니다.",
       primaryCta: "X선 사진 전송",
       secondaryCta: "상황 논의",
     },
@@ -331,7 +331,7 @@ export const oralSurgeryContent = {
       intro:
         "많은 해외 베트남 및 국제 환자들이 베트남으로 여행하기 전에 X선 사진을 보냅니다.",
       description:
-        "이를 통해 EMIS 팀이 상황을 검토하고, 다음 단계를 논의하며, 여행 전 치료 계획을 지원할 수 있습니다.",
+        "이를 통해 Emis Dental 팀이 상황을 검토하고, 다음 단계를 논의하며, 여행 전 치료 계획을 지원할 수 있습니다.",
       additional:
         "많은 환자의 경우 베트남에서의 치료는 집에서 어렵거나 비싼 것처럼 느껴지는 구강 수술 필요를 해결할 수 있게 합니다.",
       cta: "국제 환자에 대해 자세히 알아보기",
@@ -341,7 +341,7 @@ export const oralSurgeryContent = {
       eyebrow: "실제 사례",
       title: "실제 환자 사례",
       intro:
-        "EMIS에서 치료받은 사랑니, 감염, 낭종 및 기타 구강 문제를 가진 환자들을 알아보세요.",
+        "Emis Dental에서 치료받은 사랑니, 감염, 낭종 및 기타 구강 문제를 가진 환자들을 알아보세요.",
       cta: "구강 수술 사례 보기",
     },
 
@@ -356,16 +356,16 @@ export const oralSurgeryContent = {
   },
 
   simplified: {
-    metaTitle: "口腔颌面外科 | EMIS Dental",
+    metaTitle: "口腔颌面外科 | Emis Dental",
     metaDescription:
-      "需要口腔手术？探索智齿提取、阻生牙治疗和诊断。EMIS解释评估、计划和恢复。",
+      "需要口腔手术？探索智齿提取、阻生牙治疗和诊断。Emis Dental解释评估、计划和恢复。",
 
     section1: {
       title: "口腔颌面外科",
       subtitle:
         "某些牙科疾病可能需要手术治疗。",
       intro:
-        "智齿提取、阻生牙去除和其他口腔外科手术始于了解是否真正需要手术。EMIS将指导您完成评估、诊断和恢复。",
+        "智齿提取、阻生牙去除和其他口腔外科手术始于了解是否真正需要手术。Emis Dental将指导您完成评估、诊断和恢复。",
       primaryCta: "发送您的X光片",
       secondaryCta: "讨论您的情况",
     },
@@ -420,7 +420,7 @@ export const oralSurgeryContent = {
       intro:
         "许多海外越南患者和国际患者在前往越南前会发送X光片。",
       description:
-        "这可以帮助EMIS团队审查情况、讨论后续步骤并在旅行前支持治疗计划。",
+        "这可以帮助Emis Dental团队审查情况、讨论后续步骤并在旅行前支持治疗计划。",
       additional:
         "对于许多患者来说，在越南进行治疗使得解决在家可能感到困难或昂贵的口腔外科需求成为可能。",
       cta: "了解更多关于国际患者的信息",
@@ -430,7 +430,7 @@ export const oralSurgeryContent = {
       eyebrow: "真实案例",
       title: "真实患者案例",
       intro:
-        "探索在EMIS接受治疗的智齿、感染、囊肿和其他口腔问题患者的情况。",
+        "探索在Emis Dental接受治疗的智齿、感染、囊肿和其他口腔问题患者的情况。",
       cta: "查看口腔手术案例",
     },
 
@@ -445,16 +445,16 @@ export const oralSurgeryContent = {
   },
 
   traditional: {
-    metaTitle: "口腔顎面外科 | EMIS Dental",
+    metaTitle: "口腔顎面外科 | Emis Dental",
     metaDescription:
-      "需要口腔手術？探索智齒提取、阻生牙治療和診斷。EMIS解釋評估、計劃和恢復。",
+      "需要口腔手術？探索智齒提取、阻生牙治療和診斷。Emis Dental解釋評估、計劃和恢復。",
 
     section1: {
       title: "口腔顎面外科",
       subtitle:
         "某些牙科疾病可能需要手術治療。",
       intro:
-        "智齒提取、阻生牙去除和其他口腔外科手術始於了解是否真正需要手術。EMIS將指導您完成評估、診斷和恢復。",
+        "智齒提取、阻生牙去除和其他口腔外科手術始於了解是否真正需要手術。Emis Dental將指導您完成評估、診斷和恢復。",
       primaryCta: "發送您的X光片",
       secondaryCta: "討論您的情況",
     },
@@ -509,7 +509,7 @@ export const oralSurgeryContent = {
       intro:
         "許多海外越南患者和國際患者在前往越南前會發送X光片。",
       description:
-        "這可以幫助EMIS團隊審查情況、討論後續步驟並在旅行前支持治療計劃。",
+        "這可以幫助Emis Dental團隊審查情況、討論後續步驟並在旅行前支持治療計劃。",
       additional:
         "對於許多患者來說，在越南進行治療使得解決在家可能感到困難或昂貴的口腔外科需求成為可能。",
       cta: "了解更多關於國際患者的信息",
@@ -519,7 +519,7 @@ export const oralSurgeryContent = {
       eyebrow: "真實案例",
       title: "真實患者案例",
       intro:
-        "探索在EMIS接受治療的智齒、感染、囊腫和其他口腔問題患者的情況。",
+        "探索在Emis Dental接受治療的智齒、感染、囊腫和其他口腔問題患者的情況。",
       cta: "查看口腔手術案例",
     },
 

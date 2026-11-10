@@ -1,8 +1,8 @@
 export const implantContent = {
   english: {
-    metaTitle: "Implant Solutions | EMIS Dental",
+    metaTitle: "Implant Solutions | Emis Dental",
     metaDescription:
-      "Understand dental implants: from assessment to full restoration. Explore solutions suitable for your tooth loss at EMIS Dental.",
+      "Understand dental implants: from assessment to full restoration. Explore solutions suitable for your tooth loss at Emis Dental.",
 
     labels: {
       section1: 'IMPLANT SOLUTIONS',
@@ -89,8 +89,8 @@ export const implantContent = {
     },
 
     section6: {
-      title: "Implant Systems Available At EMIS",
-      intro: "EMIS works with several implant systems, including:",
+      title: "Implant Systems Available At Emis Dental",
+      intro: "Emis Dental works with several implant systems, including:",
       systems: ["Straumann", "Hiossen", "Osstem", "ETK", "Biotem"],
       note: "Different implant systems may be appropriate for different clinical situations.\n\nYour treatment recommendation will be based on your oral condition, bone support, restoration needs, and long-term treatment goals, rather than brand preference alone.",
     },
@@ -123,9 +123,9 @@ export const implantContent = {
   },
 
   vietnamese: {
-    metaTitle: "Giải Pháp Trồng Răng Implant | EMIS Dental",
+    metaTitle: "Giải Pháp Trồng Răng Implant | Emis Dental",
     metaDescription:
-      "Hiểu về cấy ghép implant: từ đánh giá tình trạng đến phục hồi toàn diện. Khám phá các giải pháp phù hợp cho mất răng của bạn tại EMIS Dental.",
+      "Hiểu về cấy ghép implant: từ đánh giá tình trạng đến phục hồi toàn diện. Khám phá các giải pháp phù hợp cho mất răng của bạn tại Emis Dental.",
 
     labels: {
       section1: 'GIẢI PHÁP IMPLANT',
@@ -219,8 +219,8 @@ export const implantContent = {
     },
 
     section6: {
-      title: "Các Dòng Implant Tại EMIS",
-      intro: "EMIS sử dụng nhiều dòng Implant khác nhau, bao gồm:",
+      title: "Các Dòng Implant Tại Emis Dental",
+      intro: "Emis Dental sử dụng nhiều dòng Implant khác nhau, bao gồm:",
       systems: ["Straumann", "Hiossen", "Osstem", "ETK", "Biotem"],
       note: "Tùy từng nhu cầu và tình trạng xương hàm, bác sĩ có thể cân nhắc những dòng Implant khác nhau.\n\nViệc lựa chọn không chỉ dựa trên thương hiệu mà còn phụ thuộc vào kế hoạch điều trị tổng thể.",
     },
@@ -238,14 +238,14 @@ export const implantContent = {
     section8: {
       title: "Những Ca Điều Trị Thực Tế",
       intro:
-        "Tìm hiểu hành trình của những bệnh nhân đã lựa chọn trồng răng Implant tại EMIS.",
+        "Tìm hiểu hành trình của những bệnh nhân đã lựa chọn trồng răng Implant tại Emis Dental.",
       cta: "Xem Các Ca Implant Thực Tế",
     },
 
     section9: {
       title: "Chưa Chắc Implant Có Phù Hợp Với Bạn?",
       intro:
-        "Nếu đã có X-ray hoặc CBCT, bạn có thể gửi trước để đội ngũ EMIS xem xét và trao đổi sơ bộ về hướng điều trị.",
+        "Nếu đã có X-ray hoặc CBCT, bạn có thể gửi trước để đội ngũ Emis Dental xem xét và trao đổi sơ bộ về hướng điều trị.",
       primaryCta: "Gửi X-ray Của Bạn",
       secondaryCta: "Trao Đổi Về Trường Hợp Của Bạn",
       note: "Kế hoạch điều trị cuối cùng cần được xác định sau khi thăm khám trực tiếp và thực hiện đầy đủ các chẩn đoán cần thiết.",
@@ -253,9 +253,9 @@ export const implantContent = {
   },
 
   french: {
-    metaTitle: "Solutions Implantaires | EMIS Dental",
+    metaTitle: "Solutions Implantaires | Emis Dental",
     metaDescription:
-      "Comprenez le traitement implantaire: de l'évaluation à la restauration complète. Découvrez les solutions adaptées à votre perte dentaire chez EMIS Dental.",
+      "Comprenez le traitement implantaire: de l'évaluation à la restauration complète. Découvrez les solutions adaptées à votre perte dentaire chez Emis Dental.",
     labels: {
       section1: 'SOLUTIONS IMPLANTAIRES',
       section2: 'ÉLIGIBILITÉ À L\'IMPLANT',
@@ -316,8 +316,8 @@ export const implantContent = {
       note: "Le plan le plus adapté dépend de votre situation individuelle.",
     },
     section6: {
-      title: "Systèmes implantaires disponibles chez EMIS",
-      intro: "EMIS travaille avec plusieurs systèmes implantaires, dont:",
+      title: "Systèmes implantaires disponibles chez Emis Dental",
+      intro: "Emis Dental travaille avec plusieurs systèmes implantaires, dont:",
       systems: ["Straumann", "Hiossen", "Osstem", "ETK", "Biotem"],
       note: "Des systèmes différents peuvent convenir à des situations cliniques différentes.\n\nLa recommandation dépend de votre état oral, du support osseux, des besoins prothétiques et des objectifs à long terme, et non du seul critère de marque.",
     },
@@ -347,9 +347,9 @@ export const implantContent = {
   },
 
   simplified: {
-    metaTitle: "种植解决方案 | EMIS Dental",
+    metaTitle: "种植解决方案 | Emis Dental",
     metaDescription:
-      "了解牙科种植：从评估到完整修复。在 EMIS Dental 探索适合您缺牙情况的方案。",
+      "了解牙科种植：从评估到完整修复。在 Emis Dental 探索适合您缺牙情况的方案。",
     labels: {
       section1: '种植方案',
       section2: '种植适合您吗',
@@ -410,8 +410,8 @@ export const implantContent = {
       note: "最合适方案需根据个人具体情况确定。",
     },
     section6: {
-      title: "EMIS 可提供的种植系统",
-      intro: "EMIS 使用多种种植系统，包括：",
+      title: "Emis Dental 可提供的种植系统",
+      intro: "Emis Dental 使用多种种植系统，包括：",
       systems: ["Straumann", "Hiossen", "Osstem", "ETK", "Biotem"],
       note: "不同系统适用于不同临床情况。\n\n最终建议将依据口腔条件、骨支持、修复需求与长期目标，而非仅按品牌选择。",
     },
@@ -441,9 +441,9 @@ export const implantContent = {
   },
 
   traditional: {
-    metaTitle: "植牙解決方案 | EMIS Dental",
+    metaTitle: "植牙解決方案 | Emis Dental",
     metaDescription:
-      "了解牙科植牙：從評估到完整重建。在 EMIS Dental 探索適合您缺牙狀況的方案。",
+      "了解牙科植牙：從評估到完整重建。在 Emis Dental 探索適合您缺牙狀況的方案。",
     labels: {
       section1: '植牙方案',
       section2: '植牙適合您嗎',
@@ -504,8 +504,8 @@ export const implantContent = {
       note: "最適合的方案需依個人條件決定。",
     },
     section6: {
-      title: "EMIS 可提供的植體系統",
-      intro: "EMIS 使用多種植體系統，包括：",
+      title: "Emis Dental 可提供的植體系統",
+      intro: "Emis Dental 使用多種植體系統，包括：",
       systems: ["Straumann", "Hiossen", "Osstem", "ETK", "Biotem"],
       note: "不同系統適用於不同臨床條件。\n\n最終建議將依口腔條件、骨支持、修復需求與長期目標決定，而非僅以品牌為唯一依據。",
     },
@@ -535,9 +535,9 @@ export const implantContent = {
   },
 
   korean: {
-    metaTitle: "임플란트 솔루션 | EMIS Dental",
+    metaTitle: "임플란트 솔루션 | Emis Dental",
     metaDescription:
-      "임플란트 치료를 이해하세요: 평가부터 최종 수복까지. EMIS Dental에서 상태에 맞는 치료 옵션을 확인해보세요.",
+      "임플란트 치료를 이해하세요: 평가부터 최종 수복까지. Emis Dental에서 상태에 맞는 치료 옵션을 확인해보세요.",
     labels: {
       section1: '임플란트 솔루션',
       section2: '적합성 확인',
@@ -598,8 +598,8 @@ export const implantContent = {
       note: "최적의 계획은 개인별 상태에 따라 달라집니다.",
     },
     section6: {
-      title: "EMIS에서 사용 가능한 임플란트 시스템",
-      intro: "EMIS는 다음과 같은 임플란트 시스템을 사용합니다:",
+      title: "Emis Dental에서 사용 가능한 임플란트 시스템",
+      intro: "Emis Dental은 다음과 같은 임플란트 시스템을 사용합니다:",
       systems: ["Straumann", "Hiossen", "Osstem", "ETK", "Biotem"],
       note: "임상 상황에 따라 적합한 시스템이 달라질 수 있습니다.\n\n최종 권고는 브랜드만이 아니라 구강 상태, 골 지지, 보철 요구, 장기 목표를 바탕으로 결정됩니다.",
     },

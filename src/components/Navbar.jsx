@@ -112,13 +112,12 @@ export default function Navbar() {
         <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-4 sm:px-6">
           <Link to="/" className="group flex items-center gap-3">
             <div className="h-12 w-12 overflow-hidden rounded-full border-2 border-[#d4af37]/60 transition-transform duration-200 group-hover:scale-[1.02]">
-              <img src={logo} alt="Nha Khoa Emis" className="h-full w-full object-cover" />
+              <img src={logo} alt="Emis Dental" className="h-full w-full object-cover" />
             </div>
             <span
               className="text-lg font-extrabold leading-none tracking-[0.02em] text-[#2a3439] sm:text-xl"
             >
-              <span className="text-[#2a3439]">EMIS</span>{' '}
-              <span className="text-[#d4af37]">DENTAL</span>
+              <span className="text-[#2a3439]">Emis Dental</span>
             </span>
           </Link>
 

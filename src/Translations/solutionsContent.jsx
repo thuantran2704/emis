@@ -1,14 +1,14 @@
 ﻿export const solutionsContent = {
   english: {
-    metaTitle: 'Treatment Solutions | EMIS Dental',
+    metaTitle: 'Treatment Solutions | Emis Dental',
     metaDescription:
-      'Explore treatment pathways at EMIS based on your situation, goals, and assessment factors, including implant, fixed teeth, full-mouth, surgery, restorative, and aesthetic options.',
+      'Explore treatment pathways at Emis Dental based on your situation, goals, and assessment factors, including implant, fixed teeth, full-mouth, surgery, restorative, and aesthetic options.',
 
     hero: {
       eyebrow: 'Solutions',
       title: 'Find The Treatment Pathway That Fits Your Situation',
       intro:
-        'Many patients are unsure where to begin. You may be missing teeth, struggling with dentures, facing several dental problems, or simply wondering which option makes sense for you. At EMIS, the first step is not choosing a treatment. It is understanding your situation clearly.',
+        'Many patients are unsure where to begin. You may be missing teeth, struggling with dentures, facing several dental problems, or simply wondering which option makes sense for you. At Emis Dental, the first step is not choosing a treatment. It is understanding your situation clearly.',
       highlights: [
         'Implant Solutions',
         'Fixed Teeth Rehabilitation',
@@ -24,7 +24,7 @@
       eyebrow: 'Which Situation Sounds Most Familiar?',
       title: 'Start With What You Are Experiencing',
       intro:
-        'Patients come to EMIS with different concerns. Rather than starting with treatment names, it may be easier to begin with what you are experiencing now.',
+        'Patients come to Emis Dental with different concerns. Rather than starting with treatment names, it may be easier to begin with what you are experiencing now.',
       cards: [
         {
           title: 'Missing One Tooth',
@@ -59,9 +59,9 @@
 
     pathways: {
       eyebrow: 'Explore Treatment Pathways',
-      title: 'Treatment Pathways At EMIS',
+      title: 'Treatment Pathways At Emis Dental',
       intro:
-        'The right treatment depends on your condition, goals, and long-term needs. These are some of the treatment pathways commonly explored at EMIS.',
+        'The right treatment depends on your condition, goals, and long-term needs. These are some of the treatment pathways commonly explored at Emis Dental.',
       cards: [
         {
           title: 'Implant Solutions',
@@ -136,7 +136,7 @@
       eyebrow: 'The Team Behind Your Care',
       title: 'Different Expertise. One Shared Goal.',
       intro:
-        'Depending on your case, treatment may involve diagnosis, planning, surgery, restoration, and follow-up care. The EMIS team works together to support each stage clearly and carefully.',
+        'Depending on your case, treatment may involve diagnosis, planning, surgery, restoration, and follow-up care. The Emis Dental team works together to support each stage clearly and carefully.',
       doctors: [
         {
           name: 'Dr. Tran Minh Tu',
@@ -151,7 +151,7 @@
       eyebrow: 'For Overseas Patients',
       title: 'Planning Treatment From Overseas',
       intro:
-        'Many overseas Vietnamese and international patients begin the process before traveling to Vietnam. EMIS can help you review your situation, discuss possible timelines, and plan the next steps more clearly.',
+        'Many overseas Vietnamese and international patients begin the process before traveling to Vietnam. Emis Dental can help you review your situation, discuss possible timelines, and plan the next steps more clearly.',
       timeline: [
         {
           step: 'Before You Travel',
@@ -163,7 +163,7 @@
         },
         {
           step: 'After Returning Home',
-          text: 'Stay connected with the EMIS team during recovery and follow-up.',
+          text: 'Stay connected with the Emis Dental team during recovery and follow-up.',
         },
       ],
       cta: 'Explore International Patient Support',
@@ -184,15 +184,15 @@
   },
 
   vietnamese: {
-    metaTitle: 'Giải Pháp Điều Trị | EMIS Dental',
+    metaTitle: 'Giải Pháp Điều Trị | Emis Dental',
     metaDescription:
-      'Tìm hướng điều trị phù hợp theo tình trạng và mục tiêu của bạn tại EMIS, từ implant, răng cố định, phục hồi toàn hàm, tiểu phẫu, phục hồi chức năng đến thẩm mỹ nụ cười.',
+      'Tìm hướng điều trị phù hợp theo tình trạng và mục tiêu của bạn tại Emis Dental, từ implant, răng cố định, phục hồi toàn hàm, tiểu phẫu, phục hồi chức năng đến thẩm mỹ nụ cười.',
 
     hero: {
       eyebrow: 'Giải Pháp Điều Trị',
       title: 'Tìm Hướng Điều Trị Phù Hợp Với Bạn',
       intro:
-        'Khi mất răng, dùng hàm giả lâu năm hoặc gặp nhiều vấn đề răng miệng cùng lúc, nhiều bệnh nhân thường không biết nên bắt đầu từ đâu. Tại EMIS, bước đầu tiên không phải là chọn ngay một phương pháp điều trị, mà là hiểu rõ tình trạng hiện tại của bạn.',
+        'Khi mất răng, dùng hàm giả lâu năm hoặc gặp nhiều vấn đề răng miệng cùng lúc, nhiều bệnh nhân thường không biết nên bắt đầu từ đâu. Tại Emis Dental, bước đầu tiên không phải là chọn ngay một phương pháp điều trị, mà là hiểu rõ tình trạng hiện tại của bạn.',
       highlights: [
         'Giải pháp Implant',
         'Răng Cố Định Toàn Hàm',
@@ -242,7 +242,7 @@
     },
 
     pathways: {
-      eyebrow: 'Các Hướng Điều Trị Tại EMIS',
+      eyebrow: 'Các Hướng Điều Trị Tại Emis Dental',
       title: 'Khám Phá Hướng Điều Trị Phù Hợp',
       intro:
         'Không có một hướng điều trị phù hợp cho tất cả mọi người. Mỗi trường hợp cần được đánh giá dựa trên tình trạng, mong muốn, thời gian và mục tiêu lâu dài.',
@@ -290,7 +290,7 @@
       eyebrow: 'Hướng Điều Trị Được Xác Định Như Thế Nào?',
       title: 'Điều Trị Bắt Đầu Từ Việc Đánh Giá',
       intro:
-        'Không phải bệnh nhân nào cũng cần cùng một phương pháp điều trị. Hướng điều trị phù hợp không chỉ phụ thuộc vào số răng đã mất, mà còn liên quan đến cấu trúc xương, khả năng ăn nhai, thẩm mỹ và mục tiêu lâu dài. Vì vậy, EMIS luôn bắt đầu bằng việc đánh giá kỹ tình trạng hiện tại.',
+        'Không phải bệnh nhân nào cũng cần cùng một phương pháp điều trị. Hướng điều trị phù hợp không chỉ phụ thuộc vào số răng đã mất, mà còn liên quan đến cấu trúc xương, khả năng ăn nhai, thẩm mỹ và mục tiêu lâu dài. Vì vậy, Emis Dental luôn bắt đầu bằng việc đánh giá kỹ tình trạng hiện tại.',
       factorsTitle: 'Những Yếu Tố Thường Được Đánh Giá',
       factors: [
         {
@@ -320,7 +320,7 @@
       eyebrow: 'Đội Ngũ Đồng Hành Cùng Bạn',
       title: 'Chăm Sóc Được Lập Kế Hoạch Cẩn Thận',
       intro:
-        'Với Implant, phục hồi răng cố định hoặc phục hồi toàn hàm, quá trình điều trị thường cần phối hợp nhiều bước. Đội ngũ EMIS cùng hỗ trợ chẩn đoán, lập kế hoạch, điều trị và theo dõi theo từng trường hợp.',
+        'Với Implant, phục hồi răng cố định hoặc phục hồi toàn hàm, quá trình điều trị thường cần phối hợp nhiều bước. Đội ngũ Emis Dental cùng hỗ trợ chẩn đoán, lập kế hoạch, điều trị và theo dõi theo từng trường hợp.',
       doctors: [
         {
           name: 'BS. CKI Trần Minh Tú',
@@ -347,7 +347,7 @@
         },
         {
           step: 'Sau Khi Trở Về Nước',
-          text: 'Tiếp tục kết nối với EMIS trong quá trình hồi phục và theo dõi.',
+          text: 'Tiếp tục kết nối với Emis Dental trong quá trình hồi phục và theo dõi.',
         },
       ],
       cta: 'Tìm Hiểu Về Bệnh Nhân Quốc Tế',
@@ -357,26 +357,26 @@
     finalCta: {
       title: 'Chưa Biết Hướng Điều Trị Nào Phù Hợp?',
       intro:
-        'Bạn không cần quyết định trước khi liên hệ. Nếu đã có X-ray hoặc CBCT, EMIS có thể hỗ trợ đánh giá sơ bộ và giúp bạn hiểu rõ hơn những lựa chọn phù hợp với bạn.',
+        'Bạn không cần quyết định trước khi liên hệ. Nếu đã có X-ray hoặc CBCT, Emis Dental có thể hỗ trợ đánh giá sơ bộ và giúp bạn hiểu rõ hơn những lựa chọn phù hợp với bạn.',
       processTitle: 'Những Bước Tiếp Theo',
       steps: ['Gửi X-ray Hoặc CBCT', 'Nhận Đánh Giá Ban Đầu', 'Trao Đổi Về Trường Hợp Của Bạn'],
       primaryCta: 'Gửi X-ray Của Bạn',
       secondaryCta: 'Trao Đổi Về Trường Hợp Của Bạn',
       note:
-        'Đánh giá sơ bộ giúp EMIS hiểu rõ hơn về trường hợp của bạn. Kế hoạch điều trị cuối cùng cần được xác định sau khi thăm khám trực tiếp và thực hiện đầy đủ chẩn đoán cần thiết.',
+        'Đánh giá sơ bộ giúp Emis Dental hiểu rõ hơn về trường hợp của bạn. Kế hoạch điều trị cuối cùng cần được xác định sau khi thăm khám trực tiếp và thực hiện đầy đủ chẩn đoán cần thiết.',
     },
   },
 
   french: {
-    metaTitle: 'Solutions de traitement | EMIS Dental',
+    metaTitle: 'Solutions de traitement | Emis Dental',
     metaDescription:
-      'Explorez les parcours de traitement chez EMIS selon votre situation, vos objectifs et les facteurs cliniques, incluant implant, dents fixes, rehabilitation complete, chirurgie orale, restauration et esthetique.',
+      'Explorez les parcours de traitement chez Emis Dental selon votre situation, vos objectifs et les facteurs cliniques, incluant implant, dents fixes, rehabilitation complete, chirurgie orale, restauration et esthetique.',
 
     hero: {
       eyebrow: 'Solutions',
       title: 'Trouvez Le Parcours De Traitement Adapte A Votre Situation',
       intro:
-        "De nombreux patients ne savent pas par ou commencer. Il se peut que vous ayez des dents manquantes, des protheses amovibles inconfortables, plusieurs problemes dentaires, ou simplement des doutes sur la meilleure option. Chez EMIS, la premiere etape n'est pas de choisir un traitement, mais de comprendre clairement votre situation.",
+        "De nombreux patients ne savent pas par ou commencer. Il se peut que vous ayez des dents manquantes, des protheses amovibles inconfortables, plusieurs problemes dentaires, ou simplement des doutes sur la meilleure option. Chez Emis Dental, la premiere etape n'est pas de choisir un traitement, mais de comprendre clairement votre situation.",
       highlights: [
         "Solutions implantaires",
         "Rehabilitation dentaire fixe",
@@ -392,7 +392,7 @@
       eyebrow: 'Quelle Situation Vous Correspond Le Mieux ?',
       title: 'Commencez Par Ce Que Vous Ressentez',
       intro:
-        "Les patients viennent chez EMIS avec des besoins differents. Au lieu de commencer par le nom des traitements, il est souvent plus simple de partir de votre situation actuelle.",
+        "Les patients viennent chez Emis Dental avec des besoins differents. Au lieu de commencer par le nom des traitements, il est souvent plus simple de partir de votre situation actuelle.",
       cards: [
         {
           title: 'Une Dent Manquante',
@@ -427,9 +427,9 @@
 
     pathways: {
       eyebrow: 'Explorer Les Parcours De Traitement',
-      title: 'Parcours De Traitement Chez EMIS',
+      title: 'Parcours De Traitement Chez Emis Dental',
       intro:
-        'Le bon traitement depend de votre etat clinique, de vos objectifs et de vos besoins a long terme. Voici les parcours le plus souvent explores chez EMIS.',
+        'Le bon traitement depend de votre etat clinique, de vos objectifs et de vos besoins a long terme. Voici les parcours le plus souvent explores chez Emis Dental.',
       cards: [
         {
           title: 'Solutions Implantaires',
@@ -504,7 +504,7 @@
       eyebrow: 'L Equipe Derriere Votre Prise En Charge',
       title: 'Des Expertises Differentes, Un Objectif Commun',
       intro:
-        'Selon votre cas, le traitement peut inclure diagnostic, planification, chirurgie, restauration et suivi. L equipe EMIS coordonne chaque etape de facon claire et rigoureuse.',
+        'Selon votre cas, le traitement peut inclure diagnostic, planification, chirurgie, restauration et suivi. L equipe Emis Dental coordonne chaque etape de facon claire et rigoureuse.',
       doctors: [
         {
           name: 'Dr Tran Minh Tu',
@@ -519,7 +519,7 @@
       eyebrow: 'Pour Les Patients Internationaux',
       title: 'Planifier Votre Traitement Depuis L Etranger',
       intro:
-        'De nombreux Vietnamiens d outre-mer et patients internationaux commencent avant leur voyage au Vietnam. EMIS peut vous aider a evaluer votre situation, discuter des delais et planifier les etapes suivantes plus clairement.',
+        'De nombreux Vietnamiens d outre-mer et patients internationaux commencent avant leur voyage au Vietnam. Emis Dental peut vous aider a evaluer votre situation, discuter des delais et planifier les etapes suivantes plus clairement.',
       timeline: [
         {
           step: 'Avant Le Voyage',
@@ -531,7 +531,7 @@
         },
         {
           step: 'Apres Le Retour',
-          text: 'Restez en lien avec l equipe EMIS pendant la recuperation et le suivi.',
+          text: 'Restez en lien avec l equipe Emis Dental pendant la recuperation et le suivi.',
         },
       ],
       cta: 'Explorer L Accompagnement Des Patients Internationaux',
@@ -552,15 +552,15 @@
   },
 
   korean: {
-    metaTitle: '치료 솔루션 | EMIS Dental',
+    metaTitle: '치료 솔루션 | Emis Dental',
     metaDescription:
-      '임플란트, 고정성 치아 재건, 전악 재건, 구강외과, 수복 및 심미 치료를 포함해 환자 상태와 목표에 맞는 치료 경로를 EMIS에서 확인하세요.',
+      '임플란트, 고정성 치아 재건, 전악 재건, 구강외과, 수복 및 심미 치료를 포함해 환자 상태와 목표에 맞는 치료 경로를 Emis Dental에서 확인하세요.',
 
     hero: {
       eyebrow: '치료 솔루션',
       title: '현재 상황에 맞는 치료 경로를 찾으세요',
       intro:
-        '어디서부터 시작해야 할지 막막한 환자가 많습니다. 치아 상실, 틀니 불편, 복합적인 구강 문제 등 상황은 다양합니다. EMIS의 첫 단계는 치료를 고르는 것이 아니라 현재 상태를 정확히 이해하는 것입니다.',
+        '어디서부터 시작해야 할지 막막한 환자가 많습니다. 치아 상실, 틀니 불편, 복합적인 구강 문제 등 상황은 다양합니다. Emis Dental의 첫 단계는 치료를 고르는 것이 아니라 현재 상태를 정확히 이해하는 것입니다.',
       highlights: ['임플란트 솔루션', '고정성 치아 재건', '전악 재건', '구강외과', '수복 및 심미 치과'],
       primaryCta: '엑스레이 보내기',
       secondaryCta: '내 상태 상담하기',
@@ -570,7 +570,7 @@
       eyebrow: '어떤 상황이 가장 가깝나요?',
       title: '지금 겪는 문제에서 시작하세요',
       intro:
-        'EMIS를 찾는 환자의 고민은 모두 다릅니다. 치료명부터 시작하기보다 현재 겪는 문제부터 정리하는 것이 더 쉽습니다.',
+        'Emis Dental를 찾는 환자의 고민은 모두 다릅니다. 치료명부터 시작하기보다 현재 겪는 문제부터 정리하는 것이 더 쉽습니다.',
       cards: [
         {
           title: '치아 한 개 상실',
@@ -605,9 +605,9 @@
 
     pathways: {
       eyebrow: '치료 경로 살펴보기',
-      title: 'EMIS 치료 경로',
+      title: 'Emis Dental 치료 경로',
       intro:
-        '적절한 치료는 현재 상태, 목표, 장기적 필요에 따라 달라집니다. 아래는 EMIS에서 자주 검토하는 치료 경로입니다.',
+        '적절한 치료는 현재 상태, 목표, 장기적 필요에 따라 달라집니다. 아래는 Emis Dental에서 자주 검토하는 치료 경로입니다.',
       cards: [
         {
           title: '임플란트 솔루션',
@@ -652,7 +652,7 @@
       eyebrow: '치료 결정은 어떻게 이루어지나요?',
       title: '치료는 평가에서 시작됩니다',
       intro:
-        '모든 환자에게 같은 치료가 필요한 것은 아닙니다. 적절한 계획은 구강 상태, 잔존 치아, 골 지지, 목표, 장기 기대를 함께 고려해야 합니다. 그래서 EMIS는 옵션 논의 전에 현재 상태를 먼저 파악합니다.',
+        '모든 환자에게 같은 치료가 필요한 것은 아닙니다. 적절한 계획은 구강 상태, 잔존 치아, 골 지지, 목표, 장기 기대를 함께 고려해야 합니다. 그래서 Emis Dental은 옵션 논의 전에 현재 상태를 먼저 파악합니다.',
       factorsTitle: '주요 평가 항목',
       factors: [
         {
@@ -682,7 +682,7 @@
       eyebrow: '진료를 함께하는 팀',
       title: '다른 전문성, 하나의 목표',
       intro:
-        '환자 상태에 따라 진단, 계획, 수술, 수복, 추적 관리가 함께 진행될 수 있습니다. EMIS 팀은 각 단계를 명확하고 신중하게 협업합니다.',
+        '환자 상태에 따라 진단, 계획, 수술, 수복, 추적 관리가 함께 진행될 수 있습니다. Emis Dental 팀은 각 단계를 명확하고 신중하게 협업합니다.',
       doctors: [
         {
           name: 'Dr. Tran Minh Tu',
@@ -697,7 +697,7 @@
       eyebrow: '해외 환자 안내',
       title: '해외에서도 치료 준비를 시작할 수 있습니다',
       intro:
-        '많은 해외 거주 환자와 외국인 환자가 베트남 방문 전에 과정을 시작합니다. EMIS는 상태 검토, 일정 협의, 다음 단계 계획을 명확하게 도와드립니다.',
+        '많은 해외 거주 환자와 외국인 환자가 베트남 방문 전에 과정을 시작합니다. Emis Dental은 상태 검토, 일정 협의, 다음 단계 계획을 명확하게 도와드립니다.',
       timeline: [
         {
           step: '방문 전',
@@ -709,7 +709,7 @@
         },
         {
           step: '귀국 후',
-          text: '회복 및 추적 관리 동안 EMIS 팀과 지속적으로 연결됩니다.',
+          text: '회복 및 추적 관리 동안 Emis Dental 팀과 지속적으로 연결됩니다.',
         },
       ],
       cta: '해외 환자 지원 보기',
@@ -719,7 +719,7 @@
     finalCta: {
       title: '어떤 옵션이 맞는지 아직 모르시나요?',
       intro:
-        '치료 결정을 먼저 내릴 필요는 없습니다. 엑스레이나 CBCT가 있다면, EMIS 팀이 초기 검토를 통해 논의할 가치가 있는 옵션을 안내해 드립니다.',
+        '치료 결정을 먼저 내릴 필요는 없습니다. 엑스레이나 CBCT가 있다면, Emis Dental 팀이 초기 검토를 통해 논의할 가치가 있는 옵션을 안내해 드립니다.',
       processTitle: '다음 단계는 무엇인가요?',
       steps: ['엑스레이 보내기', '초기 평가 받기', '내 상태 상담하기'],
       primaryCta: '엑스레이 보내기',
@@ -730,15 +730,15 @@
   },
 
   simplified: {
-    metaTitle: '治疗方案 | EMIS Dental',
+    metaTitle: '治疗方案 | Emis Dental',
     metaDescription:
-      '根据您的口腔情况与目标，探索 EMIS 的治疗路径，包括种植、固定牙修复、全口重建、口腔外科、修复与美学治疗。',
+      '根据您的口腔情况与目标，探索 Emis Dental 的治疗路径，包括种植、固定牙修复、全口重建、口腔外科、修复与美学治疗。',
 
     hero: {
       eyebrow: '治疗方案',
       title: '找到适合您情况的治疗路径',
       intro:
-        '许多患者不知道该从哪里开始。您可能有缺牙、活动义齿不适、多个口腔问题，或只是想了解哪种方案更合适。在 EMIS，第一步不是立刻选治疗，而是先清楚了解您的当前情况。',
+        '许多患者不知道该从哪里开始。您可能有缺牙、活动义齿不适、多个口腔问题，或只是想了解哪种方案更合适。在 Emis Dental，第一步不是立刻选治疗，而是先清楚了解您的当前情况。',
       highlights: ['种植方案', '固定牙修复', '全口重建', '口腔外科', '修复与美学牙科'],
       primaryCta: '发送您的 X 光片',
       secondaryCta: '咨询您的情况',
@@ -748,7 +748,7 @@
       eyebrow: '哪种情况最接近您？',
       title: '从您正在经历的问题开始',
       intro:
-        '来到 EMIS 的患者关注点各不相同。与其先从治疗名称开始，不如先从您目前的实际问题开始。',
+        '来到 Emis Dental 的患者关注点各不相同。与其先从治疗名称开始，不如先从您目前的实际问题开始。',
       cards: [
         {
           title: '缺失一颗牙',
@@ -783,9 +783,9 @@
 
     pathways: {
       eyebrow: '探索治疗路径',
-      title: 'EMIS 的治疗路径',
+      title: 'Emis Dental 的治疗路径',
       intro:
-        '合适的治疗取决于您的口腔状况、目标与长期需求。以下是 EMIS 常见的治疗路径。',
+        '合适的治疗取决于您的口腔状况、目标与长期需求。以下是 Emis Dental 常见的治疗路径。',
       cards: [
         {
           title: '种植方案',
@@ -860,7 +860,7 @@
       eyebrow: '您的治疗团队',
       title: '不同专长, 同一目标',
       intro:
-        '根据个案需要，治疗可能涉及诊断、计划、手术、修复与复诊跟进。EMIS 团队会在每个阶段协同配合。',
+        '根据个案需要，治疗可能涉及诊断、计划、手术、修复与复诊跟进。Emis Dental 团队会在每个阶段协同配合。',
       doctors: [
         {
           name: 'Dr. Tran Minh Tu',
@@ -875,7 +875,7 @@
       eyebrow: '海外患者',
       title: '在海外也可开始治疗规划',
       intro:
-        '许多海外越南人和国际患者会在赴越前先启动流程。EMIS 可协助您先行评估、讨论时间安排并明确下一步。',
+        '许多海外越南人和国际患者会在赴越前先启动流程。Emis Dental 可协助您先行评估、讨论时间安排并明确下一步。',
       timeline: [
         {
           step: '出行前',
@@ -887,7 +887,7 @@
         },
         {
           step: '回国后',
-          text: '在恢复与随访阶段继续与 EMIS 团队保持联系。',
+          text: '在恢复与随访阶段继续与 Emis Dental 团队保持联系。',
         },
       ],
       cta: '了解国际患者支持',
@@ -908,15 +908,15 @@
   },
 
   traditional: {
-    metaTitle: '治療方案 | EMIS Dental',
+    metaTitle: '治療方案 | Emis Dental',
     metaDescription:
-      '依據您的口腔狀況與目標，探索 EMIS 的治療路徑，包括植牙、固定牙重建、全口重建、口腔外科、修復與美學治療。',
+      '依據您的口腔狀況與目標，探索 Emis Dental 的治療路徑，包括植牙、固定牙重建、全口重建、口腔外科、修復與美學治療。',
 
     hero: {
       eyebrow: '治療方案',
       title: '找到適合您狀況的治療路徑',
       intro:
-        '許多患者不知道該從哪裡開始。您可能有缺牙、活動假牙不適、多項口腔問題，或只是想了解哪種方案更合適。在 EMIS，第一步不是立刻選治療，而是先清楚了解您的目前狀況。',
+        '許多患者不知道該從哪裡開始。您可能有缺牙、活動假牙不適、多項口腔問題，或只是想了解哪種方案更合適。在 Emis Dental，第一步不是立刻選治療，而是先清楚了解您的目前狀況。',
       highlights: ['植牙方案', '固定牙重建', '全口重建', '口腔外科', '修復與美學牙科'],
       primaryCta: '傳送您的 X 光片',
       secondaryCta: '諮詢您的狀況',
@@ -926,7 +926,7 @@
       eyebrow: '哪種情況最像您？',
       title: '從您正在面對的問題開始',
       intro:
-        '來到 EMIS 的患者關注點各不相同。與其先從治療名稱開始，不如先從您目前的實際情況開始。',
+        '來到 Emis Dental 的患者關注點各不相同。與其先從治療名稱開始，不如先從您目前的實際情況開始。',
       cards: [
         {
           title: '缺失一顆牙',
@@ -961,9 +961,9 @@
 
     pathways: {
       eyebrow: '探索治療路徑',
-      title: 'EMIS 的治療路徑',
+      title: 'Emis Dental 的治療路徑',
       intro:
-        '合適的治療取決於您的口腔狀況、目標與長期需求。以下是 EMIS 常見的治療路徑。',
+        '合適的治療取決於您的口腔狀況、目標與長期需求。以下是 Emis Dental 常見的治療路徑。',
       cards: [
         {
           title: '植牙方案',
@@ -1038,7 +1038,7 @@
       eyebrow: '您的照護團隊',
       title: '不同專長, 同一目標',
       intro:
-        '依個案需求，治療可能包含診斷、規劃、手術、修復與追蹤照護。EMIS 團隊會在每個階段協作配合。',
+        '依個案需求，治療可能包含診斷、規劃、手術、修復與追蹤照護。Emis Dental 團隊會在每個階段協作配合。',
       doctors: [
         {
           name: 'Dr. Tran Minh Tu',
@@ -1053,7 +1053,7 @@
       eyebrow: '海外患者',
       title: '在海外也可開始治療規劃',
       intro:
-        '許多海外越南人與國際患者會在赴越前先啟動流程。EMIS 可協助您先行評估、討論時程並釐清下一步。',
+        '許多海外越南人與國際患者會在赴越前先啟動流程。Emis Dental 可協助您先行評估、討論時程並釐清下一步。',
       timeline: [
         {
           step: '出行前',
@@ -1065,7 +1065,7 @@
         },
         {
           step: '返國後',
-          text: '在恢復與追蹤期間持續與 EMIS 團隊保持聯繫。',
+          text: '在恢復與追蹤期間持續與 Emis Dental 團隊保持聯繫。',
         },
       ],
       cta: '了解國際患者支援',

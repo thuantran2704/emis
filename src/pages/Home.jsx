@@ -20,7 +20,6 @@ import longTermCare from '../pics/khach_cuoi_chup_hinh_voi_bs.jpg';
 import internationalSupport from '../pics/Phong-cho-waiting-room-Emis.jpg';
 import ContactForm from '../components/ContactForm';
 import ImplantPlannerBanner from '../components/implants_banner';
-import { DOCTORS, getDoctorTranslation } from '../data/doctors';
 import serviceImplant from '../pics/implant-illustration.jpg';
 import chatPreTrip from '../pics/chat-pic-timeline-discussion-pre-trip.jpeg';
 import chatMedHistory from '../pics/chat-pic-checking-med-history.jpeg';
@@ -67,13 +66,13 @@ export default function Home() {
       <section className="relative mt-[72px] min-h-[min(760px,calc(100svh-72px))] w-full overflow-hidden">
         <img
           src={heroBackgroundMobile}
-          alt="EMIS Dental surgical team during a procedure"
+          alt="Emis Dental surgical team during a procedure"
           fetchPriority="high"
           className="absolute inset-0 hidden h-full w-full object-cover object-center max-lg:portrait:block"
         />
         <img
           src={heroBackgroundLandscape}
-          alt="EMIS Dental doctor analyzing a dental implant"
+          alt="Emis Dental doctor analyzing a dental implant"
           fetchPriority="high"
           className="absolute inset-0 block h-full w-full object-cover object-center max-lg:portrait:hidden"
         />
@@ -151,7 +150,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2 — Trust: Why EMIS over everyone else */}
+      {/* 2 — Trust: Why Emis Dental over everyone else */}
       <Section tone="white">
         <div className="mx-auto max-w-7xl px-6">
           <div className="text-center">
@@ -181,58 +180,7 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* 3 — Credibility: Meet the doctors */}
-      <Section tone="cool">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="text-center">
-            <Text variant="eyebrow" className="mb-4">{page.doctors.label}</Text>
-            <Text variant="title" size="titleSm">{page.doctors.title}</Text>
-            <Text variant="intro" className="mt-4">{page.doctors.intro}</Text>
-          </div>
-
-          <div className="mt-10 grid gap-5 lg:grid-cols-[1.2fr_0.8fr]">
-            {DOCTORS.map((doctor) => {
-              const t = getDoctorTranslation(doctor, language);
-              const featured = doctor.featured;
-              return (
-              <Link
-                key={doctor.id}
-                to={doctor.slug}
-                className={`group grid gap-5 overflow-hidden rounded-3xl border p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg sm:items-center sm:p-6 ${featured ? 'border-[#c5af73] bg-[#193543] sm:grid-cols-[minmax(150px,220px)_1fr]' : 'border-[#dbe4ec] bg-white sm:grid-cols-[minmax(130px,165px)_1fr] hover:border-[#c5af73]'}`}
-              >
-                <div className="doctor-portrait-frame aspect-[4/5] overflow-hidden rounded-2xl">
-                  <img
-                    src={doctor.portrait}
-                    alt={t.name}
-                    loading="lazy"
-                    decoding="async"
-                    className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-[1.03]"
-                  />
-                </div>
-                <div className="min-w-0">
-                  {featured && <span className="mb-3 block h-1 w-10 rounded-full bg-[#d7bc7b]" aria-hidden="true" />}
-                  <h3 className={`text-xl font-semibold leading-snug ${featured ? 'text-white sm:text-2xl' : 'text-[#243943]'}`}>{t.name}</h3>
-                  {t.role && <p className={`mt-2 text-sm font-semibold ${featured ? 'text-[#ead19a]' : 'text-[#806019]'}`}>{t.role}</p>}
-                  {t.focus && <p className={`mt-3 text-sm leading-relaxed ${featured ? 'text-[#f3f0e9]' : 'text-[#46576a]'}`}>{t.focus}</p>}
-                  {t.summary && <p className={`mt-2 text-sm leading-relaxed ${featured ? 'text-[#d9e3e6]' : 'text-[#46576a]'}`}>{t.summary}</p>}
-                  {t.languages && <p className={`mt-3 text-xs leading-relaxed ${featured ? 'text-[#c5d4d8]' : 'text-[#52687b]'}`}>{t.languages}</p>}
-                  {t.cta && (
-                    <span className={`mt-5 inline-flex items-center gap-1 text-sm font-semibold transition group-hover:gap-2 ${featured ? 'text-[#ead19a]' : 'text-[#806019]'}`}>
-                      {t.cta}
-                      <svg className="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                      </svg>
-                    </span>
-                  )}
-                </div>
-              </Link>
-              );
-            })}
-          </div>
-        </div>
-      </Section>
-
-      {/* 4 — Empathy: Mirror the visitor's pain back at them */}
+      {/* 3 — Empathy: Mirror the visitor's pain back at them */}
       <Section tone="white">
         <div className="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-[1.1fr_1fr] md:items-stretch">
           <div className="hidden overflow-hidden rounded-3xl shadow-lg md:block">
@@ -407,7 +355,7 @@ export default function Home() {
           </div>
 
           <div className="hidden overflow-hidden rounded-3xl shadow-lg h-full lg:landscape:block">
-            <img src={internationalSupport} alt="Waiting and reception area at EMIS Dental" loading="lazy" decoding="async" className="h-full w-full object-cover object-center" />
+            <img src={internationalSupport} alt="Waiting and reception area at Emis Dental" loading="lazy" decoding="async" className="h-full w-full object-cover object-center" />
           </div>
         </div>
       </Section>

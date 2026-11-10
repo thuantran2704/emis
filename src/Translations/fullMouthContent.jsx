@@ -1,8 +1,8 @@
 export const fullMouthContent = {
   english: {
-    metaTitle: 'Full-Mouth Rehabilitation | Coordinated Dental Treatment | EMIS Dental',
+    metaTitle: 'Full-Mouth Rehabilitation | Coordinated Dental Treatment | Emis Dental',
     metaDescription:
-      'Full-mouth rehabilitation looks at your overall oral condition and builds a coordinated treatment plan around your long-term needs. Explore the approach, treatment options, and overseas patient support at EMIS.',
+      'Full-mouth rehabilitation looks at your overall oral condition and builds a coordinated treatment plan around your long-term needs. Explore the approach, treatment options, and overseas patient support at Emis Dental.',
 
     hero: {
       eyebrow: 'Full-Mouth Rehabilitation',
@@ -98,7 +98,7 @@ export const fullMouthContent = {
       eyebrow: 'Real Patient Cases',
       title: 'See How Patients Were Treated',
       intro:
-        'Explore how patients with complex oral health needs were assessed, planned, and treated at EMIS.',
+        'Explore how patients with complex oral health needs were assessed, planned, and treated at Emis Dental.',
       cta: 'View Full-Mouth Rehabilitation Cases',
       ctaPath: '/doctors',
     },
@@ -124,9 +124,9 @@ export const fullMouthContent = {
   },
 
   vietnamese: {
-    metaTitle: 'Phục Hồi Toàn Hàm | Kế Hoạch Điều Trị Phối Hợp | EMIS Dental',
+    metaTitle: 'Phục Hồi Toàn Hàm | Kế Hoạch Điều Trị Phối Hợp | Emis Dental',
     metaDescription:
-      'Phục hồi toàn hàm giúp bác sĩ nhìn tổng thể tình trạng răng miệng và xây dựng kế hoạch điều trị phối hợp theo nhu cầu lâu dài của bạn. Tìm hiểu phương pháp, các lựa chọn điều trị và hỗ trợ bệnh nhân quốc tế tại EMIS.',
+      'Phục hồi toàn hàm giúp bác sĩ nhìn tổng thể tình trạng răng miệng và xây dựng kế hoạch điều trị phối hợp theo nhu cầu lâu dài của bạn. Tìm hiểu phương pháp, các lựa chọn điều trị và hỗ trợ bệnh nhân quốc tế tại Emis Dental.',
 
     hero: {
       eyebrow: 'Phục Hồi Toàn Hàm',
@@ -209,7 +209,7 @@ export const fullMouthContent = {
       eyebrow: 'Dành Cho Việt Kiều & Bệnh Nhân Quốc Tế',
       title: 'Lên Kế Hoạch Điều Trị Từ Nước Ngoài',
       intro:
-        'Nhiều Việt kiều và bệnh nhân quốc tế bắt đầu bằng việc gửi X-ray trước khi về Việt Nam. Nhờ đó, đội ngũ EMIS có thể trao đổi trước về hướng điều trị và những điều cần chuẩn bị cho chuyến đi.',
+        'Nhiều Việt kiều và bệnh nhân quốc tế bắt đầu bằng việc gửi X-ray trước khi về Việt Nam. Nhờ đó, đội ngũ Emis Dental có thể trao đổi trước về hướng điều trị và những điều cần chuẩn bị cho chuyến đi.',
       flow: ['Gửi X-ray', 'Xem Xét', 'Lập Kế Hoạch', 'Di Chuyển', 'Điều Trị'],
       costTitle: 'Vì Sao Nhiều Người Chọn Điều Trị Tại Việt Nam?',
       costText:
@@ -222,7 +222,7 @@ export const fullMouthContent = {
       eyebrow: 'Những Ca Điều Trị Thực Tế',
       title: 'Hành Trình Điều Trị Của Bệnh Nhân',
       intro:
-        'Khám phá hành trình điều trị của những bệnh nhân phục hồi toàn hàm tại EMIS.',
+        'Khám phá hành trình điều trị của những bệnh nhân phục hồi toàn hàm tại Emis Dental.',
       cta: 'Xem Các Ca Phục Hồi Toàn Hàm',
       ctaPath: '/doctors',
     },
@@ -231,7 +231,7 @@ export const fullMouthContent = {
       eyebrow: 'Đội Ngũ Đồng Hành Cùng Bạn',
       title: 'Đội Ngũ Cùng Phối Hợp Vì Bạn',
       intro:
-        'Đội ngũ EMIS cùng phối hợp trong suốt quá trình điều trị, từ thăm khám ban đầu đến theo dõi sau khi phục hồi.',
+        'Đội ngũ Emis Dental cùng phối hợp trong suốt quá trình điều trị, từ thăm khám ban đầu đến theo dõi sau khi phục hồi.',
       cta: 'Gặp Gỡ Đội Ngũ Bác Sĩ',
       ctaPath: '/doctors',
     },
@@ -239,7 +239,7 @@ export const fullMouthContent = {
     finalCta: {
       title: 'Chưa Biết Nên Bắt Đầu Từ Đâu?',
       intro:
-        'Nếu đã có X-ray hoặc CBCT, bạn có thể gửi trước để được đội ngũ EMIS xem xét và trao đổi về những bước tiếp theo.',
+        'Nếu đã có X-ray hoặc CBCT, bạn có thể gửi trước để được đội ngũ Emis Dental xem xét và trao đổi về những bước tiếp theo.',
       primaryCta: 'Gửi X-ray Của Bạn',
       secondaryCta: 'Trao Đổi Về Trường Hợp Của Bạn',
       note:
@@ -248,9 +248,9 @@ export const fullMouthContent = {
   },
 
   french: {
-    metaTitle: 'Réhabilitation Complète | Traitement Dentaire Coordonné | EMIS Dental',
+    metaTitle: 'Réhabilitation Complète | Traitement Dentaire Coordonné | Emis Dental',
     metaDescription:
-      "La réhabilitation complète examine l'état général de votre bouche et élabore un plan de traitement coordonné selon vos besoins à long terme. Découvrez l'approche, les options de traitement et l'accompagnement des patients internationaux chez EMIS.",
+      "La réhabilitation complète examine l'état général de votre bouche et élabore un plan de traitement coordonné selon vos besoins à long terme. Découvrez l'approche, les options de traitement et l'accompagnement des patients internationaux chez Emis Dental.",
 
     hero: {
       eyebrow: 'Réhabilitation Complète',
@@ -346,7 +346,7 @@ export const fullMouthContent = {
       eyebrow: 'Cas De Patients Réels',
       title: 'Découvrez Comment Les Patients Ont Été Traités',
       intro:
-        'Découvrez comment des patients ayant des besoins bucco-dentaires complexes ont été évalués, planifiés et traités chez EMIS.',
+        'Découvrez comment des patients ayant des besoins bucco-dentaires complexes ont été évalués, planifiés et traités chez Emis Dental.',
       cta: 'Voir Les Cas De Réhabilitation Complète',
       ctaPath: '/doctors',
     },
@@ -372,9 +372,9 @@ export const fullMouthContent = {
   },
 
   korean: {
-    metaTitle: '전악 재건 | 통합 치과 치료 | EMIS Dental',
+    metaTitle: '전악 재건 | 통합 치과 치료 | Emis Dental',
     metaDescription:
-      '전악 재건은 전반적인 구강 상태를 살펴보고 장기적인 필요에 맞춘 통합 치료 계획을 세웁니다. EMIS의 접근 방식, 치료 옵션, 국제 환자 지원을 알아보세요.',
+      '전악 재건은 전반적인 구강 상태를 살펴보고 장기적인 필요에 맞춘 통합 치료 계획을 세웁니다. Emis Dental의 접근 방식, 치료 옵션, 국제 환자 지원을 알아보세요.',
 
     hero: {
       eyebrow: '전악 재건',
@@ -470,7 +470,7 @@ export const fullMouthContent = {
       eyebrow: '실제 환자 사례',
       title: '환자들이 어떻게 치료받았는지 살펴보기',
       intro:
-        '복잡한 구강 건강 문제를 가진 환자들이 EMIS에서 어떻게 평가, 계획, 치료를 받았는지 살펴보세요.',
+        '복잡한 구강 건강 문제를 가진 환자들이 Emis Dental에서 어떻게 평가, 계획, 치료를 받았는지 살펴보세요.',
       cta: '전악 재건 환자 사례 보기',
       ctaPath: '/doctors',
     },
@@ -496,9 +496,9 @@ export const fullMouthContent = {
   },
 
   simplified: {
-    metaTitle: '全口重建 | 协调一致的牙科治疗 | EMIS Dental',
+    metaTitle: '全口重建 | 协调一致的牙科治疗 | Emis Dental',
     metaDescription:
-      '全口重建从您的整体口腔状况出发，围绕您的长期需求制定协调一致的治疗方案。了解 EMIS 的治疗理念、治疗选项以及国际患者支持。',
+      '全口重建从您的整体口腔状况出发，围绕您的长期需求制定协调一致的治疗方案。了解 Emis Dental 的治疗理念、治疗选项以及国际患者支持。',
 
     hero: {
       eyebrow: '全口重建',
@@ -594,7 +594,7 @@ export const fullMouthContent = {
       eyebrow: '真实患者案例',
       title: '了解患者是如何接受治疗的',
       intro:
-        '了解有复杂口腔健康需求的患者在 EMIS 是如何接受评估、规划和治疗的。',
+        '了解有复杂口腔健康需求的患者在 Emis Dental 是如何接受评估、规划和治疗的。',
       cta: '查看全口重建案例',
       ctaPath: '/doctors',
     },
@@ -620,9 +620,9 @@ export const fullMouthContent = {
   },
 
   traditional: {
-    metaTitle: '全口重建 | 協調一致的牙科治療 | EMIS Dental',
+    metaTitle: '全口重建 | 協調一致的牙科治療 | Emis Dental',
     metaDescription:
-      '全口重建從您的整體口腔狀況出發，圍繞您的長期需求制定協調一致的治療方案。了解 EMIS 的治療理念、治療選項以及國際患者支援。',
+      '全口重建從您的整體口腔狀況出發，圍繞您的長期需求制定協調一致的治療方案。了解 Emis Dental 的治療理念、治療選項以及國際患者支援。',
 
     hero: {
       eyebrow: '全口重建',
@@ -718,7 +718,7 @@ export const fullMouthContent = {
       eyebrow: '真實患者案例',
       title: '了解患者是如何接受治療的',
       intro:
-        '了解有複雜口腔健康需求的患者在 EMIS 是如何接受評估、規劃與治療的。',
+        '了解有複雜口腔健康需求的患者在 Emis Dental 是如何接受評估、規劃與治療的。',
       cta: '查看全口重建案例',
       ctaPath: '/doctors',
     },

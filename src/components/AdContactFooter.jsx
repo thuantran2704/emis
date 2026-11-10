@@ -8,7 +8,7 @@ export default function AdContactFooter({ isVI }) {
       <div className="text-center mb-8">
         <h2 className="text-2xl font-bold text-gray-800 mb-2">
           {isVI ? 'NHA KHOA QUỐC TẾ ' : ''}
-          <span className="text-[#d4af37]">EMIS DENTAL</span>
+          <span className="text-[#d4af37]">Emis Dental</span>
         </h2>
         <div className="w-24 h-1 bg-gradient-to-r from-[#d4af37] to-[#C5AF73] rounded-full mx-auto" />
       </div>

@@ -1,16 +1,16 @@
 export const disclaimerContent = {
   english: {
-    metaTitle: 'Medical Disclaimer | EMIS Dental',
+    metaTitle: 'Medical Disclaimer | Emis Dental',
     metaDescription:
-      'Information on the EMIS Dental website is for general guidance only and does not replace a clinical examination, diagnosis, or advice from a qualified dentist.',
+      'Information on the Emis Dental website is for general guidance only and does not replace a clinical examination, diagnosis, or advice from a qualified dentist.',
     title: 'Medical Disclaimer',
     lastUpdatedLabel: 'Last updated',
     lastUpdated: '06/25/2026',
     intro: [
-      'The information on the EMIS Dental website is intended to help you better understand dental conditions, treatment options, and oral health care.',
+      'The information on the Emis Dental website is intended to help you better understand dental conditions, treatment options, and oral health care.',
       'It is provided for general information only and should not replace a clinical examination, diagnosis, or personalised advice from a qualified dentist.',
     ],
-    contactCta: 'Contact EMIS Dental',
+    contactCta: 'Contact Emis Dental',
     sections: [
       {
         title: 'Information on This Website',
@@ -31,7 +31,7 @@ export const disclaimerContent = {
       {
         title: 'When Does a Doctor–Patient Relationship Begin?',
         paragraphs: [
-          'Visiting our website, submitting an enquiry, sending dental records, or communicating with EMIS Dental online does not, by itself, establish a doctor–patient relationship.',
+          'Visiting our website, submitting an enquiry, sending dental records, or communicating with Emis Dental online does not, by itself, establish a doctor–patient relationship.',
           'A clinical relationship begins only after you have been examined by one of our dentists and accepted for treatment.',
         ],
       },
@@ -73,7 +73,7 @@ export const disclaimerContent = {
       {
         title: 'Emergency Care',
         paragraphs: [
-          'The EMIS Dental website is not intended for emergency care.',
+          'The Emis Dental website is not intended for emergency care.',
           'If you are experiencing severe pain, significant swelling, uncontrolled bleeding, trauma, or another urgent dental condition, please seek immediate care from an appropriate healthcare provider or emergency service.',
         ],
       },
@@ -85,22 +85,22 @@ export const disclaimerContent = {
   },
 
   vietnamese: {
-    metaTitle: 'Miễn Trừ Trách Nhiệm Y Khoa | EMIS Dental',
+    metaTitle: 'Miễn Trừ Trách Nhiệm Y Khoa | Emis Dental',
     metaDescription:
-      'Thông tin trên website EMIS Dental chỉ mang tính tham khảo và không thay thế cho việc thăm khám, chẩn đoán hoặc tư vấn trực tiếp với bác sĩ.',
+      'Thông tin trên website Emis Dental chỉ mang tính tham khảo và không thay thế cho việc thăm khám, chẩn đoán hoặc tư vấn trực tiếp với bác sĩ.',
     title: 'Miễn Trừ Trách Nhiệm Y Khoa',
     lastUpdatedLabel: 'Cập nhật lần cuối',
     lastUpdated: '25/06/2026',
     intro: [
-      'Website của EMIS Dental cung cấp thông tin về các dịch vụ nha khoa, phương pháp điều trị và chăm sóc sức khỏe răng miệng.',
+      'Website của Emis Dental cung cấp thông tin về các dịch vụ nha khoa, phương pháp điều trị và chăm sóc sức khỏe răng miệng.',
       'Các nội dung trên website chỉ mang tính tham khảo và không thay thế cho việc thăm khám, chẩn đoán hoặc tư vấn trực tiếp với bác sĩ.',
     ],
-    contactCta: 'Liên Hệ EMIS Dental',
+    contactCta: 'Liên Hệ Emis Dental',
     sections: [
       {
         title: 'Phạm Vi Thông Tin',
         paragraphs: [
-          'EMIS Dental luôn nỗ lực cập nhật nội dung chính xác và dễ hiểu.',
+          'Emis Dental luôn nỗ lực cập nhật nội dung chính xác và dễ hiểu.',
           'Tuy nhiên, thông tin trên website không được xem là chẩn đoán, chỉ định điều trị hoặc tư vấn y khoa dành cho từng trường hợp cụ thể.',
           'Mọi quyết định điều trị cần được đưa ra sau khi bác sĩ trực tiếp thăm khám và đánh giá.',
         ],
@@ -108,7 +108,7 @@ export const disclaimerContent = {
       {
         title: 'Tư Vấn Trực Tuyến Và Đánh Giá Ban Đầu',
         paragraphs: [
-          'EMIS Dental có thể hỗ trợ đánh giá ban đầu dựa trên hình ảnh, phim X-quang, CT hoặc các thông tin bạn cung cấp.',
+          'Emis Dental có thể hỗ trợ đánh giá ban đầu dựa trên hình ảnh, phim X-quang, CT hoặc các thông tin bạn cung cấp.',
           'Việc tư vấn qua website, email, điện thoại hoặc các nền tảng nhắn tin chỉ nhằm hỗ trợ trao đổi ban đầu và không thay thế cho việc thăm khám trực tiếp.',
           'Chẩn đoán, kế hoạch điều trị, thời gian thực hiện và chi phí chỉ được xác nhận sau khi bác sĩ đánh giá đầy đủ.',
         ],
@@ -116,8 +116,8 @@ export const disclaimerContent = {
       {
         title: 'Khi Nào Quan Hệ Điều Trị Được Thiết Lập?',
         paragraphs: [
-          'Việc truy cập website, gửi biểu mẫu liên hệ, gửi phim X-quang, CT, hình ảnh hoặc trao đổi trực tuyến với EMIS Dental không đồng nghĩa với việc quan hệ điều trị đã được thiết lập.',
-          'Quan hệ điều trị chỉ được xác lập sau khi bạn được bác sĩ thăm khám, đánh giá lâm sàng và được EMIS Dental tiếp nhận điều trị.',
+          'Việc truy cập website, gửi biểu mẫu liên hệ, gửi phim X-quang, CT, hình ảnh hoặc trao đổi trực tuyến với Emis Dental không đồng nghĩa với việc quan hệ điều trị đã được thiết lập.',
+          'Quan hệ điều trị chỉ được xác lập sau khi bạn được bác sĩ thăm khám, đánh giá lâm sàng và được Emis Dental tiếp nhận điều trị.',
         ],
       },
       {
@@ -133,7 +133,7 @@ export const disclaimerContent = {
           'Hút thuốc hoặc các yếu tố lối sống',
           'Việc tuân thủ hướng dẫn của bác sĩ',
         ],
-        note: 'Vì vậy, EMIS Dental không thể cam kết một kết quả điều trị giống nhau cho mọi khách hàng.',
+        note: 'Vì vậy, Emis Dental không thể cam kết một kết quả điều trị giống nhau cho mọi khách hàng.',
       },
       {
         title: 'Hình Ảnh Trước Và Sau Điều Trị',
@@ -153,13 +153,13 @@ export const disclaimerContent = {
         title: 'Liên Kết Đến Website Khác',
         paragraphs: [
           'Website có thể chứa liên kết đến các website hoặc nguồn thông tin của bên thứ ba nhằm mục đích tham khảo.',
-          'EMIS Dental không chịu trách nhiệm về nội dung, tính chính xác hoặc chính sách bảo mật của các website này.',
+          'Emis Dental không chịu trách nhiệm về nội dung, tính chính xác hoặc chính sách bảo mật của các website này.',
         ],
       },
       {
         title: 'Trường Hợp Khẩn Cấp',
         paragraphs: [
-          'Website của EMIS Dental không được thiết kế để xử lý các trường hợp cấp cứu.',
+          'Website của Emis Dental không được thiết kế để xử lý các trường hợp cấp cứu.',
           'Nếu bạn gặp tình trạng cấp cứu hoặc cần được chăm sóc y tế khẩn cấp, vui lòng đến cơ sở y tế gần nhất hoặc liên hệ với đơn vị cấp cứu tại nơi bạn sinh sống.',
         ],
       },

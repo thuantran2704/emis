@@ -1,8 +1,8 @@
 const drTuContent = {
   english: {
-    metaTitle: 'Dr. Tran Minh Tu | Oral & Maxillofacial Surgeon | EMIS Dental',
+    metaTitle: 'Dr. Tran Minh Tu | Oral & Maxillofacial Surgeon | Emis Dental',
     metaDescription:
-      'Meet Dr. Tran Minh Tu at EMIS Dental. Learn about his oral and maxillofacial surgery background, implant and full-mouth rehabilitation focus, and patient-centered treatment approach.',
+      'Meet Dr. Tran Minh Tu at Emis Dental. Learn about his oral and maxillofacial surgery background, implant and full-mouth rehabilitation focus, and patient-centered treatment approach.',
 
     hero: {
       sectionLabel: 'Meet the Doctor',
@@ -53,7 +53,7 @@ const drTuContent = {
             "One of Vietnam's leading specialist hospitals in dentistry and oral-maxillofacial care.",
         },
         {
-          name: 'EMIS Premium Dental Clinic',
+          name: 'Emis Dental',
           description: 'Advanced implant and full-mouth rehabilitation care.',
         },
       ],
@@ -122,9 +122,9 @@ const drTuContent = {
       sectionLabel: 'International Patients',
       title: 'Planning Treatment From Overseas',
       intro:
-        'Many overseas Vietnamese and international patients travel to Vietnam specifically for implant treatment and full-mouth rehabilitation, often within a limited timeframe. Dr. Tu works closely with the EMIS team to help patients review records, plan treatment timelines, and stay connected throughout care.',
+        'Many overseas Vietnamese and international patients travel to Vietnam specifically for implant treatment and full-mouth rehabilitation, often within a limited timeframe. Dr. Tu works closely with the Emis Dental team to help patients review records, plan treatment timelines, and stay connected throughout care.',
       languagesTitle: 'Languages',
-      languages: ['Vietnamese', 'English', 'Hungarian', 'Chinese'],
+      languages: ['Vietnamese', 'English'],
     },
 
     decision: {
@@ -148,9 +148,9 @@ const drTuContent = {
   },
 
   vietnamese: {
-    metaTitle: 'BS. Tran Minh Tu | Bác sĩ Phẫu thuật Hàm mặt | EMIS Dental',
+    metaTitle: 'BS. Tran Minh Tu | Bác sĩ Phẫu thuật Hàm mặt | Emis Dental',
     metaDescription:
-      'Gặp BS. Tran Minh Tu tại EMIS Dental. Tìm hiểu nền tảng phẫu thuật hàm mặt, chuyên môn implant và phục hình toàn hàm, cùng phương pháp điều trị lấy bệnh nhân làm trung tâm của bác sĩ.',
+      'Gặp BS. Tran Minh Tu tại Emis Dental. Tìm hiểu nền tảng phẫu thuật hàm mặt, chuyên môn implant và phục hình toàn hàm, cùng phương pháp điều trị lấy bệnh nhân làm trung tâm của bác sĩ.',
 
     hero: {
       sectionLabel: 'Gặp Bác Sĩ',
@@ -201,7 +201,7 @@ const drTuContent = {
             'Một trong những bệnh viện chuyên khoa hàng đầu Việt Nam về nha khoa và răng hàm mặt.',
         },
         {
-          name: 'EMIS Premium Dental Clinic',
+          name: 'Emis Dental',
           description: 'Điều trị implant và phục hình toàn hàm chuyên sâu.',
         },
       ],
@@ -269,9 +269,9 @@ const drTuContent = {
       sectionLabel: 'Bệnh Nhân Quốc Tế',
       title: 'Lập Kế Hoạch Điều Trị Từ Nước Ngoài',
       intro:
-        'Nhiều Việt kiều và bệnh nhân quốc tế đến Việt Nam để điều trị implant và phục hình toàn hàm, thường trong khung thời gian giới hạn. BS. Tu phối hợp chặt chẽ với đội ngũ EMIS để hỗ trợ bệnh nhân rà soát hồ sơ, lập tiến trình điều trị và duy trì kết nối trong suốt quá trình chăm sóc.',
+        'Nhiều Việt kiều và bệnh nhân quốc tế đến Việt Nam để điều trị implant và phục hình toàn hàm, thường trong khung thời gian giới hạn. BS. Tu phối hợp chặt chẽ với đội ngũ Emis Dental để hỗ trợ bệnh nhân rà soát hồ sơ, lập tiến trình điều trị và duy trì kết nối trong suốt quá trình chăm sóc.',
       languagesTitle: 'Ngôn ngữ',
-      languages: ['Tiếng Việt', 'Tiếng Anh', 'Tiếng Hungary', 'Tiếng Trung'],
+      languages: ['Tiếng Việt', 'Tiếng Anh'],
     },
 
     decision: {
@@ -295,9 +295,9 @@ const drTuContent = {
   },
 
   french: {
-    metaTitle: 'Dr Tran Minh Tu | Chirurgien oral et maxillo-facial | EMIS Dental',
+    metaTitle: 'Dr Tran Minh Tu | Chirurgien oral et maxillo-facial | Emis Dental',
     metaDescription:
-      'Découvrez le Dr Tran Minh Tu chez EMIS Dental. Son parcours en chirurgie orale et maxillo-faciale, son expertise en implantologie et réhabilitation complète, ainsi que son approche centrée sur le patient.',
+      'Découvrez le Dr Tran Minh Tu chez Emis Dental. Son parcours en chirurgie orale et maxillo-faciale, son expertise en implantologie et réhabilitation complète, ainsi que son approche centrée sur le patient.',
 
     hero: {
       sectionLabel: 'Rencontrez Le Médecin',
@@ -348,7 +348,7 @@ const drTuContent = {
             "L'un des principaux hôpitaux spécialisés du Vietnam en dentisterie et soins oro-maxillo-faciaux.",
         },
         {
-          name: 'EMIS Premium Dental Clinic',
+          name: 'Emis Dental',
           description: 'Soins avancés en implantologie et réhabilitation complète.',
         },
       ],
@@ -417,9 +417,9 @@ const drTuContent = {
       sectionLabel: 'Patients Internationaux',
       title: "Planifier Le Traitement Depuis L'Étranger",
       intro:
-        "De nombreux Vietnamiens d'outre-mer et patients internationaux viennent au Vietnam spécifiquement pour un traitement implantaire et une réhabilitation complète, souvent dans un délai limité. Le Dr Tu travaille en étroite collaboration avec l'équipe EMIS pour aider les patients à examiner leurs dossiers, planifier le calendrier de traitement et rester connectés tout au long des soins.",
+        "De nombreux Vietnamiens d'outre-mer et patients internationaux viennent au Vietnam spécifiquement pour un traitement implantaire et une réhabilitation complète, souvent dans un délai limité. Le Dr Tu travaille en étroite collaboration avec l'équipe Emis Dental pour aider les patients à examiner leurs dossiers, planifier le calendrier de traitement et rester connectés tout au long des soins.",
       languagesTitle: 'Langues',
-      languages: ['Vietnamien', 'Anglais', 'Hongrois', 'Chinois'],
+      languages: ['Vietnamien', 'Anglais'],
     },
 
     decision: {
@@ -443,9 +443,9 @@ const drTuContent = {
   },
 
   simplified: {
-    metaTitle: 'Tran Minh Tu 医生 | 口腔颌面外科医生 | EMIS Dental',
+    metaTitle: 'Tran Minh Tu 医生 | 口腔颌面外科医生 | Emis Dental',
     metaDescription:
-      '了解 EMIS Dental 的 Tran Minh Tu 医生。查看其口腔颌面外科背景、种植牙与全口重建专长，以及以患者为中心的治疗方式。',
+      '了解 Emis Dental 的 Tran Minh Tu 医生。查看其口腔颌面外科背景、种植牙与全口重建专长，以及以患者为中心的治疗方式。',
 
     hero: {
       sectionLabel: '认识医生',
@@ -481,7 +481,7 @@ const drTuContent = {
           description: '越南领先的牙科与口腔颌面专科医院之一。',
         },
         {
-          name: 'EMIS Premium Dental Clinic',
+          name: 'Emis Dental',
           description: '先进的种植牙与全口重建治疗。',
         },
       ],
@@ -525,9 +525,9 @@ const drTuContent = {
       sectionLabel: '国际患者',
       title: '从海外规划治疗',
       intro:
-        '许多海外越南人和国际患者专程前往越南接受种植牙与全口重建治疗，且时间通常有限。Tu 医生与 EMIS 团队密切协作，帮助患者审核资料、规划治疗时间线，并在整个治疗期间保持联系。',
+        '许多海外越南人和国际患者专程前往越南接受种植牙与全口重建治疗，且时间通常有限。Tu 医生与 Emis Dental 团队密切协作，帮助患者审核资料、规划治疗时间线，并在整个治疗期间保持联系。',
       languagesTitle: '语言',
-      languages: ['越南语', '英语', '匈牙利语', '中文'],
+      languages: ['越南语', '英语'],
     },
 
     decision: {
@@ -546,9 +546,9 @@ const drTuContent = {
   },
 
   traditional: {
-    metaTitle: 'Tran Minh Tu 醫師 | 口腔顎面外科醫師 | EMIS Dental',
+    metaTitle: 'Tran Minh Tu 醫師 | 口腔顎面外科醫師 | Emis Dental',
     metaDescription:
-      '認識 EMIS Dental 的 Tran Minh Tu 醫師。了解其口腔顎面外科背景、植牙與全口重建專長，以及以患者為中心的治療方式。',
+      '認識 Emis Dental 的 Tran Minh Tu 醫師。了解其口腔顎面外科背景、植牙與全口重建專長，以及以患者為中心的治療方式。',
 
     hero: {
       sectionLabel: '認識醫師',
@@ -584,7 +584,7 @@ const drTuContent = {
           description: '越南領先的牙科與口腔顎面專科醫院之一。',
         },
         {
-          name: 'EMIS Premium Dental Clinic',
+          name: 'Emis Dental',
           description: '先進植牙與全口重建照護。',
         },
       ],
@@ -628,9 +628,9 @@ const drTuContent = {
       sectionLabel: '國際患者',
       title: '從海外規劃治療',
       intro:
-        '許多海外越南人與國際患者專程前往越南接受植牙與全口重建，且多半在有限時間內完成。Tu 醫師與 EMIS 團隊密切合作，協助患者檢視病歷資料、規劃治療時程，並在整個照護過程中保持聯繫。',
+        '許多海外越南人與國際患者專程前往越南接受植牙與全口重建，且多半在有限時間內完成。Tu 醫師與 Emis Dental 團隊密切合作，協助患者檢視病歷資料、規劃治療時程，並在整個照護過程中保持聯繫。',
       languagesTitle: '語言',
-      languages: ['越南語', '英語', '匈牙利語', '中文'],
+      languages: ['越南語', '英語'],
     },
 
     decision: {
@@ -649,9 +649,9 @@ const drTuContent = {
   },
 
   korean: {
-    metaTitle: 'Tran Minh Tu 원장 | 구강악안면외과 전문의 | EMIS Dental',
+    metaTitle: 'Tran Minh Tu 원장 | 구강악안면외과 전문의 | Emis Dental',
     metaDescription:
-      'EMIS Dental의 Tran Minh Tu 원장을 만나보세요. 구강악안면외과 경력, 임플란트 및 전체 구강 재건 집중 진료, 환자 중심 치료 접근을 확인하실 수 있습니다.',
+      'Emis Dental의 Tran Minh Tu 원장을 만나보세요. 구강악안면외과 경력, 임플란트 및 전체 구강 재건 집중 진료, 환자 중심 치료 접근을 확인하실 수 있습니다.',
 
     hero: {
       sectionLabel: '의료진 소개',
@@ -687,7 +687,7 @@ const drTuContent = {
           description: '베트남을 대표하는 치의학 및 구강악안면 전문병원 중 하나입니다.',
         },
         {
-          name: 'EMIS Premium Dental Clinic',
+          name: 'Emis Dental',
           description: '고난도 임플란트 및 전체 구강 재건 진료.',
         },
       ],
@@ -737,9 +737,9 @@ const drTuContent = {
       sectionLabel: '국제 환자',
       title: '해외에서 치료 계획하기',
       intro:
-        '많은 해외 거주 베트남인과 국제 환자들이 임플란트 및 전체 구강 재건 치료를 위해, 종종 제한된 일정 안에 베트남을 방문합니다. Tu 원장은 EMIS 팀과 긴밀히 협력하여 기록 검토, 치료 일정 계획, 치료 전 과정의 소통을 지원합니다.',
+        '많은 해외 거주 베트남인과 국제 환자들이 임플란트 및 전체 구강 재건 치료를 위해, 종종 제한된 일정 안에 베트남을 방문합니다. Tu 원장은 Emis Dental 팀과 긴밀히 협력하여 기록 검토, 치료 일정 계획, 치료 전 과정의 소통을 지원합니다.',
       languagesTitle: '사용 언어',
-      languages: ['베트남어', '영어', '헝가리어', '중국어'],
+      languages: ['베트남어', '영어'],
     },
 
     decision: {

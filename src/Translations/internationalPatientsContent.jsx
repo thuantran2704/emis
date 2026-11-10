@@ -1,7 +1,7 @@
 const internationalPatientsContent = {
   english: {
-    metaTitle: 'International Patient Dental Treatment in Vietnam | EMIS Dental',
-    metaDescription: 'Plan dental treatment in Vietnam from abroad. EMIS guides international patients, expats, and overseas Vietnamese through every step of the process.',
+    metaTitle: 'International Patient Dental Treatment in Vietnam | Emis Dental',
+    metaDescription: 'Plan dental treatment in Vietnam from abroad. Emis Dental guides international patients, expats, and overseas Vietnamese through every step of the process.',
     
     // Hero
     heroTitle: 'Dental Treatment for International Patients in Vietnam',
@@ -18,7 +18,7 @@ const internationalPatientsContent = {
     labelOngoingCare: 'Ongoing Care',
     labelStories: 'Stories',
     whoForPara: {
-      pre: 'Whether you\'re living abroad, an expat in Vietnam, or an overseas Vietnamese planning a visit, EMIS provides personalized support for dental care. Learn more about ',
+      pre: 'Whether you\'re living abroad, an expat in Vietnam, or an overseas Vietnamese planning a visit, Emis Dental provides personalized support for dental care. Learn more about ',
       link1: 'our clinic and approach',
       mid: ', or meet our ',
       link2: 'experienced dental team',
@@ -26,7 +26,7 @@ const internationalPatientsContent = {
     },
     communicationSubtext: 'Our team is experienced in supporting international patients and can coordinate treatment planning, logistics, and follow-up care.',
     journeysLink: {
-      pre: 'See how EMIS has helped patients from around the world. EMIS offers a wide range of ',
+      pre: 'See how Emis Dental has helped patients from around the world. Emis Dental offers a wide range of ',
       link: 'dental treatment services',
       post: ' to meet diverse needs.',
     },
@@ -92,7 +92,7 @@ const internationalPatientsContent = {
     
     // Patient journeys
     journeysTitle: 'Real Patient Journeys',
-    journeysIntro: 'Explore real treatment experiences from overseas Vietnamese and international patients at EMIS.',
+    journeysIntro: 'Explore real treatment experiences from overseas Vietnamese and international patients at Emis Dental.',
     journeysCTA: 'Read a Patient Story',
     patientStories: [
       {
@@ -127,8 +127,8 @@ const internationalPatientsContent = {
   },
 
   vietnamese: {
-    metaTitle: 'Điều Trị Nha Khoa cho Bệnh Nhân Quốc Tế tại Việt Nam | EMIS Dental',
-    metaDescription: 'Lên kế hoạch điều trị nha khoa tại Việt Nam từ nước ngoài. EMIS hỗ trợ Việt kiều, người nước ngoài và bệnh nhân quốc tế từng bước trong quy trình.',
+    metaTitle: 'Điều Trị Nha Khoa cho Bệnh Nhân Quốc Tế tại Việt Nam | Emis Dental',
+    metaDescription: 'Lên kế hoạch điều trị nha khoa tại Việt Nam từ nước ngoài. Emis Dental hỗ trợ Việt kiều, người nước ngoài và bệnh nhân quốc tế từng bước trong quy trình.',
     // Hero
     heroTitle: 'Điều Trị Nha Khoa cho Bệnh Nhân Quốc Tế tại Việt Nam',
     heroSubtitle: 'Lập kế hoạch điều trị nha khoa tại Việt Nam từ nước ngoài có thể dẫn đến nhiều thắc mắc. Dù bạn là Việt kiều, người nước ngoài hay bệnh nhân quốc tế, hiểu rõ quy trình, timeline và hỗ trợ sẵn có sẽ giúp bạn lên kế hoạch tự tin hơn.',
@@ -144,7 +144,7 @@ const internationalPatientsContent = {
     labelOngoingCare: 'Chăm Sóc Liên Tục',
     labelStories: 'Câu Chuyện',
     whoForPara: {
-      pre: 'Dù bạn đang sống ở nước ngoài, là người nước ngoài tại Việt Nam hay Việt kiều đang lên kế hoạch về thăm, EMIS cung cấp hỗ trợ cá nhân hóa cho việc chăm sóc nha khoa. Tìm hiểu thêm về ',
+      pre: 'Dù bạn đang sống ở nước ngoài, là người nước ngoài tại Việt Nam hay Việt kiều đang lên kế hoạch về thăm, Emis Dental cung cấp hỗ trợ cá nhân hóa cho việc chăm sóc nha khoa. Tìm hiểu thêm về ',
       link1: 'phòng khám và phương pháp của chúng tôi',
       mid: ', hoặc gặp gỡ ',
       link2: 'đội ngũ nha khoa giàu kinh nghiệm',
@@ -152,7 +152,7 @@ const internationalPatientsContent = {
     },
     communicationSubtext: 'Đội ngũ của chúng tôi giàu kinh nghiệm hỗ trợ bệnh nhân quốc tế và có thể phối hợp lập kế hoạch điều trị, hậu cần và chăm sóc theo dõi.',
     journeysLink: {
-      pre: 'Xem cách EMIS đã giúp đỡ bệnh nhân từ khắp nơi trên thế giới. EMIS cung cấp nhiều ',
+      pre: 'Xem cách Emis Dental đã giúp đỡ bệnh nhân từ khắp nơi trên thế giới. Emis Dental cung cấp nhiều ',
       link: 'dịch vụ điều trị nha khoa',
       post: ' để đáp ứng nhu cầu đa dạng.',
     },
@@ -169,7 +169,7 @@ const internationalPatientsContent = {
     
     // Before you travel
     beforeTravelTitle: 'Lên Kế Hoạch Điều Trị Trước Khi Đến',
-    beforeTravelText: 'Nếu đã có X-ray, CBCT hoặc hồ sơ nha khoa từ nha sĩ trước đó, bạn có thể gửi trước để đội ngũ EMIS đánh giá tình trạng. Tư vấn từ xa giúp bạn:',
+    beforeTravelText: 'Nếu đã có X-ray, CBCT hoặc hồ sơ nha khoa từ nha sĩ trước đó, bạn có thể gửi trước để đội ngũ Emis Dental đánh giá tình trạng. Tư vấn từ xa giúp bạn:',
     beforeTravelBullets: [
       'Tìm hiểu các hướng điều trị phù hợp',
       'Trao đổi về thời gian dự kiến',
@@ -191,7 +191,7 @@ const internationalPatientsContent = {
     
     // Communication & coordination
     communicationTitle: 'Trao Đổi & Hỗ Trợ',
-    communicationIntro: 'Bạn có thể trao đổi với đội ngũ EMIS trước, trong và sau điều trị.',
+    communicationIntro: 'Bạn có thể trao đổi với đội ngũ Emis Dental trước, trong và sau điều trị.',
     communicationHeading: 'Giữ Liên Lạc',
     communicationItems: [
       'Email',
@@ -218,7 +218,7 @@ const internationalPatientsContent = {
     
     // Patient journeys
     journeysTitle: 'Hành Trình Điều Trị Thực Tế',
-    journeysIntro: 'Khám phá những trải nghiệm điều trị thực tế của Việt kiều và bệnh nhân quốc tế tại EMIS.',
+    journeysIntro: 'Khám phá những trải nghiệm điều trị thực tế của Việt kiều và bệnh nhân quốc tế tại Emis Dental.',
     journeysCTA: 'Đọc Câu Chuyện Bệnh Nhân',
     patientStories: [
       {
@@ -246,15 +246,15 @@ const internationalPatientsContent = {
     
     // CTA footer
     ctaTitle: 'Đang Lên Kế Hoạch Điều Trị Tại Việt Nam?',
-    ctaText: 'Nếu bạn muốn trao đổi hoặc gửi hồ sơ nha khoa, đội ngũ EMIS sẵn sàng giúp bạn tìm hiểu những bước tiếp theo.',
+    ctaText: 'Nếu bạn muốn trao đổi hoặc gửi hồ sơ nha khoa, đội ngũ Emis Dental sẵn sàng giúp bạn tìm hiểu những bước tiếp theo.',
     ctaPrimaryCTA: 'Gửi X-ray Của Bạn',
     ctaSecondaryCTA: 'Trao Đổi Về Trường Hợp Của Bạn',
     ctaNote: 'Kế hoạch điều trị cuối cùng cần được xác định sau khi thăm khám trực tiếp và thực hiện đầy đủ các chẩn đoán cần thiết.',
   },
 
   french: {
-    metaTitle: 'Traitement Dentaire pour Patients Internationaux au Vietnam | EMIS Dental',
-    metaDescription: 'Planifiez un traitement dentaire au Vietnam depuis l\'étranger. EMIS guide les patients internationaux, expatriés et Vietnamiens d\'outre-mer à chaque étape du processus.',
+    metaTitle: 'Traitement Dentaire pour Patients Internationaux au Vietnam | Emis Dental',
+    metaDescription: 'Planifiez un traitement dentaire au Vietnam depuis l\'étranger. Emis Dental guide les patients internationaux, expatriés et Vietnamiens d\'outre-mer à chaque étape du processus.',
     
     // Hero
     heroTitle: 'Traitement Dentaire pour Patients Internationaux au Vietnam',
@@ -271,7 +271,7 @@ const internationalPatientsContent = {
     labelOngoingCare: 'Soins Continus',
     labelStories: 'Témoignages',
     whoForPara: {
-      pre: 'Que vous viviez à l\'étranger, que vous soyez expatrié au Vietnam ou Vietnamien de l\'étranger planifiant une visite, EMIS offre un soutien personnalisé pour les soins dentaires. Apprenez-en plus sur ',
+      pre: 'Que vous viviez à l\'étranger, que vous soyez expatrié au Vietnam ou Vietnamien de l\'étranger planifiant une visite, Emis Dental offre un soutien personnalisé pour les soins dentaires. Apprenez-en plus sur ',
       link1: 'notre clinique et notre approche',
       mid: ', ou rencontrez notre ',
       link2: 'équipe dentaire expérimentée',
@@ -279,7 +279,7 @@ const internationalPatientsContent = {
     },
     communicationSubtext: 'Notre équipe est expérimentée dans le soutien aux patients internationaux et peut coordonner la planification du traitement, la logistique et les soins de suivi.',
     journeysLink: {
-      pre: 'Découvrez comment EMIS a aidé des patients du monde entier. EMIS propose une large gamme de ',
+      pre: 'Découvrez comment Emis Dental a aidé des patients du monde entier. Emis Dental propose une large gamme de ',
       link: 'services de traitement dentaire',
       post: ' pour répondre à des besoins divers.',
     },
@@ -345,7 +345,7 @@ const internationalPatientsContent = {
     
     // Patient journeys
     journeysTitle: 'Véritables Parcours de Patients',
-    journeysIntro: 'Explorez les véritables expériences de traitement de patients vietnamiens de l\'étranger et de patients internationaux chez EMIS.',
+    journeysIntro: 'Explorez les véritables expériences de traitement de patients vietnamiens de l\'étranger et de patients internationaux chez Emis Dental.',
     journeysCTA: 'Lire un Témoignage de Patient',
     patientStories: [
       {
@@ -380,8 +380,8 @@ const internationalPatientsContent = {
   },
 
   simplified: {
-    metaTitle: '越南国际患者牙科治疗 | EMIS Dental',
-    metaDescription: '从国外计划在越南进行牙科治疗。EMIS引导国际患者、驻越海外人士和越南华侨完成整个过程的每一步。',
+    metaTitle: '越南国际患者牙科治疗 | Emis Dental',
+    metaDescription: '从国外计划在越南进行牙科治疗。Emis Dental引导国际患者、驻越海外人士和越南华侨完成整个过程的每一步。',
     
     // Hero
     heroTitle: '越南国际患者牙科治疗',
@@ -398,7 +398,7 @@ const internationalPatientsContent = {
     labelOngoingCare: '持续护理',
     labelStories: '故事',
     whoForPara: {
-      pre: '无论您是居住在国外、在越南的外籍人士，还是计划回国探访的海外越南人，EMIS都为牙科护理提供个性化支持。进一步了解',
+      pre: '无论您是居住在国外、在越南的外籍人士，还是计划回国探访的海外越南人，Emis Dental都为牙科护理提供个性化支持。进一步了解',
       link1: '我们的诊所和方法',
       mid: '，或认识我们',
       link2: '经验丰富的牙科团队',
@@ -406,7 +406,7 @@ const internationalPatientsContent = {
     },
     communicationSubtext: '我们的团队在支持国际患者方面经验丰富，可以协调治疗计划、后勤和后续护理。',
     journeysLink: {
-      pre: '了解EMIS如何帮助来自世界各地的患者。EMIS提供广泛的',
+      pre: '了解Emis Dental如何帮助来自世界各地的患者。Emis Dental提供广泛的',
       link: '牙科治疗服务',
       post: '以满足多样化需求。',
     },
@@ -472,7 +472,7 @@ const internationalPatientsContent = {
     
     // Patient journeys
     journeysTitle: '真实患者故事',
-    journeysIntro: '探索来自海外越南人和EMIS国际患者的真实治疗经验。',
+    journeysIntro: '探索来自海外越南人和Emis Dental国际患者的真实治疗经验。',
     journeysCTA: '阅读患者故事',
     patientStories: [
       {
@@ -507,8 +507,8 @@ const internationalPatientsContent = {
   },
 
   traditional: {
-    metaTitle: '越南國際患者牙科治療 | EMIS Dental',
-    metaDescription: '從國外計畫在越南進行牙科治療。EMIS引導國際患者、駐越海外人士和越南華僑完成整個過程的每一步。',
+    metaTitle: '越南國際患者牙科治療 | Emis Dental',
+    metaDescription: '從國外計畫在越南進行牙科治療。Emis Dental引導國際患者、駐越海外人士和越南華僑完成整個過程的每一步。',
     
     // Hero
     heroTitle: '越南國際患者牙科治療',
@@ -525,7 +525,7 @@ const internationalPatientsContent = {
     labelOngoingCare: '持續護理',
     labelStories: '故事',
     whoForPara: {
-      pre: '無論您是居住在國外、在越南的外籍人士，還是計畫回國探訪的海外越南人，EMIS都為牙科護理提供個人化支持。進一步了解',
+      pre: '無論您是居住在國外、在越南的外籍人士，還是計畫回國探訪的海外越南人，Emis Dental都為牙科護理提供個人化支持。進一步了解',
       link1: '我們的診所和方法',
       mid: '，或認識我們',
       link2: '經驗豐富的牙科團隊',
@@ -533,7 +533,7 @@ const internationalPatientsContent = {
     },
     communicationSubtext: '我們的團隊在支持國際患者方面經驗豐富，可以協調治療計畫、後勤和後續護理。',
     journeysLink: {
-      pre: '了解EMIS如何幫助來自世界各地的患者。EMIS提供廣泛的',
+      pre: '了解Emis Dental如何幫助來自世界各地的患者。Emis Dental提供廣泛的',
       link: '牙科治療服務',
       post: '以滿足多樣化需求。',
     },
@@ -599,7 +599,7 @@ const internationalPatientsContent = {
     
     // Patient journeys
     journeysTitle: '真實患者故事',
-    journeysIntro: '探索來自海外越南人和EMIS國際患者的真實治療經驗。',
+    journeysIntro: '探索來自海外越南人和Emis Dental國際患者的真實治療經驗。',
     journeysCTA: '閱讀患者故事',
     patientStories: [
       {
@@ -634,8 +634,8 @@ const internationalPatientsContent = {
   },
 
   korean: {
-    metaTitle: '베트남 국제 환자 치과 치료 | EMIS Dental',
-    metaDescription: '해외에서 베트남 치과 치료를 계획하세요. EMIS는 국제 환자, 주재원 및 해외 베트남인을 프로세스의 각 단계를 통해 안내합니다.',
+    metaTitle: '베트남 국제 환자 치과 치료 | Emis Dental',
+    metaDescription: '해외에서 베트남 치과 치료를 계획하세요. Emis Dental은 국제 환자, 주재원 및 해외 베트남인을 프로세스의 각 단계를 통해 안내합니다.',
     
     // Hero
     heroTitle: '베트남 국제 환자 치과 치료',
@@ -652,7 +652,7 @@ const internationalPatientsContent = {
     labelOngoingCare: '지속적 관리',
     labelStories: '이야기',
     whoForPara: {
-      pre: '해외에 거주하든, 베트남 주재원이든, 방문을 계획 중인 해외 베트남인이든, EMIS는 치과 진료를 위한 맞춤형 지원을 제공합니다. ',
+      pre: '해외에 거주하든, 베트남 주재원이든, 방문을 계획 중인 해외 베트남인이든, Emis Dental은 치과 진료를 위한 맞춤형 지원을 제공합니다. ',
       link1: '저희 클리닉과 접근 방식',
       mid: '에 대해 자세히 알아보거나, ',
       link2: '경험 많은 치과 팀',
@@ -660,7 +660,7 @@ const internationalPatientsContent = {
     },
     communicationSubtext: '저희 팀은 국제 환자 지원에 경험이 풍부하며 치료 계획, 물류 및 후속 관리를 조율할 수 있습니다.',
     journeysLink: {
-      pre: 'EMIS가 전 세계 환자들을 어떻게 도왔는지 확인해 보세요. EMIS는 다양한 요구를 충족하기 위해 폭넓은 ',
+      pre: 'Emis Dental이 전 세계 환자들을 어떻게 도왔는지 확인해 보세요. Emis Dental은 다양한 요구를 충족하기 위해 폭넓은 ',
       link: '치과 치료 서비스',
       post: '를 제공합니다.',
     },
@@ -726,7 +726,7 @@ const internationalPatientsContent = {
     
     // Patient journeys
     journeysTitle: '실제 환자 이야기',
-    journeysIntro: 'EMIS에서 해외 베트남인 및 국제 환자의 실제 치료 경험을 탐색하세요.',
+    journeysIntro: 'Emis Dental에서 해외 베트남인 및 국제 환자의 실제 치료 경험을 탐색하세요.',
     journeysCTA: '환자 이야기 읽기',
     patientStories: [
       {

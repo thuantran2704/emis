@@ -1,9 +1,9 @@
 ﻿const aboutContent = {
   english: {
-    metaTitle: 'About EMIS | Implant & Full-Mouth Rehabilitation',
+    metaTitle: 'About Emis Dental | Implant & Full-Mouth Rehabilitation',
     heroTitle: 'Advanced Implant & Full-Mouth Rehabilitation Care',
     heroSubtitle:
-      'At EMIS, we help patients restore comfort, function, and confidence through carefully planned implant and rehabilitation treatment. Whether you live in Vietnam or overseas, our goal is to help you understand your situation clearly and explore treatment options with greater confidence.',
+      'At Emis Dental, we help patients restore comfort, function, and confidence through carefully planned implant and rehabilitation treatment. Whether you live in Vietnam or overseas, our goal is to help you understand your situation clearly and explore treatment options with greater confidence.',
     heroPrimaryCTA: 'Send Your X-ray',
     heroSecondaryCTA: 'Meet Our Doctors',
 
@@ -42,13 +42,13 @@
       {
         name: 'Dr. Tran Minh Tu',
         role: 'Odonto-Maxillofacial Surgeon',
-        description: 'Implant Surgery • Oral Surgery • Full-Mouth Rehabilitation. Currently practicing at Ho Chi Minh City Odonto-Maxillofacial Hospital and EMIS Premium Dental Clinic.',
+        description: 'Implant Surgery • Oral Surgery • Full-Mouth Rehabilitation. Currently practicing at Ho Chi Minh City Odonto-Maxillofacial Hospital and Emis Dental.',
         cta: 'Contact Us',
       },
     ],
 
     internationalTitle: 'Support Before, During, And After Treatment',
-    internationalIntro: 'Many patients travel to Vietnam specifically for implant or rehabilitation treatment. To help make the process clearer and more manageable, EMIS provides support before, during, and after your visit.',
+    internationalIntro: 'Many patients travel to Vietnam specifically for implant or rehabilitation treatment. To help make the process clearer and more manageable, Emis Dental provides support before, during, and after your visit.',
     internationalBullets: [
       'Online Consultation',
       'Preliminary X-ray Review',
@@ -87,10 +87,10 @@
   },
 
   vietnamese: {
-    metaTitle: 'Về EMIS | Implant & Phục Hồi Toàn Hàm',
+    metaTitle: 'Về Emis Dental | Implant & Phục Hồi Toàn Hàm',
     heroTitle: 'Chuyên Sâu Implant & Phục Hồi Toàn Hàm',
     heroSubtitle:
-      'Tại EMIS, chúng tôi tập trung vào Implant và phục hồi toàn hàm nhằm giúp bệnh nhân khôi phục khả năng ăn nhai, sự tự tin và chất lượng cuộc sống lâu dài. Dù bạn đang sinh sống tại Việt Nam hay ở nước ngoài, chúng tôi mong muốn giúp bạn hiểu rõ sức khỏe răng miệng của mình và có đủ thông tin trước khi đưa ra lựa chọn.',
+      'Tại Emis Dental, chúng tôi tập trung vào Implant và phục hồi toàn hàm nhằm giúp bệnh nhân khôi phục khả năng ăn nhai, sự tự tin và chất lượng cuộc sống lâu dài. Dù bạn đang sinh sống tại Việt Nam hay ở nước ngoài, chúng tôi mong muốn giúp bạn hiểu rõ sức khỏe răng miệng của mình và có đủ thông tin trước khi đưa ra lựa chọn.',
     heroPrimaryCTA: 'Gửi X-ray Của Bạn',
     heroSecondaryCTA: 'Tìm Hiểu Đội Ngũ Bác Sĩ',
 
@@ -113,7 +113,7 @@
     teamTitle: 'Đội Ngũ Đồng Hành Cùng Bạn',
     teamIntro: 'Một đội ngũ hướng tới một mục tiêu chung: giúp bệnh nhân khôi phục khả năng ăn nhai, tự tin và chất lượng cuộc sống lâu dài.',
     teamMembers: [
-      { name: 'BS. CKI Trần Minh Tú', role: 'Phẫu thuật Răng Hàm Mặt', description: 'Implant • Tiểu phẫu Răng Hàm Mặt • Phục hồi toàn hàm. Hiện đang công tác tại Bệnh viện Răng Hàm Mặt TP.HCM và EMIS Premium Dental Clinic.', cta: 'Liên Hệ Chúng Tôi' },
+      { name: 'BS. CKI Trần Minh Tú', role: 'Phẫu thuật Răng Hàm Mặt', description: 'Implant • Tiểu phẫu Răng Hàm Mặt • Phục hồi toàn hàm. Hiện đang công tác tại Bệnh viện Răng Hàm Mặt TP.HCM và Emis Dental.', cta: 'Liên Hệ Chúng Tôi' },
     ],
 
     internationalTitle: 'Hỗ Trợ Trước, Trong Và Sau Điều Trị',
@@ -136,19 +136,19 @@
     startTitle: 'Bắt Đầu Từ Việc Hiểu Rõ Trường Hợp Của Bạn',
     steps: [
       { step: 'Bước 1', title: 'Gửi X-ray', text: 'Gửi X-ray hoặc chia sẻ thông tin về trường hợp của bạn.' },
-      { step: 'Bước 2', title: 'Nhận đánh giá sơ bộ', text: 'Nhận đánh giá sơ bộ từ đội ngũ EMIS.' },
+      { step: 'Bước 2', title: 'Nhận đánh giá sơ bộ', text: 'Nhận đánh giá sơ bộ từ đội ngũ Emis Dental.' },
       { step: 'Bước 3', title: 'Trao đổi về lựa chọn điều trị', text: 'Cùng trao đổi về những lựa chọn có thể phù hợp với nhu cầu và mong muốn của bạn.' },
     ],
     note: 'Đánh giá ban đầu giúp chúng tôi hiểu rõ hơn về trường hợp bạn. Kế hoạch điều trị cuối cùng sẽ được xác định sau khi thăm khám trực tiếp và thực hiện đầy đủ các chẩn đoán cần thiết.',
     startPrimaryCTA: 'Gửi X-ray Của Bạn',
-    startSecondaryCTA: 'Trao Đổi Với Đội Ngũ EMIS',
+    startSecondaryCTA: 'Trao Đổi Với Đội Ngũ Emis Dental',
   },
 
   french: {
-    metaTitle: 'À Propos d\'EMIS | Implantologie & Réhabilitation Complète',
+    metaTitle: 'À Propos d\'Emis Dental | Implantologie & Réhabilitation Complète',
     heroTitle: 'Soins Avancés en Implantologie et Réhabilitation Complète',
     heroSubtitle:
-      'Chez EMIS, nous aidons les patients à retrouver confort, fonction et confiance grâce à une prise en charge implantaire et de réhabilitation soigneusement planifiée. Que vous viviez au Vietnam ou à l\'étranger, notre objectif est de vous aider à comprendre clairement votre situation et à explorer vos options avec confiance.',
+      'Chez Emis Dental, nous aidons les patients à retrouver confort, fonction et confiance grâce à une prise en charge implantaire et de réhabilitation soigneusement planifiée. Que vous viviez au Vietnam ou à l\'étranger, notre objectif est de vous aider à comprendre clairement votre situation et à explorer vos options avec confiance.',
     heroPrimaryCTA: 'Envoyez Votre Radiographie',
     heroSecondaryCTA: 'Rencontrez Nos Médecins',
 
@@ -187,13 +187,13 @@
       {
         name: 'Dr Tran Minh Tu',
         role: 'Chirurgien Maxillo-Facial',
-        description: 'Chirurgie implantaire • Chirurgie orale • Réhabilitation complète. Exerce actuellement à l\'Hôpital Odonto-Maxillo-Facial de Ho Chi Minh-Ville et à EMIS Premium Dental Clinic.',
+        description: 'Chirurgie implantaire • Chirurgie orale • Réhabilitation complète. Exerce actuellement à l\'Hôpital Odonto-Maxillo-Facial de Ho Chi Minh-Ville et à Emis Dental.',
         cta: 'Contactez-Nous',
       },
     ],
 
     internationalTitle: 'Accompagnement Avant, Pendant Et Après Le Traitement',
-    internationalIntro: 'De nombreux patients voyagent au Vietnam pour des traitements implantaires ou de réhabilitation. Pour rendre le processus plus clair et plus simple, EMIS fournit un accompagnement avant, pendant et après votre visite.',
+    internationalIntro: 'De nombreux patients voyagent au Vietnam pour des traitements implantaires ou de réhabilitation. Pour rendre le processus plus clair et plus simple, Emis Dental fournit un accompagnement avant, pendant et après votre visite.',
     internationalBullets: [
       'Consultation En Ligne',
       'Évaluation Préliminaire De La Radiographie',
@@ -232,10 +232,10 @@
   },
 
   simplified: {
-    metaTitle: '关于 EMIS | 种植与全口重建',
+    metaTitle: '关于 Emis Dental | 种植与全口重建',
     heroTitle: '先进种植与全口重建护理',
     heroSubtitle:
-      '在 EMIS，我们通过周密规划的种植与重建治疗，帮助患者恢复舒适、功能与自信。无论您居住在越南还是海外，我们都希望帮助您清晰了解自身情况，并更有信心地选择治疗方案。',
+      '在 Emis Dental，我们通过周密规划的种植与重建治疗，帮助患者恢复舒适、功能与自信。无论您居住在越南还是海外，我们都希望帮助您清晰了解自身情况，并更有信心地选择治疗方案。',
     heroPrimaryCTA: '发送您的 X 光片',
     heroSecondaryCTA: '了解医生团队',
 
@@ -274,13 +274,13 @@
       {
         name: 'Dr. Tran Minh Tu',
         role: '口腔颌面外科医生',
-        description: '种植手术 • 口腔外科 • 全口重建。现就职于胡志明市口腔颌面医院及 EMIS Premium Dental Clinic。',
+        description: '种植手术 • 口腔外科 • 全口重建。现就职于胡志明市口腔颌面医院及 Emis Dental。',
         cta: '联系我们',
       },
     ],
 
     internationalTitle: '治疗前中后的支持服务',
-    internationalIntro: '许多患者专程前往越南进行种植或重建治疗。为让过程更清晰、更易管理，EMIS 提供治疗前、中、后的全程支持。',
+    internationalIntro: '许多患者专程前往越南进行种植或重建治疗。为让过程更清晰、更易管理，Emis Dental 提供治疗前、中、后的全程支持。',
     internationalBullets: [
       '在线咨询',
       'X 光片初步评估',
@@ -319,10 +319,10 @@
   },
 
   traditional: {
-    metaTitle: '關於 EMIS | 植牙與全口重建',
+    metaTitle: '關於 Emis Dental | 植牙與全口重建',
     heroTitle: '進階植牙與全口重建照護',
     heroSubtitle:
-      '在 EMIS，我們透過審慎規劃的植牙與重建治療，協助患者恢復舒適、功能與自信。無論您居住在越南或海外，我們都希望幫助您清楚理解自身狀況，並更有信心地評估治療選項。',
+      '在 Emis Dental，我們透過審慎規劃的植牙與重建治療，協助患者恢復舒適、功能與自信。無論您居住在越南或海外，我們都希望幫助您清楚理解自身狀況，並更有信心地評估治療選項。',
     heroPrimaryCTA: '傳送您的 X 光片',
     heroSecondaryCTA: '認識醫療團隊',
 
@@ -361,13 +361,13 @@
       {
         name: 'Dr. Tran Minh Tu',
         role: '口腔顎面外科醫師',
-        description: '植牙手術 • 口腔外科 • 全口重建。現任職於胡志明市口腔顎面醫院與 EMIS Premium Dental Clinic。',
+        description: '植牙手術 • 口腔外科 • 全口重建。現任職於胡志明市口腔顎面醫院與 Emis Dental。',
         cta: '聯絡我們',
       },
     ],
 
     internationalTitle: '治療前中後支援',
-    internationalIntro: '許多患者會前往越南進行植牙或重建治療。為使流程更清楚、可控，EMIS 提供治療前、中、後的完整支援。',
+    internationalIntro: '許多患者會前往越南進行植牙或重建治療。為使流程更清楚、可控，Emis Dental 提供治療前、中、後的完整支援。',
     internationalBullets: [
       '線上諮詢',
       'X 光片初步評估',
@@ -406,10 +406,10 @@
   },
 
   korean: {
-    metaTitle: 'EMIS 소개 | 임플란트 및 전악 재건',
+    metaTitle: 'Emis Dental 소개 | 임플란트 및 전악 재건',
     heroTitle: '고도 임플란트 및 전악 재건 치료',
     heroSubtitle:
-      'EMIS는 체계적으로 계획된 임플란트 및 재건 치료를 통해 환자의 편안함, 기능, 자신감을 회복하도록 돕습니다. 베트남 거주자와 해외 환자 모두가 자신의 상태를 명확히 이해하고 더 자신 있게 치료 옵션을 선택할 수 있도록 지원합니다.',
+      'Emis Dental은 체계적으로 계획된 임플란트 및 재건 치료를 통해 환자의 편안함, 기능, 자신감을 회복하도록 돕습니다. 베트남 거주자와 해외 환자 모두가 자신의 상태를 명확히 이해하고 더 자신 있게 치료 옵션을 선택할 수 있도록 지원합니다.',
     heroPrimaryCTA: 'X-ray 보내기',
     heroSecondaryCTA: '의료진 소개 보기',
 
@@ -448,13 +448,13 @@
       {
         name: 'Dr. Tran Minh Tu',
         role: '구강악안면외과 전문의',
-        description: '임플란트 수술 • 구강외과 • 전악 재건. 현재 호치민시 구강악안면병원 및 EMIS Premium Dental Clinic에서 진료 중입니다.',
+        description: '임플란트 수술 • 구강외과 • 전악 재건. 현재 호치민시 구강악안면병원 및 Emis Dental에서 진료 중입니다.',
         cta: '문의하기',
       },
     ],
 
     internationalTitle: '치료 전·중·후 지원',
-    internationalIntro: '많은 환자들이 임플란트 또는 재건 치료를 위해 베트남을 방문합니다. 과정을 더 명확하고 수월하게 만들기 위해 EMIS는 방문 전, 중, 후 전반의 지원을 제공합니다.',
+    internationalIntro: '많은 환자들이 임플란트 또는 재건 치료를 위해 베트남을 방문합니다. 과정을 더 명확하고 수월하게 만들기 위해 Emis Dental은 방문 전, 중, 후 전반의 지원을 제공합니다.',
     internationalBullets: [
       '온라인 상담',
       'X-ray 사전 검토',

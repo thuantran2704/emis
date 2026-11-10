@@ -1,20 +1,20 @@
 export const privacyContent = {
   english: {
-    metaTitle: 'Privacy Policy | EMIS Dental',
+    metaTitle: 'Privacy Policy | Emis Dental',
     metaDescription:
-      'How EMIS Dental collects, uses, stores, and protects your personal and health information.',
+      'How Emis Dental collects, uses, stores, and protects your personal and health information.',
     title: 'Privacy Policy',
     lastUpdatedLabel: 'Last updated',
     lastUpdated: '06/25/2026',
     intro: [
-      'At EMIS Dental, we are committed to protecting your privacy and personal information.',
+      'At Emis Dental, we are committed to protecting your privacy and personal information.',
       'This Privacy Policy explains how we collect, use, store, and protect your personal information.',
     ],
-    contactCta: 'Contact EMIS Dental',
+    contactCta: 'Contact Emis Dental',
     sections: [
       {
         title: 'Information We Collect',
-        paragraphs: ['Depending on how you interact with EMIS Dental, we may collect the following information.'],
+        paragraphs: ['Depending on how you interact with Emis Dental, we may collect the following information.'],
         groups: [
           {
             subtitle: 'Contact Information',
@@ -124,7 +124,7 @@ export const privacyContent = {
       {
         title: 'Contact Us',
         paragraphs: [
-          'If you have any questions about this Privacy Policy or how we handle your personal information, please contact EMIS Dental.',
+          'If you have any questions about this Privacy Policy or how we handle your personal information, please contact Emis Dental.',
           "We're always happy to help.",
         ],
       },
@@ -132,21 +132,21 @@ export const privacyContent = {
   },
 
   vietnamese: {
-    metaTitle: 'Chính Sách Bảo Mật | EMIS Dental',
+    metaTitle: 'Chính Sách Bảo Mật | Emis Dental',
     metaDescription:
-      'Cách EMIS Dental thu thập, sử dụng, lưu trữ và bảo vệ thông tin cá nhân và thông tin sức khỏe của bạn.',
+      'Cách Emis Dental thu thập, sử dụng, lưu trữ và bảo vệ thông tin cá nhân và thông tin sức khỏe của bạn.',
     title: 'Chính Sách Bảo Mật',
     lastUpdatedLabel: 'Cập nhật lần cuối',
     lastUpdated: '25/06/2026',
     intro: [
-      'EMIS Dental cam kết bảo vệ thông tin cá nhân và quyền riêng tư của bạn.',
-      'Chính sách này giúp bạn hiểu cách EMIS Dental thu thập, sử dụng, lưu trữ và bảo vệ thông tin cá nhân.',
+      'Emis Dental cam kết bảo vệ thông tin cá nhân và quyền riêng tư của bạn.',
+      'Chính sách này giúp bạn hiểu cách Emis Dental thu thập, sử dụng, lưu trữ và bảo vệ thông tin cá nhân.',
     ],
-    contactCta: 'Liên Hệ EMIS Dental',
+    contactCta: 'Liên Hệ Emis Dental',
     sections: [
       {
         title: 'Thông Tin Chúng Tôi Thu Thập',
-        paragraphs: ['Tùy theo cách bạn sử dụng website, liên hệ hoặc điều trị tại EMIS Dental, chúng tôi có thể thu thập các thông tin sau:'],
+        paragraphs: ['Tùy theo cách bạn sử dụng website, liên hệ hoặc điều trị tại Emis Dental, chúng tôi có thể thu thập các thông tin sau:'],
         groups: [
           {
             subtitle: 'Thông tin liên hệ',
@@ -189,14 +189,14 @@ export const privacyContent = {
       {
         title: 'Phim X-quang, CT Và Hồ Sơ Nha Khoa',
         paragraphs: [
-          'Nhiều khách hàng của EMIS Dental, đặc biệt là khách hàng ở nước ngoài, lựa chọn gửi phim X-quang, CT hoặc hồ sơ nha khoa trước khi đến phòng khám.',
+          'Nhiều khách hàng của Emis Dental, đặc biệt là khách hàng ở nước ngoài, lựa chọn gửi phim X-quang, CT hoặc hồ sơ nha khoa trước khi đến phòng khám.',
           'Những tài liệu này được sử dụng để hỗ trợ tư vấn, đánh giá ban đầu, trao đổi kế hoạch điều trị và phối hợp chăm sóc khách hàng.',
         ],
       },
       {
         title: 'Bảo Mật Thông Tin',
         paragraphs: [
-          'EMIS Dental áp dụng các biện pháp quản lý, kỹ thuật và tổ chức phù hợp nhằm bảo vệ thông tin khỏi việc truy cập, sử dụng, tiết lộ hoặc thay đổi trái phép.',
+          'Emis Dental áp dụng các biện pháp quản lý, kỹ thuật và tổ chức phù hợp nhằm bảo vệ thông tin khỏi việc truy cập, sử dụng, tiết lộ hoặc thay đổi trái phép.',
           'Thông tin chỉ được truy cập bởi những nhân sự có thẩm quyền và cần thiết cho việc điều trị, chăm sóc khách hàng hoặc vận hành phòng khám.',
           'Mặc dù áp dụng nhiều biện pháp bảo mật, không có phương thức lưu trữ hoặc truyền tải dữ liệu điện tử nào có thể đảm bảo an toàn tuyệt đối.',
         ],
@@ -204,7 +204,7 @@ export const privacyContent = {
       {
         title: 'Chia Sẻ Thông Tin',
         paragraphs: [
-          'EMIS Dental không bán hoặc chia sẻ thông tin cá nhân cho mục đích thương mại.',
+          'Emis Dental không bán hoặc chia sẻ thông tin cá nhân cho mục đích thương mại.',
           'Thông tin chỉ được chia sẻ khi cần thiết cho việc điều trị, vận hành phòng khám hoặc theo yêu cầu của pháp luật.',
           'Việc chia sẻ có thể bao gồm:',
         ],
@@ -221,7 +221,7 @@ export const privacyContent = {
         title: 'Hình Ảnh Và Hồ Sơ Điều Trị',
         paragraphs: [
           'Hình ảnh, video, lời chia sẻ, hồ sơ điều trị hoặc hình ảnh trước và sau điều trị chỉ được sử dụng cho mục đích giáo dục, truyền thông hoặc giới thiệu chuyên môn khi có sự đồng ý của bạn.',
-          'Việc từ chối đồng ý sử dụng hình ảnh sẽ không ảnh hưởng đến chất lượng điều trị hoặc các quyền lợi của bạn tại EMIS Dental.',
+          'Việc từ chối đồng ý sử dụng hình ảnh sẽ không ảnh hưởng đến chất lượng điều trị hoặc các quyền lợi của bạn tại Emis Dental.',
           'Để biết thêm thông tin, vui lòng tham khảo Chính Sách Đồng Ý Sử Dụng Hình Ảnh.',
         ],
       },
@@ -229,7 +229,7 @@ export const privacyContent = {
         title: 'Khách Hàng Quốc Tế',
         paragraphs: [
           'Đối với khách hàng liên hệ từ nước ngoài, thông tin có thể được trao đổi qua các phương thức điện tử để phục vụ tư vấn, trao đổi kế hoạch điều trị và phối hợp chăm sóc trước khi đến Việt Nam.',
-          'Khi chủ động gửi thông tin cho EMIS Dental, bạn đồng ý để chúng tôi sử dụng các thông tin đó cho những mục đích được nêu trong Chính Sách Bảo Mật này.',
+          'Khi chủ động gửi thông tin cho Emis Dental, bạn đồng ý để chúng tôi sử dụng các thông tin đó cho những mục đích được nêu trong Chính Sách Bảo Mật này.',
         ],
       },
       {
@@ -241,22 +241,22 @@ export const privacyContent = {
       {
         title: 'Cookie Và Dữ Liệu Website',
         paragraphs: [
-          'Website của EMIS Dental có thể sử dụng cookie và các công cụ phân tích để cải thiện hoạt động của website và nâng cao trải nghiệm người dùng.',
-          'Các công cụ này không thu thập thông tin sức khỏe cá nhân, trừ khi bạn chủ động cung cấp thông qua website hoặc các kênh liên hệ của EMIS Dental.',
+          'Website của Emis Dental có thể sử dụng cookie và các công cụ phân tích để cải thiện hoạt động của website và nâng cao trải nghiệm người dùng.',
+          'Các công cụ này không thu thập thông tin sức khỏe cá nhân, trừ khi bạn chủ động cung cấp thông qua website hoặc các kênh liên hệ của Emis Dental.',
           'Bạn có thể thay đổi cài đặt trình duyệt để quản lý cookie nếu muốn.',
         ],
       },
       {
         title: 'Thay Đổi Chính Sách',
         paragraphs: [
-          'EMIS Dental có thể cập nhật Chính Sách Bảo Mật khi cần thiết để phù hợp với hoạt động thực tế hoặc các quy định pháp luật hiện hành.',
+          'Emis Dental có thể cập nhật Chính Sách Bảo Mật khi cần thiết để phù hợp với hoạt động thực tế hoặc các quy định pháp luật hiện hành.',
           'Phiên bản mới nhất sẽ luôn được đăng tải trên website.',
         ],
       },
       {
         title: 'Liên Hệ',
         paragraphs: [
-          'Nếu bạn có bất kỳ câu hỏi nào về Chính Sách Bảo Mật hoặc việc xử lý thông tin cá nhân, vui lòng liên hệ với EMIS Dental.',
+          'Nếu bạn có bất kỳ câu hỏi nào về Chính Sách Bảo Mật hoặc việc xử lý thông tin cá nhân, vui lòng liên hệ với Emis Dental.',
           'Chúng tôi luôn sẵn sàng hỗ trợ và giải đáp các thắc mắc của bạn.',
         ],
       },

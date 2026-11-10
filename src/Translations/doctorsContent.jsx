@@ -1,6 +1,6 @@
 const doctorsContent = {
   english: {
-    metaTitle: 'Doctors | EMIS Dental',
+    metaTitle: 'Doctors | Emis Dental',
 
     hero: {
       eyebrow: 'DOCTORS PAGE OVERVIEW',
@@ -8,7 +8,7 @@ const doctorsContent = {
       title: 'Meet The Team Behind Your Care',
 
       subtitle:
-        'Implant treatment and full-mouth rehabilitation often involve more than one stage of care. At EMIS, patients are supported by a team of clinicians working together throughout the treatment journey.',
+        'Implant treatment and full-mouth rehabilitation often involve more than one stage of care. At Emis Dental, patients are supported by a team of clinicians working together throughout the treatment journey.',
 
       highlights: [
         'Implant-Focused Team',
@@ -57,7 +57,7 @@ const doctorsContent = {
     title: 'The Doctors Behind Your Treatment',
 
     subtitle:
-        'Every patient is different. Below are the doctors who support patients throughout their treatment journey at EMIS.',
+        'Every patient is different. Below are the doctors who support patients throughout their treatment journey at Emis Dental.',
     },
 
     decisionSection: {
@@ -95,7 +95,7 @@ const doctorsContent = {
   },
 
   vietnamese: {
-    metaTitle: 'Đội Ngũ Bác Sĩ | EMIS Dental',
+    metaTitle: 'Đội Ngũ Bác Sĩ | Emis Dental',
 
     hero: {
       eyebrow: 'ĐỘI NGŨ BÁC SĨ',
@@ -103,7 +103,7 @@ const doctorsContent = {
       title: 'Đội Ngũ Đồng Hành Cùng Bạn',
 
       subtitle:
-        'Điều trị Implant và phục hồi toàn hàm thường bao gồm nhiều bước, từ thăm khám, lập kế hoạch đến phẫu thuật và phục hình. Tại EMIS, các bác sĩ cùng trao đổi và phối hợp trong từng giai đoạn để giúp bệnh nhân hiểu rõ kế hoạch và yên tâm hơn trong suốt quá trình điều trị.',
+        'Điều trị Implant và phục hồi toàn hàm thường bao gồm nhiều bước, từ thăm khám, lập kế hoạch đến phẫu thuật và phục hình. Tại Emis Dental, các bác sĩ cùng trao đổi và phối hợp trong từng giai đoạn để giúp bệnh nhân hiểu rõ kế hoạch và yên tâm hơn trong suốt quá trình điều trị.',
 
       highlights: [
         'Chuyên sâu Implant',
@@ -122,7 +122,7 @@ const doctorsContent = {
       title: 'Mỗi Bác Sĩ Một Thế Mạnh, Cùng Một Mục Tiêu',
 
       subtitle:
-        'Một ca Implant hoặc phục hồi toàn hàm thường không chỉ phụ thuộc vào một thủ thuật riêng lẻ. Tùy từng trường hợp, quá trình điều trị có thể cần sự phối hợp giữa chẩn đoán, phẫu thuật, phục hình và theo dõi xuyên suốt. Mục tiêu chung của đội ngũ EMIS là giúp bệnh nhân ăn nhai thoải mái hơn, tự tin hơn và duy trì kết quả ổn định theo thời gian.',
+        'Một ca Implant hoặc phục hồi toàn hàm thường không chỉ phụ thuộc vào một thủ thuật riêng lẻ. Tùy từng trường hợp, quá trình điều trị có thể cần sự phối hợp giữa chẩn đoán, phẫu thuật, phục hình và theo dõi xuyên suốt. Mục tiêu chung của đội ngũ Emis Dental là giúp bệnh nhân ăn nhai thoải mái hơn, tự tin hơn và duy trì kết quả ổn định theo thời gian.',
     },
 
     journeyCards: [
@@ -153,7 +153,7 @@ const doctorsContent = {
     title: 'Đội Ngũ Bác Sĩ Đồng Hành Cùng Bạn',
 
     subtitle:
-        'Mỗi bác sĩ mang đến một thế mạnh chuyên môn khác nhau. Dưới đây là đội ngũ bác sĩ đang đồng hành cùng bệnh nhân tại EMIS.',
+        'Mỗi bác sĩ mang đến một thế mạnh chuyên môn khác nhau. Dưới đây là đội ngũ bác sĩ đang đồng hành cùng bệnh nhân tại Emis Dental.',
     },
 
     decisionSection: {
@@ -162,7 +162,7 @@ const doctorsContent = {
     title: 'Hiểu Rõ Trước Khi Quyết Định',
 
     subtitle:
-        'Không phải mọi trường hợp mất răng đều cần cùng một giải pháp. Vì vậy, điều quan trọng là hiểu rõ tình trạng hiện tại trước khi lựa chọn hướng điều trị phù hợp. Nếu đã có X-ray hoặc CBCT, bạn có thể gửi trước để đội ngũ EMIS hỗ trợ đánh giá ban đầu.',
+        'Không phải mọi trường hợp mất răng đều cần cùng một giải pháp. Vì vậy, điều quan trọng là hiểu rõ tình trạng hiện tại trước khi lựa chọn hướng điều trị phù hợp. Nếu đã có X-ray hoặc CBCT, bạn có thể gửi trước để đội ngũ Emis Dental hỗ trợ đánh giá ban đầu.',
 
     stepsTitle: 'Những Bước Tiếp Theo',
 
@@ -191,7 +191,7 @@ const doctorsContent = {
   },
 
   french: {
-    metaTitle: 'Équipe Médicale | EMIS Dental',
+    metaTitle: 'Équipe Médicale | Emis Dental',
 
     hero: {
       eyebrow: 'ÉQUIPE MÉDICALE',
@@ -199,7 +199,7 @@ const doctorsContent = {
       title: 'L’Équipe Qui Vous Accompagne',
 
       subtitle:
-        'Le traitement implantaire et la réhabilitation complète nécessitent souvent plusieurs étapes. Chez EMIS, les patients sont accompagnés par une équipe de praticiens travaillant ensemble tout au long du parcours de soins.',
+        'Le traitement implantaire et la réhabilitation complète nécessitent souvent plusieurs étapes. Chez Emis Dental, les patients sont accompagnés par une équipe de praticiens travaillant ensemble tout au long du parcours de soins.',
 
       highlights: [
         'Équipe spécialisée en implantologie',
@@ -247,7 +247,7 @@ const doctorsContent = {
     title: 'Les Médecins Qui Vous Accompagnent',
 
     subtitle:
-    'Chaque patient est différent. Découvrez les praticiens qui accompagnent les patients tout au long de leur parcours de traitement chez EMIS.',
+    'Chaque patient est différent. Découvrez les praticiens qui accompagnent les patients tout au long de leur parcours de traitement chez Emis Dental.',
     },
 
     decisionSection: {
@@ -277,7 +277,7 @@ const doctorsContent = {
   },
 
   korean: {
-    metaTitle: '의료진 소개 | EMIS Dental',
+    metaTitle: '의료진 소개 | Emis Dental',
 
     hero: {
       eyebrow: '의료진 소개',
@@ -285,7 +285,7 @@ const doctorsContent = {
       title: '당신의 치료를 함께하는 팀',
 
       subtitle:
-        '임플란트 치료와 전체 구강 재건은 여러 단계의 치료 과정을 포함하는 경우가 많습니다. EMIS에서는 의료진이 함께 협력하여 치료 전 과정에서 환자를 지원합니다.',
+        '임플란트 치료와 전체 구강 재건은 여러 단계의 치료 과정을 포함하는 경우가 많습니다. Emis Dental에서는 의료진이 함께 협력하여 치료 전 과정에서 환자를 지원합니다.',
 
       highlights: [
         '임플란트 전문 팀',
@@ -304,7 +304,7 @@ const doctorsContent = {
       title: '다양한 전문성, 하나의 치료 여정',
 
       subtitle:
-        '성공적인 치료는 한 사람의 노력만으로 이루어지지 않습니다. 환자의 상태에 따라 진단, 수술, 보철 치료 및 사후 관리에 여러 의료진이 함께 참여할 수 있습니다. EMIS는 협력적인 진료를 통해 체계적이고 개인 맞춤형이며 장기적인 결과를 고려한 치료 경험을 제공합니다.',
+        '성공적인 치료는 한 사람의 노력만으로 이루어지지 않습니다. 환자의 상태에 따라 진단, 수술, 보철 치료 및 사후 관리에 여러 의료진이 함께 참여할 수 있습니다. Emis Dental은 협력적인 진료를 통해 체계적이고 개인 맞춤형이며 장기적인 결과를 고려한 치료 경험을 제공합니다.',
     },
 
     journeyCards: [
@@ -333,7 +333,7 @@ const doctorsContent = {
     title: '당신의 치료를 함께하는 의료진',
 
     subtitle:
-    '모든 환자는 서로 다릅니다. 아래는 EMIS에서 환자의 치료 여정을 함께하는 의료진입니다.',
+    '모든 환자는 서로 다릅니다. 아래는 Emis Dental에서 환자의 치료 여정을 함께하는 의료진입니다.',
     },
 
     decisionSection: {
@@ -363,7 +363,7 @@ const doctorsContent = {
   },
 
   simplified: {
-    metaTitle: '医生团队 | EMIS Dental',
+    metaTitle: '医生团队 | Emis Dental',
 
     hero: {
       eyebrow: '医生团队',
@@ -371,7 +371,7 @@ const doctorsContent = {
       title: '陪伴您治疗旅程的团队',
 
       subtitle:
-        '种植牙和全口重建治疗通常包含多个阶段。在 EMIS，患者将获得多位医生共同协作的支持，贯穿整个治疗过程。',
+        '种植牙和全口重建治疗通常包含多个阶段。在 Emis Dental，患者将获得多位医生共同协作的支持，贯穿整个治疗过程。',
 
       highlights: [
         '种植牙专业团队',
@@ -421,7 +421,7 @@ const doctorsContent = {
     title: '陪伴您治疗旅程的医生团队',
 
     subtitle:
-    '每位患者的情况都不同。以下是 EMIS 陪伴患者完成治疗旅程的医生团队。',
+    '每位患者的情况都不同。以下是 Emis Dental 陪伴患者完成治疗旅程的医生团队。',
     },
 
     decisionSection: {
@@ -451,7 +451,7 @@ const doctorsContent = {
   },
 
   traditional: {
-    metaTitle: '醫師團隊 | EMIS Dental',
+    metaTitle: '醫師團隊 | Emis Dental',
 
     hero: {
       eyebrow: '醫師團隊',
@@ -459,7 +459,7 @@ const doctorsContent = {
       title: '陪伴您治療旅程的團隊',
 
       subtitle:
-        '植牙與全口重建治療通常包含多個階段。在 EMIS，患者將由多位醫師共同合作照護，陪伴整個治療過程。',
+        '植牙與全口重建治療通常包含多個階段。在 Emis Dental，患者將由多位醫師共同合作照護，陪伴整個治療過程。',
 
       highlights: [
         '植牙專業團隊',
@@ -510,7 +510,7 @@ const doctorsContent = {
     title: '陪伴您治療旅程的醫師團隊',
 
     subtitle:
-    '每位患者的情況都不同。以下是 EMIS 陪伴患者完成治療旅程的醫師團隊。',
+    '每位患者的情況都不同。以下是 Emis Dental 陪伴患者完成治療旅程的醫師團隊。',
     },
 
     decisionSection: {

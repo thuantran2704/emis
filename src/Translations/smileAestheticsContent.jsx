@@ -1,8 +1,8 @@
 const smileAestheticsContent = {
   english: {
-    metaTitle: 'Smile Aesthetics | EMIS Dental',
+    metaTitle: 'Smile Aesthetics | Emis Dental',
     metaDescription:
-      'Explore smile aesthetics options at EMIS, from whitening and veneers to orthodontics and restorative enhancements. Share your photos for a preliminary review.',
+      'Explore smile aesthetics options at Emis Dental, from whitening and veneers to orthodontics and restorative enhancements. Share your photos for a preliminary review.',
     hero: {
       title: 'Smile Aesthetics',
       lines: [
@@ -92,7 +92,7 @@ const smileAestheticsContent = {
     cases: {
       title: 'Real patient cases',
       intro:
-        'Explore how different smile concerns were addressed through cosmetic and restorative care at EMIS.',
+        'Explore how different smile concerns were addressed through cosmetic and restorative care at Emis Dental.',
       cards: [
         {
           title: 'Whitening',
@@ -123,9 +123,9 @@ const smileAestheticsContent = {
     },
   },
   vietnamese: {
-    metaTitle: 'Thẩm Mỹ Nụ Cười | EMIS Dental',
+    metaTitle: 'Thẩm Mỹ Nụ Cười | Emis Dental',
     metaDescription:
-      'Tìm hiểu các lựa chọn thẩm mỹ nụ cười tại EMIS, từ tẩy trắng, veneer đến niềng răng và phục hồi thẩm mỹ. Gửi hình ảnh để được tư vấn sơ bộ.',
+      'Tìm hiểu các lựa chọn thẩm mỹ nụ cười tại Emis Dental, từ tẩy trắng, veneer đến niềng răng và phục hồi thẩm mỹ. Gửi hình ảnh để được tư vấn sơ bộ.',
     hero: {
       title: 'Thẩm Mỹ Nụ Cười',
       lines: [
@@ -212,7 +212,7 @@ const smileAestheticsContent = {
     cases: {
       title: 'Những ca điều trị thực tế',
       intro:
-        'Khám phá những trường hợp điều trị thẩm mỹ và phục hồi thực tế tại EMIS.',
+        'Khám phá những trường hợp điều trị thẩm mỹ và phục hồi thực tế tại Emis Dental.',
       cards: [
         {
           title: 'Tẩy Trắng',
@@ -243,9 +243,9 @@ const smileAestheticsContent = {
     },
   },
   french: {
-    metaTitle: 'Esthétique du Sourire | EMIS Dental',
+    metaTitle: 'Esthétique du Sourire | Emis Dental',
     metaDescription:
-      'Découvrez les options d’esthétique du sourire chez EMIS, du blanchiment aux facettes, à l’orthodontie et aux améliorations restauratrices. Partagez vos photos pour une première évaluation.',
+      'Découvrez les options d’esthétique du sourire chez Emis Dental, du blanchiment aux facettes, à l’orthodontie et aux améliorations restauratrices. Partagez vos photos pour une première évaluation.',
     hero: {
       title: 'Esthétique du Sourire',
       lines: [
@@ -335,7 +335,7 @@ const smileAestheticsContent = {
     cases: {
       title: 'Cas Réels De Patients',
       intro:
-        'Découvrez comment différentes préoccupations esthétiques du sourire ont été prises en charge par des soins esthétiques et restaurateurs chez EMIS.',
+        'Découvrez comment différentes préoccupations esthétiques du sourire ont été prises en charge par des soins esthétiques et restaurateurs chez Emis Dental.',
       cards: [
         {
           title: 'Blanchiment',
@@ -369,9 +369,9 @@ const smileAestheticsContent = {
     },
   },
   simplified: {
-    metaTitle: '微笑美学 | EMIS Dental',
+    metaTitle: '微笑美学 | Emis Dental',
     metaDescription:
-      '了解 EMIS 的微笑美学方案，包括牙齿美白、贴面、正畸与修复增强。您可先分享照片进行初步评估。',
+      '了解 Emis Dental 的微笑美学方案，包括牙齿美白、贴面、正畸与修复增强。您可先分享照片进行初步评估。',
     hero: {
       title: '微笑美学',
       lines: [
@@ -455,7 +455,7 @@ const smileAestheticsContent = {
     cases: {
       title: '真实患者案例',
       intro:
-        '了解 EMIS 如何通过美学与修复治疗处理不同的笑容问题。',
+        '了解 Emis Dental 如何通过美学与修复治疗处理不同的笑容问题。',
       cards: [
         {
           title: '美白',
@@ -486,9 +486,9 @@ const smileAestheticsContent = {
     },
   },
   traditional: {
-    metaTitle: '微笑美學 | EMIS Dental',
+    metaTitle: '微笑美學 | Emis Dental',
     metaDescription:
-      '了解 EMIS 的微笑美學方案，包含牙齒美白、貼片、矯正與修復強化。可先分享照片進行初步評估。',
+      '了解 Emis Dental 的微笑美學方案，包含牙齒美白、貼片、矯正與修復強化。可先分享照片進行初步評估。',
     hero: {
       title: '微笑美學',
       lines: [
@@ -572,7 +572,7 @@ const smileAestheticsContent = {
     cases: {
       title: '真實患者案例',
       intro:
-        '了解 EMIS 如何透過美學與修復照護改善不同笑容困擾。',
+        '了解 Emis Dental 如何透過美學與修復照護改善不同笑容困擾。',
       cards: [
         {
           title: '美白',
@@ -603,9 +603,9 @@ const smileAestheticsContent = {
     },
   },
   korean: {
-    metaTitle: '스마일 심미 | EMIS Dental',
+    metaTitle: '스마일 심미 | Emis Dental',
     metaDescription:
-      'EMIS의 스마일 심미 옵션을 확인하세요. 치아 미백, 베니어, 교정 및 수복 개선까지. 사진을 공유하면 사전 검토를 받을 수 있습니다.',
+      'Emis Dental의 스마일 심미 옵션을 확인하세요. 치아 미백, 베니어, 교정 및 수복 개선까지. 사진을 공유하면 사전 검토를 받을 수 있습니다.',
     hero: {
       title: '스마일 심미',
       lines: [
@@ -695,7 +695,7 @@ const smileAestheticsContent = {
     cases: {
       title: '실제 환자 케이스',
       intro:
-        'EMIS에서 심미 및 수복 치료로 다양한 미소 고민이 어떻게 개선되었는지 확인해 보세요.',
+        'Emis Dental에서 심미 및 수복 치료로 다양한 미소 고민이 어떻게 개선되었는지 확인해 보세요.',
       cards: [
         {
           title: '미백',

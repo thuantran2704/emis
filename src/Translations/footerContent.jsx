@@ -1,6 +1,6 @@
 const footerContent = {
   english: {
-    clinicName: "Emis Dental Clinic",
+    clinicName: "Emis Dental",
     description:
       "Providing professional and gentle dental care with modern equipment and experienced specialists. Your smile, our passion.",
     contactTitle: "Contact Us",
@@ -32,7 +32,7 @@ const footerContent = {
   },
 
   vietnamese: {
-    clinicName: "Phòng Khám Nha Khoa Emis",
+    clinicName: "Emis Dental",
     description:
       "Cung cấp dịch vụ nha khoa chuyên nghiệp và nhẹ nhàng với trang thiết bị hiện đại và đội ngũ bác sĩ giàu kinh nghiệm. Nụ cười của bạn là niềm đam mê của chúng tôi.",
     contactTitle: "Liên hệ",
@@ -51,7 +51,7 @@ const footerContent = {
     warranty: "Bảo Hành & Hỗ Trợ",
     nav: {
       brandStatement: "An tâm bắt đầu từ niềm tin.",
-      aboutHeading: "Về EMIS",
+      aboutHeading: "Về Emis Dental",
       patientInfoHeading: "Thông Tin Bệnh Nhân",
       followHeading: "Theo Dõi",
       visitorProgram: "Chương Trình Thăm Khám",
@@ -65,7 +65,7 @@ const footerContent = {
   },
 
   simplified: {
-    clinicName: "Emis牙科诊所",
+    clinicName: "Emis Dental",
     description:
       "配备现代化设备和经验丰富的专家，为您提供专业而温和的牙科护理。您的微笑是我们的热情所在。",
     contactTitle: "联系我们",
@@ -83,7 +83,7 @@ const footerContent = {
     warranty: "保修与支持",
     nav: {
       brandStatement: "信心源于信任。",
-      aboutHeading: "关于 EMIS",
+      aboutHeading: "关于 Emis Dental",
       patientInfoHeading: "患者信息",
       followHeading: "关注我们",
       visitorProgram: "牙科到访计划",
@@ -97,7 +97,7 @@ const footerContent = {
   },
 
   traditional: {
-    clinicName: "Emis牙科診所",
+    clinicName: "Emis Dental",
     description:
       "配備現代化設備和經驗豐富的專家，為您提供專業而溫和的牙科護理。您的笑容是我們的熱情所在。",
     contactTitle: "聯絡我們",
@@ -116,7 +116,7 @@ const footerContent = {
     warranty: "保固與支援",
     nav: {
       brandStatement: "信心源於信任。",
-      aboutHeading: "關於 EMIS",
+      aboutHeading: "關於 Emis Dental",
       patientInfoHeading: "患者資訊",
       followHeading: "關注我們",
       visitorProgram: "牙科到訪計劃",
@@ -130,7 +130,7 @@ const footerContent = {
   },
 
   french: {
-    clinicName: "Clinique Dentaire Emis",
+    clinicName: "Emis Dental",
     description:
       "Des soins dentaires professionnels et doux avec un équipement moderne et des spécialistes expérimentés. Votre sourire, notre passion.",
     contactTitle: "Contactez-nous",
@@ -149,7 +149,7 @@ const footerContent = {
     warranty: "Garantie & Support",
     nav: {
       brandStatement: "La sérénité commence par la confiance.",
-      aboutHeading: "À Propos d'EMIS",
+      aboutHeading: "À Propos d'Emis Dental",
       patientInfoHeading: "Informations Patient",
       followHeading: "Suivez-nous",
       visitorProgram: "Programme de Visite Dentaire",
@@ -163,7 +163,7 @@ const footerContent = {
   },
 
   korean: {
-    clinicName: "에미스 치과 클리닉",
+    clinicName: "Emis Dental",
     description:
       "최신 장비와 숙련된 전문가들이 전문적이고 부드러운 치과 진료를 제공합니다. 당신의 미소는 우리의 열정입니다.",
     contactTitle: "문의하기",
@@ -181,7 +181,7 @@ const footerContent = {
     warranty: "보증 및 지원",
     nav: {
       brandStatement: "신뢰에서 시작되는 안심.",
-      aboutHeading: "EMIS 소개",
+      aboutHeading: "Emis Dental 소개",
       patientInfoHeading: "환자 정보",
       followHeading: "팔로우하기",
       visitorProgram: "치과 방문 프로그램",

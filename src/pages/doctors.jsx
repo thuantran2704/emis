@@ -28,7 +28,7 @@ const Doctors = () => {
               <div className="overflow-hidden rounded-2xl shadow-lg aspect-[16/9] lg:aspect-auto">
                 <img
                   src={consultationImage}
-                  alt="EMIS Clinical Team"
+                  alt="Emis Dental Clinical Team"
                   className="w-full h-full lg:h-[460px] object-cover object-center"
                 />
               </div>
@@ -134,7 +134,7 @@ const Doctors = () => {
       </section>
 
       {/* DOCTOR SECTION */}
-      <section className="py-32 bg-[#f7f2e7]">
+      <section id="team" className="scroll-mt-20 py-32 bg-[#f7f2e7]">
         <div className="max-w-6xl mx-auto px-6 sm:px-8">
 
           <div className="max-w-2xl mx-auto text-center mb-24">
@@ -155,67 +155,26 @@ const Doctors = () => {
             </p>
           </div>
 
-          <div className="space-y-8">
+          <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
             {DOCTORS.map((doctor) => {
               const t = getDoctorTranslation(doctor, language);
               const featured = doctor.featured;
               return (
               <article
                 key={doctor.id}
-                className={`overflow-hidden rounded-3xl border shadow-sm ${featured ? 'border-[#c5af73] bg-[#193543] lg:grid lg:grid-cols-[minmax(320px,0.82fr)_1fr]' : 'border-[#e2e6e6] bg-white md:grid md:grid-cols-[minmax(230px,0.52fr)_1fr]'}`}
+                className={`grid h-full gap-5 overflow-hidden rounded-3xl border border-[#e2e6e6] bg-white p-5 shadow-sm sm:items-center sm:p-6 ${featured ? 'sm:grid-cols-[minmax(150px,220px)_1fr]' : 'sm:grid-cols-[minmax(130px,165px)_1fr]'}`}
               >
-                <div className={`doctor-portrait-frame overflow-hidden ${featured ? 'h-[420px] lg:h-full lg:min-h-[600px]' : 'h-[360px] md:h-full md:min-h-[420px]'}`}>
+                <div className="doctor-portrait-frame aspect-[4/5] overflow-hidden rounded-2xl">
                   <img src={doctor.portrait} alt={t.name} loading="lazy" decoding="async" className="h-full w-full object-cover object-top" />
                 </div>
-                <div className={`flex flex-col ${featured ? 'p-7 sm:p-10 lg:p-12' : 'p-7 sm:p-9'}`}>
-                  {featured && <span className="mb-7 block h-1 w-12 rounded-full bg-[#d7bc7b]" aria-hidden="true" />}
-                  <h3
-                    className={`mb-2 font-semibold leading-tight ${featured ? 'text-3xl text-white sm:text-4xl' : 'text-2xl text-[#2a3439]'}`}
-                  >
-                    {t.name}
-                  </h3>
-                  <p
-                    className={`mb-3 text-sm font-semibold ${featured ? 'text-[#ead19a]' : 'text-[#806019]'}`}
-                  >
-                    {t.role}
-                  </p>
-                  <p
-                    className={`mb-6 text-xs leading-relaxed ${featured ? 'text-[#d6e2e5]' : 'text-[#52687b]'}`}
-                  >
-                    {t.specialties}
-                  </p>
-                  <p
-                    className={`mb-4 text-sm leading-relaxed ${featured ? 'text-[#f3f0e9]' : 'text-[#46576a]'}`}
-                  >
-                    {t.descriptionOne}
-                  </p>
-                  <p
-                    className={`mb-7 text-sm leading-relaxed ${featured ? 'text-[#d9e3e6]' : 'text-[#46576a]'}`}
-                  >
-                    {t.descriptionTwo}
-                  </p>
-                  <ul className="mb-8 space-y-3">
-                    {t.highlights.map((highlight, idx) => (
-                      <li key={idx} className="flex items-start gap-3">
-                        <span className={`mt-2 h-1.5 w-1.5 shrink-0 rounded-full ${featured ? 'bg-[#ead19a]' : 'bg-[#a48034]'}`} aria-hidden="true" />
-                        <span
-                          className={`text-sm leading-relaxed ${featured ? 'text-[#f3f0e9]' : 'text-[#2a3439]'}`}
-                        >
-                          {highlight}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="mt-auto">
-                    {doctor.slug && (
-                      <Link
-                        to={doctor.slug}
-                        className={`inline-flex min-h-11 items-center rounded-full px-6 py-2.5 text-sm font-semibold transition focus-visible:outline-offset-4 ${featured ? 'bg-[#d7bc7b] text-[#18313f] hover:bg-[#ebd59f]' : 'border border-[#a48034] text-[#493a1b] hover:bg-[#f7f2e7]'}`}
-                      >
-                        {t.cta}
-                      </Link>
-                    )}
-                  </div>
+                <div className="min-w-0">
+                  <h3 className="text-2xl font-semibold leading-snug text-[#2a3439]">{t.name}</h3>
+                  <p className="mt-2 text-sm font-semibold text-[#806019]">{t.role}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-[#46576a]">{t.focus}</p>
+                  <p className="mt-4 text-sm leading-relaxed text-[#52687b]">{t.languages}</p>
+                  <Link to={doctor.slug} className="mt-5 inline-flex min-h-11 items-center rounded-full border border-[#a48034] px-6 py-2.5 text-sm font-semibold text-[#493a1b] transition hover:bg-[#f7f2e7] focus-visible:outline-offset-4">
+                    {t.cta}
+                  </Link>
                 </div>
               </article>
               );

@@ -1,11 +1,11 @@
 export const faqContent = {
   english: {
-    metaTitle: 'Frequently Asked Questions | EMIS Dental',
+    metaTitle: 'Frequently Asked Questions | Emis Dental',
     metaDescription:
-      'Answers to common questions about getting started, international patients, treatment planning, safety, costs, and aftercare at EMIS Dental.',
+      'Answers to common questions about getting started, international patients, treatment planning, safety, costs, and aftercare at Emis Dental.',
     title: 'Frequently Asked Questions',
     intro:
-      'Answers to questions patients often ask before getting started. For anything specific to your situation, the EMIS team is happy to help.',
+      'Answers to questions patients often ask before getting started. For anything specific to your situation, the Emis Dental team is happy to help.',
     primaryCta: 'Send Your X-ray',
     secondaryCta: 'Discuss Your Situation',
     categories: [
@@ -20,7 +20,7 @@ export const faqContent = {
           {
             question: 'What if I do not have X-rays or dental records?',
             answer:
-              'That is completely fine. Many patients contact EMIS before any imaging has been taken. If needed, examinations and diagnostic imaging can be arranged during your visit.',
+              'That is completely fine. Many patients contact Emis Dental before any imaging has been taken. If needed, examinations and diagnostic imaging can be arranged during your visit.',
           },
           {
             question: 'What happens during the first consultation?',
@@ -30,7 +30,7 @@ export const faqContent = {
           {
             question: 'What information should I prepare before contacting the clinic?',
             answer:
-              'If available, X-rays, CBCT scans, previous dental records, photos of your teeth, or a brief description of your concerns can be helpful. However, many patients contact EMIS without any records, and that is completely fine.',
+              'If available, X-rays, CBCT scans, previous dental records, photos of your teeth, or a brief description of your concerns can be helpful. However, many patients contact Emis Dental without any records, and that is completely fine.',
           },
         ],
       },
@@ -58,7 +58,7 @@ export const faqContent = {
               'Yes. For patients living abroad or outside Ho Chi Minh City, online consultations can be a helpful first step to discuss your situation, review existing records, and explore possible treatment options before visiting the clinic.',
           },
           {
-            question: 'Can I still contact EMIS after I return home?',
+            question: 'Can I still contact Emis Dental after I return home?',
             answer:
               'Yes. The team can continue to provide guidance, answer questions, and monitor your progress when appropriate after treatment.',
           },
@@ -145,7 +145,7 @@ export const faqContent = {
           {
             question: 'What payment methods are accepted?',
             answer:
-              'EMIS accepts a variety of payment methods, including cash and major credit cards. Please contact the team directly for the latest information regarding available payment options.',
+              'Emis Dental accepts a variety of payment methods, including cash and major credit cards. Please contact the team directly for the latest information regarding available payment options.',
           },
         ],
       },
@@ -165,7 +165,7 @@ export const faqContent = {
           {
             question: 'What if I have questions or concerns after returning home?',
             answer:
-              'You can still contact the EMIS team after returning home. Depending on the situation, communication may continue through photos, X-rays, phone calls, or online consultations. The team can help answer questions and provide guidance when needed.',
+              'You can still contact the Emis Dental team after returning home. Depending on the situation, communication may continue through photos, X-rays, phone calls, or online consultations. The team can help answer questions and provide guidance when needed.',
           },
         ],
       },
@@ -173,12 +173,12 @@ export const faqContent = {
   },
 
   vietnamese: {
-    metaTitle: 'Câu Hỏi Thường Gặp | EMIS Dental',
+    metaTitle: 'Câu Hỏi Thường Gặp | Emis Dental',
     metaDescription:
-      'Giải đáp các câu hỏi thường gặp về bắt đầu điều trị, bệnh nhân quốc tế, kế hoạch điều trị, an toàn, chi phí và chăm sóc sau điều trị tại EMIS Dental.',
+      'Giải đáp các câu hỏi thường gặp về bắt đầu điều trị, bệnh nhân quốc tế, kế hoạch điều trị, an toàn, chi phí và chăm sóc sau điều trị tại Emis Dental.',
     title: 'Câu Hỏi Thường Gặp',
     intro:
-      'Giải đáp những câu hỏi bệnh nhân thường quan tâm trước khi bắt đầu. Với bất kỳ thắc mắc nào liên quan đến trường hợp của bạn, đội ngũ EMIS luôn sẵn sàng hỗ trợ.',
+      'Giải đáp những câu hỏi bệnh nhân thường quan tâm trước khi bắt đầu. Với bất kỳ thắc mắc nào liên quan đến trường hợp của bạn, đội ngũ Emis Dental luôn sẵn sàng hỗ trợ.',
     primaryCta: 'Gửi X-ray Của Bạn',
     secondaryCta: 'Trao Đổi Về Trường Hợp Của Bạn',
     categories: [
@@ -193,7 +193,7 @@ export const faqContent = {
           {
             question: 'Nếu tôi chưa có X-ray hoặc hồ sơ nha khoa thì sao?',
             answer:
-              'Điều đó hoàn toàn bình thường. Nhiều bệnh nhân liên hệ với EMIS trước khi có X-ray hoặc hồ sơ nha khoa. Nếu cần, các bước thăm khám và chụp phim có thể được thực hiện khi bạn đến phòng khám.',
+              'Điều đó hoàn toàn bình thường. Nhiều bệnh nhân liên hệ với Emis Dental trước khi có X-ray hoặc hồ sơ nha khoa. Nếu cần, các bước thăm khám và chụp phim có thể được thực hiện khi bạn đến phòng khám.',
           },
           {
             question: 'Buổi tư vấn đầu tiên thường diễn ra như thế nào?',
@@ -203,7 +203,7 @@ export const faqContent = {
           {
             question: 'Tôi nên chuẩn bị gì trước khi liên hệ?',
             answer:
-              'Nếu có X-ray, CBCT hoặc hồ sơ nha khoa trước đó, bạn có thể gửi trước cho EMIS. Ngoài ra, chỉ cần mô tả ngắn tình trạng hiện tại hoặc những điều bạn đang quan tâm là đã đủ để bắt đầu trao đổi.',
+              'Nếu có X-ray, CBCT hoặc hồ sơ nha khoa trước đó, bạn có thể gửi trước cho Emis Dental. Ngoài ra, chỉ cần mô tả ngắn tình trạng hiện tại hoặc những điều bạn đang quan tâm là đã đủ để bắt đầu trao đổi.',
           },
         ],
       },
@@ -213,12 +213,12 @@ export const faqContent = {
           {
             question: 'Tôi có thể lên kế hoạch điều trị trước khi về Việt Nam không?',
             answer:
-              'Có. Nhiều Việt kiều và bệnh nhân quốc tế bắt đầu tìm hiểu và trao đổi với EMIS trước khi sắp xếp chuyến đi. Nếu đã có X-ray hoặc hồ sơ nha khoa, đội ngũ có thể xem trước để hỗ trợ quá trình trao đổi ban đầu.',
+              'Có. Nhiều Việt kiều và bệnh nhân quốc tế bắt đầu tìm hiểu và trao đổi với Emis Dental trước khi sắp xếp chuyến đi. Nếu đã có X-ray hoặc hồ sơ nha khoa, đội ngũ có thể xem trước để hỗ trợ quá trình trao đổi ban đầu.',
           },
           {
             question: 'Tôi nên dự trù bao nhiêu thời gian ở Việt Nam?',
             answer:
-              'Một số trường hợp chỉ cần vài ngày, trong khi những trường hợp phức tạp hơn có thể cần vài tuần hoặc nhiều giai đoạn điều trị khác nhau. Sau khi xem xét hồ sơ hoặc trao đổi ban đầu, đội ngũ EMIS có thể giúp bạn ước tính khoảng thời gian cần thiết để chủ động sắp xếp chuyến đi.',
+              'Một số trường hợp chỉ cần vài ngày, trong khi những trường hợp phức tạp hơn có thể cần vài tuần hoặc nhiều giai đoạn điều trị khác nhau. Sau khi xem xét hồ sơ hoặc trao đổi ban đầu, đội ngũ Emis Dental có thể giúp bạn ước tính khoảng thời gian cần thiết để chủ động sắp xếp chuyến đi.',
           },
           {
             question: 'Tôi có thể hoàn tất điều trị trong một chuyến đi không?',
@@ -226,14 +226,14 @@ export const faqContent = {
               'Có thể. Nhiều trường hợp có thể hoàn tất điều trị trong một chuyến đi. Tuy nhiên, một số điều trị cần thêm thời gian lành thương hoặc được thực hiện theo nhiều giai đoạn. Điều này sẽ được trao đổi cụ thể trong quá trình lập kế hoạch điều trị.',
           },
           {
-            question: 'EMIS có hỗ trợ tư vấn trực tuyến không?',
+            question: 'Emis Dental có hỗ trợ tư vấn trực tuyến không?',
             answer:
               'Có. Đối với bệnh nhân ở xa hoặc đang sinh sống ở nước ngoài, tư vấn trực tuyến là bước đầu giúp trao đổi về tình trạng hiện tại, xem xét hồ sơ sẵn có và tìm hiểu các lựa chọn điều trị trước khi đến Việt Nam.',
           },
           {
-            question: 'Sau khi trở về nước, tôi vẫn có thể liên hệ với EMIS chứ?',
+            question: 'Sau khi trở về nước, tôi vẫn có thể liên hệ với Emis Dental chứ?',
             answer:
-              'Có. Đội ngũ EMIS vẫn có thể hỗ trợ giải đáp thắc mắc, hướng dẫn trong quá trình hồi phục và theo dõi tiến triển khi cần thiết sau điều trị.',
+              'Có. Đội ngũ Emis Dental vẫn có thể hỗ trợ giải đáp thắc mắc, hướng dẫn trong quá trình hồi phục và theo dõi tiến triển khi cần thiết sau điều trị.',
           },
           {
             question: 'Tôi có thể gửi hồ sơ từ phòng khám khác không?',
@@ -293,7 +293,7 @@ export const faqContent = {
           {
             question: 'Điều trị có chính sách bảo hành không?',
             answer:
-              'Có. Chính sách bảo hành có thể khác nhau tùy theo loại điều trị, vật liệu sử dụng và các điều kiện áp dụng. Đội ngũ EMIS sẽ trao đổi cụ thể về thông tin bảo hành liên quan đến trường hợp của bạn trước khi điều trị.',
+              'Có. Chính sách bảo hành có thể khác nhau tùy theo loại điều trị, vật liệu sử dụng và các điều kiện áp dụng. Đội ngũ Emis Dental sẽ trao đổi cụ thể về thông tin bảo hành liên quan đến trường hợp của bạn trước khi điều trị.',
           },
         ],
       },
@@ -308,7 +308,7 @@ export const faqContent = {
           {
             question: 'Tôi có thể nhận báo giá trước không?',
             answer:
-              'Trong nhiều trường hợp, EMIS có thể trao đổi mức chi phí dự kiến sau khi xem xét X-ray, CBCT hoặc các hồ sơ liên quan. Tuy nhiên, kế hoạch và chi phí điều trị chính thức chỉ có thể được xác nhận sau khi thăm khám và đánh giá đầy đủ.',
+              'Trong nhiều trường hợp, Emis Dental có thể trao đổi mức chi phí dự kiến sau khi xem xét X-ray, CBCT hoặc các hồ sơ liên quan. Tuy nhiên, kế hoạch và chi phí điều trị chính thức chỉ có thể được xác nhận sau khi thăm khám và đánh giá đầy đủ.',
           },
           {
             question: 'Tôi có cần thực hiện toàn bộ điều trị cùng một lúc không?',
@@ -316,9 +316,9 @@ export const faqContent = {
               'Không nhất thiết. Trong một số trường hợp, điều trị có thể được thực hiện theo nhiều giai đoạn để phù hợp với tình trạng, thời gian và kế hoạch của bạn.',
           },
           {
-            question: 'EMIS chấp nhận những hình thức thanh toán nào?',
+            question: 'Emis Dental chấp nhận những hình thức thanh toán nào?',
             answer:
-              'EMIS hỗ trợ nhiều hình thức thanh toán khác nhau, bao gồm tiền mặt và các loại thẻ thanh toán phổ biến. Vui lòng liên hệ trực tiếp với đội ngũ EMIS để được cập nhật các hình thức thanh toán hiện có.',
+              'Emis Dental hỗ trợ nhiều hình thức thanh toán khác nhau, bao gồm tiền mặt và các loại thẻ thanh toán phổ biến. Vui lòng liên hệ trực tiếp với đội ngũ Emis Dental để được cập nhật các hình thức thanh toán hiện có.',
           },
         ],
       },
@@ -338,7 +338,7 @@ export const faqContent = {
           {
             question: 'Nếu có thắc mắc hoặc vấn đề sau khi trở về nước thì sao?',
             answer:
-              'Bạn vẫn có thể liên hệ với đội ngũ EMIS sau khi trở về nước. Tùy từng trường hợp, việc trao đổi có thể được thực hiện thông qua hình ảnh, X-ray, điện thoại hoặc tư vấn trực tuyến. Đội ngũ EMIS sẽ hỗ trợ giải đáp thắc mắc và hướng dẫn các bước tiếp theo khi cần thiết.',
+              'Bạn vẫn có thể liên hệ với đội ngũ Emis Dental sau khi trở về nước. Tùy từng trường hợp, việc trao đổi có thể được thực hiện thông qua hình ảnh, X-ray, điện thoại hoặc tư vấn trực tuyến. Đội ngũ Emis Dental sẽ hỗ trợ giải đáp thắc mắc và hướng dẫn các bước tiếp theo khi cần thiết.',
           },
         ],
       },
@@ -346,12 +346,12 @@ export const faqContent = {
   },
 
   french: {
-    metaTitle: "Foire Aux Questions | EMIS Dental",
+    metaTitle: "Foire Aux Questions | Emis Dental",
     metaDescription:
-      "Réponses aux questions fréquentes sur le démarrage, les patients internationaux, la planification du traitement, la sécurité, les coûts et les soins post-traitement chez EMIS Dental.",
+      "Réponses aux questions fréquentes sur le démarrage, les patients internationaux, la planification du traitement, la sécurité, les coûts et les soins post-traitement chez Emis Dental.",
     title: "Foire Aux Questions",
     intro:
-      "Réponses aux questions que les patients posent souvent avant de commencer. Pour toute question propre à votre situation, l'équipe EMIS se fera un plaisir de vous aider.",
+      "Réponses aux questions que les patients posent souvent avant de commencer. Pour toute question propre à votre situation, l'équipe Emis Dental se fera un plaisir de vous aider.",
     primaryCta: "Envoyer Votre Radiographie",
     secondaryCta: "Discuter De Votre Situation",
     categories: [
@@ -366,7 +366,7 @@ export const faqContent = {
           {
             question: "Que faire si je n'ai pas de radiographies ou de dossier dentaire ?",
             answer:
-              "C'est tout à fait normal. De nombreux patients contactent EMIS avant toute imagerie. Si nécessaire, les examens et l'imagerie diagnostique peuvent être organisés lors de votre visite.",
+              "C'est tout à fait normal. De nombreux patients contactent Emis Dental avant toute imagerie. Si nécessaire, les examens et l'imagerie diagnostique peuvent être organisés lors de votre visite.",
           },
           {
             question: "Que se passe-t-il lors de la première consultation ?",
@@ -376,7 +376,7 @@ export const faqContent = {
           {
             question: "Quelles informations dois-je préparer avant de contacter la clinique ?",
             answer:
-              "Si vous en disposez, des radiographies, des scans CBCT, d'anciens dossiers dentaires, des photos de vos dents ou une brève description de vos préoccupations peuvent être utiles. Cependant, de nombreux patients contactent EMIS sans aucun dossier, et cela ne pose aucun problème.",
+              "Si vous en disposez, des radiographies, des scans CBCT, d'anciens dossiers dentaires, des photos de vos dents ou une brève description de vos préoccupations peuvent être utiles. Cependant, de nombreux patients contactent Emis Dental sans aucun dossier, et cela ne pose aucun problème.",
           },
         ],
       },
@@ -404,7 +404,7 @@ export const faqContent = {
               "Oui. Pour les patients vivant à l'étranger ou en dehors de Hô Chi Minh-Ville, les consultations en ligne peuvent être une première étape utile pour discuter de votre situation, examiner les dossiers existants et explorer les options de traitement possibles avant de vous rendre à la clinique.",
           },
           {
-            question: "Puis-je continuer à contacter EMIS après mon retour chez moi ?",
+            question: "Puis-je continuer à contacter Emis Dental après mon retour chez moi ?",
             answer:
               "Oui. L'équipe peut continuer à vous accompagner, répondre à vos questions et suivre votre progression lorsque cela est approprié après le traitement.",
           },
@@ -491,7 +491,7 @@ export const faqContent = {
           {
             question: "Quels modes de paiement sont acceptés ?",
             answer:
-              "EMIS accepte divers modes de paiement, dont les espèces et les principales cartes de crédit. Veuillez contacter directement l'équipe pour obtenir les informations les plus récentes concernant les options de paiement disponibles.",
+              "Emis Dental accepte divers modes de paiement, dont les espèces et les principales cartes de crédit. Veuillez contacter directement l'équipe pour obtenir les informations les plus récentes concernant les options de paiement disponibles.",
           },
         ],
       },
@@ -511,7 +511,7 @@ export const faqContent = {
           {
             question: "Que faire si j'ai des questions ou des inquiétudes après mon retour chez moi ?",
             answer:
-              "Vous pouvez toujours contacter l'équipe EMIS après votre retour chez vous. Selon la situation, la communication peut se poursuivre par photos, radiographies, appels téléphoniques ou consultations en ligne. L'équipe peut vous aider à répondre à vos questions et vous accompagner au besoin.",
+              "Vous pouvez toujours contacter l'équipe Emis Dental après votre retour chez vous. Selon la situation, la communication peut se poursuivre par photos, radiographies, appels téléphoniques ou consultations en ligne. L'équipe peut vous aider à répondre à vos questions et vous accompagner au besoin.",
           },
         ],
       },
@@ -519,12 +519,12 @@ export const faqContent = {
   },
 
   korean: {
-    metaTitle: '자주 묻는 질문 | EMIS Dental',
+    metaTitle: '자주 묻는 질문 | Emis Dental',
     metaDescription:
-      'EMIS Dental의 시작 방법, 해외 환자, 치료 계획, 안전, 비용, 사후 관리에 대한 자주 묻는 질문에 답변해 드립니다.',
+      'Emis Dental의 시작 방법, 해외 환자, 치료 계획, 안전, 비용, 사후 관리에 대한 자주 묻는 질문에 답변해 드립니다.',
     title: '자주 묻는 질문',
     intro:
-      '환자분들이 치료를 시작하기 전에 자주 묻는 질문에 대한 답변입니다. 개별 상황에 대한 궁금한 점은 EMIS 팀이 기꺼이 도와드립니다.',
+      '환자분들이 치료를 시작하기 전에 자주 묻는 질문에 대한 답변입니다. 개별 상황에 대한 궁금한 점은 Emis Dental 팀이 기꺼이 도와드립니다.',
     primaryCta: '엑스레이 보내기',
     secondaryCta: '상황 상담하기',
     categories: [
@@ -539,7 +539,7 @@ export const faqContent = {
           {
             question: '엑스레이나 치과 기록이 없으면 어떻게 하나요?',
             answer:
-              '전혀 문제되지 않습니다. 많은 환자분들이 어떤 영상 촬영도 하기 전에 EMIS에 연락하십니다. 필요한 경우 방문 시 검사와 진단 영상 촬영을 진행할 수 있습니다.',
+              '전혀 문제되지 않습니다. 많은 환자분들이 어떤 영상 촬영도 하기 전에 Emis Dental에 연락하십니다. 필요한 경우 방문 시 검사와 진단 영상 촬영을 진행할 수 있습니다.',
           },
           {
             question: '첫 상담에서는 어떤 과정이 진행되나요?',
@@ -549,7 +549,7 @@ export const faqContent = {
           {
             question: '병원에 연락하기 전에 어떤 정보를 준비해야 하나요?',
             answer:
-              '가능하다면 엑스레이, CBCT 스캔, 이전 치과 기록, 치아 사진, 또는 우려 사항에 대한 간단한 설명이 도움이 될 수 있습니다. 다만 많은 환자분들이 아무런 기록 없이 EMIS에 연락하시며, 그래도 전혀 문제되지 않습니다.',
+              '가능하다면 엑스레이, CBCT 스캔, 이전 치과 기록, 치아 사진, 또는 우려 사항에 대한 간단한 설명이 도움이 될 수 있습니다. 다만 많은 환자분들이 아무런 기록 없이 Emis Dental에 연락하시며, 그래도 전혀 문제되지 않습니다.',
           },
         ],
       },
@@ -577,7 +577,7 @@ export const faqContent = {
               '네. 해외에 거주하거나 호치민시 외부에 계신 환자분들에게 온라인 상담은 병원 방문 전에 상황을 상의하고 기존 기록을 검토하며 가능한 치료 옵션을 살펴보는 유용한 첫 단계가 될 수 있습니다.',
           },
           {
-            question: '귀국 후에도 EMIS에 연락할 수 있나요?',
+            question: '귀국 후에도 Emis Dental에 연락할 수 있나요?',
             answer:
               '네. 팀은 치료 후에도 필요한 경우 안내를 제공하고 질문에 답변하며 경과를 관찰해 드릴 수 있습니다.',
           },
@@ -664,7 +664,7 @@ export const faqContent = {
           {
             question: '어떤 결제 방법을 사용할 수 있나요?',
             answer:
-              'EMIS는 현금과 주요 신용카드를 포함한 다양한 결제 방법을 받습니다. 이용 가능한 결제 옵션에 대한 최신 정보는 팀에 직접 문의해 주시기 바랍니다.',
+              'Emis Dental은 현금과 주요 신용카드를 포함한 다양한 결제 방법을 받습니다. 이용 가능한 결제 옵션에 대한 최신 정보는 팀에 직접 문의해 주시기 바랍니다.',
           },
         ],
       },
@@ -684,7 +684,7 @@ export const faqContent = {
           {
             question: '귀국 후 질문이나 우려 사항이 있으면 어떻게 하나요?',
             answer:
-              '귀국 후에도 EMIS 팀에 연락하실 수 있습니다. 상황에 따라 사진, 엑스레이, 전화 통화 또는 온라인 상담을 통해 소통을 이어갈 수 있습니다. 팀이 질문에 답변하고 필요할 때 안내를 제공해 드립니다.',
+              '귀국 후에도 Emis Dental 팀에 연락하실 수 있습니다. 상황에 따라 사진, 엑스레이, 전화 통화 또는 온라인 상담을 통해 소통을 이어갈 수 있습니다. 팀이 질문에 답변하고 필요할 때 안내를 제공해 드립니다.',
           },
         ],
       },
@@ -692,12 +692,12 @@ export const faqContent = {
   },
 
   simplified: {
-    metaTitle: '常见问题 | EMIS Dental',
+    metaTitle: '常见问题 | Emis Dental',
     metaDescription:
-      '解答关于开始治疗、国际患者、治疗计划、安全、费用以及 EMIS Dental 术后护理的常见问题。',
+      '解答关于开始治疗、国际患者、治疗计划、安全、费用以及 Emis Dental 术后护理的常见问题。',
     title: '常见问题',
     intro:
-      '解答患者在开始治疗前经常提出的问题。如有任何针对您具体情况的疑问，EMIS 团队乐意为您提供帮助。',
+      '解答患者在开始治疗前经常提出的问题。如有任何针对您具体情况的疑问，Emis Dental 团队乐意为您提供帮助。',
     primaryCta: '发送您的 X光片',
     secondaryCta: '咨询您的情况',
     categories: [
@@ -712,7 +712,7 @@ export const faqContent = {
           {
             question: '如果我没有 X光片或牙科记录怎么办？',
             answer:
-              '这完全没有问题。许多患者在尚未进行任何影像检查之前就联系了 EMIS。如有需要，可以在您就诊时安排检查和诊断影像。',
+              '这完全没有问题。许多患者在尚未进行任何影像检查之前就联系了 Emis Dental。如有需要，可以在您就诊时安排检查和诊断影像。',
           },
           {
             question: '首次咨询时会进行什么？',
@@ -722,7 +722,7 @@ export const faqContent = {
           {
             question: '在联系诊所之前我应准备哪些信息？',
             answer:
-              '如有，X光片、CBCT 扫描、既往牙科记录、牙齿照片，或对您所关注问题的简要描述，都会有所帮助。不过，许多患者在没有任何记录的情况下联系 EMIS，这也完全没有问题。',
+              '如有，X光片、CBCT 扫描、既往牙科记录、牙齿照片，或对您所关注问题的简要描述，都会有所帮助。不过，许多患者在没有任何记录的情况下联系 Emis Dental，这也完全没有问题。',
           },
         ],
       },
@@ -750,7 +750,7 @@ export const faqContent = {
               '提供。对于居住在国外或胡志明市以外的患者，线上咨询可作为有益的第一步，用于讨论您的情况、审阅现有记录，并在就诊前探讨可能的治疗方案。',
           },
           {
-            question: '回国后我还能联系 EMIS 吗？',
+            question: '回国后我还能联系 Emis Dental 吗？',
             answer:
               '可以。治疗后，团队可在适当情况下继续提供指导、解答疑问并关注您的恢复进展。',
           },
@@ -837,7 +837,7 @@ export const faqContent = {
           {
             question: '接受哪些付款方式？',
             answer:
-              'EMIS 接受多种付款方式，包括现金和主要信用卡。请直接联系团队以获取有关可用付款方式的最新信息。',
+              'Emis Dental 接受多种付款方式，包括现金和主要信用卡。请直接联系团队以获取有关可用付款方式的最新信息。',
           },
         ],
       },
@@ -857,7 +857,7 @@ export const faqContent = {
           {
             question: '回国后如有疑问或顾虑怎么办？',
             answer:
-              '回国后您仍可联系 EMIS 团队。视具体情况，可通过照片、X光片、电话或线上咨询继续沟通。团队可帮助解答疑问，并在需要时提供指导。',
+              '回国后您仍可联系 Emis Dental 团队。视具体情况，可通过照片、X光片、电话或线上咨询继续沟通。团队可帮助解答疑问，并在需要时提供指导。',
           },
         ],
       },
@@ -865,12 +865,12 @@ export const faqContent = {
   },
 
   traditional: {
-    metaTitle: '常見問題 | EMIS Dental',
+    metaTitle: '常見問題 | Emis Dental',
     metaDescription:
-      '解答關於開始治療、國際患者、治療計畫、安全、費用以及 EMIS Dental 術後照護的常見問題。',
+      '解答關於開始治療、國際患者、治療計畫、安全、費用以及 Emis Dental 術後照護的常見問題。',
     title: '常見問題',
     intro:
-      '解答患者在開始治療前經常提出的問題。如有任何針對您具體情況的疑問，EMIS 團隊樂意為您提供協助。',
+      '解答患者在開始治療前經常提出的問題。如有任何針對您具體情況的疑問，Emis Dental 團隊樂意為您提供協助。',
     primaryCta: '傳送您的 X光片',
     secondaryCta: '諮詢您的情況',
     categories: [
@@ -885,7 +885,7 @@ export const faqContent = {
           {
             question: '如果我沒有 X光片或牙科紀錄怎麼辦？',
             answer:
-              '這完全沒有問題。許多患者在尚未進行任何影像檢查之前就聯絡了 EMIS。如有需要，可以在您就診時安排檢查和診斷影像。',
+              '這完全沒有問題。許多患者在尚未進行任何影像檢查之前就聯絡了 Emis Dental。如有需要，可以在您就診時安排檢查和診斷影像。',
           },
           {
             question: '首次諮詢時會進行什麼？',
@@ -895,7 +895,7 @@ export const faqContent = {
           {
             question: '在聯絡診所之前我應準備哪些資訊？',
             answer:
-              '如有，X光片、CBCT 掃描、既往牙科紀錄、牙齒照片，或對您所關注問題的簡要描述，都會有所幫助。不過，許多患者在沒有任何紀錄的情況下聯絡 EMIS，這也完全沒有問題。',
+              '如有，X光片、CBCT 掃描、既往牙科紀錄、牙齒照片，或對您所關注問題的簡要描述，都會有所幫助。不過，許多患者在沒有任何紀錄的情況下聯絡 Emis Dental，這也完全沒有問題。',
           },
         ],
       },
@@ -923,7 +923,7 @@ export const faqContent = {
               '提供。對於居住在國外或胡志明市以外的患者，線上諮詢可作為有益的第一步，用於討論您的情況、審閱現有紀錄，並在就診前探討可能的治療方案。',
           },
           {
-            question: '回國後我還能聯絡 EMIS 嗎？',
+            question: '回國後我還能聯絡 Emis Dental 嗎？',
             answer:
               '可以。治療後，團隊可在適當情況下繼續提供指導、解答疑問並關注您的恢復進展。',
           },
@@ -1010,7 +1010,7 @@ export const faqContent = {
           {
             question: '接受哪些付款方式？',
             answer:
-              'EMIS 接受多種付款方式，包括現金和主要信用卡。請直接聯絡團隊以獲取有關可用付款方式的最新資訊。',
+              'Emis Dental 接受多種付款方式，包括現金和主要信用卡。請直接聯絡團隊以獲取有關可用付款方式的最新資訊。',
           },
         ],
       },
@@ -1030,7 +1030,7 @@ export const faqContent = {
           {
             question: '回國後如有疑問或顧慮怎麼辦？',
             answer:
-              '回國後您仍可聯絡 EMIS 團隊。視具體情況，可透過照片、X光片、電話或線上諮詢繼續溝通。團隊可協助解答疑問，並在需要時提供指導。',
+              '回國後您仍可聯絡 Emis Dental 團隊。視具體情況，可透過照片、X光片、電話或線上諮詢繼續溝通。團隊可協助解答疑問，並在需要時提供指導。',
           },
         ],
       },

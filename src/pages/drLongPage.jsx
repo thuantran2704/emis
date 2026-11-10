@@ -10,7 +10,7 @@ const profile = {
     certificates: 'Professional license and advanced training',
     workshops: 'Selected training and workshops',
     practice: 'Clinical experience',
-    language: 'Language proficiency and international education',
+    language: 'Language',
     contact: 'Discuss your situation',
     qualificationsList: [
       'Degree in Dentistry: Guangxi Medical University, China (2018).',
@@ -40,9 +40,7 @@ const profile = {
       'Completed clinical training and was certified as competent in basic dental procedures within the scope of general dentistry.',
     ],
     languageList: [
-      'Recognized by the University of Medicine and Pharmacy, Hue University, as proficient in using Chinese for medical examination and treatment.',
-      'Bachelor of Arts in Chinese Language and Literature: Anhui Normal University, China (2007–2011).',
-      'Completed a four-year full-time undergraduate program in China.',
+      'Chinese, Vietnamese, English',
     ],
   },
   vietnamese: {
@@ -51,7 +49,7 @@ const profile = {
     certificates: 'Chứng chỉ hành nghề và đào tạo chuyên sâu',
     workshops: 'Đào tạo và hội thảo chuyên môn tiêu biểu',
     practice: 'Quá trình thực hành chuyên môn',
-    language: 'Ngoại ngữ và học tập quốc tế',
+    language: 'Ngôn ngữ',
     contact: 'Trao đổi về trường hợp của bạn',
     qualificationsList: [
       'Bác sĩ Răng Hàm Mặt: Đại học Y khoa Quảng Tây, Trung Quốc (2018).',
@@ -81,9 +79,7 @@ const profile = {
       'Hoàn thành chương trình thực hành lâm sàng và được xác nhận có khả năng thực hiện các kỹ thuật chuyên môn cơ bản của bác sĩ Răng Hàm Mặt.',
     ],
     languageList: [
-      'Được Trường Đại học Y Dược, Đại học Huế công nhận đủ trình độ sử dụng thành thạo tiếng Trung trong khám bệnh, chữa bệnh.',
-      'Cử nhân Văn học, chuyên ngành Ngôn ngữ và Văn học Trung Quốc: Đại học Sư phạm An Huy, Trung Quốc (2007–2011).',
-      'Được đào tạo đại học chính quy bốn năm tại Trung Quốc.',
+      'Tiếng Trung, Tiếng Việt, Tiếng Anh',
     ],
   },
   french: {
@@ -92,7 +88,7 @@ const profile = {
     certificates: 'Autorisation d’exercice et formations spécialisées',
     workshops: 'Formations et ateliers sélectionnés',
     practice: 'Expérience clinique',
-    language: 'Compétences linguistiques et études en Chine',
+    language: 'Langues',
     contact: 'Parler de votre situation',
     qualificationsList: [
       'Diplôme en odontologie : Université de médecine du Guangxi, Chine (2018).',
@@ -122,9 +118,7 @@ const profile = {
       'Formation clinique achevée, avec validation de l’aptitude à réaliser les actes dentaires de base relevant de la dentisterie générale.',
     ],
     languageList: [
-      'L’Université de médecine et de pharmacie de Hué a reconnu sa maîtrise du chinois pour les examens et traitements médicaux.',
-      'Licence en langue et littérature chinoises : Université normale de l’Anhui, Chine (2007–2011).',
-      'Quatre années d’études universitaires à temps plein en Chine.',
+      'chinois, vietnamien, anglais',
     ],
   },
   korean: {
@@ -133,7 +127,7 @@ const profile = {
     certificates: '진료 면허 및 심화 교육',
     workshops: '주요 교육 및 학술 워크숍',
     practice: '임상 경험',
-    language: '언어 능력 및 중국 유학',
+    language: '사용 언어',
     contact: '상담 문의',
     qualificationsList: [
       '치의학 학위: 중국 광시의과대학교 (2018).',
@@ -163,9 +157,7 @@ const profile = {
       '임상 교육을 마치고 일반 치과 범위의 기본 진료 기술을 수행할 수 있음을 확인받았습니다.',
     ],
     languageList: [
-      '후에대학교 의약학대학에서 진료와 치료에 중국어를 사용할 수 있는 능력을 인정받았습니다.',
-      '중국어 언어문학 학사: 중국 안후이사범대학교 (2007–2011).',
-      '중국에서 4년제 정규 대학 과정을 이수했습니다.',
+      '중국어, 베트남어, 영어',
     ],
   },
   simplified: {
@@ -174,7 +166,7 @@ const profile = {
     certificates: '执业证书与进修培训',
     workshops: '部分专业培训与学术研讨',
     practice: '临床实践经历',
-    language: '语言能力与在华学习经历',
+    language: '语言',
     contact: '咨询您的情况',
     qualificationsList: [
       '牙医学学位：中国 Guangxi Medical University（2018）。',
@@ -204,9 +196,7 @@ const profile = {
       '已完成临床培训，并获确认具备实施普通牙科范围内基础诊疗技术的能力。',
     ],
     languageList: [
-      '顺化大学医药学院认可其在医学检查和治疗中使用中文的能力。',
-      '中国语言文学学士：中国 Anhui Normal University（2007–2011）。',
-      '在中国完成四年全日制大学课程。',
+      '中文、越南语、英语',
     ],
   },
   traditional: {
@@ -215,7 +205,7 @@ const profile = {
     certificates: '執業證書與進修訓練',
     workshops: '部分專業訓練與學術研討',
     practice: '臨床實務經歷',
-    language: '語言能力與在華學習經歷',
+    language: '語言',
     contact: '諮詢您的情況',
     qualificationsList: [
       '牙醫學學位：中國 Guangxi Medical University（2018）。',
@@ -245,9 +235,7 @@ const profile = {
       '已完成臨床訓練，並獲確認具備執行一般牙科範圍內基礎診療技術的能力。',
     ],
     languageList: [
-      '順化大學醫藥學院認可其於醫療檢查與治療中使用中文的能力。',
-      '中國語言文學學士：中國 Anhui Normal University（2007–2011）。',
-      '於中國完成四年全日制大學課程。',
+      '中文、越南語、英語',
     ],
   },
 };
@@ -282,7 +270,7 @@ export default function DrLongPage() {
   return (
     <main className="bg-white pt-20">
       <Helmet>
-        <title>{t.name} | EMIS Dental</title>
+        <title>{t.name} | Emis Dental</title>
         <meta name="description" content={t.descriptionOne} />
       </Helmet>
       <section className="bg-[#193543] text-white">

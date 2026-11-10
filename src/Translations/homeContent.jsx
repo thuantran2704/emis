@@ -9,7 +9,7 @@ export const homeContent = {
     faqItems: [
       {
         question: "Can I verify the credentials and licenses of my treating dentist?",
-        answer: "Absolutely. Emis Dental believes in complete transparency. Our dentists are licensed practitioners with training from leading institutions in the United States and Vietnam's highest-ranked medical university. Patients may request verification of professional licenses, qualifications, and clinical credentials before proceeding with treatment."
+        answer: "Yes. Before treatment, you can ask our team for the treating dentist's current license and qualification details."
       },
       {
         question: "Will Emis Dental help organise my treatment trip to Vietnam?",
@@ -113,7 +113,7 @@ export const homeContent = {
       }
     ],
     homepageV2: {
-      metaTitle: "Advanced Implant & Full-Mouth Rehabilitation Care | EMIS Dental",
+      metaTitle: "Advanced Implant & Full-Mouth Rehabilitation Care | Emis Dental",
       metaDescription:
         "Implant-focused and full-mouth rehabilitation care for overseas Vietnamese and international patients. Start with a preliminary X-ray assessment.",
       hero: {
@@ -129,7 +129,7 @@ export const homeContent = {
           "International Patient Support",
         ],
         primaryCta: "Send Your X-ray",
-        secondaryCta: "Talk With The EMIS Team",
+        secondaryCta: "Talk With The Emis Dental Team",
         trustStatement:
           "Led by an implant-focused team, including an Odonto-Maxillofacial Surgeon currently practicing at Ho Chi Minh City Odonto-Maxillofacial Hospital.",
       },
@@ -137,7 +137,7 @@ export const homeContent = {
         label: "Dental Implants",
         title: "A Core Implant Specialty, Backed By Experience",
         intro:
-          "At Emis Dental, dental implants are one of our core specialties, alongside a full range of advanced dental treatments. Our team of certified dentists, each with over 10 years of experience, has successfully treated thousands of implant cases, from single implants to full-mouth restorations.",
+          "Emis Dental offers dental implant treatment alongside other dental services. Your dentist can explain which options may be suitable after reviewing your condition.",
         principles: [
           { title: "Strict Medical Protocols" },
           { title: "Transparent Plans & Pricing" },
@@ -147,8 +147,8 @@ export const homeContent = {
         cta: "See more",
       },
       confidence: {
-        label: "Why EMIS",
-        title: "Why Patients Feel More Confident With EMIS",
+        label: "Why Emis Dental",
+        title: "Why Patients Feel More Confident With Emis Dental",
         intro:
           "Choosing implant treatment is often a significant decision. Many patients spend months researching, comparing options, and looking for reassurance before feeling ready to move forward.",
         cards: [
@@ -174,7 +174,7 @@ export const homeContent = {
         eyebrow: "Implant Expertise",
         title: "Specializing In Implant-Based Solutions",
         intro:
-          "EMIS Dental focuses on implant-based tooth replacement and full-arch rehabilitation. Our team has treated thousands of implant cases, from single tooth replacement to full-mouth reconstruction.",
+          "Emis Dental provides implant-based tooth replacement and full-arch rehabilitation. Treatment planning depends on each patient's examination and imaging.",
         slides: [
           {
             tag: "Dental Implants",
@@ -315,8 +315,8 @@ export const homeContent = {
       },
       realJourneys: {
         label: "Real Journeys",
-        heading: "What Your Journey With EMIS Looks Like",
-        subheading: "From first message to long-term care, here's how patients experience EMIS.",
+        heading: "What Your Journey With Emis Dental Looks Like",
+        subheading: "From first message to long-term care, here's how patients experience Emis Dental.",
         pic: [
           { title: "Online Consultation", description: "You share your situation, photos, or X-rays. We discuss your goals and give you an honest plan, before you book anything." },
           { title: "Medical Review & Planning", description: "Our team reviews your full history and builds a personalized schedule so your time in Vietnam is used efficiently." },
@@ -358,7 +358,7 @@ export const homeContent = {
           {
             question: "Can I verify the credentials and licenses of my treating dentist?",
             answer:
-              "Absolutely. Emis Dental believes in complete transparency. Our dentists are licensed practitioners with training from leading institutions in the United States and Vietnam's highest-ranked medical university. Patients may request verification of professional licenses, qualifications, and clinical credentials before proceeding with treatment.",
+              "Yes. Before treatment, you can ask our team for the treating dentist's current license and qualification details.",
           },
           {
             question: "Will Emis Dental help organise my treatment trip to Vietnam?",
@@ -378,7 +378,7 @@ export const homeContent = {
         description:
           "You do not need to make treatment decisions immediately. The first step is understanding your situation and discussing what options may be appropriate for your goals.",
         primaryCta: "Send Your X-ray",
-        secondaryCta: "Talk With The EMIS Team",
+        secondaryCta: "Talk With The Emis Dental Team",
         supportTitle: "You may also share",
         supportItems: [
           "Country of Residence",
@@ -395,7 +395,7 @@ export const homeContent = {
     metaTitle: "Premium Dental Care in Ho Chi Minh City | General & Cosmetic Dentistry",
     metaDescription: "Expert dental services including implants, crowns, Invisalign in Ho Chi Minh City. Book your appointment today for quality dental care.",
     homepageV2Legacy: {
-      metaTitle: "Advanced Implant & Full-Mouth Rehabilitation Care | EMIS Dental",
+      metaTitle: "Advanced Implant & Full-Mouth Rehabilitation Care | Emis Dental",
       metaDescription: "Helping overseas Vietnamese and international patients restore comfort, function, and confidence through implant and full-mouth rehabilitation care.",
       hero: {
         title: "Advanced Implant & Full-Mouth Rehabilitation Care",
@@ -408,11 +408,11 @@ export const homeContent = {
           "International Patient Support"
         ],
         primaryCta: "Send Your X-ray",
-        secondaryCta: "Talk With The EMIS Team",
+        secondaryCta: "Talk With The Emis Dental Team",
         trustStatement: "Led by an implant-focused team, including an Odonto-Maxillofacial Surgeon currently practicing at Ho Chi Minh City Odonto-Maxillofacial Hospital."
       },
       confidence: {
-        title: "Why Patients Feel More Confident With EMIS",
+        title: "Why Patients Feel More Confident With Emis Dental",
         intro: "Choosing implant treatment is often a significant decision.",
         cards: [
           {
@@ -441,8 +441,8 @@ export const homeContent = {
             name: "Dr. Tran Minh Tu",
             role: "Odonto-Maxillofacial Surgeon",
             focus: "Implant Surgery • Oral Surgery • Full-Mouth Rehabilitation",
-            summary: "Currently practicing at Ho Chi Minh City Odonto-Maxillofacial Hospital and EMIS Premium Dental Clinic.",
-            languages: "Vietnamese • English • Hungarian • Chinese"
+            summary: "Currently practicing at Ho Chi Minh City Odonto-Maxillofacial Hospital and Emis Dental.",
+            languages: "Vietnamese • English"
           }
         ],
       },
@@ -607,7 +607,7 @@ export const homeContent = {
         title: "Start With Understanding Your Situation",
         description: "You do not need to make treatment decisions immediately. The first step is understanding your situation and discussing what options may be appropriate for your goals.",
         primaryCta: "Send Your X-ray",
-        secondaryCta: "Talk With The EMIS Team",
+        secondaryCta: "Talk With The Emis Dental Team",
         supportTitle: "You may also share:",
         supportItems: [
           "Country of Residence",
@@ -630,7 +630,7 @@ export const homeContent = {
     faqItems: [
       {
         question: "Tôi có thể xác minh bằng cấp và giấy phép hành nghề của bác sĩ điều trị không?",
-        answer: "Hoàn toàn có. Emis Dental đề cao sự minh bạch. Bác sĩ của chúng tôi có giấy phép hành nghề hợp lệ, được đào tạo từ các cơ sở uy tín tại Hoa Kỳ và trường đại học y khoa hàng đầu Việt Nam. Bệnh nhân có thể yêu cầu xác minh giấy phép hành nghề, bằng cấp chuyên môn và năng lực lâm sàng trước khi điều trị."
+        answer: "Có. Trước khi điều trị, bạn có thể đề nghị đội ngũ cung cấp thông tin giấy phép hành nghề và bằng cấp hiện hành của bác sĩ trực tiếp điều trị."
       },
       {
         question: "Emis Dental có hỗ trợ sắp xếp chuyến đi điều trị tại Việt Nam không?",
@@ -664,7 +664,7 @@ export const homeContent = {
     findout: "Tìm hiểu thêm",
     practiceTitle: "Phòng Khám Của Chúng Tôi",
     papersTitle: "Nha Khoa Tiêu Chuẩn Chất Lượng",
-    introTitle: "Chào Mừng Đến Với Nha Khoa Emis",
+    introTitle: "Chào Mừng Đến Với Emis Dental",
     shorts: [
       {
         name: "Mẹo Chăm Sóc Implant",
@@ -734,7 +734,7 @@ export const homeContent = {
       }
     ],
     homepageV2: {
-      metaTitle: "Chuyên Sâu Implant & Phục Hồi Toàn Hàm | EMIS Dental",
+      metaTitle: "Chuyên Sâu Implant & Phục Hồi Toàn Hàm | Emis Dental",
       metaDescription:
         "Giải pháp implant và phục hồi toàn hàm dành cho Việt kiều và bệnh nhân quốc tế. Bắt đầu với đánh giá sơ bộ từ X-ray.",
       hero: {
@@ -750,7 +750,7 @@ export const homeContent = {
           "Hỗ trợ bệnh nhân quốc tế",
         ],
         primaryCta: "Gửi X-ray của bạn",
-        secondaryCta: "Kết nối với đội ngũ EMIS",
+        secondaryCta: "Kết nối với đội ngũ Emis Dental",
         trustStatement:
           "Đội ngũ chuyên sâu Implant, trong đó có bác sĩ phẫu thuật Răng Hàm Mặt hiện đang công tác tại Bệnh viện Răng Hàm Mặt TP.HCM.",
       },
@@ -758,7 +758,7 @@ export const homeContent = {
         label: "Cấy Ghép Implant",
         title: "Chuyên Sâu Implant, Vững Vàng Bằng Kinh Nghiệm",
         intro:
-          "Tại Emis Dental, cấy ghép Implant là một trong những chuyên môn cốt lõi của chúng tôi, bên cạnh đầy đủ các dịch vụ nha khoa chuyên sâu khác. Đội ngũ bác sĩ được chứng nhận, mỗi người có hơn 10 năm kinh nghiệm, đã điều trị thành công hàng nghìn ca Implant, từ cấy ghép đơn lẻ đến phục hồi toàn hàm.",
+          "Emis Dental cung cấp dịch vụ cấy ghép Implant cùng các dịch vụ nha khoa khác. Bác sĩ sẽ trao đổi phương án phù hợp sau khi thăm khám và đánh giá tình trạng của bạn.",
         principles: [
           { title: "Quy Trình Y Khoa Nghiêm Ngặt" },
           { title: "Kế Hoạch & Chi Phí Minh Bạch" },
@@ -768,8 +768,8 @@ export const homeContent = {
         cta: "Xem thêm",
       },
       confidence: {
-        label: "Tại Sao EMIS",
-        title: "Vì Sao Nhiều Bệnh Nhân Chọn EMIS?",
+        label: "Tại Sao Emis Dental",
+        title: "Vì Sao Nhiều Bệnh Nhân Chọn Emis Dental?",
         intro:
           "Điều trị Implant thường là một quyết định lớn. Nhiều người dành nhiều tháng để tìm hiểu, so sánh và cân nhắc trước khi bắt đầu.",
         cards: [
@@ -795,7 +795,7 @@ export const homeContent = {
         eyebrow: "Chuyên Sâu Implant",
         title: "Chuyên Môn Trọng Tâm: Implant & Phục Hồi Toàn Hàm",
         intro:
-          "Emis Dental tập trung vào Implant nha khoa và phục hồi toàn hàm. Đội ngũ đã điều trị thành công hàng nghìn ca từ cấy ghép đơn lẻ đến phục hồi toàn bộ hai hàm.",
+          "Emis Dental cung cấp dịch vụ Implant nha khoa và phục hồi toàn hàm. Kế hoạch điều trị cần dựa trên kết quả thăm khám và chẩn đoán hình ảnh của từng người.",
         slides: [
           {
             tag: "Implant Đơn & Nhiều Răng",
@@ -825,7 +825,7 @@ export const homeContent = {
       },
       doctors: {
         label: "Đội Ngũ",
-        title: "Đội Ngũ Bác Sĩ EMIS",
+        title: "Đội Ngũ Bác Sĩ Emis Dental",
         intro:
           "Một ca Implant hay phục hồi toàn hàm thành công không chỉ là một thủ thuật đơn lẻ. Đó là cả một quá trình từ chẩn đoán, lập kế hoạch đến theo dõi lâu dài.",
       },
@@ -936,8 +936,8 @@ export const homeContent = {
       },
       realJourneys: {
         label: "Hành Trình Thực Tế",
-        heading: "Hành Trình Của Bạn Cùng EMIS Sẽ Như Thế Nào",
-        subheading: "Từ tin nhắn đầu tiên đến chăm sóc lâu dài, đây là cách bệnh nhân trải nghiệm EMIS.",
+        heading: "Hành Trình Của Bạn Cùng Emis Dental Sẽ Như Thế Nào",
+        subheading: "Từ tin nhắn đầu tiên đến chăm sóc lâu dài, đây là cách bệnh nhân trải nghiệm Emis Dental.",
         pic: [
           { title: "Tư Vấn Trực Tuyến", description: "Bạn chia sẻ tình trạng, ảnh hoặc X-ray. Chúng tôi thảo luận về mục tiêu và đưa ra kế hoạch trung thực, trước khi bạn đặt lịch hẹn." },
           { title: "Đánh Giá Y Tế & Lập Kế Hoạch", description: "Đội ngũ xem xét toàn bộ hồ sơ và xây dựng lịch trình phù hợp để tận dụng tối đa thời gian của bạn tại Việt Nam." },
@@ -979,7 +979,7 @@ export const homeContent = {
           {
             question: "Tôi có thể xác minh bằng cấp và giấy phép hành nghề của bác sĩ điều trị không?",
             answer:
-              "Hoàn toàn có. Emis Dental đề cao sự minh bạch. Bác sĩ của chúng tôi có giấy phép hành nghề hợp lệ, được đào tạo từ các cơ sở uy tín tại Hoa Kỳ và trường đại học y khoa hàng đầu Việt Nam. Bệnh nhân có thể yêu cầu xác minh giấy phép hành nghề, bằng cấp chuyên môn và năng lực lâm sàng trước khi điều trị.",
+              "Có. Trước khi điều trị, bạn có thể đề nghị đội ngũ cung cấp thông tin giấy phép hành nghề và bằng cấp hiện hành của bác sĩ trực tiếp điều trị.",
           },
           {
             question: "Emis Dental có hỗ trợ sắp xếp chuyến đi điều trị tại Việt Nam không?",
@@ -999,7 +999,7 @@ export const homeContent = {
         description:
           "Bạn không cần phải quyết định ngay hôm nay. Bước đầu tiên là hiểu rõ tình trạng hiện tại và trao đổi về những hướng điều trị phù hợp.",
         primaryCta: "Gửi X-ray của bạn",
-        secondaryCta: "Kết nối với đội ngũ EMIS",
+        secondaryCta: "Kết nối với đội ngũ Emis Dental",
         supportTitle: "Bạn có thể chia sẻ thêm",
         supportItems: [
           "Nơi đang sinh sống",
@@ -1016,7 +1016,7 @@ export const homeContent = {
     metaTitle: "Dịch Vụ Nha Khoa Chất Lượng Tại TP.HCM | Nha Khoa Tổng Quát & Thẩm Mỹ",
     metaDescription: "Dịch vụ nha khoa chuyên nghiệp bao gồm cấy ghép implant, mão sứ, Invisalign tại TP.HCM. Đặt lịch hẹn ngay hôm nay.",
     homepageV2Legacy: {
-      metaTitle: "Chuyên Sâu Implant & Phục Hồi Toàn Hàm | EMIS Dental",
+      metaTitle: "Chuyên Sâu Implant & Phục Hồi Toàn Hàm | Emis Dental",
       metaDescription: "Giúp Việt kiều và bệnh nhân quốc tế khôi phục khả năng ăn nhai, sự tự tin và chất lượng cuộc sống thông qua implant và phục hồi toàn hàm.",
       hero: {
         title: "Chuyên Sâu Implant & Phục Hồi Toàn Hàm",
@@ -1029,11 +1029,11 @@ export const homeContent = {
           "Hỗ trợ bệnh nhân quốc tế"
         ],
         primaryCta: "Gửi X-ray của bạn",
-        secondaryCta: "Kết nối với đội ngũ EMIS",
-        trustStatement: "Đội ngũ chuyên sâu Implant của EMIS có bác sĩ phẫu thuật Răng Hàm Mặt hiện đang công tác tại Bệnh viện Răng Hàm Mặt TP.HCM."
+        secondaryCta: "Kết nối với đội ngũ Emis Dental",
+        trustStatement: "Đội ngũ chuyên sâu Implant của Emis Dental có bác sĩ phẫu thuật Răng Hàm Mặt hiện đang công tác tại Bệnh viện Răng Hàm Mặt TP.HCM."
       },
       confidence: {
-        title: "Vì Sao Nhiều Bệnh Nhân Chọn EMIS?",
+        title: "Vì Sao Nhiều Bệnh Nhân Chọn Emis Dental?",
         intro: "Điều trị Implant thường là một quyết định lớn.",
         cards: [
           {
@@ -1055,15 +1055,15 @@ export const homeContent = {
         ]
       },
       doctors: {
-        title: "Đội Ngũ Bác Sĩ EMIS",
+        title: "Đội Ngũ Bác Sĩ Emis Dental",
         intro: "Một ca Implant hay phục hồi toàn hàm thành công không chỉ là một thủ thuật đơn lẻ. Đó là cả một quá trình từ chẩn đoán, lập kế hoạch đến theo dõi lâu dài.",
         cards: [
           {
             name: "BS. CKI Trần Minh Tú",
             role: "Phẫu thuật viên Răng Hàm Mặt",
             focus: "Phẫu thuật Implant • Tiểu phẫu Răng Hàm Mặt • Phục hồi toàn hàm",
-            summary: "Hiện đang công tác tại Bệnh viện Răng Hàm Mặt TP.HCM và EMIS Premium Dental Clinic.",
-            languages: "Tiếng Việt • English • Hungarian • Chinese"
+            summary: "Hiện đang công tác tại Bệnh viện Răng Hàm Mặt TP.HCM và Emis Dental.",
+            languages: "Tiếng Việt • Tiếng Anh"
           }
         ],
       },
@@ -1228,7 +1228,7 @@ export const homeContent = {
         title: "Bắt Đầu Bằng Việc Hiểu Rõ Tình Trạng Của Bạn",
         description: "Bạn không cần quyết định điều trị ngay hôm nay. Bước đầu tiên là hiểu rõ tình trạng hiện tại và các lựa chọn phù hợp với mục tiêu của bạn.",
         primaryCta: "Gửi X-ray của bạn",
-        secondaryCta: "Kết nối với đội ngũ EMIS",
+        secondaryCta: "Kết nối với đội ngũ Emis Dental",
         supportTitle: "Bạn có thể chia sẻ thêm:",
         supportItems: [
           "Quốc gia đang sinh sống",
@@ -1249,7 +1249,7 @@ export const homeContent = {
       label: "种植牙",
       title: "种植牙是我们的核心专长，以经验为后盾",
       intro:
-        "在 Emis Dental，种植牙是我们的核心专长之一，同时我们还提供全面的高级牙科治疗。我们的持证牙医团队，每位均拥有超过 10 年的临床经验，已成功完成数千例种植病例，从单颗种植到全口重建。",
+        "Emis Dental 提供种植牙及其他牙科服务。牙医会在检查并评估您的情况后讨论适合的治疗方案。",
       principles: [
         { title: "严格的医疗规范" },
         { title: "透明的方案与价格" },
@@ -1264,7 +1264,7 @@ export const homeContent = {
     faqItems: [
       {
         question: "我可以核实主治牙医的执照与资质吗？",
-        answer: "当然可以。Emis Dental 坚持透明沟通。我们的牙医均持有合法执照，并接受过美国知名院校及越南顶尖医科大学的专业培训。患者可在治疗前申请核验执业许可、学历资质与临床资格。"
+        answer: "可以。在治疗前，您可以向团队索取主治牙医现行执业许可和资质的详细信息。"
       },
       {
         question: "Emis Dental 会协助安排我到越南治疗的行程吗？",
@@ -1298,7 +1298,7 @@ export const homeContent = {
     findout: "Find Out More",
     practiceTitle: "我们的诊所实况",
     papersTitle: "标准高质量牙科诊所",
-    introTitle: "欢迎来到 Emis 牙科",
+    introTitle: "欢迎来到 Emis Dental",
     shorts: [
       {
         name: "种植牙护理技巧",
@@ -1380,7 +1380,7 @@ export const homeContent = {
       label: "치과 임플란트",
       title: "경험으로 덻받침되는 핵심 임플란트 전문성",
       intro:
-        "Emis Dental에서 치과 임플란트는 다양한 첨단 치과 치료와 더불어 저희의 핵심 전문 분야 중 하나입니다. 각각 10년 이상의 경력을 갖춘 인증 치과의사 팀이 단일 임플란트부터 전악 재건까지 수천 건의 임플란트 사례를 성공적으로 치료해 왔습니다.",
+        "Emis Dental은 임플란트와 기타 치과 진료를 제공합니다. 치과의사가 검진과 상태 평가 후 적절한 치료 방법을 설명합니다.",
       principles: [
         { title: "엄격한 의료 프로토콜" },
         { title: "투명한 치료 계획과 비용" },
@@ -1395,7 +1395,7 @@ export const homeContent = {
     faqItems: [
       {
         question: "담당 치과의사의 면허와 자격을 확인할 수 있나요?",
-        answer: "물론입니다. Emis Dental은 투명한 진료를 중요하게 생각합니다. 저희 의료진은 정식 면허를 보유하고 있으며 미국의 주요 교육기관과 베트남 최고 수준의 의과대학에서 교육을 받았습니다. 치료 전 면허, 학력, 임상 자격 확인을 요청하실 수 있습니다."
+        answer: "네. 치료 전에 담당 치과의사의 현행 면허와 자격 정보를 팀에 요청하실 수 있습니다."
       },
       {
         question: "Emis Dental이 베트남 치료 여행 일정도 도와주나요?",
@@ -1429,7 +1429,7 @@ export const homeContent = {
     findout: "자세히 보기",
     practiceTitle: "우리의 진료 현장",
     papersTitle: "표준 품질 치과",
-    introTitle: "Emis 치과에 오신 것을 환영합니다",
+    introTitle: "Emis Dental에 오신 것을 환영합니다",
     shorts: [
       {
         name: "임플란트 관리 팁",
@@ -1513,7 +1513,7 @@ export const homeContent = {
       label: "植牙",
       title: "植牙是我們的核心專長，以經驗為後盾",
       intro:
-        "在 Emis Dental，植牙是我們的核心專長之一，同時我們也提供全面的進階牙科治療。我們的持證牙醫團隊，每位皆擁有超過 10 年的臨床經驗，已成功完成數千例植牙病例，從單顆植牙到全口重建。",
+        "Emis Dental 提供植牙及其他牙科服務。牙醫會在檢查並評估您的情況後討論合適的治療方案。",
       principles: [
         { title: "嚴格的醫療規範" },
         { title: "透明的方案與價格" },
@@ -1562,7 +1562,7 @@ export const homeContent = {
     findout: "Find Out More",
     practiceTitle: "我們的診所實況",
     papersTitle: "標準高品質牙科診所",
-    introTitle: "歡迎來到 Emis 牙科",
+    introTitle: "歡迎來到 Emis Dental",
     shorts: [
       {
         name: "植牙護理技巧",
@@ -1645,7 +1645,7 @@ export const homeContent = {
       label: "Implant dentaire",
       title: "Une spécialité implantaire centrale, fondée sur l'expérience",
       intro:
-        "Chez Emis Dental, les implants dentaires constituent l'une de nos spécialités centrales, aux côtés d'une gamme complète de traitements dentaires avancés. Notre équipe de dentistes certifiés, chacun comptant plus de 10 ans d'expérience, a traité avec succès des milliers de cas d'implants, de l'implant unitaire à la réhabilitation complète.",
+        "Emis Dental propose des implants dentaires ainsi que d'autres soins. Le praticien discutera des options adaptées après avoir examiné votre situation.",
       principles: [
         { title: "Protocoles médicaux stricts" },
         { title: "Plans et tarifs transparents" },
@@ -1660,7 +1660,7 @@ export const homeContent = {
     faqItems: [
       {
         question: "Puis-je vérifier les diplômes et autorisations d'exercice de mon dentiste traitant ?",
-        answer: "Absolument. Emis Dental privilégie la transparence. Nos dentistes sont des praticiens autorisés, formés dans des institutions de référence aux États-Unis et dans l'université de médecine la mieux classée du Vietnam. Les patients peuvent demander la vérification des licences, qualifications et compétences cliniques avant de commencer le traitement."
+        answer: "Oui. Avant le traitement, vous pouvez demander à notre équipe les informations à jour sur l'autorisation d'exercer et les qualifications du praticien qui vous soignera."
       },
       {
         question: "Emis Dental peut-il m'aider à organiser mon voyage de traitement au Vietnam ?",
@@ -1694,7 +1694,7 @@ export const homeContent = {
     findout: "Find Out More",
     practiceTitle: "Notre Pratique en Action",
     papersTitle: "Clinique Dentaire de Qualité Standard",
-    introTitle: "Bienvenue à Clinique Dentaire Emis",
+    introTitle: "Bienvenue chez Emis Dental",
     shorts: [
       {
         name: "Conseils pour les Implants",

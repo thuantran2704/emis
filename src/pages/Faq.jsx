@@ -31,7 +31,7 @@ const Faq = () => {
           aria-hidden="true"
         />
         <div className="relative max-w-3xl mx-auto px-8 py-16 lg:py-24 text-center">
-          <p className={sectionLabelClass}>EMIS Dental</p>
+          <p className={sectionLabelClass}>Emis Dental</p>
           <h1 className={titleClass + ' mt-4'}>{content.title}</h1>
           <p className={bodyClass + ' mt-5'}>{content.intro}</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center pt-8">

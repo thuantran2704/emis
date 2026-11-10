@@ -3,8 +3,8 @@ export const schemaMarkup = JSON.stringify([
     "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": "https://emisdental.com/#website",
-    "name": "EMIS Dental",
-    "alternateName": "EMIS International Dental",
+    "name": "Emis Dental",
+    "alternateName": "Emis Dental",
     "url": "https://emisdental.com",
     "publisher": {
       "@id": "https://emisdental.com"
@@ -22,21 +22,21 @@ export const schemaMarkup = JSON.stringify([
     "@context": "https://schema.org",
     "@type": "ItemList",
     "@id": "https://emisdental.com/#primary-navigation",
-    "name": "EMIS Dental main navigation",
+    "name": "Emis Dental main navigation",
     "itemListOrder": "https://schema.org/ItemListOrderAscending",
     "itemListElement": [
       {
         "@type": "SiteNavigationElement",
         "position": 1,
         "name": "International Patients",
-        "description": "Multilingual support, remote consultation, and treatment planning for patients traveling to EMIS Dental.",
+        "description": "Multilingual support, remote consultation, and treatment planning for patients traveling to Emis Dental.",
         "url": "https://emisdental.com/international-patients"
       },
       {
         "@type": "SiteNavigationElement",
         "position": 2,
         "name": "Dental Implants",
-        "description": "Single and full-arch dental implant treatment at EMIS Dental.",
+        "description": "Single and full-arch dental implant treatment at Emis Dental.",
         "url": "https://emisdental.com/implant"
       },
       {
@@ -50,13 +50,13 @@ export const schemaMarkup = JSON.stringify([
         "@type": "SiteNavigationElement",
         "position": 4,
         "name": "Treatments & Services",
-        "description": "Full range of dental treatments offered at EMIS Dental.",
+        "description": "Full range of dental treatments offered at Emis Dental.",
         "url": "https://emisdental.com/services"
       },
       {
         "@type": "SiteNavigationElement",
         "position": 5,
-        "name": "About EMIS Dental",
+        "name": "About Emis Dental",
         "description": "Our clinic, doctors, and equipment.",
         "url": "https://emisdental.com/about"
       },
@@ -64,7 +64,7 @@ export const schemaMarkup = JSON.stringify([
         "@type": "SiteNavigationElement",
         "position": 6,
         "name": "Contact",
-        "description": "Book an appointment or reach the EMIS Dental team.",
+        "description": "Book an appointment or reach the Emis Dental team.",
         "url": "https://emisdental.com/contact"
       }
     ]
@@ -72,8 +72,8 @@ export const schemaMarkup = JSON.stringify([
   {
     "@context": "https://schema.org",
     "@type": ["Organization", "LocalBusiness", "Dentist"],
-    "name": "EMIS Dental",
-    "alternateName": "EMIS Dental Clinic",
+    "name": "Emis Dental",
+    "alternateName": "Emis Dental",
     "description": "Premium dental clinic in Ho Chi Minh City offering implants, cosmetic dentistry, Invisalign, whitening, root canal treatment, and patient communication support.",
     "image": "https://emisdental.com/logo.ico",
     "@id": "https://emisdental.com",
@@ -131,9 +131,9 @@ export const schemaMarkup = JSON.stringify([
     "@context": "https://schema.org",
     "@type": "Physician",
     "name": "Dr. Do Thai Long",
-    "description": "Lead dentist responsible for professional care at EMIS Dental Clinic.",
+    "description": "Lead dentist responsible for professional care at Emis Dental.",
     "url": "https://emisdental.com/dr-long",
-    "affiliation": "EMIS Dental",
+    "affiliation": "Emis Dental",
     "worksFor": {
       "@id": "https://emisdental.com"
     },
@@ -150,10 +150,10 @@ export const schemaMarkup = JSON.stringify([
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What dental services does EMIS Dental provide?",
+        "name": "What dental services does Emis Dental provide?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "EMIS Dental offers general dentistry, dental implants, crowns, Invisalign, whitening, root canal treatment, and follow-up support."
+          "text": "Emis Dental offers general dentistry, dental implants, crowns, Invisalign, whitening, root canal treatment, and follow-up support."
         }
       },
       {

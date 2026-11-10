@@ -1,16 +1,16 @@
 export const warrantyContent = {
   english: {
-    metaTitle: 'Warranty & After-Treatment Support | EMIS Dental',
+    metaTitle: 'Warranty & After-Treatment Support | Emis Dental',
     metaDescription:
-      'EMIS Dental warranty coverage and after-treatment support, including follow-up care, eligible treatments, conditions, and support for international patients.',
+      'Emis Dental warranty coverage and after-treatment support, including follow-up care, eligible treatments, conditions, and support for international patients.',
     title: 'Warranty & After-Treatment Support',
     lastUpdatedLabel: 'Last updated',
     lastUpdated: '06/25/2026',
     intro: [
-      'At EMIS Dental, our commitment to your care does not end when your treatment is completed.',
+      'At Emis Dental, our commitment to your care does not end when your treatment is completed.',
       'Along with warranty coverage for eligible treatments, we continue to support you through follow-up care and long-term maintenance whenever appropriate.',
     ],
-    contactCta: 'Contact EMIS Dental',
+    contactCta: 'Contact Emis Dental',
     sections: [
       {
         title: 'After-Treatment Support',
@@ -27,7 +27,7 @@ export const warrantyContent = {
       {
         title: 'Warranty Coverage',
         paragraphs: [
-          'Certain treatments may be covered under EMIS Dental’s warranty policy, including dental implants, implant-supported restorations, crowns, bridges, veneers, orthodontic treatment, and other eligible services.',
+          'Certain treatments may be covered under Emis Dental’s warranty policy, including dental implants, implant-supported restorations, crowns, bridges, veneers, orthodontic treatment, and other eligible services.',
           'Warranty coverage depends on:',
         ],
         bullets: [
@@ -61,7 +61,7 @@ export const warrantyContent = {
           'Maintain good oral hygiene',
           'Attend recommended follow-up appointments',
           'Contact us promptly if you notice any concerns',
-          'Speak with EMIS Dental before seeking repairs or further treatment elsewhere',
+          'Speak with Emis Dental before seeking repairs or further treatment elsewhere',
         ],
       },
       {
@@ -72,7 +72,7 @@ export const warrantyContent = {
           'Poor oral hygiene or uncontrolled periodontal disease',
           'Accidents, trauma, or external damage',
           'Smoking, systemic health conditions, or other factors affecting healing',
-          'Treatment or repairs carried out elsewhere without prior discussion with EMIS Dental',
+          'Treatment or repairs carried out elsewhere without prior discussion with Emis Dental',
           'Biological factors beyond our reasonable control',
         ],
         note: 'Each situation is assessed individually based on your clinical condition and treatment records.',
@@ -89,7 +89,7 @@ export const warrantyContent = {
       {
         title: 'Contact Us',
         paragraphs: [
-          'If you have any questions about your warranty or after-treatment support, please contact EMIS Dental.',
+          'If you have any questions about your warranty or after-treatment support, please contact Emis Dental.',
           "We're committed to supporting you throughout your treatment journey and beyond.",
         ],
       },
@@ -97,17 +97,17 @@ export const warrantyContent = {
   },
 
   vietnamese: {
-    metaTitle: 'Chính Sách Bảo Hành & Hỗ Trợ Sau Điều Trị | EMIS Dental',
+    metaTitle: 'Chính Sách Bảo Hành & Hỗ Trợ Sau Điều Trị | Emis Dental',
     metaDescription:
-      'Chính sách bảo hành và hỗ trợ sau điều trị của EMIS Dental, bao gồm tái khám, các dịch vụ đủ điều kiện, điều kiện áp dụng và hỗ trợ khách hàng quốc tế.',
+      'Chính sách bảo hành và hỗ trợ sau điều trị của Emis Dental, bao gồm tái khám, các dịch vụ đủ điều kiện, điều kiện áp dụng và hỗ trợ khách hàng quốc tế.',
     title: 'Chính Sách Bảo Hành & Hỗ Trợ Sau Điều Trị',
     lastUpdatedLabel: 'Cập nhật lần cuối',
     lastUpdated: '25/06/2026',
     intro: [
-      'EMIS Dental tin rằng sự đồng hành cùng khách hàng không kết thúc sau khi hoàn tất điều trị.',
+      'Emis Dental tin rằng sự đồng hành cùng khách hàng không kết thúc sau khi hoàn tất điều trị.',
       'Bên cạnh chính sách bảo hành dành cho các dịch vụ đủ điều kiện, chúng tôi luôn sẵn sàng hỗ trợ trong quá trình theo dõi, duy trì và bảo vệ kết quả điều trị lâu dài.',
     ],
-    contactCta: 'Liên Hệ EMIS Dental',
+    contactCta: 'Liên Hệ Emis Dental',
     sections: [
       {
         title: 'Hỗ Trợ Sau Điều Trị',
@@ -124,7 +124,7 @@ export const warrantyContent = {
       {
         title: 'Phạm Vi Bảo Hành',
         paragraphs: [
-          'Một số dịch vụ tại EMIS Dental được áp dụng chính sách bảo hành, bao gồm implant, phục hình implant, mão sứ, cầu răng, veneer, chỉnh nha và một số dịch vụ khác đủ điều kiện.',
+          'Một số dịch vụ tại Emis Dental được áp dụng chính sách bảo hành, bao gồm implant, phục hình implant, mão sứ, cầu răng, veneer, chỉnh nha và một số dịch vụ khác đủ điều kiện.',
           'Phạm vi bảo hành phụ thuộc vào:',
         ],
         bullets: [
@@ -140,7 +140,7 @@ export const warrantyContent = {
         title: 'Bảo Hành Từ Nhà Sản Xuất',
         paragraphs: [
           'Một số vật liệu, hệ thống implant hoặc sản phẩm phục hình có thể được áp dụng chính sách bảo hành của nhà sản xuất.',
-          'Trong trường hợp phù hợp, EMIS Dental sẽ hỗ trợ khách hàng thực hiện các thủ tục theo quy định của từng hãng.',
+          'Trong trường hợp phù hợp, Emis Dental sẽ hỗ trợ khách hàng thực hiện các thủ tục theo quy định của từng hãng.',
         ],
       },
       {
@@ -158,7 +158,7 @@ export const warrantyContent = {
           'Duy trì vệ sinh răng miệng phù hợp',
           'Tái khám theo khuyến nghị',
           'Chủ động liên hệ khi có dấu hiệu bất thường',
-          'Trao đổi với EMIS Dental trước khi điều trị hoặc sửa chữa tại cơ sở khác',
+          'Trao đổi với Emis Dental trước khi điều trị hoặc sửa chữa tại cơ sở khác',
         ],
       },
       {
@@ -170,14 +170,14 @@ export const warrantyContent = {
           'Tai nạn, chấn thương hoặc các tác động từ bên ngoài',
           'Hút thuốc, bệnh lý toàn thân hoặc các yếu tố ảnh hưởng đến quá trình lành thương',
           'Tự ý điều trị hoặc sửa chữa tại cơ sở khác',
-          'Những yếu tố sinh học nằm ngoài khả năng kiểm soát hợp lý của EMIS Dental',
+          'Những yếu tố sinh học nằm ngoài khả năng kiểm soát hợp lý của Emis Dental',
         ],
         note: 'Mỗi trường hợp sẽ được đánh giá dựa trên tình trạng thực tế và hồ sơ điều trị.',
       },
       {
         title: 'Khách Hàng Quốc Tế',
         paragraphs: [
-          'Đối với khách hàng ở nước ngoài, EMIS Dental khuyến khích bạn liên hệ ngay khi có bất kỳ thắc mắc hoặc dấu hiệu bất thường sau điều trị.',
+          'Đối với khách hàng ở nước ngoài, Emis Dental khuyến khích bạn liên hệ ngay khi có bất kỳ thắc mắc hoặc dấu hiệu bất thường sau điều trị.',
           'Trong nhiều trường hợp, chúng tôi có thể hỗ trợ đánh giá ban đầu thông qua hình ảnh, phim X-quang hoặc các thông tin bạn cung cấp để đưa ra hướng xử lý phù hợp.',
           'Nếu cần thăm khám trực tiếp, bác sĩ sẽ trao đổi cụ thể sau khi đánh giá hồ sơ.',
           'Chi phí đi lại, lưu trú, xin visa hoặc điều trị tại cơ sở khác không thuộc phạm vi của chính sách bảo hành.',
@@ -186,7 +186,7 @@ export const warrantyContent = {
       {
         title: 'Liên Hệ',
         paragraphs: [
-          'Nếu bạn có bất kỳ câu hỏi nào về chính sách bảo hành hoặc cần hỗ trợ sau điều trị, vui lòng liên hệ với EMIS Dental.',
+          'Nếu bạn có bất kỳ câu hỏi nào về chính sách bảo hành hoặc cần hỗ trợ sau điều trị, vui lòng liên hệ với Emis Dental.',
           'Chúng tôi luôn sẵn sàng đồng hành và hỗ trợ bạn trong suốt quá trình điều trị cũng như sau khi hoàn tất điều trị.',
         ],
       },
