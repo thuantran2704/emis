@@ -130,7 +130,9 @@ export const schemaMarkup = JSON.stringify([
   {
     "@context": "https://schema.org",
     "@type": "Physician",
-    "description": "Dental specialist at EMIS Dental focused on patient care, treatment planning, and communication support.",
+    "name": "Dr. Do Thai Long",
+    "description": "Lead dentist responsible for professional care at EMIS Dental Clinic.",
+    "url": "https://emisdental.com/dr-long",
     "affiliation": "EMIS Dental",
     "worksFor": {
       "@id": "https://emisdental.com"
@@ -140,7 +142,7 @@ export const schemaMarkup = JSON.stringify([
       "CosmeticDentistry",
       "GeneralDentistry"
     ],
-    "availableLanguage": ["Vietnamese", "English", "French", "Korean", "Chinese"]
+    "availableLanguage": ["Chinese"]
   },
   {
     "@context": "https://schema.org",

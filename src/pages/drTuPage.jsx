@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { Helmet } from 'react-helmet';
 import drTuContent from '../Translations/drTuContent';
-import doctorPortrait from '../pics/dr-tu-potrait.jpg';
+import doctorPortrait from '../pics/dr-tu-portrait-updated.png';
 import consultImage from '../pics/measuring-result-cbct-x-ray-patient-smiling.jpg';
 import teamImage from '../pics/sterile-room-phong-khu-trung.jpg';
 import planningImage from '../pics/dr-tu-working.jpg';

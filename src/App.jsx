@@ -19,6 +19,7 @@ import DentalVisitorProgram from './pages/flightassist.jsx';
 import Implant from './pages/implant.jsx';
 import Doctors from './pages/doctors.jsx';
 import DrTuPage from './pages/drTuPage.jsx';
+import DrLongPage from './pages/drLongPage.jsx';
 import InternationalPatients from './pages/InternationalPatients.jsx';
 import OralSurgery from './pages/OralSurgery.jsx';
 import RestorativeDentistry from './pages/RestorativeDentistry.jsx';
@@ -125,6 +126,7 @@ function AppShell() {
           <Route path="/implant" element={<Implant />}/>
           <Route path="/crown" element={<CrownLanding/>}/>
           <Route path="/dr-tu" element={<DrTuPage />} />
+          <Route path="/dr-long" element={<DrLongPage />} />
           <Route path="/visitor-program" element={<DentalVisitorProgram />} />
           <Route path="/doctors" element={<Doctors />} />
           <Route path="/mail" element={<ExternalRedirect to={zohoMailUrl} />} />

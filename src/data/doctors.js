@@ -22,9 +22,85 @@
  *  cta             â€“ "View profile" button label.
  */
 
-import drTuPortrait from '../pics/dr-tu-potrait.jpg';
+import drLongPortrait from '../pics/dr-long-portrait.png';
+import drTuPortrait from '../pics/dr-tu-portrait-updated.png';
 
 export const DOCTORS = [
+  {
+    id: 'dr-long',
+    slug: '/dr-long',
+    portrait: drLongPortrait,
+    featured: true,
+
+    english: {
+      name: 'Dr. Do Thai Long',
+      role: 'Lead Dentist · EMIS Dental Clinic',
+      focus: 'Dental Implants • Orthodontics • Aesthetic Restorations • Endodontics',
+      summary: 'Trained in China and Vietnam, with clinical experience at Ho Chi Minh City Hospital of Odonto-Stomatology.',
+      languages: 'Chinese proficiency recognized for medical care by Hue University',
+      specialties: 'Dentistry • Dental Implants • Orthodontics • Aesthetic Restorations • Endodontics',
+      descriptionOne: 'Dr. Long is the dentist in charge of professional care at EMIS Dental Clinic. His training spans China and Vietnam, with clinical practice at Ho Chi Minh City Hospital of Odonto-Stomatology.',
+      descriptionTwo: 'He continues to develop his skills through advanced training in implants, orthodontics, oral surgery, infection control, and endodontics.',
+      highlights: ['Specialist Level I in Odonto-Stomatology (2026)', 'Licensed by the Ho Chi Minh City Department of Health', 'Clinical practice at Ho Chi Minh City Hospital of Odonto-Stomatology'],
+      cta: 'View Full Profile',
+    },
+    vietnamese: {
+      name: 'BS. CKI Đỗ Thái Long',
+      role: 'Bác sĩ phụ trách chuyên môn · Nha khoa EMIS',
+      focus: 'Implant • Chỉnh hình răng mặt • Phục hình thẩm mỹ • Nội nha',
+      summary: 'Được đào tạo tại Trung Quốc và Việt Nam, có quá trình thực hành tại Bệnh viện Răng Hàm Mặt TP. Hồ Chí Minh.',
+      languages: 'Được công nhận đủ trình độ sử dụng tiếng Trung trong khám chữa bệnh',
+      specialties: 'Răng Hàm Mặt • Implant • Chỉnh hình răng mặt • Phục hình thẩm mỹ • Điều trị nội nha',
+      descriptionOne: 'Bác sĩ Đỗ Thái Long phụ trách chuyên môn tại Nha khoa EMIS, được đào tạo tại Trung Quốc và Việt Nam, đồng thời có quá trình thực hành lâm sàng tại Bệnh viện Răng Hàm Mặt TP. Hồ Chí Minh.',
+      descriptionTwo: 'Bác sĩ tiếp tục cập nhật kiến thức qua các chương trình chuyên sâu về Implant, chỉnh hình răng mặt, phẫu thuật miệng, kiểm soát lây nhiễm và nội nha.',
+      highlights: ['Bác sĩ Chuyên khoa I Răng Hàm Mặt (2026)', 'Chứng chỉ hành nghề do Sở Y tế TP. Hồ Chí Minh cấp', 'Thực hành tại Bệnh viện Răng Hàm Mặt TP. Hồ Chí Minh'],
+      cta: 'Xem hồ sơ chi tiết',
+    },
+    french: {
+      name: 'Dr Do Thai Long', role: 'Dentiste responsable des soins · EMIS Dental',
+      focus: 'Implants • Orthodontie • Restaurations esthétiques • Endodontie',
+      summary: 'Formé en Chine et au Vietnam, avec une expérience clinique à l’hôpital d’odontostomatologie de Hô Chi Minh-Ville.',
+      languages: 'Maîtrise du chinois pour les soins reconnue par l’Université de Hué',
+      specialties: 'Dentisterie • Implants • Orthodontie • Restaurations esthétiques • Endodontie',
+      descriptionOne: 'Le Dr Long est responsable des soins professionnels chez EMIS Dental. Il a été formé en Chine et au Vietnam et a exercé à l’hôpital d’odontostomatologie de Hô Chi Minh-Ville.',
+      descriptionTwo: 'Il poursuit sa formation en implantologie, orthodontie, chirurgie orale, prévention des infections et endodontie.',
+      highlights: ['Spécialiste de niveau I en odontostomatologie (2026)', 'Autorisation d’exercice délivrée par le service de santé de Hô Chi Minh-Ville', 'Expérience clinique hospitalière à Hô Chi Minh-Ville'],
+      cta: 'Voir le profil complet',
+    },
+    korean: {
+      name: 'Dr. Do Thai Long', role: 'EMIS Dental 진료 책임 치과의사',
+      focus: '임플란트 • 교정 • 심미 수복 • 근관 치료',
+      summary: '중국과 베트남에서 교육받고 호찌민시 구강악안면병원에서 임상 경험을 쌓았습니다.',
+      languages: '후에대학교에서 진료용 중국어 능력 인정',
+      specialties: '치과 진료 • 임플란트 • 교정 • 심미 수복 • 근관 치료',
+      descriptionOne: '롱 원장은 EMIS Dental의 진료 책임 치과의사입니다. 중국과 베트남에서 교육받고 호찌민시 구강악안면병원에서 임상 실습을 했습니다.',
+      descriptionTwo: '임플란트, 교정, 구강외과, 감염 관리 및 근관 치료 관련 심화 교육을 지속하고 있습니다.',
+      highlights: ['구강악안면 분야 전문의 1급 (2026)', '호찌민시 보건국 발급 진료 면허', '호찌민시 구강악안면병원 임상 경험'],
+      cta: '자세히 보기',
+    },
+    simplified: {
+      name: 'Dr. Do Thai Long', role: 'EMIS 牙科诊所专业负责人',
+      focus: '种植牙 • 正畸 • 美学修复 • 根管治疗',
+      summary: '在中国和越南接受专业培训，并曾在胡志明市口腔颌面医院进行临床实践。',
+      languages: '顺化大学认可其在诊疗中使用中文的能力',
+      specialties: '口腔医学 • 种植牙 • 正畸 • 美学修复 • 根管治疗',
+      descriptionOne: '杜泰龙医生担任 EMIS 牙科诊所专业负责人，曾在中国和越南接受培训，并在胡志明市口腔颌面医院进行临床实践。',
+      descriptionTwo: '他持续参加种植牙、正畸、口腔外科、感染控制和根管治疗等专业培训。',
+      highlights: ['口腔颌面医学一级专科医师（2026）', '持胡志明市卫生部门颁发的执业证书', '胡志明市口腔颌面医院临床实践'],
+      cta: '查看完整资料',
+    },
+    traditional: {
+      name: 'Dr. Do Thai Long', role: 'EMIS 牙科診所專業負責人',
+      focus: '植牙 • 正畸 • 美學修復 • 根管治療',
+      summary: '在中國及越南接受專業培訓，並曾於胡志明市口腔顎面醫院進行臨床實習。',
+      languages: '順化大學認可其在診療中使用中文的能力',
+      specialties: '牙科醫學 • 植牙 • 正畸 • 美學修復 • 根管治療',
+      descriptionOne: '杜泰龍醫師擔任 EMIS 牙科診所專業負責人，曾在中國及越南受訓，並於胡志明市口腔顎面醫院進行臨床實習。',
+      descriptionTwo: '他持續參與植牙、正畸、口腔外科、感染控制及根管治療等專業培訓。',
+      highlights: ['口腔顎面醫學一級專科醫師（2026）', '持胡志明市衛生部門核發的執業證書', '胡志明市口腔顎面醫院臨床實習'],
+      cta: '查看完整資料',
+    },
+  },
   // Dr. Tran Minh Tu -----------------------------------------------------
   {
     id: 'dr-tu',

@@ -190,30 +190,34 @@ export default function Home() {
             <Text variant="intro" className="mt-4">{page.doctors.intro}</Text>
           </div>
 
-          <div className="mt-10 grid gap-5 md:grid-cols-2">
+          <div className="mt-10 grid gap-5 lg:grid-cols-[1.2fr_0.8fr]">
             {DOCTORS.map((doctor) => {
               const t = getDoctorTranslation(doctor, language);
+              const featured = doctor.featured;
               return (
               <Link
                 key={doctor.id}
                 to={doctor.slug}
-                className="group grid gap-3 rounded-3xl border border-[#dbe4ec] bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-[#C5AF73] hover:shadow-md sm:grid-cols-[minmax(110px,140px)_1fr] sm:items-start sm:gap-4 md:p-6"
+                className={`group grid gap-5 overflow-hidden rounded-3xl border p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg sm:items-center sm:p-6 ${featured ? 'border-[#c5af73] bg-[#193543] sm:grid-cols-[minmax(150px,220px)_1fr]' : 'border-[#dbe4ec] bg-white sm:grid-cols-[minmax(130px,165px)_1fr] hover:border-[#c5af73]'}`}
               >
-                <img
-                  src={doctor.portrait}
-                  alt={t.name}
-                  loading="lazy"
-                  decoding="async"
-                  className="w-full max-w-full rounded-2xl border border-[#dbe4ec] bg-white object-contain"
-                />
-                <div>
-                  <Text variant="cardTitle" size="sm" className="transition group-hover:text-[#C5AF73]">{t.name}</Text>
-                  {t.role && <p className="mt-1 text-xs font-semibold text-[#806019]">{t.role}</p>}
-                  {t.focus && <p className="mt-2 text-sm leading-relaxed text-[#46576a]">{t.focus}</p>}
-                  {t.summary && <p className="mt-2 text-sm leading-relaxed text-[#46576a]">{t.summary}</p>}
-                  {t.languages && <p className="mt-3 text-[11px] uppercase tracking-[0.12em] text-[#52687b]">{t.languages}</p>}
+                <div className="aspect-[4/5] overflow-hidden rounded-2xl bg-[#fff0be]">
+                  <img
+                    src={doctor.portrait}
+                    alt={t.name}
+                    loading="lazy"
+                    decoding="async"
+                    className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-[1.03]"
+                  />
+                </div>
+                <div className="min-w-0">
+                  {featured && <span className="mb-3 block h-1 w-10 rounded-full bg-[#d7bc7b]" aria-hidden="true" />}
+                  <h3 className={`text-xl font-semibold leading-snug ${featured ? 'text-white sm:text-2xl' : 'text-[#243943]'}`}>{t.name}</h3>
+                  {t.role && <p className={`mt-2 text-sm font-semibold ${featured ? 'text-[#ead19a]' : 'text-[#806019]'}`}>{t.role}</p>}
+                  {t.focus && <p className={`mt-3 text-sm leading-relaxed ${featured ? 'text-[#f3f0e9]' : 'text-[#46576a]'}`}>{t.focus}</p>}
+                  {t.summary && <p className={`mt-2 text-sm leading-relaxed ${featured ? 'text-[#d9e3e6]' : 'text-[#46576a]'}`}>{t.summary}</p>}
+                  {t.languages && <p className={`mt-3 text-xs leading-relaxed ${featured ? 'text-[#c5d4d8]' : 'text-[#52687b]'}`}>{t.languages}</p>}
                   {t.cta && (
-                    <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#806019] transition group-hover:gap-2">
+                    <span className={`mt-5 inline-flex items-center gap-1 text-sm font-semibold transition group-hover:gap-2 ${featured ? 'text-[#ead19a]' : 'text-[#806019]'}`}>
                       {t.cta}
                       <svg className="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
