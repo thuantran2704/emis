@@ -169,8 +169,8 @@ const Doctors = () => {
                 </div>
                 <div className="min-w-0">
                   <h3 className="text-2xl font-semibold leading-snug text-[#2a3439]">{t.name}</h3>
-                  <p className="mt-2 text-sm font-semibold text-[#806019]">{t.role}</p>
-                  <p className="mt-3 text-sm leading-relaxed text-[#46576a]">{t.focus}</p>
+                  {t.role && <p className="mt-2 text-sm font-semibold text-[#806019]">{t.role}</p>}
+                  {t.focus && <p className="mt-3 text-sm leading-relaxed text-[#46576a]">{t.focus}</p>}
                   <p className="mt-4 text-sm leading-relaxed text-[#52687b]">{t.languages}</p>
                   <Link to={doctor.slug} className="mt-5 inline-flex min-h-11 items-center rounded-full border border-[#a48034] px-6 py-2.5 text-sm font-semibold text-[#493a1b] transition hover:bg-[#f7f2e7] focus-visible:outline-offset-4">
                     {t.cta}

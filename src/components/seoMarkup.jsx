@@ -129,20 +129,9 @@ export const schemaMarkup = JSON.stringify([
   },
   {
     "@context": "https://schema.org",
-    "@type": "Physician",
+    "@type": "Person",
     "name": "Dr. Do Thai Long",
-    "description": "Lead dentist responsible for professional care at Emis Dental.",
-    "url": "https://emisdental.com/dr-long",
-    "affiliation": "Emis Dental",
-    "worksFor": {
-      "@id": "https://emisdental.com"
-    },
-    "medicalSpecialty": [
-      "DentalImplants",
-      "CosmeticDentistry",
-      "GeneralDentistry"
-    ],
-    "availableLanguage": ["Chinese"]
+    "url": "https://emisdental.com/dr-long"
   },
   {
     "@context": "https://schema.org",
