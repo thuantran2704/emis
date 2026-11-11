@@ -4,7 +4,8 @@ import { Helmet } from 'react-helmet';
 import { useSelector } from 'react-redux';
 import homeContent from '../Translations/homeContent';
 import realCasesContent from '../Translations/realCasesContent';
-import { realCaseIds, realCaseImages } from '../data/realCaseAssets';
+import { realCaseIds } from '../data/realCaseAssets';
+import RealCasePreviewMedia from '../components/RealCasePreviewMedia';
 import heroBackgroundMobile from '../pics/doctor-nurse-mid-surgery-no-patient-mouth-visible.jpg';
 import heroBackgroundLandscape from '../pics/doctor-analyzing-implant.jpg';
 import confidencePortrait from '../pics/foreign-patient-1-with-dr-tu-smiling.jpg';
@@ -170,7 +171,7 @@ export default function Home() {
               return (
                 <article key={id} className="overflow-hidden rounded-3xl border border-[#e7ddc9] bg-white shadow-[0_18px_45px_rgba(27,40,50,0.07)]">
                   <Link to={`/real-cases/${id}`} aria-label={`${casesContent.readCase}: ${item.name}`} className="group block">
-                    <img src={realCaseImages[id]} alt={item.name} loading="lazy" decoding="async" className="aspect-[4/3] w-full bg-[#f9f8f4] object-cover transition-transform duration-500 group-hover:scale-[1.02]" style={{ objectPosition: 'center 37%' }} />
+                    <RealCasePreviewMedia id={id} item={item} />
                     <div className="p-6 sm:p-7">
                       <p className="text-xs font-bold tracking-[0.17em] text-[#927028]">{item.category}</p>
                       <h3 className="mt-3 text-2xl font-semibold leading-tight text-[#24333e]">{item.title}</h3>

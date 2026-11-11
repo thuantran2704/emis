@@ -1,9 +1,15 @@
-import sergeyZhannaImage from '../pics/real-cases/zhanna-cover.png';
-import klausImage from '../pics/real-cases/klaus-cover.png';
+import sergeyZhannaImage from '../pics/real-cases/sergey-zhanna.jpg';
+import klausImage from '../pics/real-cases/klaus-after.jpg';
+import zhannaPortraitArtwork from '../pics/real-cases/zhanna-cover.png';
 import klausBeforeAfter from '../pics/real-cases/klaus-before-after-layout.png';
 
 export const realCaseImages = {
   'sergey-zhanna': sergeyZhannaImage,
+  klaus: klausImage,
+};
+
+export const realCasePortraits = {
+  'sergey-zhanna': zhannaPortraitArtwork,
   klaus: klausImage,
 };
 

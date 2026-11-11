@@ -4,23 +4,14 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import realCasesContent from '../Translations/realCasesContent';
 import { realCaseIds, realCaseImages } from '../data/realCaseAssets';
+import RealCasePreviewMedia from '../components/RealCasePreviewMedia';
 
 function RealCaseCard({ id, content, index }) {
   const item = content.cases[id];
   return (
     <article id={id} className="group flex h-full scroll-mt-28 flex-col overflow-hidden rounded-[1.5rem] border border-[#e7ddc9] bg-white shadow-[0_18px_45px_rgba(27,40,50,0.07)] transition-transform duration-300 hover:-translate-y-1">
-      <Link to={`/real-cases/${id}`} className="relative block overflow-hidden bg-[#eee8db]" aria-label={`${content.readCase}: ${item.name}`}>
-        <img
-          src={realCaseImages[id]}
-          alt={item.name}
-          loading={index === 0 ? 'eager' : 'lazy'}
-          decoding="async"
-          className="aspect-[4/3] w-full bg-[#f9f8f4] object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-          style={{ objectPosition: 'center 37%' }}
-        />
-        <span className="absolute left-5 top-5 rounded-full border border-white/70 bg-white/90 px-3 py-1 text-xs font-bold tracking-[0.13em] text-[#263745] backdrop-blur-sm">
-          {content.caseLabel} {String(index + 1).padStart(2, '0')}
-        </span>
+      <Link to={`/real-cases/${id}`} aria-label={`${content.readCase}: ${item.name}`} className="block focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#9a772c]">
+        <RealCasePreviewMedia id={id} item={item} loading={index === 0 ? 'eager' : 'lazy'} />
       </Link>
       <div className="flex flex-1 flex-col p-6 sm:p-7 lg:p-8">
         <p className="text-xs font-bold tracking-[0.17em] text-[#927028]">{item.category}</p>
