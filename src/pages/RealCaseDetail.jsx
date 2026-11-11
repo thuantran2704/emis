@@ -3,10 +3,11 @@ import { Helmet } from 'react-helmet';
 import { Link, useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import realCasesContent from '../Translations/realCasesContent';
-import { realCaseIds } from '../data/realCaseAssets';
+import { realCaseIds, realCaseDetailImages } from '../data/realCaseAssets';
 import zhannaBefore from '../pics/real-cases/zhanna-before.jpg';
 import zhannaAfter from '../pics/real-cases/zhanna-after.jpg';
 import klausBeforeAfter from '../pics/real-cases/klaus-before-after.jpg';
+import sergeyZhannaFamily from '../pics/real-cases/sergey-zhanna.jpg';
 import NotFound from './NotFound';
 
 export default function RealCaseDetail() {
@@ -43,20 +44,26 @@ export default function RealCaseDetail() {
         </div>
       </header>
 
-      <div className="mx-auto -mt-16 max-w-5xl px-5 sm:-mt-24 sm:px-8">
+      {caseId === 'sergey-zhanna' && (
+        <figure className="mx-auto -mt-16 max-w-3xl px-5 sm:-mt-24 sm:px-8">
+          <img src={sergeyZhannaFamily} alt={item.imageAlt} className="w-full rounded-[1.5rem] border-[6px] border-white shadow-[0_24px_70px_rgba(21,32,40,0.18)] sm:rounded-[2rem] sm:border-[10px]" decoding="async" />
+        </figure>
+      )}
+
+      <div className={`mx-auto px-5 sm:px-8 ${caseId === 'sergey-zhanna' ? 'mt-10 max-w-2xl sm:mt-12' : '-mt-16 max-w-4xl sm:-mt-24'}`}>
         <div className="overflow-hidden rounded-[1.5rem] border-[6px] border-white bg-white shadow-[0_24px_70px_rgba(21,32,40,0.18)] sm:rounded-[2rem] sm:border-[10px]">
           {caseId === 'sergey-zhanna' ? (
-            <div className="grid gap-2 bg-white p-2 sm:gap-3 sm:p-3">
+            <div className="grid gap-3 bg-white p-3">
               {[[zhannaBefore, content.beforeLabel], [zhannaAfter, content.afterLabel]].map(([src, label]) => (
                 <figure key={label} className="relative overflow-hidden rounded-xl bg-[#eee8dd]">
-                  <img src={src} alt={`${label}: ${item.galleryAlt}`} className="aspect-[15/5] w-full object-cover" decoding="async" />
-                  <figcaption className="absolute bottom-2 left-2 rounded-full bg-[#20313d]/90 px-3 py-1 text-xs font-bold uppercase tracking-[0.12em] text-white sm:bottom-4 sm:left-4">{label}</figcaption>
+                  <img src={src} alt={`${label}: ${item.galleryAlt}`} className="aspect-[15/6] w-full object-cover" decoding="async" />
+                  <figcaption className="absolute bottom-3 left-3 rounded-full bg-[#20313d]/90 px-3 py-1 text-xs font-bold uppercase tracking-[0.12em] text-white">{label}</figcaption>
                 </figure>
               ))}
             </div>
           ) : (
-            <div className="relative">
-              <img src={klausBeforeAfter} alt={item.imageAlt} className="w-full object-cover" decoding="async" />
+            <div className="relative aspect-[3/2] overflow-hidden bg-[#f9f8f4]">
+              <img src={realCaseDetailImages[caseId]} alt={item.imageAlt} className="h-full w-full object-cover" style={{ objectPosition: 'center 31%' }} decoding="async" />
               <div className="absolute inset-x-2 bottom-3 grid grid-cols-2 text-center text-xs font-bold uppercase tracking-[0.13em] text-white sm:bottom-5">
                 <span className="mx-auto rounded-full bg-[#20313d]/85 px-3 py-1">{content.beforeLabel}</span>
                 <span className="mx-auto rounded-full bg-[#20313d]/85 px-3 py-1">{content.afterLabel}</span>
@@ -135,9 +142,14 @@ export default function RealCaseDetail() {
             <h2 className="mt-4 max-w-2xl text-3xl font-semibold leading-tight sm:text-4xl">{content.ctaTitle}</h2>
             <p className="mt-4 max-w-2xl text-base leading-7 text-[#d6dce0]">{content.ctaText}</p>
           </div>
-          <Link to="/contact" className="inline-flex min-h-12 shrink-0 items-center justify-center gap-2 self-start rounded-full bg-[#d4af37] px-7 py-3 text-sm font-bold text-[#20313d] transition hover:bg-[#e8c763]">
-            {content.ctaButton} <ArrowRight size={17} aria-hidden="true" />
-          </Link>
+          <div className="flex flex-wrap gap-3">
+            <Link to="/contact" className="inline-flex min-h-12 shrink-0 items-center justify-center gap-2 self-start rounded-full bg-[#d4af37] px-7 py-3 text-sm font-bold text-[#20313d] transition hover:bg-[#e8c763]">
+              {content.ctaButton} <ArrowRight size={17} aria-hidden="true" />
+            </Link>
+            <a href="https://wa.me/84909967649" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center rounded-full border border-[#e4c879] px-7 py-3 text-sm font-bold text-white transition hover:bg-white/10">
+              WhatsApp: +84 909 967 649
+            </a>
+          </div>
         </div>
       </section>
     </main>

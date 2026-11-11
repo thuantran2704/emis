@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { useSelector } from 'react-redux';
 import homeContent from '../Translations/homeContent';
+import realCasesContent from '../Translations/realCasesContent';
+import { realCaseIds, realCaseImages } from '../data/realCaseAssets';
 import heroBackgroundMobile from '../pics/doctor-nurse-mid-surgery-no-patient-mouth-visible.jpg';
 import heroBackgroundLandscape from '../pics/doctor-analyzing-implant.jpg';
 import confidencePortrait from '../pics/foreign-patient-1-with-dr-tu-smiling.jpg';
@@ -42,6 +44,7 @@ export default function Home() {
   const language = useSelector((state) => state.language.language);
   const localizedHome = homeContent[language] || homeContent.english;
   const page = localizedHome.homepageV2 || homeContent.english.homepageV2;
+  const casesContent = realCasesContent[language] || realCasesContent.english;
   const [activeSlide, setActiveSlide] = useState(0);
   const journeyPics = [chatPreTrip, chatMedHistory, chatAirport, chatAftercare];
   const implantSlideImages = [serviceImplant, implantIntroImage, allon6Image];
@@ -146,6 +149,38 @@ export default function Home() {
                 </svg>
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#f7f2e7] px-6 py-14 sm:py-16" aria-labelledby="home-real-cases-heading">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <p className="text-xs font-bold tracking-[0.2em] text-[#97742d]">{casesContent.caseCount}</p>
+              <h2 id="home-real-cases-heading" className="mt-2 text-3xl font-semibold text-[#20323e] sm:text-4xl">{casesContent.storiesHeading}</h2>
+            </div>
+            <Link to="/real-cases" className="inline-flex min-h-11 items-center border-b-2 border-[#c9a652] text-sm font-bold text-[#263744] hover:text-[#80611f]">
+              {casesContent.back}
+            </Link>
+          </div>
+          <div className="grid gap-6 lg:grid-cols-2">
+            {realCaseIds.map((id) => {
+              const item = casesContent.cases[id];
+              return (
+                <article key={id} className="overflow-hidden rounded-3xl border border-[#e7ddc9] bg-white shadow-[0_18px_45px_rgba(27,40,50,0.07)]">
+                  <Link to={`/real-cases/${id}`} aria-label={`${casesContent.readCase}: ${item.name}`} className="group block">
+                    <img src={realCaseImages[id]} alt={item.name} loading="lazy" decoding="async" className="aspect-[4/3] w-full bg-[#f9f8f4] object-cover transition-transform duration-500 group-hover:scale-[1.02]" style={{ objectPosition: 'center 37%' }} />
+                    <div className="p-6 sm:p-7">
+                      <p className="text-xs font-bold tracking-[0.17em] text-[#927028]">{item.category}</p>
+                      <h3 className="mt-3 text-2xl font-semibold leading-tight text-[#24333e]">{item.title}</h3>
+                      <p className="mt-2 text-sm font-semibold text-[#6a7277]">{item.name}</p>
+                      <span className="mt-5 inline-flex min-h-11 items-center border-b-2 border-[#c7a048] text-sm font-bold text-[#263745]">{casesContent.readCase}</span>
+                    </div>
+                  </Link>
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>

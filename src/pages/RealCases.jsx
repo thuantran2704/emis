@@ -12,10 +12,11 @@ function RealCaseCard({ id, content, index }) {
       <Link to={`/real-cases/${id}`} className="relative block overflow-hidden bg-[#eee8db]" aria-label={`${content.readCase}: ${item.name}`}>
         <img
           src={realCaseImages[id]}
-          alt={id === 'klaus' ? item.cardImageAlt : item.imageAlt}
+          alt={item.name}
           loading={index === 0 ? 'eager' : 'lazy'}
           decoding="async"
-          className={`aspect-[4/3] w-full bg-[#e9e3d8] transition-transform duration-500 group-hover:scale-[1.03] ${id === 'klaus' ? 'object-contain' : 'object-cover object-center'}`}
+          className="aspect-[4/3] w-full bg-[#f9f8f4] object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+          style={{ objectPosition: 'center 37%' }}
         />
         <span className="absolute left-5 top-5 rounded-full border border-white/70 bg-white/90 px-3 py-1 text-xs font-bold tracking-[0.13em] text-[#263745] backdrop-blur-sm">
           {content.caseLabel} {String(index + 1).padStart(2, '0')}
