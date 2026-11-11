@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { Helmet } from 'react-helmet';
 import { DOCTORS, getDoctorTranslation } from '../data/doctors';
+import DoctorProfileSection from '../components/DoctorProfileSection';
 
 const profile = {
   english: {
@@ -240,27 +241,6 @@ const profile = {
   },
 };
 
-function ProfileSection({ number, title, items, tone = 'white' }) {
-  return (
-    <section className={`py-16 md:py-20 ${tone === 'cream' ? 'bg-[#f7f2e7]' : 'bg-white'}`}>
-      <div className="mx-auto grid max-w-6xl gap-8 px-6 md:grid-cols-[0.35fr_0.65fr] md:gap-16">
-        <div>
-          <p className="mb-4 text-sm font-semibold tracking-[0.2em] text-[#8a691f]">{number}</p>
-          <h2 className="max-w-md text-2xl font-semibold leading-snug text-[#193543] sm:text-3xl">{title}</h2>
-        </div>
-        <ul className="divide-y divide-[#d9dedb] border-t border-[#d9dedb]">
-          {items.map((item) => (
-            <li key={item} className="flex gap-4 py-4 text-sm leading-relaxed text-[#344b54] sm:text-base">
-              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#a48034]" aria-hidden="true" />
-              <span>{item}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </section>
-  );
-}
-
 export default function DrLongPage() {
   const language = useSelector((state) => state.language.language);
   const doctor = DOCTORS.find((entry) => entry.id === 'dr-long');
@@ -290,11 +270,11 @@ export default function DrLongPage() {
           </div>
         </div>
       </section>
-      <ProfileSection number="01" title={content.qualifications} items={content.qualificationsList} tone="cream" />
-      <ProfileSection number="02" title={content.certificates} items={content.certificatesList} />
-      <ProfileSection number="03" title={content.workshops} items={content.workshopsList} tone="cream" />
-      <ProfileSection number="04" title={content.practice} items={content.practiceList} />
-      <ProfileSection number="05" title={content.language} items={content.languageList} tone="cream" />
+      <DoctorProfileSection number="01" title={content.qualifications} items={content.qualificationsList} tone="cream" />
+      <DoctorProfileSection number="02" title={content.certificates} items={content.certificatesList} />
+      <DoctorProfileSection number="03" title={content.workshops} items={content.workshopsList} tone="cream" />
+      <DoctorProfileSection number="04" title={content.practice} items={content.practiceList} />
+      <DoctorProfileSection number="05" title={content.language} items={content.languageList} tone="cream" />
     </main>
   );
 }
