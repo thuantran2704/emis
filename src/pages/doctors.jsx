@@ -155,16 +155,15 @@ const Doctors = () => {
             </p>
           </div>
 
-          <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
+          <div className="grid gap-6 lg:grid-cols-2">
             {DOCTORS.map((doctor) => {
               const t = getDoctorTranslation(doctor, language);
-              const featured = doctor.featured;
               return (
               <article
                 key={doctor.id}
-                className={`grid h-full gap-5 overflow-hidden rounded-3xl border border-[#e2e6e6] bg-white p-5 shadow-sm sm:items-center sm:p-6 ${featured ? 'sm:grid-cols-[minmax(150px,220px)_1fr]' : 'sm:grid-cols-[minmax(130px,165px)_1fr]'}`}
+                className="grid h-full gap-5 overflow-hidden rounded-3xl border border-[#e2e6e6] bg-white p-5 shadow-sm sm:grid-cols-[minmax(0,205px)_minmax(0,1fr)] sm:items-center sm:p-6"
               >
-                <div className="doctor-portrait-frame aspect-[4/5] overflow-hidden rounded-2xl">
+                <div className="doctor-portrait-frame aspect-[3/4] overflow-hidden rounded-2xl">
                   <img src={doctor.portrait} alt={t.name} loading="lazy" decoding="async" className="h-full w-full object-cover object-top" />
                 </div>
                 <div className="min-w-0">

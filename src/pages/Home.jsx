@@ -175,7 +175,6 @@ export default function Home() {
                     <div className="p-6 sm:p-7">
                       <p className="text-xs font-bold tracking-[0.17em] text-[#927028]">{item.category}</p>
                       <h3 className="mt-3 text-2xl font-semibold leading-tight text-[#24333e]">{item.title}</h3>
-                      <p className="mt-2 text-sm font-semibold text-[#6a7277]">{item.name}</p>
                       <span className="mt-5 inline-flex min-h-11 items-center border-b-2 border-[#c7a048] text-sm font-bold text-[#263745]">{casesContent.readCase}</span>
                     </div>
                   </Link>

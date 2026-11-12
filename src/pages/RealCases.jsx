@@ -6,19 +6,18 @@ import realCasesContent from '../Translations/realCasesContent';
 import { realCaseIds, realCaseImages } from '../data/realCaseAssets';
 import RealCasePreviewMedia from '../components/RealCasePreviewMedia';
 
-function RealCaseCard({ id, content, index }) {
+function RealCaseCard({ id, content }) {
   const item = content.cases[id];
   return (
     <article id={id} className="group flex h-full scroll-mt-28 flex-col overflow-hidden rounded-[1.5rem] border border-[#e7ddc9] bg-white shadow-[0_18px_45px_rgba(27,40,50,0.07)] transition-transform duration-300 hover:-translate-y-1">
       <Link to={`/real-cases/${id}`} aria-label={`${content.readCase}: ${item.name}`} className="block focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#9a772c]">
-        <RealCasePreviewMedia id={id} item={item} loading={index === 0 ? 'eager' : 'lazy'} />
+        <RealCasePreviewMedia id={id} item={item} />
       </Link>
       <div className="flex flex-1 flex-col p-6 sm:p-7 lg:p-8">
         <p className="text-xs font-bold tracking-[0.17em] text-[#927028]">{item.category}</p>
         <h2 className="mt-3 text-2xl font-semibold leading-tight text-[#24333e] sm:text-[1.75rem]">
           <Link to={`/real-cases/${id}`} className="hover:text-[#86651f]">{item.title}</Link>
         </h2>
-        <p className="mt-2 text-sm font-semibold text-[#6a7277]">{item.name}</p>
         <p className="mt-5 flex-1 text-[0.98rem] leading-7 text-[#4b5860]">{item.summary}</p>
         <Link to={`/real-cases/${id}`} className="mt-7 inline-flex min-h-11 items-center gap-2 self-start border-b-2 border-[#c7a048] pb-1 text-sm font-bold text-[#263745] transition-colors hover:text-[#87651e]">
           {content.readCase} <ArrowRight size={17} aria-hidden="true" />
@@ -72,7 +71,7 @@ export default function RealCases() {
           </div>
         </div>
         <div className="grid gap-7 md:grid-cols-2 lg:gap-9">
-          {realCaseIds.map((id, index) => <RealCaseCard key={id} id={id} content={content} index={index} />)}
+          {realCaseIds.map((id) => <RealCaseCard key={id} id={id} content={content} />)}
         </div>
         <p className="mt-8 max-w-3xl border-l-2 border-[#c9a652] pl-5 text-sm leading-6 text-[#657078]">{content.introNote}</p>
       </section>

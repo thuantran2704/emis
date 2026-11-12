@@ -33,7 +33,6 @@ const realCasesContent = {
         summary: 'Visiting Vietnam from Russia, Sergey and Zhanna hoped to complete nine implant-supported crowns and five porcelain veneers before their flight home. Their existing implants required specific components, and their stay allowed only 7 days.',
         imageAlt: 'Sergey and Zhanna with family at Emis Dental',
         cardImageAlt: 'Zhanna smiling',
-        cardQuote: 'We had very little time before our flight home.',
         galleryAlt: 'Zhanna’s smile',
         facts: [
           ['Time in Vietnam', '7 days'],
@@ -140,7 +139,6 @@ const realCasesContent = {
         summary: 'Từ Nga đến Việt Nam du lịch, Sergey và Zhanna mong muốn hoàn thành 9 mão sứ trên Implant và 5 mặt dán sứ trước chuyến bay về nước. Implant hiện có cần linh kiện chuyên biệt, trong khi thời gian lưu trú chỉ vỏn vẹn 7 ngày.',
         imageAlt: 'Sergey và Zhanna cùng gia đình tại Emis Dental',
         cardImageAlt: 'Zhanna mỉm cười',
-        cardQuote: 'Chúng tôi có rất ít thời gian trước chuyến bay về nhà.',
         galleryAlt: 'Nụ cười của Zhanna',
         facts: [
           ['Thời gian lưu trú', '7 ngày'],
@@ -247,7 +245,6 @@ const realCasesContent = {
         summary: 'Venus de Russie, Sergey et Zhanna souhaitaient terminer neuf couronnes sur implants et cinq facettes en porcelaine avant leur vol de retour. Leurs implants nécessitaient des composants précis, et leur séjour ne durait que 7 jours.',
         imageAlt: 'Sergey et Zhanna avec leur famille chez Emis Dental',
         cardImageAlt: 'Zhanna souriant',
-        cardQuote: 'Nous avions très peu de temps avant notre vol de retour.',
         galleryAlt: 'Le sourire de Zhanna',
         facts: [
           ['Séjour au Vietnam', '7 jours'],
@@ -321,7 +318,6 @@ const realCasesContent = {
         summary: '러시아에서 베트남을 방문한 Sergey와 Zhanna는 귀국 전 임플란트 지지 크라운 9개와 포세린 베니어 5개를 마치고 싶었습니다. 기존 임플란트에는 특정 부품이 필요했고 체류 기간은 7일뿐이었습니다.',
         imageAlt: 'Emis Dental에서 가족과 함께한 Sergey와 Zhanna',
         cardImageAlt: '미소 짓는 Zhanna',
-        cardQuote: '귀국 비행기까지 시간이 매우 짧았어요.',
         galleryAlt: 'Zhanna의 미소',
         facts: [
           ['베트남 체류', '7일'],
@@ -395,7 +391,6 @@ const realCasesContent = {
         summary: '来自俄罗斯的 Sergey 与 Zhanna 希望在回国前完成九颗种植体支持牙冠和五颗瓷贴面。现有种植体需要特定部件，而他们在越南只停留 7 天。',
         imageAlt: 'Sergey 与 Zhanna 一家在 Emis Dental 的合影',
         cardImageAlt: '微笑的 Zhanna',
-        cardQuote: '回国前我们几乎没有多少时间。',
         galleryAlt: 'Zhanna 的笑容',
         facts: [
           ['在越南停留', '7 天'],
@@ -469,7 +464,6 @@ const realCasesContent = {
         summary: '來自俄羅斯的 Sergey 與 Zhanna 希望在回國前完成九顆植體支持牙冠和五顆瓷貼片。現有植體需要特定零件，而他們在越南只停留 7 天。',
         imageAlt: 'Sergey 與 Zhanna 一家在 Emis Dental 的合影',
         cardImageAlt: '微笑的 Zhanna',
-        cardQuote: '回國前我們幾乎沒有多少時間。',
         galleryAlt: 'Zhanna 的笑容',
         facts: [
           ['在越南停留', '7 天'],

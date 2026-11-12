@@ -1,22 +1,13 @@
 @import "tailwindcss";
 
 .doctor-portrait-frame {
-  position: relative;
-  container-type: inline-size;
   background-color: #fff0c2;
 }
 
-.doctor-portrait-frame::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  /* The source portraits have white pixels baked into their rounded corners. */
-  background:
-    linear-gradient(#fff0c2, #fff0c2) top left / 12cqw 12cqw no-repeat,
-    linear-gradient(#fff0c2, #fff0c2) top right / 12cqw 12cqw no-repeat,
-    linear-gradient(#fff0c2, #fff0c2) bottom left / 10cqw 10cqw no-repeat,
-    linear-gradient(#fff0c2, #fff0c2) bottom right / 10cqw 10cqw no-repeat;
+.doctor-portrait-frame img {
+  display: block;
+  transform: scale(1.18);
+  transform-origin: center top;
 }
 
 /*
