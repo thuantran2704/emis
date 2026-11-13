@@ -68,3 +68,18 @@ test('every published page has a localized response and valid internal page link
   assert.ok(count > 100, `expected broad route coverage, found ${count}`);
   assert.deepEqual([...new Set(errors)].slice(0, 100), []);
 });
+
+test('Klaus gallery keeps the original before and full-smile after portraits in order', async () => {
+  for (const language of availableLocalesForRoute('/real-cases/klaus')) {
+    const path = pathForLocale('/real-cases/klaus', language);
+    const html = await readFile(fileForPath(path), 'utf8');
+    const portraits = [...html.matchAll(/<img src="([^"]+)" alt="([^"]+)" class="aspect-\[3\/5\] w-full object-cover"/g)];
+    assert.equal(portraits.length, 2, `${path}: expected two labeled portraits`);
+    assert.match(portraits[0][1], /\/klaus-before-[^/]+\.jpeg$/, `${path}: before portrait`);
+    assert.match(portraits[1][1], /\/klaus-after-portrait-[^/]+\.png$/, `${path}: after portrait`);
+    if (language === 'english') {
+      assert.match(portraits[0][2], /^Before:/);
+      assert.match(portraits[1][2], /^After:/);
+    }
+  }
+});

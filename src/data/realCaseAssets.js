@@ -2,10 +2,8 @@ import sergeyZhannaImage from '../pics/real-cases/sergey-zhanna.jpg';
 import klausImage from '../pics/real-cases/klaus-after.jpg';
 import zhannaPortraitArtwork from '../pics/real-cases/zhanna-cover.png';
 import klausPortraitArtwork from '../pics/real-cases/klaus-cover.png';
-// The supplied first portrait (white polo) is before treatment; the second
-// portrait (patterned shirt) is after treatment. Historical filenames were reversed.
-import klausBeforePhoto from '../pics/real-cases/klaus-after-portrait.png';
-import klausAfterPhoto from '../pics/real-cases/klaus-before.jpeg';
+import klausBeforePhoto from '../pics/real-cases/klaus-before.jpeg';
+import klausAfterPhoto from '../pics/real-cases/klaus-after-portrait.png';
 
 export const realCaseImages = {
   'sergey-zhanna': sergeyZhannaImage,

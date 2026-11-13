@@ -14,7 +14,7 @@ The six-language pages are available for local review. The new French, Korean, S
 
 ## Image and claim checks
 
-- Klaus's supplied white-polo portrait is shown as **before** and the patterned-shirt portrait as **after**. The historical asset filenames say the opposite, so verify the visual labels rather than relying on filenames.
+- Klaus's patterned-shirt portrait is shown as **before** and the full-smile white-polo portrait as **after**. Confirm this sequence against the approved clinical case record.
 - Review all before/after claims against the approved case facts. Photographs alone do not establish a diagnosis or treatment outcome.
 - The Visitor Program still contains promotional raster artwork with embedded text. Review that artwork and its prices before publishing it to non-English audiences.
 
