@@ -1,3 +1,4 @@
+import { imageAlt } from '../Translations/imageAlt';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -77,7 +78,7 @@ export default function VeneerLanding() {
           <div className="w-full rounded-2xl overflow-hidden shadow-sm border border-[#dbe4ec] bg-[#f7fafc]">
             <img
               src={heroImage}
-              alt="Cosmetic veneer treatment visual"
+              alt={imageAlt('Cosmetic veneer treatment visual', language)}
               className="w-full h-[220px] sm:h-[300px] lg:h-[400px] object-cover object-center"
             />
           </div>
@@ -102,7 +103,7 @@ export default function VeneerLanding() {
             </div>
           </div>
           <div className="rounded-2xl overflow-hidden shadow-sm border border-[#dbe4ec] bg-white">
-            <img src={consultationImage} alt="Doctor consulting patient about veneer plan" className="w-full h-full object-cover" />
+            <img src={consultationImage} alt={imageAlt('Doctor consulting patient about veneer plan', language)} className="w-full h-full object-cover" />
           </div>
         </div>
       </section>

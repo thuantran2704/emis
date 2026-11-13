@@ -1,6 +1,8 @@
+import { imageAlt } from '../Translations/imageAlt';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import sharedUiLabels from '../Translations/sharedUiLabels';
 import { Helmet } from 'react-helmet';
 import { CheckCircle, ArrowRight } from 'lucide-react';
 import ProcessSteps from '../components/ProcessSteps';
@@ -38,7 +40,7 @@ const OralSurgery = () => {
               <div className="overflow-hidden rounded-2xl shadow-lg aspect-[16/9] lg:aspect-auto">
                 <img
                   src={oralSurgeryHeroImg}
-                  alt="Dentist performing oral surgery procedure in treatment room"
+                  alt={imageAlt('Dentist performing oral surgery procedure in treatment room', language)}
                   className="w-full h-full lg:h-[460px] object-cover object-center"
                 />
               </div>
@@ -46,7 +48,7 @@ const OralSurgery = () => {
 
             <div className="order-2 lg:order-1 space-y-6">
               <p className={sectionLabelClass}>
-                {content.section1.eyebrow || 'ORAL SURGERY'}
+                {content.section1.eyebrow || sharedUiLabels[language]?.oralSurgery || sharedUiLabels.english.oralSurgery}
               </p>
 
               <h1 className={titleClass}>
@@ -107,7 +109,7 @@ const OralSurgery = () => {
             <div className="rounded-xl overflow-hidden shadow-sm border border-[#dfe7ef] bg-white min-h-[320px]">
               <img
                 src={wisdomTeethImg}
-                alt="Wisdom teeth X-ray style visual for oral surgery candidacy"
+                alt={imageAlt('Wisdom teeth X-ray style visual for oral surgery candidacy', language)}
                 className="w-full h-full object-cover object-center"
                 loading="lazy"
               />
@@ -145,7 +147,7 @@ const OralSurgery = () => {
             <div className="rounded-xl overflow-hidden shadow-sm border border-[#dfe7ef] bg-white min-h-[320px]">
               <img
                 src={evaluationProcessImg}
-                alt="Doctor evaluating X-ray and CBCT information with patient"
+                alt={imageAlt('Doctor evaluating X-ray and CBCT information with patient', language)}
                 className="w-full h-full object-cover object-center"
                 loading="lazy"
               />

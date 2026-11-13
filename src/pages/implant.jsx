@@ -1,3 +1,4 @@
+import { imageAlt } from '../Translations/imageAlt';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -41,7 +42,7 @@ const ImplantGuide = () => {
               <div className="overflow-hidden rounded-2xl shadow-lg aspect-[16/9] lg:aspect-auto">
                 <img
                   src={xrayImg}
-                  alt="Dental implant X-ray review"
+                  alt={imageAlt('Dental implant X-ray review', language)}
                   className="w-full h-full lg:h-[460px] object-cover object-center"
                 />
               </div>
@@ -162,7 +163,7 @@ const ImplantGuide = () => {
             <div className="rounded-2xl overflow-hidden shadow-sm h-[460px] bg-white">
               <img
                 src={implantIllustration}
-                alt="Implant illustration"
+                alt={imageAlt('Implant illustration', language)}
                 className="w-full h-full object-cover object-center"
               />
             </div>
@@ -344,7 +345,7 @@ const ImplantGuide = () => {
             <div className="rounded-2xl overflow-hidden shadow-sm h-[460px]">
               <img
                 src={patient2}
-                alt="Patient consultation and travel planning"
+                alt={imageAlt('Patient consultation and travel planning', language)}
                 className="w-full h-full object-cover object-center"
               />
             </div>
@@ -397,14 +398,14 @@ const ImplantGuide = () => {
             <div className="rounded-2xl overflow-hidden shadow-sm h-[360px]">
               <img
                 src={patient1}
-                alt="Implant patient case"
+                alt={imageAlt('Implant patient case', language)}
                 className="w-full h-full object-cover object-center"
               />
             </div>
             <div className="rounded-2xl overflow-hidden shadow-sm h-[360px]">
               <img
                 src={patient2}
-                alt="Implant case illustration"
+                alt={imageAlt('Implant case illustration', language)}
                 className="w-full h-full object-cover object-center"
               />
             </div>

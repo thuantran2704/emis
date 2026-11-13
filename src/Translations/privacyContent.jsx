@@ -1,3 +1,6 @@
+import { translateLongForm } from './translateLongForm.js';
+import { privacyTranslations } from './longFormTranslations.js';
+
 export const privacyContent = {
   english: {
     metaTitle: 'Privacy Policy | Emis Dental',
@@ -263,3 +266,7 @@ export const privacyContent = {
     ],
   },
 };
+
+for (const [language, strings] of Object.entries(privacyTranslations)) {
+  privacyContent[language] = translateLongForm(privacyContent.english, strings, `privacy/${language}`);
+}

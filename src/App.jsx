@@ -1,12 +1,11 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, StaticRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 import About from './pages/About';
-import { useSelector, useDispatch } from 'react-redux'
-import { setLanguage } from './slices/languageSlice.js'
+import { useSelector } from 'react-redux'
 import { Helmet } from 'react-helmet';
 import { schemaMarkup } from './components/seoMarkup';
 import Footer from './components/Footer.jsx';
@@ -36,6 +35,7 @@ import PatientJourney from './pages/PatientJourney.jsx';
 import PatientCase1 from './pages/PatientCase1.jsx';
 import RealCases from './pages/RealCases.jsx';
 import RealCaseDetail from './pages/RealCaseDetail.jsx';
+import { localeFromPath, locales, availableLocalesForRoute, canonicalForPath, pathForLocale } from './seo/locales.js';
 
 function ExternalRedirect({ to }) {
   useEffect(() => {
@@ -45,11 +45,10 @@ function ExternalRedirect({ to }) {
   return null;
 }
 
-function AppShell() {
+function AppShell({ localePrefix = '' }) {
   const location = useLocation();
   const isRedirectRoute = ['/mail', '/drive'].includes(location.pathname);
-  const siteUrl = (import.meta.env.VITE_SITE_URL || 'https://emisdental.com').replace(/\/$/, '');
-  const canonicalUrl = `${siteUrl}${location.pathname}`;
+  const canonicalUrl = canonicalForPath(`${localePrefix}${location.pathname}`);
   const zohoMailUrl = import.meta.env.VITE_ZOHO_MAIL_URL || 'https://mail.zoho.com';
   const zohoDriveUrl = import.meta.env.VITE_ZOHO_DRIVE_URL || 'https://workdrive.zoho.com';
   const language = useSelector((state) => state.language.language);
@@ -57,23 +56,8 @@ function AppShell() {
     english: 'en', vietnamese: 'vi', french: 'fr', korean: 'ko',
     simplified: 'zh-Hans', traditional: 'zh-Hant',
   }[language] || 'en';
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    const browserLanguages = navigator.languages?.length
-      ? navigator.languages
-      : [navigator.language || ''];
-    const supportedLanguage = browserLanguages.find((lang) => /^(vi|en|fr|ko|zh)(-|$)/i.test(lang));
-    const locale = supportedLanguage?.toLowerCase() || 'en';
-    const selectedLanguage = locale.startsWith('vi') ? 'vietnamese'
-      : locale.startsWith('fr') ? 'french'
-        : locale.startsWith('ko') ? 'korean'
-          : locale.startsWith('zh')
-            ? /^(zh-(tw|hk|mo|hant))/.test(locale) ? 'traditional' : 'simplified'
-            : 'english';
-
-    dispatch(setLanguage(selectedLanguage));
-  }, [dispatch]);
+  const availableLocales = availableLocalesForRoute(location.pathname);
+  const isIndexable = !isRedirectRoute && availableLocales.includes(language);
 
   useEffect(() => {
     if (!isRedirectRoute) {
@@ -94,14 +78,18 @@ function AppShell() {
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="robots" content={isRedirectRoute ? 'noindex, nofollow' : 'index, follow'} />
+        <meta name="robots" content={isIndexable ? 'index, follow' : 'noindex, nofollow'} />
+        {isIndexable && availableLocales.map((alternate) => (
+          <link key={alternate} rel="alternate" hrefLang={locales.find(({ language: name }) => name === alternate).code} href={canonicalForPath(pathForLocale(location.pathname, alternate))} />
+        ))}
+        {isIndexable && <link rel="alternate" hrefLang="x-default" href={canonicalForPath(location.pathname)} />}
         <script type="application/ld+json">
           {schemaMarkup}
         </script>
       </Helmet>
       <div className="min-h-screen bg-[#fdfcf8]">
         {!isRedirectRoute && <Navbar language={language} />}
-        <Routes>
+        {!isIndexable && !isRedirectRoute ? <NotFound /> : <Routes>
           <Route path="/" element={<Home  />} />
           <Route path="/contact" element={<Contact  />} />
           <Route path="/about" element={<About  />} />
@@ -133,7 +121,7 @@ function AppShell() {
           <Route path="/drive" element={<ExternalRedirect to={zohoDriveUrl} />} />
           <Route path="*" element={<NotFound />} />
 
-        </Routes>
+        </Routes>}
         {!isRedirectRoute && <Footer language={language} />}
         {!isRedirectRoute && <FloatingContactButton />}
         {!isRedirectRoute && <GuidedChat />}
@@ -142,10 +130,13 @@ function AppShell() {
   );
 }
 
-export default function App() {
+export default function App({ staticPath }) {
+  const currentPath = staticPath || (typeof window === 'undefined' ? '/' : window.location.pathname);
+  const { prefix } = localeFromPath(currentPath);
+  const Router = staticPath ? StaticRouter : BrowserRouter;
   return (
-    <Router>
-      <AppShell />
+    <Router basename={prefix || undefined} {...(staticPath ? { location: staticPath } : {})}>
+      <AppShell localePrefix={prefix} />
     </Router>
   );
 }

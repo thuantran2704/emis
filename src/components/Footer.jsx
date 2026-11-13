@@ -4,6 +4,7 @@ import logo from '../pics/logo.jpg';
 import footerContent from '../Translations/footerContent';
 import navbarContent from '../Translations/navbarContent';
 import { primaryContactItems, socialContactItems } from '../data/contactChannels';
+import { availableLocalesForRoute } from '../seo/locales.js';
 
 // NOTE: The following footer links have no dedicated route yet and are mapped
 // to the closest existing page (update once real pages/routes exist):
@@ -91,8 +92,13 @@ function buildFooterColumns(nav, f) {
 const linkClass =
   'text-sm text-gray-400 hover:text-[#d4af37] transition-colors duration-200';
 
-function FooterLink({ link }) {
-  const el = link.to ? (
+function FooterLink({ link, language }) {
+  const englishOnly = link.to && !availableLocalesForRoute(link.to).includes(language);
+  const el = englishOnly ? (
+    <a href={link.to} className={linkClass}>
+      {link.label} <span className="text-xs text-gray-500">(EN)</span>
+    </a>
+  ) : link.to ? (
     <Link to={link.to} className={linkClass}>
       {link.label}
     </Link>
@@ -208,7 +214,7 @@ export default function Footer() {
               <ul className="space-y-2.5">
                 {column.links.map((link) => (
                   <li key={link.label}>
-                    <FooterLink link={link} />
+                    <FooterLink link={link} language={language} />
                   </li>
                 ))}
               </ul>

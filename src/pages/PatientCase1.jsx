@@ -1,3 +1,4 @@
+import { imageAlt } from '../Translations/imageAlt';
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Helmet } from 'react-helmet';
@@ -63,14 +64,14 @@ export default function PatientCase1() {
             <div className="rounded-2xl overflow-hidden shadow-sm">
               <img
                 src={beforeCtImg}
-                alt="CT scan before treatment showing long-term tooth loss and bone loss"
+                alt={imageAlt('CT scan before treatment showing long-term tooth loss and bone loss', language)}
                 className="w-full h-[360px] object-cover object-center"
               />
             </div>
             <div className="rounded-2xl overflow-hidden shadow-sm">
               <img
                 src={afterCtImg}
-                alt="CT scan after implant placement for the patient's full rehabilitation"
+                alt={imageAlt("CT scan after implant placement for the patient's full rehabilitation", language)}
                 className="w-full h-[360px] object-cover object-center"
               />
             </div>

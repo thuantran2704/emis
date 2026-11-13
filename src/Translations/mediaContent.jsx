@@ -1,3 +1,6 @@
+import { translateLongForm } from './translateLongForm.js';
+import { mediaTranslations } from './longFormTranslations.js';
+
 export const mediaContent = {
   english: {
     metaTitle: 'Media Consent Policy | Emis Dental',
@@ -168,3 +171,7 @@ export const mediaContent = {
     ],
   },
 };
+
+for (const [language, strings] of Object.entries(mediaTranslations)) {
+  mediaContent[language] = translateLongForm(mediaContent.english, strings, `media/${language}`);
+}

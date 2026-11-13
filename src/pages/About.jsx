@@ -1,3 +1,4 @@
+import { imageAlt } from '../Translations/imageAlt';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import aboutContent from '../Translations/aboutContent';
@@ -17,6 +18,7 @@ import uvStorageImg from '../pics/uvStorage.jpg';
 import hyundaiImg from '../pics/hyundai.jpg';
 import { useSelector } from 'react-redux';
 import { Helmet } from 'react-helmet';
+import sharedUiLabels from '../Translations/sharedUiLabels';
 
 const About = () => {
   const language = useSelector((state) => state.language.language);
@@ -36,6 +38,7 @@ const About = () => {
   const eqAlts = equipmentList.map(({ key }) => eqContent[key]?.title || key);
 
   const content = aboutContent[language] || aboutContent.english;
+  const labels = sharedUiLabels[language] || sharedUiLabels.english;
 
   const SectionLabel = ({ children }) => (
     <Text variant="eyebrow" size="micro" className="mb-6">{children}</Text>
@@ -56,7 +59,7 @@ const About = () => {
       <section className="overflow-hidden bg-white">
         <div className="px-6 py-20 md:py-28 max-w-4xl mx-auto text-center">
           <p className="mb-7 text-xs font-semibold uppercase tracking-[0.3em] text-[#C5AF73]">
-            Who We Are
+            {labels.whoWeAre}
           </p>
           <h1 className="mb-8 text-3xl font-normal leading-tight text-[#16324a] md:text-5xl">
             {content.heroTitle}
@@ -94,7 +97,7 @@ const About = () => {
           <div className="rounded-2xl overflow-hidden shadow-sm aspect-[3/2]">
             <img
               src={consultationImage}
-              alt="Clinician and nurse caring for a patient at Emis Dental"
+              alt={imageAlt('Clinician and nurse caring for a patient at Emis Dental', language)}
               loading="lazy"
               decoding="async"
               className="w-full h-full object-cover object-[center_58%] md:object-center"
@@ -125,7 +128,7 @@ const About = () => {
           <div className="rounded-2xl overflow-hidden shadow-sm aspect-[3/2]">
             <img
               src={planningImage}
-              alt="Dr. Tran Minh Tu reviewing a treatment plan at Emis Dental"
+              alt={imageAlt('Dr. Tran Minh Tu reviewing a treatment plan at Emis Dental', language)}
               loading="lazy"
               decoding="async"
               className="w-full h-full object-cover object-center"
@@ -147,13 +150,13 @@ const About = () => {
               services={eqServices}
               serviceImages={eqImages}
               serviceAltTexts={eqAlts}
-              bookNowText={language === 'vietnamese' ? 'Đặt Lịch' : 'Book Now'}
+              bookNowText={labels.bookNow}
             />
           </div>
           <div className="rounded-2xl overflow-hidden shadow-sm aspect-[3/2]">
             <img
               src={technologyImage}
-              alt="Patient undergoing a CBCT scan at Emis Dental"
+              alt={imageAlt('Patient undergoing a CBCT scan at Emis Dental', language)}
               loading="lazy"
               decoding="async"
               className="w-full h-full object-cover object-center"
@@ -202,7 +205,7 @@ const About = () => {
           <div className="rounded-2xl overflow-hidden shadow-sm aspect-[3/2]">
             <img
               src={teamImage}
-              alt="Emis Dental patient support team at the clinic reception"
+              alt={imageAlt('Emis Dental patient support team at the clinic reception', language)}
               loading="lazy"
               decoding="async"
               className="w-full h-full object-cover object-center"
@@ -234,7 +237,7 @@ const About = () => {
           <div className="rounded-2xl overflow-hidden shadow-sm aspect-[4/3] lg:landscape:aspect-auto lg:landscape:h-[420px]">
             <img
               src={internationalImage}
-              alt="Waiting and reception area at Emis Dental"
+              alt={imageAlt('Waiting and reception area at Emis Dental', language)}
               loading="lazy"
               decoding="async"
               className="block w-full h-full object-cover object-center"
@@ -250,7 +253,7 @@ const About = () => {
             <SectionLabel>{content.labels?.trust || 'Trust & Transparency'}</SectionLabel>
             <SectionTitle>{content.trustTitle}</SectionTitle>
             <Text variant="description" size="p15" className="mb-10">
-              {content.trustIntro || 'We believe patients should have access to clear information before making treatment decisions.'}
+              {content.trustIntro}
             </Text>
             <div className="space-y-4">
               {content.trustBullets.map((b, i) => (
@@ -266,7 +269,7 @@ const About = () => {
           <div className="rounded-2xl overflow-hidden shadow-sm aspect-[16/9]">
             <img
               src={safetyImage}
-              alt="Emis Dental staff member preparing instruments in the sterilization room"
+              alt={imageAlt('Emis Dental staff member preparing instruments in the sterilization room', language)}
               loading="lazy"
               decoding="async"
               className="w-full h-full object-cover object-center"

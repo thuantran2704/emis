@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import Alert from '../components/alert';
 import contactContent from '../Translations/contactContent';
-import ReCAPTCHA from "react-google-recaptcha"; // Add this import
+import ClientRecaptcha from '../components/ClientRecaptcha';
 import { useSelector } from 'react-redux';
+import { Helmet } from 'react-helmet';
 import { primaryContactItems, socialContactItems } from '../data/contactChannels';
 export default function Contact() {
   const language = useSelector((state) => state.language.language);
@@ -130,6 +131,12 @@ export default function Contact() {
 
   return (
     <main className="min-h-[calc(100vh-4rem)] bg-[#f7f2e7]">
+      <Helmet>
+        <title>{content.metaTitle}</title>
+        <meta name="description" content={content.metaDescription} />
+        <meta property="og:title" content={content.metaTitle} />
+        <meta property="og:description" content={content.metaDescription} />
+      </Helmet>
       {alert.show && (
         <Alert
           message={alert.message}
@@ -288,7 +295,7 @@ export default function Contact() {
               </div>
 
               <div className="my-3 overflow-x-auto">
-                <ReCAPTCHA
+                <ClientRecaptcha
                   sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
                   onChange={handleRecaptchaChange}
                 />

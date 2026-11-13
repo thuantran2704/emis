@@ -1,3 +1,4 @@
+import { imageAlt } from '../Translations/imageAlt';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -65,7 +66,7 @@ const FullMouth = () => {
             <div className="rounded-2xl overflow-hidden shadow-md border border-[#dfe7ef] bg-white">
               <img
                 src={heroImage}
-                alt="Patient smiling with their dentist after discussing a treatment plan"
+                alt={imageAlt('Patient smiling with their dentist after discussing a treatment plan', language)}
                 className="w-full h-[360px] lg:h-[520px] object-cover object-center"
               />
             </div>
@@ -204,7 +205,7 @@ const FullMouth = () => {
               <div className="rounded-2xl overflow-hidden shadow-md border border-[#dfe7ef] bg-white">
                 <img
                   src={overseasImage}
-                  alt="Emis Dental care team reviewing a patient's situation during a consultation"
+                  alt={imageAlt("Emis Dental care team reviewing a patient's situation during a consultation", language)}
                   className="w-full h-[260px] lg:h-[300px] object-cover object-center"
                 />
               </div>
@@ -234,7 +235,7 @@ const FullMouth = () => {
             <div className="rounded-2xl overflow-hidden shadow-md border border-[#dfe7ef] bg-white">
               <img
                 src={teamImage}
-                alt="Emis Dental dental team collaborating on treatment planning"
+                alt={imageAlt('Emis Dental dental team collaborating on treatment planning', language)}
                 className="w-full h-[300px] lg:h-[360px] object-cover object-center"
               />
             </div>

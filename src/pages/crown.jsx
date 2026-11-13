@@ -1,3 +1,4 @@
+import { imageAlt } from '../Translations/imageAlt';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -100,7 +101,7 @@ export default function CrownLanding() {
           </div>
           {/* Image */}
           <div className="w-full rounded-2xl overflow-hidden shadow-sm border border-[#dbe4ec] bg-[#f7fafc] lg:max-w-md lg:ml-auto">
-            <img src={crownHeroImage} alt="Cosmetic crown treatment visual" className="w-full h-[320px] sm:h-[380px] object-cover" />
+            <img src={crownHeroImage} alt={imageAlt('Cosmetic crown treatment visual', language)} className="w-full h-[320px] sm:h-[380px] object-cover" />
           </div>
         </div>
       </section>
@@ -123,7 +124,7 @@ export default function CrownLanding() {
             </div>
           </div>
           <div className="rounded-2xl overflow-hidden shadow-sm border border-[#dbe4ec] bg-white">
-            <img src={planningImage} alt="Doctor discussing crown treatment options with patient" className="w-full h-full object-cover" />
+            <img src={planningImage} alt={imageAlt('Doctor discussing crown treatment options with patient', language)} className="w-full h-full object-cover" />
           </div>
         </div>
       </section>
@@ -157,7 +158,7 @@ export default function CrownLanding() {
             <ProcessSteps steps={copy.processSteps} className="flex-1" />
           </div>
           <div className="rounded-2xl overflow-hidden shadow-sm border border-[#dbe4ec] bg-white">
-            <img src={labImage} alt="Clinical team discussing crown case planning" className="w-full h-full object-cover" />
+            <img src={labImage} alt={imageAlt('Clinical team discussing crown case planning', language)} className="w-full h-full object-cover" />
           </div>
         </div>
       </section>

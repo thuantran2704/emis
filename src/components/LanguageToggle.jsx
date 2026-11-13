@@ -1,28 +1,27 @@
 ﻿import { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { useEffect, useRef } from 'react';
-import { setLanguage } from '../slices/languageSlice';
+import { useLocation } from 'react-router-dom';
+import { languageSwitchHref } from '../seo/locales.js';
 
 export default function LanguageToggle({ variant = 'floating', compact = false, showLabel = false }) {
   const [isOpen, setIsOpen] = useState(false);
   const rootRef = useRef(null);
-  const dispatch = useDispatch();
+  const location = useLocation();
   const isNavbar = variant === 'navbar';
 
   const currentLanguage = useSelector((state) => state.language.language);
 
   const languages = [
-    { code: 'vietnamese', label: 'VN', name: 'Tiếng Việt' },
+    { code: 'vietnamese', label: 'VI', name: 'Tiếng Việt' },
     { code: 'english',    label: 'EN', name: 'English' },
     { code: 'french',     label: 'FR', name: 'Français' },
-    { code: 'korean',     label: '한', name: '한국어' },
+    { code: 'korean',     label: 'KO', name: '한국어' },
     { code: 'simplified', label: '简', name: '简体中文' },
     { code: 'traditional',label: '繁', name: '繁體中文' },
   ];
 
-  const currentLabel = currentLanguage === 'simplified' || currentLanguage === 'traditional'
-    ? '中'
-    : languages.find((l) => l.code === currentLanguage)?.label ?? 'EN';
+  const currentLabel = languages.find((l) => l.code === currentLanguage)?.label ?? 'EN';
 
   useEffect(() => {
     if (!isOpen) return;
@@ -40,11 +39,6 @@ export default function LanguageToggle({ variant = 'floating', compact = false, 
     };
   }, [isOpen]);
 
-  const handleLanguageChange = (lang) => {
-    dispatch(setLanguage(lang));
-    setIsOpen(false);
-  };
-
   return (
     <div ref={rootRef} className={isNavbar ? 'relative' : 'fixed bottom-6 right-6 z-50'}>
 
@@ -58,12 +52,11 @@ export default function LanguageToggle({ variant = 'floating', compact = false, 
           aria-label="Choose language"
         >
           {languages.map((lang) => (
-            <button
+            <a
               key={lang.code}
-              onClick={() => handleLanguageChange(lang.code)}
+              href={languageSwitchHref(location.pathname, lang.code)}
               aria-label={lang.name}
-              aria-current={currentLanguage === lang.code ? 'true' : undefined}
-              role="menuitem"
+              aria-current={currentLanguage === lang.code ? 'page' : undefined}
               className={`w-full min-h-11 flex items-center gap-3 px-3 py-2 text-left text-xs font-semibold transition-colors border-b border-gray-100 last:border-b-0
                 ${currentLanguage === lang.code
                   ? 'text-[#806019] bg-[#faf7f0]'
@@ -72,7 +65,7 @@ export default function LanguageToggle({ variant = 'floating', compact = false, 
             >
               <span className="flex h-6 w-7 shrink-0 items-center justify-center rounded-full bg-[#f7f2e7] text-[10px]">{lang.label}</span>
               <span className="min-w-0 whitespace-normal break-words text-[12px] leading-4">{lang.name}</span>
-            </button>
+            </a>
           ))}
         </div>
       )}

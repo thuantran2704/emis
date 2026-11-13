@@ -1,3 +1,4 @@
+import { imageAlt } from '../Translations/imageAlt';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -11,6 +12,7 @@ import familiarImage from '../pics/denture.jpeg';
 import { sectionLabelClass, titleClass, sectionTitleClass } from '../styles/ui';
 import ContactCtas from '../components/ContactCtas';
 import { SectionHeading } from '../components/Section';
+import { numberedStepLabel } from '../Translations/sharedUiLabels';
 
 const bodyClass = 'text-[17px] md:text-[19px] text-gray-600 leading-relaxed';
 
@@ -54,7 +56,7 @@ const FixedTeeth = () => {
             <div className="rounded-2xl border border-[#dfe7ef] shadow-md overflow-hidden bg-[#f7fafc]">
               <img
                 src={heroImage}
-                alt="Illustration of an All-on-4 implant-supported fixed teeth restoration"
+                alt={imageAlt('Illustration of an All-on-4 implant-supported fixed teeth restoration', language)}
                 className="w-full object-contain lg:h-[460px] lg:object-cover lg:object-center"
               />
             </div>
@@ -70,7 +72,7 @@ const FixedTeeth = () => {
             <div className="rounded-2xl overflow-hidden shadow-sm border border-[#dfe7ef] aspect-[4/3]">
               <img
                 src={familiarImage}
-                alt="Patient experiencing dental discomfort"
+                alt={imageAlt('Patient experiencing dental discomfort', language)}
                 className="w-full h-full object-cover object-center"
               />
             </div>
@@ -117,7 +119,7 @@ const FixedTeeth = () => {
             <div className="rounded-2xl border border-[#dfe7ef] bg-[#f7fafc] p-5 lg:p-7">
               <img
                 src={allOnImage}
-                alt="Diagram comparing All-on-4 and All-on-6 implant configurations"
+                alt={imageAlt('Diagram comparing All-on-4 and All-on-6 implant configurations', language)}
                 className="w-full h-[280px] lg:h-[360px] object-contain object-center"
                 loading="lazy"
               />
@@ -168,7 +170,7 @@ const FixedTeeth = () => {
             {journey.steps.map((step, index) => (
               <article key={step} className="rounded-2xl border border-[#dbe4ec] bg-white p-6">
                 <p className="text-[11px] uppercase tracking-[0.22em] text-[#C5AF73] font-semibold">
-                  {language === 'vietnamese' ? `Bước ${index + 1}` : `Step ${index + 1}`}
+                  {numberedStepLabel(language, index + 1)}
                 </p>
                 <p className="mt-2 text-[1.05rem] text-[#2a3439]">{step}</p>
               </article>
@@ -202,7 +204,7 @@ const FixedTeeth = () => {
             <div className="rounded-2xl overflow-hidden border border-[#dfe7ef] shadow-sm bg-white">
               <img
                 src={overseasImage}
-                alt="Doctor reviewing a dental X-ray with a patient while explaining treatment"
+                alt={imageAlt('Doctor reviewing a dental X-ray with a patient while explaining treatment', language)}
                 className="w-full h-full min-h-[320px] lg:min-h-[480px] object-cover object-center"
                 loading="lazy"
               />

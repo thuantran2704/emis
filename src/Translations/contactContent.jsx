@@ -1,6 +1,8 @@
 // src/data/contactContent.js
 export const contactContent = {
   vietnamese: {
+    metaTitle: 'Liên hệ Emis Dental | Tư vấn nha khoa tại TP. Hồ Chí Minh',
+    metaDescription: 'Liên hệ Emis Dental tại TP. Hồ Chí Minh để trao đổi về nhu cầu điều trị nha khoa, gửi hồ sơ hoặc đặt lịch thăm khám.',
     title: "Liên Hệ",
     highlight: "Chúng Tôi",
     getInTouch: "Thông Tin Liên Hệ",
@@ -23,6 +25,8 @@ export const contactContent = {
     ],
   },
   english: {
+    metaTitle: 'Contact Emis Dental | Dental Care in Ho Chi Minh City',
+    metaDescription: 'Contact Emis Dental in Ho Chi Minh City to discuss dental care, share your records, or arrange a consultation.',
     title: "Contact Us",
     highlight: "Us",
     getInTouch: "Get in Touch",
@@ -45,6 +49,8 @@ export const contactContent = {
     ],
   },
   simplified: {
+    metaTitle: '联系 Emis Dental | 胡志明市牙科诊所',
+    metaDescription: '联系胡志明市的 Emis Dental，咨询牙科治疗、提交牙科资料或预约面诊。',
     title: "联系我们",
     highlight: "我们",
     getInTouch: "联系方式",
@@ -67,6 +73,8 @@ export const contactContent = {
     ],
   },
   traditional: {
+    metaTitle: '聯絡 Emis Dental | 胡志明市牙科診所',
+    metaDescription: '聯絡胡志明市的 Emis Dental，諮詢牙科治療、提供牙科資料或預約面診。',
     title: "聯繫我們",
     highlight: "我們",
     getInTouch: "聯繫方式",
@@ -89,6 +97,8 @@ export const contactContent = {
     ],
   },
   french: {
+    metaTitle: 'Contacter Emis Dental | Soins dentaires à Hô Chi Minh-Ville',
+    metaDescription: 'Contactez Emis Dental à Hô Chi Minh-Ville pour discuter de vos soins dentaires, transmettre vos documents ou organiser une consultation.',
     title: "Contactez-",
     highlight: "Nous",
     getInTouch: "Nous Contacter",
@@ -111,6 +121,8 @@ export const contactContent = {
     ],
   },
   korean: {
+    metaTitle: 'Emis Dental 문의 | 호찌민시 치과 진료',
+    metaDescription: '호찌민시 Emis Dental에 문의하여 치과 치료를 상담하고 진료 기록을 보내거나 상담 일정을 예약하세요.',
     title: "연락",
     highlight: "하기",
     getInTouch: "연락처 정보",

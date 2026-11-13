@@ -1,3 +1,6 @@
+import { translateLongForm } from './translateLongForm.js';
+import { disclaimerTranslations } from './longFormTranslations.js';
+
 export const disclaimerContent = {
   english: {
     metaTitle: 'Medical Disclaimer | Emis Dental',
@@ -170,3 +173,7 @@ export const disclaimerContent = {
     ],
   },
 };
+
+for (const [language, strings] of Object.entries(disclaimerTranslations)) {
+  disclaimerContent[language] = translateLongForm(disclaimerContent.english, strings, `disclaimer/${language}`);
+}

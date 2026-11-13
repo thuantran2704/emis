@@ -8,6 +8,7 @@ import foreignPatientWithDoctor from '../pics/foreign-patient-1-with-dr-tu-smili
 import foreignPatientSmile from '../pics/foreign-patient-2.jpg';
 import ProcessSteps from '../components/ProcessSteps';
 import CtaButton from '../components/CtaButton';
+import { availableLocalesForRoute } from '../seo/locales.js';
 
 export default function InternationalPatients() {
   const language = useSelector((state) => state.language.language);
@@ -198,8 +199,15 @@ export default function InternationalPatients() {
           })}
         </div>
         <div className="text-center">
-          <CtaButton to="/patient-story/dental-implants" variant="outlineGold" size="chip">
+          <CtaButton
+            {...(availableLocalesForRoute('/patient-story/dental-implants').includes(language)
+              ? { to: '/patient-story/dental-implants' }
+              : { href: '/patient-story/dental-implants' })}
+            variant="outlineGold"
+            size="chip"
+          >
             {content.journeysCTA}
+            {!availableLocalesForRoute('/patient-story/dental-implants').includes(language) && ' (EN)'}
           </CtaButton>
         </div>
       </section>

@@ -1,3 +1,4 @@
+import { imageAlt } from '../Translations/imageAlt';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -62,7 +63,7 @@ const Solutions = () => {
             <div className="rounded-2xl overflow-hidden shadow-md border border-[#dfe7ef] bg-[#f7fafc]">
               <img
                 src={heroImage}
-                alt="Doctor reviewing dental X-ray with patient while discussing treatment options"
+                alt={imageAlt('Doctor reviewing dental X-ray with patient while discussing treatment options', language)}
                 className="w-full object-contain lg:h-[520px] lg:object-cover lg:object-center"
               />
             </div>
@@ -100,7 +101,7 @@ const Solutions = () => {
               <div className="rounded-2xl overflow-hidden border border-[#dfe7ef] shadow-sm bg-[#f7fafc] lg:sticky lg:top-28">
                 <img
                   src={situationsImage}
-                  alt="Visual illustration of missing teeth and alignment concerns"
+                  alt={imageAlt('Visual illustration of missing teeth and alignment concerns', language)}
                   className="w-full object-contain lg:h-[540px] lg:object-cover lg:object-center"
                   loading="lazy"
                 />
@@ -147,7 +148,7 @@ const Solutions = () => {
               <div className="rounded-2xl overflow-hidden border border-[#dfe7ef] shadow-sm bg-white lg:sticky lg:top-28">
                 <img
                   src={pathwaysImage}
-                  alt="Patient with denture treatment context for fixed and full-mouth pathways"
+                  alt={imageAlt('Patient with denture treatment context for fixed and full-mouth pathways', language)}
                   className="w-full h-[320px] md:h-[420px] lg:h-[620px] object-cover object-center lg:object-left lg:scale-110 lg:origin-left"
                   loading="lazy"
                 />

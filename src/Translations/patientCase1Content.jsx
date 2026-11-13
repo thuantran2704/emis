@@ -1,3 +1,6 @@
+import { translateLongForm } from './translateLongForm.js';
+import { patientCase1Translations } from './longFormTranslations.js';
+
 const patientCase1Content = {
   english: {
     seoTitle: "Real Implant Patient Story | Emis Dental",
@@ -163,5 +166,9 @@ const patientCase1Content = {
     },
   },
 };
+
+for (const [language, strings] of Object.entries(patientCase1Translations)) {
+  patientCase1Content[language] = translateLongForm(patientCase1Content.english, strings, `patientCase1/${language}`);
+}
 
 export default patientCase1Content;

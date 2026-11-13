@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
+import { useSelector } from 'react-redux';
+import sharedUiLabels from '../Translations/sharedUiLabels';
+import { imageAlt } from '../Translations/imageAlt';
 import ad1 from "../pics/ads/ad01-dental-implant-3-popular.png";
 import ad2 from "../pics/ads/ad02-dental-tourist.png";
 import ad3 from "../pics/ads/ad03-starting12k-dental-tourism.png";
@@ -20,6 +23,8 @@ const adImages = [
 ];
 
 export default function AdBanner() {
+  const language = useSelector((state) => state.language.language);
+  const labels = sharedUiLabels[language] || sharedUiLabels.english;
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
@@ -53,7 +58,7 @@ export default function AdBanner() {
             >
               <img
                 src={adImages[current].src}
-                alt={adImages[current].alt}
+                alt={imageAlt(adImages[current].alt, language)}
                 className="max-h-full max-w-full object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.2)]"
               />
             </div>
@@ -81,7 +86,7 @@ export default function AdBanner() {
 
         {/* Hint text */}
         <div className="absolute top-4 right-6 text-xs font-medium text-[#8aa0b5] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-          Click to see more
+          {labels.moreAds}
         </div>
       </div>
     </section>

@@ -68,6 +68,7 @@
     },
 
     trustTitle: 'Building Confidence Through Clarity',
+    trustIntro: 'We believe patients should have access to clear information before making treatment decisions.',
     trustBullets: [
       'Clinic License Information',
       'Doctor Profiles & Credentials',
@@ -131,6 +132,7 @@
     },
 
     trustTitle: 'Minh Bạch & Đáng Tin Cậy',
+    trustIntro: 'Chúng tôi tin rằng bệnh nhân cần được tiếp cận thông tin rõ ràng trước khi quyết định điều trị.',
     trustBullets: ['Giấy Phép Hoạt Động', 'Hồ Sơ & Bằng Cấp Bác Sĩ', 'Google Maps & Địa Chỉ Phòng Khám', 'Kênh Liên Hệ Chính Thức (WhatsApp, Email)'],
 
     startTitle: 'Bắt Đầu Từ Việc Hiểu Rõ Trường Hợp Của Bạn',
@@ -213,6 +215,7 @@
     },
 
     trustTitle: 'Construire La Confiance Par La Clarté',
+    trustIntro: 'Nous pensons que les patients doivent disposer d’informations claires avant de prendre une décision de traitement.',
     trustBullets: [
       'Informations Sur La Licence De La Clinique',
       'Profils Et Qualifications Des Médecins',
@@ -300,6 +303,7 @@
     },
 
     trustTitle: '以透明建立信任',
+    trustIntro: '我们认为，患者在决定治疗前应能获得清晰的信息。',
     trustBullets: [
       '诊所执照信息',
       '医生资历与证书',
@@ -387,6 +391,7 @@
     },
 
     trustTitle: '以清楚透明建立信任',
+    trustIntro: '我們認為，患者在決定治療前應能獲得清楚的資訊。',
     trustBullets: [
       '診所執照資訊',
       '醫師資歷與證書',
@@ -474,6 +479,7 @@
     },
 
     trustTitle: '명확함을 통한 신뢰 구축',
+    trustIntro: '환자는 치료를 결정하기 전에 명확한 정보를 얻을 수 있어야 한다고 생각합니다.',
     trustBullets: [
       '클리닉 면허 정보',
       '의료진 프로필 및 자격',

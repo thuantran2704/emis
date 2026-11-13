@@ -1,3 +1,6 @@
+import { translateLongForm } from './translateLongForm.js';
+import { warrantyTranslations } from './longFormTranslations.js';
+
 export const warrantyContent = {
   english: {
     metaTitle: 'Warranty & After-Treatment Support | Emis Dental',
@@ -193,3 +196,7 @@ export const warrantyContent = {
     ],
   },
 };
+
+for (const [language, strings] of Object.entries(warrantyTranslations)) {
+  warrantyContent[language] = translateLongForm(warrantyContent.english, strings, `warranty/${language}`);
+}

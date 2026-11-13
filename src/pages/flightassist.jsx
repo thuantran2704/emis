@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { ArrowRight, CheckCircle } from "lucide-react";
+import { useSelector } from 'react-redux';
+import visitorProgramContent from '../Translations/visitorProgramContent.js';
 
 import vn1 from "../pics/travel-ads/vn1.jpg";
 import vn3 from "../pics/travel-ads/vn3.jpg";
@@ -13,29 +15,18 @@ import vn12 from "../pics/travel-ads/vn12.jpg";
 import AdBanner from "../components/AdBanner";
 
 export default function DentalVisitorProgram() {
+  const language = useSelector((state) => state.language.language);
+  const content = visitorProgramContent[language];
   const cityGallery = [vn3, vn5, vn7, vn9, vn11, vn12];
-
-  const flightSupport = [
-    "30% support on round-trip Economy airfare",
-    "Maximum support value up to USD 1,200",
-    "Coordination support for suitable flight windows",
-  ];
-
-  const staySupport = [
-    "8 nights of sponsored accommodation in District 3",
-    "Convenient location near Emis Dental and key landmarks",
-    "Comfort-focused stay for treatment and recovery periods",
-  ];
 
   return (
     <main className="bg-[#fdfcf8] pt-20">
       <Helmet>
-        <title>Dental Visitor Support Program | Emis Dental</title>
+        <title>{content.metaTitle}</title>
         <meta
           name="description"
-          content="Dental Visitor Support Program by Emis Dental offering flight, accommodation, and travel support for international patients."
+          content={content.metaDescription}
         />
-        <link rel="canonical" href="https://emisdental.com/visitor-program" />
       </Helmet>
 
       <section className="min-h-[82vh] flex items-center py-16 lg:py-24">
@@ -45,7 +36,7 @@ export default function DentalVisitorProgram() {
               <div className="overflow-hidden rounded-2xl shadow-lg aspect-[16/10] lg:aspect-auto">
                 <img
                   src={vn1}
-                  alt="Dental travel support in Vietnam"
+                  alt={content.heroAlt}
                   className="w-full h-full lg:h-[480px] object-cover object-center"
                 />
               </div>
@@ -55,19 +46,19 @@ export default function DentalVisitorProgram() {
               <p
                 className="uppercase tracking-[0.3em] text-[#C5AF73] text-xs font-semibold"
               >
-                TRAVEL ASSIST
+                {content.eyebrow}
               </p>
 
               <h1
                 className="text-4xl md:text-5xl text-[#2a3439] leading-tight"
               >
-                Dental Visitor Program
+                {content.title}
               </h1>
 
               <p
                 className="text-lg text-gray-500 leading-relaxed max-w-md"
               >
-                A refined dental travel experience designed for international patients seeking implant and comprehensive treatment in Vietnam.
+                {content.intro}
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 pt-2">
@@ -75,13 +66,13 @@ export default function DentalVisitorProgram() {
                   to="/contact"
                   className="px-7 py-3.5 rounded-full bg-[#d4af37] text-white text-sm font-semibold hover:bg-[#c19d30] transition text-center"
                 >
-                  Plan Your Visit
+                  {content.plan}
                 </Link>
                 <a
                   href="#program-details"
                   className="px-7 py-3.5 rounded-full border border-[#d4af37] text-[#2a3439] text-sm hover:bg-white transition text-center"
                 >
-                  View Program Details
+                  {content.details}
                 </a>
               </div>
             </div>
@@ -95,17 +86,17 @@ export default function DentalVisitorProgram() {
             <p
               className="uppercase tracking-[0.3em] text-[#C5AF73] mb-5 text-xs font-semibold"
             >
-              PROGRAM BENEFITS
+              {content.benefitsLabel}
             </p>
             <h2
               className="text-4xl text-[#2a3439] mb-6"
             >
-              Thoughtfully Curated Support
+              {content.benefitsTitle}
             </h2>
             <p
               className="text-lg text-gray-500 leading-relaxed"
             >
-              Our visitor program helps simplify treatment travel, from flight planning to accommodation and local support.
+              {content.benefitsIntro}
             </p>
           </div>
 
@@ -114,10 +105,10 @@ export default function DentalVisitorProgram() {
               <h3
                 className="text-2xl text-[#2a3439] mb-5"
               >
-                Premium Flight Support
+                {content.flightTitle}
               </h3>
               <div className="space-y-3">
-                {flightSupport.map((item) => (
+                {content.flight.map((item) => (
                   <div key={item} className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-[#C5AF73] mt-1 flex-shrink-0" />
                     <span className="text-[#2a3439]">
@@ -132,10 +123,10 @@ export default function DentalVisitorProgram() {
               <h3
                 className="text-2xl text-[#2a3439] mb-5"
               >
-                Accommodation Assistance
+                {content.stayTitle}
               </h3>
               <div className="space-y-3">
-                {staySupport.map((item) => (
+                {content.stay.map((item) => (
                   <div key={item} className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-[#C5AF73] mt-1 flex-shrink-0" />
                     <span className="text-[#2a3439]">
@@ -155,7 +146,7 @@ export default function DentalVisitorProgram() {
             <div className="rounded-2xl overflow-hidden shadow-sm h-[460px]">
               <img
                 src={vn4}
-                alt="Visitor travel and treatment support"
+                  alt={content.stayAlt}
                 className="w-full h-full object-cover object-center"
               />
             </div>
@@ -165,25 +156,25 @@ export default function DentalVisitorProgram() {
                 <p
                   className="uppercase tracking-[0.25em] text-[#C5AF73] text-xs font-semibold mb-4"
                 >
-                  OPTIONAL CITY EXPERIENCE
+                  {content.cityLabel}
                 </p>
                 <h3
                   className="text-2xl text-[#2a3439]"
                 >
-                  Complimentary 3-Day City Trip
+                  {content.cityTitle}
                 </h3>
               </div>
 
               <p
                 className="text-gray-500 leading-relaxed border-y border-[#eadfc9]/60 py-6 my-2"
               >
-                Eligible patients can join a 3-day city itinerary designed for first-time visitors, featuring major landmarks and comfortable pacing around treatment schedules.
+                {content.cityIntro}
               </p>
 
               <p
                 className="text-gray-500 leading-relaxed"
               >
-                If you prefer not to join the tour, an equivalent value option may be discussed based on program terms.
+                {content.cityNote}
               </p>
             </div>
           </div>
@@ -198,12 +189,12 @@ export default function DentalVisitorProgram() {
             <p
               className="uppercase tracking-[0.3em] text-[#C5AF73] mb-5 text-xs font-semibold"
             >
-              VIETNAM HIGHLIGHTS
+              {content.highlightsLabel}
             </p>
             <h2
               className="text-4xl text-[#2a3439] mb-6"
             >
-              Explore While You Recover
+              {content.highlightsTitle}
             </h2>
           </div>
 
@@ -212,7 +203,7 @@ export default function DentalVisitorProgram() {
               <div key={index} className="rounded-2xl overflow-hidden shadow-sm border border-[#eadfc9]/50 bg-[#f7f2e7]">
                 <img
                   src={img}
-                  alt={`Vietnam travel highlight ${index + 1}`}
+                  alt={`${content.galleryAlt} ${index + 1}`}
                   className="w-full h-52 object-cover object-center"
                 />
               </div>
@@ -223,7 +214,7 @@ export default function DentalVisitorProgram() {
               to="/international-patients"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-[#d4af37] text-[#2a3439] text-sm font-semibold hover:bg-[#fdf8ee] transition"
             >
-              International Patient Support
+              {content.patientSupport}
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
             </Link>
           </div>
@@ -236,14 +227,12 @@ export default function DentalVisitorProgram() {
             <p
               className="uppercase tracking-[0.25em] text-[#C5AF73] text-xs font-semibold mb-4"
             >
-              IMPORTANT NOTICE
+              {content.noticeLabel}
             </p>
             <p
               className="text-gray-500 leading-relaxed"
             >
-              Program benefits are subject to eligibility, treatment plans, and availability.
-              Flight and accommodation support values are non-transferable and cannot be redeemed
-              for cash unless explicitly stated by Emis Dental.
+              {content.notice}
             </p>
 
             <div className="mt-7 flex flex-col sm:flex-row gap-3">
@@ -251,14 +240,14 @@ export default function DentalVisitorProgram() {
                 to="/contact"
                 className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#d4af37] text-white text-sm font-semibold hover:bg-[#c19d30] transition"
               >
-                Request Travel Support
+                {content.request}
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 to="/implant"
                 className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full border border-[#d4af37] text-[#2a3439] text-sm hover:bg-white transition"
               >
-                Explore Implant Solutions
+                {content.implants}
               </Link>
             </div>
           </div>

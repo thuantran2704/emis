@@ -1,7 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { localeFromPath } from '../seo/locales.js'
 
 const initialState = {
-    language: 'english',
+    language: typeof window === 'undefined'
+        ? 'english'
+        : localeFromPath(window.location.pathname).language,
 }
 
 const languageSlice = createSlice({

@@ -1,3 +1,4 @@
+import { imageAlt } from '../Translations/imageAlt';
 import { useSelector } from 'react-redux';
 import { Helmet } from 'react-helmet';
 import { CheckCircle, ArrowRight } from 'lucide-react';
@@ -37,7 +38,7 @@ export default function RestorativeDentistry() {
               </div>
             </div>
             <div className="order-1 lg:order-2 overflow-hidden rounded-2xl shadow-lg aspect-[16/9] lg:aspect-auto">
-              <img src={heroImg} alt="Dentist reviewing X-ray with patient" className="w-full h-full lg:h-[460px] object-cover object-center" />
+              <img src={heroImg} alt={imageAlt('Dentist reviewing X-ray with patient', language)} className="w-full h-full lg:h-[460px] object-cover object-center" />
             </div>
           </div>
         </div>
@@ -111,7 +112,7 @@ export default function RestorativeDentistry() {
               <p className="mt-6 text-sm text-gray-500 leading-relaxed">{c.section5.outro}</p>
             </div>
             <div className="hidden lg:block overflow-hidden rounded-2xl shadow-md">
-              <img src={xrayImg} alt="X-ray review consultation" className="h-[380px] w-full object-cover object-center" />
+              <img src={xrayImg} alt={imageAlt('X-ray review consultation', language)} className="h-[380px] w-full object-cover object-center" />
             </div>
           </div>
         </div>

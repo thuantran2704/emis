@@ -1,3 +1,4 @@
+import { imageAlt } from '../Translations/imageAlt';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
@@ -40,6 +41,10 @@ const locales = {
   simplified: 'zh_CN',
   traditional: 'zh_TW',
 };
+const ratingLabels = {
+  english: 'Google Rating', vietnamese: 'Đánh giá Google', french: 'Note Google',
+  korean: 'Google 평점', simplified: 'Google 评分', traditional: 'Google 評分',
+};
 
 export default function Home() {
   const language = useSelector((state) => state.language.language);
@@ -59,24 +64,22 @@ export default function Home() {
         <meta property="og:title" content={page.metaTitle} />
         <meta property="og:description" content={page.metaDescription} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://emisdental.com" />
         <meta property="og:image" content="https://www.emisdental.com/og-image.jpg" />
         <meta property="og:locale" content={locales[language] || 'en_US'} />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="canonical" href="https://emisdental.com" />
       </Helmet>
 
       {/* Main introduction */}
       <section className="relative mt-[72px] min-h-[min(760px,calc(100svh-72px))] w-full overflow-hidden">
         <img
           src={heroBackgroundMobile}
-          alt="Emis Dental surgical team during a procedure"
+          alt={imageAlt('Emis Dental surgical team during a procedure', language)}
           fetchPriority="high"
           className="absolute inset-0 hidden h-full w-full object-cover object-center max-lg:portrait:block"
         />
         <img
           src={heroBackgroundLandscape}
-          alt="Emis Dental doctor analyzing a dental implant"
+          alt={imageAlt('Emis Dental doctor analyzing a dental implant', language)}
           fetchPriority="high"
           className="absolute inset-0 block h-full w-full object-cover object-center max-lg:portrait:hidden"
         />
@@ -91,7 +94,7 @@ export default function Home() {
             {/* Google Rating */}
             <div className="mb-4 md:mb-6 flex items-center gap-2">
               <div className="flex flex-col">
-                <p className="text-xs md:text-sm font-medium text-white">Google Rating – 5.0</p>
+                <p className="text-xs md:text-sm font-medium text-white">{ratingLabels[language]} – 5.0</p>
                 <div className="mt-1 flex gap-0.5">
                   {[...Array(5)].map((_, i) => (
                     <span key={i} className="text-base md:text-lg text-[#C89D2D]">★</span>
@@ -219,7 +222,7 @@ export default function Home() {
       <Section tone="white">
         <div className="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-[1.1fr_1fr] md:items-stretch">
           <div className="hidden overflow-hidden rounded-3xl shadow-lg md:block">
-            <img src={elderCoupleSmiling} alt="Couple enjoying a walk together" loading="lazy" decoding="async" className="h-full w-full object-cover" />
+            <img src={elderCoupleSmiling} alt={imageAlt('Couple enjoying a walk together', language)} loading="lazy" decoding="async" className="h-full w-full object-cover" />
           </div>
 
           <div>
@@ -390,7 +393,7 @@ export default function Home() {
           </div>
 
           <div className="hidden overflow-hidden rounded-3xl shadow-lg h-full lg:landscape:block">
-            <img src={internationalSupport} alt="Waiting and reception area at Emis Dental" loading="lazy" decoding="async" className="h-full w-full object-cover object-center" />
+            <img src={internationalSupport} alt={imageAlt('Waiting and reception area at Emis Dental', language)} loading="lazy" decoding="async" className="h-full w-full object-cover object-center" />
           </div>
         </div>
       </Section>

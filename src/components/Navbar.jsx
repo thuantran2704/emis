@@ -12,11 +12,7 @@ export default function Navbar() {
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isSmileOpen, setIsSmileOpen] = useState(false);
   const [isPatientsOpen, setIsPatientsOpen] = useState(false);
-  const [isLandscape, setIsLandscape] = useState(() =>
-    typeof window !== 'undefined'
-      ? window.matchMedia('(orientation: landscape)').matches
-      : true
-  );
+  const [isLandscape, setIsLandscape] = useState(true);
 
   const closeAllMenus = () => {
     setIsMenuOpen(false);

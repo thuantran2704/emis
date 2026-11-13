@@ -1,4 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import sharedUiLabels from '../Translations/sharedUiLabels';
 
 /**
  * PicSlider — reusable image showcase / content slider.
@@ -20,6 +22,8 @@ import { useState, useRef, useEffect } from 'react';
  *   • Dots shown only when total ≤ 8
  */
 export default function PicSlider({ pics, content = {}, bgColor = '#CCBA78', className }) {
+  const language = useSelector((state) => state.language.language);
+  const labels = sharedUiLabels[language] || sharedUiLabels.english;
   const [active, setActive] = useState(0);
   const total = pics.length;
   const perSlide = content.pic ?? [];
@@ -47,7 +51,7 @@ export default function PicSlider({ pics, content = {}, bgColor = '#CCBA78', cla
     <button
       onClick={onClick}
       className="flex h-10 w-10 items-center justify-center rounded-full border border-[#dbe4ec] text-[#2a3439] hover:border-[#d4af37] hover:text-[#d4af37] transition"
-      aria-label={dir === 'prev' ? 'Previous' : 'Next'}
+      aria-label={dir === 'prev' ? labels.previous : labels.next}
     >
       <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path
@@ -88,7 +92,7 @@ export default function PicSlider({ pics, content = {}, bgColor = '#CCBA78', cla
                 <img
                   key={active}
                   src={pics[active]}
-                  alt={cur.title ?? `Slide ${active + 1}`}
+                  alt={cur.title ?? `${labels.slide} ${active + 1}`}
                   className="absolute inset-0 h-full w-full object-cover"
                 />
               </div>
@@ -141,7 +145,7 @@ export default function PicSlider({ pics, content = {}, bgColor = '#CCBA78', cla
                 <img
                   key={active}
                   src={pics[active]}
-                  alt={cur.title ?? `Slide ${active + 1}`}
+                  alt={cur.title ?? `${labels.slide} ${active + 1}`}
                   className="max-h-[480px] max-w-full object-contain p-6"
                 />
                 <div className="absolute inset-x-4 top-1/2 -translate-y-1/2 flex justify-between pointer-events-none">
@@ -156,7 +160,7 @@ export default function PicSlider({ pics, content = {}, bgColor = '#CCBA78', cla
               <img
                 key={active}
                 src={pics[active]}
-                alt={`Slide ${active + 1}`}
+                alt={`${labels.slide} ${active + 1}`}
                 className="max-h-[480px] max-w-full object-contain p-6"
               />
               <div className="absolute inset-x-4 top-1/2 -translate-y-1/2 flex justify-between pointer-events-none">
@@ -192,7 +196,7 @@ export default function PicSlider({ pics, content = {}, bgColor = '#CCBA78', cla
                 >
                   <img
                     src={src}
-                    alt={perSlide[i]?.title ?? `Slide ${i + 1}`}
+                    alt={perSlide[i]?.title ?? `${labels.slide} ${i + 1}`}
                     className="max-h-full max-w-full object-contain p-1.5"
                   />
                 </div>

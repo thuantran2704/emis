@@ -1,5 +1,5 @@
 import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { createRoot, hydrateRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import { configureStore } from '@reduxjs/toolkit'
@@ -12,10 +12,17 @@ const store = configureStore({
   },
 })
 
-createRoot(document.getElementById('root')).render(
+const app = (
   <StrictMode>
     <Provider store={store}>
       <App />
     </Provider>
-  </StrictMode>,
+  </StrictMode>
 )
+
+const root = document.getElementById('root')
+if (root.hasChildNodes()) {
+  hydrateRoot(root, app)
+} else {
+  createRoot(root).render(app)
+}

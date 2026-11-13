@@ -5,6 +5,7 @@ import { Plus } from 'lucide-react';
 import { faqContent } from '../Translations/faqContent';
 import { sectionLabelClass, titleClass } from '../styles/ui';
 import ContactCtas from '../components/ContactCtas';
+import sharedUiLabels from '../Translations/sharedUiLabels';
 
 const bodyClass = 'text-[17px] md:text-[19px] text-gray-600 leading-relaxed';
 
@@ -13,6 +14,7 @@ const pad = (n) => String(n + 1).padStart(2, '0');
 const Faq = () => {
   const language = useSelector((state) => state.language.language);
   const content = faqContent[language] || faqContent.english;
+  const labels = sharedUiLabels[language] || sharedUiLabels.english;
 
   return (
     <main className="bg-[#f7fafc] text-[#2a3439] pt-20">
@@ -45,8 +47,8 @@ const Faq = () => {
         <div className="max-w-6xl mx-auto px-8">
           <div className="grid lg:grid-cols-[260px_1fr] gap-10 lg:gap-16 items-start">
             {/* Table of contents */}
-            <nav className="lg:sticky lg:top-24 hidden lg:block" aria-label="FAQ categories">
-              <p className={sectionLabelClass + ' mb-4'}>Topics</p>
+            <nav className="lg:sticky lg:top-24 hidden lg:block" aria-label={labels.topics}>
+              <p className={sectionLabelClass + ' mb-4'}>{labels.topics}</p>
               <ul className="space-y-1">
                 {content.categories.map((category, index) => (
                   <li key={category.title}>

@@ -6,7 +6,6 @@ import realCasesContent from '../Translations/realCasesContent';
 import { realCaseIds, realCaseDetailImages } from '../data/realCaseAssets';
 import zhannaBefore from '../pics/real-cases/zhanna-before.jpg';
 import zhannaAfter from '../pics/real-cases/zhanna-after.jpg';
-import klausAfterPortrait from '../pics/real-cases/klaus-after-portrait.png';
 import sergeyZhannaFamily from '../pics/real-cases/sergey-zhanna.jpg';
 import NotFound from './NotFound';
 
@@ -19,7 +18,7 @@ export default function RealCaseDetail() {
 
   if (!realCaseIds.includes(caseId)) return <NotFound />;
 
-  const socialImage = caseId === 'klaus' ? klausAfterPortrait : zhannaAfter;
+  const socialImage = caseId === 'klaus' ? realCaseDetailImages.klaus[1] : zhannaAfter;
 
   return (
     <main className="overflow-hidden bg-[#fdfcf8] pt-[72px]">

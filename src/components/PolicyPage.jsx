@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import { Helmet } from 'react-helmet';
 import { FileText, Check, Info, MessageCircle } from 'lucide-react';
 import { sectionLabelClass, titleClass, ctaPrimaryClass } from '../styles/ui';
+import sharedUiLabels from '../Translations/sharedUiLabels';
 
 const bodyClass = 'text-[16px] md:text-[17px] text-gray-600 leading-relaxed';
 
@@ -30,6 +31,7 @@ const Chips = ({ items }) => (
 const PolicyPage = ({ contentByLanguage, heroIcon = FileText, sectionIcons = [], groupIcons = [] }) => {
   const language = useSelector((state) => state.language.language);
   const content = contentByLanguage[language] || contentByLanguage.english;
+  const labels = sharedUiLabels[language] || sharedUiLabels.english;
   const HeroIcon = heroIcon;
 
   return (
@@ -68,8 +70,8 @@ const PolicyPage = ({ contentByLanguage, heroIcon = FileText, sectionIcons = [],
         <div className="max-w-6xl mx-auto px-8">
           <div className="grid lg:grid-cols-[240px_1fr] gap-10 lg:gap-14 items-start">
             {/* Contents */}
-            <nav className="lg:sticky lg:top-24 hidden lg:block" aria-label="Policy sections">
-              <p className={sectionLabelClass + ' mb-4'}>Contents</p>
+            <nav className="lg:sticky lg:top-24 hidden lg:block" aria-label={labels.contents}>
+              <p className={sectionLabelClass + ' mb-4'}>{labels.contents}</p>
               <ul className="space-y-1">
                 {content.sections.map((section, index) => {
                   const Icon = sectionIcons[index] || FileText;

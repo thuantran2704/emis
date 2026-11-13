@@ -1,3 +1,6 @@
+import { translateLongForm } from './translateLongForm.js';
+import { homeV2Translations } from './homeV2Translations.js';
+
 export const homeContent = {
   english: {
     heroTitle: "Premium Dental Care",
@@ -1769,5 +1772,9 @@ export const homeContent = {
     metaDescription: "Services dentaires experts incluant implants, couronnes, Invisalign à Ho Chi Minh Ville. Réservez votre rendez-vous aujourd'hui."
   }
 };
+
+for (const [language, strings] of Object.entries(homeV2Translations)) {
+  homeContent[language].homepageV2 = translateLongForm(homeContent.english.homepageV2, strings, `homeV2/${language}`);
+}
 
 export default homeContent;

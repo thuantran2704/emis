@@ -1,3 +1,4 @@
+import { imageAlt } from '../Translations/imageAlt';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -16,6 +17,9 @@ const Doctors = () => {
     <main className="bg-[#f7f2e7] pt-20">
       <Helmet>
         <title>{content.metaTitle}</title>
+        <meta name="description" content={content.hero.subtitle} />
+        <meta property="og:title" content={content.metaTitle} />
+        <meta property="og:description" content={content.hero.subtitle} />
       </Helmet>
 
       {/* HERO SECTION */}
@@ -28,7 +32,7 @@ const Doctors = () => {
               <div className="overflow-hidden rounded-2xl shadow-lg aspect-[16/9] lg:aspect-auto">
                 <img
                   src={consultationImage}
-                  alt="Emis Dental Clinical Team"
+                  alt={imageAlt('Emis Dental Clinical Team', language)}
                   className="w-full h-full lg:h-[460px] object-cover object-center"
                 />
               </div>

@@ -1,5 +1,7 @@
+import { imageAlt } from '../Translations/imageAlt';
 import { Helmet } from 'react-helmet';
 import { useSelector } from 'react-redux';
+import sharedUiLabels from '../Translations/sharedUiLabels';
 import smileAestheticsContent from '../Translations/smileAestheticsContent';
 import heroImage from '../pics/doctor-smiling-with-patient.jpg';
 import sectionThreeImage from '../pics/confident-smile-social.jpeg';
@@ -66,7 +68,7 @@ export default function SmileAesthetics() {
       <section className="mx-auto max-w-6xl px-5 py-20 lg:px-12 lg:py-32">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           <div>
-            <SectionLabel>Smile Aesthetics</SectionLabel>
+            <SectionLabel>{sharedUiLabels[language]?.smileAesthetics || sharedUiLabels.english.smileAesthetics}</SectionLabel>
             <h1
               className="mb-7 max-w-2xl text-[1.6rem] leading-[1.08] text-[#2a3439] lg:mb-10 lg:text-[2.8rem]"
               style={{ fontFamily: "'Playfair Display', serif" }}
@@ -122,7 +124,7 @@ export default function SmileAesthetics() {
 
             {sectionThreeImage ? (
               <div className="mt-6 hidden overflow-hidden rounded-2xl border border-[#dbe4ec] bg-white shadow-sm lg:block">
-                <img src={sectionThreeImage} alt="Doctor discussing smile planning with patient" className="h-56 w-full object-cover" />
+                <img src={sectionThreeImage} alt={imageAlt('Doctor discussing smile planning with patient', language)} className="h-56 w-full object-cover" />
               </div>
             ) : null}
           </div>
@@ -183,7 +185,7 @@ export default function SmileAesthetics() {
           {orthoImage ? (
             <div className="rounded-2xl border border-[#dbe4ec] bg-[#f7fafc] p-5">
               <div className="mb-5 overflow-hidden rounded-xl border border-[#dbe4ec] bg-white">
-                <img src={orthoImage} alt="Orthodontic aligner planning" className="h-44 w-full object-cover" />
+                <img src={orthoImage} alt={imageAlt('Orthodontic aligner planning', language)} className="h-44 w-full object-cover" />
               </div>
               <div className="space-y-2">
                 {orthoFlow.map((step, index) => (

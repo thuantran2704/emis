@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
+import ClientRecaptcha from './ClientRecaptcha';
 import Alert from "./alert";
 import contactContent from "../Translations/contactContent";
 import { useSelector } from 'react-redux';
@@ -194,7 +194,7 @@ export default function ContactForm({ embedded = false }) {
 
           <div className="flex justify-center my-2">
             {recaptchaSiteKey ? (
-              <ReCAPTCHA
+              <ClientRecaptcha
                 sitekey={recaptchaSiteKey}
                 onChange={handleRecaptchaChange}
               />

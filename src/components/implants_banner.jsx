@@ -3,11 +3,13 @@ import { useSelector } from 'react-redux';
 import { ArrowRight } from 'lucide-react';
 import { implantContent } from '../Translations/implantContent';
 import NumberedList from './NumberedList';
+import sharedUiLabels from '../Translations/sharedUiLabels';
 
 export default function ImplantPlannerBanner() {
   const language = useSelector((state) => state.language.language);
   const content = implantContent[language] || implantContent.english;
   const planner = content.section9;
+  const labels = sharedUiLabels[language] || sharedUiLabels.english;
 
   if (!planner) {
     return null;
@@ -28,7 +30,7 @@ export default function ImplantPlannerBanner() {
             <div>
               <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-[#d4af37]">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#d4af37] shadow-[0_0_10px_2px_rgba(212,175,55,0.6)]" />
-                Implant Planner
+                {labels.implantPlanner}
               </p>
               <h2
                 className="mt-3 text-3xl font-bold text-white md:text-4xl"
