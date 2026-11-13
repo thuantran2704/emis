@@ -2,7 +2,8 @@ import sergeyZhannaImage from '../pics/real-cases/sergey-zhanna.jpg';
 import klausImage from '../pics/real-cases/klaus-after.jpg';
 import zhannaPortraitArtwork from '../pics/real-cases/zhanna-cover.png';
 import klausPortraitArtwork from '../pics/real-cases/klaus-cover.png';
-import klausBeforeAfter from '../pics/real-cases/klaus-before-after-layout.png';
+import klausBefore from '../pics/real-cases/klaus-before.jpeg';
+import klausAfterPortrait from '../pics/real-cases/klaus-after-portrait.png';
 
 export const realCaseImages = {
   'sergey-zhanna': sergeyZhannaImage,
@@ -15,7 +16,7 @@ export const realCasePortraits = {
 };
 
 export const realCaseDetailImages = {
-  klaus: klausBeforeAfter,
+  klaus: [klausBefore, klausAfterPortrait],
 };
 
 export const realCaseIds = ['sergey-zhanna', 'klaus'];

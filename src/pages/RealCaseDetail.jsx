@@ -6,7 +6,7 @@ import realCasesContent from '../Translations/realCasesContent';
 import { realCaseIds, realCaseDetailImages } from '../data/realCaseAssets';
 import zhannaBefore from '../pics/real-cases/zhanna-before.jpg';
 import zhannaAfter from '../pics/real-cases/zhanna-after.jpg';
-import klausBeforeAfter from '../pics/real-cases/klaus-before-after.jpg';
+import klausAfterPortrait from '../pics/real-cases/klaus-after-portrait.png';
 import sergeyZhannaFamily from '../pics/real-cases/sergey-zhanna.jpg';
 import NotFound from './NotFound';
 
@@ -19,7 +19,7 @@ export default function RealCaseDetail() {
 
   if (!realCaseIds.includes(caseId)) return <NotFound />;
 
-  const socialImage = caseId === 'klaus' ? klausBeforeAfter : zhannaAfter;
+  const socialImage = caseId === 'klaus' ? klausAfterPortrait : zhannaAfter;
 
   return (
     <main className="overflow-hidden bg-[#fdfcf8] pt-[72px]">
@@ -62,12 +62,16 @@ export default function RealCaseDetail() {
               ))}
             </div>
           ) : (
-            <div className="relative aspect-[3/2] overflow-hidden bg-[#f9f8f4]">
-              <img src={realCaseDetailImages[caseId]} alt={item.imageAlt} className="h-full w-full object-cover" style={{ objectPosition: 'center 31%' }} decoding="async" />
-              <div className="absolute inset-x-2 bottom-3 grid grid-cols-2 text-center text-xs font-bold uppercase tracking-[0.13em] text-white sm:bottom-5">
-                <span className="mx-auto rounded-full bg-[#20313d]/85 px-3 py-1">{content.beforeLabel}</span>
-                <span className="mx-auto rounded-full bg-[#20313d]/85 px-3 py-1">{content.afterLabel}</span>
-              </div>
+            <div className="grid grid-cols-2 gap-3 bg-white p-3">
+              {realCaseDetailImages[caseId].map((src, index) => {
+                const label = index === 0 ? content.beforeLabel : content.afterLabel;
+                return (
+                  <figure key={label} className="relative overflow-hidden rounded-xl bg-[#eee8dd]">
+                    <img src={src} alt={`${label}: ${item.name}`} className="aspect-[3/5] w-full object-cover" decoding="async" />
+                    <figcaption className="absolute bottom-2 left-2 rounded-full bg-[#20313d]/90 px-2 py-1 text-[10px] font-bold uppercase tracking-[0.08em] text-white sm:bottom-3 sm:left-3 sm:px-3 sm:text-xs sm:tracking-[0.12em]">{label}</figcaption>
+                  </figure>
+                );
+              })}
             </div>
           )}
         </div>
