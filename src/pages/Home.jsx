@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { useSelector } from 'react-redux';
 import homeContent from '../Translations/homeContent';
+import { googleReviewsUrl } from '../data/contactChannels';
 import realCasesContent from '../Translations/realCasesContent';
 import { realCaseIds } from '../data/realCaseAssets';
 import RealCasePreviewMedia from '../components/RealCasePreviewMedia';
@@ -41,9 +42,9 @@ const locales = {
   simplified: 'zh_CN',
   traditional: 'zh_TW',
 };
-const ratingLabels = {
-  english: 'Google Rating', vietnamese: 'Đánh giá Google', french: 'Note Google',
-  korean: 'Google 평점', simplified: 'Google 评分', traditional: 'Google 評分',
+const reviewLabels = {
+  english: 'Read Google reviews', vietnamese: 'Xem đánh giá Google', french: 'Lire les avis Google',
+  korean: 'Google 리뷰 보기', simplified: '查看 Google 评价', traditional: '查看 Google 評價',
 };
 
 export default function Home() {
@@ -91,17 +92,9 @@ export default function Home() {
         {/* Hero Content - Left Aligned Overlay */}
         <div className="relative z-10 mx-auto flex min-h-[min(760px,calc(100svh-72px))] max-w-7xl flex-col items-start justify-center px-6 py-20 sm:px-10 lg:px-12">
           <div className="max-w-[42rem]">
-            {/* Google Rating */}
-            <div className="mb-4 md:mb-6 flex items-center gap-2">
-              <div className="flex flex-col">
-                <p className="text-xs md:text-sm font-medium text-white">{ratingLabels[language]} – 5.0</p>
-                <div className="mt-1 flex gap-0.5">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-base md:text-lg text-[#C89D2D]">★</span>
-                  ))}
-                </div>
-              </div>
-            </div>
+            <a href={googleReviewsUrl} target="_blank" rel="noopener noreferrer" className="mb-4 inline-flex min-h-11 items-center text-xs font-semibold text-white underline underline-offset-4 hover:text-[#f5da8c] md:mb-6 md:text-sm">
+              {reviewLabels[language]} ↗
+            </a>
 
             {/* Main Heading */}
             <h1

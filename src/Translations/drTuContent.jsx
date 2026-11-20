@@ -7,8 +7,7 @@ const drTuContent = {
       "University of Medicine and Pharmacy at Ho Chi Minh City (Vietnam)"
     ],
     "practice": [
-      "Ho Chi Minh City Odonto-Maxillofacial Hospital",
-      "Emis Dental"
+      "Ho Chi Minh City Odonto-Maxillofacial Hospital"
     ],
     "languages": [
       "Vietnamese",
@@ -23,8 +22,7 @@ const drTuContent = {
       "Đại học Y Dược TP. Hồ Chí Minh (Việt Nam)"
     ],
     "practice": [
-      "Bệnh viện Răng Hàm Mặt TP. Hồ Chí Minh",
-      "Emis Dental"
+      "Bệnh viện Răng Hàm Mặt TP. Hồ Chí Minh"
     ],
     "languages": [
       "Tiếng Việt",
@@ -39,8 +37,7 @@ const drTuContent = {
       "Université de Médecine et de Pharmacie de Hô Chi Minh-Ville (Vietnam)"
     ],
     "practice": [
-      "Hôpital Odonto-Maxillo-Facial de Hô Chi Minh-Ville",
-      "Emis Dental"
+      "Hôpital Odonto-Maxillo-Facial de Hô Chi Minh-Ville"
     ],
     "languages": [
       "Vietnamien",
@@ -55,8 +52,7 @@ const drTuContent = {
       "胡志明市医药大学（越南）"
     ],
     "practice": [
-      "胡志明市口腔颌面专科医院",
-      "Emis Dental"
+      "胡志明市口腔颌面专科医院"
     ],
     "languages": [
       "越南语",
@@ -71,8 +67,7 @@ const drTuContent = {
       "胡志明市醫藥大學（越南）"
     ],
     "practice": [
-      "胡志明市口腔顎面專科醫院",
-      "Emis Dental"
+      "胡志明市口腔顎面專科醫院"
     ],
     "languages": [
       "越南語",
@@ -87,8 +82,7 @@ const drTuContent = {
       "호치민 의약학대학교(베트남)"
     ],
     "practice": [
-      "호치민시 치의학-악안면 전문병원",
-      "Emis Dental"
+      "호치민시 치의학-악안면 전문병원"
     ],
     "languages": [
       "베트남어",

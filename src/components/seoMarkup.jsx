@@ -1,3 +1,5 @@
+import { socialProfiles } from '../data/contactChannels';
+
 export const schemaMarkup = JSON.stringify([
   {
     "@context": "https://schema.org",
@@ -49,9 +51,7 @@ export const schemaMarkup = JSON.stringify([
       }
     ],
     "areaServed": "Ho Chi Minh City, Vietnam",
-    "sameAs": [
-      "https://www.facebook.com/emisinternationaldental/"
-    ],
+    "sameAs": Object.values(socialProfiles),
     "medicalSpecialty": [
       "DentalImplants",
       "CosmeticDentistry",

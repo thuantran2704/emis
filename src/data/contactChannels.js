@@ -1,12 +1,22 @@
 import {
   FaEnvelope,
   FaFacebookF,
+  FaInstagram,
   FaMapLocationDot,
   FaPhone,
+  FaTiktok,
   FaWhatsapp,
   FaYoutube,
 } from 'react-icons/fa6';
 import { SiZalo } from 'react-icons/si';
+
+export const googleReviewsUrl = 'https://maps.app.goo.gl/8T1cPtEKUBe6wLFz9';
+export const socialProfiles = {
+  facebook: 'https://www.facebook.com/emisinternationaldental/',
+  instagram: 'https://www.instagram.com/emis.dental',
+  youtube: 'https://www.youtube.com/@NhaKhoaEmis',
+  tiktok: 'https://www.tiktok.com/@emisdentalclinic',
+};
 
 export const contactItems = [
   {
@@ -37,19 +47,31 @@ export const contactItems = [
     icon: FaFacebookF,
     alt: 'Facebook',
     label: 'Facebook',
-    href: 'https://www.facebook.com/emisinternationaldental/',
+    href: socialProfiles.facebook,
+  },
+  {
+    icon: FaInstagram,
+    alt: 'Instagram',
+    label: 'Instagram',
+    href: socialProfiles.instagram,
+  },
+  {
+    icon: FaTiktok,
+    alt: 'TikTok',
+    label: 'TikTok',
+    href: socialProfiles.tiktok,
   },
   {
     icon: FaYoutube,
     alt: 'YouTube',
     label: 'YouTube',
-    href: 'https://www.youtube.com/@NhaKhoaEmis',
+    href: socialProfiles.youtube,
   },
   {
     icon: FaMapLocationDot,
     alt: 'Google Reviews',
     label: 'Google Reviews',
-    href: 'https://maps.app.goo.gl/8T1cPtEKUBe6wLFz9',
+    href: googleReviewsUrl,
   },
 ];
 

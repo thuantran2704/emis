@@ -2,6 +2,7 @@ import { imageAlt } from '../Translations/imageAlt';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import aboutContent from '../Translations/aboutContent';
+import { DOCTORS, getDoctorTranslation } from '../data/doctors';
 import equipmentContent from '../Translations/equipmentContent';
 import ServicesSlider from '../components/ServicesSlider';
 import Text from '../components/Text';
@@ -175,31 +176,29 @@ const About = () => {
               {content.teamIntro}
             </Text>
             <div className="space-y-6">
-              {content.teamMembers.map((m, idx) => (
-                <div key={idx} className="bg-white rounded-2xl p-8 shadow-sm">
+              {DOCTORS.map((doctor) => {
+                const profile = getDoctorTranslation(doctor, language);
+                return <article key={doctor.id} className="bg-white rounded-2xl p-8 shadow-sm">
+                  {profile.serviceLabel && <p className="mb-3 text-xs font-bold uppercase tracking-[0.15em] text-[#8a691f]">{profile.serviceLabel}</p>}
                   <Text variant="cardTitle" weight="normal" size="cardLg" className="mb-1.5">
-                    {m.name}
+                    {profile.name}
                   </Text>
                   <p
                     className="text-xs text-[#C5AF73] font-semibold mb-3 uppercase tracking-widest"
                   >
-                    {m.role}
+                    {profile.role}
                   </p>
                   <Text variant="description" size="p13">
-                    {m.description}
+                    {profile.descriptionOne || profile.summary}
                   </Text>
-                  {m.cta && (
-                    <div className="mt-5">
-                      <Link
-                        to="/contact"
-                        className="inline-flex px-5 py-2.5 rounded-full border border-[#d4af37] text-[#2a3439] text-sm hover:bg-[#d4af37] hover:text-white transition"
-                      >
-                        {m.cta}
-                      </Link>
-                    </div>
-                  )}
-                </div>
-              ))}
+                  {profile.registration && <p className="mt-3 text-sm font-semibold text-[#765a1e]">{profile.registration}</p>}
+                  <div className="mt-5">
+                    <Link to={doctor.slug} className="inline-flex min-h-11 items-center rounded-full border border-[#d4af37] px-5 py-2.5 text-sm font-semibold text-[#2a3439] transition hover:bg-[#f7f2e7] focus-visible:outline-offset-4">
+                      {profile.cta}
+                    </Link>
+                  </div>
+                </article>;
+              })}
             </div>
           </div>
           <div className="rounded-2xl overflow-hidden shadow-sm aspect-[3/2]">

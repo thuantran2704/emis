@@ -106,7 +106,7 @@ const realCasesContent = {
     },
   },
   vietnamese: {
-    seoTitle: 'Ca lâm sàng thực tế | Implant & phục hình nụ cười | Emis Dental',
+    seoTitle: 'Ca điều trị thực tế | Emis Dental',
     seoDescription: 'Tìm hiểu các hành trình điều trị thực tế tại Emis Dental: phục hình trong chuyến đi 7 ngày và kế hoạch Implant cho bệnh nhân có bệnh sử phức tạp.',
     eyebrow: 'CA LÂM SÀNG THỰC TẾ',
     title: 'Mỗi nụ cười có một câu chuyện.',

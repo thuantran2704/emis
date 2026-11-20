@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import logo from '../pics/logo.jpg';
 import footerContent from '../Translations/footerContent';
 import navbarContent from '../Translations/navbarContent';
-import { primaryContactItems, socialContactItems } from '../data/contactChannels';
+import { googleReviewsUrl, primaryContactItems, socialContactItems } from '../data/contactChannels';
 import { availableLocalesForRoute } from '../seo/locales.js';
 
 // NOTE: The following footer links have no dedicated route yet and are mapped
@@ -11,16 +11,12 @@ import { availableLocalesForRoute } from '../seo/locales.js';
 //   - "Dental Resources" / "Kiến Thức Nha Khoa" -> /equipment
 //   - "Send Your X-ray" / "Gửi Phim X-quang"    -> /contact
 //   - "Restorative Dentistry" / "Điều Trị & Giữ Răng Thật" -> /restorative-dentistry
-// Also intentionally omitted (no URL/route available): Instagram, LinkedIn,
-// and "Terms of Use".
+// Also intentionally omitted (no URL/route available): LinkedIn and "Terms of Use".
 
-const mapOpenUrl = 'https://maps.app.goo.gl/8T1cPtEKUBe6wLFz9';
+const mapOpenUrl = googleReviewsUrl;
 const mapEmbedUrl =
   'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.327228104639!2d106.6896131335823!3d10.786230289363182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752fa7462efccb%3A0xb79ba7e69cbb02b3!2sEmis%20Dental!5e0!3m2!1svi!2sus!4v1752074692262!5m2!1svi!2sus';
 const whatsappUrl = 'https://wa.me/84909967649';
-const facebookUrl = 'https://www.facebook.com/emisinternationaldental/';
-const youtubeUrl = 'https://www.youtube.com/@NhaKhoaEmis';
-const zaloUrl = 'https://zalo.me/2143697215679541994';
 
 // Language-neutral footer navigation. Labels are resolved from the existing
 // translations: `nav` = navbarContent (reused menu titles), `f` = footerContent
@@ -34,6 +30,7 @@ function buildFooterColumns(nav, f) {
       links: [
         { label: nav.about, to: '/about' },
         { label: nav.doctors, to: '/doctors' },
+        { label: nav.chineseDentalService, to: '/dr-long' },
         { label: nav.internationalPatients, to: '/international-patients' },
         { label: fn.visitorProgram, to: '/visitor-program' },
         { label: nav.contact, to: '/contact' },
@@ -81,9 +78,7 @@ function buildFooterColumns(nav, f) {
       heading: fn.followHeading,
       links: [
         { label: fn.googleReviews, href: mapOpenUrl },
-        { label: 'Facebook', href: facebookUrl },
-        { label: 'YouTube', href: youtubeUrl },
-        { label: 'Zalo', href: zaloUrl },
+        ...socialContactItems.filter((item) => item.label !== 'Google Reviews').map((item) => ({ label: item.label, href: item.href })),
       ],
     },
   ];

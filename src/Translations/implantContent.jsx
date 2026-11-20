@@ -1,8 +1,8 @@
 export const implantContent = {
   english: {
-    metaTitle: "Implant Solutions | Emis Dental",
+    metaTitle: "Dental Implant Center in District 3 | Emis Dental",
     metaDescription:
-      "Understand dental implants: from assessment to full restoration. Explore solutions suitable for your tooth loss at Emis Dental.",
+      "Visit Emis Dental at 62B Phạm Ngọc Thạch, District 3, Ho Chi Minh City for implant assessment, treatment planning, and tooth replacement options.",
 
     labels: {
       section1: 'IMPLANT SOLUTIONS',
@@ -17,11 +17,12 @@ export const implantContent = {
     },
 
     section1: {
-      title: "Restore Missing Teeth With Confidence",
+      title: "Dental Implant Center in District 3",
       intro:
-        "Missing teeth can affect how you eat, speak, and feel in everyday life.\n\nImplant treatment is one option for replacing missing teeth. The most suitable approach depends on your oral condition, goals, and long-term needs.",
+        "Emis Dental is at 62B Phạm Ngọc Thạch in District 3, Ho Chi Minh City. Missing teeth can affect how you eat, speak, and feel in everyday life.\n\nImplant treatment is one option for replacing missing teeth. The most suitable approach depends on your oral condition, goals, and long-term needs.",
       primaryCta: "Send Your X-ray",
       secondaryCta: "Discuss Your Situation",
+      chineseCareLink: "Chinese-language dental consultations with Dr. Do Thai Long",
     },
 
     section2: {
@@ -123,9 +124,9 @@ export const implantContent = {
   },
 
   vietnamese: {
-    metaTitle: "Giải Pháp Trồng Răng Implant | Emis Dental",
+    metaTitle: "Trung tâm Implant Quận 3 | Emis Dental",
     metaDescription:
-      "Hiểu về cấy ghép implant: từ đánh giá tình trạng đến phục hồi toàn diện. Khám phá các giải pháp phù hợp cho mất răng của bạn tại Emis Dental.",
+      "Trung tâm Implant Quận 3 tại Emis Dental, 62B Phạm Ngọc Thạch, TP.HCM. Thăm khám, đánh giá và lập kế hoạch trồng răng Implant phù hợp từng trường hợp.",
 
     labels: {
       section1: 'GIẢI PHÁP IMPLANT',
@@ -140,11 +141,12 @@ export const implantContent = {
     },
 
     section1: {
-      title: "Khôi Phục Răng Mất Với Sự Tự Tin",
+      title: "Trung tâm Implant Quận 3",
       intro:
-        "Mất răng có thể ảnh hưởng đến việc ăn nhai, giao tiếp và sự tự tin trong cuộc sống hằng ngày.\n\nTrồng răng Implant là một trong những giải pháp thay thế răng đã mất. Hướng điều trị phù hợp sẽ phụ thuộc vào tình trạng răng miệng, nhu cầu và mục tiêu lâu dài của mỗi người.",
+        "Emis Dental tại 62B Phạm Ngọc Thạch, Quận 3, TP.HCM. Bác sĩ thăm khám và lập kế hoạch Implant dựa trên tình trạng răng miệng, nhu cầu và mục tiêu lâu dài của từng người.",
       primaryCta: "Gửi X-ray Của Bạn",
       secondaryCta: "Trao Đổi Về Trường Hợp Của Bạn",
+      chineseCareLink: "Dịch vụ nha khoa tiếng Trung cùng BS.CKI Đỗ Thái Long",
     },
 
     section2: {
@@ -253,9 +255,9 @@ export const implantContent = {
   },
 
   french: {
-    metaTitle: "Solutions Implantaires | Emis Dental",
+    metaTitle: "Centre d'implantologie au district 3 | Emis Dental",
     metaDescription:
-      "Comprenez le traitement implantaire: de l'évaluation à la restauration complète. Découvrez les solutions adaptées à votre perte dentaire chez Emis Dental.",
+      "Emis Dental vous accueille au 62B Phạm Ngọc Thạch, district 3 de Hô Chi Minh-Ville, pour une évaluation et un plan de traitement implantaire adaptés.",
     labels: {
       section1: 'SOLUTIONS IMPLANTAIRES',
       section2: 'ÉLIGIBILITÉ À L\'IMPLANT',
@@ -268,11 +270,12 @@ export const implantContent = {
       section9: 'COMMENCER',
     },
     section1: {
-      title: "Retrouver vos dents avec confiance",
+      title: "Centre d'implantologie au district 3",
       intro:
-        "La perte dentaire peut impacter l'alimentation, la parole et la confiance au quotidien.\n\nLe traitement implantaire est une option de remplacement. L'approche adaptée dépend de votre état oral, de vos objectifs et de vos besoins à long terme.",
+        "Emis Dental vous accueille au 62B Phạm Ngọc Thạch, dans le district 3 de Hô Chi Minh-Ville. La perte dentaire peut affecter l'alimentation, la parole et la confiance au quotidien.\n\nLe traitement implantaire est une option de remplacement. L'approche adaptée dépend de votre état bucco-dentaire et de vos besoins à long terme.",
       primaryCta: "Envoyer votre radio",
       secondaryCta: "Discuter de votre situation",
+      chineseCareLink: "Soins dentaires en chinois avec le Dr Do Thai Long",
     },
     section2: {
       title: "Le traitement implantaire est-il adapté à votre cas?",
@@ -347,9 +350,9 @@ export const implantContent = {
   },
 
   simplified: {
-    metaTitle: "种植解决方案 | Emis Dental",
+    metaTitle: "胡志明市第三区种植牙中心 | Emis Dental",
     metaDescription:
-      "了解牙科种植：从评估到完整修复。在 Emis Dental 探索适合您缺牙情况的方案。",
+      "Emis Dental 位于胡志明市第三区 Phạm Ngọc Thạch 街 62B 号，提供种植牙评估及根据口腔状况制定的治疗方案。",
     labels: {
       section1: '种植方案',
       section2: '种植适合您吗',
@@ -362,11 +365,12 @@ export const implantContent = {
       section9: '开始咨询',
     },
     section1: {
-      title: "自信修复缺失牙",
+      title: "胡志明市第三区种植牙中心",
       intro:
-        "缺牙会影响日常进食、说话与自信。\n\n种植是缺牙修复方式之一。具体方案需依据口腔条件、个人目标与长期需求决定。",
+        "Emis Dental 位于胡志明市第三区 Phạm Ngọc Thạch 街 62B 号，提供种植牙检查与治疗规划。缺牙会影响日常进食、说话与自信。\n\n种植牙是缺牙修复方式之一，具体方案需依据口腔条件、个人目标与长期需求决定。",
       primaryCta: "发送您的 X 光",
       secondaryCta: "咨询您的情况",
+      chineseCareLink: "杜泰龙医生提供中文牙科咨询",
     },
     section2: {
       title: "种植是否适合您?",
@@ -441,9 +445,9 @@ export const implantContent = {
   },
 
   traditional: {
-    metaTitle: "植牙解決方案 | Emis Dental",
+    metaTitle: "胡志明市第三郡植牙中心 | Emis Dental",
     metaDescription:
-      "了解牙科植牙：從評估到完整重建。在 Emis Dental 探索適合您缺牙狀況的方案。",
+      "Emis Dental 位於胡志明市第三郡 Phạm Ngọc Thạch 街 62B 號，提供植牙評估與依口腔狀況制定的治療計畫。",
     labels: {
       section1: '植牙方案',
       section2: '植牙適合您嗎',
@@ -456,11 +460,12 @@ export const implantContent = {
       section9: '開始諮詢',
     },
     section1: {
-      title: "自信修復缺牙",
+      title: "胡志明市第三郡植牙中心",
       intro:
-        "缺牙可能影響日常咀嚼、說話與自信。\n\n植牙是缺牙重建方式之一。實際方案需依口腔條件、目標與長期需求決定。",
+        "Emis Dental 位於胡志明市第三郡 Phạm Ngọc Thạch 街 62B 號，提供植牙檢查與治療規劃。缺牙可能影響日常咀嚼、說話與自信。\n\n植牙是缺牙重建方式之一，實際方案需依口腔條件、目標與長期需求決定。",
       primaryCta: "傳送您的 X 光",
       secondaryCta: "討論您的情況",
+      chineseCareLink: "杜泰龍醫師提供中文牙科諮詢",
     },
     section2: {
       title: "植牙是否適合您?",
@@ -535,9 +540,9 @@ export const implantContent = {
   },
 
   korean: {
-    metaTitle: "임플란트 솔루션 | Emis Dental",
+    metaTitle: "호찌민시 3군 임플란트 센터 | Emis Dental",
     metaDescription:
-      "임플란트 치료를 이해하세요: 평가부터 최종 수복까지. Emis Dental에서 상태에 맞는 치료 옵션을 확인해보세요.",
+      "Emis Dental은 호찌민시 3군 Phạm Ngọc Thạch 거리 62B에 있습니다. 구강 상태에 따른 임플란트 평가와 치료 계획을 상담하세요.",
     labels: {
       section1: '임플란트 솔루션',
       section2: '적합성 확인',
@@ -550,11 +555,12 @@ export const implantContent = {
       section9: '시작하기',
     },
     section1: {
-      title: "자신 있게 결손치를 회복하세요",
+      title: "호찌민시 3군 임플란트 센터",
       intro:
-        "결손치는 식사, 발음, 일상 자신감에 영향을 줄 수 있습니다.\n\n임플란트는 결손치 대체 옵션 중 하나이며, 가장 적합한 접근은 구강 상태와 목표, 장기적 필요에 따라 달라집니다.",
+        "Emis Dental은 호찌민시 3군 Phạm Ngọc Thạch 거리 62B에서 임플란트 상담과 치료 계획을 제공합니다. 결손치는 식사, 발음, 자신감에 영향을 줄 수 있습니다.\n\n임플란트는 결손치 대체 옵션 중 하나이며, 적합한 방법은 구강 상태와 장기적 필요에 따라 달라집니다.",
       primaryCta: "엑스레이 보내기",
       secondaryCta: "상황 상담하기",
+      chineseCareLink: "도 타이 롱 치과의사의 중국어 상담",
     },
     section2: {
       title: "임플란트 치료가 나에게 맞을까요?",

@@ -38,7 +38,7 @@ const ImplantGuide = () => {
       <section className="min-h-[85vh] flex items-center py-16 lg:py-24">
         <div className="max-w-6xl mx-auto px-8 w-full">
           <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-20 items-center">
-            <div className="order-1 lg:order-2">
+            <div className="order-2 lg:order-2">
               <div className="overflow-hidden rounded-2xl shadow-lg aspect-[16/9] lg:aspect-auto">
                 <img
                   src={xrayImg}
@@ -48,7 +48,7 @@ const ImplantGuide = () => {
               </div>
             </div>
 
-            <div className="order-2 lg:order-1 space-y-6">
+            <div className="order-1 lg:order-1 space-y-6">
               <p
                 className="uppercase tracking-[0.3em] text-[#C5AF73] text-xs font-semibold"
               >
@@ -67,6 +67,9 @@ const ImplantGuide = () => {
                 {content.section1.intro}
               </p>
 
+              <Link to="/dr-long" className="inline-flex min-h-11 items-center text-sm font-semibold text-[#765a1e] underline decoration-[#c5af73] underline-offset-4 hover:text-[#193543] focus-visible:outline-offset-4">
+                {content.section1.chineseCareLink}
+              </Link>
               <div className="flex flex-col sm:flex-row gap-3 pt-2">
                 <Link
                   to="/contact"

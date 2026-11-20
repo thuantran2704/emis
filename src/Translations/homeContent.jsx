@@ -116,15 +116,15 @@ export const homeContent = {
       }
     ],
     homepageV2: {
-      metaTitle: "Advanced Implant & Full-Mouth Rehabilitation Care | Emis Dental",
+      metaTitle: "Emis Dental | Dental Implants in District 3, HCMC",
       metaDescription:
-        "Implant-focused and full-mouth rehabilitation care for overseas Vietnamese and international patients. Start with a preliminary X-ray assessment.",
+        "Emis Dental in District 3, Ho Chi Minh City offers implant and restorative care. Chinese-language consultations are available with Dr. Do Thai Long.",
       hero: {
-        title: "Advanced Implant & Full-Mouth Rehabilitation Care",
+        title: "Dental Implants & Restorative Care in District 3",
         subtitle:
           "Helping overseas Vietnamese and international patients restore comfort, function, and confidence through implant and full-mouth rehabilitation care.",
         description:
-          "Whether you are missing a single tooth, multiple teeth, or facing more complex restorative challenges, our goal is to help you better understand your situation before making treatment decisions.",
+          "Visit Emis Dental at 62B Phạm Ngọc Thạch in District 3, Ho Chi Minh City. Whether you are missing one tooth or need broader restorative care, we help you understand your options before treatment.",
         highlights: [
           "Implant-Focused Care",
           "Full-Mouth Rehabilitation",
@@ -140,7 +140,7 @@ export const homeContent = {
         label: "Dental Implants",
         title: "A Core Implant Specialty, Backed By Experience",
         intro:
-          "At Emis Dental, dental implants are one of our core specialties, alongside a full range of advanced dental treatments. Our team of certified dentists, each with over 10 years of experience, has successfully treated thousands of implant cases, from single implants to full-mouth restorations.",
+          "Emis Dental provides implant treatment alongside restorative and general dental care. We discuss oral health, treatment options, costs, and expected timelines before planning care.",
         principles: [
           { title: "Strict Medical Protocols" },
           { title: "Transparent Plans & Pricing" },
@@ -177,7 +177,7 @@ export const homeContent = {
         eyebrow: "Implant Expertise",
         title: "Specializing In Implant-Based Solutions",
         intro:
-          "Emis Dental focuses on implant-based tooth replacement and full-arch rehabilitation. Our team has treated thousands of implant cases, from single tooth replacement to full-mouth reconstruction.",
+          "Emis Dental offers implant-based tooth replacement and full-arch rehabilitation. The right approach depends on an examination, imaging, oral health, and each patient's goals.",
         slides: [
           {
             tag: "Dental Implants",
@@ -737,15 +737,15 @@ export const homeContent = {
       }
     ],
     homepageV2: {
-      metaTitle: "Chuyên Sâu Implant & Phục Hồi Toàn Hàm | Emis Dental",
+      metaTitle: "Emis Dental | Nha khoa Implant tại Quận 3, TP.HCM",
       metaDescription:
-        "Giải pháp implant và phục hồi toàn hàm dành cho Việt kiều và bệnh nhân quốc tế. Bắt đầu với đánh giá sơ bộ từ X-ray.",
+        "Emis Dental tại 62B Phạm Ngọc Thạch, Quận 3, TP.HCM. Thăm khám Implant, phục hồi răng và tư vấn nha khoa bằng tiếng Trung cùng BS.CKI Đỗ Thái Long.",
       hero: {
-        title: "Chuyên Sâu Implant & Phục Hồi Toàn Hàm",
+        title: "Implant và phục hồi răng tại Quận 3",
         subtitle:
           "Giúp Việt kiều và bệnh nhân quốc tế khôi phục khả năng ăn nhai, sự tự tin và chất lượng cuộc sống thông qua các giải pháp Implant và phục hồi toàn hàm.",
         description:
-          "Dù bạn đang mất một răng, nhiều răng hay gặp những vấn đề phức tạp hơn, chúng tôi muốn giúp bạn hiểu rõ tình trạng của mình trước khi đưa ra quyết định điều trị.",
+          "Emis Dental tại 62B Phạm Ngọc Thạch, khu vực Quận 3, TP.HCM. Nếu bạn mất một răng, nhiều răng hoặc cần phục hồi phức tạp, chúng tôi giúp bạn hiểu rõ tình trạng trước khi quyết định điều trị.",
         highlights: [
           "Chuyên sâu Implant",
           "Phục hồi toàn hàm",
@@ -761,7 +761,7 @@ export const homeContent = {
         label: "Cấy Ghép Implant",
         title: "Chuyên Sâu Implant, Vững Vàng Bằng Kinh Nghiệm",
         intro:
-          "Tại Emis Dental, cấy ghép Implant là một trong những chuyên môn cốt lõi của chúng tôi, bên cạnh đầy đủ các dịch vụ nha khoa chuyên sâu khác. Đội ngũ bác sĩ được chứng nhận, mỗi người có hơn 10 năm kinh nghiệm, đã điều trị thành công hàng nghìn ca Implant, từ cấy ghép đơn lẻ đến phục hồi toàn hàm.",
+          "Emis Dental cung cấp điều trị Implant cùng các dịch vụ phục hồi và nha khoa tổng quát. Bác sĩ trao đổi về sức khỏe răng miệng, phương án, chi phí và thời gian dự kiến trước khi lập kế hoạch điều trị.",
         principles: [
           { title: "Quy Trình Y Khoa Nghiêm Ngặt" },
           { title: "Kế Hoạch & Chi Phí Minh Bạch" },
@@ -798,7 +798,7 @@ export const homeContent = {
         eyebrow: "Chuyên Sâu Implant",
         title: "Chuyên Môn Trọng Tâm: Implant & Phục Hồi Toàn Hàm",
         intro:
-          "Emis Dental tập trung vào Implant nha khoa và phục hồi toàn hàm. Đội ngũ đã điều trị thành công hàng nghìn ca từ cấy ghép đơn lẻ đến phục hồi toàn bộ hai hàm.",
+          "Emis Dental cung cấp giải pháp thay thế răng mất bằng Implant và phục hồi toàn hàm. Hướng điều trị phù hợp cần dựa trên thăm khám, chẩn đoán hình ảnh và mục tiêu của từng bệnh nhân.",
         slides: [
           {
             tag: "Implant Đơn & Nhiều Răng",

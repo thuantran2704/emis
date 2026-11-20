@@ -284,6 +284,10 @@ export default function Navbar() {
               {content.doctors}
             </Link>
 
+            <Link to="/dr-long" className={mobileLinkClass('/dr-long')} onClick={closeAllMenus}>
+              {content.chineseDentalService}
+            </Link>
+
             <div>
               <div className={`flex items-center justify-between rounded-xl px-3 py-2.5 text-sm transition ${
                 isSolutionsActive ? 'bg-[#f5e9c2] text-[#1f2937]' : 'text-[#2a3439] hover:bg-[#f3ead2]'

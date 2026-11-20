@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 import { Helmet } from 'react-helmet';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import { solutionsContent } from '../Translations/solutionsContent';
+import { DOCTORS, getDoctorTranslation } from '../data/doctors';
 import heroImage from '../pics/implant-illustration.jpg';
 import situationsImage from '../pics/elder-person-teeth-uncomfortable.jpeg';
 import pathwaysImage from '../pics/denture.jpeg';
@@ -210,16 +211,19 @@ const Solutions = () => {
             </Text>
 
             <div className="mt-7 space-y-4">
-              {content.team.doctors.map((doctor) => (
-                <article key={doctor.name} className="rounded-xl border border-[#e2e8ef] bg-[#f7fafc] p-4">
+              {DOCTORS.map((doctor) => {
+                const profile = getDoctorTranslation(doctor, language);
+                return <article key={doctor.id} className="rounded-xl border border-[#e2e8ef] bg-[#f7fafc] p-4">
+                  {profile.serviceLabel && <p className="mb-2 text-xs font-bold text-[#8a691f]">{profile.serviceLabel}</p>}
                   <Text variant="cardTitle" weight="normal" size="card115">
-                    {doctor.name}
+                    {profile.name}
                   </Text>
                   <Text variant="description" size="p13" tone="body" className="mt-2">
-                    {doctor.focus}
+                    {profile.focus}
                   </Text>
-                </article>
-              ))}
+                  <Link to={doctor.slug} className="mt-3 inline-flex min-h-11 items-center text-sm font-semibold text-[#765a1e] hover:underline focus-visible:outline-offset-4">{profile.cta}</Link>
+                </article>;
+              })}
             </div>
 
             <Link

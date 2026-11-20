@@ -1,6 +1,7 @@
 ﻿const aboutContent = {
   english: {
     metaTitle: 'About Emis Dental | Implant & Full-Mouth Rehabilitation',
+    metaDescription: 'Meet the Emis Dental team in District 3, Ho Chi Minh City. Dr. Do Thai Long leads professional care and offers Chinese-language consultations.',
     heroTitle: 'Advanced Implant & Full-Mouth Rehabilitation Care',
     heroSubtitle:
       'At Emis Dental, we help patients restore comfort, function, and confidence through carefully planned implant and rehabilitation treatment. Whether you live in Vietnam or overseas, our goal is to help you understand your situation clearly and explore treatment options with greater confidence.',
@@ -38,14 +39,6 @@
 
     teamTitle: 'The Team Behind Your Care',
     teamIntro: 'A team working toward one goal: helping patients regain comfort, function, confidence, and long-term quality of life.',
-    teamMembers: [
-      {
-        name: 'Dr. Tran Minh Tu',
-        role: 'Odonto-Maxillofacial Surgeon',
-        description: 'Implant Surgery • Oral Surgery • Full-Mouth Rehabilitation. Currently practicing at Ho Chi Minh City Odonto-Maxillofacial Hospital and Emis Dental.',
-        cta: 'Contact Us',
-      },
-    ],
 
     internationalTitle: 'Support Before, During, And After Treatment',
     internationalIntro: 'Many patients travel to Vietnam specifically for implant or rehabilitation treatment. To help make the process clearer and more manageable, Emis Dental provides support before, during, and after your visit.',
@@ -89,6 +82,7 @@
 
   vietnamese: {
     metaTitle: 'Về Emis Dental | Implant & Phục Hồi Toàn Hàm',
+    metaDescription: 'Tìm hiểu Emis Dental tại Quận 3 và đội ngũ bác sĩ. BS.CKI Đỗ Thái Long phụ trách chuyên môn, đăng ký hành nghề tại cơ sở và tư vấn bằng tiếng Trung.',
     heroTitle: 'Chuyên Sâu Implant & Phục Hồi Toàn Hàm',
     heroSubtitle:
       'Tại Emis Dental, chúng tôi tập trung vào Implant và phục hồi toàn hàm nhằm giúp bệnh nhân khôi phục khả năng ăn nhai, sự tự tin và chất lượng cuộc sống lâu dài. Dù bạn đang sinh sống tại Việt Nam hay ở nước ngoài, chúng tôi mong muốn giúp bạn hiểu rõ sức khỏe răng miệng của mình và có đủ thông tin trước khi đưa ra lựa chọn.',
@@ -113,9 +107,6 @@
 
     teamTitle: 'Đội Ngũ Đồng Hành Cùng Bạn',
     teamIntro: 'Một đội ngũ hướng tới một mục tiêu chung: giúp bệnh nhân khôi phục khả năng ăn nhai, tự tin và chất lượng cuộc sống lâu dài.',
-    teamMembers: [
-      { name: 'BS. CKI Trần Minh Tú', role: 'Phẫu thuật Răng Hàm Mặt', description: 'Implant • Tiểu phẫu Răng Hàm Mặt • Phục hồi toàn hàm. Hiện đang công tác tại Bệnh viện Răng Hàm Mặt TP.HCM và Emis Dental.', cta: 'Liên Hệ Chúng Tôi' },
-    ],
 
     internationalTitle: 'Hỗ Trợ Trước, Trong Và Sau Điều Trị',
     internationalIntro: 'Nhiều bệnh nhân lựa chọn trở về Việt Nam để làm Implant hoặc phục hồi toàn hàm. Chúng tôi cố gắng giúp quá trình này trở nên thuận tiện và rõ ràng hơn thông qua việc chuẩn bị trước và hỗ trợ xuyên suốt hành trình điều trị.',
@@ -148,6 +139,7 @@
 
   french: {
     metaTitle: 'À Propos d\'Emis Dental | Implantologie & Réhabilitation Complète',
+    metaDescription: 'Découvrez Emis Dental dans le district 3 de Hô Chi Minh-Ville et son équipe, dont le Dr Do Thai Long, responsable des soins et disponible en chinois.',
     heroTitle: 'Soins Avancés en Implantologie et Réhabilitation Complète',
     heroSubtitle:
       'Chez Emis Dental, nous aidons les patients à retrouver confort, fonction et confiance grâce à une prise en charge implantaire et de réhabilitation soigneusement planifiée. Que vous viviez au Vietnam ou à l\'étranger, notre objectif est de vous aider à comprendre clairement votre situation et à explorer vos options avec confiance.',
@@ -185,14 +177,6 @@
 
     teamTitle: 'L\'Équipe Derrière Vos Soins',
     teamIntro: 'Une équipe tournée vers un objectif: aider les patients à retrouver confort, fonction, confiance et qualité de vie à long terme.',
-    teamMembers: [
-      {
-        name: 'Dr Tran Minh Tu',
-        role: 'Chirurgien Maxillo-Facial',
-        description: 'Chirurgie implantaire • Chirurgie orale • Réhabilitation complète. Exerce actuellement à l\'Hôpital Odonto-Maxillo-Facial de Ho Chi Minh-Ville et à Emis Dental.',
-        cta: 'Contactez-Nous',
-      },
-    ],
 
     internationalTitle: 'Accompagnement Avant, Pendant Et Après Le Traitement',
     internationalIntro: 'De nombreux patients voyagent au Vietnam pour des traitements implantaires ou de réhabilitation. Pour rendre le processus plus clair et plus simple, Emis Dental fournit un accompagnement avant, pendant et après votre visite.',
@@ -236,6 +220,7 @@
 
   simplified: {
     metaTitle: '关于 Emis Dental | 种植与全口重建',
+    metaDescription: '了解位于胡志明市第三区的 Emis Dental 及医生团队。杜泰龙医生负责专业医疗工作，并可直接使用中文沟通。',
     heroTitle: '先进种植与全口重建护理',
     heroSubtitle:
       '在 Emis Dental，我们通过周密规划的种植与重建治疗，帮助患者恢复舒适、功能与自信。无论您居住在越南还是海外，我们都希望帮助您清晰了解自身情况，并更有信心地选择治疗方案。',
@@ -273,14 +258,6 @@
 
     teamTitle: '守护您治疗的团队',
     teamIntro: '一个共同目标明确的团队：帮助患者恢复舒适、功能、自信与长期生活质量。',
-    teamMembers: [
-      {
-        name: 'Dr. Tran Minh Tu',
-        role: '口腔颌面外科医生',
-        description: '种植手术 • 口腔外科 • 全口重建。现就职于胡志明市口腔颌面医院及 Emis Dental。',
-        cta: '联系我们',
-      },
-    ],
 
     internationalTitle: '治疗前中后的支持服务',
     internationalIntro: '许多患者专程前往越南进行种植或重建治疗。为让过程更清晰、更易管理，Emis Dental 提供治疗前、中、后的全程支持。',
@@ -324,6 +301,7 @@
 
   traditional: {
     metaTitle: '關於 Emis Dental | 植牙與全口重建',
+    metaDescription: '認識位於胡志明市第三郡的 Emis Dental 與醫師團隊。杜泰龍醫師負責專業醫療工作，並可直接以中文溝通。',
     heroTitle: '進階植牙與全口重建照護',
     heroSubtitle:
       '在 Emis Dental，我們透過審慎規劃的植牙與重建治療，協助患者恢復舒適、功能與自信。無論您居住在越南或海外，我們都希望幫助您清楚理解自身狀況，並更有信心地評估治療選項。',
@@ -361,14 +339,6 @@
 
     teamTitle: '守護您治療的團隊',
     teamIntro: '一個共同目標明確的團隊：協助患者恢復舒適、功能、自信與長期生活品質。',
-    teamMembers: [
-      {
-        name: 'Dr. Tran Minh Tu',
-        role: '口腔顎面外科醫師',
-        description: '植牙手術 • 口腔外科 • 全口重建。現任職於胡志明市口腔顎面醫院與 Emis Dental。',
-        cta: '聯絡我們',
-      },
-    ],
 
     internationalTitle: '治療前中後支援',
     internationalIntro: '許多患者會前往越南進行植牙或重建治療。為使流程更清楚、可控，Emis Dental 提供治療前、中、後的完整支援。',
@@ -412,6 +382,7 @@
 
   korean: {
     metaTitle: 'Emis Dental 소개 | 임플란트 및 전악 재건',
+    metaDescription: '호찌민시 3군 Emis Dental의 의료진을 소개합니다. 도 타이 롱 치과의사는 진료 책임자로 중국어 상담이 가능합니다.',
     heroTitle: '고도 임플란트 및 전악 재건 치료',
     heroSubtitle:
       'Emis Dental은 체계적으로 계획된 임플란트 및 재건 치료를 통해 환자의 편안함, 기능, 자신감을 회복하도록 돕습니다. 베트남 거주자와 해외 환자 모두가 자신의 상태를 명확히 이해하고 더 자신 있게 치료 옵션을 선택할 수 있도록 지원합니다.',
@@ -449,14 +420,6 @@
 
     teamTitle: '당신의 치료를 책임지는 팀',
     teamIntro: '하나의 목표를 향한 팀: 환자의 편안함, 기능, 자신감, 장기적 삶의 질 회복.',
-    teamMembers: [
-      {
-        name: 'Dr. Tran Minh Tu',
-        role: '구강악안면외과 전문의',
-        description: '임플란트 수술 • 구강외과 • 전악 재건. 현재 호치민시 구강악안면병원 및 Emis Dental에서 진료 중입니다.',
-        cta: '문의하기',
-      },
-    ],
 
     internationalTitle: '치료 전·중·후 지원',
     internationalIntro: '많은 환자들이 임플란트 또는 재건 치료를 위해 베트남을 방문합니다. 과정을 더 명확하고 수월하게 만들기 위해 Emis Dental은 방문 전, 중, 후 전반의 지원을 제공합니다.',
