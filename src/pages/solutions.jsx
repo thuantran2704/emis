@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import { solutionsContent } from '../Translations/solutionsContent';
 import DoctorShowcase from '../components/DoctorShowcase';
-import heroImage from '../pics/implant-illustration.jpg';
+import heroImage from '../pics/implant-surgery-room.jpg';
 import situationsImage from '../pics/elder-person-teeth-uncomfortable.jpeg';
 import pathwaysImage from '../pics/denture.jpeg';
 import Text from '../components/Text';
@@ -64,8 +64,9 @@ const Solutions = () => {
             <div className="rounded-2xl overflow-hidden shadow-md border border-[#dfe7ef] bg-[#f7fafc]">
               <img
                 src={heroImage}
-                alt={imageAlt('Doctor reviewing dental X-ray with patient while discussing treatment options', language)}
-                className="w-full object-contain lg:h-[520px] lg:object-cover lg:object-center"
+                alt={imageAlt('Clinician and nurse caring for a patient at Emis Dental', language)}
+                className="h-[300px] w-full object-cover object-[57%_48%] sm:h-[400px] lg:h-[520px]"
+                fetchPriority="high"
               />
             </div>
           </div>
