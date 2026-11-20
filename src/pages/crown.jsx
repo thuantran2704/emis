@@ -129,23 +129,28 @@ export default function CrownLanding() {
         </div>
       </section>
 
-      <section className="py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-8">
-          <h2 className={titleClass + ' mb-8 text-center'}>
+      <section id="advantages" className="bg-white py-20 md:py-28">
+        <div className="mx-auto grid max-w-6xl gap-9 px-6 sm:px-8 lg:grid-cols-[minmax(0,0.72fr)_minmax(0,1.28fr)] lg:gap-20">
+          <h2 className={`${titleClass} max-w-[16ch] leading-tight`}>
             {copy.advantagesTitle}
           </h2>
-          <div className="grid md:grid-cols-2 gap-5">
-            {copy.advantages.map((item) => (
-              <article key={item.title} className="rounded-2xl border border-[#dbe4ec] bg-[#f7fafc] p-6">
-                <h3 className="text-[1.1rem] text-[#2a3439] mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-[14px] text-gray-600 leading-relaxed">
-                  {item.desc}
-                </p>
-              </article>
+          <ul className="border-t border-[#cbd6dc]">
+            {copy.advantages.map((item, index) => (
+              <li key={item.title} className="grid grid-cols-[2.75rem_minmax(0,1fr)] gap-3 border-b border-[#cbd6dc] py-6 md:gap-5 md:py-7">
+                <span aria-hidden="true" className="pt-1 text-xs font-semibold tracking-[0.14em] text-[#94701e]">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <div>
+                  <h3 className="text-lg font-semibold leading-snug text-[#193543] md:text-xl">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 max-w-[52ch] text-[15px] leading-relaxed text-[#435b66] md:text-base">
+                    {item.desc}
+                  </p>
+                </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </section>
 
