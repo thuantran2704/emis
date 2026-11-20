@@ -133,12 +133,8 @@
     },
 
     team: {
-      eyebrow: 'The Team Behind Your Care',
-      title: 'Different Expertise. One Shared Goal.',
-      intro:
-        'Depending on your case, treatment may involve diagnosis, planning, surgery, restoration, and follow-up care. The Emis Dental team works together to support each stage clearly and carefully.',
-      cta: 'Meet Our Doctors',
-      ctaPath: '/doctors',
+      eyebrow: 'Doctors',
+      title: 'Meet the Doctors',
     },
 
     overseas: {
@@ -311,12 +307,8 @@
     },
 
     team: {
-      eyebrow: 'Đội Ngũ Đồng Hành Cùng Bạn',
-      title: 'Chăm Sóc Được Lập Kế Hoạch Cẩn Thận',
-      intro:
-        'Với Implant, phục hồi răng cố định hoặc phục hồi toàn hàm, quá trình điều trị thường cần phối hợp nhiều bước. Đội ngũ Emis Dental cùng hỗ trợ chẩn đoán, lập kế hoạch, điều trị và theo dõi theo từng trường hợp.',
-      cta: 'Tìm Hiểu Đội Ngũ Bác Sĩ',
-      ctaPath: '/doctors',
+      eyebrow: 'Bác Sĩ',
+      title: 'Gặp Gỡ Bác Sĩ',
     },
 
     overseas: {
@@ -489,12 +481,8 @@
     },
 
     team: {
-      eyebrow: 'L Equipe Derriere Votre Prise En Charge',
-      title: 'Des Expertises Differentes, Un Objectif Commun',
-      intro:
-        'Selon votre cas, le traitement peut inclure diagnostic, planification, chirurgie, restauration et suivi. L equipe Emis Dental coordonne chaque etape de facon claire et rigoureuse.',
-      cta: 'Rencontrer Nos Medecins',
-      ctaPath: '/doctors',
+      eyebrow: 'Praticiens',
+      title: 'Rencontrez les praticiens',
     },
 
     overseas: {
@@ -661,12 +649,8 @@
     },
 
     team: {
-      eyebrow: '진료를 함께하는 팀',
-      title: '다른 전문성, 하나의 목표',
-      intro:
-        '환자 상태에 따라 진단, 계획, 수술, 수복, 추적 관리가 함께 진행될 수 있습니다. Emis Dental 팀은 각 단계를 명확하고 신중하게 협업합니다.',
-      cta: '의료진 보기',
-      ctaPath: '/doctors',
+      eyebrow: '의료진',
+      title: '의료진 소개',
     },
 
     overseas: {
@@ -833,12 +817,8 @@
     },
 
     team: {
-      eyebrow: '您的治疗团队',
-      title: '不同专长, 同一目标',
-      intro:
-        '根据个案需要，治疗可能涉及诊断、计划、手术、修复与复诊跟进。Emis Dental 团队会在每个阶段协同配合。',
-      cta: '了解医生团队',
-      ctaPath: '/doctors',
+      eyebrow: '医生团队',
+      title: '认识医生',
     },
 
     overseas: {
@@ -1005,12 +985,8 @@
     },
 
     team: {
-      eyebrow: '您的照護團隊',
-      title: '不同專長, 同一目標',
-      intro:
-        '依個案需求，治療可能包含診斷、規劃、手術、修復與追蹤照護。Emis Dental 團隊會在每個階段協作配合。',
-      cta: '了解醫師團隊',
-      ctaPath: '/doctors',
+      eyebrow: '醫師團隊',
+      title: '認識醫師',
     },
 
     overseas: {

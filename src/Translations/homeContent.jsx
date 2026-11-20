@@ -377,18 +377,9 @@ export const homeContent = {
         cta: "View More FAQs",
       },
       finalCta: {
-        title: "Start With Understanding Your Situation",
+        title: "Tell us what is happening with your teeth",
         description:
-          "You do not need to make treatment decisions immediately. The first step is understanding your situation and discussing what options may be appropriate for your goals.",
-        primaryCta: "Send Your X-ray",
-        secondaryCta: "Talk With The Emis Dental Team",
-        supportTitle: "You may also share",
-        supportItems: [
-          "Country of Residence",
-          "Available Treatment Timeframe",
-          "Preferred Communication Method",
-          "Preferred Language",
-        ],
+          "Describe the problem and when you can visit. If you prefer to speak Chinese, ask for Dr. Long in your message.",
         importantNote:
           "A preliminary assessment helps us better understand your situation. A final treatment recommendation requires an in-person examination and diagnostic imaging.",
       },
@@ -998,18 +989,9 @@ export const homeContent = {
         cta: "Xem Thêm Câu Hỏi Thường Gặp",
       },
       finalCta: {
-        title: "Bắt Đầu Bằng Việc Hiểu Rõ Tình Trạng Của Mình",
+        title: "Cho chúng tôi biết tình trạng răng của bạn",
         description:
-          "Bạn không cần phải quyết định ngay hôm nay. Bước đầu tiên là hiểu rõ tình trạng hiện tại và trao đổi về những hướng điều trị phù hợp.",
-        primaryCta: "Gửi X-ray của bạn",
-        secondaryCta: "Kết nối với đội ngũ Emis Dental",
-        supportTitle: "Bạn có thể chia sẻ thêm",
-        supportItems: [
-          "Nơi đang sinh sống",
-          "Khung thời gian có thể điều trị",
-          "Kênh liên lạc ưu tiên",
-          "Ngôn ngữ mong muốn",
-        ],
+          "Mô tả vấn đề bạn đang gặp và thời gian có thể đến khám. Nếu muốn trao đổi bằng tiếng Trung, hãy nhắn để gặp BS Long.",
         importantNote:
           "Đánh giá sơ bộ giúp chúng tôi hiểu rõ hơn về tình trạng của bạn. Kế hoạch điều trị cuối cùng cần được xác nhận qua thăm khám trực tiếp và chẩn đoán hình ảnh đầy đủ.",
       },

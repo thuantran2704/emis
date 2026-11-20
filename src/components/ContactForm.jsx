@@ -148,7 +148,7 @@ export default function ContactForm({ embedded = false }) {
 
   return (
     <Container className={embedded ? 'w-full' : 'py-16 bg-[#fdfcf8]'}>
-      <div className={embedded ? 'w-full bg-white rounded-2xl shadow-lg p-5 sm:p-6 border border-[#eee]' : 'max-w-md mx-auto bg-white rounded-2xl shadow-lg p-6 border border-[#eee]'}>
+      <div className={embedded ? 'w-full rounded-[1.75rem] bg-white p-6 shadow-[0_24px_60px_-32px_rgba(0,0,0,0.5)] sm:p-8' : 'max-w-md mx-auto bg-white rounded-2xl shadow-lg p-6 border border-[#eee]'}>
         {alert.show && (
           <Alert
             message={alert.message}
@@ -164,32 +164,37 @@ export default function ContactForm({ embedded = false }) {
         )}
 
         <h3
-          className="text-2xl font-bold text-[#4b4b8f] mb-4 text-center"
+          className="mb-5 text-xl font-semibold text-[#193543] sm:text-2xl"
         >
           {content.bookAppointment}
         </h3>
 
         <form onSubmit={handleSubmit} className="space-y-3">
           {["name", "email", "phone"].map((field) => (
-            <input
-              key={field}
-              type={field === "email" ? "email" : "text"}
-              name={field}
-              placeholder={content.formLabels[field]}
-              value={formData[field]}
-              onChange={handleChange}
-              required
-              className="w-full p-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-[#d4af37] focus:outline-none"
-            />
+            <div key={field}>
+              <label htmlFor={`contact-${field}`} className="sr-only">{content.formLabels[field]}</label>
+              <input
+                id={`contact-${field}`}
+                type={field === "email" ? "email" : "text"}
+                name={field}
+                placeholder={content.formLabels[field]}
+                value={formData[field]}
+                onChange={handleChange}
+                required
+                className="w-full rounded-xl border border-[#d4dfe2] px-4 py-3 text-sm text-[#193543] focus:border-[#a98639] focus:outline-none focus:ring-2 focus:ring-[#d4af37]/30"
+              />
+            </div>
           ))}
 
+          <label htmlFor="contact-message" className="sr-only">{content.formLabels.message}</label>
           <textarea
+            id="contact-message"
             name="message"
             placeholder={content.formLabels.message}
             value={formData.message}
             onChange={handleChange}
             rows="3"
-            className="w-full p-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-[#d4af37] focus:outline-none"
+            className="w-full rounded-xl border border-[#d4dfe2] px-4 py-3 text-sm text-[#193543] focus:border-[#a98639] focus:outline-none focus:ring-2 focus:ring-[#d4af37]/30"
           />
 
           <div className="flex justify-center my-2">
@@ -208,7 +213,7 @@ export default function ContactForm({ embedded = false }) {
           <button
             type="submit"
             disabled={isSubmitting || !apiBaseUrl || !recaptchaSiteKey}
-            className="w-full bg-[#d4af37] hover:bg-[#c19d30] text-white font-medium py-2 rounded-full transition-all shadow-sm hover:shadow-md text-sm"
+            className="min-h-11 w-full rounded-full bg-[#d4af37] py-2 text-sm font-semibold text-[#193543] shadow-sm transition-colors hover:bg-[#e5c456] focus-visible:outline-offset-4 disabled:cursor-not-allowed disabled:opacity-60"
           >
             {isSubmitting ? content.formLabels.submit + "..." : content.formLabels.submit}
           </button>

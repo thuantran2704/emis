@@ -93,28 +93,21 @@ const FullMouth = () => {
       </section>
 
       {/* Section 3 — What Is Full-Mouth Rehabilitation? */}
-      <section className="py-20 lg:py-28">
+      <section id="approach" className="py-20 lg:py-28">
         <div className="max-w-6xl mx-auto px-8">
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-20 items-start">
             <div className="space-y-5">
               <p className={sectionLabelClass}>{whatIs.eyebrow}</p>
               <h2 className={sectionTitleClass}>{whatIs.title}</h2>
               <p className={bodyClass}>{whatIs.intro}</p>
             </div>
-            <div className="rounded-2xl bg-white border border-[#dfe7ef] shadow-sm p-8">
-              <div className="flex flex-wrap justify-center gap-3">
+            <div className="border-t-2 border-[#d4af37] pt-6 lg:mt-2">
+              <h3 className="text-xl font-semibold text-[#193543] md:text-2xl">{whatIs.conceptResult}</h3>
+              <ul className="mt-4 grid grid-cols-2 gap-x-6 text-[#435b66]">
                 {whatIs.conceptItems.map((item) => (
-                  <span key={item} className="rounded-full bg-[#f7fafc] border border-[#dde5ec] px-5 py-2 text-sm text-[#2a3439]">
-                    {item}
-                  </span>
+                  <li key={item} className="border-b border-[#d7e0e5] py-4 text-base">{item}</li>
                 ))}
-              </div>
-              <div className="my-5 flex justify-center text-[#C5AF73]">
-                <ArrowRight size={22} className="rotate-90" aria-hidden="true" />
-              </div>
-              <div className="text-center rounded-xl bg-[#d4af37] text-white px-6 py-4 text-base font-semibold">
-                {whatIs.conceptResult}
-              </div>
+              </ul>
             </div>
           </div>
         </div>

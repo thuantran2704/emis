@@ -413,35 +413,16 @@ export default function Home() {
         </div>
       </Section>
 
-      <section className="relative overflow-hidden bg-[linear-gradient(135deg,#152b3a,#2a3439)] py-16 text-white md:py-20">
-        <div className="relative mx-auto max-w-6xl px-6">
-          <Text variant="title" tone="white">{page.finalCta.title}</Text>
-          <Text variant="description" size="base" tone="invert" className="mt-4 max-w-3xl">{page.finalCta.description}</Text>
-
-          <div className="mt-6 flex flex-wrap gap-4">
-            <CtaButton to="/contact" variant="primary">
-              {page.finalCta.primaryCta}
-            </CtaButton>
-            <CtaButton to="/contact" variant="ghostWhite">
-              {page.finalCta.secondaryCta}
-            </CtaButton>
+      <section id="home-contact" className="bg-[#193543] py-20 text-white md:py-28">
+        <div className="mx-auto grid max-w-6xl items-start gap-12 px-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-16">
+          <div className="lg:pt-6">
+            <Text variant="title" tone="white" className="max-w-[15ch]">{page.finalCta.title}</Text>
+            <Text variant="description" size="base" tone="invert" className="!mx-0 mt-6 max-w-[48ch]">{page.finalCta.description}</Text>
+            <p className="mt-9 max-w-[48ch] border-l-2 border-[#d7bc7b] pl-5 text-sm leading-relaxed text-[#dce8e8]">
+              {page.finalCta.importantNote}
+            </p>
           </div>
-
-          <div className="mt-8 space-y-4 rounded-3xl border border-white/20 bg-[#1c2832]/70 p-6 backdrop-blur-sm md:p-7">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.15em] text-[#d1e2f0]">{page.finalCta.supportTitle}</p>
-              <ul className="mt-4 grid gap-2 text-xs text-[#edf3f8] sm:grid-cols-2">
-                {page.finalCta.supportItems.map((item) => (
-                  <li key={item} className="rounded-xl border border-white/15 bg-white/5 px-3 py-2">{item}</li>
-                ))}
-              </ul>
-            </div>
-            <Text variant="description" tone="dim" className="rounded-xl border border-white/15 bg-white/5 px-4 py-3">{page.finalCta.importantNote}</Text>
-          </div>
-
-          <div className="mt-10 rounded-3xl border border-white/25 bg-[#f8fbff] p-4 text-[#1f2d3d] shadow-[0_12px_30px_rgba(11,24,38,0.25)] md:p-6">
-            <ContactForm embedded />
-          </div>
+          <ContactForm embedded />
         </div>
       </section>
     </main>

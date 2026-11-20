@@ -37,8 +37,7 @@
     technologyBullets: ['3D CBCT Imaging', 'Digital Treatment Planning', 'Dedicated Implant Room', 'Sterilization Protocols'],
     technologyImageAlt: '3D CBCT imaging and clinical implant environment',
 
-    teamTitle: 'The Team Behind Your Care',
-    teamIntro: 'A team working toward one goal: helping patients regain comfort, function, confidence, and long-term quality of life.',
+    teamTitle: 'Meet the Doctors',
 
     internationalTitle: 'Support Before, During, And After Treatment',
     internationalIntro: 'Many patients travel to Vietnam specifically for implant or rehabilitation treatment. To help make the process clearer and more manageable, Emis Dental provides support before, during, and after your visit.',
@@ -105,8 +104,7 @@
     technologyIntro: 'Công nghệ giúp quá trình đánh giá, lập kế hoạch và điều trị trở nên chính xác và dễ dự đoán hơn. Sự an toàn và chất lượng điều trị luôn được đặt lên hàng đầu trong mọi giai đoạn chăm sóc.',
     technologyBullets: ['Chẩn Đoán Hình Ảnh CBCT 3D', 'Lập Kế Hoạch Điều Trị Bằng Công Nghệ Số', 'Phòng Implant Riêng Biệt', 'Quy Trình Vô Trùng & Kiểm Soát Nhiễm Khuẩn'],
 
-    teamTitle: 'Đội Ngũ Đồng Hành Cùng Bạn',
-    teamIntro: 'Một đội ngũ hướng tới một mục tiêu chung: giúp bệnh nhân khôi phục khả năng ăn nhai, tự tin và chất lượng cuộc sống lâu dài.',
+    teamTitle: 'Gặp Gỡ Bác Sĩ',
 
     internationalTitle: 'Hỗ Trợ Trước, Trong Và Sau Điều Trị',
     internationalIntro: 'Nhiều bệnh nhân lựa chọn trở về Việt Nam để làm Implant hoặc phục hồi toàn hàm. Chúng tôi cố gắng giúp quá trình này trở nên thuận tiện và rõ ràng hơn thông qua việc chuẩn bị trước và hỗ trợ xuyên suốt hành trình điều trị.',
@@ -175,8 +173,7 @@
     technologyBullets: ['Imagerie 3D CBCT', 'Planification Numérique Du Traitement', 'Salle D\'Implantologie Dédiée', 'Protocoles De Stérilisation'],
     technologyImageAlt: 'Imagerie CBCT 3D et environnement clinique implantaire',
 
-    teamTitle: 'L\'Équipe Derrière Vos Soins',
-    teamIntro: 'Une équipe tournée vers un objectif: aider les patients à retrouver confort, fonction, confiance et qualité de vie à long terme.',
+    teamTitle: 'Rencontrez les praticiens',
 
     internationalTitle: 'Accompagnement Avant, Pendant Et Après Le Traitement',
     internationalIntro: 'De nombreux patients voyagent au Vietnam pour des traitements implantaires ou de réhabilitation. Pour rendre le processus plus clair et plus simple, Emis Dental fournit un accompagnement avant, pendant et après votre visite.',
@@ -256,8 +253,7 @@
     technologyBullets: ['3D CBCT 影像', '数字化治疗规划', '独立种植手术室', '灭菌流程'],
     technologyImageAlt: '3D CBCT 影像与种植临床环境',
 
-    teamTitle: '守护您治疗的团队',
-    teamIntro: '一个共同目标明确的团队：帮助患者恢复舒适、功能、自信与长期生活质量。',
+    teamTitle: '认识医生',
 
     internationalTitle: '治疗前中后的支持服务',
     internationalIntro: '许多患者专程前往越南进行种植或重建治疗。为让过程更清晰、更易管理，Emis Dental 提供治疗前、中、后的全程支持。',
@@ -337,8 +333,7 @@
     technologyBullets: ['3D CBCT 影像', '數位化治療規劃', '獨立植牙診療室', '滅菌流程'],
     technologyImageAlt: '3D CBCT 影像與植牙臨床環境',
 
-    teamTitle: '守護您治療的團隊',
-    teamIntro: '一個共同目標明確的團隊：協助患者恢復舒適、功能、自信與長期生活品質。',
+    teamTitle: '認識醫師',
 
     internationalTitle: '治療前中後支援',
     internationalIntro: '許多患者會前往越南進行植牙或重建治療。為使流程更清楚、可控，Emis Dental 提供治療前、中、後的完整支援。',
@@ -418,8 +413,7 @@
     technologyBullets: ['3D CBCT 영상', '디지털 치료 계획', '전용 임플란트 수술실', '멸균 프로토콜'],
     technologyImageAlt: '3D CBCT 영상 및 임플란트 임상 환경',
 
-    teamTitle: '당신의 치료를 책임지는 팀',
-    teamIntro: '하나의 목표를 향한 팀: 환자의 편안함, 기능, 자신감, 장기적 삶의 질 회복.',
+    teamTitle: '의료진 소개',
 
     internationalTitle: '치료 전·중·후 지원',
     internationalIntro: '많은 환자들이 임플란트 또는 재건 치료를 위해 베트남을 방문합니다. 과정을 더 명확하고 수월하게 만들기 위해 Emis Dental은 방문 전, 중, 후 전반의 지원을 제공합니다.',

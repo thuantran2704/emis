@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import { Helmet } from 'react-helmet';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import { solutionsContent } from '../Translations/solutionsContent';
-import { DOCTORS, getDoctorTranslation } from '../data/doctors';
+import DoctorShowcase from '../components/DoctorShowcase';
 import heroImage from '../pics/implant-illustration.jpg';
 import situationsImage from '../pics/elder-person-teeth-uncomfortable.jpeg';
 import pathwaysImage from '../pics/denture.jpeg';
@@ -197,44 +197,12 @@ const Solutions = () => {
           </div>
       </Section>
 
-      <Section py="lg" tone="cream">
-        <div className="max-w-3xl mx-auto px-6">
-          <div className="rounded-2xl border border-[#e9e0c8] bg-white shadow-sm p-7 lg:p-10">
-            <Text variant="eyebrow">
-              {content.team.eyebrow}
-            </Text>
-            <Text variant="title" weight="normal" size="sectionTitle" className="mt-3">
-              {content.team.title}
-            </Text>
-            <Text variant="description" size="p17" tone="body" className="mt-5">
-              {content.team.intro}
-            </Text>
-
-            <div className="mt-7 space-y-4">
-              {DOCTORS.map((doctor) => {
-                const profile = getDoctorTranslation(doctor, language);
-                return <article key={doctor.id} className="rounded-xl border border-[#e2e8ef] bg-[#f7fafc] p-4">
-                  {profile.serviceLabel && <p className="mb-2 text-xs font-bold text-[#8a691f]">{profile.serviceLabel}</p>}
-                  <Text variant="cardTitle" weight="normal" size="card115">
-                    {profile.name}
-                  </Text>
-                  <Text variant="description" size="p13" tone="body" className="mt-2">
-                    {profile.focus}
-                  </Text>
-                  <Link to={doctor.slug} className="mt-3 inline-flex min-h-11 items-center text-sm font-semibold text-[#765a1e] hover:underline focus-visible:outline-offset-4">{profile.cta}</Link>
-                </article>;
-              })}
-            </div>
-
-            <Link
-              to={content.team.ctaPath}
-              className="mt-7 inline-flex items-center gap-2 text-sm text-[#2a3439] hover:text-[#c19d30] font-semibold"
-            >
-              {content.team.cta}
-              <ArrowRight size={15} className="text-[#d4af37]" />
-            </Link>
-          </div>
+      <Section id="team" py="lg" tone="cream" width="6xl">
+        <div className="mb-9 max-w-2xl md:mb-12">
+          <Text variant="eyebrow">{content.team.eyebrow}</Text>
+          <Text variant="title" weight="normal" size="sectionTitle" className="mt-3">{content.team.title}</Text>
         </div>
+        <DoctorShowcase language={language} />
       </Section>
 
       <Section py="lg" tone="white" width="6xl">

@@ -2,14 +2,13 @@ import { imageAlt } from '../Translations/imageAlt';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import aboutContent from '../Translations/aboutContent';
-import { DOCTORS, getDoctorTranslation } from '../data/doctors';
+import DoctorShowcase from '../components/DoctorShowcase';
 import equipmentContent from '../Translations/equipmentContent';
 import ServicesSlider from '../components/ServicesSlider';
 import Text from '../components/Text';
 import consultationImage from '../pics/doctor-explaining-procedure-to-patient.jpg';
 import planningImage from '../pics/dr-tu-working.jpg';
 import technologyImage from '../pics/measuring-result-cbct-x-ray-patient-smiling.jpg';
-import teamImage from '../pics/consulting-team.jpg';
 import internationalImage from '../pics/Phong-cho-waiting-room-Emis.jpg';
 import safetyImage from '../pics/sterile-room-phong-khu-trung.jpg';
 import vatechImg from '../pics/vatech.jpg';
@@ -167,49 +166,13 @@ const About = () => {
       </section>
 
       {/* TEAM */}
-      <section className="py-16 md:py-20 bg-[#f1f5f9]">
-        <div className="max-w-4xl mx-auto px-6 md:px-8 space-y-12">
-          <div>
+      <section id="team" className="py-16 md:py-20 bg-[#f1f5f9]">
+        <div className="max-w-6xl mx-auto px-6 md:px-8">
+          <div className="mb-9 max-w-2xl md:mb-12">
             <SectionLabel>{content.labels?.team || 'Our Team'}</SectionLabel>
             <SectionTitle>{content.teamTitle}</SectionTitle>
-            <Text variant="description" size="p15" className="mb-12">
-              {content.teamIntro}
-            </Text>
-            <div className="space-y-6">
-              {DOCTORS.map((doctor) => {
-                const profile = getDoctorTranslation(doctor, language);
-                return <article key={doctor.id} className="bg-white rounded-2xl p-8 shadow-sm">
-                  {profile.serviceLabel && <p className="mb-3 text-xs font-bold uppercase tracking-[0.15em] text-[#8a691f]">{profile.serviceLabel}</p>}
-                  <Text variant="cardTitle" weight="normal" size="cardLg" className="mb-1.5">
-                    {profile.name}
-                  </Text>
-                  <p
-                    className="text-xs text-[#C5AF73] font-semibold mb-3 uppercase tracking-widest"
-                  >
-                    {profile.role}
-                  </p>
-                  <Text variant="description" size="p13">
-                    {profile.descriptionOne || profile.summary}
-                  </Text>
-                  {profile.registration && <p className="mt-3 text-sm font-semibold text-[#765a1e]">{profile.registration}</p>}
-                  <div className="mt-5">
-                    <Link to={doctor.slug} className="inline-flex min-h-11 items-center rounded-full border border-[#d4af37] px-5 py-2.5 text-sm font-semibold text-[#2a3439] transition hover:bg-[#f7f2e7] focus-visible:outline-offset-4">
-                      {profile.cta}
-                    </Link>
-                  </div>
-                </article>;
-              })}
-            </div>
           </div>
-          <div className="rounded-2xl overflow-hidden shadow-sm aspect-[3/2]">
-            <img
-              src={teamImage}
-              alt={imageAlt('Emis Dental patient support team at the clinic reception', language)}
-              loading="lazy"
-              decoding="async"
-              className="w-full h-full object-cover object-center"
-            />
-          </div>
+          <DoctorShowcase language={language} />
         </div>
       </section>
 
