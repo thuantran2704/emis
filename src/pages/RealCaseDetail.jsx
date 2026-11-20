@@ -49,18 +49,9 @@ export default function RealCaseDetail() {
         </figure>
       )}
 
-      <div className={`mx-auto px-5 sm:px-8 ${caseId === 'sergey-zhanna' ? 'mt-10 max-w-2xl sm:mt-12' : '-mt-16 max-w-4xl sm:-mt-24'}`}>
-        <div className="overflow-hidden rounded-[1.5rem] border-[6px] border-white bg-white shadow-[0_24px_70px_rgba(21,32,40,0.18)] sm:rounded-[2rem] sm:border-[10px]">
-          {caseId === 'sergey-zhanna' ? (
-            <div className="grid gap-3 bg-white p-3">
-              {[[zhannaBefore, content.beforeLabel], [zhannaAfter, content.afterLabel]].map(([src, label]) => (
-                <figure key={label} className="relative overflow-hidden rounded-xl bg-[#eee8dd]">
-                  <img src={src} alt={`${label}: ${item.galleryAlt}`} className="aspect-[15/6] w-full object-cover" decoding="async" />
-                  <figcaption className="absolute bottom-3 left-3 rounded-full bg-[#20313d]/90 px-3 py-1 text-xs font-bold uppercase tracking-[0.12em] text-white">{label}</figcaption>
-                </figure>
-              ))}
-            </div>
-          ) : (
+      {caseId === 'klaus' && (
+        <div className="mx-auto -mt-16 max-w-4xl px-5 sm:-mt-24 sm:px-8">
+          <div className="overflow-hidden rounded-[1.5rem] border-[6px] border-white bg-white shadow-[0_24px_70px_rgba(21,32,40,0.18)] sm:rounded-[2rem] sm:border-[10px]">
             <div className="grid grid-cols-2 gap-3 bg-white p-3">
               {realCaseDetailImages[caseId].map((src, index) => {
                 const label = index === 0 ? content.beforeLabel : content.afterLabel;
@@ -72,10 +63,10 @@ export default function RealCaseDetail() {
                 );
               })}
             </div>
-          )}
+          </div>
+          <p className="mt-3 text-xs leading-5 text-[#697278]">{content.imageCaption}</p>
         </div>
-        <p className="mt-3 text-xs leading-5 text-[#697278]">{content.imageCaption}</p>
-      </div>
+      )}
 
       <section className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20" aria-label={item.name}>
         <div className="grid gap-4 sm:grid-cols-3">
@@ -86,6 +77,20 @@ export default function RealCaseDetail() {
             </div>
           ))}
         </div>
+
+        {caseId === 'sergey-zhanna' && (
+          <div className="mx-auto mt-14 max-w-5xl">
+            <div className="grid gap-6 rounded-[1.5rem] border border-[#e8dcc2] bg-white p-4 shadow-[0_14px_40px_rgba(21,32,40,0.08)] sm:grid-cols-2 sm:gap-5 sm:p-6">
+              {[[zhannaBefore, content.beforeLabel], [zhannaAfter, content.afterLabel]].map(([src, label]) => (
+                <figure key={label} className="min-w-0">
+                  <figcaption className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-[#8c6d27]">{label}</figcaption>
+                  <img src={src} alt={`${label}: ${item.galleryAlt}`} className="aspect-[750/290] w-full rounded-lg object-cover" decoding="async" loading="lazy" />
+                </figure>
+              ))}
+            </div>
+            <p className="mt-3 text-xs leading-5 text-[#697278]">{content.imageCaption}</p>
+          </div>
+        )}
 
         <div className="mx-auto mt-16 max-w-3xl">
           {item.sections.map((section, index) => (

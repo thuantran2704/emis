@@ -3,15 +3,15 @@ import { useSelector } from 'react-redux';
 import patientJourneyContent from '../Translations/patientJourneyContent';
 import CtaButton from '../components/CtaButton';
 import timelineChat from '../pics/patient-case1-timeline-chat.png';
+import medicalHistoryChat from '../pics/patient-case1-blood-test.png';
 import airportPickup from '../pics/patient-case1-airport-pickup.png';
 import prescriptionChat from '../pics/patient-case1-prescription-chat.png';
 import beforeCT from '../pics/patient-case1-before-CT.png';
 import afterCT from '../pics/patient-case1-after-CT.png';
 import thankYouChat from '../pics/patient-case1-thank-you-followup-chat.png';
 
-// Screenshots mapped by journey step index. Index 1 (medical readiness) stays a
-// text card — the blood-test screenshot is not shown publicly for privacy.
-const stepImages = [timelineChat, null, airportPickup, prescriptionChat];
+// These same patient journey screenshots are also used on the detailed case page.
+const stepImages = [timelineChat, medicalHistoryChat, airportPickup, prescriptionChat];
 
 function StepLabel({ children }) {
   return (
@@ -77,7 +77,9 @@ export default function PatientJourney() {
                     <img
                       src={stepImages[i]}
                       alt={step.mediaAlt}
-                      loading="lazy"
+                      width={5335}
+                      height={5334}
+                      loading={i < 2 ? 'eager' : 'lazy'}
                       className="w-full object-contain"
                     />
                   </div>
@@ -159,6 +161,8 @@ export default function PatientJourney() {
             <img
               src={thankYouChat}
               alt={content.experienceImageAlt}
+              width={5335}
+              height={5337}
               loading="lazy"
               className="w-full object-contain"
             />

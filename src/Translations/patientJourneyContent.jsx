@@ -29,7 +29,7 @@ const patientJourneyContent = {
         title: 'Medical Readiness Check',
         caption:
           'Before treatment, our team reviews relevant medical history and test results to support safer treatment planning.',
-        media: 'card', // Screenshot 2 is sensitive — use a text/icon card instead
+        media: 'screenshot', // Medical-history chat, already shown on the detailed case page
         mediaAlt: 'Medical history and blood test review',
       },
       {
@@ -105,7 +105,7 @@ const patientJourneyContent = {
         title: 'Kiểm Tra Tình Trạng Sức Khỏe',
         caption:
           'Trước khi điều trị, đội ngũ của chúng tôi xem xét tiền sử bệnh và kết quả xét nghiệm liên quan để hỗ trợ lập kế hoạch điều trị an toàn hơn.',
-        media: 'card',
+        media: 'screenshot',
         mediaAlt: 'Xem xét tiền sử bệnh và xét nghiệm máu',
       },
       {
@@ -177,7 +177,7 @@ const patientJourneyContent = {
         title: 'Vérification de l\u2019aptitude médicale',
         caption:
           'Avant le traitement, notre équipe examine les antécédents médicaux et les résultats d\u2019examens pertinents afin de soutenir une planification de traitement plus sûre.',
-        media: 'card',
+        media: 'screenshot',
         mediaAlt: 'Examen des antécédents médicaux et de l\u2019analyse sanguine',
       },
       {
@@ -249,7 +249,7 @@ const patientJourneyContent = {
         title: '의학적 준비 상태 확인',
         caption:
           '치료 전에 저희 팀은 보다 안전한 치료 계획을 위해 관련 의무기록과 검사 결과를 검토합니다.',
-        media: 'card',
+        media: 'screenshot',
         mediaAlt: '의무기록 및 혈액 검사 검토',
       },
       {
@@ -321,7 +321,7 @@ const patientJourneyContent = {
         title: '医疗准备情况检查',
         caption:
           '治疗前，我们的团队会审查相关病历和检查结果，以支持更安全的治疗方案。',
-        media: 'card',
+        media: 'screenshot',
         mediaAlt: '病历和血液检查审查',
       },
       {
@@ -393,7 +393,7 @@ const patientJourneyContent = {
         title: '醫療準備狀況檢查',
         caption:
           '治療前，我們的團隊會審查相關病歷和檢查結果，以支援更安全的治療方案。',
-        media: 'card',
+        media: 'screenshot',
         mediaAlt: '病歷和血液檢查審查',
       },
       {
