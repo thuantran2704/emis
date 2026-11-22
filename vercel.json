@@ -1,4 +1,7 @@
 {
+  "redirects": [
+    { "source": "/services", "destination": "/solutions", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/:path*", "destination": "/:path*/index.html" }
   ]
