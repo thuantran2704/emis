@@ -4,13 +4,14 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { useSelector } from 'react-redux';
 import homeContent from '../Translations/homeContent';
+import { homeRefresh } from '../data/homeRefresh';
 import { googleReviewsUrl } from '../data/contactChannels';
 import realCasesContent from '../Translations/realCasesContent';
 import { realCaseIds } from '../data/realCaseAssets';
 import RealCasePreviewMedia from '../components/RealCasePreviewMedia';
 import heroBackgroundMobile from '../pics/doctor-nurse-mid-surgery-no-patient-mouth-visible.jpg';
 import heroBackgroundLandscape from '../pics/doctor-analyzing-implant.jpg';
-import confidencePortrait from '../pics/foreign-patient-1-with-dr-tu-smiling.jpg';
+import confidencePortrait from '../pics/doctor-smiling-with-patient.jpg';
 import implantIntroImage from '../pics/all-on-4-implant.jpg';
 import allon6Image from '../pics/allon6.jpeg';
 import cbctReview from '../pics/measuring-result-cbct-x-ray-patient-smiling.jpg';
@@ -26,10 +27,10 @@ import internationalSupport from '../pics/Phong-cho-waiting-room-Emis.jpg';
 import ContactForm from '../components/ContactForm';
 import ImplantPlannerBanner from '../components/implants_banner';
 import serviceImplant from '../pics/implant-illustration.jpg';
-import chatPreTrip from '../pics/chat-pic-timeline-discussion-pre-trip.jpeg';
-import chatMedHistory from '../pics/chat-pic-checking-med-history.jpeg';
-import chatAirport from '../pics/chat-pic-pick-up-airport.jpeg';
-import chatAftercare from '../pics/chat-pic-aftercare.jpeg';
+import chatPreTrip from '../pics/journey-online-consultation.png';
+import chatMedHistory from '../pics/journey-planning.png';
+import chatAirport from '../pics/journey-welcome-saigon.png';
+import chatAftercare from '../pics/journey-treatment-aftercare.png';
 import PicSlider from '../components/PicSlider';
 import Text from '../components/Text';
 import CtaButton from '../components/CtaButton';
@@ -51,6 +52,7 @@ export default function Home() {
   const language = useSelector((state) => state.language.language);
   const localizedHome = homeContent[language] || homeContent.english;
   const page = localizedHome.homepageV2 || homeContent.english.homepageV2;
+  const refresh = homeRefresh[language] || homeRefresh.english;
   const casesContent = realCasesContent[language] || realCasesContent.english;
   const [activeSlide, setActiveSlide] = useState(0);
   const journeyPics = [chatPreTrip, chatMedHistory, chatAirport, chatAftercare];
@@ -58,7 +60,7 @@ export default function Home() {
   const heroDescription = page.hero.description;
 
   return (
-    <main className="bg-[#f7fafc] text-[#2a3439]">
+    <main className="bg-[#faf9f6] text-[#20323e]">
       <Helmet>
         <title>{page.metaTitle}</title>
         <meta name="description" content={page.metaDescription} />
@@ -150,33 +152,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#f7f2e7] px-6 py-14 sm:py-16" aria-labelledby="home-real-cases-heading">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <p className="text-xs font-bold tracking-[0.2em] text-[#97742d]">{casesContent.caseCount}</p>
-              <h2 id="home-real-cases-heading" className="mt-2 text-3xl font-semibold text-[#20323e] sm:text-4xl">{casesContent.storiesHeading}</h2>
+      <section className="bg-[#faf9f6] px-6 py-16 md:py-20" aria-labelledby="home-about-heading">
+        <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-[0.65fr_1fr] md:items-start md:gap-16">
+          <p className="text-xs font-bold tracking-[0.2em] text-[#8f6b27]">{refresh.aboutLabel}</p>
+          <div>
+            <h2 id="home-about-heading" className="max-w-[22ch] text-3xl font-semibold leading-tight text-[#193543] sm:text-4xl">{refresh.aboutTitle}</h2>
+            <p className="mt-5 max-w-[66ch] text-base leading-8 text-[#405363]">{refresh.aboutText}</p>
+            <div className="mt-6 flex flex-wrap gap-x-7 gap-y-2">
+              <Link to="/about" className="inline-flex min-h-11 items-center border-b border-[#bb984d] text-sm font-semibold text-[#193543] hover:text-[#8f6b27]">{refresh.aboutLink}</Link>
+              <Link to="/doctors" className="inline-flex min-h-11 items-center border-b border-[#bb984d] text-sm font-semibold text-[#193543] hover:text-[#8f6b27]">{refresh.doctorsLink}</Link>
             </div>
-            <Link to="/real-cases" className="inline-flex min-h-11 items-center border-b-2 border-[#c9a652] text-sm font-bold text-[#263744] hover:text-[#80611f]">
-              {casesContent.back}
-            </Link>
-          </div>
-          <div className="grid gap-6 lg:grid-cols-2">
-            {realCaseIds.map((id) => {
-              const item = casesContent.cases[id];
-              return (
-                <article key={id} className="overflow-hidden rounded-3xl border border-[#e7ddc9] bg-white shadow-[0_18px_45px_rgba(27,40,50,0.07)]">
-                  <Link to={`/real-cases/${id}`} aria-label={`${casesContent.readCase}: ${item.name}`} className="group block">
-                    <RealCasePreviewMedia id={id} item={item} />
-                    <div className="p-6 sm:p-7">
-                      <p className="text-xs font-bold tracking-[0.17em] text-[#927028]">{item.category}</p>
-                      <h3 className="mt-3 text-2xl font-semibold leading-tight text-[#24333e]">{item.title}</h3>
-                      <span className="mt-5 inline-flex min-h-11 items-center border-b-2 border-[#c7a048] text-sm font-bold text-[#263745]">{casesContent.readCase}</span>
-                    </div>
-                  </Link>
-                </article>
-              );
-            })}
           </div>
         </div>
       </section>
@@ -186,8 +171,8 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6">
           <div className="text-center">
             <Text variant="eyebrow" className="mb-4">{page.confidence.label}</Text>
-            <Text variant="title">{page.confidence.title}</Text>
-            <Text variant="intro" className="mt-4">{page.confidence.intro}</Text>
+            <Text variant="title">{refresh.whyTitle}</Text>
+            <Text variant="intro" className="mt-4">{refresh.whyIntro}</Text>
           </div>
 
           <div className="mt-10 grid gap-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-stretch">
@@ -198,14 +183,14 @@ export default function Home() {
                   className="group flex flex-col rounded-2xl border border-[#e4ebf1] bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-[#C5AF73] hover:shadow-md"
                 >
                   <span className="block h-1 w-8 rounded-full bg-[#C5AF73] transition-all group-hover:w-12" />
-                  <Text variant="cardTitle" className="mt-4">{card.title}</Text>
-                  <Text variant="description" className="mt-2">{card.text}</Text>
+                  <Text variant="cardTitle" className="mt-4">{card === page.confidence.cards[0] ? refresh.careTitle : card.title}</Text>
+                  <Text variant="description" className="mt-2">{card === page.confidence.cards[0] ? refresh.careText : card.text}</Text>
                 </article>
               ))}
             </div>
 
             <div className="relative hidden overflow-hidden rounded-2xl shadow-sm lg:block">
-              <img src={confidencePortrait} alt={page.confidence.title} loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-cover object-center" />
+              <img src={confidencePortrait} alt={imageAlt('Emis Dental dentist discussing treatment with a patient', language)} loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-cover object-center" />
             </div>
           </div>
         </div>
@@ -239,7 +224,7 @@ export default function Home() {
       </Section>
 
       {/* 5 — Decision: Help them match situation to treatment */}
-      <Section tone="cool">
+      <Section tone="cream">
         <div className="mx-auto max-w-7xl px-6">
           <div className="text-center">
             <Text variant="title" tone="headingBlue">{page.pathways.title}</Text>
@@ -265,7 +250,7 @@ export default function Home() {
       </Section>
 
       {/* 6 — Solution: Implant specialist slider */}
-      <Section tone="light">
+      <Section tone="cream">
         <div className="mx-auto max-w-7xl px-6">
           <div className="text-center">
             <Text variant="eyebrow" className="mb-4">{page.implantSpecialist.eyebrow}</Text>
@@ -333,6 +318,59 @@ export default function Home() {
         </div>
       </Section>
 
+      <section className="bg-[#faf9f6] px-6 py-16 md:py-24" aria-labelledby="home-other-services-heading">
+        <div className="mx-auto max-w-7xl">
+          <div className="max-w-2xl">
+            <p className="text-xs font-bold tracking-[0.2em] text-[#8f6b27]">{refresh.servicesLabel}</p>
+            <h2 id="home-other-services-heading" className="mt-3 text-3xl font-semibold text-[#193543] sm:text-4xl">{refresh.servicesTitle}</h2>
+            <p className="mt-4 text-base leading-7 text-[#405363]">{refresh.servicesIntro}</p>
+          </div>
+          <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {refresh.services.map(([title, description, href]) => (
+              <Link key={href} to={href} className="group flex min-h-56 flex-col justify-between rounded-2xl border border-[#e4d9be] bg-white p-6 transition hover:-translate-y-0.5 hover:border-[#c5a059] hover:shadow-md focus-visible:outline-offset-4">
+                <div>
+                  <h3 className="text-xl font-semibold text-[#193543]">{title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-[#405363]">{description}</p>
+                </div>
+                <span className="mt-6 text-sm font-semibold text-[#87651e] group-hover:underline">{refresh.serviceLink} &rarr;</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#f7f2e7] px-6 py-14 sm:py-16" aria-labelledby="home-real-cases-heading">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <p className="text-xs font-bold tracking-[0.2em] text-[#97742d]">{casesContent.caseCount}</p>
+              <h2 id="home-real-cases-heading" className="mt-2 text-3xl font-semibold text-[#20323e] sm:text-4xl">{casesContent.storiesHeading}</h2>
+            </div>
+            <Link to="/real-cases" className="inline-flex min-h-11 items-center border-b-2 border-[#c9a652] text-sm font-bold text-[#263744] hover:text-[#80611f]">
+              {casesContent.back}
+            </Link>
+          </div>
+          <div className="grid gap-6 lg:grid-cols-2">
+            {realCaseIds.map((id) => {
+              const item = casesContent.cases[id];
+              return (
+                <article key={id} className="overflow-hidden rounded-3xl border border-[#e7ddc9] bg-white shadow-[0_18px_45px_rgba(27,40,50,0.07)]">
+                  <Link to={`/real-cases/${id}`} aria-label={`${casesContent.readCase}: ${item.name}`} className="group block">
+                    <RealCasePreviewMedia id={id} item={item} />
+                    <div className="p-6 sm:p-7">
+                      <p className="text-xs font-bold tracking-[0.17em] text-[#927028]">{item.category}</p>
+                      <h3 className="mt-3 text-2xl font-semibold leading-tight text-[#24333e]">{item.title}</h3>
+                      <span className="mt-5 inline-flex min-h-11 items-center border-b-2 border-[#c7a048] text-sm font-bold text-[#263745]">{casesContent.readCase}</span>
+                    </div>
+                  </Link>
+                </article>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+
       {/* 7 — Process: Reduce anxiety about what happens next */}
       <Section tone="white">
         <div className="mx-auto max-w-7xl px-6">
@@ -362,10 +400,10 @@ export default function Home() {
       </Section>
 
       {/* 8 — Real Patient Journeys */}
-      <PicSlider pics={journeyPics} content={page.realJourneys} />
+      <PicSlider pics={journeyPics} content={{ ...page.realJourneys, notice: refresh.journeyNotice }} containedMedia className="bg-[#faf9f6] py-16 md:py-24" />
 
       {/* 9 — Logistics: Remove the overseas barrier */}
-      <Section tone="cool">
+      <Section tone="cream">
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 lg:landscape:grid-cols-2 lg:landscape:items-stretch">
           <div className="mx-auto max-w-2xl text-center lg:landscape:mx-0 lg:landscape:text-left">
             <Text variant="title" tone="headingBlue">{page.international.title}</Text>

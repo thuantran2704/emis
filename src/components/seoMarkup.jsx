@@ -52,6 +52,12 @@ export const schemaMarkup = JSON.stringify([
     ],
     "areaServed": "Ho Chi Minh City, Vietnam",
     "sameAs": Object.values(socialProfiles),
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "patient enquiries",
+      "telephone": "+84919100021",
+      "availableLanguage": ["Vietnamese", "English", "Chinese"]
+    },
     "medicalSpecialty": [
       "DentalImplants",
       "CosmeticDentistry",
@@ -71,7 +77,21 @@ export const schemaMarkup = JSON.stringify([
   {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": "https://emisdental.com/dr-long#person",
     "name": "Dr. Do Thai Long",
+    "jobTitle": "Lead Dentist",
+    "knowsLanguage": ["Vietnamese", "Chinese"],
+    "worksFor": { "@id": "https://emisdental.com" },
     "url": "https://emisdental.com/dr-long"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://emisdental.com/dr-tu#person",
+    "name": "Dr. Tran Minh Tu",
+    "jobTitle": "Odonto-Maxillofacial Surgeon",
+    "knowsLanguage": ["Vietnamese", "English"],
+    "worksFor": { "@id": "https://emisdental.com" },
+    "url": "https://emisdental.com/dr-tu"
   }
 ]);

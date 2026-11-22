@@ -2,10 +2,14 @@ import { useState } from "react";
 import ClientRecaptcha from './ClientRecaptcha';
 import Alert from "./alert";
 import contactContent from "../Translations/contactContent";
+import { consultationFields, countryNames, languageOptions } from '../data/consultationFields';
+import { contactItems, socialProfiles } from '../data/contactChannels';
 import { useSelector } from 'react-redux';
 export default function ContactForm({ embedded = false }) {
   const language = useSelector((state) => state.language.language);
   const content = contactContent[language] || contactContent.english;
+  const fields = consultationFields[language] || consultationFields.english;
+  const countryLocale = { english: 'en', vietnamese: 'vi', simplified: 'zh-Hans', traditional: 'zh-Hant', french: 'fr', korean: 'ko' }[language] || 'en';
   const apiBaseUrl = import.meta.env.VITE_API_URL;
   const recaptchaSiteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
   const [formData, setFormData] = useState({
@@ -15,6 +19,7 @@ export default function ContactForm({ embedded = false }) {
     message: "",
   });
   const [recaptchaToken, setRecaptchaToken] = useState(null);
+  const [preferences, setPreferences] = useState({ country: '', date: '', method: '', preferredLanguage: '', referral: '' });
   const [alert, setAlert] = useState({ show: false, message: "", type: "success" });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -24,6 +29,10 @@ export default function ContactForm({ embedded = false }) {
   };
 
   const handleRecaptchaChange = (token) => setRecaptchaToken(token);
+  const handlePreference = (event) => {
+    const { name, value } = event.target;
+    setPreferences((current) => ({ ...current, [name]: value }));
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -90,7 +99,14 @@ export default function ContactForm({ embedded = false }) {
 
     setIsSubmitting(true);
     try {
-      const payload = { ...formData, language, recaptchaToken };
+      // The appointment API currently accepts a message, not separate preference fields.
+      // Keep the optional details in that supported field so the clinic receives them.
+      const details = [
+        [fields.country, preferences.country], [fields.date, preferences.date],
+        [fields.method, preferences.method], [fields.language, preferences.preferredLanguage],
+        [fields.referral, preferences.referral],
+      ].filter(([, value]) => value).map(([label, value]) => `${label}: ${value}`);
+      const payload = { ...formData, message: [formData.message.trim(), ...details].filter(Boolean).join('\n\n'), language, recaptchaToken };
       const response = await fetch(`${apiBaseUrl}/api/appointments`, {
         method: "POST",
         headers: {
@@ -105,6 +121,7 @@ export default function ContactForm({ embedded = false }) {
       if (!response.ok) throw new Error(`Server responded with ${response.status}`);
 
       setFormData({ name: "", email: "", phone: "", message: "" });
+      setPreferences({ country: '', date: '', method: '', preferredLanguage: '', referral: '' });
       setRecaptchaToken(null);
       setIsSubmitting(false);
       setAlert({
@@ -164,9 +181,9 @@ export default function ContactForm({ embedded = false }) {
         )}
 
         <h3
-          className="mb-5 text-xl font-semibold text-[#193543] sm:text-2xl"
+          className={embedded ? 'mb-5 rounded-2xl border border-[#d7bc7b] bg-[#fff8e6] px-5 py-4 text-xl font-semibold text-[#193543] sm:text-2xl' : 'mb-5 text-xl font-semibold text-[#193543] sm:text-2xl'}
         >
-          {content.bookAppointment}
+          {embedded ? fields.freeTitle : content.bookAppointment}
         </h3>
 
         <form onSubmit={handleSubmit} className="space-y-3">
@@ -175,7 +192,7 @@ export default function ContactForm({ embedded = false }) {
               <label htmlFor={`contact-${field}`} className="sr-only">{content.formLabels[field]}</label>
               <input
                 id={`contact-${field}`}
-                type={field === "email" ? "email" : "text"}
+                type={field === "email" ? "email" : field === "phone" ? "tel" : "text"}
                 name={field}
                 placeholder={content.formLabels[field]}
                 value={formData[field]}
@@ -196,6 +213,43 @@ export default function ContactForm({ embedded = false }) {
             rows="3"
             className="w-full rounded-xl border border-[#d4dfe2] px-4 py-3 text-sm text-[#193543] focus:border-[#a98639] focus:outline-none focus:ring-2 focus:ring-[#d4af37]/30"
           />
+
+          <fieldset className="rounded-2xl border border-[#e5d8b8] bg-[#faf9f6] p-4 sm:p-5">
+            <legend className="px-1 text-sm font-semibold text-[#193543]">{fields.heading} <span className="font-normal text-[#53616a]">({fields.optional})</span></legend>
+            <div className="mt-2 grid gap-4 sm:grid-cols-2">
+              <div>
+                <label htmlFor="consultation-country" className="mb-1 block text-xs font-semibold text-[#344b54]">{fields.country}</label>
+                <input id="consultation-country" name="country" list="consultation-countries" autoComplete="country-name" value={preferences.country} onChange={handlePreference} className="w-full rounded-lg border border-[#d4dfe2] bg-white px-3 py-2.5 text-sm text-[#193543] focus:border-[#a98639] focus:outline-none focus:ring-2 focus:ring-[#d4af37]/30" />
+                <datalist id="consultation-countries">{countryNames(countryLocale).map((country) => <option key={country} value={country} />)}</datalist>
+              </div>
+              <div>
+                <label htmlFor="consultation-date" className="mb-1 block text-xs font-semibold text-[#344b54]">{fields.date}</label>
+                <input id="consultation-date" name="date" type="date" value={preferences.date} onChange={handlePreference} className="w-full rounded-lg border border-[#d4dfe2] bg-white px-3 py-2.5 text-sm text-[#193543] focus:border-[#a98639] focus:outline-none focus:ring-2 focus:ring-[#d4af37]/30" />
+              </div>
+              <div>
+                <label htmlFor="consultation-method" className="mb-1 block text-xs font-semibold text-[#344b54]">{fields.method}</label>
+                <select id="consultation-method" name="method" value={preferences.method} onChange={handlePreference} className="w-full rounded-lg border border-[#d4dfe2] bg-white px-3 py-2.5 text-sm text-[#193543] focus:border-[#a98639] focus:outline-none focus:ring-2 focus:ring-[#d4af37]/30">
+                  <option value="">{fields.choose}</option>
+                  {['Email', 'WhatsApp', 'Messenger', 'Phone', 'Zalo'].map((method) => <option key={method} value={method}>{method}</option>)}
+                </select>
+              </div>
+              <div>
+                <label htmlFor="consultation-language" className="mb-1 block text-xs font-semibold text-[#344b54]">{fields.language}</label>
+                <select id="consultation-language" name="preferredLanguage" value={preferences.preferredLanguage} onChange={handlePreference} className="w-full rounded-lg border border-[#d4dfe2] bg-white px-3 py-2.5 text-sm text-[#193543] focus:border-[#a98639] focus:outline-none focus:ring-2 focus:ring-[#d4af37]/30">
+                  <option value="">{fields.choose}</option>
+                  {languageOptions.map(([value, label]) => <option key={value} value={value}>{label}</option>)}
+                </select>
+              </div>
+              <div className="sm:col-span-2">
+                <label htmlFor="consultation-referral" className="mb-1 block text-xs font-semibold text-[#344b54]">{fields.referral}</label>
+                <select id="consultation-referral" name="referral" value={preferences.referral} onChange={handlePreference} className="w-full rounded-lg border border-[#d4dfe2] bg-white px-3 py-2.5 text-sm text-[#193543] focus:border-[#a98639] focus:outline-none focus:ring-2 focus:ring-[#d4af37]/30">
+                  <option value="">{fields.choose}</option>
+                  {fields.sources.map((source) => <option key={source} value={source}>{source}</option>)}
+                </select>
+              </div>
+            </div>
+            {preferences.method && <p className="mt-3 text-xs leading-5 text-[#53616a]">{fields.contactHint} {['WhatsApp', 'Messenger', 'Zalo'].includes(preferences.method) && <a href={preferences.method === 'Messenger' ? socialProfiles.facebook : contactItems.find((item) => item.label === preferences.method)?.href} target="_blank" rel="noopener noreferrer" className="font-semibold text-[#765a1e] underline">{preferences.method}</a>}</p>}
+          </fieldset>
 
           <div className="flex justify-center my-2">
             {recaptchaSiteKey ? (

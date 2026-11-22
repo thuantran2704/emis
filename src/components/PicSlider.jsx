@@ -21,7 +21,7 @@ import sharedUiLabels from '../Translations/sharedUiLabels';
  *   • Thumbnails scroll horizontally when there are many pics
  *   • Dots shown only when total ≤ 8
  */
-export default function PicSlider({ pics, content = {}, bgColor = '#CCBA78', className }) {
+export default function PicSlider({ pics, content = {}, bgColor = '#CCBA78', className, containedMedia = false }) {
   const language = useSelector((state) => state.language.language);
   const labels = sharedUiLabels[language] || sharedUiLabels.english;
   const [active, setActive] = useState(0);
@@ -76,6 +76,9 @@ export default function PicSlider({ pics, content = {}, bgColor = '#CCBA78', cla
             {content.subheading && (
               <p className="mt-4 text-base leading-relaxed text-gray-500">{content.subheading}</p>
             )}
+            {content.notice && (
+              <p className="mt-4 text-sm leading-6 text-[#6d5a32]">{content.notice}</p>
+            )}
           </div>
         )}
 
@@ -86,19 +89,19 @@ export default function PicSlider({ pics, content = {}, bgColor = '#CCBA78', cla
             <div className="flex flex-col md:flex-row">
               {/* Image pane */}
               <div
-                className="relative w-full md:w-[55%] min-h-[380px] md:min-h-[480px] overflow-hidden"
-                style={{ backgroundColor: bgColor }}
+                className={`relative w-full min-h-[320px] md:min-h-[480px] overflow-hidden ${containedMedia ? 'md:w-[48%]' : 'md:w-[55%]'}`}
+                style={{ backgroundColor: containedMedia ? '#f4f0e7' : bgColor }}
               >
                 <img
                   key={active}
                   src={pics[active]}
                   alt={cur.title ?? `${labels.slide} ${active + 1}`}
-                  className="absolute inset-0 h-full w-full object-cover"
+                  className={`absolute inset-0 h-full w-full ${containedMedia ? 'object-contain' : 'object-cover'}`}
                 />
               </div>
 
               {/* Content pane */}
-              <div className="w-full md:w-[45%] flex flex-col justify-between p-8 md:p-12">
+              <div className={`w-full flex flex-col justify-between p-8 md:p-12 ${containedMedia ? 'md:w-[52%]' : 'md:w-[45%]'}`}>
                 <div>
                   <span className="block text-[96px] leading-none font-black text-[#d4af37]/12 select-none -ml-2">
                     {String(active + 1).padStart(2, '0')}
@@ -192,7 +195,7 @@ export default function PicSlider({ pics, content = {}, bgColor = '#CCBA78', cla
               >
                 <div
                   className={`flex items-center justify-center ${total <= 6 ? 'h-20' : 'h-16'}`}
-                  style={{ backgroundColor: bgColor }}
+                  style={{ backgroundColor: containedMedia ? '#f4f0e7' : bgColor }}
                 >
                   <img
                     src={src}
