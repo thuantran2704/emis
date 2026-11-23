@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ClientRecaptcha from './ClientRecaptcha';
 import Alert from "./alert";
 import contactContent from "../Translations/contactContent";
-import { consultationFields, countryNames, languageOptions } from '../data/consultationFields';
+import { consultationDateHints, consultationFields, countryNames, languageOptions } from '../data/consultationFields';
 import { contactItems, socialProfiles } from '../data/contactChannels';
+import { localDateInputMin } from '../data/appointmentDate';
 import { useSelector } from 'react-redux';
 export default function ContactForm({ embedded = false }) {
   const language = useSelector((state) => state.language.language);
@@ -12,6 +13,8 @@ export default function ContactForm({ embedded = false }) {
   const countryLocale = { english: 'en', vietnamese: 'vi', simplified: 'zh-Hans', traditional: 'zh-Hant', french: 'fr', korean: 'ko' }[language] || 'en';
   const apiBaseUrl = import.meta.env.VITE_API_URL;
   const recaptchaSiteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
+  const [earliestDate, setEarliestDate] = useState('');
+  useEffect(() => { setEarliestDate(localDateInputMin()); }, []);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -194,9 +197,10 @@ export default function ContactForm({ embedded = false }) {
                 id={`contact-${field}`}
                 type={field === "email" ? "email" : field === "phone" ? "tel" : "text"}
                 name={field}
-                placeholder={content.formLabels[field]}
                 value={formData[field]}
                 onChange={handleChange}
+                autoComplete={field === "phone" ? "tel" : field === "email" ? "email" : "name"}
+                placeholder={field === "phone" ? `${content.formLabels.phone} (+84 9xx xxx xxx)` : content.formLabels[field]}
                 required
                 className="w-full rounded-xl border border-[#d4dfe2] px-4 py-3 text-sm text-[#193543] focus:border-[#a98639] focus:outline-none focus:ring-2 focus:ring-[#d4af37]/30"
               />
@@ -224,7 +228,8 @@ export default function ContactForm({ embedded = false }) {
               </div>
               <div>
                 <label htmlFor="consultation-date" className="mb-1 block text-xs font-semibold text-[#344b54]">{fields.date}</label>
-                <input id="consultation-date" name="date" type="date" value={preferences.date} onChange={handlePreference} className="w-full rounded-lg border border-[#d4dfe2] bg-white px-3 py-2.5 text-sm text-[#193543] focus:border-[#a98639] focus:outline-none focus:ring-2 focus:ring-[#d4af37]/30" />
+                <input id="consultation-date" name="date" type="date" min={earliestDate} value={preferences.date} onChange={handlePreference} className="w-full rounded-lg border border-[#d4dfe2] bg-white px-3 py-2.5 text-sm text-[#193543] focus:border-[#a98639] focus:outline-none focus:ring-2 focus:ring-[#d4af37]/30" />
+                <p className="mt-1 text-xs leading-5 text-[#53616a]">{consultationDateHints[language] || consultationDateHints.english}</p>
               </div>
               <div>
                 <label htmlFor="consultation-method" className="mb-1 block text-xs font-semibold text-[#344b54]">{fields.method}</label>

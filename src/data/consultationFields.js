@@ -12,6 +12,15 @@ export const languageOptions = [
   ['French', 'Français'], ['Korean', '한국어'],
 ];
 
+export const consultationDateHints = {
+  english: 'This date is a preference, not a confirmed appointment.',
+  vietnamese: 'Đây là ngày bạn mong muốn, chưa phải lịch hẹn đã được xác nhận.',
+  simplified: '这是您希望的日期，预约尚未确认。',
+  traditional: '這是您希望的日期，預約尚未確認。',
+  french: 'Cette date est un souhait, pas un rendez-vous confirmé.',
+  korean: '희망 날짜이며, 예약이 확정된 것은 아닙니다.',
+};
+
 const countryCache = new Map();
 
 export function countryNames(locale) {

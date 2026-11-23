@@ -1,13 +1,16 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Alert from '../components/alert';
 import contactContent from '../Translations/contactContent';
 import ClientRecaptcha from '../components/ClientRecaptcha';
 import { useSelector } from 'react-redux';
 import { Helmet } from 'react-helmet';
 import { primaryContactItems, socialContactItems } from '../data/contactChannels';
+import { localDateInputMin } from '../data/appointmentDate';
 export default function Contact() {
   const language = useSelector((state) => state.language.language);
   const content = contactContent[language] || contactContent.english;
+  const [earliestDate, setEarliestDate] = useState('');
+  useEffect(() => { setEarliestDate(localDateInputMin()); }, []);
   const [recaptchaToken, setRecaptchaToken] = useState(null);
 
   const handleRecaptchaChange = (token) => {
@@ -243,9 +246,12 @@ export default function Contact() {
                       {content.formLabels[field]}
                     </label>
                     <input
-                      type={field === "date" ? "date" : field === "email" ? "email" : "text"}
+                      type={field === "date" ? "date" : field === "email" ? "email" : field === "phone" ? "tel" : "text"}
                       id={field}
                       name={field}
+                      min={field === "date" ? earliestDate : undefined}
+                      autoComplete={field === "phone" ? "tel" : field === "email" ? "email" : field === "name" ? "name" : undefined}
+                      placeholder={field === "phone" ? "+84 9xx xxx xxx" : undefined}
                       value={formData[field]}
                       onChange={handleChange}
                       className="w-full p-2.5 border border-[#6b7280] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
@@ -253,6 +259,8 @@ export default function Contact() {
                     />
                   </div>
                 ))}
+
+                <p className="text-sm leading-6 text-[#405363] sm:col-span-2">{content.dateHint}</p>
 
                 <div className="sm:col-span-2">
                   <label
