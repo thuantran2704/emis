@@ -11,6 +11,8 @@ import {
 import { SiZalo } from 'react-icons/si';
 
 export const googleReviewsUrl = 'https://maps.app.goo.gl/8T1cPtEKUBe6wLFz9';
+export const publicEmail = 'emisdental@emisdental.com';
+export const publicEmailHref = `mailto:${publicEmail}`;
 export const socialProfiles = {
   facebook: 'https://www.facebook.com/emisinternationaldental/',
   instagram: 'https://www.instagram.com/emis.dental',
@@ -35,7 +37,7 @@ export const contactItems = [
     icon: FaEnvelope,
     alt: 'Email',
     label: 'Email',
-    href: 'mailto:Emisdentalclinic@gmail.com',
+    href: publicEmailHref,
   },
   {
     icon: SiZalo,

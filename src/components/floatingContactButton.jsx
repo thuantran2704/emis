@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Phone, Mail, MessageSquare, Facebook, MessageCircle } from "lucide-react";
+import { publicEmailHref } from '../data/contactChannels';
 
 export default function FloatingContactButton() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +18,7 @@ export default function FloatingContactButton() {
     },
     {
       label: "Email",
-      href: "mailto:Emisdentalclinic@gmail.com",
+      href: publicEmailHref,
       icon: <Mail className="h-5 w-5" />,
     },
     {

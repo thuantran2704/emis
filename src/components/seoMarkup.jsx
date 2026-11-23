@@ -1,4 +1,4 @@
-import { socialProfiles } from '../data/contactChannels';
+import { publicEmail, socialProfiles } from '../data/contactChannels';
 
 export const schemaMarkup = JSON.stringify([
   {
@@ -22,6 +22,7 @@ export const schemaMarkup = JSON.stringify([
     "@id": "https://emisdental.com",
     "url": "https://emisdental.com",
     "telephone": "+84919100021",
+    "email": publicEmail,
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
@@ -56,6 +57,7 @@ export const schemaMarkup = JSON.stringify([
       "@type": "ContactPoint",
       "contactType": "patient enquiries",
       "telephone": "+84919100021",
+      "email": publicEmail,
       "availableLanguage": ["Vietnamese", "English", "Chinese"]
     },
     "medicalSpecialty": [

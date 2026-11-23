@@ -1,3 +1,5 @@
+import { publicEmail } from '../data/contactChannels';
+
 const footerContent = {
   english: {
     clinicName: "Emis Dental",
@@ -7,7 +9,7 @@ const footerContent = {
     address:
       "62B Phạm Ngọc Thạch, Xuân Hòa ward, District 3, Ho Chi Minh City, 700000",
     phone: "+84 919 100 021",
-    email: "Emisdentalclinic@gmail.com",
+    email: publicEmail,
     connectTitle: "Connect with Us",
     workingHoursTitle: "Working Hours",
     workingHours: "Mon – Sat: 8:00 AM – 7:00 PM\nSun: 8:00 AM - 5:00 PM",
@@ -40,7 +42,7 @@ const footerContent = {
       "62B Phạm Ngọc Thạch, Phường Xuân Hòa, Quận 3, Thành phố Hồ Chí Minh, 700000",
     phone: "+84 919 100 021",
 
-    email: "Emisdentalclinic@gmail.com",
+    email: publicEmail,
     connectTitle: "Kết nối với chúng tôi",
     workingHoursTitle: "Giờ làm việc",
     workingHours: "Thứ 2 – Thứ 7: 8:00 – 19:00\nChủ nhật: 8:00 – 17:00",
@@ -72,7 +74,7 @@ const footerContent = {
     address:
       "62B Phạm Ngọc Thạch, Xuân Hòa ward, District 3, Ho Chi Minh City, 700000",
     phone: "+84 919 100 021",
-    email: "Emisdentalclinic@gmail.com",
+    email: publicEmail,
     connectTitle: "关注我们",
     workingHoursTitle: "营业时间",
     workingHours: "周一至周六：8:00 – 19:00\n周日：8:00 – 17:00",
@@ -105,7 +107,7 @@ const footerContent = {
       "62B Phạm Ngọc Thạch, Xuân Hòa ward, District 3, Ho Chi Minh City, 700000",
     phone: "+84 919 100 021",
 
-    email: "Emisdentalclinic@gmail.com",
+    email: publicEmail,
     connectTitle: "關注我們",
     workingHoursTitle: "營業時間",
     workingHours: "週一至週六：8:00 – 19:00\n週日：8:00 – 17:00",
@@ -138,7 +140,7 @@ const footerContent = {
       "62B Phạm Ngọc Thạch, Xuân Hòa ward, District 3, Ho Chi Minh City, 700000",
     phone: "+84 919 100 021",
 
-    email: "Emisdentalclinic@gmail.com",
+    email: publicEmail,
     connectTitle: "Suivez-nous",
     workingHoursTitle: "Heures d'ouverture",
     workingHours: "Lun – Sam : 8h00 – 19h00\nDim : 8h00 – 17h00",
@@ -170,7 +172,7 @@ const footerContent = {
     address:
       "62B Phạm Ngọc Thạch, Xuân Hòa ward, District 3, Ho Chi Minh City, 700000",
     phone: "+84 919 100 021",
-    email: "Emisdentalclinic@gmail.com",
+    email: publicEmail,
     connectTitle: "소셜 미디어",
     workingHoursTitle: "진료 시간",
     workingHours: "월–토: 8:00 – 19:00\n일: 8:00 – 17:00",

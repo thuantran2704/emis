@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import logo from '../pics/logo.jpg';
 import footerContent from '../Translations/footerContent';
 import navbarContent from '../Translations/navbarContent';
-import { googleReviewsUrl, primaryContactItems, socialContactItems } from '../data/contactChannels';
+import { googleReviewsUrl, primaryContactItems, publicEmailHref, socialContactItems } from '../data/contactChannels';
 import { availableLocalesForRoute } from '../seo/locales.js';
 
 // NOTE: The following footer links have no dedicated route yet and are mapped
@@ -70,7 +70,7 @@ function buildFooterColumns(nav, f) {
       links: [
         { label: fn.phone, href: 'tel:+84919100021' },
         { label: 'WhatsApp', href: whatsappUrl },
-        { label: fn.email, href: 'mailto:Emisdentalclinic@gmail.com' },
+        { label: fn.email, href: publicEmailHref },
         { label: fn.googleMaps, href: mapOpenUrl },
       ],
     },
