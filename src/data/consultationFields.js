@@ -21,6 +21,42 @@ export const consultationDateHints = {
   korean: '희망 날짜이며, 예약이 확정된 것은 아닙니다.',
 };
 
+export const preferredDateLabels = {
+  english: 'Preferred consultation date',
+  vietnamese: 'Ngày tư vấn mong muốn',
+  simplified: '希望咨询的日期',
+  traditional: '希望諮詢的日期',
+  french: 'Date de consultation souhaitée',
+  korean: '희망 상담 날짜',
+};
+
+export const consultationSubmissionErrors = {
+  english: 'We could not confirm your request. Please contact the clinic before submitting again.',
+  vietnamese: 'Chúng tôi chưa thể xác nhận yêu cầu. Vui lòng liên hệ phòng khám trước khi gửi lại.',
+  simplified: '我们无法确认您的请求。再次提交前请先联系诊所。',
+  traditional: '我們無法確認您的請求。再次提交前請先聯絡診所。',
+  french: 'Nous ne pouvons pas confirmer votre demande. Contactez la clinique avant de réessayer.',
+  korean: '요청을 확인하지 못했습니다. 다시 제출하기 전에 병원에 문의해 주세요.',
+};
+
+export const phoneCountryCodeHints = {
+  english: 'Include your country code, for example +84 912 345 678.',
+  vietnamese: 'Ghi cả mã quốc gia, ví dụ +84 912 345 678.',
+  simplified: '请填写国家区号，例如 +84 912 345 678。',
+  traditional: '請填寫國家區碼，例如 +84 912 345 678。',
+  french: 'Indiquez l’indicatif du pays, par exemple +84 912 345 678.',
+  korean: '국가번호를 포함해 입력하세요. 예: +84 912 345 678.',
+};
+
+export const otherServiceLabels = {
+  english: 'Other treatment or not sure',
+  vietnamese: 'Dịch vụ khác hoặc chưa rõ',
+  simplified: '其他治疗或尚未确定',
+  traditional: '其他治療或尚未確定',
+  french: 'Autre soin ou pas encore sûr',
+  korean: '기타 치료 또는 미정',
+};
+
 const countryCache = new Map();
 
 export function countryNames(locale) {

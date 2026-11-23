@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import ClientRecaptcha from './ClientRecaptcha';
 import Alert from "./alert";
 import contactContent from "../Translations/contactContent";
-import { consultationDateHints, consultationFields, countryNames, languageOptions } from '../data/consultationFields';
+import { consultationDateHints, consultationFields, consultationSubmissionErrors, countryNames, languageOptions, otherServiceLabels, phoneCountryCodeHints, preferredDateLabels } from '../data/consultationFields';
 import { contactItems, socialProfiles } from '../data/contactChannels';
 import { localDateInputMin } from '../data/appointmentDate';
+import { buildConsultationPayload } from '../data/consultationPayload';
 import { useSelector } from 'react-redux';
 export default function ContactForm({ embedded = false }) {
   const language = useSelector((state) => state.language.language);
@@ -19,6 +20,7 @@ export default function ContactForm({ embedded = false }) {
     name: "",
     email: "",
     phone: "",
+    service: "",
     message: "",
   });
   const [recaptchaToken, setRecaptchaToken] = useState(null);
@@ -102,14 +104,7 @@ export default function ContactForm({ embedded = false }) {
 
     setIsSubmitting(true);
     try {
-      // The appointment API currently accepts a message, not separate preference fields.
-      // Keep the optional details in that supported field so the clinic receives them.
-      const details = [
-        [fields.country, preferences.country], [fields.date, preferences.date],
-        [fields.method, preferences.method], [fields.language, preferences.preferredLanguage],
-        [fields.referral, preferences.referral],
-      ].filter(([, value]) => value).map(([label, value]) => `${label}: ${value}`);
-      const payload = { ...formData, message: [formData.message.trim(), ...details].filter(Boolean).join('\n\n'), language, recaptchaToken };
+      const payload = buildConsultationPayload({ formData, preferences, fields, language, recaptchaToken });
       const response = await fetch(`${apiBaseUrl}/api/appointments`, {
         method: "POST",
         headers: {
@@ -123,7 +118,7 @@ export default function ContactForm({ embedded = false }) {
 
       if (!response.ok) throw new Error(`Server responded with ${response.status}`);
 
-      setFormData({ name: "", email: "", phone: "", message: "" });
+      setFormData({ name: "", email: "", phone: "", service: "", message: "" });
       setPreferences({ country: '', date: '', method: '', preferredLanguage: '', referral: '' });
       setRecaptchaToken(null);
       setIsSubmitting(false);
@@ -147,18 +142,7 @@ export default function ContactForm({ embedded = false }) {
       setIsSubmitting(false);
       setAlert({
         show: true,
-        message:
-          language === "vietnamese"
-            ? "Gửi thất bại. Vui lòng thử lại."
-            : language === "french"
-            ? "Échec de l'envoi. Veuillez réessayer."
-            : language === "korean"
-            ? "전송 실패. 다시 시도해주세요."
-            : language === "simplified"
-            ? "发送失败，请重试。"
-            : language === "traditional"
-            ? "發送失敗，請重試。"
-            : "Failed to send message. Please try again.",
+        message: consultationSubmissionErrors[language] || consultationSubmissionErrors.english,
         type: "error",
       });
     }
@@ -192,7 +176,7 @@ export default function ContactForm({ embedded = false }) {
         <form onSubmit={handleSubmit} className="space-y-3">
           {["name", "email", "phone"].map((field) => (
             <div key={field}>
-              <label htmlFor={`contact-${field}`} className="sr-only">{content.formLabels[field]}</label>
+              <label htmlFor={`contact-${field}`} className={field === 'phone' ? 'mb-1 block text-sm font-semibold text-[#344b54]' : 'sr-only'}>{content.formLabels[field]}</label>
               <input
                 id={`contact-${field}`}
                 type={field === "email" ? "email" : field === "phone" ? "tel" : "text"}
@@ -200,12 +184,30 @@ export default function ContactForm({ embedded = false }) {
                 value={formData[field]}
                 onChange={handleChange}
                 autoComplete={field === "phone" ? "tel" : field === "email" ? "email" : "name"}
-                placeholder={field === "phone" ? `${content.formLabels.phone} (+84 9xx xxx xxx)` : content.formLabels[field]}
+                aria-describedby={field === 'phone' ? 'contact-phone-hint' : undefined}
+                maxLength={field === 'phone' ? 20 : undefined}
+                placeholder={field === "phone" ? "+84 912 345 678" : content.formLabels[field]}
                 required
                 className="w-full rounded-xl border border-[#d4dfe2] px-4 py-3 text-sm text-[#193543] focus:border-[#a98639] focus:outline-none focus:ring-2 focus:ring-[#d4af37]/30"
               />
+              {field === 'phone' && <p id="contact-phone-hint" className="mt-1 text-xs leading-5 text-[#53616a]">{phoneCountryCodeHints[language] || phoneCountryCodeHints.english}</p>}
             </div>
           ))}
+
+          <div>
+            <label htmlFor="contact-service" className="mb-1 block text-sm font-semibold text-[#344b54]">{content.formLabels.service}</label>
+            <select id="contact-service" name="service" value={formData.service} onChange={handleChange} required className="w-full rounded-xl border border-[#d4dfe2] bg-white px-4 py-3 text-sm text-[#193543] focus:border-[#a98639] focus:outline-none focus:ring-2 focus:ring-[#d4af37]/30">
+              <option value="">{content.formLabels.service}</option>
+              {content.services.map((service) => <option key={service} value={service}>{service}</option>)}
+              <option value="Other treatment or not sure">{otherServiceLabels[language] || otherServiceLabels.english}</option>
+            </select>
+          </div>
+
+          <div>
+            <label htmlFor="consultation-date" className="mb-1 block text-sm font-semibold text-[#344b54]">{preferredDateLabels[language] || preferredDateLabels.english}</label>
+            <input id="consultation-date" name="date" type="date" min={earliestDate} value={preferences.date} onChange={handlePreference} required className="w-full rounded-xl border border-[#d4dfe2] bg-white px-4 py-3 text-sm text-[#193543] focus:border-[#a98639] focus:outline-none focus:ring-2 focus:ring-[#d4af37]/30" />
+            <p className="mt-1 text-xs leading-5 text-[#53616a]">{consultationDateHints[language] || consultationDateHints.english}</p>
+          </div>
 
           <label htmlFor="contact-message" className="sr-only">{content.formLabels.message}</label>
           <textarea
@@ -225,11 +227,6 @@ export default function ContactForm({ embedded = false }) {
                 <label htmlFor="consultation-country" className="mb-1 block text-xs font-semibold text-[#344b54]">{fields.country}</label>
                 <input id="consultation-country" name="country" list="consultation-countries" autoComplete="country-name" value={preferences.country} onChange={handlePreference} className="w-full rounded-lg border border-[#d4dfe2] bg-white px-3 py-2.5 text-sm text-[#193543] focus:border-[#a98639] focus:outline-none focus:ring-2 focus:ring-[#d4af37]/30" />
                 <datalist id="consultation-countries">{countryNames(countryLocale).map((country) => <option key={country} value={country} />)}</datalist>
-              </div>
-              <div>
-                <label htmlFor="consultation-date" className="mb-1 block text-xs font-semibold text-[#344b54]">{fields.date}</label>
-                <input id="consultation-date" name="date" type="date" min={earliestDate} value={preferences.date} onChange={handlePreference} className="w-full rounded-lg border border-[#d4dfe2] bg-white px-3 py-2.5 text-sm text-[#193543] focus:border-[#a98639] focus:outline-none focus:ring-2 focus:ring-[#d4af37]/30" />
-                <p className="mt-1 text-xs leading-5 text-[#53616a]">{consultationDateHints[language] || consultationDateHints.english}</p>
               </div>
               <div>
                 <label htmlFor="consultation-method" className="mb-1 block text-xs font-semibold text-[#344b54]">{fields.method}</label>

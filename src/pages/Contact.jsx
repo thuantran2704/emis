@@ -6,6 +6,8 @@ import { useSelector } from 'react-redux';
 import { Helmet } from 'react-helmet';
 import { primaryContactItems, socialContactItems } from '../data/contactChannels';
 import { localDateInputMin } from '../data/appointmentDate';
+import { appointmentSubmissionFeedback } from '../data/appointmentFeedback';
+import { phoneCountryCodeHints } from '../data/consultationFields';
 export default function Contact() {
   const language = useSelector((state) => state.language.language);
   const content = contactContent[language] || contactContent.english;
@@ -98,17 +100,7 @@ export default function Contact() {
 
       setAlert({
         show: true,
-        message: (() => {
-          switch (language) {
-            case 'english': return 'Appointment booked successfully!';
-            case 'vietnamese': return 'Đặt lịch hẹn thành công!';
-            case 'simplified': return '预约成功!';
-            case 'traditional': return '預約成功!';
-            case 'french': return 'Rendez-vous réservé avec succès!';
-            case 'korean': return '예약이 성공적으로 완료되었습니다!';
-            default: return 'Appointment booked successfully!';
-          }
-        })(),
+        message: (appointmentSubmissionFeedback[language] || appointmentSubmissionFeedback.english).success,
         type: 'success'
       });
 
@@ -116,17 +108,7 @@ export default function Contact() {
       setIsSubmitting(false);
       setAlert({
         show: true,
-        message: (() => {
-          switch (language) {
-            case 'english': return 'Failed to book appointment. Please try again.';
-            case 'vietnamese': return 'Đặt lịch hẹn không thành công. Vui lòng thử lại.';
-            case 'simplified': return '预约失败，请重试。';
-            case 'traditional': return '預約失敗，請重試。';
-            case 'french': return 'Échec de la réservation. Veuillez réessayer.';
-            case 'korean': return '예약에 실패했습니다. 다시 시도해 주세요.';
-            default: return 'Failed to book appointment. Please try again.';
-          }
-        })(),
+        message: (appointmentSubmissionFeedback[language] || appointmentSubmissionFeedback.english).error,
         type: 'error'
       });
     }
@@ -251,12 +233,15 @@ export default function Contact() {
                       name={field}
                       min={field === "date" ? earliestDate : undefined}
                       autoComplete={field === "phone" ? "tel" : field === "email" ? "email" : field === "name" ? "name" : undefined}
-                      placeholder={field === "phone" ? "+84 9xx xxx xxx" : undefined}
+                      aria-describedby={field === "phone" ? "appointment-phone-hint" : undefined}
+                      maxLength={field === "phone" ? 20 : undefined}
+                      placeholder={field === "phone" ? "+84 912 345 678" : undefined}
                       value={formData[field]}
                       onChange={handleChange}
                       className="w-full p-2.5 border border-[#6b7280] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4af37]"
                       required
                     />
+                    {field === 'phone' && <p id="appointment-phone-hint" className="mt-1 text-xs leading-5 text-[#53616a]">{phoneCountryCodeHints[language] || phoneCountryCodeHints.english}</p>}
                   </div>
                 ))}
 
