@@ -95,7 +95,7 @@ export default function GuidedChat() {
   const activeCategory = categoryIndex != null ? categories[categoryIndex] : null;
 
   return (
-    <div className="fixed bottom-6 right-6 z-[9999]">
+    <div className="fixed bottom-6 right-6 z-50 hidden sm:block">
       {isOpen && (
         <div
           className="absolute bottom-full right-0 mb-3 flex h-[min(72vh,34rem)] w-[min(92vw,23rem)] flex-col overflow-hidden rounded-2xl border border-[#eadfc4] bg-white shadow-[0_18px_40px_rgba(31,41,55,0.22)] animate-chat-in"

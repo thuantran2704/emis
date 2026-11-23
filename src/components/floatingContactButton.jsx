@@ -1,94 +1,51 @@
-import { useState } from "react";
-import { Phone, Mail, MessageSquare, Facebook, MessageCircle } from "lucide-react";
-import { publicEmailHref } from '../data/contactChannels';
+import { contactItems } from '../data/contactChannels';
+import { useSelector } from 'react-redux';
+
+const contactLabels = {
+  english: { heading: 'Quick contact', Phone: 'Phone', Email: 'Email' },
+  vietnamese: { heading: 'Liên hệ nhanh', Phone: 'Gọi', Email: 'Email' },
+  french: { heading: 'Contact rapide', Phone: 'Appel', Email: 'E-mail' },
+  korean: { heading: '빠른 연락', Phone: '전화', Email: '이메일' },
+  simplified: { heading: '快速联系', Phone: '电话', Email: '电邮' },
+  traditional: { heading: '快速聯絡', Phone: '電話', Email: '電郵' },
+};
+
+const quickContacts = contactItems.filter(({ label }) =>
+  ['WhatsApp', 'Phone', 'Email', 'Zalo', 'Facebook'].includes(label)
+);
 
 export default function FloatingContactButton() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const items = [
-    {
-      label: "WhatsApp",
-      href: "https://wa.me/84909967649",
-      icon: <MessageCircle className="h-5 w-5" />,
-    },
-    {
-      label: "Phone",
-      href: "tel:+84919100021",
-      icon: <Phone className="h-5 w-5" />,
-    },
-    {
-      label: "Email",
-      href: publicEmailHref,
-      icon: <Mail className="h-5 w-5" />,
-    },
-    {
-      label: "Zalo",
-      href: "https://zalo.me/2143697215679541994",
-      icon: <MessageSquare className="h-5 w-5" />,
-    },
-    {
-      label: "Facebook",
-      href: "https://www.facebook.com/emisinternationaldental/",
-      icon: <Facebook className="h-5 w-5" />,
-    },
-  ];
+  const language = useSelector((state) => state.language.language);
+  const labels = contactLabels[language] || contactLabels.english;
 
   return (
-    <div className="fixed bottom-6 left-6 z-[9999]">
-      {/* Panel */}
-      {isOpen && (
-        <div className="absolute bottom-full left-0 mb-3 w-52 bg-white rounded-xl shadow-xl border border-[#d4af37] overflow-hidden animate-fade-in">
-          {items.map((item, idx) => (
-            <a
-              key={idx}
-              href={item.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-3 px-4 py-3 border-b border-[#d4af37] hover:bg-[#fff6da] transition-colors last:border-b-0"
-            >
-              <div className="text-[#d4af37]">{item.icon}</div>
-              <span className="text-[#1f2937] font-medium">{item.label}</span>
-            </a>
-          ))}
-        </div>
-      )}
-
-      {/* Floating Button */}
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="h-12 w-12 rounded-full bg-[#d4af37] text-white shadow-lg flex items-center justify-center cursor-pointer hover:bg-[#c19d30] transition-all"
-      >
-        {/* ICON ONLY SHAKES */}
-        <MessageCircle className="h-7 w-7 animate-vibrate" strokeWidth={2} />
-      </button>
-
-      {/* Animations */}
-      <style>{`
-        /* PHONE CALL STYLE VIBRATION */
-        @keyframes vibrate {
-          0%   { transform: rotate(0deg); }
-          15%  { transform: rotate(-15deg); }
-          30%  { transform: rotate(15deg); }
-          45%  { transform: rotate(-10deg); }
-          60%  { transform: rotate(10deg); }
-          75%  { transform: rotate(-5deg); }
-          100% { transform: rotate(0deg); }
-        }
-
-        .animate-vibrate {
-          animation: vibrate 1s ease-in-out infinite;
-          transform-origin: center;
-        }
-
-        /* Menu fade in */
-        @keyframes fade-in {
-          from { opacity: 0; transform: translateY(10px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in {
-          animation: fade-in 0.25s ease-out;
-        }
-      `}</style>
-    </div>
+    <nav
+      aria-label={labels.heading}
+      className="fixed inset-x-2 z-40 sm:inset-x-auto sm:left-6"
+      style={{ bottom: 'max(0.75rem, env(safe-area-inset-bottom))' }}
+    >
+      <ul className="mx-auto flex max-w-[23rem] items-end justify-center gap-1.5 sm:mx-0 sm:max-w-none sm:gap-2">
+        {quickContacts.map((item) => {
+          const { label, href } = item;
+          const displayLabel = labels[label] || label;
+          const isExternal = href.startsWith('http');
+          return (
+            <li key={label} className="min-w-0 flex-1 sm:flex-none">
+              <a
+                href={href}
+                target={isExternal ? '_blank' : undefined}
+                rel={isExternal ? 'noopener noreferrer' : undefined}
+                aria-label={displayLabel}
+                title={displayLabel}
+                className="group flex min-h-[4.5rem] w-full flex-col items-center justify-center rounded-xl border border-[#c8a54f] bg-[#162d38] px-1 py-1.5 text-[#f2d887] shadow-[0_8px_24px_rgba(14,34,41,0.25)] transition-colors hover:bg-[#244452] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9a7525] sm:h-12 sm:min-h-0 sm:w-12 sm:rounded-full sm:p-0 lg:w-auto lg:flex-row lg:gap-2 lg:px-3"
+              >
+                <item.icon aria-hidden="true" className="h-5 w-5 shrink-0 sm:h-[1.35rem] sm:w-[1.35rem]" />
+                <span className="mt-1 max-w-full truncate text-[10px] font-medium leading-3 text-white sm:sr-only lg:not-sr-only lg:mt-0 lg:text-xs">{displayLabel}</span>
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
   );
 }

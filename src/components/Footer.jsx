@@ -144,7 +144,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-[#111317] text-white border-t border-white/10">
-      <div className="max-w-6xl mx-auto px-6 py-12">
+      <div className="max-w-6xl mx-auto px-6 pt-12 pb-28 sm:pb-24">
         {/* Logo */}
         <div className="mb-10 hidden lg:block">
           <img
