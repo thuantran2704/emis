@@ -4,8 +4,10 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { Helmet } from 'react-helmet';
 
-import heroImage from '../pics/doctor-explaining-treatment-x-ray-angle-3.jpg';
 import consultationImage from '../pics/doctor-explaining-procedure-to-patient.jpg';
+import zhannaBefore from '../pics/real-cases/zhanna-before.jpg';
+import zhannaAfter from '../pics/real-cases/zhanna-after.jpg';
+import realCasesContent from '../Translations/realCasesContent';
 
 import form1Eng from '../pics/WEB/forms/eng/01-baby-style.png';
 import form2Eng from '../pics/WEB/forms/eng/02-aggressive-style.png';
@@ -32,6 +34,8 @@ export default function VeneerLanding() {
   const language = useSelector((state) => state.language.language);
 
   const copy = veneerContent[language] ?? veneerContent.english;
+  const caseCopy = realCasesContent[language] ?? realCasesContent.english;
+  const zhannaCase = caseCopy.cases['sergey-zhanna'];
 
   const shapeImages = language === 'vietnamese'
     ? [form1Vie, form2Vie, form3Vie, form4Vie, form5Vie, form6Vie, form7Vie, form8Vie]
@@ -75,12 +79,23 @@ export default function VeneerLanding() {
               </Link>
             </div>
           </div>
-          <div className="w-full rounded-2xl overflow-hidden shadow-sm border border-[#dbe4ec] bg-[#f7fafc]">
-            <img
-              src={heroImage}
-              alt={imageAlt('Cosmetic veneer treatment visual', language)}
-              className="w-full h-[220px] sm:h-[300px] lg:h-[400px] object-cover object-center"
-            />
+          <div className="w-full overflow-hidden rounded-2xl border border-[#e4d8ba] bg-[#faf9f6] shadow-[0_18px_45px_rgba(27,40,50,0.09)]">
+            <div className="grid gap-1.5 bg-[#e9ddc0] p-1.5">
+              {[[zhannaBefore, caseCopy.beforeLabel], [zhannaAfter, caseCopy.afterLabel]].map(([src, label]) => (
+                <figure key={label} className="relative overflow-hidden rounded-xl bg-white">
+                  <img src={src} alt={`${label}: ${zhannaCase.galleryAlt}`} className="block aspect-[750/290] w-full object-cover" />
+                  <figcaption className="absolute bottom-2 left-2 rounded-full bg-[#193543] px-3 py-1 text-xs font-semibold text-white">
+                    {label}
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+            <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1 px-4 py-3 text-sm">
+              <span className="font-medium text-[#405363]">{zhannaCase.galleryAlt}</span>
+              <Link to="/real-cases/sergey-zhanna" className="font-semibold text-[#80611f] underline underline-offset-4 hover:text-[#193543]">
+                {caseCopy.readCase}
+              </Link>
+            </div>
           </div>
         </div>
       </section>
