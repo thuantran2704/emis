@@ -25,7 +25,7 @@ import pathwayConsult from '../pics/doctor-explaining-procedure-to-patient.jpg';
 import treatmentImage from '../pics/dr-at-work-with-nurse.jpg';
 import followupImage from '../pics/doctor-explaining-treatment-x-ray-angle-3.jpg';
 import longTermCare from '../pics/khach_cuoi_chup_hinh_voi_bs.jpg';
-import internationalSupport from '../pics/Phong-cho-waiting-room-Emis.jpg';
+import internationalSupport from '../pics/phong-kham.jpg';
 import ContactForm from '../components/ContactForm';
 import ImplantPlannerBanner from '../components/implants_banner';
 import serviceImplant from '../pics/implant-illustration.jpg';
@@ -439,8 +439,8 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="hidden overflow-hidden rounded-3xl shadow-lg h-full lg:landscape:block">
-            <img src={internationalSupport} alt={imageAlt('Waiting and reception area at Emis Dental', language)} loading="lazy" decoding="async" className="h-full w-full object-cover object-center" />
+          <div className="mx-auto w-full max-w-2xl overflow-hidden rounded-3xl border border-[#e8dcc2] bg-[#f7f2e7] shadow-lg lg:landscape:mx-0 lg:landscape:self-center">
+            <img src={internationalSupport} alt={imageAlt('Dental treatment room with chair and wall lighting at Emis Dental', language)} loading="lazy" decoding="async" className="block aspect-[6/5] w-full object-cover object-[center_72%]" />
           </div>
         </div>
       </Section>
