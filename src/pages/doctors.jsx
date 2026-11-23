@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { Helmet } from 'react-helmet';
 import doctorsContent from '../Translations/doctorsContent';
+import { doctorsSeoMeta } from '../data/seoMeta';
 import patient2 from '../pics/patient2.jpg';
 import ContactForm from '../components/ContactForm.jsx';
 import consultationImage from '../pics/consulting-team.jpg';
@@ -12,14 +13,15 @@ import { DOCTORS, getDoctorTranslation } from '../data/doctors';
 const Doctors = () => {
   const language = useSelector((state) => state.language.language);
   const content = doctorsContent[language] || doctorsContent.english;
+  const seo = doctorsSeoMeta[language] || doctorsSeoMeta.english;
 
   return (
     <main className="bg-[#f7f2e7] pt-20">
       <Helmet>
-        <title>{content.metaTitle}</title>
-        <meta name="description" content={content.hero.subtitle} />
-        <meta property="og:title" content={content.metaTitle} />
-        <meta property="og:description" content={content.hero.subtitle} />
+        <title>{seo.title}</title>
+        <meta name="description" content={seo.description} />
+        <meta property="og:title" content={seo.title} />
+        <meta property="og:description" content={seo.description} />
       </Helmet>
 
       {/* HERO SECTION */}

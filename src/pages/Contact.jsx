@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Alert from '../components/alert';
 import contactContent from '../Translations/contactContent';
+import { contactSeoMeta } from '../data/seoMeta';
 import ClientRecaptcha from '../components/ClientRecaptcha';
 import { useSelector } from 'react-redux';
 import { Helmet } from 'react-helmet';
@@ -11,6 +12,7 @@ import { phoneCountryCodeHints } from '../data/consultationFields';
 export default function Contact() {
   const language = useSelector((state) => state.language.language);
   const content = contactContent[language] || contactContent.english;
+  const seo = contactSeoMeta[language] || contactSeoMeta.english;
   const [earliestDate, setEarliestDate] = useState('');
   useEffect(() => { setEarliestDate(localDateInputMin()); }, []);
   const [recaptchaToken, setRecaptchaToken] = useState(null);
@@ -117,10 +119,10 @@ export default function Contact() {
   return (
     <main className="min-h-[calc(100vh-4rem)] bg-[#f7f2e7]">
       <Helmet>
-        <title>{content.metaTitle}</title>
-        <meta name="description" content={content.metaDescription} />
-        <meta property="og:title" content={content.metaTitle} />
-        <meta property="og:description" content={content.metaDescription} />
+        <title>{seo.title}</title>
+        <meta name="description" content={seo.description} />
+        <meta property="og:title" content={seo.title} />
+        <meta property="og:description" content={seo.description} />
       </Helmet>
       {alert.show && (
         <Alert
@@ -280,6 +282,7 @@ export default function Contact() {
                     id="message"
                     name="message"
                     rows="3"
+                    maxLength={500}
                     value={formData.message}
                     onChange={handleChange}
                     className="w-full p-2.5 border border-[#6b7280] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#d4af37]"

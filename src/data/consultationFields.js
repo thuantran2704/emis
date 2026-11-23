@@ -56,16 +56,3 @@ export const otherServiceLabels = {
   french: 'Autre soin ou pas encore sûr',
   korean: '기타 치료 또는 미정',
 };
-
-const countryCache = new Map();
-
-export function countryNames(locale) {
-  if (countryCache.has(locale)) return countryCache.get(locale);
-  const names = new Intl.DisplayNames([locale], { type: 'region' });
-  const regionNames = Array.from({ length: 26 * 26 }, (_, index) => String.fromCharCode(65 + Math.floor(index / 26), 65 + index % 26))
-    .map((code) => names.of(code))
-    .filter((name) => name && !/^[A-Z]{2}$/.test(name));
-  const countries = Array.from(new Set(regionNames)).sort((a, b) => a.localeCompare(b, locale));
-  countryCache.set(locale, countries);
-  return countries;
-}

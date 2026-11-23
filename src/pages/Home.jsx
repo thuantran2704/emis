@@ -5,6 +5,8 @@ import { Helmet } from 'react-helmet';
 import { useSelector } from 'react-redux';
 import homeContent from '../Translations/homeContent';
 import { homeRefresh } from '../data/homeRefresh';
+import { careGuides } from '../data/careGuides';
+import { homeSeoMeta } from '../data/seoMeta';
 import { googleReviewsUrl } from '../data/contactChannels';
 import realCasesContent from '../Translations/realCasesContent';
 import { realCaseIds } from '../data/realCaseAssets';
@@ -52,7 +54,9 @@ export default function Home() {
   const language = useSelector((state) => state.language.language);
   const localizedHome = homeContent[language] || homeContent.english;
   const page = localizedHome.homepageV2 || homeContent.english.homepageV2;
+  const seo = homeSeoMeta[language] || homeSeoMeta.english;
   const refresh = homeRefresh[language] || homeRefresh.english;
+  const guides = careGuides[language] || careGuides.english;
   const casesContent = realCasesContent[language] || realCasesContent.english;
   const [activeSlide, setActiveSlide] = useState(0);
   const journeyPics = [chatPreTrip, chatMedHistory, chatAirport, chatAftercare];
@@ -62,10 +66,10 @@ export default function Home() {
   return (
     <main className="bg-[#faf9f6] text-[#20323e]">
       <Helmet>
-        <title>{page.metaTitle}</title>
-        <meta name="description" content={page.metaDescription} />
-        <meta property="og:title" content={page.metaTitle} />
-        <meta property="og:description" content={page.metaDescription} />
+        <title>{seo.title}</title>
+        <meta name="description" content={seo.description} />
+        <meta property="og:title" content={seo.title} />
+        <meta property="og:description" content={seo.description} />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://www.emisdental.com/og-image.jpg" />
         <meta property="og:locale" content={locales[language] || 'en_US'} />
@@ -171,7 +175,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6">
           <div className="text-center">
             <Text variant="eyebrow" className="mb-4">{page.confidence.label}</Text>
-            <Text variant="title">{refresh.whyTitle}</Text>
+            <Text variant="title" className="uppercase">{refresh.whyTitle}</Text>
             <Text variant="intro" className="mt-4">{refresh.whyIntro}</Text>
           </div>
 
@@ -335,6 +339,18 @@ export default function Home() {
                 <span className="mt-6 text-sm font-semibold text-[#87651e] group-hover:underline">{refresh.serviceLink} &rarr;</span>
               </Link>
             ))}
+          </div>
+          <div className="mt-12 border-t border-[#e3d9c1] pt-8">
+            <h3 className="text-xl font-semibold text-[#193543]">{guides.heading}</h3>
+            <p className="mt-2 text-sm leading-6 text-[#405363]">{guides.intro}</p>
+            <div className="mt-5 grid gap-x-8 gap-y-4 sm:grid-cols-2">
+              {guides.items.map(([title, description, href]) => (
+                <Link key={href} to={href} className="group border-l-2 border-[#c9a652] pl-4 focus-visible:outline-offset-4">
+                  <span className="font-semibold text-[#193543] group-hover:underline">{title}</span>
+                  <span className="mt-1 block text-sm leading-6 text-[#405363]">{description}</span>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>

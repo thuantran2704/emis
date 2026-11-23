@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { Helmet } from 'react-helmet';
 import drTuContent from '../Translations/drTuContent';
+import { drTuSeoMeta } from '../data/seoMeta';
 import DoctorProfileSection from '../components/DoctorProfileSection';
 import { DOCTORS, getDoctorTranslation } from '../data/doctors';
 
@@ -20,12 +21,15 @@ export default function DrTuPage() {
   const t = getDoctorTranslation(doctor, language);
   const content = drTuContent[language] || drTuContent.english;
   const labels = sectionLabels[language] || sectionLabels.english;
+  const seo = drTuSeoMeta[language] || drTuSeoMeta.english;
 
   return (
     <main className="min-h-[calc(100vh-4rem)] bg-[#f7fafc] pt-20">
       <Helmet>
-        <title>{t.name} | Emis Dental</title>
-        <meta name="description" content={t.summary} />
+        <title>{seo.title}</title>
+        <meta name="description" content={seo.description} />
+        <meta property="og:title" content={seo.title} />
+        <meta property="og:description" content={seo.description} />
       </Helmet>
       <section className="bg-white">
         <div className="mx-auto grid max-w-6xl gap-12 px-6 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:py-24">
