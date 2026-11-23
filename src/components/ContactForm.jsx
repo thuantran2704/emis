@@ -209,22 +209,16 @@ export default function ContactForm({ embedded = false }) {
             <p className="mt-1 text-xs leading-5 text-[#53616a]">{consultationDateHints[language] || consultationDateHints.english}</p>
           </div>
 
-          <div className="sm:col-span-2">
-            <label htmlFor="contact-message" className={labelClass}>{content.formLabels.message}</label>
-            <textarea
-              id="contact-message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              maxLength={CONSULTATION_MESSAGE_LIMIT}
-              rows="3"
-              className={controlClass}
-            />
-          </div>
-
-          <fieldset className="min-w-0 border-t border-[#e1e5df] pt-5 sm:col-span-2">
-            <legend className="pr-3 text-sm font-semibold text-[#193543]">{fields.heading} <span className="font-normal text-[#53616a]">({fields.optional})</span></legend>
-            <div className="mt-3 grid gap-4 sm:grid-cols-2">
+          <details className="group min-w-0 border-t border-[#e1e5df] pt-4 sm:col-span-2">
+            <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-4 rounded-lg text-sm font-semibold text-[#193543] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#193543] [&::-webkit-details-marker]:hidden">
+              <span>{fields.heading} <span className="font-normal text-[#53616a]">({fields.optional})</span></span>
+              <svg aria-hidden="true" className="h-5 w-5 shrink-0 text-[#8f6b27] transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="none"><path d="m4 7 6 6 6-6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>
+            </summary>
+            <div className="mt-4 grid gap-4 sm:grid-cols-2">
+              <div className="sm:col-span-2">
+                <label htmlFor="contact-message" className={labelClass}>{content.formLabels.message}</label>
+                <textarea id="contact-message" name="message" value={formData.message} onChange={handleChange} maxLength={CONSULTATION_MESSAGE_LIMIT} rows="3" className={controlClass} />
+              </div>
               <div>
                 <label htmlFor="consultation-country" className={labelClass}>{fields.country}</label>
                 <input id="consultation-country" name="country" type="text" autoComplete="country-name" maxLength={CONSULTATION_COUNTRY_LIMIT} value={preferences.country} onChange={handlePreference} className={controlClass} />
@@ -252,7 +246,7 @@ export default function ContactForm({ embedded = false }) {
               </div>
             </div>
             {preferences.method && <p className="mt-3 text-xs leading-5 text-[#53616a]">{fields.contactHint} {['WhatsApp', 'Messenger', 'Zalo'].includes(preferences.method) && <a href={preferences.method === 'Messenger' ? socialProfiles.facebook : contactItems.find((item) => item.label === preferences.method)?.href} target="_blank" rel="noopener noreferrer" className="font-semibold text-[#765a1e] underline">{preferences.method}</a>}</p>}
-          </fieldset>
+          </details>
 
           <div className="flex min-w-0 justify-center overflow-x-auto py-2 sm:col-span-2">
             {recaptchaSiteKey ? (
