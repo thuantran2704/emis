@@ -1,5 +1,6 @@
 const drTuContent = {
   "english": {
+    "serviceLabel": "English-language dental care in District 3",
     "contact": "Discuss your situation",
     "education": [
       "Brigham Young University (USA)",
@@ -15,6 +16,7 @@ const drTuContent = {
     ]
   },
   "vietnamese": {
+    "serviceLabel": "Dịch vụ nha khoa tiếng Anh tại Quận 3",
     "contact": "Trao đổi tình trạng của bạn",
     "education": [
       "Đại học Brigham Young (Hoa Kỳ)",
@@ -30,6 +32,7 @@ const drTuContent = {
     ]
   },
   "french": {
+    "serviceLabel": "Soins dentaires en anglais dans le district 3",
     "contact": "Parler de votre situation",
     "education": [
       "Brigham Young University (États-Unis)",
@@ -45,6 +48,7 @@ const drTuContent = {
     ]
   },
   "simplified": {
+    "serviceLabel": "胡志明市第三区英语牙科服务",
     "contact": "沟通您的情况",
     "education": [
       "杨百翰大学（美国）",
@@ -60,6 +64,7 @@ const drTuContent = {
     ]
   },
   "traditional": {
+    "serviceLabel": "胡志明市第三郡英語牙科服務",
     "contact": "討論您的情況",
     "education": [
       "楊百翰大學（美國）",
@@ -75,6 +80,7 @@ const drTuContent = {
     ]
   },
   "korean": {
+    "serviceLabel": "호찌민시 3군 영어 치과 진료",
     "contact": "상태 상담하기",
     "education": [
       "브리검영대학교(미국)",

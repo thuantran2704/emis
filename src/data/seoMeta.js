@@ -54,12 +54,12 @@ export const doctorsSeoMeta = {
 };
 
 export const drTuSeoMeta = {
-  english: { title: 'Dr. Tran Minh Tu | Clinical Profile | Emis Dental', description: 'Read Dr. Tran Minh Tu’s clinical profile, including his oral surgery focus, education in Vietnam, the USA and Hungary, and languages spoken.' },
-  vietnamese: { title: 'BS.CKI Trần Minh Tú | Hồ sơ bác sĩ | Emis Dental', description: 'Xem hồ sơ chuyên môn của BS.CKI Trần Minh Tú: lĩnh vực phẫu thuật răng miệng, quá trình học tập tại Việt Nam, Hoa Kỳ và Hungary, cùng ngôn ngữ giao tiếp.' },
-  simplified: { title: 'Trần Minh Tú 医生 | 医生资料 | Emis Dental', description: '了解 Trần Minh Tú 医生的临床资料，包括口腔手术领域、在越南、美国与匈牙利的学习经历及沟通语言。' },
-  traditional: { title: 'Trần Minh Tú 醫師 | 醫師資料 | Emis Dental', description: '了解 Trần Minh Tú 醫師的臨床資料，包括口腔手術領域、在越南、美國與匈牙利的學習經歷及溝通語言。' },
-  french: { title: 'Dr Tran Minh Tu | Profil clinique | Emis Dental', description: 'Découvrez le profil clinique du Dr Tran Minh Tu : chirurgie orale, formation au Vietnam, aux États-Unis et en Hongrie, et langues parlées.' },
-  korean: { title: '쩐 민 뚜 치과의사 | 의료진 소개 | Emis Dental', description: '쩐 민 뚜 치과의사의 임상 분야, 베트남·미국·헝가리 교육 이력과 사용 언어를 확인하세요.' },
+  english: { title: 'English-Language Dental Care | Dr. Tran Minh Tu | Emis Dental', description: 'Explore English-language dental care at Emis Dental and read Dr. Tran Minh Tu’s clinical profile, including his training in Vietnam, the USA and Hungary.' },
+  vietnamese: { title: 'Dịch vụ nha khoa tiếng Anh | BS.CKI Trần Minh Tú | Emis Dental', description: 'Tìm hiểu dịch vụ nha khoa tiếng Anh tại Emis Dental và hồ sơ chuyên môn của BS.CKI Trần Minh Tú, gồm quá trình học tập tại Việt Nam, Hoa Kỳ và Hungary.' },
+  simplified: { title: '英语牙科服务 | Trần Minh Tú 医生 | Emis Dental', description: '了解 Emis Dental 的英语牙科服务及 Trần Minh Tú 医生的临床资料，包括在越南、美国与匈牙利的学习经历。' },
+  traditional: { title: '英語牙科服務 | Trần Minh Tú 醫師 | Emis Dental', description: '了解 Emis Dental 的英語牙科服務及 Trần Minh Tú 醫師的臨床資料，包括在越南、美國與匈牙利的學習經歷。' },
+  french: { title: 'Soins dentaires en anglais | Dr Tran Minh Tu | Emis Dental', description: 'Découvrez les soins dentaires en anglais chez Emis Dental et le profil clinique du Dr Tran Minh Tu, formé au Vietnam, aux États-Unis et en Hongrie.' },
+  korean: { title: '영어 치과 진료 | 쩐 민 뚜 치과의사 | Emis Dental', description: 'Emis Dental의 영어 치과 진료와 쩐 민 뚜 치과의사의 임상 프로필을 확인하세요. 베트남, 미국, 헝가리에서 교육받았습니다.' },
 };
 
 export const contactSeoMeta = {

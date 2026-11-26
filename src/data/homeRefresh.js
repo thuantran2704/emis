@@ -4,7 +4,7 @@ export const homeRefresh = {
     aboutLabel: 'ABOUT EMIS DENTAL',
     aboutTitle: 'Dental care in the heart of District 3',
     aboutText: 'At 62B Pham Ngoc Thach, Emis Dental brings implant, restorative and aesthetic care together with clear treatment planning. Ask about care in English or Chinese for local and international patients.',
-    servicesLink: 'Explore dental services', chineseCareLink: 'Chinese-language dental care', doctorsLink: 'Clinical profiles',
+    servicesLink: 'Explore dental services', chineseCareLink: 'Chinese-language dental care', englishCareLink: 'English-language dental care', doctorsLink: 'Clinical profiles',
     whyTitle: 'Why Emis Dental?',
     whyIntro: 'Dental treatment is a significant decision when your time in Ho Chi Minh City is limited. We explain suitable options in English, Chinese or Vietnamese and plan around your clinical needs and travel schedule.',
     careTitle: 'Implants, orthodontics and aesthetic restorations',
@@ -23,7 +23,7 @@ export const homeRefresh = {
   vietnamese: {
     aboutLabel: 'GIỚI THIỆU EMIS DENTAL', aboutTitle: 'Nha khoa tại trung tâm Quận 3',
     aboutText: 'Tại 62B Phạm Ngọc Thạch, Emis Dental kết hợp cấy ghép Implant, phục hình và chăm sóc thẩm mỹ với kế hoạch điều trị rõ ràng cho khách hàng trong nước và quốc tế.',
-    servicesLink: 'Xem dịch vụ nha khoa', chineseCareLink: 'Nha khoa tiếng Trung', doctorsLink: 'Hồ sơ bác sĩ',
+    servicesLink: 'Xem dịch vụ nha khoa', chineseCareLink: 'Nha khoa tiếng Trung', englishCareLink: 'Nha khoa tiếng Anh', doctorsLink: 'Hồ sơ bác sĩ',
     whyTitle: 'Vì sao chọn Emis Dental?',
     whyIntro: 'Điều trị nha khoa là quyết định quan trọng khi thời gian ở TP. Hồ Chí Minh có hạn. Chúng tôi giải thích các lựa chọn bằng tiếng Việt, tiếng Anh hoặc tiếng Trung và lập kế hoạch theo tình trạng răng miệng cùng lịch trình của bạn.',
     careTitle: 'Cấy ghép Implant, chỉnh nha và phục hình thẩm mỹ',
@@ -37,7 +37,7 @@ export const homeRefresh = {
   simplified: {
     aboutLabel: '关于 EMIS DENTAL', aboutTitle: '胡志明市第三郡的牙科诊所',
     aboutText: 'Emis Dental 位于 Pham Ngoc Thach 街 62B 号，提供种植牙、牙齿修复和美学牙科服务，并为本地及国际患者制定清晰的治疗计划。',
-    servicesLink: '了解牙科服务', chineseCareLink: '中文牙科服务', doctorsLink: '医生资料', whyTitle: '为什么选择 Emis Dental？',
+    servicesLink: '了解牙科服务', chineseCareLink: '中文牙科服务', englishCareLink: '英语牙科服务', doctorsLink: '医生资料', whyTitle: '为什么选择 Emis Dental？',
     whyIntro: '如果您在胡志明市停留时间有限，牙科治疗更需要周密规划。我们可用中文、英语或越南语说明治疗选择，并结合检查结果与行程制定计划。',
     careTitle: '种植牙、正畸与美学修复', careText: '了解缺牙、牙齿排列和笑容美学的治疗选择。牙医会在个人评估后提出建议。',
     servicesLabel: '不止种植牙', servicesTitle: '其他牙科服务', servicesIntro: '从保存天然牙到规划笑容，找到合适的起点。',
@@ -47,7 +47,7 @@ export const homeRefresh = {
   traditional: {
     aboutLabel: '關於 EMIS DENTAL', aboutTitle: '胡志明市第三郡的牙科診所',
     aboutText: 'Emis Dental 位於 Pham Ngoc Thach 街 62B 號，提供植牙、牙齒修復與美學牙科服務，為本地及國際患者規劃清晰的治療步驟。',
-    servicesLink: '了解牙科服務', chineseCareLink: '中文牙科服務', doctorsLink: '醫師資料', whyTitle: '為什麼選擇 Emis Dental？',
+    servicesLink: '了解牙科服務', chineseCareLink: '中文牙科服務', englishCareLink: '英語牙科服務', doctorsLink: '醫師資料', whyTitle: '為什麼選擇 Emis Dental？',
     whyIntro: '若您在胡志明市停留時間有限，牙科治療更需要審慎規劃。我們可用中文、英語或越南語說明治療選擇，並依檢查結果與行程制定計畫。',
     careTitle: '植牙、矯正與美學修復', careText: '了解缺牙、牙齒排列及笑容美學的治療選擇。牙醫會在個別評估後提出建議。',
     servicesLabel: '不只植牙', servicesTitle: '其他牙科服務', servicesIntro: '從保存天然牙到規劃笑容，找到適合的起點。',
@@ -57,7 +57,7 @@ export const homeRefresh = {
   french: {
     aboutLabel: 'À PROPOS D’EMIS DENTAL', aboutTitle: 'Des soins dentaires au cœur du district 3',
     aboutText: 'Au 62B Pham Ngoc Thach, Emis Dental propose implants, restaurations et soins esthétiques avec une planification claire pour les patients locaux et internationaux.',
-    servicesLink: 'Découvrir les soins dentaires', chineseCareLink: 'Soins dentaires en chinois', doctorsLink: 'Profils cliniques', whyTitle: 'Pourquoi Emis Dental ?',
+    servicesLink: 'Découvrir les soins dentaires', chineseCareLink: 'Soins dentaires en chinois', englishCareLink: 'Soins dentaires en anglais', doctorsLink: 'Profils cliniques', whyTitle: 'Pourquoi Emis Dental ?',
     whyIntro: 'Un traitement dentaire demande une bonne planification lorsque votre séjour à Hô Chi Minh-Ville est court. Nous expliquons les options en anglais, en chinois ou en vietnamien et planifions selon vos besoins cliniques et votre calendrier.',
     careTitle: 'Implants, orthodontie et restaurations esthétiques', careText: 'Explorez les soins pour les dents manquantes, l’alignement et le sourire. Une recommandation suit toujours une évaluation individuelle.',
     servicesLabel: 'AU-DELÀ DES IMPLANTS', servicesTitle: 'Autres soins dentaires', servicesIntro: 'Trouvez un point de départ adapté, de la préservation d’une dent à l’esthétique du sourire.',
@@ -67,7 +67,7 @@ export const homeRefresh = {
   korean: {
     aboutLabel: 'EMIS DENTAL 소개', aboutTitle: '호찌민시 3군 중심의 치과 진료',
     aboutText: 'Pham Ngoc Thach 62B에 위치한 Emis Dental은 현지 및 해외 환자에게 임플란트, 치아 수복, 심미 치료와 명확한 치료 계획을 제공합니다.',
-    servicesLink: '치과 진료 보기', chineseCareLink: '중국어 치과 진료', doctorsLink: '의료진 프로필', whyTitle: '왜 Emis Dental인가요?',
+    servicesLink: '치과 진료 보기', chineseCareLink: '중국어 치과 진료', englishCareLink: '영어 치과 진료', doctorsLink: '의료진 프로필', whyTitle: '왜 Emis Dental인가요?',
     whyIntro: '호찌민시 체류 기간이 짧다면 치과 치료를 신중하게 계획해야 합니다. 영어, 중국어 또는 베트남어로 치료 선택지를 설명하고 진료 결과와 여행 일정에 맞춰 계획합니다.',
     careTitle: '임플란트, 교정 및 심미 수복', careText: '결손치, 치열, 미소 심미 치료의 선택지를 살펴보세요. 치료 권고는 개인별 진찰 후에 이루어집니다.',
     servicesLabel: '임플란트 그 이상', servicesTitle: '다른 치과 서비스', servicesIntro: '자연 치아 보존부터 미소 개선까지 알맞은 시작점을 찾아보세요.',

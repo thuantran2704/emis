@@ -36,6 +36,7 @@ export default function DrTuPage() {
           <div className="order-2 lg:order-1">
             <Link to="/doctors" className="mb-10 inline-flex min-h-11 items-center text-sm font-semibold text-[#806019] hover:underline">← {labels.back}</Link>
             <div className="mb-6 h-1 w-14 rounded-full bg-[#d7bc7b]" aria-hidden="true" />
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#806019] sm:text-sm">{content.serviceLabel}</p>
             <h1 className="text-4xl font-semibold leading-tight text-[#2a3439] sm:text-5xl">{t.name}</h1>
             <p className="mt-4 text-lg font-semibold text-[#806019]">{t.role}</p>
             <p className="mt-5 text-sm leading-relaxed text-[#46576a]">{t.specialties}</p>

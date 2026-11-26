@@ -321,6 +321,10 @@ export default function Navbar() {
               {content.chineseDentalService}
             </Link>
 
+            <Link to="/dr-tu" className={mobileLinkClass('/dr-tu')} onClick={closeAllMenus}>
+              {content.drTu}
+            </Link>
+
             <Link to="/doctors" className={mobileLinkClass('/doctors')} onClick={closeAllMenus}>
               {content.doctors}
             </Link>

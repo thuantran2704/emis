@@ -165,6 +165,7 @@ export default function Home() {
             <div className="mt-6 flex flex-wrap gap-x-7 gap-y-2">
               <Link to="/solutions" className="inline-flex min-h-11 items-center border-b border-[#bb984d] text-sm font-semibold text-[#193543] hover:text-[#8f6b27]">{refresh.servicesLink}</Link>
               <Link to="/dr-long" className="inline-flex min-h-11 items-center border-b border-[#bb984d] text-sm font-semibold text-[#193543] hover:text-[#8f6b27]">{refresh.chineseCareLink}</Link>
+              <Link to="/dr-tu" className="inline-flex min-h-11 items-center border-b border-[#bb984d] text-sm font-semibold text-[#193543] hover:text-[#8f6b27]">{refresh.englishCareLink}</Link>
               <Link to="/doctors" className="inline-flex min-h-11 items-center border-b border-[#bb984d] text-sm font-semibold text-[#193543] hover:text-[#8f6b27]">{refresh.doctorsLink}</Link>
             </div>
           </div>

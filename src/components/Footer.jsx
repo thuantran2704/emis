@@ -30,6 +30,7 @@ function buildFooterColumns(nav, f) {
       links: [
         { label: nav.about, to: '/about' },
         { label: nav.chineseDentalService, to: '/dr-long' },
+        { label: nav.drTu, to: '/dr-tu' },
         { label: nav.doctors, to: '/doctors' },
         { label: nav.internationalPatients, to: '/international-patients' },
         { label: fn.visitorProgram, to: '/visitor-program' },
