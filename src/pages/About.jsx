@@ -7,7 +7,7 @@ import equipmentContent from '../Translations/equipmentContent';
 import ServicesSlider from '../components/ServicesSlider';
 import Text from '../components/Text';
 import consultationImage from '../pics/doctor-explaining-procedure-to-patient.jpg';
-import planningImage from '../pics/dr-tu-working.jpg';
+import planningImage from '../pics/doctor-explaining-treatment-x-ray-angle-3.jpg';
 import technologyImage from '../pics/measuring-result-cbct-x-ray-patient-smiling.jpg';
 import internationalImage from '../pics/Phong-cho-waiting-room-Emis.jpg';
 import safetyImage from '../pics/sterile-room-phong-khu-trung.jpg';
@@ -128,7 +128,7 @@ const About = () => {
           <div className="rounded-2xl overflow-hidden shadow-sm aspect-[3/2]">
             <img
               src={planningImage}
-              alt={imageAlt('Dr. Tran Minh Tu reviewing a treatment plan at Emis Dental', language)}
+              alt={imageAlt('Emis Dental dentist discussing treatment with a patient', language)}
               loading="lazy"
               decoding="async"
               className="w-full h-full object-cover object-center"

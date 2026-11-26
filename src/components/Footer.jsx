@@ -29,8 +29,8 @@ function buildFooterColumns(nav, f) {
       heading: fn.aboutHeading,
       links: [
         { label: nav.about, to: '/about' },
-        { label: nav.doctors, to: '/doctors' },
         { label: nav.chineseDentalService, to: '/dr-long' },
+        { label: nav.doctors, to: '/doctors' },
         { label: nav.internationalPatients, to: '/international-patients' },
         { label: fn.visitorProgram, to: '/visitor-program' },
         { label: nav.contact, to: '/contact' },

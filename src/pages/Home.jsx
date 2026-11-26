@@ -163,7 +163,8 @@ export default function Home() {
             <h2 id="home-about-heading" className="max-w-[22ch] text-3xl font-semibold leading-tight text-[#193543] sm:text-4xl">{refresh.aboutTitle}</h2>
             <p className="mt-5 max-w-[66ch] text-base leading-8 text-[#405363]">{refresh.aboutText}</p>
             <div className="mt-6 flex flex-wrap gap-x-7 gap-y-2">
-              <Link to="/about" className="inline-flex min-h-11 items-center border-b border-[#bb984d] text-sm font-semibold text-[#193543] hover:text-[#8f6b27]">{refresh.aboutLink}</Link>
+              <Link to="/solutions" className="inline-flex min-h-11 items-center border-b border-[#bb984d] text-sm font-semibold text-[#193543] hover:text-[#8f6b27]">{refresh.servicesLink}</Link>
+              <Link to="/dr-long" className="inline-flex min-h-11 items-center border-b border-[#bb984d] text-sm font-semibold text-[#193543] hover:text-[#8f6b27]">{refresh.chineseCareLink}</Link>
               <Link to="/doctors" className="inline-flex min-h-11 items-center border-b border-[#bb984d] text-sm font-semibold text-[#193543] hover:text-[#8f6b27]">{refresh.doctorsLink}</Link>
             </div>
           </div>

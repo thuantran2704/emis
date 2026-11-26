@@ -85,15 +85,5 @@ export const schemaMarkup = JSON.stringify([
     "knowsLanguage": ["Vietnamese", "Chinese"],
     "worksFor": { "@id": "https://emisdental.com" },
     "url": "https://emisdental.com/dr-long"
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "@id": "https://emisdental.com/dr-tu#person",
-    "name": "Dr. Tran Minh Tu",
-    "jobTitle": "Odonto-Maxillofacial Surgeon",
-    "knowsLanguage": ["Vietnamese", "English"],
-    "worksFor": { "@id": "https://emisdental.com" },
-    "url": "https://emisdental.com/dr-tu"
   }
 ]);

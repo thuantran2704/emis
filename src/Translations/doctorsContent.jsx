@@ -57,7 +57,7 @@ const doctorsContent = {
     title: 'The Doctors Behind Your Treatment',
 
     subtitle:
-        'Every patient is different. Below are the doctors who support patients throughout their treatment journey at Emis Dental.',
+        'Explore the clinical profiles below to learn about each dentist’s background, areas of care and languages spoken.',
     },
 
     decisionSection: {
@@ -153,7 +153,7 @@ const doctorsContent = {
     title: 'Đội Ngũ Bác Sĩ Đồng Hành Cùng Bạn',
 
     subtitle:
-        'Mỗi bác sĩ mang đến một thế mạnh chuyên môn khác nhau. Dưới đây là đội ngũ bác sĩ đang đồng hành cùng bệnh nhân tại Emis Dental.',
+        'Tìm hiểu hồ sơ chuyên môn bên dưới để biết thêm về quá trình đào tạo, lĩnh vực điều trị và ngôn ngữ giao tiếp của từng bác sĩ.',
     },
 
     decisionSection: {
@@ -247,7 +247,7 @@ const doctorsContent = {
     title: 'Les Médecins Qui Vous Accompagnent',
 
     subtitle:
-    'Chaque patient est différent. Découvrez les praticiens qui accompagnent les patients tout au long de leur parcours de traitement chez Emis Dental.',
+      'Découvrez les profils cliniques ci-dessous pour connaître le parcours, les domaines de soins et les langues de chaque praticien.',
     },
 
     decisionSection: {
@@ -333,7 +333,7 @@ const doctorsContent = {
     title: '당신의 치료를 함께하는 의료진',
 
     subtitle:
-    '모든 환자는 서로 다릅니다. 아래는 Emis Dental에서 환자의 치료 여정을 함께하는 의료진입니다.',
+      '아래 임상 프로필에서 각 치과의사의 교육 배경, 진료 분야와 사용 언어를 알아보세요.',
     },
 
     decisionSection: {
@@ -421,7 +421,7 @@ const doctorsContent = {
     title: '陪伴您治疗旅程的医生团队',
 
     subtitle:
-    '每位患者的情况都不同。以下是 Emis Dental 陪伴患者完成治疗旅程的医生团队。',
+      '查看下方临床资料，了解每位医生的教育背景、诊疗领域和沟通语言。',
     },
 
     decisionSection: {
@@ -510,7 +510,7 @@ const doctorsContent = {
     title: '陪伴您治療旅程的醫師團隊',
 
     subtitle:
-    '每位患者的情況都不同。以下是 Emis Dental 陪伴患者完成治療旅程的醫師團隊。',
+      '查看下方臨床資料，了解每位醫師的教育背景、診療領域和溝通語言。',
     },
 
     decisionSection: {

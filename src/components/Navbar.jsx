@@ -119,10 +119,6 @@ export default function Navbar() {
               {content.about}
             </Link>
 
-            <Link to="/doctors" className={navLinkClass('/doctors')}>
-              {content.doctors}
-            </Link>
-
             <div className="relative">
               <Link
                 to="/solutions"
@@ -199,6 +195,10 @@ export default function Navbar() {
                 </div>
               )}
             </div>
+
+            <Link to="/doctors" className={navLinkClass('/doctors')}>
+              {content.doctors}
+            </Link>
 
             <Link to="/visitor-program" className={`${navLinkClass('/visitor-program')} ${isDentalTourismActive ? 'text-[#1f2937]' : ''}`}>
               {content.gratitude}
@@ -280,14 +280,6 @@ export default function Navbar() {
               {content.about}
             </Link>
 
-            <Link to="/doctors" className={mobileLinkClass('/doctors')} onClick={closeAllMenus}>
-              {content.doctors}
-            </Link>
-
-            <Link to="/dr-long" className={mobileLinkClass('/dr-long')} onClick={closeAllMenus}>
-              {content.chineseDentalService}
-            </Link>
-
             <div>
               <div className={`flex items-center justify-between rounded-xl px-3 py-2.5 text-sm transition ${
                 isSolutionsActive ? 'bg-[#f5e9c2] text-[#1f2937]' : 'text-[#2a3439] hover:bg-[#f3ead2]'
@@ -324,6 +316,14 @@ export default function Navbar() {
                 </div>
               )}
             </div>
+
+            <Link to="/dr-long" className={mobileLinkClass('/dr-long')} onClick={closeAllMenus}>
+              {content.chineseDentalService}
+            </Link>
+
+            <Link to="/doctors" className={mobileLinkClass('/doctors')} onClick={closeAllMenus}>
+              {content.doctors}
+            </Link>
 
             {/* <Link to="/solutions" className={mobileLinkClass('/solutions')} onClick={closeAllMenus}>
               {content.patientCases}

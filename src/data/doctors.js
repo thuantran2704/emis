@@ -1,5 +1,6 @@
 ﻿/**
- * Single source of truth for Emis Dental doctor information.
+ * Doctor profiles published on the Emis Dental website. A published profile
+ * does not by itself indicate registration to practise at the clinic.
  *
  * Adding a new doctor:
  *  1. Import their portrait image below.
@@ -22,7 +23,6 @@ export const DOCTORS = [
     id: 'dr-long',
     slug: '/dr-long',
     portrait: drLongPortrait,
-    featured: true,
 
     english: {
       name: 'Dr. Do Thai Long',

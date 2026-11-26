@@ -175,8 +175,6 @@ const Doctors = () => {
                 <div className="min-w-0">
                   <h3 className="text-2xl font-semibold leading-snug text-[#2a3439]">{t.name}</h3>
                   {t.role && <p className="mt-2 text-sm font-semibold text-[#806019]">{t.role}</p>}
-                  {t.serviceLabel && <p className="mt-2 text-sm font-bold text-[#193543]">{t.serviceLabel}</p>}
-                  {t.registration && <p className="mt-2 text-xs font-medium text-[#765a1e]">{t.registration}</p>}
                   {t.focus && <p className="mt-3 text-sm leading-relaxed text-[#46576a]">{t.focus}</p>}
                   <p className="mt-4 text-sm leading-relaxed text-[#52687b]">{t.languages}</p>
                   <Link to={doctor.slug} className="mt-5 inline-flex min-h-11 items-center rounded-full border border-[#a48034] px-6 py-2.5 text-sm font-semibold text-[#493a1b] transition hover:bg-[#f7f2e7] focus-visible:outline-offset-4">
