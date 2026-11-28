@@ -13,12 +13,12 @@ import { realCaseIds } from '../data/realCaseAssets';
 import RealCasePreviewMedia from '../components/RealCasePreviewMedia';
 import heroBackgroundMobile from '../pics/doctor-nurse-mid-surgery-no-patient-mouth-visible.jpg';
 import heroBackgroundLandscape from '../pics/doctor-analyzing-implant.jpg';
-import confidencePortrait from '../pics/doctor-smiling-with-patient.jpg';
+import confidencePortrait from '../pics/csuong-home.jpeg';
 import implantIntroImage from '../pics/all-on-4-implant.jpg';
 import allon6Image from '../pics/allon6.jpeg';
 import cbctReview from '../pics/measuring-result-cbct-x-ray-patient-smiling.jpg';
 import onlineConsultation from '../pics/consulting-team.jpg';
-import elderCoupleSmiling from '../pics/elder-couple-smiling-outdoors-healthy-walking.jpeg';
+import smileMirrorPhoto from '../pics/ctuyen-home.jpeg';
 import confidentSmile from '../pics/confident-smile-social.jpeg';
 import elderSocializing from '../pics/elder-person-socializing.jpeg';
 import pathwayConsult from '../pics/doctor-explaining-procedure-to-patient.jpg';
@@ -196,7 +196,7 @@ export default function Home() {
             </div>
 
             <div className="relative hidden overflow-hidden rounded-2xl shadow-sm lg:block">
-              <img src={confidencePortrait} alt={imageAlt('Emis Dental dentist discussing treatment with a patient', language)} loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-cover object-center" />
+              <img src={confidencePortrait} alt={imageAlt('Woman photographed at Emis Dental', language)} loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-cover object-center" />
             </div>
           </div>
         </div>
@@ -206,7 +206,7 @@ export default function Home() {
       <Section tone="white">
         <div className="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-[1.1fr_1fr] md:items-stretch">
           <div className="hidden overflow-hidden rounded-3xl shadow-lg md:block">
-            <img src={elderCoupleSmiling} alt={imageAlt('Couple enjoying a walk together', language)} loading="lazy" decoding="async" className="h-full w-full object-cover" />
+            <img src={smileMirrorPhoto} alt={imageAlt('Woman checking her smile in a mirror at Emis Dental', language)} loading="lazy" decoding="async" className="h-full w-full object-cover object-[44%_center]" />
           </div>
 
           <div>

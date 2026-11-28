@@ -1,6 +1,8 @@
 // Describes what is visible in each image. Clinical wording avoids asserting an
 // outcome or diagnosis from a photograph alone. Product names stay unchanged.
 const altByEnglish = {
+  'Woman photographed at Emis Dental': ['Người phụ nữ tại Emis Dental', 'Une femme photographiée chez Emis Dental', 'Emis Dental에서 촬영한 여성', '在 Emis Dental 拍摄的女士', '在 Emis Dental 拍攝的女士'],
+  'Woman checking her smile in a mirror at Emis Dental': ['Người phụ nữ ngắm nụ cười trong gương tại Emis Dental', 'Une femme regarde son sourire dans un miroir chez Emis Dental', 'Emis Dental에서 거울로 미소를 확인하는 여성', '一位女士在 Emis Dental 对着镜子查看笑容', '一位女士在 Emis Dental 對著鏡子查看笑容'],
   'Clinician and nurse caring for a patient at Emis Dental': ['Bác sĩ và điều dưỡng chăm sóc bệnh nhân tại Emis Dental', 'Praticien et infirmière auprès d’un patient chez Emis Dental', 'Emis Dental에서 환자를 돌보는 의료진', 'Emis Dental 的医生与护士为患者提供诊疗', 'Emis Dental 的醫師與護理師為患者提供診療'],
   'Dr. Tran Minh Tu reviewing a treatment plan at Emis Dental': ['Bác sĩ Trần Minh Tú xem xét kế hoạch điều trị tại Emis Dental', 'Le Dr Tran Minh Tu examine un plan de traitement chez Emis Dental', 'Emis Dental에서 치료 계획을 검토하는 Tran Minh Tu 원장', 'Tran Minh Tu 医生在 Emis Dental 查看治疗计划', 'Tran Minh Tu 醫師在 Emis Dental 檢視治療計畫'],
   'Patient undergoing a CBCT scan at Emis Dental': ['Bệnh nhân chụp phim CBCT tại Emis Dental', 'Patient passant un examen CBCT chez Emis Dental', 'Emis Dental에서 CBCT 촬영을 받는 환자', '患者在 Emis Dental 接受 CBCT 扫描', '患者在 Emis Dental 接受 CBCT 掃描'],
