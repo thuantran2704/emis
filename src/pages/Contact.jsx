@@ -9,6 +9,7 @@ import { primaryContactItems, socialContactItems } from '../data/contactChannels
 import { localDateInputMin } from '../data/appointmentDate';
 import { appointmentSubmissionFeedback } from '../data/appointmentFeedback';
 import { phoneCountryCodeHints } from '../data/consultationFields';
+import { trackAppointmentConversion } from '../data/googleAds';
 export default function Contact() {
   const language = useSelector((state) => state.language.language);
   const content = contactContent[language] || contactContent.english;
@@ -89,7 +90,7 @@ export default function Contact() {
         );
       }
 
-      await response.json();
+      trackAppointmentConversion();
       setIsSubmitting(false);
       setFormData({
         name: '',

@@ -6,6 +6,7 @@ import { consultationDateHints, consultationFields, consultationSubmissionErrors
 import { contactItems, socialProfiles } from '../data/contactChannels';
 import { localDateInputMin } from '../data/appointmentDate';
 import { buildConsultationPayload, CONSULTATION_COUNTRY_LIMIT, CONSULTATION_MESSAGE_LIMIT } from '../data/consultationPayload';
+import { trackAppointmentConversion } from '../data/googleAds';
 import { useSelector } from 'react-redux';
 export default function ContactForm({ embedded = false }) {
   const language = useSelector((state) => state.language.language);
@@ -118,6 +119,8 @@ export default function ContactForm({ embedded = false }) {
       });
 
       if (!response.ok) throw new Error(`Server responded with ${response.status}`);
+
+      trackAppointmentConversion();
 
       setFormData({ name: "", email: "", phone: "", service: "", message: "" });
       setPreferences({ country: '', date: '', method: '', preferredLanguage: '', referral: '' });
